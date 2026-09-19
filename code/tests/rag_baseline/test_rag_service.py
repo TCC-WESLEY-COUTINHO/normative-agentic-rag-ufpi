@@ -37,17 +37,26 @@ class FakeStore:
         return self.chunks[:top_k]
 
 
-def retrieved_chunk(article: str = "42", rank: int = 1) -> RetrievedChunk:
+def retrieved_chunk(
+    article: str = "42",
+    rank: int = 1,
+    *,
+    chapter_number: str | None = "II",
+    chapter_name: str | None = "DA MATRÍCULA",
+    section_number: str | None = None,
+    section_name: str | None = None,
+    content: str | None = None,
+) -> RetrievedChunk:
     return RetrievedChunk(
         id=f"chunk-{article}",
-        content=f"Conteúdo normativo do artigo {article}.",
+        content=content or f"Conteúdo normativo do artigo {article}.",
         source="Regulamento Geral da Graduação da UFPI",
         title_number="III",
         title_name="DO ENSINO",
-        chapter_number="II",
-        chapter_name="DA MATRÍCULA",
-        section_number=None,
-        section_name=None,
+        chapter_number=chapter_number,
+        chapter_name=chapter_name,
+        section_number=section_number,
+        section_name=section_name,
         subsection_number=None,
         subsection_name=None,
         article_number=article,
@@ -81,6 +90,83 @@ async def test_service_uses_retrieved_chunks_as_llm_context_and_respects_top_k()
     assert "Como funciona a matrícula?" in openrouter.user_prompt
     assert "somente" in openrouter.system_prompt.lower()
     assert result.answer == "Resposta baseada no contexto."
+
+
+@pytest.mark.asyncio
+async def test_query_prompt_distinguishes_nearby_normative_institutes() -> None:
+    chunks = [
+        retrieved_chunk(
+            "306",
+            1,
+            chapter_name="DAS SITUAÇÕES ESPECIAIS",
+            section_number="XI",
+            section_name="Da Mudança De Estrutura Curricular",
+            content="A mudança deve ser solicitada pela coordenação com anuência do aluno.",
+        ),
+        retrieved_chunk(
+            "302",
+            2,
+            chapter_name="DAS SITUAÇÕES ESPECIAIS",
+            section_number="X",
+            section_name="Da Mudança De Ênfase Dentro Da Mesma Modalidade Do Curso",
+            content="A mudança referida no Art. 300 exige processo formalizado pelo aluno.",
+        ),
+    ]
+    openrouter = FakeOpenRouter()
+    service = RagService(
+        openrouter=openrouter,
+        vector_store=FakeStore(chunks),
+        top_k=5,
+        embedding_model="embedding-model",
+        llm_model="llm-model",
+    )
+
+    await service.query("Posso mudar para a estrutura curricular mais recente?")
+
+    assert "--- TRECHO 1 ---" in openrouter.user_prompt
+    assert "Capítulo: II - DAS SITUAÇÕES ESPECIAIS" in openrouter.user_prompt
+    assert "Seção: XI - Da Mudança De Estrutura Curricular" in openrouter.user_prompt
+    assert "Artigo: Art. 306" in openrouter.user_prompt
+    assert "--- TRECHO 2 ---" in openrouter.user_prompt
+    assert (
+        "Seção: X - Da Mudança De Ênfase Dentro Da Mesma Modalidade Do Curso"
+        in openrouter.user_prompt
+    )
+    assert "Artigo: Art. 302" in openrouter.user_prompt
+    assert "evidência normativa independente" in openrouter.system_prompt
+    assert "diretamente aplicáveis à pergunta" in openrouter.system_prompt
+    assert "institutos normativos distintos" in openrouter.system_prompt
+
+
+@pytest.mark.asyncio
+async def test_query_prompt_requires_brief_abstention_without_auxiliary_claims() -> None:
+    chunk = retrieved_chunk(
+        "88",
+        1,
+        chapter_number="IV",
+        chapter_name="DAS ATIVIDADES ACADÊMICAS ESPECÍFICAS",
+        section_number="IV",
+        section_name="Do Estágio Obrigatório",
+        content=(
+            "A instituição de origem concede parte da mensalidade do aluno "
+            "estagiário para custear o estágio."
+        ),
+    )
+    openrouter = FakeOpenRouter()
+    service = RagService(
+        openrouter=openrouter,
+        vector_store=FakeStore([chunk]),
+        top_k=5,
+        embedding_model="embedding-model",
+        llm_model="llm-model",
+    )
+
+    await service.query("Qual é a mensalidade atual do curso?")
+
+    assert "mensalidade do aluno estagiário" in openrouter.user_prompt
+    assert "abstenha-se de forma breve" in openrouter.system_prompt
+    assert "não faça afirmações auxiliares" in openrouter.system_prompt
+    assert "mencionam ou deixam de mencionar" in openrouter.system_prompt
 
 
 @pytest.mark.asyncio
