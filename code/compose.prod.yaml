@@ -1,0 +1,94 @@
+name: rag-chatbot-ufpi
+
+services:
+  postgres:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-rag_chatbot}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Defina POSTGRES_PASSWORD no arquivo .env}
+      POSTGRES_DB: ${POSTGRES_DB:-rag_chatbot}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-rag_chatbot} -d ${POSTGRES_DB:-rag_chatbot}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    networks:
+      - database
+
+  agent_service:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.service
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      DATABASE_TYPE: ${DATABASE_TYPE:-postgres}
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: ${POSTGRES_USER:-rag_chatbot}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Defina POSTGRES_PASSWORD no arquivo .env}
+      POSTGRES_DB: ${POSTGRES_DB:-rag_chatbot}
+      HOST: 0.0.0.0
+      PORT: 8080
+      SQLITE_DB_PATH: /app/state/checkpoints.db
+    ports:
+      - "${API_BIND_ADDRESS:-127.0.0.1}:8080:8080"
+    volumes:
+      - app_state:/app/state
+      - ./privatecredentials:/privatecredentials:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://localhost:8080/health', timeout=3)"
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+    networks:
+      - app
+      - database
+
+  streamlit_app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.app
+    restart: unless-stopped
+    environment:
+      AGENT_URL: http://agent_service:8080
+      AUTH_SECRET: ${AUTH_SECRET:-}
+    ports:
+      - "${FRONTEND_BIND_ADDRESS:-127.0.0.1}:8501:8501"
+    depends_on:
+      agent_service:
+        condition: service_healthy
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://localhost:8501/_stcore/health', timeout=3)"
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+    networks:
+      - app
+
+volumes:
+  postgres_data:
+  app_state:
+
+networks:
+  app:
+  database:
+    internal: true
