@@ -183,6 +183,7 @@ cython_debug/
 code/data/*
 
 # Chroma db
+code/.local/
 *.db
 *.sqlite3
 *.bin
