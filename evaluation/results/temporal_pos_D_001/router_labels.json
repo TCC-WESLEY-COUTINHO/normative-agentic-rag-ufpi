@@ -1,0 +1,27 @@
+[
+  {
+    "id": "TEMP-POS-001",
+    "expected_scope": "pos_graduacao",
+    "expected_action": "responder"
+  },
+  {
+    "id": "TEMP-POS-002",
+    "expected_scope": "pos_graduacao",
+    "expected_action": "responder"
+  },
+  {
+    "id": "TEMP-POS-003",
+    "expected_scope": "pos_graduacao",
+    "expected_action": "responder"
+  },
+  {
+    "id": "TEMP-POS-004",
+    "expected_scope": "pos_graduacao",
+    "expected_action": "responder"
+  },
+  {
+    "id": "TEMP-POS-005",
+    "expected_scope": "pos_graduacao",
+    "expected_action": "responder"
+  }
+]

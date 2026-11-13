@@ -1,0 +1,30 @@
+{
+  "findings": [
+    {
+      "id": "R-01",
+      "severity": "Important",
+      "problem": "HumanMessage text blocks became empty question.",
+      "red": "3 failed in tdd_review_red.txt",
+      "fix": "Extract all text blocks, preserving separators; reject unsupported modalities.",
+      "tests": [
+        "test_framework_text_blocks_keep_all_substantive_content"
+      ],
+      "status": "fixed_verified"
+    },
+    {
+      "id": "R-02",
+      "severity": "Important",
+      "problem": "Completion callback failure reported zero facade calls and discarded authority.",
+      "red": "1 failed in tdd_review_red.txt",
+      "fix": "Invocation-local facade receipt, validate recovered result/correlation, never retry facade.",
+      "tests": [
+        "test_tool_completion_callback_failure_retains_authority_and_actual_count"
+      ],
+      "status": "fixed_verified"
+    }
+  ],
+  "final_critical": 0,
+  "final_important": 0,
+  "focused_verification": "61 passed",
+  "scope": "Code/contracts review only; not a legal judge."
+}

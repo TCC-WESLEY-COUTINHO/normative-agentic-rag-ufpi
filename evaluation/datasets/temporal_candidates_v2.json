@@ -1,0 +1,485 @@
+{
+  "schema_version": "1.0",
+  "candidate_gold": true,
+  "status": "candidate_gold",
+  "purpose": "exploratory_real_temporal_cases",
+  "items": [
+    {
+      "id": "TEMP-POS-001",
+      "question": "Na pós-graduação da UFPI, com qual antecedência mínima a defesa de dissertação ou tese deve ser divulgada atualmente?",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder",
+      "sector": "pos_graduacao",
+      "domain": "pos_graduacao",
+      "norm_id": "ufpi-956-2025",
+      "category": "regra_atual",
+      "temporal_relation": "revocation",
+      "historical_intent": false,
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "53",
+          "text": "Art. 53. A defesa da dissertação ou tese é realizada em sessão pública, em dia e horário definidos pela Coordenação do Programa, e divulgada com antecedência mínima de dez dias.\n- $ 1º A defesa (caput) pode ser realizada nos formatos presencial, híbrido ou remoto, conforme o Regimento Interno.\n- $ 2º Em casos excepcionais que exijam sigilo, a defesa pode ocorrer em sessão restrita, mediante aprovação do Colegiado Simples.",
+          "corpus_path": "evaluation/corpora/pos_graduacao_setor_v2.json"
+        }
+      ],
+      "current_evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "53",
+          "text": "Art. 53. A defesa da dissertação ou tese é realizada em sessão pública, em dia e horário definidos pela Coordenação do Programa, e divulgada com antecedência mínima de dez dias.\n- $ 1º A defesa (caput) pode ser realizada nos formatos presencial, híbrido ou remoto, conforme o Regimento Interno.\n- $ 2º Em casos excepcionais que exijam sigilo, a defesa pode ocorrer em sessão restrita, mediante aprovação do Colegiado Simples.",
+          "corpus_path": "evaluation/corpora/pos_graduacao_setor_v2.json"
+        }
+      ],
+      "applicable_norm_ids": [
+        "ufpi-956-2025"
+      ],
+      "reference_answer": "No snapshot da 956/2025, a divulgação deve ter antecedência mínima de dez dias, conforme art. 53.",
+      "required_facts": [
+        "Antecedência mínima de dez dias",
+        "Fonte 956/2025, art. 53"
+      ],
+      "pdf_evidence_locations": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article": "53",
+          "pdf_page": 20,
+          "pdf_source_url": "https://ufpi.br/images/Portarias/Portarias%202025/CEPEX%20953%20A%20956.pdf"
+        }
+      ]
+    },
+    {
+      "id": "TEMP-POS-002",
+      "question": "Segundo a Resolução 658/2024, como era a antecedência mínima para divulgação da defesa de mestrado ou doutorado na pós-graduação da UFPI?",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder",
+      "sector": "pos_graduacao",
+      "domain": "pos_graduacao",
+      "norm_id": "ufpi-658-2024",
+      "category": "regra_historica",
+      "temporal_relation": "revocation",
+      "historical_intent": true,
+      "evidence": [
+        {
+          "norm_id": "ufpi-658-2024",
+          "article_number": "43",
+          "text": "Art. 43. A defesa da dissertação ou da tese será realizada presencialmente ou de forma híbrida, em dia e horário estabelecidos pela Coordenação do Programa, com divulgação de, pelo menos, 7 (sete) dias de antecedência, sendo sua realização aberta ao público.\n- $ 1º Em casos excepcionais, a defesa poderá ser realizada de maneira completamente remota, garantindo-se a publicidade das informações.\n- $ 2º Em casos excepcionais, a defesa poderá ser realizada de modo a garantir o sigilo das informações apresentadas, requerendo esta modalidade aprovação pelo Colegiado do Programa.",
+          "corpus_path": "evaluation/corpora/658_2024_temporal_v1.json"
+        }
+      ],
+      "current_evidence": [],
+      "applicable_norm_ids": [
+        "ufpi-658-2024"
+      ],
+      "reference_answer": "A 658/2024, art. 43, estabelecia pelo menos sete dias; trata-se de regra histórica de norma revogada pela 956/2025.",
+      "required_facts": [
+        "Pelo menos sete dias",
+        "Histórico, sem aplicar como regra atual"
+      ],
+      "pdf_evidence_locations": [
+        {
+          "norm_id": "ufpi-658-2024",
+          "article": "43",
+          "pdf_page": 14,
+          "pdf_source_url": "https://www.sigaa.ufpi.br/sigaa/verProducao?idProducao=6869447&key=18c6011be067380f348deb69741d19c1"
+        }
+      ]
+    },
+    {
+      "id": "TEMP-POS-003",
+      "question": "A Resolução 658/2024 ainda pode reger hoje a pós-graduação da UFPI ou foi revogada? Qual ato e dispositivo estabelecem isso?",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder",
+      "sector": "pos_graduacao",
+      "domain": "pos_graduacao",
+      "norm_id": "ufpi-956-2025",
+      "category": "vigencia",
+      "temporal_relation": "revocation",
+      "historical_intent": false,
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "62",
+          "text": "Art. 62. Ficam revogadas:\n| -a Resolução CEPEX/UFPI Nº 189, de 14 de setembro de 2007;\nIl -a Resolução CEPEX/UFPI Nº 22, de 21 de fevereiro de 2014;\nIll -a Resolução CEPEX/UFPI Nº 284, de 14 de dezembro de 2018;\nIV -a Resolução CEPEX/UFPI Nº 133, de 30 de agosto de 2021;\nV -a Resolução CEPEX/UFPI Nº 316, de 21 de julho de 2022;\nVI -a Resolução CEPEX/UFPI Nº 658, de 22 de abril de 2024; e\nVII -a Resolução CEPEX/UFPI Nº 693, de 26 de agosto de 2024.",
+          "corpus_path": "evaluation/corpora/pos_graduacao_setor_v2.json"
+        }
+      ],
+      "current_evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "62",
+          "text": "Art. 62. Ficam revogadas:\n| -a Resolução CEPEX/UFPI Nº 189, de 14 de setembro de 2007;\nIl -a Resolução CEPEX/UFPI Nº 22, de 21 de fevereiro de 2014;\nIll -a Resolução CEPEX/UFPI Nº 284, de 14 de dezembro de 2018;\nIV -a Resolução CEPEX/UFPI Nº 133, de 30 de agosto de 2021;\nV -a Resolução CEPEX/UFPI Nº 316, de 21 de julho de 2022;\nVI -a Resolução CEPEX/UFPI Nº 658, de 22 de abril de 2024; e\nVII -a Resolução CEPEX/UFPI Nº 693, de 26 de agosto de 2024.",
+          "corpus_path": "evaluation/corpora/pos_graduacao_setor_v2.json"
+        }
+      ],
+      "applicable_norm_ids": [
+        "ufpi-956-2025"
+      ],
+      "reference_answer": "A revogação expressa está na 956/2025, art. 62, VI. Não inferir datas de publicação nem aplicação retroativa.",
+      "required_facts": [
+        "Revogação da norma inteira",
+        "956/2025, art. 62, VI"
+      ],
+      "pdf_evidence_locations": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article": "62",
+          "pdf_page": 22,
+          "pdf_source_url": "https://ufpi.br/images/Portarias/Portarias%202025/CEPEX%20953%20A%20956.pdf"
+        }
+      ]
+    },
+    {
+      "id": "TEMP-POS-004",
+      "question": "Como era o prazo mínimo para divulgar a defesa na 658/2024 e como é na 956/2025, na pós-graduação da UFPI?",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder",
+      "sector": "pos_graduacao",
+      "domain": "pos_graduacao",
+      "norm_id": "ufpi-956-2025",
+      "category": "comparacao_historica",
+      "temporal_relation": "revocation",
+      "historical_intent": true,
+      "evidence": [
+        {
+          "norm_id": "ufpi-658-2024",
+          "article_number": "43",
+          "text": "Art. 43. A defesa da dissertação ou da tese será realizada presencialmente ou de forma híbrida, em dia e horário estabelecidos pela Coordenação do Programa, com divulgação de, pelo menos, 7 (sete) dias de antecedência, sendo sua realização aberta ao público.\n- $ 1º Em casos excepcionais, a defesa poderá ser realizada de maneira completamente remota, garantindo-se a publicidade das informações.\n- $ 2º Em casos excepcionais, a defesa poderá ser realizada de modo a garantir o sigilo das informações apresentadas, requerendo esta modalidade aprovação pelo Colegiado do Programa.",
+          "corpus_path": "evaluation/corpora/658_2024_temporal_v1.json"
+        },
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "53",
+          "text": "Art. 53. A defesa da dissertação ou tese é realizada em sessão pública, em dia e horário definidos pela Coordenação do Programa, e divulgada com antecedência mínima de dez dias.\n- $ 1º A defesa (caput) pode ser realizada nos formatos presencial, híbrido ou remoto, conforme o Regimento Interno.\n- $ 2º Em casos excepcionais que exijam sigilo, a defesa pode ocorrer em sessão restrita, mediante aprovação do Colegiado Simples.",
+          "corpus_path": "evaluation/corpora/pos_graduacao_setor_v2.json"
+        }
+      ],
+      "current_evidence": [],
+      "applicable_norm_ids": [
+        "ufpi-658-2024",
+        "ufpi-956-2025"
+      ],
+      "reference_answer": "A 658/2024, art. 43, exigia sete dias; a 956/2025, art. 53, estabelece dez dias. A primeira é histórica e revogada.",
+      "required_facts": [
+        "Sete dias na 658, art. 43",
+        "Dez dias na 956, art. 53"
+      ],
+      "pdf_evidence_locations": [
+        {
+          "norm_id": "ufpi-658-2024",
+          "article": "43",
+          "pdf_page": 14,
+          "pdf_source_url": "https://www.sigaa.ufpi.br/sigaa/verProducao?idProducao=6869447&key=18c6011be067380f348deb69741d19c1"
+        },
+        {
+          "norm_id": "ufpi-956-2025",
+          "article": "53",
+          "pdf_page": 20,
+          "pdf_source_url": "https://ufpi.br/images/Portarias/Portarias%202025/CEPEX%20953%20A%20956.pdf"
+        }
+      ]
+    },
+    {
+      "id": "TEMP-POS-005",
+      "question": "Atualmente, a defesa de dissertação ou tese na pós-graduação da UFPI pode ser divulgada com apenas sete dias de antecedência?",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder",
+      "sector": "pos_graduacao",
+      "domain": "pos_graduacao",
+      "norm_id": "ufpi-956-2025",
+      "category": "recuperacao_concorrente",
+      "temporal_relation": "revocation",
+      "historical_intent": false,
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "53",
+          "text": "Art. 53. A defesa da dissertação ou tese é realizada em sessão pública, em dia e horário definidos pela Coordenação do Programa, e divulgada com antecedência mínima de dez dias.\n- $ 1º A defesa (caput) pode ser realizada nos formatos presencial, híbrido ou remoto, conforme o Regimento Interno.\n- $ 2º Em casos excepcionais que exijam sigilo, a defesa pode ocorrer em sessão restrita, mediante aprovação do Colegiado Simples.",
+          "corpus_path": "evaluation/corpora/pos_graduacao_setor_v2.json"
+        }
+      ],
+      "current_evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "53",
+          "text": "Art. 53. A defesa da dissertação ou tese é realizada em sessão pública, em dia e horário definidos pela Coordenação do Programa, e divulgada com antecedência mínima de dez dias.\n- $ 1º A defesa (caput) pode ser realizada nos formatos presencial, híbrido ou remoto, conforme o Regimento Interno.\n- $ 2º Em casos excepcionais que exijam sigilo, a defesa pode ocorrer em sessão restrita, mediante aprovação do Colegiado Simples.",
+          "corpus_path": "evaluation/corpora/pos_graduacao_setor_v2.json"
+        }
+      ],
+      "applicable_norm_ids": [
+        "ufpi-956-2025"
+      ],
+      "reference_answer": "No snapshot da 956/2025, art. 53, exige-se divulgação mínima de dez dias; sete dias é a redação histórica da 658/2024, art. 43.",
+      "required_facts": [
+        "Não aplicar sete dias como prazo atual",
+        "Dez dias, art. 53 da 956"
+      ],
+      "pdf_evidence_locations": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article": "53",
+          "pdf_page": 20,
+          "pdf_source_url": "https://ufpi.br/images/Portarias/Portarias%202025/CEPEX%20953%20A%20956.pdf"
+        }
+      ]
+    },
+    {
+      "id": "TEMP-GRAD-001",
+      "question": "Qual é a regra vigente do art. 68, §4º da graduação da UFPI para designar o coordenador de estágio em cursos de programas institucionais com docentes selecionados por edital, sem vínculo com a UFPI?",
+      "expected_scope": "graduacao",
+      "expected_action": "responder",
+      "sector": "graduacao",
+      "domain": "graduacao",
+      "norm_id": "ufpi-177-2012",
+      "category": "regra_atual",
+      "temporal_relation": "amendment",
+      "historical_intent": false,
+      "evidence": [
+        {
+          "norm_id": "ufpi-1056-2026",
+          "article_number": "1",
+          "text": "Art. 1º O Anexo à Resolução CEPEX/UFPI nº 177, de 5 de novembro de 2012, passa a vigorar com as seguintes alterações:\nfog 0 o\nRO\n$ 4º O coordenador de estágio do curso será um docente efetivo escolhido entre os professores orientadores do estágio, cuja designação deverá ser efetivada por portaria da unidade acadêmica à qual o estágio está vinculado, quando o colegiado entender necessária a existência de um coordenador para o conjunto das atividades de estágio, ressalvados os cursos ofertados no âmbito de políticas públicas ou programas institucionais de formação superior cuja composição do corpo docente seja realizada mediante processo seletivo disciplinado em edital específico, hipótese em que o coordenador poderá ser designado dentre os docentes selecionados para atuação no respectivo curso, independentemente de seu vínculo com a UFPI, com as atribuições de:\nA,\n”\" (NR)",
+          "corpus_path": "evaluation/corpora/1056_2026_temporal_v1.json"
+        }
+      ],
+      "current_evidence": [
+        {
+          "norm_id": "ufpi-1056-2026",
+          "article_number": "1",
+          "text": "Art. 1º O Anexo à Resolução CEPEX/UFPI nº 177, de 5 de novembro de 2012, passa a vigorar com as seguintes alterações:\nfog 0 o\nRO\n$ 4º O coordenador de estágio do curso será um docente efetivo escolhido entre os professores orientadores do estágio, cuja designação deverá ser efetivada por portaria da unidade acadêmica à qual o estágio está vinculado, quando o colegiado entender necessária a existência de um coordenador para o conjunto das atividades de estágio, ressalvados os cursos ofertados no âmbito de políticas públicas ou programas institucionais de formação superior cuja composição do corpo docente seja realizada mediante processo seletivo disciplinado em edital específico, hipótese em que o coordenador poderá ser designado dentre os docentes selecionados para atuação no respectivo curso, independentemente de seu vínculo com a UFPI, com as atribuições de:\nA,\n”\" (NR)",
+          "corpus_path": "evaluation/corpora/1056_2026_temporal_v1.json"
+        }
+      ],
+      "applicable_norm_ids": [
+        "ufpi-1056-2026",
+        "ufpi-177-2012"
+      ],
+      "reference_answer": "A 1.056/2026, art. 1º, altera o §4º: na exceção especificada, o coordenador pode ser escolhido entre docentes selecionados para o curso independentemente do vínculo com a UFPI. Preserva-se a regra geral e a norma-base 177/2012.",
+      "required_facts": [
+        "Exceção limitada aos cursos em políticas/programas especificados",
+        "Seleção por edital",
+        "Independência do vínculo com a UFPI",
+        "177 continua norma-base"
+      ],
+      "target_provision": {
+        "norm_id": "ufpi-177-2012",
+        "article": "68",
+        "paragraph": "4"
+      },
+      "pdf_evidence_locations": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "pdf_page": 23
+        },
+        {
+          "norm_id": "ufpi-1056-2026",
+          "pdf_page": 1
+        }
+      ]
+    },
+    {
+      "id": "TEMP-GRAD-002",
+      "question": "Como era a redação do art. 68, §4º da Resolução 177/2012 no regulamento da graduação atualizado em 2023, antes da alteração de 2026?",
+      "expected_scope": "graduacao",
+      "expected_action": "responder",
+      "sector": "graduacao",
+      "domain": "graduacao",
+      "norm_id": "ufpi-177-2012",
+      "category": "regra_historica",
+      "temporal_relation": "amendment",
+      "historical_intent": true,
+      "evidence": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "68",
+          "text": "**Art. 68. O estágio curricular obrigatório, para a sua regularidade, envolve:**\n1. I - Coordenadoria de Estágio Obrigatório (CEO/PREG);\n2. II - orientador de estágio;\n3. III - supervisor de campo;\n4. IV - coordenador de estágio do curso, quando for o caso.\n> § 1º A Coordenadoria de Estágio Obrigatório (CEO/PREG) tem como atribuições básicas:\n> * a) viabilizar as condições necessárias ao desenvolvimento do estágio obrigatório na UFPI;\n> * b) propor normas e diretrizes gerais para a operacionalização dos estágios obrigatórios;\n> * c) assessorar as coordenações de estágios nos cursos na elaboração e sistematização das programações relativas ao estágio obrigatório, como participar do acompanhamento, controle e avaliação da sua execução;\n> * d) providenciar as assinaturas de convênios entre a UFPI e as instituições de campos de estágio;\n> * e) organizar e manter atualizado, juntamente com as coordenações de estágio dos cursos, um sistema de documentação e cadastramento dos estágios.\n> § 2º O orientador do estágio será um professor do quadro da UFPI responsável pelo acompanhamento didático-pedagógico do aluno durante a realização desta atividade, com as atribuições de:\n> * a) elaborar junto ao coordenador de estágio do curso a programação semestral de estágios obrigatórios;\n> * b) orientar os alunos na elaboração dos seus planos e relatórios de estágio;\n> * c) acompanhar e orientar a execução das atividades dos estagiários;\n> * d) avaliar o desempenho dos estagiários atribuindo-lhes conceitos expressos sob a forma adotada pela UFPI;\n> * e) enviar ao coordenador de estágio do curso, ao final de cada período letivo, o relatório correspondente aos estágios obrigatórios dos alunos sob a sua responsabilidade.\n> § 3º O supervisor de campo será um profissional lotado na unidade de realização do estágio, responsável, nesse local, pelo acompanhamento do aluno durante o desenvolvimento da atividade.\n> § 4º O coordenador de estágio do curso será um docente efetivo escolhido entre os professores orientadores do estágio, cuja designação deverá ser efetivada por portaria da unidade acadêmica a qual o estágio está vinculado, quando o colegiado entender necessária a existência de um coordenador para o conjunto das atividades de estágio, com as atribuições de:\n> * a) coordenar a elaboração ou adequações de normas ou critérios específicos do estágio do curso, com base neste Regulamento;\n> * b) informar à Coordenadoria de Estágio Obrigatório (CEO/PREG) os campos de estágio, quando for o caso, tendo em vista a celebração de convênios e termos de compromisso;\n> * c) fazer, ao final de cada período, levantamento do número de alunos aptos e pretendentes ao estágio, em função da programação semestral;\n> * d) elaborar, a cada semestre, junto com os orientadores de estágio, as programações de estágio obrigatório que serão enviadas à Coordenadoria de Estágio Obrigatório (CEO/PREG) no prazo estabelecido no Calendário Acadêmico;\n> * e) orientar e encaminhar os alunos ao campo de estágio;\n> * f) acompanhar o desenvolvimento do estágio, tendo em vista a consecução dos objetivos propostos;\n> * g) enviar à Coordenadoria de Estágio Obrigatório (CEO/PREG), ao final de cada período letivo, o relatório correspondente ao estágio obrigatório do curso.",
+          "corpus_path": "evaluation/corpora/graduacao_setor_v2.json"
+        }
+      ],
+      "current_evidence": [],
+      "applicable_norm_ids": [
+        "ufpi-177-2012"
+      ],
+      "reference_answer": "O snapshot anterior previa docente efetivo escolhido entre professores orientadores, designado por portaria da unidade acadêmica quando o colegiado entendesse necessário. A ressalva de programas e vínculo foi introduzida depois pela 1.056/2026.",
+      "required_facts": [
+        "Docente efetivo entre orientadores",
+        "Portaria e avaliação do colegiado",
+        "Identificar redação histórica"
+      ],
+      "target_provision": {
+        "norm_id": "ufpi-177-2012",
+        "article": "68",
+        "paragraph": "4"
+      },
+      "pdf_evidence_locations": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "pdf_page": 23
+        },
+        {
+          "norm_id": "ufpi-1056-2026",
+          "pdf_page": 1
+        }
+      ]
+    },
+    {
+      "id": "TEMP-GRAD-003",
+      "question": "Qual resolução alterou o art. 68, §4º da 177/2012 para tratar do vínculo do coordenador de estágio nos cursos de programas institucionais da graduação da UFPI?",
+      "expected_scope": "graduacao",
+      "expected_action": "responder",
+      "sector": "graduacao",
+      "domain": "graduacao",
+      "norm_id": "ufpi-177-2012",
+      "category": "ato_alterador",
+      "temporal_relation": "amendment",
+      "historical_intent": false,
+      "evidence": [
+        {
+          "norm_id": "ufpi-1056-2026",
+          "article_number": "1",
+          "text": "Art. 1º O Anexo à Resolução CEPEX/UFPI nº 177, de 5 de novembro de 2012, passa a vigorar com as seguintes alterações:\nfog 0 o\nRO\n$ 4º O coordenador de estágio do curso será um docente efetivo escolhido entre os professores orientadores do estágio, cuja designação deverá ser efetivada por portaria da unidade acadêmica à qual o estágio está vinculado, quando o colegiado entender necessária a existência de um coordenador para o conjunto das atividades de estágio, ressalvados os cursos ofertados no âmbito de políticas públicas ou programas institucionais de formação superior cuja composição do corpo docente seja realizada mediante processo seletivo disciplinado em edital específico, hipótese em que o coordenador poderá ser designado dentre os docentes selecionados para atuação no respectivo curso, independentemente de seu vínculo com a UFPI, com as atribuições de:\nA,\n”\" (NR)",
+          "corpus_path": "evaluation/corpora/1056_2026_temporal_v1.json"
+        }
+      ],
+      "current_evidence": [
+        {
+          "norm_id": "ufpi-1056-2026",
+          "article_number": "1",
+          "text": "Art. 1º O Anexo à Resolução CEPEX/UFPI nº 177, de 5 de novembro de 2012, passa a vigorar com as seguintes alterações:\nfog 0 o\nRO\n$ 4º O coordenador de estágio do curso será um docente efetivo escolhido entre os professores orientadores do estágio, cuja designação deverá ser efetivada por portaria da unidade acadêmica à qual o estágio está vinculado, quando o colegiado entender necessária a existência de um coordenador para o conjunto das atividades de estágio, ressalvados os cursos ofertados no âmbito de políticas públicas ou programas institucionais de formação superior cuja composição do corpo docente seja realizada mediante processo seletivo disciplinado em edital específico, hipótese em que o coordenador poderá ser designado dentre os docentes selecionados para atuação no respectivo curso, independentemente de seu vínculo com a UFPI, com as atribuições de:\nA,\n”\" (NR)",
+          "corpus_path": "evaluation/corpora/1056_2026_temporal_v1.json"
+        }
+      ],
+      "applicable_norm_ids": [
+        "ufpi-1056-2026",
+        "ufpi-177-2012"
+      ],
+      "reference_answer": "Resolução CEPEX/UFPI nº 1.056, de 17 de agosto de 2026, art. 1º. Altera somente o dispositivo, sem revogar toda a 177/2012.",
+      "required_facts": [
+        "1.056 de 17/08/2026",
+        "Art. 1º",
+        "Alteração parcial do art. 68, §4º"
+      ],
+      "target_provision": {
+        "norm_id": "ufpi-177-2012",
+        "article": "68",
+        "paragraph": "4"
+      },
+      "pdf_evidence_locations": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "pdf_page": 23
+        },
+        {
+          "norm_id": "ufpi-1056-2026",
+          "pdf_page": 1
+        }
+      ]
+    },
+    {
+      "id": "TEMP-GRAD-004",
+      "question": "Na graduação da UFPI, o coordenador do estágio curricular obrigatório tem que ser sempre docente efetivo da UFPI, mesmo nos cursos ofertados por programas institucionais com seleção de professores por edital?",
+      "expected_scope": "graduacao",
+      "expected_action": "responder",
+      "sector": "graduacao",
+      "domain": "graduacao",
+      "norm_id": "ufpi-177-2012",
+      "category": "recuperacao_concorrente",
+      "temporal_relation": "amendment",
+      "historical_intent": false,
+      "evidence": [
+        {
+          "norm_id": "ufpi-1056-2026",
+          "article_number": "1",
+          "text": "Art. 1º O Anexo à Resolução CEPEX/UFPI nº 177, de 5 de novembro de 2012, passa a vigorar com as seguintes alterações:\nfog 0 o\nRO\n$ 4º O coordenador de estágio do curso será um docente efetivo escolhido entre os professores orientadores do estágio, cuja designação deverá ser efetivada por portaria da unidade acadêmica à qual o estágio está vinculado, quando o colegiado entender necessária a existência de um coordenador para o conjunto das atividades de estágio, ressalvados os cursos ofertados no âmbito de políticas públicas ou programas institucionais de formação superior cuja composição do corpo docente seja realizada mediante processo seletivo disciplinado em edital específico, hipótese em que o coordenador poderá ser designado dentre os docentes selecionados para atuação no respectivo curso, independentemente de seu vínculo com a UFPI, com as atribuições de:\nA,\n”\" (NR)",
+          "corpus_path": "evaluation/corpora/1056_2026_temporal_v1.json"
+        }
+      ],
+      "current_evidence": [
+        {
+          "norm_id": "ufpi-1056-2026",
+          "article_number": "1",
+          "text": "Art. 1º O Anexo à Resolução CEPEX/UFPI nº 177, de 5 de novembro de 2012, passa a vigorar com as seguintes alterações:\nfog 0 o\nRO\n$ 4º O coordenador de estágio do curso será um docente efetivo escolhido entre os professores orientadores do estágio, cuja designação deverá ser efetivada por portaria da unidade acadêmica à qual o estágio está vinculado, quando o colegiado entender necessária a existência de um coordenador para o conjunto das atividades de estágio, ressalvados os cursos ofertados no âmbito de políticas públicas ou programas institucionais de formação superior cuja composição do corpo docente seja realizada mediante processo seletivo disciplinado em edital específico, hipótese em que o coordenador poderá ser designado dentre os docentes selecionados para atuação no respectivo curso, independentemente de seu vínculo com a UFPI, com as atribuições de:\nA,\n”\" (NR)",
+          "corpus_path": "evaluation/corpora/1056_2026_temporal_v1.json"
+        }
+      ],
+      "applicable_norm_ids": [
+        "ufpi-1056-2026",
+        "ufpi-177-2012"
+      ],
+      "reference_answer": "A regra geral é preservada, mas a redação da 1.056/2026 prevê a exceção para os cursos e a seleção especificados, permitindo designação independentemente do vínculo com a UFPI.",
+      "required_facts": [
+        "Não transformar regra geral em exigência absoluta",
+        "Aplicar ressalva do §4º",
+        "Citar ato alterador"
+      ],
+      "target_provision": {
+        "norm_id": "ufpi-177-2012",
+        "article": "68",
+        "paragraph": "4"
+      },
+      "pdf_evidence_locations": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "pdf_page": 23
+        },
+        {
+          "norm_id": "ufpi-1056-2026",
+          "pdf_page": 1
+        }
+      ]
+    },
+    {
+      "id": "TEMP-GRAD-005",
+      "question": "No art. 68, §4º da 177/2012, a redação que vale hoje na graduação da UFPI admite coordenador de estágio sem vínculo com a instituição nas condições previstas para programas institucionais, ou exige sempre professor efetivo?",
+      "expected_scope": "graduacao",
+      "expected_action": "responder",
+      "sector": "graduacao",
+      "domain": "graduacao",
+      "norm_id": "ufpi-177-2012",
+      "category": "vigencia_da_redacao",
+      "temporal_relation": "amendment",
+      "historical_intent": false,
+      "evidence": [
+        {
+          "norm_id": "ufpi-1056-2026",
+          "article_number": "1",
+          "text": "Art. 1º O Anexo à Resolução CEPEX/UFPI nº 177, de 5 de novembro de 2012, passa a vigorar com as seguintes alterações:\nfog 0 o\nRO\n$ 4º O coordenador de estágio do curso será um docente efetivo escolhido entre os professores orientadores do estágio, cuja designação deverá ser efetivada por portaria da unidade acadêmica à qual o estágio está vinculado, quando o colegiado entender necessária a existência de um coordenador para o conjunto das atividades de estágio, ressalvados os cursos ofertados no âmbito de políticas públicas ou programas institucionais de formação superior cuja composição do corpo docente seja realizada mediante processo seletivo disciplinado em edital específico, hipótese em que o coordenador poderá ser designado dentre os docentes selecionados para atuação no respectivo curso, independentemente de seu vínculo com a UFPI, com as atribuições de:\nA,\n”\" (NR)",
+          "corpus_path": "evaluation/corpora/1056_2026_temporal_v1.json"
+        }
+      ],
+      "current_evidence": [
+        {
+          "norm_id": "ufpi-1056-2026",
+          "article_number": "1",
+          "text": "Art. 1º O Anexo à Resolução CEPEX/UFPI nº 177, de 5 de novembro de 2012, passa a vigorar com as seguintes alterações:\nfog 0 o\nRO\n$ 4º O coordenador de estágio do curso será um docente efetivo escolhido entre os professores orientadores do estágio, cuja designação deverá ser efetivada por portaria da unidade acadêmica à qual o estágio está vinculado, quando o colegiado entender necessária a existência de um coordenador para o conjunto das atividades de estágio, ressalvados os cursos ofertados no âmbito de políticas públicas ou programas institucionais de formação superior cuja composição do corpo docente seja realizada mediante processo seletivo disciplinado em edital específico, hipótese em que o coordenador poderá ser designado dentre os docentes selecionados para atuação no respectivo curso, independentemente de seu vínculo com a UFPI, com as atribuições de:\nA,\n”\" (NR)",
+          "corpus_path": "evaluation/corpora/1056_2026_temporal_v1.json"
+        }
+      ],
+      "applicable_norm_ids": [
+        "ufpi-1056-2026",
+        "ufpi-177-2012"
+      ],
+      "reference_answer": "Considerar a redação expressa introduzida pela 1.056/2026, art. 1º: a exceção admite os docentes selecionados independentemente do vínculo, nas condições do dispositivo. Não marcar a 177 inteira como revogada.",
+      "required_facts": [
+        "Precedência da alteração no §4º",
+        "Condições da exceção",
+        "Demais dispositivos da 177 preservados"
+      ],
+      "target_provision": {
+        "norm_id": "ufpi-177-2012",
+        "article": "68",
+        "paragraph": "4"
+      },
+      "pdf_evidence_locations": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "pdf_page": 23
+        },
+        {
+          "norm_id": "ufpi-1056-2026",
+          "pdf_page": 1
+        }
+      ]
+    }
+  ]
+}

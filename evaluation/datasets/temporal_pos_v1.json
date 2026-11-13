@@ -1,0 +1,227 @@
+{
+  "schema_version": "1.0",
+  "candidate_gold": true,
+  "status": "candidate_gold",
+  "purpose": "exploratory_real_temporal_cases",
+  "items": [
+    {
+      "id": "TEMP-POS-001",
+      "question": "Na pós-graduação da UFPI, com qual antecedência mínima a defesa de dissertação ou tese deve ser divulgada atualmente?",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder",
+      "sector": "pos_graduacao",
+      "domain": "pos_graduacao",
+      "norm_id": "ufpi-956-2025",
+      "category": "regra_atual",
+      "temporal_relation": "revocation",
+      "historical_intent": false,
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "53",
+          "text": "Art. 53. A defesa da dissertação ou tese é realizada em sessão pública, em dia e horário definidos pela Coordenação do Programa, e divulgada com antecedência mínima de dez dias.\n- $ 1º A defesa (caput) pode ser realizada nos formatos presencial, híbrido ou remoto, conforme o Regimento Interno.\n- $ 2º Em casos excepcionais que exijam sigilo, a defesa pode ocorrer em sessão restrita, mediante aprovação do Colegiado Simples.",
+          "corpus_path": "evaluation/corpora/pos_graduacao_setor_v2.json"
+        }
+      ],
+      "current_evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "53",
+          "text": "Art. 53. A defesa da dissertação ou tese é realizada em sessão pública, em dia e horário definidos pela Coordenação do Programa, e divulgada com antecedência mínima de dez dias.\n- $ 1º A defesa (caput) pode ser realizada nos formatos presencial, híbrido ou remoto, conforme o Regimento Interno.\n- $ 2º Em casos excepcionais que exijam sigilo, a defesa pode ocorrer em sessão restrita, mediante aprovação do Colegiado Simples.",
+          "corpus_path": "evaluation/corpora/pos_graduacao_setor_v2.json"
+        }
+      ],
+      "applicable_norm_ids": [
+        "ufpi-956-2025"
+      ],
+      "reference_answer": "No snapshot da 956/2025, a divulgação deve ter antecedência mínima de dez dias, conforme art. 53.",
+      "required_facts": [
+        "Antecedência mínima de dez dias",
+        "Fonte 956/2025, art. 53"
+      ],
+      "pdf_evidence_locations": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article": "53",
+          "pdf_page": 20,
+          "pdf_source_url": "https://ufpi.br/images/Portarias/Portarias%202025/CEPEX%20953%20A%20956.pdf"
+        }
+      ]
+    },
+    {
+      "id": "TEMP-POS-002",
+      "question": "Segundo a Resolução 658/2024, como era a antecedência mínima para divulgação da defesa de mestrado ou doutorado na pós-graduação da UFPI?",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder",
+      "sector": "pos_graduacao",
+      "domain": "pos_graduacao",
+      "norm_id": "ufpi-658-2024",
+      "category": "regra_historica",
+      "temporal_relation": "revocation",
+      "historical_intent": true,
+      "evidence": [
+        {
+          "norm_id": "ufpi-658-2024",
+          "article_number": "43",
+          "text": "Art. 43. A defesa da dissertação ou da tese será realizada presencialmente ou de forma híbrida, em dia e horário estabelecidos pela Coordenação do Programa, com divulgação de, pelo menos, 7 (sete) dias de antecedência, sendo sua realização aberta ao público.\n- $ 1º Em casos excepcionais, a defesa poderá ser realizada de maneira completamente remota, garantindo-se a publicidade das informações.\n- $ 2º Em casos excepcionais, a defesa poderá ser realizada de modo a garantir o sigilo das informações apresentadas, requerendo esta modalidade aprovação pelo Colegiado do Programa.",
+          "corpus_path": "evaluation/corpora/658_2024_temporal_v1.json"
+        }
+      ],
+      "current_evidence": [],
+      "applicable_norm_ids": [
+        "ufpi-658-2024"
+      ],
+      "reference_answer": "A 658/2024, art. 43, estabelecia pelo menos sete dias; trata-se de regra histórica de norma revogada pela 956/2025.",
+      "required_facts": [
+        "Pelo menos sete dias",
+        "Histórico, sem aplicar como regra atual"
+      ],
+      "pdf_evidence_locations": [
+        {
+          "norm_id": "ufpi-658-2024",
+          "article": "43",
+          "pdf_page": 14,
+          "pdf_source_url": "https://www.sigaa.ufpi.br/sigaa/verProducao?idProducao=6869447&key=18c6011be067380f348deb69741d19c1"
+        }
+      ]
+    },
+    {
+      "id": "TEMP-POS-003",
+      "question": "A Resolução 658/2024 ainda pode reger hoje a pós-graduação da UFPI ou foi revogada? Qual ato e dispositivo estabelecem isso?",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder",
+      "sector": "pos_graduacao",
+      "domain": "pos_graduacao",
+      "norm_id": "ufpi-956-2025",
+      "category": "vigencia",
+      "temporal_relation": "revocation",
+      "historical_intent": false,
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "62",
+          "text": "Art. 62. Ficam revogadas:\n| -a Resolução CEPEX/UFPI Nº 189, de 14 de setembro de 2007;\nIl -a Resolução CEPEX/UFPI Nº 22, de 21 de fevereiro de 2014;\nIll -a Resolução CEPEX/UFPI Nº 284, de 14 de dezembro de 2018;\nIV -a Resolução CEPEX/UFPI Nº 133, de 30 de agosto de 2021;\nV -a Resolução CEPEX/UFPI Nº 316, de 21 de julho de 2022;\nVI -a Resolução CEPEX/UFPI Nº 658, de 22 de abril de 2024; e\nVII -a Resolução CEPEX/UFPI Nº 693, de 26 de agosto de 2024.",
+          "corpus_path": "evaluation/corpora/pos_graduacao_setor_v2.json"
+        }
+      ],
+      "current_evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "62",
+          "text": "Art. 62. Ficam revogadas:\n| -a Resolução CEPEX/UFPI Nº 189, de 14 de setembro de 2007;\nIl -a Resolução CEPEX/UFPI Nº 22, de 21 de fevereiro de 2014;\nIll -a Resolução CEPEX/UFPI Nº 284, de 14 de dezembro de 2018;\nIV -a Resolução CEPEX/UFPI Nº 133, de 30 de agosto de 2021;\nV -a Resolução CEPEX/UFPI Nº 316, de 21 de julho de 2022;\nVI -a Resolução CEPEX/UFPI Nº 658, de 22 de abril de 2024; e\nVII -a Resolução CEPEX/UFPI Nº 693, de 26 de agosto de 2024.",
+          "corpus_path": "evaluation/corpora/pos_graduacao_setor_v2.json"
+        }
+      ],
+      "applicable_norm_ids": [
+        "ufpi-956-2025"
+      ],
+      "reference_answer": "A revogação expressa está na 956/2025, art. 62, VI. Não inferir datas de publicação nem aplicação retroativa.",
+      "required_facts": [
+        "Revogação da norma inteira",
+        "956/2025, art. 62, VI"
+      ],
+      "pdf_evidence_locations": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article": "62",
+          "pdf_page": 22,
+          "pdf_source_url": "https://ufpi.br/images/Portarias/Portarias%202025/CEPEX%20953%20A%20956.pdf"
+        }
+      ]
+    },
+    {
+      "id": "TEMP-POS-004",
+      "question": "Como era o prazo mínimo para divulgar a defesa na 658/2024 e como é na 956/2025, na pós-graduação da UFPI?",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder",
+      "sector": "pos_graduacao",
+      "domain": "pos_graduacao",
+      "norm_id": "ufpi-956-2025",
+      "category": "comparacao_historica",
+      "temporal_relation": "revocation",
+      "historical_intent": true,
+      "evidence": [
+        {
+          "norm_id": "ufpi-658-2024",
+          "article_number": "43",
+          "text": "Art. 43. A defesa da dissertação ou da tese será realizada presencialmente ou de forma híbrida, em dia e horário estabelecidos pela Coordenação do Programa, com divulgação de, pelo menos, 7 (sete) dias de antecedência, sendo sua realização aberta ao público.\n- $ 1º Em casos excepcionais, a defesa poderá ser realizada de maneira completamente remota, garantindo-se a publicidade das informações.\n- $ 2º Em casos excepcionais, a defesa poderá ser realizada de modo a garantir o sigilo das informações apresentadas, requerendo esta modalidade aprovação pelo Colegiado do Programa.",
+          "corpus_path": "evaluation/corpora/658_2024_temporal_v1.json"
+        },
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "53",
+          "text": "Art. 53. A defesa da dissertação ou tese é realizada em sessão pública, em dia e horário definidos pela Coordenação do Programa, e divulgada com antecedência mínima de dez dias.\n- $ 1º A defesa (caput) pode ser realizada nos formatos presencial, híbrido ou remoto, conforme o Regimento Interno.\n- $ 2º Em casos excepcionais que exijam sigilo, a defesa pode ocorrer em sessão restrita, mediante aprovação do Colegiado Simples.",
+          "corpus_path": "evaluation/corpora/pos_graduacao_setor_v2.json"
+        }
+      ],
+      "current_evidence": [],
+      "applicable_norm_ids": [
+        "ufpi-658-2024",
+        "ufpi-956-2025"
+      ],
+      "reference_answer": "A 658/2024, art. 43, exigia sete dias; a 956/2025, art. 53, estabelece dez dias. A primeira é histórica e revogada.",
+      "required_facts": [
+        "Sete dias na 658, art. 43",
+        "Dez dias na 956, art. 53"
+      ],
+      "pdf_evidence_locations": [
+        {
+          "norm_id": "ufpi-658-2024",
+          "article": "43",
+          "pdf_page": 14,
+          "pdf_source_url": "https://www.sigaa.ufpi.br/sigaa/verProducao?idProducao=6869447&key=18c6011be067380f348deb69741d19c1"
+        },
+        {
+          "norm_id": "ufpi-956-2025",
+          "article": "53",
+          "pdf_page": 20,
+          "pdf_source_url": "https://ufpi.br/images/Portarias/Portarias%202025/CEPEX%20953%20A%20956.pdf"
+        }
+      ]
+    },
+    {
+      "id": "TEMP-POS-005",
+      "question": "Atualmente, a defesa de dissertação ou tese na pós-graduação da UFPI pode ser divulgada com apenas sete dias de antecedência?",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder",
+      "sector": "pos_graduacao",
+      "domain": "pos_graduacao",
+      "norm_id": "ufpi-956-2025",
+      "category": "recuperacao_concorrente",
+      "temporal_relation": "revocation",
+      "historical_intent": false,
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "53",
+          "text": "Art. 53. A defesa da dissertação ou tese é realizada em sessão pública, em dia e horário definidos pela Coordenação do Programa, e divulgada com antecedência mínima de dez dias.\n- $ 1º A defesa (caput) pode ser realizada nos formatos presencial, híbrido ou remoto, conforme o Regimento Interno.\n- $ 2º Em casos excepcionais que exijam sigilo, a defesa pode ocorrer em sessão restrita, mediante aprovação do Colegiado Simples.",
+          "corpus_path": "evaluation/corpora/pos_graduacao_setor_v2.json"
+        }
+      ],
+      "current_evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "53",
+          "text": "Art. 53. A defesa da dissertação ou tese é realizada em sessão pública, em dia e horário definidos pela Coordenação do Programa, e divulgada com antecedência mínima de dez dias.\n- $ 1º A defesa (caput) pode ser realizada nos formatos presencial, híbrido ou remoto, conforme o Regimento Interno.\n- $ 2º Em casos excepcionais que exijam sigilo, a defesa pode ocorrer em sessão restrita, mediante aprovação do Colegiado Simples.",
+          "corpus_path": "evaluation/corpora/pos_graduacao_setor_v2.json"
+        }
+      ],
+      "applicable_norm_ids": [
+        "ufpi-956-2025"
+      ],
+      "reference_answer": "No snapshot da 956/2025, art. 53, exige-se divulgação mínima de dez dias; sete dias é a redação histórica da 658/2024, art. 43.",
+      "required_facts": [
+        "Não aplicar sete dias como prazo atual",
+        "Dez dias, art. 53 da 956"
+      ],
+      "pdf_evidence_locations": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article": "53",
+          "pdf_page": 20,
+          "pdf_source_url": "https://ufpi.br/images/Portarias/Portarias%202025/CEPEX%20953%20A%20956.pdf"
+        }
+      ]
+    }
+  ]
+}

@@ -1,174 +1,134 @@
-from collections.abc import AsyncGenerator
-from unittest.mock import AsyncMock, Mock
+"""Entrypoint regressions updated for the TCC single-agent product contract."""
 
-import pytest
+from pathlib import Path
+from unittest.mock import Mock
+
 from streamlit.testing.v1 import AppTest
 
-from client import AgentClientError
-from schema import ChatHistory, ChatMessage
-from schema.models import OpenAIModelName
+from client import AgentClient, AgentClientError
+from schema import ChatMessage
+
+APP = Path(__file__).resolve().parents[2] / "src/streamlit_app.py"
+AGENT = "chatbot_ufpi_integrated_v1"
 
 
-def test_app_simple_non_streaming(mock_agent_client):
-    """Test the full app - happy path"""
-    at = AppTest.from_file("../../src/streamlit_app.py").run()
+def app():
+    return AppTest.from_file(str(APP)).run(timeout=15)
 
-    WELCOME_START = "Hello! I'm an AI agent. Ask me anything!"
-    PROMPT = "Know any jokes?"
-    RESPONSE = "Sure! Here's a joke:"
 
-    mock_agent_client.ainvoke = AsyncMock(
-        return_value=ChatMessage(type="ai", content=RESPONSE),
-    )
+def respond(mock, messages):
+    async def events(**kwargs):
+        for message in messages:
+            yield message
 
-    assert at.chat_message[0].avatar == "assistant"
-    assert at.chat_message[0].markdown[0].value.startswith(WELCOME_START)
+    mock.astream = Mock(side_effect=events)
 
-    at.sidebar.toggle[0].set_value(False)  # Use Streaming = False
-    at.chat_input[0].set_value(PROMPT).run()
-    print(at)
-    assert at.chat_message[0].avatar == "user"
-    assert at.chat_message[0].markdown[0].value == PROMPT
-    assert at.chat_message[1].avatar == "assistant"
-    assert at.chat_message[1].markdown[0].value == RESPONSE
+
+def test_app_complete_stream_message(mock_agent_client):
+    respond(mock_agent_client, [ChatMessage(type="ai", content="Resposta completa.")])
+    at = app()
+    at.chat_input[0].set_value("Olá").run(timeout=15)
     assert not at.exception
-
-
-def test_app_settings(mock_agent_client):
-    """Test the full app - happy path"""
-    at = AppTest.from_file("../../src/streamlit_app.py")
-    at.query_params["user_id"] = "1234"
-    at.run()
-
-    PROMPT = "Know any jokes?"
-    RESPONSE = "Sure! Here's a joke:"
-
-    mock_agent_client.ainvoke = AsyncMock(
-        return_value=ChatMessage(type="ai", content=RESPONSE),
+    assert [m.content for m in at.session_state.messages] == ["Olá", "Resposta completa."]
+    mock_agent_client.update_agent.assert_called_with(AGENT, verify=False)
+    mock_agent_client.astream.assert_called_once_with(
+        message="Olá", thread_id=at.session_state.thread_id, user_id=at.session_state.user_id
     )
+    mock_agent_client.ainvoke.assert_not_called()
 
-    at.sidebar.toggle[0].set_value(False)  # Use Streaming = False
-    assert at.sidebar.selectbox[0].value == "gpt-4o"
-    assert mock_agent_client.agent == "test-agent"
-    at.sidebar.selectbox[0].set_value("gpt-4o-mini")
-    at.sidebar.selectbox[1].set_value("chatbot")
-    at.chat_input[0].set_value(PROMPT).run()
-    print(at)
 
-    # Basic checks
-    assert at.chat_message[0].avatar == "user"
-    assert at.chat_message[0].markdown[0].value == PROMPT
-    assert at.chat_message[1].avatar == "assistant"
-    assert at.chat_message[1].markdown[0].value == RESPONSE
-
-    # Check the args match the settings
-    assert mock_agent_client.agent == "chatbot"
-    mock_agent_client.ainvoke.assert_called_with(
-        message=PROMPT,
-        model=OpenAIModelName.GPT_4O_MINI,
-        thread_id=at.session_state.thread_id,
-        user_id="1234",
-    )
+def test_app_has_no_agent_or_model_settings(mock_agent_client):
+    at = app()
     assert not at.exception
+    assert not at.selectbox and not at.radio and not at.toggle
+    assert at.sidebar.button[0].label == "Nova conversa"
+    assert any("Olá! Eu sou o" in m.value and "ufpi-greeting" in m.value for m in at.markdown)
 
 
-def test_app_thread_id_history(mock_agent_client):
-    """Test the thread_id is generated"""
+def test_app_does_not_restore_legacy_history(mock_agent_client):
+    at = AppTest.from_file(str(APP))
+    at.query_params["thread_id"] = "legacy-thread"
+    at.run(timeout=15)
+    assert at.session_state.thread_id != "legacy-thread"
+    assert at.session_state.messages == []
+    mock_agent_client.get_history.assert_not_called()
 
-    at = AppTest.from_file("../../src/streamlit_app.py").run()
 
-    # Reset and set thread_id
-    at = AppTest.from_file("../../src/streamlit_app.py")
-    at.query_params["thread_id"] = "1234"
-    HISTORY = [
-        ChatMessage(type="human", content="What is the weather?"),
-        ChatMessage(type="ai", content="The weather is sunny."),
+def test_app_no_remote_feedback_or_share(mock_agent_client):
+    respond(mock_agent_client, [ChatMessage(type="ai", content="Olá!")])
+    at = app()
+    at.chat_input[0].set_value("Oi").run(timeout=15)
+    labels = " ".join(button.label for button in at.button).lower()
+    assert "feedback" not in labels and "compartilhar" not in labels
+    assert not at.chat_message[-1].button
+    mock_agent_client.acreate_feedback.assert_not_called()
+
+
+def test_app_network_failure_safe(mock_agent_client):
+    async def fail(**kwargs):
+        raise AgentClientError("UNSAFE URL and secret")
+        yield
+
+    mock_agent_client.astream = Mock(side_effect=fail)
+    at = app()
+    at.chat_input[0].set_value("Oi").run(timeout=15)
+    assert not at.exception
+    assert "Não foi possível obter" in at.error[0].value
+    assert "UNSAFE" not in at.error[0].value
+
+
+def test_app_done_is_consumed_by_real_client_parser(mock_agent_client):
+    parser = AgentClient.__new__(AgentClient)
+    # AgentClient is patched by the fixture: import its original implementation.
+    from client.client import AgentClient as RealClient
+
+    parser = RealClient(get_info=False)
+    lines = [
+        'data: {"type":"message","content":{"type":"ai","content":"Final único."}}',
+        "data: [DONE]",
     ]
-    mock_agent_client.get_history.return_value = ChatHistory(messages=HISTORY)
-    at.run()
-    print(at)
-    assert at.session_state.thread_id == "1234"
-    mock_agent_client.get_history.assert_called_with(thread_id="1234")
-    assert at.chat_message[0].avatar == "user"
-    assert at.chat_message[0].markdown[0].value == "What is the weather?"
-    assert at.chat_message[1].avatar == "assistant"
-    assert at.chat_message[1].markdown[0].value == "The weather is sunny."
+    events = [event for line in lines if (event := parser._parse_stream_line(line)) is not None]
+    respond(mock_agent_client, events)
+    at = app()
+    at.chat_input[0].set_value("Oi").run(timeout=15)
     assert not at.exception
+    assert len(at.session_state.messages) == 2
+    assert at.chat_message[-1].markdown[0].value == "Final único."
+    assert "DONE" not in str([m.value for m in at.markdown])
 
 
-def test_app_feedback(mock_agent_client):
-    """TODO: Can't figure out how to interact with st.feedback"""
+def test_app_new_chat_clears_transient_state(mock_agent_client):
+    async def fail(**kwargs):
+        raise AgentClientError("UNSAFE")
+        yield
 
-    pass
-
-
-@pytest.mark.asyncio
-async def test_app_streaming(mock_agent_client):
-    """Test the app with streaming enabled - including tool messages"""
-    at = AppTest.from_file("../../src/streamlit_app.py").run()
-
-    # Setup mock streaming response
-    PROMPT = "What is 6 * 7?"
-    ai_with_tool = ChatMessage(
-        type="ai",
-        content="",
-        tool_calls=[{"name": "calculator", "id": "test_call_id", "args": {"expression": "6 * 7"}}],
-    )
-    tool_message = ChatMessage(type="tool", content="42", tool_call_id="test_call_id")
-    final_ai_message = ChatMessage(type="ai", content="The answer is 42")
-
-    messages = [ai_with_tool, tool_message, final_ai_message]
-
-    async def amessage_iter() -> AsyncGenerator[ChatMessage, None]:
-        for m in messages:
-            yield m
-
-    mock_agent_client.astream = Mock(return_value=amessage_iter())
-
-    at.toggle[0].set_value(True)  # Use Streaming = True
-    at.chat_input[0].set_value(PROMPT).run()
-    print(at)
-
-    assert at.chat_message[0].avatar == "user"
-    assert at.chat_message[0].markdown[0].value == PROMPT
-    response = at.chat_message[1]
-    tool_status = response.status[0]
-    assert response.avatar == "assistant"
-    assert tool_status.label == "Tool Call: calculator"
-    assert tool_status.icon == ":material/check:"
-    assert tool_status.markdown[0].value == "Input:"
-    assert tool_status.json[0].value == '{"expression": "6 * 7"}'
-    assert tool_status.markdown[1].value == "Output:"
-    assert tool_status.markdown[2].value == "42"
-    assert response.markdown[-1].value == "The answer is 42"
+    mock_agent_client.astream = Mock(side_effect=fail)
+    at = app()
+    at.chat_input[0].set_value("Oi").run(timeout=15)
+    assert at.error
+    user, thread = at.session_state.user_id, at.session_state.thread_id
+    at.sidebar.button[0].click().run(timeout=15)
     assert not at.exception
+    assert at.session_state.user_id == user
+    assert at.session_state.thread_id != thread
+    assert not at.error
 
 
-@pytest.mark.asyncio
-async def test_app_init_error(mock_agent_client):
-    """Test the app with an error in the agent initialization"""
-    at = AppTest.from_file("../../src/streamlit_app.py").run()
+def test_app_sse_error_uses_safe_ux_and_is_not_an_assistant_answer(mock_agent_client):
+    from client.client import AgentClient as RealClient
 
-    # Setup mock streaming response
-    PROMPT = "What is 6 * 7?"
-    mock_agent_client.astream.side_effect = AgentClientError("Error connecting to agent")
+    parser = RealClient(get_info=False)
 
-    at.toggle[0].set_value(True)  # Use Streaming = True
-    at.chat_input[0].set_value(PROMPT).run()
-    print(at)
+    async def events(**kwargs):
+        event = parser._parse_stream_line(
+            'data: {"type":"error","content":"UNSAFE server details"}'
+        )
+        yield event
 
-    assert at.chat_message[0].avatar == "assistant"
-    assert at.chat_message[1].avatar == "user"
-    assert at.chat_message[1].markdown[0].value == PROMPT
-    assert at.error[0].value == "Error generating response: Error connecting to agent"
+    mock_agent_client.astream = Mock(side_effect=events)
+    at = app()
+    at.chat_input[0].set_value("Oi").run(timeout=15)
     assert not at.exception
-
-
-def test_app_new_chat_btn(mock_agent_client):
-    at = AppTest.from_file("../../src/streamlit_app.py").run()
-    thread_id_a = at.session_state.thread_id
-
-    at.sidebar.button[0].click().run()
-
-    assert at.session_state.thread_id != thread_id_a
-    assert not at.exception
+    assert len(at.session_state.messages) == 1
+    assert "Não foi possível obter" in at.error[0].value
+    assert "UNSAFE" not in str([m.value for m in at.markdown])

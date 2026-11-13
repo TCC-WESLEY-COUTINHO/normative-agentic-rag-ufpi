@@ -1,0 +1,121 @@
+{
+  "baseline": {
+    "rag_baseline_passed": 236,
+    "rag_baseline_skipped": 10
+  },
+  "red_cycles": [
+    {
+      "failed": 20,
+      "passed": 7
+    },
+    {
+      "failed": 2,
+      "passed": 27
+    },
+    {
+      "failed": 5,
+      "passed": 29
+    },
+    {
+      "failed": 1,
+      "passed": 1
+    },
+    {
+      "failed": 2,
+      "passed": 0,
+      "layer": "evaluation_failure_attribution"
+    }
+  ],
+  "green_invariant_tests": 38,
+  "checks": [
+    {
+      "command": [
+        "D:\\faculdade\\TCC\\RAG\\.uv-python\\cpython-3.11.15-windows-x86_64-none\\python.exe",
+        "-m",
+        "pytest",
+        "tests/rag_baseline/test_temporal_invariants.py",
+        "tests/rag_baseline/test_temporal_versions.py",
+        "tests/rag_baseline/test_versioning.py",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--tb=short"
+      ],
+      "exit_code": 0,
+      "counts": {
+        "passed": 66
+      }
+    },
+    {
+      "command": [
+        "D:\\faculdade\\TCC\\RAG\\.uv-python\\cpython-3.11.15-windows-x86_64-none\\python.exe",
+        "-m",
+        "pytest",
+        "tests/rag_baseline",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--tb=short"
+      ],
+      "exit_code": 0,
+      "counts": {
+        "passed": 274,
+        "skipped": 10,
+        "warnings": 2
+      }
+    },
+    {
+      "command": [
+        "D:\\faculdade\\TCC\\RAG\\.uv-python\\cpython-3.11.15-windows-x86_64-none\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--tb=short"
+      ],
+      "exit_code": 0,
+      "counts": {
+        "passed": 337,
+        "skipped": 12,
+        "warnings": 4
+      }
+    },
+    {
+      "command": [
+        "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Scripts\\ruff.exe",
+        "check",
+        "--no-cache",
+        "src/rag_baseline/agentic.py",
+        "src/rag_baseline/versioning.py",
+        "src/rag_baseline/api.py",
+        "src/rag_baseline/models.py",
+        "src/rag_baseline/temporal_evaluation.py",
+        "tests/rag_baseline/test_temporal_invariants.py"
+      ],
+      "exit_code": 0,
+      "counts": {}
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "counts": {}
+    }
+  ],
+  "provider_calls_in_normal_pytest": false,
+  "python_version": "3.11.15",
+  "python_environment": "Existing cp311 dependencies; compatible local Python used because the original venv launcher points to a missing interpreter.",
+  "independent_review": {
+    "original_findings": 4,
+    "regressions_added": 5,
+    "all_original_reproductions_resolved": true
+  },
+  "warnings": [
+    "Two existing LangChain/Pydantic deprecations in rag_baseline.",
+    "Full suite additionally warns about AsyncMock raise_for_status and TestClient timeout."
+  ]
+}

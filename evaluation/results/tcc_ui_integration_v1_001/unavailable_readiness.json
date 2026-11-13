@@ -1,0 +1,14 @@
+{
+  "ready": false,
+  "reason_code": "provider_not_configured",
+  "provider_configured": false,
+  "registry_valid": false,
+  "index_available": false,
+  "index_records": null,
+  "memory_ready": true,
+  "memory_stamp_created": false,
+  "calculator_available": false,
+  "facade_ready": false,
+  "registered": true,
+  "experimental": true
+}

@@ -1,0 +1,10 @@
+{
+  "stage": "test",
+  "code_commit": "2dd3ffa7086eb21a7d90624b2ab1c352e28ee088",
+  "status": "aborted_before_external_calls",
+  "llm_calls": 0,
+  "embedding_calls": 0,
+  "output_directory_created": false,
+  "cause": "Windows hash-object backslash path normalized CRLF despite -text; forwardslash path agrees with HEAD",
+  "remedy": "Normalize hash-object path; retain original DEV evidence; same threshold bound to compatibility-only runner hash"
+}

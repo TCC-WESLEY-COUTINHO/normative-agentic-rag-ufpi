@@ -1,0 +1,289 @@
+{
+  "initial_head": "19a0aed5d17dfedec470881796d2e10f3edbb3e6",
+  "implementation_head": "9c8fd2fe31a2395f6c507698f7b1838df66586f0",
+  "focused_tests": 61,
+  "test_selections": [
+    {
+      "selection": "agent",
+      "command": [
+        "C:/Users/wesley/.local/bin/python3.11.exe",
+        "-m",
+        "pytest",
+        "tests/rag_baseline/test_agent_normative_integration.py",
+        "-q",
+        "--tb=short"
+      ],
+      "cwd": "code",
+      "timestamp": "2026-10-31T17:37:54.423036+00:00",
+      "seconds": 4.14,
+      "exit_code": 0,
+      "summary": "61 passed in 2.33s",
+      "passed": 61,
+      "failed": 0,
+      "skipped": 0,
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "selection": "retrieval",
+      "command": [
+        "C:/Users/wesley/.local/bin/python3.11.exe",
+        "-m",
+        "pytest",
+        "tests/rag_baseline/test_retrieval_strategies.py",
+        "-q",
+        "--tb=short"
+      ],
+      "cwd": "code",
+      "timestamp": "2026-10-31T17:37:58.562278+00:00",
+      "seconds": 10.219,
+      "exit_code": 0,
+      "summary": "76 passed in 8.39s",
+      "passed": 76,
+      "failed": 0,
+      "skipped": 0,
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "selection": "facade",
+      "command": [
+        "C:/Users/wesley/.local/bin/python3.11.exe",
+        "-m",
+        "pytest",
+        "tests/rag_baseline/test_normative_tool_contracts.py",
+        "tests/rag_baseline/test_normative_tool_facade.py",
+        "-q",
+        "--tb=short"
+      ],
+      "cwd": "code",
+      "timestamp": "2026-10-31T17:38:08.784074+00:00",
+      "seconds": 2.0,
+      "exit_code": 0,
+      "summary": "79 passed in 0.62s",
+      "passed": 79,
+      "failed": 0,
+      "skipped": 0,
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "selection": "structured",
+      "command": [
+        "C:/Users/wesley/.local/bin/python3.11.exe",
+        "-m",
+        "pytest",
+        "tests/rag_baseline/test_normative_output.py",
+        "tests/rag_baseline/test_content_locators_v2.py",
+        "tests/rag_baseline/test_structured_evaluation_v2.py",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--tb=short"
+      ],
+      "cwd": "code",
+      "timestamp": "2026-10-31T17:38:42.928937+00:00",
+      "seconds": 3.547,
+      "exit_code": 0,
+      "summary": "122 passed in 2.10s",
+      "passed": 122,
+      "failed": 0,
+      "skipped": 0,
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "selection": "temporal",
+      "command": [
+        "C:/Users/wesley/.local/bin/python3.11.exe",
+        "-m",
+        "pytest",
+        "tests/rag_baseline/test_versioning.py",
+        "tests/rag_baseline/test_temporal_versions.py",
+        "tests/rag_baseline/test_temporal_invariants.py",
+        "tests/rag_baseline/test_temporal_grounding.py",
+        "tests/rag_baseline/test_agentic_pipeline.py",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--tb=short"
+      ],
+      "cwd": "code",
+      "timestamp": "2026-10-31T17:38:46.461235+00:00",
+      "seconds": 6.828,
+      "exit_code": 0,
+      "summary": "93 passed in 4.89s",
+      "passed": 93,
+      "failed": 0,
+      "skipped": 0,
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "selection": "rag_baseline",
+      "command": [
+        "C:/Users/wesley/.local/bin/python3.11.exe",
+        "-m",
+        "pytest",
+        "tests/rag_baseline",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--tb=short"
+      ],
+      "cwd": "code",
+      "timestamp": "2026-10-31T17:38:53.292392+00:00",
+      "seconds": 41.25,
+      "exit_code": 0,
+      "summary": "624 passed, 10 skipped, 2 warnings in 38.35s",
+      "passed": 624,
+      "failed": 0,
+      "skipped": 10,
+      "warnings": 2,
+      "errors": 0
+    },
+    {
+      "selection": "legacy",
+      "command": [
+        "C:/Users/wesley/.local/bin/python3.11.exe",
+        "-m",
+        "pytest",
+        "tests/core",
+        "tests/service",
+        "tests/client",
+        "tests/app",
+        "tests/integration",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--tb=short"
+      ],
+      "cwd": "code",
+      "timestamp": "2026-10-31T17:39:34.551259+00:00",
+      "seconds": 18.797,
+      "exit_code": 0,
+      "summary": "63 passed, 2 skipped, 4 warnings in 2.85s",
+      "passed": 63,
+      "failed": 0,
+      "skipped": 2,
+      "warnings": 4,
+      "errors": 0
+    },
+    {
+      "selection": "full",
+      "command": [
+        "C:/Users/wesley/.local/bin/python3.11.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--tb=short"
+      ],
+      "cwd": "code",
+      "timestamp": "2026-10-31T17:39:53.338578+00:00",
+      "seconds": 53.375,
+      "exit_code": 0,
+      "summary": "687 passed, 12 skipped, 4 warnings in 43.74s",
+      "passed": 687,
+      "failed": 0,
+      "skipped": 12,
+      "warnings": 4,
+      "errors": 0
+    }
+  ],
+  "ruff": {
+    "files": 6,
+    "check": 0,
+    "format_check": 0,
+    "config": "code/pyproject.toml"
+  },
+  "diff_check": 0,
+  "preservation": {
+    "protected_files": 617,
+    "identical_files": 617,
+    "changed_files": [],
+    "index_identical": true,
+    "index_count": 507,
+    "index_sha256": "ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a",
+    "existing_tests_unchanged": true,
+    "old_results_unchanged": true,
+    "registry_unchanged": true,
+    "default_registry_file_unchanged": true
+  },
+  "metrics": {
+    "action_policy_accuracy": [
+      24,
+      24
+    ],
+    "normative_bypass": [
+      0,
+      18
+    ],
+    "authoritative_answer_preservation": [
+      24,
+      24
+    ],
+    "structured_result_preservation": [
+      26,
+      26
+    ],
+    "clarification_preservation": [
+      1,
+      1
+    ],
+    "direct_false_allow": [
+      0,
+      12
+    ],
+    "one_facade_call_per_normative_turn": [
+      18,
+      18
+    ]
+  },
+  "real_api_calls": 0,
+  "default_agent_unchanged": true,
+  "public_registry_registration": false,
+  "checkpointer_connected": false,
+  "old_source_changes": 0,
+  "new_production_modules": 4,
+  "source_hashes": {
+    "code/src/rag_baseline/agent_policy.py": "cf93a002f9eec025d3b59e754a00eefd3de0a2ce1227f400fdd18cd89a634ede",
+    "code/src/rag_baseline/agent_tool.py": "f1a7bd73db821746f0c1143888abacea23a34bec259816e4479564b039808141",
+    "code/src/rag_baseline/agent_emission.py": "b0a0e23b5e98c808f6a37d556fa73ac65819a166b90915241e56cc459b530bb7",
+    "code/src/rag_baseline/agent_graph.py": "471c941f35907c404574ace35a3f96f820264bd170ff28da38b0836414dc0968",
+    "code/tests/rag_baseline/test_agent_normative_integration.py": "ace72f6d5c0317cce980fb937a9038bbd52163c4068504d37b36863eb87ce9f3",
+    "evaluation/datasets/agent_action_policy_v1.json": "e3768e3506fe9c9b5e1509417984ab7d89b9572f3959bdd557ff8225268d45d2",
+    "evaluation/results/agent_normative_integration_v1_001/local_probes.py": "45819ced54e5dd8dde17f8de3698543b056b1a7d4d1872748a56c3fce8475a45"
+  },
+  "git_source_checks": [
+    {
+      "path": "code/src/rag_baseline/agent_policy.py",
+      "working_sha256": "cf93a002f9eec025d3b59e754a00eefd3de0a2ce1227f400fdd18cd89a634ede",
+      "git_blob_sha256": "cf93a002f9eec025d3b59e754a00eefd3de0a2ce1227f400fdd18cd89a634ede",
+      "normalized_equal": true
+    },
+    {
+      "path": "code/src/rag_baseline/agent_tool.py",
+      "working_sha256": "f1a7bd73db821746f0c1143888abacea23a34bec259816e4479564b039808141",
+      "git_blob_sha256": "f1a7bd73db821746f0c1143888abacea23a34bec259816e4479564b039808141",
+      "normalized_equal": true
+    },
+    {
+      "path": "code/src/rag_baseline/agent_emission.py",
+      "working_sha256": "b0a0e23b5e98c808f6a37d556fa73ac65819a166b90915241e56cc459b530bb7",
+      "git_blob_sha256": "b0a0e23b5e98c808f6a37d556fa73ac65819a166b90915241e56cc459b530bb7",
+      "normalized_equal": true
+    },
+    {
+      "path": "code/src/rag_baseline/agent_graph.py",
+      "working_sha256": "471c941f35907c404574ace35a3f96f820264bd170ff28da38b0836414dc0968",
+      "git_blob_sha256": "471c941f35907c404574ace35a3f96f820264bd170ff28da38b0836414dc0968",
+      "normalized_equal": true
+    }
+  ],
+  "decision_count": 15,
+  "execution_event_count": 28,
+  "warnings": "4 legacy full-suite warnings: two dependency Pydantic deprecations, client AsyncMock, Starlette TestClient timeout.",
+  "scope": "Engineering wiring only; no quality/legal evaluation."
+}

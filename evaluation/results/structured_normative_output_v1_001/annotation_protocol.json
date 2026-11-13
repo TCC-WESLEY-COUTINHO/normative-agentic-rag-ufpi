@@ -1,0 +1,16 @@
+{
+  "status": "provisional_technical_not_independently_validated",
+  "frozen_before_provider_calls": true,
+  "unit": "one query; all 44 temporal cases",
+  "citation_rule": "Any unvalidated subdivision, unknown article or norm locator in raw/final; broader than the previous bibliography-only CGVR. Old results are retained and also replayed under this protocol.",
+  "chronology_rule": "Affirmative unsupported publication/effectivity/retroactivity/other date or scope claims. Norm identifier year alone is not chronology.",
+  "temporal_rule": "Chronology, unknown/current certification, historical denial or current framing, incorrect relation/direction or comparison-role contradiction; inspect beyond guard matches.",
+  "completion_rule": "Final body provides substantive normative content answering the query. A correct relation answers a validity query; conservative unknown-status answer answers the epistemic unknown query. Fallback and content-denial do not count.",
+  "official_reference_rule": "Displayed NormativeReference entries only, checked against final evidence and ceiling. Legacy reference.content is a full evidence excerpt, not a bibliographic locator.",
+  "limitations": [
+    "Bounded Portuguese guard patterns are not a semantic oracle.",
+    "Manual technical inspection by the implementing assistant, no additional judge LLM or independent legal gold.",
+    "Repeated generation at temperature zero is not an independent population sample.",
+    "Fixed final contexts isolate generation; no retrieval/router quality inference."
+  ]
+}

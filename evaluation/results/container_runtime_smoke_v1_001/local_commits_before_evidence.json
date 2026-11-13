@@ -1,0 +1,7 @@
+{
+  "commits": [
+    "cdc4996 fix: use Python for service container healthcheck",
+    "548ab38 test: reproduce container runtime healthcheck issue"
+  ],
+  "note": "Final evidence commit SHA is omitted to avoid self-reference."
+}

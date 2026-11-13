@@ -1,0 +1,25 @@
+{
+  "branch": "test/container-runtime-smoke-v1",
+  "head": "ccf71406849634b7f7fae3f31b9d9d7217fac831",
+  "log": "ccf7140 (HEAD -> test/container-runtime-smoke-v1, feat/runtime-registration-packaging-v1) test: verify registered runtime and packaging\nfa56726 build: package integrated normative agent runtime\n7be35db feat: register integrated agent runtime\n3610c0c test: define integrated runtime registration boundaries\n706bd7c (feat/calculator-tool-routing-v1) test: verify calculator isolation and transport\na5d2f9e feat: add deterministic calculator routing\n55e4f0a test: define calculator and tool routing boundaries\nd827d4e (feat/conversation-memory-followups-v1) test: verify conversational isolation and grounded continuation\n8e52479 feat: persist normative memory and grounded follow-ups\n4f7dfda test: define conversation memory and follow-up boundaries\n01b95c5 (feat/typed-normative-transport-v1) test: verify typed normative invoke and stream contracts\nbeb638d feat: transport normative results through service and client\n8bfedc7 test: define typed normative transport boundaries\n459dab7 (feat/agent-normative-integration-v1) test: verify normative agent emission and bypass protection\n9c8fd2f feat: integrate normative rag capability into agent graph",
+  "recorded_at": "2026-11-01T16:31:30.689519+00:00",
+  "initial_observation": {
+    "branch": "feat/runtime-registration-packaging-v1",
+    "head": "ccf71406849634b7f7fae3f31b9d9d7217fac831",
+    "status": "",
+    "diff": "",
+    "cached_diff": "",
+    "stat": "",
+    "source": "Read-only shell audit before branch creation; log matches source HEAD."
+  },
+  "cached_diff": "",
+  "working_tree_at_audit": {
+    "status_entries": 228,
+    "diff_files": 227,
+    "diff_sha256": "b121e45e40943563c673498491b58c21d1ee189320cf39fc84a393c4eff16162",
+    "diff_bytes_utf8": 18920727,
+    "status_sha256": "bea834361cf767dc33b0413eff7d65b007f6fe73e10a5d5d206166da7dcd2d96",
+    "stat_sha256": "974539c90791685feeda7662cb0e0e66acbdf528dafea45f941e7c03f783af8d",
+    "stat_summary": "227 files changed, 68018 insertions(+), 68018 deletions(-)"
+  }
+}

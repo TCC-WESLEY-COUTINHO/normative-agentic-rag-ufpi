@@ -1,0 +1,97 @@
+{
+  "schema": "execution_snapshot_preservation_v2",
+  "source_run": "pilot_001",
+  "run_manifest": "evaluation/results/pilot_001/manifest.json",
+  "description": "Files in this snapshot, which may be partial. byte_preserved files match the hash in the run manifest. scientific_projection files have their own hash and do not reproduce the historical hash. not_included lists inputs recorded in the run manifest that are absent from this snapshot. Verification uses only repository files.",
+  "files": [
+    {
+      "relative_path": "evaluation/datasets/graduacao_v1.json",
+      "sha256": "79e564b791a33b272f9f62cd70de002d102a568eedb33f0b002ca91af4d69746",
+      "byte_size": 67239,
+      "role": "candidate dataset",
+      "preservation_kind": "scientific_projection",
+      "source_run": "pilot_001",
+      "normalization": "non-scientific metadata normalized"
+    },
+    {
+      "relative_path": "evaluation/datasets/pos_graduacao_v1.json",
+      "sha256": "06192b345e1b7d61fcc20ee3431ced91d52bf4b579ecab6db3c1952f514647d0",
+      "byte_size": 40401,
+      "role": "candidate dataset",
+      "preservation_kind": "scientific_projection",
+      "source_run": "pilot_001",
+      "normalization": "non-scientific metadata normalized"
+    },
+    {
+      "relative_path": "evaluation/protocol.md",
+      "sha256": "45ff3b3a98a10c83efac4cf6d61d42434b28324ddb734ad5905ba0eff6efb3bb",
+      "byte_size": 10683,
+      "role": "evaluation protocol",
+      "preservation_kind": "scientific_projection",
+      "source_run": "pilot_001",
+      "normalization": "non-scientific metadata normalized"
+    }
+  ],
+  "not_included": [
+    {
+      "relative_path": "code/scripts/chunks_v2.json",
+      "role": "normative corpus"
+    },
+    {
+      "relative_path": "code/scripts/chunks_resolucao_956_2025_v1.json",
+      "role": "normative corpus"
+    },
+    {
+      "relative_path": "code/uv.lock",
+      "role": "dependency lock"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/__init__.py",
+      "role": "source module"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/api.py",
+      "role": "source module"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/config.py",
+      "role": "source module"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/corpus.py",
+      "role": "source module"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/experiment.py",
+      "role": "source module"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/index.py",
+      "role": "source module"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/models.py",
+      "role": "source module"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/openrouter.py",
+      "role": "source module"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/profiles.py",
+      "role": "source module"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/retrieve.py",
+      "role": "source module"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/service.py",
+      "role": "source module"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/vector_store.py",
+      "role": "source module"
+    }
+  ]
+}

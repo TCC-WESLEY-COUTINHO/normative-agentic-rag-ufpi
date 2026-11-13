@@ -1,0 +1,41 @@
+FFF                                                                      [100%]
+================================== FAILURES ===================================
+___________ test_review_expansion_regressions[Resolu\xe7\xe3o 68.] ____________
+code\tests\rag_baseline\test_conversation_memory_transport.py:170: in test_review_expansion_regressions
+    assert GroundedTransformGuard().check(NormativeToolResult(**answer_data()), candidate)
+E   AssertionError: assert []
+E    +  where [] = check(NormativeToolResult(contract_version='1', core_version='structured_output_v2', status=<ToolStatus.ANSWER: 'ANSWER'>, a...ication_question=None, correlation_id=UUID('8ab5d1af-9708-4555-a442-bf8c8a744c91'), error_code=None, safe_message=None), 'ResoluÃ§Ã£o 68.')
+E    +    where check = <rag_baseline.conversation_transform.GroundedTransformGuard object at 0x0000023320E672D0>.check
+E    +      where <rag_baseline.conversation_transform.GroundedTransformGuard object at 0x0000023320E672D0> = <class 'rag_baseline.conversation_transform.GroundedTransformGuard'>()
+E    +    and   NormativeToolResult(contract_version='1', core_version='structured_output_v2', status=<ToolStatus.ANSWER: 'ANSWER'>, a...ication_question=None, correlation_id=UUID('8ab5d1af-9708-4555-a442-bf8c8a744c91'), error_code=None, safe_message=None) = <class 'rag_baseline.tool_contracts.NormativeToolResult'>(**{'allowed_temporal_facts': {'items': [{'kind': 'HISTORICAL_CONTEXT'}]}, 'answer': 'Resposta final do nÃºcleo.\nFontes oficiais: ResoluÃ§Ã£o 177/2012, art. 68.', 'clarification_question': None, 'contract_version': '1', ...})
+E    +      where {'allowed_temporal_facts': {'items': [{'kind': 'HISTORICAL_CONTEXT'}]}, 'answer': 'Resposta final do nÃºcleo.\nFontes oficiais: ResoluÃ§Ã£o 177/2012, art. 68.', 'clarification_question': None, 'contract_version': '1', ...} = <function answer_data at 0x000002336DCC0900>()
+_______ test_review_expansion_regressions[A norma passa a valer hoje.] ________
+code\tests\rag_baseline\test_conversation_memory_transport.py:170: in test_review_expansion_regressions
+    assert GroundedTransformGuard().check(NormativeToolResult(**answer_data()), candidate)
+E   AssertionError: assert []
+E    +  where [] = check(NormativeToolResult(contract_version='1', core_version='structured_output_v2', status=<ToolStatus.ANSWER: 'ANSWER'>, a...ication_question=None, correlation_id=UUID('8ab5d1af-9708-4555-a442-bf8c8a744c91'), error_code=None, safe_message=None), 'A norma passa a valer hoje.')
+E    +    where check = <rag_baseline.conversation_transform.GroundedTransformGuard object at 0x000002336D756850>.check
+E    +      where <rag_baseline.conversation_transform.GroundedTransformGuard object at 0x000002336D756850> = <class 'rag_baseline.conversation_transform.GroundedTransformGuard'>()
+E    +    and   NormativeToolResult(contract_version='1', core_version='structured_output_v2', status=<ToolStatus.ANSWER: 'ANSWER'>, a...ication_question=None, correlation_id=UUID('8ab5d1af-9708-4555-a442-bf8c8a744c91'), error_code=None, safe_message=None) = <class 'rag_baseline.tool_contracts.NormativeToolResult'>(**{'allowed_temporal_facts': {'items': [{'kind': 'HISTORICAL_CONTEXT'}]}, 'answer': 'Resposta final do nÃºcleo.\nFontes oficiais: ResoluÃ§Ã£o 177/2012, art. 68.', 'clarification_question': None, 'contract_version': '1', ...})
+E    +      where {'allowed_temporal_facts': {'items': [{'kind': 'HISTORICAL_CONTEXT'}]}, 'answer': 'Resposta final do nÃºcleo.\nFontes oficiais: ResoluÃ§Ã£o 177/2012, art. 68.', 'clarification_question': None, 'contract_version': '1', ...} = <function answer_data at 0x000002336DCC0900>()
+___ test_review_expansion_regressions[A norma se aplica a partir de hoje.] ____
+code\tests\rag_baseline\test_conversation_memory_transport.py:170: in test_review_expansion_regressions
+    assert GroundedTransformGuard().check(NormativeToolResult(**answer_data()), candidate)
+E   AssertionError: assert []
+E    +  where [] = check(NormativeToolResult(contract_version='1', core_version='structured_output_v2', status=<ToolStatus.ANSWER: 'ANSWER'>, a...ication_question=None, correlation_id=UUID('8ab5d1af-9708-4555-a442-bf8c8a744c91'), error_code=None, safe_message=None), 'A norma se aplica a partir de hoje.')
+E    +    where check = <rag_baseline.conversation_transform.GroundedTransformGuard object at 0x000002331DF39310>.check
+E    +      where <rag_baseline.conversation_transform.GroundedTransformGuard object at 0x000002331DF39310> = <class 'rag_baseline.conversation_transform.GroundedTransformGuard'>()
+E    +    and   NormativeToolResult(contract_version='1', core_version='structured_output_v2', status=<ToolStatus.ANSWER: 'ANSWER'>, a...ication_question=None, correlation_id=UUID('8ab5d1af-9708-4555-a442-bf8c8a744c91'), error_code=None, safe_message=None) = <class 'rag_baseline.tool_contracts.NormativeToolResult'>(**{'allowed_temporal_facts': {'items': [{'kind': 'HISTORICAL_CONTEXT'}]}, 'answer': 'Resposta final do nÃºcleo.\nFontes oficiais: ResoluÃ§Ã£o 177/2012, art. 68.', 'clarification_question': None, 'contract_version': '1', ...})
+E    +      where {'allowed_temporal_facts': {'items': [{'kind': 'HISTORICAL_CONTEXT'}]}, 'answer': 'Resposta final do nÃºcleo.\nFontes oficiais: ResoluÃ§Ã£o 177/2012, art. 68.', 'clarification_question': None, 'contract_version': '1', ...} = <function answer_data at 0x000002336DCC0900>()
+============================== warnings summary ===============================
+code\.venv\Lib\site-packages\langchain_core\tools\base.py:1314
+code\.venv\Lib\site-packages\langchain_core\tools\base.py:1314
+  D:\faculdade\TCC\RAG\normative-agentic-rag-ufpi\code\.venv\Lib\site-packages\langchain_core\tools\base.py:1314: PydanticDeprecatedSince20: The `__fields__` attribute is deprecated, use `model_fields` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+    fields = getattr(cls, "model_fields", {}) or getattr(cls, "__fields__", {})
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED code\tests\rag_baseline\test_conversation_memory_transport.py::test_review_expansion_regressions[Resolu\xe7\xe3o 68.]
+FAILED code\tests\rag_baseline\test_conversation_memory_transport.py::test_review_expansion_regressions[A norma passa a valer hoje.]
+FAILED code\tests\rag_baseline\test_conversation_memory_transport.py::test_review_expansion_regressions[A norma se aplica a partir de hoje.]
+3 failed, 27 deselected, 2 warnings in 8.42s

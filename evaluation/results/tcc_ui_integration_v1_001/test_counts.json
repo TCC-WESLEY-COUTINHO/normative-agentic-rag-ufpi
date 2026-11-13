@@ -1,0 +1,21 @@
+{
+  "focused": {
+    "tests.app.test_streamlit_app": 8,
+    "tests.app.test_tcc_ui": 24,
+    "tests.client.test_client": 9,
+    "tests.service.test_auth": 3,
+    "tests.service.test_service": 11,
+    "tests.service.test_service_e2e": 2,
+    "tests.service.test_service_streaming": 5,
+    "tests.service.test_utils": 3,
+    "tests.rag_baseline.test_typed_normative_transport": 51,
+    "tests.rag_baseline.test_conversation_memory_transport": 37,
+    "tests.rag_baseline.test_calculator_transport": 9,
+    "tests.rag_baseline.test_conversation_memory_followups": 50,
+    "tests.rag_baseline.test_calculator_tool_routing": 102
+  },
+  "full": {
+    "passed": 1001,
+    "skipped": 12
+  }
+}

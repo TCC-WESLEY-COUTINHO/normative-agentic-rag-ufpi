@@ -1,0 +1,29 @@
+{
+  "algorithm": "SHA-256",
+  "scope": "Exact audit file bytes; excludes this manifest",
+  "files": {
+    ".gitattributes": "730a35ae3d558080083c3103d9ac8100c3f6561678092abe341701dfa331eb1d",
+    "compatibility_matrix.json": "c04e5e5dfc91fbae62e4fc6368ecaa4d554e3dcf64d9583ec337f35022f55020",
+    "corpus_metadata_inventory.json": "6bb87e2f53a1c2f3a5172347567d11aabc2d326eef44b5fd4706aef169e153fa",
+    "current_core_architecture.json": "bd20672e7a280dbe674b08eb61d346d66d8160b9192282b45c2b68ecaa0e7e2d",
+    "decision_log.jsonl": "b57fa8a9d2b105eb8299519857b1a77fb6b2ac8d1c561fdf8ac1f202ab76a69e",
+    "dependency_occurrences.json": "492131bf6c25d0afd0e6c9378d6b6cc6a96bead85f4396a77b15ba9451175709",
+    "execution_log.jsonl": "9e9a0d9e52adb92483b976ab1d28fff7902ba2564b91088eed9692697586578e",
+    "initial_audit.json": "2c7060101196f420707cb3be28d67352ab2ef6aeae5e0cadc6377d75ed6098c3",
+    "integration_options.json": "7ead802b0feae27294b125656783516ef938968fffcb237c954aa6767a197788",
+    "inventory.json": "b955e9270263a9f60ddace85b6988f6165639580482555373ccaf8884952f2f7",
+    "legacy_agents_graphs.json": "7013a1f9900307cd3677b1b61b333650828b8c8ca05d56a2ca008b649d83e864",
+    "legacy_test_results.json": "98b21d65426d6f2f769ad0ab26fda0a98a251e5b8c1190bd1f49be0e23238fb5",
+    "manifest.json": "72428ac346b2a6ca19d843a4ad9633b75cbb281402952c3bb6e45946ffadc291",
+    "memory_configuration.json": "7f0c999bad47297ffb3ffffc573fdd6aba3353acabe0c4b36e710fe0dd3f117d",
+    "offline_contract_checks.json": "d54d0ee97a985403e75fc3dbbf038c481772ea817d54c2895ffd9242733a8cdc",
+    "preservation.json": "5cf2da5f49683797daef63a6acc048d5055e362c18b2851afe64e364633967ec",
+    "preservation_before.json": "23c34015ffbf4ade48804c6c69c8f54b5848a33cb691960abbbdf11b691b5d22",
+    "REPORT.md": "15cf7f33c85eed5832c61e8ea4d6be1af60c811f1aa2fc32d572dc53720bfc04",
+    "risk_register.json": "fc18e280b897296cb6d98c9bc037458069aa01572fbc5b7b94b4e07e685adaeb",
+    "service_client_contracts.json": "7d5abd4f5ab6de86b3dcbceec1b217effa0ff836c3325cbbad7d8a6b0e0008c8",
+    "state_contracts.json": "798364331d17eeb5149c5a900e3af43c35df9d8f727a71fa58d8db590e20fdb5",
+    "tool_inventory.json": "339578561448802fb5a65e7d95ba3ea1af0e04c2574101c6fdc0464614dfc417",
+    "verification.json": "ea6cb476e74703b6c6d46cd19bd5f8fc4d9428535b7b0a5f2ef97962dd37c05c"
+  }
+}

@@ -1,0 +1,693 @@
+{
+  "schema_version": "2.0",
+  "status": "candidate_gold",
+  "split": "pilot_development",
+  "question_style": "natural_without_resolution_prefix",
+  "sampling": {
+    "original_questions_preserved": 20,
+    "classification_not_balanced": true
+  },
+  "items": [
+    {
+      "id": "GRAD2-001",
+      "norm_id": "ufpi-177-2012",
+      "category": "aberta",
+      "question_original": "Como a UFPI calcula minha 'média geral' (o tal do IRA)?",
+      "question": "Como a UFPI calcula minha 'média geral' (o tal do IRA)?",
+      "original_answer": "A UFPI utiliza o Índice de Rendimento Acadêmico (IRA) para avaliar seu rendimento acumulado [143, III]. O IRA é a média das suas notas finais nos componentes curriculares que você concluiu, ponderada pela carga horária discente. No cálculo do IRA, são considerados tanto os componentes curriculares em que você foi aprovado quanto aqueles em que foi reprovado. Os trancamentos e cancelamentos são excluídos. O IRA é um dado importante e deve constar no seu histórico escolar.",
+      "reference_answer": "O IRA é a média dos rendimentos finais dos componentes concluídos, ponderada pela carga horária discente. Inclui aprovação e reprovação; exclui trancamentos, cancelamentos, dispensas, atividades complementares e componentes sem nota numérica. O IRA consta do histórico escolar.",
+      "required_facts": [
+        "O IRA é a média dos rendimentos finais dos componentes concluídos, ponderada pela carga horária discente.",
+        "Inclui aprovação e reprovação; exclui trancamentos, cancelamentos, dispensas, atividades complementares e componentes sem nota numérica.",
+        "O IRA consta do histórico escolar."
+      ],
+      "evidence": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "124",
+          "text": "**Art. 124. O Índice de Rendimento Acadêmico - IRA é a média do rendimento escolar final obtido pelo aluno nos componentes curriculares que concluiu, ponderadas pela carga horária discente dos componentes, conforme fórmula matemática definida no Anexo II deste Regulamento.**\n> Parágrafo único. No cálculo do IRA, são levados em consideração os componentes curriculares aproveitados ou cursados pelo aluno, com aprovação ou reprovação, durante o curso de graduação, excetuando-se os trancamentos e cancelamentos de matrícula, os componentes curriculares dispensados, as atividades complementares e os componentes curriculares cujo rendimento acadêmico não é expresso de forma numérica."
+        },
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "359",
+          "text": "**Art. 359. O histórico escolar é o documento que contém todas as informações relativas à vida acadêmica do aluno de curso de graduação, com padronização determinada por legislação federal.**\n> Parágrafo único. Constará do histórico escolar do aluno o índice de rendimento acadêmico (IRA)."
+        }
+      ],
+      "audit_note": "Referências remapeadas para arts. 124 e 359; explicitadas exclusões. O tratamento de créditos concedidos é abordado em GRAD-018.",
+      "answerability": "answerable_without_added_scope",
+      "review": {
+        "reviewers": []
+      },
+      "sector": "graduacao",
+      "expected_action": "answer",
+      "conditional_answer": null,
+      "annotation_note": "Pergunta original preservada; contém pista explícita (IRA, Exame Final ou Láurea) de graduação no universo destes regulamentos."
+    },
+    {
+      "id": "GRAD2-002",
+      "norm_id": "ufpi-177-2012",
+      "category": "direta",
+      "question_original": "Qual é a frequência mínima que eu preciso ter nas aulas para não ser reprovado por falta?",
+      "question": "Qual é a frequência mínima que eu preciso ter nas aulas para não ser reprovado por falta?",
+      "original_answer": "A aprovação em qualquer componente curricular está condicionada à assiduidade às atividades didáticas. Para ser aprovado, o aluno deve obter frequência igual ou superior a 75% (setenta e cinco por cento) da carga horária do componente curricular [137, I]. Se você deixar de comparecer a mais de 25% (vinte e cinco por cento) do total das aulas e atividades, você será reprovado por falta.",
+      "reference_answer": "É necessária frequência igual ou superior a 75% da carga horária do componente curricular. Frequência inferior a 75% causa reprovação por falta.",
+      "required_facts": [
+        "Frequência mínima de 75% da carga horária; abaixo disso há reprovação por falta.",
+        "A resposta trata de assiduidade, não garante aprovação por nota."
+      ],
+      "evidence": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "111",
+          "text": "**Art. 111. Será considerado \"aprovado\" no componente curricular o aluno que:**\n1. I - obtiver frequência igual ou superior a 75% (setenta e cinco por cento) da carga horária do componente curricular e média aritmética igual ou superior a 7 (sete) nas avaliações parciais;\n2. II - submetido ao exame final, obtiver média aritmética igual ou superior a 6 (seis), resultante da média aritmética das avaliações parciais e da nota do exame final."
+        },
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "112",
+          "text": "**Art. 112. Será considerado \"reprovado\" o aluno que se incluir em um dos três itens:**\n1. I - obtiver frequência inferior a 75% (setenta e cinco por cento) da carga horária do componente curricular;\n2. II - obtiver média aritmética inferior a 4 (quatro) nas avaliações parciais;\n3. III - obtiver média aritmética inferior a 6 (seis), resultante da média aritmética das avaliações parciais e da nota do exame final."
+        }
+      ],
+      "audit_note": "A referência [137, I] não é o artigo da evidência; corrigida para 111/112.",
+      "answerability": "answerable_without_added_scope",
+      "review": {
+        "reviewers": []
+      },
+      "sector": "graduacao",
+      "expected_action": "answer",
+      "annotation_note": "Regra comum: os dois setores exigem 75% de frequência. Não é necessário escolher setor. Art.111 OU 112 da graduação OU art.20 da pós são evidências suficientes, pré-definidas.",
+      "alternative_evidence_sets": [
+        [
+          {
+            "norm_id": "ufpi-177-2012",
+            "article_number": "111",
+            "text": "**Art. 111. Será considerado \"aprovado\" no componente curricular o aluno que:**\n1. I - obtiver frequência igual ou superior a 75% (setenta e cinco por cento) da carga horária do componente curricular e média aritmética igual ou superior a 7 (sete) nas avaliações parciais;\n2. II - submetido ao exame final, obtiver média aritmética igual ou superior a 6 (seis), resultante da média aritmética das avaliações parciais e da nota do exame final."
+          }
+        ],
+        [
+          {
+            "norm_id": "ufpi-177-2012",
+            "article_number": "112",
+            "text": "**Art. 112. Será considerado \"reprovado\" o aluno que se incluir em um dos três itens:**\n1. I - obtiver frequência inferior a 75% (setenta e cinco por cento) da carga horária do componente curricular;\n2. II - obtiver média aritmética inferior a 4 (quatro) nas avaliações parciais;\n3. III - obtiver média aritmética inferior a 6 (seis), resultante da média aritmética das avaliações parciais e da nota do exame final."
+          }
+        ],
+        [
+          {
+            "norm_id": "ufpi-956-2025",
+            "article_number": "20",
+            "text": "Art. 20. A verificação do rendimento acadêmico é feita por disciplina e abrange os aspectos de assiduidade e eficiência, ambos eliminatórios.\n- $ 1º Acritério do professor, a avaliação da eficiência é feita por um ou mais dos seguintes meios: provas, exames, trabalhos ou projetos.\n\n- $ 2º O resultado final da verificação é expresso em notas na escala de zero a dez com, no máximo, uma casa decimal.\n- $ 3º É considerado aprovado o(a) discente que obtiver nota mínima sete e frequência igual ou superior a 75% (setenta e cinco por cento).\n- S$ 4º As atividades de qualificação, de dissertação e de tese podem ser desenvolvidas por mais de um período letivo, conforme o Regimento Interno de cada PPG.\n- S 5º Para efeito de registro, o número de notas parciais deve ser proporcional à carga horária da disciplina, respeitado o mínimo de:\n- | -duas, nas disciplinas com carga horária igual ou inferior a quarenta e cinco horas;\n- Il -três, nas disciplinas com carga horária de sessenta a setenta e cinco horas; e\n- Ill -quatro, nas disciplinas com carga horária superior a setenta e cinco horas."
+          }
+        ]
+      ]
+    },
+    {
+      "id": "GRAD2-003",
+      "norm_id": "ufpi-177-2012",
+      "category": "direta",
+      "question_original": "Fui reprovado por média, mas minha nota parcial foi 5,0. Eu tenho direito ao Exame Final?",
+      "question": "Fui reprovado por média, mas minha nota parcial foi 5,0. Eu tenho direito ao Exame Final?",
+      "original_answer": "Sim. O aluno cuja média parcial for maior ou igual a 4 (quatro) e menor que 7 (sete) e que satisfaça os requisitos de assiduidade terá direito à realização do exame final. Se sua média parcial fosse inferior a 4 (quatro), você estaria reprovado automaticamente e não poderia se submeter ao exame final [138, II; 138, 113].",
+      "reference_answer": "Sim, média parcial 5,0 está no intervalo maior ou igual a 4 e menor que 7 exigido para o exame final. O direito depende também do cumprimento da assiduidade.",
+      "required_facts": [
+        "Sim, média parcial 5,0 está no intervalo maior ou igual a 4 e menor que 7 exigido para o exame final.",
+        "O direito depende também do cumprimento da assiduidade."
+      ],
+      "evidence": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "116",
+          "text": "**Art. 116. O aluno cuja média parcial for maior ou igual a 4 (quatro) e menor que 7 (sete) e que satisfaça os requisitos de assiduidade definidos no Art. 117 terá direito à realização do exame final.**\n> Parágrafo único. O prazo para realização do exame final é de, no mínimo, 3 (três) dias úteis, contados a partir da divulgação da média parcial do aluno."
+        }
+      ],
+      "audit_note": "Artigo correto: 116. Preservada condição de frequência.",
+      "interpretive_note": "Há remissão interna do próprio corpus neste item.",
+      "answerability": "answerable_without_added_scope",
+      "review": {
+        "reviewers": []
+      },
+      "sector": "graduacao",
+      "expected_action": "answer",
+      "conditional_answer": null,
+      "annotation_note": "Pergunta original preservada; contém pista explícita (IRA, Exame Final ou Láurea) de graduação no universo destes regulamentos."
+    },
+    {
+      "id": "GRAD2-004",
+      "norm_id": "ufpi-177-2012",
+      "category": "direta",
+      "question_original": "Qual é a nota mínima que eu preciso para ser aprovado depois de realizar o Exame Final?",
+      "question": "Qual é a nota mínima que eu preciso para ser aprovado depois de realizar o Exame Final?",
+      "original_answer": "Para ser considerado aprovado no componente curricular após o Exame Final, você deve obter uma média aritmética igual ou superior a 6 (seis), resultante da média aritmética das avaliações parciais e da nota do exame final [137, II; 141].",
+      "reference_answer": "A média final, calculada pela média aritmética simples entre a média parcial e a nota do exame final, deve ser igual ou superior a 6.",
+      "required_facts": [
+        "A média final, calculada pela média aritmética simples entre a média parcial e a nota do exame final, deve ser igual ou superior a 6."
+      ],
+      "evidence": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "111",
+          "text": "**Art. 111. Será considerado \"aprovado\" no componente curricular o aluno que:**\n1. I - obtiver frequência igual ou superior a 75% (setenta e cinco por cento) da carga horária do componente curricular e média aritmética igual ou superior a 7 (sete) nas avaliações parciais;\n2. II - submetido ao exame final, obtiver média aritmética igual ou superior a 6 (seis), resultante da média aritmética das avaliações parciais e da nota do exame final."
+        },
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "117",
+          "text": "**Art. 117. O rendimento acadêmico final (média final) é obtido pela média aritmética simples entre a média parcial e o resultado do exame final.**\n> § 1º O valor da média final será igual ao da média parcial para os alunos que se encontrarem na situação do Art. 114.\n> § 2º Ao aluno reprovado por falta será atribuída a media final igual a zero."
+        }
+      ],
+      "audit_note": "Corrigida a referência normativa; 6 é média final, não necessariamente a nota isolada da prova final. V2: art.111 é suficiente; art.117+118 são alternativa suficiente definida antes do piloto, a partir da limitação identificada na V1.",
+      "answerability": "answerable_without_added_scope",
+      "review": {
+        "reviewers": []
+      },
+      "sector": "graduacao",
+      "expected_action": "answer",
+      "conditional_answer": null,
+      "annotation_note": "Pergunta original preservada; contém pista explícita (IRA, Exame Final ou Láurea) de graduação no universo destes regulamentos.",
+      "alternative_evidence_sets": [
+        [
+          {
+            "norm_id": "ufpi-177-2012",
+            "article_number": "111",
+            "text": "**Art. 111. Será considerado \"aprovado\" no componente curricular o aluno que:**\n1. I - obtiver frequência igual ou superior a 75% (setenta e cinco por cento) da carga horária do componente curricular e média aritmética igual ou superior a 7 (sete) nas avaliações parciais;\n2. II - submetido ao exame final, obtiver média aritmética igual ou superior a 6 (seis), resultante da média aritmética das avaliações parciais e da nota do exame final."
+          }
+        ],
+        [
+          {
+            "norm_id": "ufpi-177-2012",
+            "article_number": "117",
+            "text": "**Art. 117. O rendimento acadêmico final (média final) é obtido pela média aritmética simples entre a média parcial e o resultado do exame final.**\n> § 1º O valor da média final será igual ao da média parcial para os alunos que se encontrarem na situação do Art. 114.\n> § 2º Ao aluno reprovado por falta será atribuída a media final igual a zero."
+          },
+          {
+            "norm_id": "ufpi-177-2012",
+            "article_number": "118",
+            "text": "**Art. 118. A média final mínima para aprovação, depois de realizado o cálculo definido no Art. 117, é 6 (seis).**"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "GRAD2-005",
+      "norm_id": "ufpi-177-2012",
+      "category": "ambigua",
+      "question_original": "Se eu for impedido de participar de uma avaliação (prova), posso requerer a oportunidade de fazer a segunda chamada?",
+      "question": "Se eu for impedido de participar de uma avaliação (prova), posso requerer a oportunidade de fazer a segunda chamada?",
+      "original_answer": "Sim, você tem o direito de requerer a oportunidade de realizar a avaliação em segunda chamada. O requerimento, que deve ser devidamente justificado e comprovado, deve ser protocolado na chefia do departamento ou curso ao qual o componente curricular esteja vinculado, no prazo de 3 (três) dias úteis, contados a partir da data da avaliação não realizada.",
+      "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+      "required_facts": [
+        "Solicitar o nível do curso antes de aplicar uma regra.",
+        "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+      ],
+      "evidence": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "108",
+          "text": "**Art. 108. Impedido de participar de qualquer avaliação, o aluno tem direito de requerer a oportunidade de realizá-la em segunda chamada.**\n> § 1º O aluno poderá requerer exame de segunda chamada por si ou por procurador legalmente constituído. O requerimento dirigido ao professor responsável pela disciplina, devidamente justificado e comprovado, deve ser protocolado à chefia do departamento ou curso a qual o componente curricular esteja vinculada, no prazo de 3 (três) dias úteis, contado este prazo a partir da data da avaliação não realizada.\n> § 2º Consideram-se motivos que justificam a ausência do aluno às verificações parciais ou ao exame final:\n> * a) doença;\n> * b) doença ou óbito de familiares diretos;\n> * c) audiência judicial;\n> * d) militares, policiais e outros profissionais em missão oficial;\n> * e) participação em congressos, reuniões oficiais ou eventos culturais representando a UFPI, o Município ou o Estado;\n> * f) outros motivos que, apresentados, possam ser julgados procedentes.\n> § 3º O professor do componente curricular terá o prazo máximo de 2 (dois) dias úteis, a partir do recebimento do requerimento, para julgá-lo e marcar a data de realização da verificação de segunda chamada.\n> § 4º A realização da verificação de segunda chamada obedecerá ao prazo de até 5 (cinco) dias após o deferimento do pedido do aluno, observando o Calendário Acadêmico.\n> § 5º A avaliação de segunda chamada deverá contemplar o mesmo conteúdo da verificação parcial ou exame final a que o aluno não compareceu.\n> § 6º Ao aluno que não participar de qualquer avaliação, não tendo obtido a permissão para fazer outra, é atribuída a nota 0 (zero)."
+        }
+      ],
+      "audit_note": "Acrescentados destinatário e procurador; não confundir prazo do pedido com prazo da aplicação.",
+      "answerability": "requires_clarification",
+      "review": {
+        "reviewers": []
+      },
+      "sector": "graduacao",
+      "expected_action": "clarify",
+      "conditional_answer": "Sim. O requerimento dirigido ao professor deve ser justificado e comprovado, protocolado na chefia do departamento ou curso ao qual o componente está vinculado. O prazo é de 3 dias úteis a partir da avaliação não realizada; pode requerer o aluno ou procurador legalmente constituído.",
+      "annotation_note": "Pergunta original preservada; a aplicação da resposta condicionada depende do regulamento do nível. Não usar a coleção recuperada como identificação do aluno."
+    },
+    {
+      "id": "GRAD2-006",
+      "norm_id": "ufpi-177-2012",
+      "category": "ambigua",
+      "question_original": "Quais motivos são aceitos para justificar a minha ausência em uma avaliação e solicitar a segunda chamada?",
+      "question": "Quais motivos são aceitos para justificar a minha ausência em uma avaliação e solicitar a segunda chamada?",
+      "original_answer": "Os motivos que justificam a ausência do aluno às verificações parciais ou ao exame final incluem doença, doença ou óbito de familiares diretos, audiência judicial, militares/policiais/outros profissionais em missão oficial, e participação em congressos, reuniões oficiais ou eventos culturais representando a UFPI, o Município ou o Estado.",
+      "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+      "required_facts": [
+        "Solicitar o nível do curso antes de aplicar uma regra.",
+        "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+      ],
+      "evidence": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "108",
+          "text": "**Art. 108. Impedido de participar de qualquer avaliação, o aluno tem direito de requerer a oportunidade de realizá-la em segunda chamada.**\n> § 1º O aluno poderá requerer exame de segunda chamada por si ou por procurador legalmente constituído. O requerimento dirigido ao professor responsável pela disciplina, devidamente justificado e comprovado, deve ser protocolado à chefia do departamento ou curso a qual o componente curricular esteja vinculada, no prazo de 3 (três) dias úteis, contado este prazo a partir da data da avaliação não realizada.\n> § 2º Consideram-se motivos que justificam a ausência do aluno às verificações parciais ou ao exame final:\n> * a) doença;\n> * b) doença ou óbito de familiares diretos;\n> * c) audiência judicial;\n> * d) militares, policiais e outros profissionais em missão oficial;\n> * e) participação em congressos, reuniões oficiais ou eventos culturais representando a UFPI, o Município ou o Estado;\n> * f) outros motivos que, apresentados, possam ser julgados procedentes.\n> § 3º O professor do componente curricular terá o prazo máximo de 2 (dois) dias úteis, a partir do recebimento do requerimento, para julgá-lo e marcar a data de realização da verificação de segunda chamada.\n> § 4º A realização da verificação de segunda chamada obedecerá ao prazo de até 5 (cinco) dias após o deferimento do pedido do aluno, observando o Calendário Acadêmico.\n> § 5º A avaliação de segunda chamada deverá contemplar o mesmo conteúdo da verificação parcial ou exame final a que o aluno não compareceu.\n> § 6º Ao aluno que não participar de qualquer avaliação, não tendo obtido a permissão para fazer outra, é atribuída a nota 0 (zero)."
+        }
+      ],
+      "audit_note": "Gabarito antigo omitia a alínea f: outros motivos julgados procedentes.",
+      "answerability": "requires_clarification",
+      "review": {
+        "reviewers": []
+      },
+      "sector": "graduacao",
+      "expected_action": "clarify",
+      "conditional_answer": "São previstos doença, doença ou óbito de familiares diretos, audiência judicial, missão oficial e participação em eventos representando a UFPI, Município ou Estado. Também podem ser aceitos outros motivos julgados procedentes.",
+      "annotation_note": "Pergunta original preservada; a aplicação da resposta condicionada depende do regulamento do nível. Não usar a coleção recuperada como identificação do aluno."
+    },
+    {
+      "id": "GRAD2-007",
+      "norm_id": "ufpi-177-2012",
+      "category": "ambigua",
+      "question_original": "Se eu for aluno de curso em regime de crédito e quiser cancelar uma disciplina, qual é a carga horária mínima de componentes curriculares que eu tenho que manter?",
+      "question": "Se eu for aluno de curso em regime de crédito e quiser cancelar uma disciplina, qual é a carga horária mínima de componentes curriculares que eu tenho que manter?",
+      "original_answer": "Os alunos de cursos em regime de crédito podem realizar o cancelamento de componentes curriculares, desde que, após o cancelamento, o aluno se mantenha matriculado em componentes curriculares que somem, pelo menos, 12 (doze) créditos [236, § 2º].",
+      "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+      "required_facts": [
+        "Solicitar o nível do curso antes de aplicar uma regra.",
+        "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+      ],
+      "evidence": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "229",
+          "text": "**Art. 229. O cancelamento de matrícula em componente curricular é efetuado no período definido no Calendário Acadêmico e corresponde à possibilidade de o aluno cancelar componentes curriculares que tenham sido solicitados na matrícula curricular.**\n> § 1º Os alunos ingressantes não poderão realizar o cancelamento de nenhum tipo de componente curricular no nível curricular de seu ingresso, independentemente do regime do curso (bloco ou crédito).\n> § 2º Os alunos de cursos em regime de crédito podem realizar o cancelamento de componentes curriculares, desde que, após o cancelamento, o aluno se mantenha matriculado em componentes curriculares que somem, pelo menos, 12 (doze) créditos.\n> § 3º Os alunos de cursos em regime de bloco só poderão realizar o cancelamento de componentes curriculares pendentes ou componentes curriculares optativos."
+        }
+      ],
+      "audit_note": "Corrigida referência para art. 229, §2º; incluída restrição do §1º.",
+      "answerability": "requires_clarification",
+      "review": {
+        "reviewers": []
+      },
+      "sector": "graduacao",
+      "expected_action": "clarify",
+      "conditional_answer": "Após o cancelamento, deve permanecer matriculado em componentes que somem pelo menos 12 créditos. Alunos ingressantes não podem cancelar componentes no nível curricular de ingresso.",
+      "annotation_note": "Pergunta original preservada; a aplicação da resposta condicionada depende do regulamento do nível. Não usar a coleção recuperada como identificação do aluno."
+    },
+    {
+      "id": "GRAD2-008",
+      "norm_id": "ufpi-177-2012",
+      "category": "ambigua",
+      "question_original": "O que acontece se eu não conseguir integralizar meu curso no limite máximo estabelecido?",
+      "question": "O que acontece se eu não conseguir integralizar meu curso no limite máximo estabelecido?",
+      "original_answer": "O aluno cuja integralização curricular não ocorrer no limite máximo estabelecido pelo projeto pedagógico do curso (PPC) terá o seu curso automaticamente cancelado.",
+      "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+      "required_facts": [
+        "Solicitar o nível do curso antes de aplicar uma regra.",
+        "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+      ],
+      "evidence": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "24",
+          "text": "**Art. 24. O aluno cuja integralização curricular não ocorrer no limite máximo estabelecido pelo projeto pedagógico do curso (PPC) a que esteja vinculado terá o seu curso automaticamente cancelado.**\n> Parágrafo único. No ato do cadastro institucional, o aluno será notificado da obrigação de integralização curricular no limite máximo estipulado, com a entrega de documento em que conste o referido limite, mediante assinatura de termo de recebimento."
+        },
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "25",
+          "text": "**Art. 25. No período letivo regular correspondente ao limite máximo para integralização curricular, a Câmara de Ensino de Graduação (CAMEN) poderá conceder, ao aluno, prorrogação deste limite, para conclusão do curso, na proporção de:**\n1.  I - até 50% (cinquenta por cento) do limite máximo fixado para a conclusão do curso, para os alunos com necessidades especiais, afecção congênita ou adquirida que importem em redução da capacidade de aprendizagem, mediante avaliação da Junta Médica da UFPI;\n2.  II - até dois períodos letivos, nos demais casos, desde que o cronograma, elaborado pelo coordenador do curso, preveja a integralização curricular em, no máximo, dois períodos letivos.\n> § 1º A apreciação do pedido de prorrogação de prazo se fará mediante processo formalizado com requerimento do aluno, justificativa, histórico escolar e cronograma dos componentes curriculares a serem cumpridos.\n> § 2º Após o cancelamento do curso por decurso de prazo máximo para a sua conclusão, o eventual retorno à UFPI só poderá ocorrer mediante novo ingresso, sendo admitido o aproveitamento de estudos anteriores, quando for o caso.\n> § 3º Os eventuais períodos letivos adicionais de trancamento de curso, concedidos em caráter excepcional na forma do Art. 25 deste Regulamento, serão abatidos do limite máximo previsto no inciso I deste artigo."
+        },
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "345",
+          "text": "**Art. 345. Verificada quaisquer das hipóteses do artigo 344, a Pró-reitoria de Ensino da Graduação (PREG) publicará edital fixando o prazo para o aluno apresentar justificativa de sua situação acadêmica. (Redação alterada pela Resolução nº 148/2019 CEPEX/UFPI)**\n> § 1º Não sendo apresentada a justificativa no prazo previsto no edital, será efetuado o cancelamento definitivo do vínculo do aluno com a instituição. (Redação alterada pela Resolução nº 148/2019 - СЕРEX/UFPI)\n> § 2º O aluno cujo nome conste no edital referido no *caput* deste artigo e que teve sua matrícula cancelada, que possua aproveitamento com índice de rendimento acadêmico (IRA) igual ou superior a 6 (seis), ou que tenha integralizado 75% (setenta e cinco por cento) ou mais do currículo, poderá requerer seu reingresso automático, por uma vez, no prazo de 10 (dez) dias, contados da data de publicação do edital informando o cancelamento da matrícula. (Redação alterada pela Resolução nº 148/2019 CEPEX/UFPI).\n> § 3º A Câmara de Ensino de Graduação (CAMEN) poderá autorizar o reingresso automático, por única vez, quando cumpridos os requisitos do parágrafo antecedente, determinando a assinatura de termo de compromisso. (Resolução nº 148/2019)"
+        }
+      ],
+      "audit_note": "Resposta original tratava cancelamento como incondicional; incorporadas prorrogação e procedimento posterior.",
+      "answerability": "requires_clarification",
+      "review": {
+        "reviewers": []
+      },
+      "sector": "graduacao",
+      "expected_action": "clarify",
+      "conditional_answer": "O art. 24 prevê cancelamento por extrapolar o limite máximo do PPC. Há possibilidade de prorrogação pela CAMEN nas condições do art. 25, mediante processo formal. O art. 345 prevê edital e prazo para justificar a situação antes do cancelamento definitivo quando não apresentada justificativa.",
+      "annotation_note": "Pergunta original preservada; a aplicação da resposta condicionada depende do regulamento do nível. Não usar a coleção recuperada como identificação do aluno."
+    },
+    {
+      "id": "GRAD2-009",
+      "norm_id": "ufpi-177-2012",
+      "category": "ambigua",
+      "question_original": "Quantas vezes posso trancar a matrícula em um componente curricular?",
+      "question": "Quantas vezes posso trancar a matrícula em um componente curricular?",
+      "original_answer": "Não será permitido o trancamento de matrícula no mesmo componente curricular por mais de 2 (duas) vezes, em períodos letivos consecutivos ou não [299, § 2º]. O trancamento não pode ser solicitado depois de decorridos 1/3 (um terço) do período letivo [298, § 1º].",
+      "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+      "required_facts": [
+        "Solicitar o nível do curso antes de aplicar uma regra.",
+        "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+      ],
+      "evidence": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "287",
+          "text": "**Art. 287. Trancamento de matrícula em componente curricular significa a desvinculação voluntária do aluno da turma referente à componente curricular em que se encontra matriculado.**\n> § 1º O trancamento de matrícula em componente curricular não será concedido se solicitado depois de decorridos $\\frac{1}{3}$ (um terço) do período letivo, de acordo com data estabelecida no Calendário Acadêmico. (Redação alterada pela Resolução n° 46/2019 CEPEX)\n> § 2º Não será permitido trancamento de matrícula no mesmo componente curricular por mais de 2 (duas) vezes, em períodos letivos consecutivos ou não.\n> § 3º Os alunos de cursos em regime de blocos poderão solicitar trancamento apenas de componentes curriculares optativos ou que estejam pendentes.\n> § 4º Somente alunos de cursos em regime de crédito poderão trancar componentes curriculares, desde que o limite mínimo de 12 (doze) créditos semestrais seja respeitado."
+        }
+      ],
+      "audit_note": "Artigo correto: 287, §§1º e 2º; antigos 298/299 não são artigos correspondentes.",
+      "answerability": "requires_clarification",
+      "review": {
+        "reviewers": []
+      },
+      "sector": "graduacao",
+      "expected_action": "clarify",
+      "conditional_answer": "O mesmo componente pode ser trancado no máximo duas vezes, em períodos consecutivos ou não. O pedido deve respeitar o limite de um terço do período letivo e o Calendário Acadêmico.",
+      "annotation_note": "Pergunta original preservada; a aplicação da resposta condicionada depende do regulamento do nível. Não usar a coleção recuperada como identificação do aluno."
+    },
+    {
+      "id": "GRAD2-010",
+      "norm_id": "ufpi-177-2012",
+      "category": "ambigua",
+      "question_original": "Por quantos períodos letivos posso solicitar o Trancamento do Curso?",
+      "question": "Por quantos períodos letivos posso solicitar o Trancamento do Curso?",
+      "original_answer": "O trancamento de curso (suspensão oficial das atividades acadêmicas) será concedido no limite máximo de 2 (dois) períodos letivos regulares, consecutivos ou não [301, § 1º]. Deve ser solicitado a cada período letivo, dentro do prazo fixado no Calendário Acadêmico, correspondente a 1/3 (um terço) do período letivo [302, § 3º].",
+      "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+      "required_facts": [
+        "Solicitar o nível do curso antes de aplicar uma regra.",
+        "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+      ],
+      "evidence": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "292",
+          "text": "**Art. 292. O trancamento de curso é a suspensão oficial das atividades acadêmicas do aluno, garantindo a manutenção do vínculo ao curso de graduação.**\n> § 1º O trancamento de curso será concedido no limite máximo de 2 (dois) períodos letivos regulares, consecutivos ou não.\n> § 2º (revogado pela Resolução nº 089/2018-CEPEX)\n> § 3º O trancamento de curso deverá ser solicitado a cada período letivo, dentro do prazo fixado no Calendário Acadêmico, correspondente a $\\frac{1}{3}$ (um terço) do período letivo.\n> § 4º O trancamento de curso acarreta o cancelamento da matrícula do aluno em todos os componentes curriculares nos quais esteja matriculado.\n> § 5º Não poderá efetuar trancamento de curso o aluno que:\n> * a) encontrar-se sob condição de reingresso ao curso;\n> * b) encontrar-se com registro de assinante de termo de compromisso;\n> * c) encontrar-se com o tempo extrapolado para fins de integralização curricular;\n> * d) estiver no primeiro período do curso."
+        },
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "293",
+          "text": "**Art. 293. Em situação de excepcionalidade, devidamente comprovada, a Diretoria de Administração Acadêmica (DAA/PREG) poderá conceder trancamento de curso, a qualquer tempo, por até 2 (dois) períodos letivos, além do limite fixado no §1º do Art. 292. (Redação alterada pela Resolução nº 049/2021 - СЕРЕX/UFPI)**\n> Parágrafo único. (revogado pela Resolução nº 049/2021 - CEPEX/UFPI)\n> * a) (revogado pela Resolução nº 049/2021 - CEPEX/UFPI)\n> * b) (revogado pela Resolução nº 049/2021 - СЕPEX/UFPI)\n> * c) (revogado pela Resolução nº 049/2021 - СЕPEX/UFPI)\n> * d) (revogado pela Resolução nº 049/2021 - CEPEX/UFPI)\n> § 1º São consideradas situações de excepcionalidade para o que trata este artigo: (Incluído pela Resolução nº 049/2021 - СЕРEX/UFPI)\n> * a) afastamento para estudo no exterior, mediante comprovação de bolsa de estudo ou programa de mobilidade; (Incluído pela Resolução nº 049/2021 - CEPEX/UFPI)\n> * b) afastamento do aluno servidor público, por necessidade de serviço; (Incluído pela Resolução nº 049/2021 - СЕРEX/UFPI)\n> * c) acompanhamento de parente consanguíneo até segundo grau ou o cônjuge com a mesma finalidade; (Incluído pela Resolução nº 049/2021 - CEPEX/UFPI)\n> * d) afastamento por motivos de doença, devidamente comprovada pela junta médica da UFPI. (Incluído pela Resolução nº 049/2021 - CEPEX/UFPI)\n> § 2º Os casos omissos serão avaliados pela Câmara de Ensino (CAMEN/PREG). (Incluído pela Resolução nº 049/2021 - CEPEX/UFPI)"
+        }
+      ],
+      "audit_note": "Incluída exceção alterada em 2021, ausente do gabarito antigo.",
+      "answerability": "requires_clarification",
+      "review": {
+        "reviewers": []
+      },
+      "sector": "graduacao",
+      "expected_action": "clarify",
+      "conditional_answer": "A regra geral é no máximo dois períodos letivos regulares, consecutivos ou não, solicitados a cada período no prazo do calendário correspondente a um terço do período letivo. Em excepcionalidade comprovada, a DAA/PREG pode conceder até dois períodos adicionais, nos termos do art. 293.",
+      "annotation_note": "Pergunta original preservada; a aplicação da resposta condicionada depende do regulamento do nível. Não usar a coleção recuperada como identificação do aluno."
+    },
+    {
+      "id": "GRAD2-011",
+      "norm_id": "ufpi-177-2012",
+      "category": "aberta",
+      "question_original": "O que é a Láurea Universitária e quais são os requisitos de excelência para recebê-la?",
+      "question": "O que é a Láurea Universitária e quais são os requisitos de excelência para recebê-la?",
+      "original_answer": "A láurea universitária é uma honraria conferida ao aluno da turma concluinte de cada curso que apresentar o maior Índice de Rendimento Acadêmico (IRA). Entre os requisitos principais (Art. 338), o aluno deve ter: ingressado na UFPI via vestibular ou SiSU [346, I]; não ter incorrido em reprovação (qualquer que seja o motivo) em qualquer componente curricular [346, II]; ter o IRA igual ou superior a 8,5 (oito vírgula cinco) [350, V]; ter aprovação por média em todos os componentes curriculares [350, VI]; não ter trancamento de qualquer natureza [351, VII]; e não haver no histórico escolar crédito concedido ou crédito automático [351, VIII].",
+      "reference_answer": "É a honraria ao concluinte com maior IRA da turma, atendidos os requisitos do art. 338. Exige ingresso por vestibular ou SiSU, ausência de reprovação, pelo menos duas atividades distintas elencadas na norma e ausência de penalidade. Exige IRA de pelo menos 8,5, aprovação por média em todos os componentes, nenhum trancamento e nenhum crédito concedido ou automático no histórico.",
+      "required_facts": [
+        "É a honraria ao concluinte com maior IRA da turma, atendidos os requisitos do art. 338.",
+        "Exige ingresso por vestibular ou SiSU, ausência de reprovação, pelo menos duas atividades distintas elencadas na norma e ausência de penalidade.",
+        "Exige IRA de pelo menos 8,5, aprovação por média em todos os componentes, nenhum trancamento e nenhum crédito concedido ou automático no histórico."
+      ],
+      "evidence": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "337",
+          "text": "**Art. 337. A láurea universitária será conferida ao aluno da turma concluinte de cada curso de graduação em determinado período letivo que apresentar o maior índice de rendimento acadêmico (IRA), considerando até a 4ª (quarta) casa decimal, desde que atendidos os requisitos do Art. 338. (Redação alterada pela Resolução nº 273/2018-CEPEX)**\n> § 1º Serão consideradas turmas distintas, ainda que do mesmo curso, quando forem distintos os turnos ou *campi*. (Redação alterada pela Resolução nº 273/2018-CEPEX)\n> § 2º Concorrerão à láurea universitária os alunos da turma concluinte do período letivo regular, excetuando-se os que tenham somente apostila de habilitação e os que vierem a integralizar a estrutura curricular após a sessão solene de colação de grau. (Redação alterada pela Resolução nº 273/2018-CEPEX)"
+        },
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "338",
+          "text": "**Art. 338. São requisitos para a concessão da láurea universitária da UFPI:**\n1. I - ter o aluno ingressado na UFPI mediante vestibular ou SiSU;\n2. II - não ter incorrido em reprovação, qualquer que seja o motivo, em qualquer componente curricular, ao longo de todo o curso;\n3. III - ter o aluno concluído duas ou mais atividades distintas, dentre as elencadas a seguir: (Redação alterada pela Resolução nº 273/2018-CEPEX)\n    * a) participado de programa de monitoria cadastrado na Pró-Reitoria de Ensino de Graduação (PREG), com certificado ou documento equivalente emitido pela Pró-reitoria responsável; (Redação alterada pela Resolução nº 273/18-CEPEX)\n    * b) participado de programa de educação tutorial (PET) cadastrado na Pró-Reitoria de Extensão (PREXC), com certificado ou documento equivalente emitido pela Pró-reitoria responsável; (Redação alterada pela Resolução nº 273/18-CEPEX)\n    * c) participado de projeto de pesquisa cadastrado na Pró-Reitoria de Pesquisa (PROPESQI), com certificado ou documento equivalente emitido pela Pró-reitoria responsável; (Redação alterada pela Resolução nº 273/18-CEPEX)\n    * d) participado de projeto de extensão cadastrado na Pró-Reitoria de Extensão (PREXC), com certificado ou documento equivalente emitido pela Pró-reitoria responsável; (Redação alterada pela Resolução nº 273/18-CEPEX)\n    * e) Participado de Programa Institucional de Bolsas de Iniciação à Docência (PIBID), com certificado ou documento equivalente emitido pela Pró-reitoria responsável; (incluído pela resolução nº 273/2018 - CEPEX)\n    * f) Participado de Programa de Apoio Acadêmico cadastrado na PREG, com certificado ou documento equivalente emitido pela Pró-reitoria responsável; (incluído pela Resolução nº 273/2018 - СЕРЕХ)\n    * g) Participado de Empresas Juniores e/ou Incubadoras de Empresas, cadastradas na PREXC, com certificado ou documento equivalente emitido pela Pró-reitoria responsável; (incluído pela Resolução nº 273/2018- CEPEX)\n    * h) Participado de Ligas Acadêmicas, com certificado ou documento equivalente emitido pela Pró-reitoria responsável; (incluído pela resolução nº 273/2018-CEPEX)\n    * i) publicado (ou ter aceito para publicação) artigo em periódico indexado Qualis A ou B, em coautoria com docente vinculado ao curso do aluno (desde que a atividade esteja registrada no Currículo Lattes do aluno); (Redação dada pela Resolução nº 273/18-CEPEX)\n4. IV - não ter sofrido penalidade de qualquer título, em todo o seu curso de graduação; (Redação alterada pela Resolução nº 273/18-CEPEX)\n5. V - ter o aluno o índice de rendimento acadêmico (IRA) igual ou superior a 8,5 (oito vírgula cinco);\n6. VI - ter aprovação por média em todos os componentes curriculares;\n7. VII - Não ter trancamento de qualquer natureza, e; (incluído pela Resolução nº 273/2018-CEPEX)\n8. VIII - Não haver no histórico escolar crédito concedido ou crédito automático. (incluído pela Resolução nº 273/2018-CEPEX)"
+        }
+      ],
+      "audit_note": "Corrigidas referências e incluídos requisitos III e IV omitidos.",
+      "answerability": "answerable_without_added_scope",
+      "review": {
+        "reviewers": []
+      },
+      "sector": "graduacao",
+      "expected_action": "answer",
+      "conditional_answer": null,
+      "annotation_note": "Pergunta original preservada; contém pista explícita (IRA, Exame Final ou Láurea) de graduação no universo destes regulamentos."
+    },
+    {
+      "id": "GRAD2-012",
+      "norm_id": "ufpi-177-2012",
+      "category": "ambigua",
+      "question_original": "Caso eu esteja grávida ou com uma afecção de saúde, posso solicitar o Regime de Exercícios Domiciliares?",
+      "question": "Caso eu esteja grávida ou com uma afecção de saúde, posso solicitar o Regime de Exercícios Domiciliares?",
+      "original_answer": "Sim. O regime de exercícios domiciliares aplica-se à aluna gestante (desde que comprovado por atestado médico, com regras específicas para o período de gestação e pós-parto, podendo durar até 60 ou 90 dias) e ao aluno portador de afecções definidas em lei [253, I, III]. Nesses casos, o período pode ser prorrogado, mediante laudo da junta médica da UFPI.",
+      "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+      "required_facts": [
+        "Solicitar o nível do curso antes de aplicar uma regra.",
+        "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+      ],
+      "evidence": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "242",
+          "text": "**Art. 242. O regime de exercícios domiciliares como compensação da ausência às aulas aplica-se:**\n1. I - à aluna gestante, desde que comprovado por atestado médico, ressaltando-se as situações a seguir:\n    * a) a partir do oitavo mês de gestação e até 60 (sessenta) dias após o nascimento da criança, a aluna terá direito a acompanhamento didático pedagógico especial;\n    * b) a partir do oitavo mês de gestação e por até 30 (trinta) dias, por solicitação, a aluna terá direito a acompanhamento didático pedagógico especial, justificado com a apresentação de atestado do médico assistente e homologado pelo serviço médico da UFPI;\n    * c) a partir do nascimento da criança e por até 60 (sessenta) dias, por solicitação, a aluna terá direito a acompanhamento didático pedagógico especial, justificado com a apresentação de atestado do médico assistente e homologado pelo serviço médico da UFPI ou de fotocópia autenticada em cartório da certidão de nascimento da criança, acrescida de fotocópia autenticada em cartório de documento oficial de identificação da mãe;\n    * d) após 60 (sessenta) dias do nascimento da criança, em casos excepcionais justificados com a apresentação de atestado do médico assistente e homologado pelo serviço médico da UFPI, a aluna terá direito a acompanhamento didático pedagógico especial, em prazo determinado pelo médico assistente da mãe ou do médico pediatra da criança;\n    * e) a aluna que tiver o período de gestação sem nenhuma complicação e que necessite de acompanhamento didático pedagógico especial apenas após o nascimento da criança, por solicitação, com a apresentação de fotocópia da certidão de nascimento da criança e acompanhada de fotocópia de documento oficial de identificação da mãe, ambas autenticadas em cartório, terá direito a 90 (noventa) dias de acompanhamento.\n2. II - ao aluno adotante, durante 90 (noventa) dias, a partir da data da guarda, desde que comprovada por decisão judicial;\n3. III - ao aluno portador de afecções definidas em lei;\n4. IV - ao aluno participante de evento científico, de âmbito regional, nacional e internacional, mediante comprovação com certificado de participação;\n5. V - ao aluno participante de competição artística ou desportiva, de âmbito regional, nacional e internacional, desde que registrado como competidor oficial, em documento expedido por entidade oficial.\n> Parágrafo único. Devidamente comprovadas por laudo emitido pela junta médica da UFPI, o período do regime de exercícios domiciliares poderá ser prorrogado, nas situações especificadas nos incisos I e III do *caput* deste artigo, ou solicitado antes do prazo, apenas na situação especificada no inciso I deste artigo."
+        }
+      ],
+      "audit_note": "Artigo correto 242; evitar apresentar 60/90 dias como prazo uniforme para todas as hipóteses.",
+      "answerability": "requires_clarification",
+      "review": {
+        "reviewers": []
+      },
+      "sector": "graduacao",
+      "expected_action": "clarify",
+      "conditional_answer": "Sim. A norma contempla gestantes com comprovação médica e alunos portadores das afecções definidas em lei. Os prazos variam conforme a hipótese: há acompanhamento a partir do oitavo mês e situações de 60 dias após o parto ou 90 dias quando solicitado apenas após o nascimento. Nas hipóteses dos incisos I e III, pode haver prorrogação mediante laudo da junta médica da UFPI.",
+      "annotation_note": "Pergunta original preservada; a aplicação da resposta condicionada depende do regulamento do nível. Não usar a coleção recuperada como identificação do aluno."
+    },
+    {
+      "id": "GRAD2-013",
+      "norm_id": "ufpi-177-2012",
+      "category": "ambigua",
+      "question_original": "Meu curso pode ser cancelado se eu reprovar a mesma disciplina muitas vezes?",
+      "question": "Meu curso pode ser cancelado se eu reprovar a mesma disciplina muitas vezes?",
+      "original_answer": "Sim. Uma das situações em que o cancelamento de curso pode ocorrer é a existência de três reprovações no mesmo componente curricular em períodos consecutivos ou não [355, VIII].",
+      "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+      "required_facts": [
+        "Solicitar o nível do curso antes de aplicar uma regra.",
+        "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+      ],
+      "evidence": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "344",
+          "text": "**Art. 344. O cancelamento de curso ocorrerá nas seguintes situações:**\n1. I - abandono de curso;\n2. II - decurso de prazo máximo para conclusão do curso;\n3. III - solicitação espontânea;\n4. IV - transferência para outra IES;\n5. V - não regularização de transferência de outra IES para a UFPI;\n6. VI - efetivação de nova matrícula na UFPI;\n7. VII - decisão administrativa;\n8. VIII - três reprovações no mesmo componente curricular em períodos consecutivos ou não;\n9. IX - identificação de matrícula do aluno em outra IES pública;\n10. X - falecimento do aluno.\n> § 1º No ato do cadastro institucional, o aluno será notificado de todas as obrigações cujo não cumprimento acarrete cancelamento de curso, com a entrega de documento em que constem os limites aplicáveis, mediante assinatura de termo de recebimento.\n> § 2º Nos casos dos incisos III e IV deste artigo, o cancelamento de curso não será efetivado se o aluno estiver respondendo a processo disciplinar."
+        },
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "345",
+          "text": "**Art. 345. Verificada quaisquer das hipóteses do artigo 344, a Pró-reitoria de Ensino da Graduação (PREG) publicará edital fixando o prazo para o aluno apresentar justificativa de sua situação acadêmica. (Redação alterada pela Resolução nº 148/2019 CEPEX/UFPI)**\n> § 1º Não sendo apresentada a justificativa no prazo previsto no edital, será efetuado o cancelamento definitivo do vínculo do aluno com a instituição. (Redação alterada pela Resolução nº 148/2019 - СЕРEX/UFPI)\n> § 2º O aluno cujo nome conste no edital referido no *caput* deste artigo e que teve sua matrícula cancelada, que possua aproveitamento com índice de rendimento acadêmico (IRA) igual ou superior a 6 (seis), ou que tenha integralizado 75% (setenta e cinco por cento) ou mais do currículo, poderá requerer seu reingresso automático, por uma vez, no prazo de 10 (dez) dias, contados da data de publicação do edital informando o cancelamento da matrícula. (Redação alterada pela Resolução nº 148/2019 CEPEX/UFPI).\n> § 3º A Câmara de Ensino de Graduação (CAMEN) poderá autorizar o reingresso automático, por única vez, quando cumpridos os requisitos do parágrafo antecedente, determinando a assinatura de termo de compromisso. (Resolução nº 148/2019)"
+        }
+      ],
+      "audit_note": "Art. 344, VIII e procedimento art. 345; a referência antiga 355 é incorreta.",
+      "answerability": "requires_clarification",
+      "review": {
+        "reviewers": []
+      },
+      "sector": "graduacao",
+      "expected_action": "clarify",
+      "conditional_answer": "Sim. Três reprovações no mesmo componente, consecutivas ou não, são hipótese de cancelamento. A PREG deve publicar edital com prazo para justificativa; a ausência de justificativa no prazo acarreta cancelamento definitivo.",
+      "annotation_note": "Pergunta original preservada; a aplicação da resposta condicionada depende do regulamento do nível. Não usar a coleção recuperada como identificação do aluno."
+    },
+    {
+      "id": "GRAD2-014",
+      "norm_id": "ufpi-177-2012",
+      "category": "ambigua",
+      "question_original": "O que acontece se o professor agendar uma prova nova, mas ainda não divulgou a nota da avaliação anterior?",
+      "question": "O que acontece se o professor agendar uma prova nova, mas ainda não divulgou a nota da avaliação anterior?",
+      "original_answer": "É uma regra obrigatória que não deve ser realizada avaliação alguma sem que o rendimento acadêmico da avaliação anterior tenha sido divulgado pelo professor, sob pena de a avaliação agendada ser cancelada. Se isso acontecer, qualquer aluno da turma pode protocolar um pedido de cancelamento no departamento ou na chefia de curso no prazo máximo de 2 (dois) dias úteis antes da avaliação agendada.",
+      "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+      "required_facts": [
+        "Solicitar o nível do curso antes de aplicar uma regra.",
+        "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+      ],
+      "evidence": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "106",
+          "text": "**Art. 106. O rendimento acadêmico é calculado a partir média dos resultados obtidos nos instrumentos de avaliação utilizados durante a disciplina.**\n> § 1º A divulgação do rendimento acadêmico é obrigatoriamente feita no sistema de registro e controle acadêmico. O professor responsável pela disciplina deverá fazer o registro do rendimento no sistema acadêmico.\n> § 2º É obrigatória a divulgação do rendimento da avaliação feita pelo professor da disciplina, no prazo máximo de 10 (dez) dias úteis, contado este prazo a partir da realização da avaliação, ressalvados os limites de datas do Calendário Acadêmico.\n> § 3º Não deve ser realizada avaliação alguma sem que o rendimento acadêmico da avaliação anterior tenha sido divulgado pelo professor, sob pena de a avaliação agendada ser cancelada.\n> § 4º O pedido de cancelamento deverá ser protocolado, por qualquer aluno da turma, no departamento ou na chefia de curso, no prazo máximo de 2 (dois) dias úteis antes da realização da avaliação objeto do cancelamento.\n> § 5º Constatada a não divulgação dos resultados da avaliação anterior, o chefe de departamento ou chefe de curso deverá cancelar a avaliação programada e determinar a publicação dos resultados da avaliação anterior no prazo máximo de 2 (dois) dias úteis.\n> § 6º No ato da divulgação do rendimento acadêmico de uma avaliação, o professor já deve ter registrado no sistema de registro e controle acadêmico as faltas do aluno até aquela data."
+        }
+      ],
+      "audit_note": "Referência acrescentada: art. 106, §§3º a 5º.",
+      "answerability": "requires_clarification",
+      "review": {
+        "reviewers": []
+      },
+      "sector": "graduacao",
+      "expected_action": "clarify",
+      "conditional_answer": "Não deve ocorrer nova avaliação sem divulgação do resultado anterior, sob pena de cancelamento da avaliação agendada. Qualquer aluno da turma pode protocolar pedido no departamento ou chefia de curso até dois dias úteis antes da avaliação; constatada a ausência de divulgação, a chefia cancela a prova e determina publicação em até dois dias úteis.",
+      "annotation_note": "Pergunta original preservada; a aplicação da resposta condicionada depende do regulamento do nível. Não usar a coleção recuperada como identificação do aluno."
+    },
+    {
+      "id": "GRAD2-015",
+      "norm_id": "ufpi-177-2012",
+      "category": "ambigua",
+      "question_original": "O que é o ajuste de turmas e quando ele é realizado durante o semestre?",
+      "question": "O que é o ajuste de turmas e quando ele é realizado durante o semestre?",
+      "original_answer": "O ajuste de turmas consiste em aumentar ou diminuir o número de vagas de uma turma, bem como dividir, fundir ou excluir turmas antes do processamento da matrícula. O ajuste de turma é de responsabilidade do departamento ou da unidade acadêmica especializada e deve ser feito após a matrícula e o acréscimo, em data definida no Calendário Acadêmico.",
+      "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+      "required_facts": [
+        "Solicitar o nível do curso antes de aplicar uma regra.",
+        "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+      ],
+      "evidence": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "224",
+          "text": "**Art. 224. O ajuste de turmas consiste em aumentar ou diminuir o número de vagas de uma turma, bem como dividir, fundir ou excluir turmas antes do processamento da matrícula.**"
+        },
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "225",
+          "text": "**Art. 225. O ajuste de turma é de responsabilidade do departamento ou da unidade acadêmica especializada e deve ser feito após a matrícula e acréscimo, em data definida no Calendário Acadêmico.**"
+        }
+      ],
+      "audit_note": "Mantidas as duas formulações temporais existentes nos arts. 224/225.",
+      "interpretive_note": "Há aparente tensão entre as formulações temporais dos arts. 224 e 225.",
+      "answerability": "requires_clarification",
+      "review": {
+        "reviewers": []
+      },
+      "sector": "graduacao",
+      "expected_action": "clarify",
+      "conditional_answer": "Ajuste de turmas é aumentar ou diminuir vagas e dividir, fundir ou excluir turmas antes do processamento da matrícula. Cabe ao departamento ou unidade acadêmica especializada e ocorre após matrícula e acréscimo na data do Calendário Acadêmico.",
+      "annotation_note": "Pergunta original preservada; a aplicação da resposta condicionada depende do regulamento do nível. Não usar a coleção recuperada como identificação do aluno."
+    },
+    {
+      "id": "GRAD2-016",
+      "norm_id": "ufpi-177-2012",
+      "category": "ambigua",
+      "question_original": "Posso pedir para a UFPI mudar a estrutura curricular do meu curso para a mais recente?",
+      "question": "Posso pedir para a UFPI mudar a estrutura curricular do meu curso para a mais recente?",
+      "original_answer": "Sim, a mudança de estrutura curricular consiste na desvinculação do aluno da estrutura curricular de origem e sua vinculação à outra que corresponda à proposta curricular mais recente do seu curso [327, Art. 305]. Essa mudança deverá ser solicitada à Diretoria de Administração Acadêmica (DAA/PREG) pela coordenação do curso, sendo necessária a anuência do aluno [328, Art. 306].",
+      "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+      "required_facts": [
+        "Solicitar o nível do curso antes de aplicar uma regra.",
+        "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+      ],
+      "evidence": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "305",
+          "text": "**Art. 305. A mudança de estrutura curricular consiste na desvinculação do aluno da estrutura curricular de origem e sua vinculação a outra que corresponda à proposta curricular mais recente do seu curso.**"
+        },
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "306",
+          "text": "**Art. 306. A mudança de estrutura curricular deverá ser solicitada à Diretoria de Administração Acadêmica (DAA/PREG) pela coordenação do curso, com a anuência do aluno.**\n> Parágrafo único. Situações de mudança compulsória de estrutura curricular poderão ser previstas no projeto pedagógico do curso (PPC)."
+        }
+      ],
+      "audit_note": "Preservados artigos explícitos corretos; removida numeração externa de trecho.",
+      "answerability": "requires_clarification",
+      "review": {
+        "reviewers": []
+      },
+      "sector": "graduacao",
+      "expected_action": "clarify",
+      "conditional_answer": "É possível vincular o aluno à estrutura curricular mais recente em substituição à anterior. A coordenação solicita a mudança à DAA/PREG com anuência do aluno; o PPC pode prever situações de mudança compulsória.",
+      "annotation_note": "Pergunta original preservada; a aplicação da resposta condicionada depende do regulamento do nível. Não usar a coleção recuperada como identificação do aluno."
+    },
+    {
+      "id": "GRAD2-017",
+      "norm_id": "ufpi-177-2012",
+      "category": "ambigua",
+      "question_original": "Se eu quiser fazer matérias de períodos à frente do meu (adiantamento), eu tenho prioridade na hora da matrícula?",
+      "question": "Se eu quiser fazer matérias de períodos à frente do meu (adiantamento), eu tenho prioridade na hora da matrícula?",
+      "original_answer": "No preenchimento de vagas nas turmas, os alunos que querem adiantar componentes curriculares (\"aluno adiantando\") têm a quarta ordem de prioridade. Eles vêm depois do aluno nivelado (1º) [246, I], do aluno formando (2º) [246, II] e do aluno em pendência (3º) [247, III]. O critério de adiantamento é aplicável apenas para alunos de cursos em regime de crédito [248, § 3º].",
+      "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+      "required_facts": [
+        "Solicitar o nível do curso antes de aplicar uma regra.",
+        "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+      ],
+      "evidence": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "223",
+          "text": "**Art. 223. O preenchimento das vagas nas turmas de disciplinas, durante a matrícula e no ajuste da mesma, será efetuado considerando a reserva de vagas, mediante a seguinte ordem de prioridade:**\n1. I - aluno nivelado: corresponde àquele cujo componente curricular objeto da matrícula pertença, na estrutura curricular a que esteja vinculado, ao nível correspondente ao nível curricular a ser utilizado pelo aluno para cursar;\n2. II - aluno formando: corresponde àquele não nivelado, mas cuja matrícula objeto do componente curricular o torne formando no nível curricular respectivo ao da matrícula;\n3. III - aluno em pendência: corresponde ao aluno não formando cujo componente curricular objeto da matrícula seja, na estrutura curricular a que esteja vinculado, de um nível anterior ao nível curricular a ser utilizado para cursar;\n4. IV - aluno adiantando: corresponde ao aluno não formando cujo componente curricular objeto da matrícula seja, na estrutura curricular a que esteja vinculado, de um nível posterior ao nível curricular a ser utilizado para cursar;\n5. V - aluno cursando componente curricular eletivo: corresponde àquele cujo componente curricular objeto da matrícula não pertença a qualquer estrutura curricular do curso a que esteja vinculado e não o torne formando.\n> § 1º Os alunos com ingresso por meio de processo seletivo vestibular ou SiSU, no seu primeiro nível curricular, têm prioridade sobre os demais alunos para os componentes curriculares do primeiro nível da estrutura curricular a qual estão vinculados.\n> § 2º Em cada nível da ordem de prioridades, o índice de rendimento acadêmico (IRA) será o critério de desempate entre os alunos.\n> § 3º O critério descrito no inciso IV deste artigo só é aplicável para alunos de cursos em regime de crédito.\n> § 4º No caso do aluno cujo perfil inicial seja diferente de zero, o nível curricular a ser por ele utilizado para cursar, a que fazem referência os incisos I, III e IV deste artigo, será a soma do perfil inicial mais o número de períodos letivos regulares cursados na UFPI relativos ao curso atual."
+        }
+      ],
+      "audit_note": "Referências remapeadas para art. 223, IV e §3º.",
+      "answerability": "requires_clarification",
+      "review": {
+        "reviewers": []
+      },
+      "sector": "graduacao",
+      "expected_action": "clarify",
+      "conditional_answer": "Aluno adiantando ocupa a quarta prioridade: depois de nivelado, formando e em pendência. O critério de adiantamento se aplica apenas a cursos em regime de crédito.",
+      "annotation_note": "Pergunta original preservada; a aplicação da resposta condicionada depende do regulamento do nível. Não usar a coleção recuperada como identificação do aluno."
+    },
+    {
+      "id": "GRAD2-018",
+      "norm_id": "ufpi-177-2012",
+      "category": "aberta",
+      "question_original": "Se eu aproveitar créditos de outra faculdade (ou de outro curso da UFPI), a nota dessas matérias entra no cálculo do meu IRA?",
+      "question": "Se eu aproveitar créditos de outra faculdade (ou de outro curso da UFPI), a nota dessas matérias entra no cálculo do meu IRA?",
+      "original_answer": "Não. Os componentes curriculares cursados em outra Instituição de Ensino Superior (IES) e aproveitados na UFPI serão registrados no histórico escolar como CC (crédito concedido) e não serão considerados para fins de apuração do Índice de Rendimento Acadêmico (IRA) [293, Art. 257]. Componentes oriundos de cursos já concluídos na própria UFPI e aproveitados em outro curso também terão o registro da nota anterior acrescida da ocorrência CC e não devem compor o IRA [293, Art. 258].",
+      "reference_answer": "Não. Estudos aproveitados de outra IES são registrados como crédito concedido e não entram no IRA. Componentes de curso já concluído na UFPI, aproveitados em outro curso, recebem a nota anterior acrescida de CC e também não compõem o IRA.",
+      "required_facts": [
+        "Não. Estudos aproveitados de outra IES são registrados como crédito concedido e não entram no IRA.",
+        "Componentes de curso já concluído na UFPI, aproveitados em outro curso, recebem a nota anterior acrescida de CC e também não compõem o IRA."
+      ],
+      "evidence": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "257",
+          "text": "**Art. 257. Os componentes curriculares cursados em outra IES, cujos estudos sejam aproveitados na UFPI, implicam o registro no histórico escolar como CC (crédito concedido) e não serão considerados para fins de apuração do índice de rendimento acadêmico (IRA).**"
+        },
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "258",
+          "text": "**Art. 258. Os componentes curriculares oriundos de cursos concluídos na UFPI, aproveitadas em outro curso, implicarão o registro da nota obtida anteriormente acrescida da ocorrência CC (crédito concedido), não devendo compor o índice de rendimento acadêmico (IRA).**"
+        }
+      ],
+      "audit_note": "Artigos 257 e 258 explicitados; mantida regra específica em relação ao art. 124.",
+      "answerability": "answerable_without_added_scope",
+      "review": {
+        "reviewers": []
+      },
+      "sector": "graduacao",
+      "expected_action": "answer",
+      "conditional_answer": null,
+      "annotation_note": "Pergunta original preservada; contém pista explícita (IRA, Exame Final ou Láurea) de graduação no universo destes regulamentos."
+    },
+    {
+      "id": "GRAD2-019",
+      "norm_id": "ufpi-177-2012",
+      "category": "ambigua",
+      "question_original": "Qual é o prazo máximo que o professor tem para divulgar a nota de uma prova?",
+      "question": "Qual é o prazo máximo que o professor tem para divulgar a nota de uma prova?",
+      "original_answer": "O professor é obrigado a divulgar o rendimento acadêmico de uma avaliação no sistema no prazo máximo de 10 (dez) dias úteis, contados a partir da realização da avaliação [144, Art. 106, § 2º]. É uma regra obrigatória que nenhuma avaliação deve ser realizada sem que o rendimento acadêmico da avaliação anterior tenha sido divulgado [145, Art. 106, § 3º].",
+      "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+      "required_facts": [
+        "Solicitar o nível do curso antes de aplicar uma regra.",
+        "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+      ],
+      "evidence": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "106",
+          "text": "**Art. 106. O rendimento acadêmico é calculado a partir média dos resultados obtidos nos instrumentos de avaliação utilizados durante a disciplina.**\n> § 1º A divulgação do rendimento acadêmico é obrigatoriamente feita no sistema de registro e controle acadêmico. O professor responsável pela disciplina deverá fazer o registro do rendimento no sistema acadêmico.\n> § 2º É obrigatória a divulgação do rendimento da avaliação feita pelo professor da disciplina, no prazo máximo de 10 (dez) dias úteis, contado este prazo a partir da realização da avaliação, ressalvados os limites de datas do Calendário Acadêmico.\n> § 3º Não deve ser realizada avaliação alguma sem que o rendimento acadêmico da avaliação anterior tenha sido divulgado pelo professor, sob pena de a avaliação agendada ser cancelada.\n> § 4º O pedido de cancelamento deverá ser protocolado, por qualquer aluno da turma, no departamento ou na chefia de curso, no prazo máximo de 2 (dois) dias úteis antes da realização da avaliação objeto do cancelamento.\n> § 5º Constatada a não divulgação dos resultados da avaliação anterior, o chefe de departamento ou chefe de curso deverá cancelar a avaliação programada e determinar a publicação dos resultados da avaliação anterior no prazo máximo de 2 (dois) dias úteis.\n> § 6º No ato da divulgação do rendimento acadêmico de uma avaliação, o professor já deve ter registrado no sistema de registro e controle acadêmico as faltas do aluno até aquela data."
+        }
+      ],
+      "audit_note": "Art. 106, §§2º e 3º; números 144/145 eram referências externas.",
+      "answerability": "requires_clarification",
+      "review": {
+        "reviewers": []
+      },
+      "sector": "graduacao",
+      "expected_action": "clarify",
+      "conditional_answer": "O professor deve divulgar o resultado no sistema em até dez dias úteis após a avaliação, respeitados os limites do Calendário Acadêmico. Não pode realizar nova avaliação antes de divulgar o resultado anterior.",
+      "annotation_note": "Pergunta original preservada; a aplicação da resposta condicionada depende do regulamento do nível. Não usar a coleção recuperada como identificação do aluno."
+    },
+    {
+      "id": "GRAD2-020",
+      "norm_id": "ufpi-177-2012",
+      "category": "ambigua",
+      "question_original": "O que o professor tem que apresentar no primeiro dia de aula?",
+      "question": "O que o professor tem que apresentar no primeiro dia de aula?",
+      "original_answer": "É obrigatória a apresentação do programa do componente curricular ou do plano da disciplina pelo docente no primeiro dia de aula do período letivo [76, Art. 41, § 2º]. O plano de disciplina, que deve ser implantado no sistema antes do início do período letivo [76, Art. 41, § 1º], deve conter: identificação [75, I], ementa [75, II], objetivos [75, III], metodologia de ensino [75, IV], conteúdo programático [75, V], recursos de ensino [75, VI], sistemática de avaliação da aprendizagem [75, VII], referências bibliográficas básicas (mínimo de três e até cinco) [75, VIII], referências bibliográficas complementares [75, IX] e o cronograma das aulas e avaliações [75, X].",
+      "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+      "required_facts": [
+        "Solicitar o nível do curso antes de aplicar uma regra.",
+        "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+      ],
+      "evidence": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "41",
+          "text": "**Art. 41. Para os componentes curriculares com turmas formadas, cada turma deve ser detalhada por um plano de disciplina que contenha:**\n1.  I - identificação;\n2.  II - ementa;\n3.  III - objetivos;\n4.  IV - metodologia de ensino;\n5.  V - conteúdo programático;\n6.  VI - recursos de ensino;\n7.  VII - sistemática de avaliação da aprendizagem;\n8.  VIII - referências bibliográficas básicas (mínimo de três e até cinco, que devem, preferencialmente, ser de fácil acesso na biblioteca da UFPI);\n9.  IX - referências bibliográficas complementares;\n10. X - cronograma das aulas e avaliações.\n> § 1º É obrigatória a implantação do plano de disciplina no sistema de registro e controle acadêmico, pelo docente, antes do início do período letivo.\n> § 2º É obrigatória a apresentação do programa do componente curricular ou do plano da disciplina, pelo docente, no primeiro dia de aula do período letivo."
+        }
+      ],
+      "audit_note": "Referência unificada no art. 41 e §§1º e 2º.",
+      "answerability": "requires_clarification",
+      "review": {
+        "reviewers": []
+      },
+      "sector": "graduacao",
+      "expected_action": "clarify",
+      "conditional_answer": "O docente deve apresentar o programa do componente ou plano da disciplina no primeiro dia de aula e implantá-lo no sistema antes do período letivo. O plano inclui identificação, ementa, objetivos, metodologia, conteúdo, recursos, avaliação, referências básicas (três a cinco), complementares e cronograma das aulas e avaliações.",
+      "annotation_note": "Pergunta original preservada; a aplicação da resposta condicionada depende do regulamento do nível. Não usar a coleção recuperada como identificação do aluno."
+    }
+  ]
+}

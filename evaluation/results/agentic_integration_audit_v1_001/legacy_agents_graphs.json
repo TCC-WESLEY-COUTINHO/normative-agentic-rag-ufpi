@@ -1,0 +1,2269 @@
+{
+  "schema_version": "agentic-integration-audit-v1",
+  "method": "Static AST/source audit only; no application imports, model instantiation, tool execution, remote APIs, tests or graph rendering.",
+  "counts": {
+    "python_source_files_inspected": 19,
+    "top_level_graph_exports": 12,
+    "service_registered_agent_ids": 4,
+    "unregistered_imported_top_level_graphs": 8,
+    "supervisor_nested_prebuilt_graphs": 3
+  },
+  "registry": {
+    "path": "code/src/agents/agents.py",
+    "registered_ids": [
+      "chatbot_ufpi_agentic",
+      "chatbot_ufpi",
+      "chatbot_ufpi_v2",
+      "chatbot_generic"
+    ],
+    "default_agent": "chatbot_ufpi_v2",
+    "all_imported_graphs": [
+      "bg_task_agent",
+      "chatbot",
+      "chatbot_generic",
+      "chatbot_ufpi",
+      "chatbot_ufpi_agentic",
+      "chatbot_ufpi_v2",
+      "command_agent",
+      "interrupt_agent",
+      "kb_agent",
+      "langgraph_supervisor_agent",
+      "rag_assistant",
+      "research_assistant"
+    ],
+    "import_side_effects": "Every imported module is loaded even if its registry entry is commented out. Supervisor constructs get_model at import time; research constructs DuckDuckGo and optional Weather wrappers at import time. settings instantiation validates providers.",
+    "langgraph_deployment": {
+      "path": "code/langgraph.json:1",
+      "python_version": "3.12",
+      "dependencies": [
+        "./src"
+      ],
+      "graphs": {
+        "research_assistant": "./src/agents/research_assistant.py:research_assistant"
+      },
+      "env_path": "./.env (not read)"
+    },
+    "default_mismatch": "Service/run_agent default is legacy Supabase chatbot_ufpi_v2; standalone LangGraph config selects unregistered research_assistant. Current normative graph is an explicit registered alternative.",
+    "evidence": [
+      "code/src/agents/agents.py:6",
+      "code/src/agents/agents.py:20",
+      "code/src/agents/agents.py:34",
+      "code/src/agents/agents.py:56",
+      "code/langgraph.json:4",
+      "code/src/run_agent.py:16"
+    ]
+  },
+  "agents": [
+    {
+      "name": "chatbot_generic",
+      "path": "code/src/agents/chatbot_generic.py",
+      "status": "REGISTERED_ALTERNATIVE",
+      "purpose": "General conversation with calculator and local datetime.",
+      "state_type": "AgentState(MessagesState,total=False): messages + remaining_steps:RemainingSteps",
+      "model_provider": {
+        "selector": "get_model(config[\"configurable\"].get(\"model\", settings.DEFAULT_MODEL))",
+        "runtime_selected_model": "UNKNOWN: no environment/private credentials read or models instantiated",
+        "providers": [
+          "OpenAI",
+          "OpenAI-compatible",
+          "Azure OpenAI",
+          "DeepSeek",
+          "Anthropic",
+          "Google Generative AI",
+          "Vertex AI",
+          "Groq",
+          "AWS Bedrock",
+          "Ollama",
+          "OpenRouter",
+          "Fake"
+        ],
+        "evidence": [
+          "code/src/core/llm.py:67",
+          "code/src/core/settings.py:127",
+          "code/src/schema/models.py:5"
+        ]
+      },
+      "system_prompt_location": {
+        "path": "code/src/agents/chatbot_generic.py",
+        "start_line": 27,
+        "end_line": 34
+      },
+      "tools_bound": [
+        "Calculator",
+        "GetCurrentDateTime"
+      ],
+      "tool_selection_mechanism": "Optional native LLM tool calling through bind_tools; no forced tool_choice and no semantic action router.",
+      "direct_response_behavior": "Tool-free direct response allowed.",
+      "streaming_behavior": "Model token events available through service astream(messages); graph returns AIMessage in messages update.",
+      "memory_dependency": {
+        "graph_local_checkpointer": null,
+        "service": "Only registered agents receive saver/store through service lifespan mutation; thread_id/user_id are RunnableConfig, not state fields.",
+        "messages": "MessagesState uses add_messages reducer; ToolMessage results remain messages when emitted.",
+        "evidence": [
+          "code/src/service/service.py:65",
+          "code/src/service/service.py:78",
+          "code/src/service/service.py:112",
+          "code/.venv/Lib/site-packages/langgraph/graph/message.py:281"
+        ]
+      },
+      "service_dependency": "Imported by agents.agents at module import; selected via get_agent only if registered. No HTTP client inside graph.",
+      "termination_condition": "Last AIMessage has no tool_calls.",
+      "retry_loop_behavior": "model -> tools -> model; when remaining_steps<2 and response has calls, substitutes apology AIMessage without calls; no explicit per-tool retry.",
+      "tool_call_limit": "No independent tool call count quota; RemainingSteps gate where present, graph recursion budget applies.",
+      "error_handling": "pending_tool_calls raises TypeError if last message is not AIMessage; no local model error catch; ToolNode default errors become ToolMessage.",
+      "evidence": [
+        "code/src/agents/chatbot_generic.py:47",
+        "code/src/agents/chatbot_generic.py:65",
+        "code/src/agents/chatbot_generic.py:88"
+      ]
+    },
+    {
+      "name": "chatbot_ufpi",
+      "path": "code/src/agents/chatbot_ufpi.py",
+      "status": "REGISTERED_ALTERNATIVE",
+      "purpose": "RGG-specialist legacy normative assistant.",
+      "state_type": "AgentState(MessagesState,total=False): messages + remaining_steps:RemainingSteps",
+      "model_provider": {
+        "selector": "get_model(config[\"configurable\"].get(\"model\", settings.DEFAULT_MODEL))",
+        "runtime_selected_model": "UNKNOWN: no environment/private credentials read or models instantiated",
+        "providers": [
+          "OpenAI",
+          "OpenAI-compatible",
+          "Azure OpenAI",
+          "DeepSeek",
+          "Anthropic",
+          "Google Generative AI",
+          "Vertex AI",
+          "Groq",
+          "AWS Bedrock",
+          "Ollama",
+          "OpenRouter",
+          "Fake"
+        ],
+        "evidence": [
+          "code/src/core/llm.py:67",
+          "code/src/core/settings.py:127",
+          "code/src/schema/models.py:5"
+        ]
+      },
+      "system_prompt_location": {
+        "path": "code/src/agents/chatbot_ufpi.py",
+        "start_line": 32,
+        "end_line": 847
+      },
+      "tools_bound": [
+        "Supabase_RAG_Search"
+      ],
+      "tool_selection_mechanism": "Optional native LLM tool calling through bind_tools; no forced tool_choice and no semantic action router.",
+      "direct_response_behavior": "Model can emit tool-free final AIMessage and END. Normative prompts request evidence searches but graph does not enforce them.",
+      "streaming_behavior": "Model token events available through service astream(messages); graph returns AIMessage in messages update.",
+      "memory_dependency": {
+        "graph_local_checkpointer": null,
+        "service": "Only registered agents receive saver/store through service lifespan mutation; thread_id/user_id are RunnableConfig, not state fields.",
+        "messages": "MessagesState uses add_messages reducer; ToolMessage results remain messages when emitted.",
+        "evidence": [
+          "code/src/service/service.py:65",
+          "code/src/service/service.py:78",
+          "code/src/service/service.py:112",
+          "code/.venv/Lib/site-packages/langgraph/graph/message.py:281"
+        ]
+      },
+      "service_dependency": "Imported by agents.agents at module import; selected via get_agent only if registered. No HTTP client inside graph.",
+      "termination_condition": "Last AIMessage has no tool_calls.",
+      "retry_loop_behavior": "model -> tools -> model; when remaining_steps<2 and response has calls, substitutes apology AIMessage without calls; no explicit per-tool retry.",
+      "tool_call_limit": "No independent tool call count quota; RemainingSteps gate where present, graph recursion budget applies.",
+      "error_handling": "pending_tool_calls raises TypeError if last message is not AIMessage; no local model error catch; ToolNode default errors become ToolMessage.",
+      "evidence": [
+        "code/src/agents/chatbot_ufpi.py:859",
+        "code/src/agents/chatbot_ufpi.py:878",
+        "code/src/agents/chatbot_ufpi.py:901"
+      ],
+      "prompt_policy_limits": {
+        "search_minimum": "Prompt-only minimum3 searches /4-5 complex; no programmatic minimum or relevance validation",
+        "scope": "graduation RGG only; hardcoded normative facts and hierarchy embedded in prompt",
+        "grounded_followup": "Full message history is available, but prompt always-search rule conflicts with no-new-evidence reformulations. No typed provenance/action state.",
+        "evidence": [
+          "code/src/agents/chatbot_ufpi.py:37",
+          "code/src/agents/chatbot_ufpi.py:39",
+          "code/src/agents/chatbot_ufpi.py:52"
+        ]
+      }
+    },
+    {
+      "name": "chatbot_ufpi_v2",
+      "path": "code/src/agents/chatbot_ufpi_v2.py",
+      "status": "REGISTERED_DEFAULT",
+      "purpose": "RGG-specialist legacy normative assistant with vector and metadata tools.",
+      "state_type": "AgentState(MessagesState,total=False): messages + remaining_steps:RemainingSteps",
+      "model_provider": {
+        "selector": "get_model(config[\"configurable\"].get(\"model\", settings.DEFAULT_MODEL))",
+        "runtime_selected_model": "UNKNOWN: no environment/private credentials read or models instantiated",
+        "providers": [
+          "OpenAI",
+          "OpenAI-compatible",
+          "Azure OpenAI",
+          "DeepSeek",
+          "Anthropic",
+          "Google Generative AI",
+          "Vertex AI",
+          "Groq",
+          "AWS Bedrock",
+          "Ollama",
+          "OpenRouter",
+          "Fake"
+        ],
+        "evidence": [
+          "code/src/core/llm.py:67",
+          "code/src/core/settings.py:127",
+          "code/src/schema/models.py:5"
+        ]
+      },
+      "system_prompt_location": {
+        "path": "code/src/agents/chatbot_ufpi_v2.py",
+        "start_line": 32,
+        "end_line": 471
+      },
+      "tools_bound": [
+        "Supabase_Semantic_Search",
+        "Supabase_Metadata_Search"
+      ],
+      "tool_selection_mechanism": "Optional native LLM tool calling through bind_tools; no forced tool_choice and no semantic action router.",
+      "direct_response_behavior": "Model can emit tool-free final AIMessage and END. Normative prompts request evidence searches but graph does not enforce them.",
+      "streaming_behavior": "Model token events available through service astream(messages); graph returns AIMessage in messages update.",
+      "memory_dependency": {
+        "graph_local_checkpointer": null,
+        "service": "Only registered agents receive saver/store through service lifespan mutation; thread_id/user_id are RunnableConfig, not state fields.",
+        "messages": "MessagesState uses add_messages reducer; ToolMessage results remain messages when emitted.",
+        "evidence": [
+          "code/src/service/service.py:65",
+          "code/src/service/service.py:78",
+          "code/src/service/service.py:112",
+          "code/.venv/Lib/site-packages/langgraph/graph/message.py:281"
+        ]
+      },
+      "service_dependency": "Imported by agents.agents at module import; selected via get_agent only if registered. No HTTP client inside graph.",
+      "termination_condition": "Last AIMessage has no tool_calls.",
+      "retry_loop_behavior": "model -> tools -> model; when remaining_steps<2 and response has calls, substitutes apology AIMessage without calls; no explicit per-tool retry.",
+      "tool_call_limit": "No independent tool call count quota; RemainingSteps gate where present, graph recursion budget applies.",
+      "error_handling": "pending_tool_calls raises TypeError if last message is not AIMessage; no local model error catch; ToolNode default errors become ToolMessage.",
+      "evidence": [
+        "code/src/agents/chatbot_ufpi_v2.py:483",
+        "code/src/agents/chatbot_ufpi_v2.py:502",
+        "code/src/agents/chatbot_ufpi_v2.py:524"
+      ],
+      "prompt_policy_limits": {
+        "search_minimum": "Prompt-only minimum3 searches /4-5 complex; no programmatic minimum or relevance validation",
+        "scope": "graduation RGG only; hardcoded normative facts and hierarchy embedded in prompt",
+        "grounded_followup": "Full message history is available, but prompt always-search rule conflicts with no-new-evidence reformulations. No typed provenance/action state.",
+        "evidence": [
+          "code/src/agents/chatbot_ufpi_v2.py:37",
+          "code/src/agents/chatbot_ufpi_v2.py:39",
+          "code/src/agents/chatbot_ufpi_v2.py:43"
+        ]
+      }
+    },
+    {
+      "name": "chatbot",
+      "path": "code/src/agents/chatbot.py",
+      "status": "UNREGISTERED_IMPORTED_MODULE_GRAPH",
+      "purpose": "Simple functional conversational entrypoint.",
+      "state_type": "dict[str,list[BaseMessage]] inputs and previous saved state",
+      "model_provider": {
+        "selector": "get_model(config[\"configurable\"].get(\"model\", settings.DEFAULT_MODEL))",
+        "runtime_selected_model": "UNKNOWN: no environment/private credentials read or models instantiated",
+        "providers": [
+          "OpenAI",
+          "OpenAI-compatible",
+          "Azure OpenAI",
+          "DeepSeek",
+          "Anthropic",
+          "Google Generative AI",
+          "Vertex AI",
+          "Groq",
+          "AWS Bedrock",
+          "Ollama",
+          "OpenRouter",
+          "Fake"
+        ],
+        "evidence": [
+          "code/src/core/llm.py:67",
+          "code/src/core/settings.py:127",
+          "code/src/schema/models.py:5"
+        ]
+      },
+      "system_prompt_location": null,
+      "tools_bound": [],
+      "tool_selection_mechanism": "none",
+      "direct_response_behavior": "Always model response without tool execution.",
+      "streaming_behavior": "Functional entrypoint emits model events; entrypoint.final value contains only new response and save contains accumulated history.",
+      "memory_dependency": {
+        "mechanism": "previous[\"messages\"] + inputs[\"messages\"]; entrypoint.final saves messages+response",
+        "graph_local_checkpointer": null,
+        "service": "Not registered; default lifespan will not attach memory."
+      },
+      "service_dependency": "Imported by agents.agents at module import; selected via get_agent only if registered. No HTTP client inside graph.",
+      "termination_condition": "One model call and entrypoint.final.",
+      "retry_loop_behavior": "No graph loop or retry in application.",
+      "tool_call_limit": "No independent tool call count quota; RemainingSteps gate where present, graph recursion budget applies.",
+      "error_handling": "No model error catch.",
+      "evidence": [
+        "code/src/agents/chatbot.py:8",
+        "code/src/agents/chatbot.py:15",
+        "code/src/agents/chatbot.py:21"
+      ]
+    },
+    {
+      "name": "command_agent",
+      "path": "code/src/agents/command_agent.py",
+      "status": "UNREGISTERED_IMPORTED_MODULE_GRAPH",
+      "purpose": "Demonstrate Command-based dynamic graph routing.",
+      "state_type": "AgentState(MessagesState,total=False): messages only",
+      "model_provider": null,
+      "system_prompt_location": null,
+      "tools_bound": [],
+      "tool_selection_mechanism": "random.choice a|b chooses Command.goto node_b|node_c",
+      "direct_response_behavior": "Deterministic greeting messages except random branch. No LLM.",
+      "streaming_behavior": "State update AIMessage events only; no LLM tokens.",
+      "memory_dependency": {
+        "graph_local_checkpointer": null,
+        "service": "Only registered agents receive saver/store through service lifespan mutation; thread_id/user_id are RunnableConfig, not state fields.",
+        "messages": "MessagesState uses add_messages reducer; ToolMessage results remain messages when emitted.",
+        "evidence": [
+          "code/src/service/service.py:65",
+          "code/src/service/service.py:78",
+          "code/src/service/service.py:112",
+          "code/.venv/Lib/site-packages/langgraph/graph/message.py:281"
+        ]
+      },
+      "service_dependency": "Imported by agents.agents at module import; selected via get_agent only if registered. No HTTP client inside graph.",
+      "termination_condition": "node_b/node_c have no outgoing edges; graph quiesces.",
+      "retry_loop_behavior": "One node_a branch then terminal greeting.",
+      "tool_call_limit": "not applicable",
+      "error_handling": "No explicit catches.",
+      "evidence": [
+        "code/src/agents/command_agent.py:19",
+        "code/src/agents/command_agent.py:30",
+        "code/src/agents/command_agent.py:48"
+      ]
+    },
+    {
+      "name": "bg_task_agent",
+      "path": "code/src/agents/bg_task_agent/bg_task_agent.py",
+      "status": "UNREGISTERED_IMPORTED_MODULE_GRAPH",
+      "purpose": "Demonstrate custom streaming background tasks before final model.",
+      "state_type": "AgentState(MessagesState,total=False): messages only",
+      "model_provider": {
+        "selector": "get_model(config[\"configurable\"].get(\"model\", settings.DEFAULT_MODEL))",
+        "runtime_selected_model": "UNKNOWN: no environment/private credentials read or models instantiated",
+        "providers": [
+          "OpenAI",
+          "OpenAI-compatible",
+          "Azure OpenAI",
+          "DeepSeek",
+          "Anthropic",
+          "Google Generative AI",
+          "Vertex AI",
+          "Groq",
+          "AWS Bedrock",
+          "Ollama",
+          "OpenRouter",
+          "Fake"
+        ],
+        "evidence": [
+          "code/src/core/llm.py:67",
+          "code/src/core/settings.py:127",
+          "code/src/schema/models.py:5"
+        ]
+      },
+      "system_prompt_location": null,
+      "tools_bound": [],
+      "tool_selection_mechanism": "none",
+      "direct_response_behavior": "Calls model after scripted tasks; no retrieval.",
+      "streaming_behavior": "Task custom ChatMessage via StreamWriter; model messages afterwards. Scripted task2 error result is status data rather than graph exception.",
+      "memory_dependency": {
+        "graph_local_checkpointer": null,
+        "service": "Only registered agents receive saver/store through service lifespan mutation; thread_id/user_id are RunnableConfig, not state fields.",
+        "messages": "MessagesState uses add_messages reducer; ToolMessage results remain messages when emitted.",
+        "evidence": [
+          "code/src/service/service.py:65",
+          "code/src/service/service.py:78",
+          "code/src/service/service.py:112",
+          "code/.venv/Lib/site-packages/langgraph/graph/message.py:281"
+        ]
+      },
+      "service_dependency": "Imported by agents.agents at module import; selected via get_agent only if registered. No HTTP client inside graph.",
+      "termination_condition": "model -> END.",
+      "retry_loop_behavior": "Fixed sequence sleeps/task dispatch then one model call.",
+      "tool_call_limit": "not applicable",
+      "error_handling": "Task.write_data/finish raise ValueError after complete; no enclosing graph catches.",
+      "evidence": [
+        "code/src/agents/bg_task_agent/bg_task_agent.py:37",
+        "code/src/agents/bg_task_agent/bg_task_agent.py:53",
+        "code/src/agents/bg_task_agent/task.py:19",
+        "code/src/agents/utils.py:13"
+      ]
+    },
+    {
+      "name": "rag_assistant",
+      "path": "code/src/agents/rag_assistant.py",
+      "status": "UNREGISTERED_IMPORTED_MODULE_GRAPH",
+      "purpose": "Safety-checked handbook RAG assistant.",
+      "state_type": "AgentState(MessagesState,total=False): messages + safety:LlamaGuardOutput + remaining_steps:RemainingSteps",
+      "model_provider": {
+        "selector": "get_model(config[\"configurable\"].get(\"model\", settings.DEFAULT_MODEL))",
+        "runtime_selected_model": "UNKNOWN: no environment/private credentials read or models instantiated",
+        "providers": [
+          "OpenAI",
+          "OpenAI-compatible",
+          "Azure OpenAI",
+          "DeepSeek",
+          "Anthropic",
+          "Google Generative AI",
+          "Vertex AI",
+          "Groq",
+          "AWS Bedrock",
+          "Ollama",
+          "OpenRouter",
+          "Fake"
+        ],
+        "evidence": [
+          "code/src/core/llm.py:67",
+          "code/src/core/settings.py:127",
+          "code/src/schema/models.py:5"
+        ]
+      },
+      "system_prompt_location": {
+        "path": "code/src/agents/rag_assistant.py",
+        "start_line": 34,
+        "end_line": 47
+      },
+      "tools_bound": [
+        "Database_Search"
+      ],
+      "tool_selection_mechanism": "Optional native bind_tools; guard_input can block before model.",
+      "direct_response_behavior": "Tool-free final message allowed after safety check.",
+      "streaming_behavior": "Model token events available through service astream(messages); graph returns AIMessage in messages update.",
+      "memory_dependency": {
+        "graph_local_checkpointer": null,
+        "service": "Only registered agents receive saver/store through service lifespan mutation; thread_id/user_id are RunnableConfig, not state fields.",
+        "messages": "MessagesState uses add_messages reducer; ToolMessage results remain messages when emitted.",
+        "evidence": [
+          "code/src/service/service.py:65",
+          "code/src/service/service.py:78",
+          "code/src/service/service.py:112",
+          "code/.venv/Lib/site-packages/langgraph/graph/message.py:281"
+        ]
+      },
+      "service_dependency": "Imported by agents.agents at module import; selected via get_agent only if registered. No HTTP client inside graph.",
+      "termination_condition": "Unsafe input -> block_unsafe_content -> END; model without calls -> END.",
+      "retry_loop_behavior": "tools -> model; RemainingSteps<2 returns apology on pending calls; no application retry.",
+      "tool_call_limit": "No independent tool call count quota; RemainingSteps gate where present, graph recursion budget applies.",
+      "error_handling": "ToolNode errors default to error ToolMessage; no local model/guard API error catch. LlamaGuard missing Groq key returns SAFE; malformed assessment returns ERROR, and only UNSAFE is blocked.",
+      "evidence": [
+        "code/src/agents/rag_assistant.py:30",
+        "code/src/agents/rag_assistant.py:66",
+        "code/src/agents/rag_assistant.py:104",
+        "code/src/agents/llama_guard.py:61",
+        "code/src/agents/llama_guard.py:78"
+      ]
+    },
+    {
+      "name": "research_assistant",
+      "path": "code/src/agents/research_assistant.py",
+      "status": "UNREGISTERED_IMPORTED_MODULE_GRAPH",
+      "purpose": "Safety-checked web/weather/calculator assistant.",
+      "state_type": "AgentState(MessagesState,total=False): messages + safety:LlamaGuardOutput + remaining_steps:RemainingSteps",
+      "model_provider": {
+        "selector": "get_model(config[\"configurable\"].get(\"model\", settings.DEFAULT_MODEL))",
+        "runtime_selected_model": "UNKNOWN: no environment/private credentials read or models instantiated",
+        "providers": [
+          "OpenAI",
+          "OpenAI-compatible",
+          "Azure OpenAI",
+          "DeepSeek",
+          "Anthropic",
+          "Google Generative AI",
+          "Vertex AI",
+          "Groq",
+          "AWS Bedrock",
+          "Ollama",
+          "OpenRouter",
+          "Fake"
+        ],
+        "evidence": [
+          "code/src/core/llm.py:67",
+          "code/src/core/settings.py:127",
+          "code/src/schema/models.py:5"
+        ]
+      },
+      "system_prompt_location": {
+        "path": "code/src/agents/research_assistant.py",
+        "start_line": 40,
+        "end_line": 51
+      },
+      "tools_bound": [
+        "WebSearch",
+        "Calculator",
+        "Weather (if key)"
+      ],
+      "tool_selection_mechanism": "Optional native bind_tools; guard_input can block before model.",
+      "direct_response_behavior": "Tool-free final message allowed after safety check.",
+      "streaming_behavior": "Model token events available through service astream(messages); graph returns AIMessage in messages update.",
+      "memory_dependency": {
+        "graph_local_checkpointer": null,
+        "service": "Only registered agents receive saver/store through service lifespan mutation; thread_id/user_id are RunnableConfig, not state fields.",
+        "messages": "MessagesState uses add_messages reducer; ToolMessage results remain messages when emitted.",
+        "evidence": [
+          "code/src/service/service.py:65",
+          "code/src/service/service.py:78",
+          "code/src/service/service.py:112",
+          "code/.venv/Lib/site-packages/langgraph/graph/message.py:281"
+        ]
+      },
+      "service_dependency": "Imported by agents.agents at module import; selected via get_agent only if registered. No HTTP client inside graph.",
+      "termination_condition": "Unsafe input -> block_unsafe_content -> END; model without calls -> END.",
+      "retry_loop_behavior": "tools -> model; RemainingSteps<2 returns apology on pending calls; no application retry.",
+      "tool_call_limit": "No independent tool call count quota; RemainingSteps gate where present, graph recursion budget applies.",
+      "error_handling": "ToolNode errors default to error ToolMessage; no local model/guard API error catch. LlamaGuard missing Groq key returns SAFE; malformed assessment returns ERROR, and only UNSAFE is blocked.",
+      "evidence": [
+        "code/src/agents/research_assistant.py:29",
+        "code/src/agents/research_assistant.py:70",
+        "code/src/agents/research_assistant.py:105",
+        "code/src/agents/llama_guard.py:61",
+        "code/src/agents/llama_guard.py:78"
+      ]
+    },
+    {
+      "name": "kb_agent",
+      "path": "code/src/agents/knowledge_base_agent.py",
+      "status": "UNREGISTERED_IMPORTED_MODULE_GRAPH",
+      "purpose": "Always retrieve Amazon Bedrock Knowledge Base then augment prompt.",
+      "state_type": "AgentState(MessagesState,total=False): messages + remaining_steps:RemainingSteps + retrieved_documents:list[dict[str,Any]] + kb_documents:str",
+      "model_provider": {
+        "selector": "get_model(config[\"configurable\"].get(\"model\", settings.DEFAULT_MODEL))",
+        "runtime_selected_model": "UNKNOWN: no environment/private credentials read or models instantiated",
+        "providers": [
+          "OpenAI",
+          "OpenAI-compatible",
+          "Azure OpenAI",
+          "DeepSeek",
+          "Anthropic",
+          "Google Generative AI",
+          "Vertex AI",
+          "Groq",
+          "AWS Bedrock",
+          "Ollama",
+          "OpenRouter",
+          "Fake"
+        ],
+        "evidence": [
+          "code/src/core/llm.py:67",
+          "code/src/core/settings.py:127",
+          "code/src/schema/models.py:5"
+        ]
+      },
+      "system_prompt_location": {
+        "path": "code/src/agents/knowledge_base_agent.py",
+        "start_line": 51,
+        "end_line": 64
+      },
+      "tools_bound": [],
+      "tool_selection_mechanism": "Fixed retrieve_documents node; not a bound tool.",
+      "direct_response_behavior": "No tool-free action branch; retrieval always first, even greetings. Generation can proceed without docs on retrieval failure.",
+      "streaming_behavior": "Model token events available through service astream(messages); graph returns AIMessage in messages update.",
+      "memory_dependency": {
+        "graph_local_checkpointer": null,
+        "service": "Only registered agents receive saver/store through service lifespan mutation; thread_id/user_id are RunnableConfig, not state fields.",
+        "messages": "MessagesState uses add_messages reducer; ToolMessage results remain messages when emitted.",
+        "evidence": [
+          "code/src/service/service.py:65",
+          "code/src/service/service.py:78",
+          "code/src/service/service.py:112",
+          "code/.venv/Lib/site-packages/langgraph/graph/message.py:281"
+        ]
+      },
+      "service_dependency": "Imported by agents.agents at module import; selected via get_agent only if registered. No HTTP client inside graph.",
+      "termination_condition": "retrieve_documents -> prepare_augmented_prompt -> model -> END.",
+      "retry_loop_behavior": "No loop or retry.",
+      "tool_call_limit": "No independent tool call count quota; RemainingSteps gate where present, graph recursion budget applies.",
+      "error_handling": "Retrieval catches Exception and returns empty documents; model error not caught. Potential stale kb_documents: no-doc prepare node returns only messages, so persisted prior context is not explicitly cleared.",
+      "evidence": [
+        "code/src/agents/knowledge_base_agent.py:19",
+        "code/src/agents/knowledge_base_agent.py:28",
+        "code/src/agents/knowledge_base_agent.py:85",
+        "code/src/agents/knowledge_base_agent.py:129",
+        "code/src/agents/knowledge_base_agent.py:157"
+      ],
+      "retrieval": {
+        "backend": "AmazonKnowledgeBasesRetriever",
+        "required_environment": "AWS_KB_ID plus AWS auth/region from SDK",
+        "top_k": 3,
+        "query": "latest HumanMessage",
+        "metadata": [
+          "id",
+          "source",
+          "title",
+          "content",
+          "relevance_score"
+        ],
+        "evidence": [
+          "code/src/agents/knowledge_base_agent.py:28",
+          "code/src/agents/knowledge_base_agent.py:103"
+        ]
+      }
+    },
+    {
+      "name": "interrupt_agent",
+      "path": "code/src/agents/interrupt_agent.py",
+      "status": "UNREGISTERED_IMPORTED_MODULE_GRAPH",
+      "purpose": "Birthdate extraction/store and user clarification example.",
+      "state_type": "AgentState(MessagesState,total=False): messages + birthdate:datetime|None",
+      "model_provider": {
+        "selector": "get_model(config[\"configurable\"].get(\"model\", settings.DEFAULT_MODEL))",
+        "runtime_selected_model": "UNKNOWN: no environment/private credentials read or models instantiated",
+        "providers": [
+          "OpenAI",
+          "OpenAI-compatible",
+          "Azure OpenAI",
+          "DeepSeek",
+          "Anthropic",
+          "Google Generative AI",
+          "Vertex AI",
+          "Groq",
+          "AWS Bedrock",
+          "Ollama",
+          "OpenRouter",
+          "Fake"
+        ],
+        "evidence": [
+          "code/src/core/llm.py:67",
+          "code/src/core/settings.py:127",
+          "code/src/schema/models.py:5"
+        ]
+      },
+      "system_prompt_location": {
+        "path": "code/src/agents/interrupt_agent.py",
+        "sections": [
+          {
+            "name": "background_prompt",
+            "start_line": 40,
+            "end_line": 44
+          },
+          {
+            "name": "birthdate_extraction_prompt",
+            "start_line": 57,
+            "end_line": 65
+          },
+          {
+            "name": "response_prompt",
+            "start_line": 175,
+            "end_line": 187
+          }
+        ]
+      },
+      "tools_bound": [],
+      "tool_selection_mechanism": "No tools; with_structured_output(BirthdateExtraction) for model extraction.",
+      "direct_response_behavior": "Background and final model calls; no retrieval.",
+      "streaming_behavior": "Extraction is tagged skip_stream; background/final model tokens may stream; interrupts produce prompt string.",
+      "memory_dependency": {
+        "graph_local_checkpointer": null,
+        "service": "Only registered agents receive saver/store through service lifespan mutation; thread_id/user_id are RunnableConfig, not state fields.",
+        "messages": "MessagesState uses add_messages reducer; ToolMessage results remain messages when emitted.",
+        "evidence": [
+          "code/src/service/service.py:65",
+          "code/src/service/service.py:78",
+          "code/src/service/service.py:112",
+          "code/.venv/Lib/site-packages/langgraph/graph/message.py:281"
+        ]
+      },
+      "service_dependency": "Imported by agents.agents at module import; selected via get_agent only if registered. No HTTP client inside graph.",
+      "termination_condition": "background -> determine_birthdate -> generate_response -> END after successful birthdate.",
+      "retry_loop_behavior": "Recursive determine_birthdate on missing/invalid dates after interrupt; no explicit maximum clarification or recursion guard inside node.",
+      "tool_call_limit": "No independent tool call count quota; RemainingSteps gate where present, graph recursion budget applies.",
+      "error_handling": "Store read/write catches Exception and continues; ValueError date parsing triggers interrupt; model errors not caught.",
+      "evidence": [
+        "code/src/agents/interrupt_agent.py:77",
+        "code/src/agents/interrupt_agent.py:138",
+        "code/src/agents/interrupt_agent.py:149",
+        "code/src/agents/interrupt_agent.py:220"
+      ],
+      "interrupts": [
+        {
+          "line": 138,
+          "payload": "reasoning plus birthdate question"
+        },
+        {
+          "line": 149,
+          "payload": "date format clarification"
+        }
+      ],
+      "persistent_data": {
+        "namespace": "(configurable.user_id,)",
+        "key": "birthdate",
+        "value": "ISO date string",
+        "backend": "injected BaseStore; no store/checkpointer supplied in graph.compile"
+      }
+    },
+    {
+      "name": "langgraph_supervisor_agent",
+      "path": "code/src/agents/langgraph_supervisor_agent.py",
+      "status": "UNREGISTERED_IMPORTED_MODULE_GRAPH",
+      "purpose": "Supervisor example orchestrating math and static research workers.",
+      "state_type": "Installed prebuilt AgentState: messages with add_messages + remaining_steps",
+      "model_provider": {
+        "selector": "get_model(settings.DEFAULT_MODEL) at import time; ignores request model selection",
+        "evidence": [
+          "code/src/agents/langgraph_supervisor_agent.py:6"
+        ]
+      },
+      "system_prompt_location": {
+        "path": "code/src/agents/langgraph_supervisor_agent.py",
+        "start_line": 49,
+        "end_line": 53
+      },
+      "tools_bound": [
+        "transfer_to_math_expert",
+        "transfer_to_research_expert"
+      ],
+      "tool_selection_mechanism": "Supervisor LLM handoff tools route Commands to parent graph. Workers have independent ReAct loops.",
+      "direct_response_behavior": "Supervisor may answer without handing off; no current normative pipeline.",
+      "streaming_behavior": "Workers math_expert/research_expert tagged skip_stream; supervisor model can stream; subgraph events enabled by service if graph registered (it is not).",
+      "memory_dependency": {
+        "graph_local_checkpointer": null,
+        "service": "Only registered agents receive saver/store through service lifespan mutation; thread_id/user_id are RunnableConfig, not state fields.",
+        "messages": "MessagesState uses add_messages reducer; ToolMessage results remain messages when emitted.",
+        "evidence": [
+          "code/src/service/service.py:65",
+          "code/src/service/service.py:78",
+          "code/src/service/service.py:112",
+          "code/.venv/Lib/site-packages/langgraph/graph/message.py:281"
+        ]
+      },
+      "service_dependency": "Imported by agents.agents at module import; selected via get_agent only if registered. No HTTP client inside graph.",
+      "termination_condition": "Supervisor ReAct emits no tool calls -> END. Workers return to supervisor.",
+      "retry_loop_behavior": "No application-level maximum handoffs; prebuilt RemainingSteps/graph recursion bounds individual loops.",
+      "tool_call_limit": "No independent tool call count quota; RemainingSteps gate where present, graph recursion budget applies.",
+      "error_handling": "Default prebuilt ToolNode error handling; no application catches.",
+      "evidence": [
+        "code/src/agents/langgraph_supervisor_agent.py:31",
+        "code/src/agents/langgraph_supervisor_agent.py:38",
+        "code/src/agents/langgraph_supervisor_agent.py:46"
+      ],
+      "workers": [
+        {
+          "name": "math_expert",
+          "prompt": "code/src/agents/langgraph_supervisor_agent.py:35",
+          "tools": [
+            "add",
+            "multiply"
+          ]
+        },
+        {
+          "name": "research_expert",
+          "prompt": "code/src/agents/langgraph_supervisor_agent.py:42",
+          "tools": [
+            "web_search"
+          ]
+        }
+      ],
+      "output_mode": "last_message (installed default)",
+      "add_handoff_back_messages": false
+    },
+    {
+      "name": "chatbot_ufpi_agentic",
+      "path": "code/src/agents/chatbot_ufpi_agentic.py",
+      "status": "REGISTERED_CURRENT_CORE_WRAPPER",
+      "purpose": "Registered wrapper of current normative graph, interactive clarification enabled.",
+      "state_type": "rag_baseline.agentic.AgenticState(MessagesState,total=False)",
+      "model_provider": {
+        "selector": "Lazy _Runtime(apply_profile(BaselineSettings(),\"duas-regulacoes\")); config model from service is not consumed by graph node functions.",
+        "evidence": [
+          "code/src/rag_baseline/agentic.py:138"
+        ]
+      },
+      "system_prompt_location": {
+        "path": "code/src/rag_baseline/prompts.py",
+        "note": "Current core prompts and selected Structured Output V2, detailed in core audit."
+      },
+      "tools_bound": [],
+      "tool_selection_mechanism": "Domain router intent_v1 default; fixed retrieval/version/generation flow; no high-level optional tool action decision.",
+      "direct_response_behavior": "No general DIRECT branch; every non-clarification invocation enters normative retrieval path.",
+      "streaming_behavior": "Graph outputs QueryResult and final AIMessage; transport may lose structured provenance (separate service audit).",
+      "memory_dependency": {
+        "graph_local_checkpointer": null,
+        "service": "Only registered agents receive saver/store through service lifespan mutation; thread_id/user_id are RunnableConfig, not state fields.",
+        "messages": "MessagesState uses add_messages reducer; ToolMessage results remain messages when emitted.",
+        "evidence": [
+          "code/src/service/service.py:65",
+          "code/src/service/service.py:78",
+          "code/src/service/service.py:112",
+          "code/.venv/Lib/site-packages/langgraph/graph/message.py:281"
+        ]
+      },
+      "service_dependency": "Imported by agents.agents at module import; selected via get_agent only if registered. No HTTP client inside graph.",
+      "termination_condition": "Generation, terminal clarification result or controlled error result.",
+      "retry_loop_behavior": "At most one interactive clarification/reroute; unresolved clarification terminates. No LLM-tool loop.",
+      "tool_call_limit": "not applicable",
+      "error_handling": "Core contains controlled retrieval/generation errors; see current core audit. Interactive clarification needs checkpointer.",
+      "evidence": [
+        "code/src/agents/chatbot_ufpi_agentic.py:3",
+        "code/src/agents/chatbot_ufpi_agentic.py:7",
+        "code/src/rag_baseline/agentic.py:127"
+      ],
+      "followup_contract": {
+        "question_precedence": "route_query reads last HumanMessage over provided question; prior messages are not used to rewrite follow-up intent.",
+        "integration_implication": "Adapter should pass deliberate scoped question/core input; do not accidentally pass full outer history that replaces resolved question. Multi-turn text context is not normative provenance.",
+        "evidence": [
+          "code/src/rag_baseline/agentic.py:209"
+        ]
+      }
+    }
+  ],
+  "graphs": [
+    {
+      "name": "chatbot_generic",
+      "nodes": [
+        "model",
+        "tools"
+      ],
+      "edges": [
+        [
+          "START",
+          "model"
+        ],
+        [
+          "tools",
+          "model"
+        ]
+      ],
+      "conditional_edges": [
+        {
+          "from": "model",
+          "router": "pending_tool_calls",
+          "routes": {
+            "tools": "tools",
+            "done": "END"
+          },
+          "condition": "AIMessage.tool_calls present"
+        }
+      ],
+      "entry_point": "model",
+      "terminal_nodes": [
+        "model without tool_calls"
+      ],
+      "tool_nodes": [
+        "tools"
+      ],
+      "interrupts": [],
+      "checkpointer": null,
+      "checkpointer_note": "No saver at compile time; service attaches saver/store to registered graphs only.",
+      "state_reducers": {
+        "messages": "add_messages, inherited from MessagesState",
+        "other_fields": "overwrite/default LastValue except managed RemainingSteps"
+      },
+      "evidence": [
+        "code/src/agents/chatbot_generic.py:66"
+      ]
+    },
+    {
+      "name": "chatbot_ufpi",
+      "nodes": [
+        "model",
+        "tools"
+      ],
+      "edges": [
+        [
+          "START",
+          "model"
+        ],
+        [
+          "tools",
+          "model"
+        ]
+      ],
+      "conditional_edges": [
+        {
+          "from": "model",
+          "router": "pending_tool_calls",
+          "routes": {
+            "tools": "tools",
+            "done": "END"
+          },
+          "condition": "AIMessage.tool_calls present"
+        }
+      ],
+      "entry_point": "model",
+      "terminal_nodes": [
+        "model without tool_calls"
+      ],
+      "tool_nodes": [
+        "tools"
+      ],
+      "interrupts": [],
+      "checkpointer": null,
+      "checkpointer_note": "No saver at compile time; service attaches saver/store to registered graphs only.",
+      "state_reducers": {
+        "messages": "add_messages, inherited from MessagesState",
+        "other_fields": "overwrite/default LastValue except managed RemainingSteps"
+      },
+      "evidence": [
+        "code/src/agents/chatbot_ufpi.py:878"
+      ]
+    },
+    {
+      "name": "chatbot_ufpi_v2",
+      "nodes": [
+        "model",
+        "tools"
+      ],
+      "edges": [
+        [
+          "START",
+          "model"
+        ],
+        [
+          "tools",
+          "model"
+        ]
+      ],
+      "conditional_edges": [
+        {
+          "from": "model",
+          "router": "pending_tool_calls",
+          "routes": {
+            "tools": "tools",
+            "done": "END"
+          },
+          "condition": "AIMessage.tool_calls present"
+        }
+      ],
+      "entry_point": "model",
+      "terminal_nodes": [
+        "model without tool_calls"
+      ],
+      "tool_nodes": [
+        "tools"
+      ],
+      "interrupts": [],
+      "checkpointer": null,
+      "checkpointer_note": "No saver at compile time; service attaches saver/store to registered graphs only.",
+      "state_reducers": {
+        "messages": "add_messages, inherited from MessagesState",
+        "other_fields": "overwrite/default LastValue except managed RemainingSteps"
+      },
+      "evidence": [
+        "code/src/agents/chatbot_ufpi_v2.py:502"
+      ]
+    },
+    {
+      "name": "rag_assistant",
+      "nodes": [
+        "guard_input",
+        "model",
+        "tools",
+        "block_unsafe_content"
+      ],
+      "edges": [
+        [
+          "START",
+          "guard_input"
+        ],
+        [
+          "block_unsafe_content",
+          "END"
+        ],
+        [
+          "tools",
+          "model"
+        ]
+      ],
+      "conditional_edges": [
+        {
+          "from": "guard_input",
+          "router": "check_safety",
+          "routes": {
+            "unsafe": "block_unsafe_content",
+            "safe": "model"
+          }
+        },
+        {
+          "from": "model",
+          "router": "pending_tool_calls",
+          "routes": {
+            "tools": "tools",
+            "done": "END"
+          }
+        }
+      ],
+      "entry_point": "guard_input",
+      "terminal_nodes": [
+        "block_unsafe_content",
+        "model without tool_calls"
+      ],
+      "tool_nodes": [
+        "tools"
+      ],
+      "interrupts": [],
+      "checkpointer": null,
+      "checkpointer_note": "No saver at compile time; service attaches saver/store to registered graphs only.",
+      "state_reducers": {
+        "messages": "add_messages, inherited from MessagesState",
+        "other_fields": "overwrite/default LastValue except managed RemainingSteps"
+      },
+      "evidence": [
+        "code/src/agents/rag_assistant.py:104"
+      ]
+    },
+    {
+      "name": "research_assistant",
+      "nodes": [
+        "guard_input",
+        "model",
+        "tools",
+        "block_unsafe_content"
+      ],
+      "edges": [
+        [
+          "START",
+          "guard_input"
+        ],
+        [
+          "block_unsafe_content",
+          "END"
+        ],
+        [
+          "tools",
+          "model"
+        ]
+      ],
+      "conditional_edges": [
+        {
+          "from": "guard_input",
+          "router": "check_safety",
+          "routes": {
+            "unsafe": "block_unsafe_content",
+            "safe": "model"
+          }
+        },
+        {
+          "from": "model",
+          "router": "pending_tool_calls",
+          "routes": {
+            "tools": "tools",
+            "done": "END"
+          }
+        }
+      ],
+      "entry_point": "guard_input",
+      "terminal_nodes": [
+        "block_unsafe_content",
+        "model without tool_calls"
+      ],
+      "tool_nodes": [
+        "tools"
+      ],
+      "interrupts": [],
+      "checkpointer": null,
+      "checkpointer_note": "No saver at compile time; service attaches saver/store to registered graphs only.",
+      "state_reducers": {
+        "messages": "add_messages, inherited from MessagesState",
+        "other_fields": "overwrite/default LastValue except managed RemainingSteps"
+      },
+      "evidence": [
+        "code/src/agents/research_assistant.py:105"
+      ]
+    },
+    {
+      "name": "command_agent",
+      "nodes": [
+        "node_a",
+        "node_b",
+        "node_c"
+      ],
+      "edges": [
+        [
+          "START",
+          "node_a"
+        ]
+      ],
+      "conditional_edges": [
+        {
+          "from": "node_a",
+          "mechanism": "Command.goto after random.choice",
+          "routes": [
+            "node_b",
+            "node_c"
+          ]
+        }
+      ],
+      "entry_point": "node_a",
+      "terminal_nodes": [
+        "node_b",
+        "node_c"
+      ],
+      "tool_nodes": [],
+      "interrupts": [],
+      "checkpointer": null,
+      "checkpointer_note": "No saver at compile time; service attaches saver/store to registered graphs only.",
+      "state_reducers": {
+        "messages": "add_messages, inherited from MessagesState",
+        "other_fields": "overwrite/default LastValue except managed RemainingSteps"
+      },
+      "evidence": [
+        "code/src/agents/command_agent.py:48"
+      ]
+    },
+    {
+      "name": "bg_task_agent",
+      "nodes": [
+        "bg_task",
+        "model"
+      ],
+      "edges": [
+        [
+          "START",
+          "bg_task"
+        ],
+        [
+          "bg_task",
+          "model"
+        ],
+        [
+          "model",
+          "END"
+        ]
+      ],
+      "conditional_edges": [],
+      "entry_point": "bg_task",
+      "terminal_nodes": [
+        "model"
+      ],
+      "tool_nodes": [],
+      "interrupts": [],
+      "checkpointer": null,
+      "checkpointer_note": "No saver at compile time; service attaches saver/store to registered graphs only.",
+      "state_reducers": {
+        "messages": "add_messages, inherited from MessagesState",
+        "other_fields": "overwrite/default LastValue except managed RemainingSteps"
+      },
+      "evidence": [
+        "code/src/agents/bg_task_agent/bg_task_agent.py:53"
+      ]
+    },
+    {
+      "name": "kb_agent",
+      "nodes": [
+        "retrieve_documents",
+        "prepare_augmented_prompt",
+        "model"
+      ],
+      "edges": [
+        [
+          "START",
+          "retrieve_documents"
+        ],
+        [
+          "retrieve_documents",
+          "prepare_augmented_prompt"
+        ],
+        [
+          "prepare_augmented_prompt",
+          "model"
+        ],
+        [
+          "model",
+          "END"
+        ]
+      ],
+      "conditional_edges": [],
+      "entry_point": "retrieve_documents",
+      "terminal_nodes": [
+        "model"
+      ],
+      "tool_nodes": [],
+      "interrupts": [],
+      "checkpointer": null,
+      "checkpointer_note": "No saver at compile time; service attaches saver/store to registered graphs only.",
+      "state_reducers": {
+        "messages": "add_messages, inherited from MessagesState",
+        "other_fields": "overwrite/default LastValue except managed RemainingSteps"
+      },
+      "evidence": [
+        "code/src/agents/knowledge_base_agent.py:157"
+      ]
+    },
+    {
+      "name": "interrupt_agent",
+      "nodes": [
+        "background",
+        "determine_birthdate",
+        "generate_response"
+      ],
+      "edges": [
+        [
+          "START",
+          "background"
+        ],
+        [
+          "background",
+          "determine_birthdate"
+        ],
+        [
+          "determine_birthdate",
+          "generate_response"
+        ],
+        [
+          "generate_response",
+          "END"
+        ]
+      ],
+      "conditional_edges": [],
+      "entry_point": "background",
+      "terminal_nodes": [
+        "generate_response"
+      ],
+      "tool_nodes": [],
+      "interrupts": [
+        {
+          "node": "determine_birthdate",
+          "payload": "birthdate question or invalid format",
+          "resumption": "interrupt value appended as HumanMessage, recursive determine_birthdate call",
+          "evidence": [
+            "code/src/agents/interrupt_agent.py:138",
+            "code/src/agents/interrupt_agent.py:149"
+          ]
+        }
+      ],
+      "checkpointer": null,
+      "checkpointer_note": "No saver at compile time; service attaches saver/store to registered graphs only.",
+      "state_reducers": {
+        "messages": "add_messages, inherited from MessagesState",
+        "other_fields": "overwrite/default LastValue except managed RemainingSteps"
+      },
+      "evidence": [
+        "code/src/agents/interrupt_agent.py:220"
+      ]
+    },
+    {
+      "name": "chatbot",
+      "nodes": [
+        "chatbot functional entrypoint"
+      ],
+      "edges": [
+        [
+          "START",
+          "chatbot"
+        ],
+        [
+          "chatbot",
+          "END"
+        ]
+      ],
+      "conditional_edges": [],
+      "entry_point": "chatbot",
+      "terminal_nodes": [
+        "entrypoint.final"
+      ],
+      "tool_nodes": [],
+      "interrupts": [],
+      "checkpointer": null,
+      "checkpointer_note": "No saver at compile time; service attaches saver/store to registered graphs only.",
+      "state_reducers": {
+        "messages": "manual previous + inputs + response in save; functional previous state, not MessagesState reducer"
+      },
+      "evidence": [
+        "code/src/agents/chatbot.py:8"
+      ]
+    },
+    {
+      "name": "langgraph_supervisor_agent",
+      "nodes": [
+        "supervisor (prebuilt subgraph)",
+        "math_expert (prebuilt subgraph)",
+        "research_expert (prebuilt subgraph)"
+      ],
+      "edges": [
+        [
+          "START",
+          "supervisor"
+        ],
+        [
+          "math_expert",
+          "supervisor"
+        ],
+        [
+          "research_expert",
+          "supervisor"
+        ]
+      ],
+      "conditional_edges": [
+        {
+          "from": "supervisor",
+          "mechanism": "generated parent Command handoff",
+          "routes": {
+            "transfer_to_math_expert": "math_expert",
+            "transfer_to_research_expert": "research_expert",
+            "no tool calls": "END"
+          }
+        }
+      ],
+      "entry_point": "supervisor",
+      "terminal_nodes": [
+        "supervisor without calls"
+      ],
+      "tool_nodes": [
+        "supervisor/tools",
+        "math_expert/tools",
+        "research_expert/tools"
+      ],
+      "interrupts": [],
+      "checkpointer": null,
+      "checkpointer_note": "No saver at compile time; service attaches saver/store to registered graphs only.",
+      "state_reducers": {
+        "messages": "add_messages, inherited from MessagesState",
+        "other_fields": "overwrite/default LastValue except managed RemainingSteps"
+      },
+      "evidence": [
+        "code/src/agents/langgraph_supervisor_agent.py:46",
+        "code/.venv/Lib/site-packages/langgraph_supervisor/supervisor.py:415"
+      ],
+      "nested_graphs": [
+        {
+          "name": "supervisor",
+          "nodes": [
+            "agent",
+            "tools"
+          ],
+          "edges": [
+            [
+              "START",
+              "agent"
+            ],
+            [
+              "tools",
+              "agent"
+            ]
+          ],
+          "conditional_edges": [
+            {
+              "from": "agent",
+              "condition": "no calls -> END; each tool call -> Send(tools) (installed default version v2)"
+            }
+          ],
+          "evidence": [
+            "code/.venv/Lib/site-packages/langgraph/prebuilt/chat_agent_executor.py:635",
+            "code/.venv/Lib/site-packages/langgraph/prebuilt/chat_agent_executor.py:663"
+          ]
+        },
+        {
+          "name": "math_expert",
+          "nodes": [
+            "agent",
+            "tools"
+          ],
+          "edges": [
+            [
+              "START",
+              "agent"
+            ],
+            [
+              "tools",
+              "agent"
+            ]
+          ],
+          "conditional_edges": [
+            {
+              "from": "agent",
+              "condition": "no calls -> END; each tool call -> Send(tools) (installed default version v2)"
+            }
+          ],
+          "evidence": [
+            "code/.venv/Lib/site-packages/langgraph/prebuilt/chat_agent_executor.py:635",
+            "code/.venv/Lib/site-packages/langgraph/prebuilt/chat_agent_executor.py:663"
+          ]
+        },
+        {
+          "name": "research_expert",
+          "nodes": [
+            "agent",
+            "tools"
+          ],
+          "edges": [
+            [
+              "START",
+              "agent"
+            ],
+            [
+              "tools",
+              "agent"
+            ]
+          ],
+          "conditional_edges": [
+            {
+              "from": "agent",
+              "condition": "no calls -> END; each tool call -> Send(tools) (installed default version v2)"
+            }
+          ],
+          "evidence": [
+            "code/.venv/Lib/site-packages/langgraph/prebuilt/chat_agent_executor.py:635",
+            "code/.venv/Lib/site-packages/langgraph/prebuilt/chat_agent_executor.py:663"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "chatbot_ufpi_agentic",
+      "nodes": [
+        "route_query",
+        "clarify",
+        "reroute",
+        "retrieve",
+        "version_filter",
+        "generate"
+      ],
+      "edges": [
+        [
+          "START",
+          "route_query"
+        ],
+        [
+          "retrieve",
+          "version_filter"
+        ],
+        [
+          "version_filter",
+          "generate"
+        ],
+        [
+          "generate",
+          "END"
+        ]
+      ],
+      "conditional_edges": [
+        {
+          "from": "route_query",
+          "routes": "needs_clarification -> clarify; else retrieve"
+        },
+        {
+          "from": "clarify",
+          "routes": "result present -> END; else reroute"
+        },
+        {
+          "from": "reroute",
+          "routes": "result present -> END; else retrieve"
+        }
+      ],
+      "entry_point": "route_query",
+      "terminal_nodes": [
+        "generate",
+        "clarify terminal result",
+        "reroute unresolved result"
+      ],
+      "tool_nodes": [],
+      "interrupts": [
+        {
+          "node": "clarify",
+          "condition": "interactive and clarification is None",
+          "payload": "decision.clarification_question",
+          "evidence": [
+            "code/src/rag_baseline/agentic.py:242"
+          ]
+        }
+      ],
+      "checkpointer": null,
+      "checkpointer_note": "build_graph checkpointer defaults None; registered wrapper build_graph(interactive=True), then service attaches thread saver.",
+      "state_reducers": {
+        "messages": "add_messages, inherited from MessagesState",
+        "other_fields": "overwrite/default LastValue except managed RemainingSteps"
+      },
+      "evidence": [
+        "code/src/rag_baseline/agentic.py:420"
+      ]
+    }
+  ],
+  "states": {
+    "shared_conversation": {
+      "messages": "list[AnyMessage], add_messages reducer; Human/AI/Tool/Custom messages can carry history/results",
+      "remaining_steps": "managed RemainingSteps in generic/UFPI/rag/research/kb; no explicit fixed tool quota",
+      "thread_session_user_id": "not state fields; service config carries thread_id, model, user_id",
+      "references": "no dedicated reference/provenance field in legacy conversational states"
+    },
+    "custom": [
+      {
+        "path": "code/src/agents/interrupt_agent.py:21",
+        "fields": {
+          "birthdate": "datetime | None"
+        }
+      },
+      {
+        "path": "code/src/agents/knowledge_base_agent.py:19",
+        "fields": {
+          "retrieved_documents": "list[dict[str,Any]]",
+          "kb_documents": "str"
+        }
+      },
+      {
+        "paths": [
+          "code/src/agents/rag_assistant.py:20",
+          "code/src/agents/research_assistant.py:18"
+        ],
+        "fields": {
+          "safety": "LlamaGuardOutput(safety_assessment,unsafe_categories)"
+        }
+      },
+      {
+        "path": "code/src/agents/utils.py:8",
+        "fields": {
+          "data": "dict[str,Any]"
+        },
+        "channel": "custom ChatMessage via StreamWriter"
+      }
+    ],
+    "current_AgenticState": {
+      "path": "code/src/rag_baseline/agentic.py:19",
+      "fields": {
+        "messages": "inherited add_messages",
+        "question": "str",
+        "clarification": "str | None",
+        "decision": "RouterDecision | ProbeDecision",
+        "chunks": "list[RetrievedChunk]",
+        "audit": "VersionAudit",
+        "result": "QueryResult (runtime reset to None)",
+        "use_version_filter": "bool",
+        "historical": "bool",
+        "error": "str | None",
+        "routing_audit": "dict | None",
+        "query_embedding": "list[float] | None",
+        "temporal_intent": "TemporalIntent",
+        "manual_scope": "str | None",
+        "temporal_grounding": "TemporalGroundingContext | None"
+      }
+    },
+    "compatibility": "Types differ but share messages reducer. Adapter sufficient for initial integration: retain outer conversation state, keep normative inputs/result/provenance in a bounded tool contract, do not merge states. Neither prior text nor raw ToolMessage is authoritative normative evidence."
+  },
+  "bypass_points": [
+    {
+      "id": "LEGACY-NORMATIVE-DIRECT",
+      "component": "chatbot_ufpi_v2/model and chatbot_ufpi/model",
+      "description": "No tool-call enforcement: model may emit new normative claim and END without retrieval; prompts alone constrain behavior.",
+      "evidence": [
+        "code/src/agents/chatbot_ufpi_v2.py:475",
+        "code/src/agents/chatbot_ufpi_v2.py:513",
+        "code/src/agents/chatbot_ufpi.py:890"
+      ]
+    },
+    {
+      "id": "LEGACY-NORMATIVE-TOOLS",
+      "component": "Supabase_RAG_Search / Supabase_Semantic_Search / Supabase_Metadata_Search",
+      "description": "Raw text evidence passes tool -> LLM -> user without current DomainRouter, TemporalIntent, VersionFilter, TemporalGroundingContext or StructuredOutputV2.",
+      "evidence": [
+        "code/src/agents/tools.py:266",
+        "code/src/agents/tools_v2.py:285",
+        "code/src/agents/tools_v2.py:350",
+        "code/src/agents/chatbot_ufpi_v2.py:509"
+      ]
+    },
+    {
+      "id": "LEGACY-PROMPT-AUTHORITY",
+      "component": "UFPI prompts",
+      "description": "Hardcoded RGG factual hierarchy includes percentages, credit conversion and revocation statement; not scoped validated evidence. Multi-search minimum is prompt-only.",
+      "evidence": [
+        "code/src/agents/chatbot_ufpi_v2.py:72",
+        "code/src/agents/chatbot_ufpi_v2.py:83",
+        "code/src/agents/chatbot_ufpi_v2.py:95"
+      ]
+    },
+    {
+      "id": "LEGACY-STATE-AUTHORITY",
+      "component": "messages history",
+      "description": "LLM sees full prior messages and raw tool text; no typed grounded-followup boundary prevents previous answer from becoming authority.",
+      "evidence": [
+        "code/src/agents/chatbot_ufpi_v2.py:477"
+      ]
+    },
+    {
+      "id": "LEGACY-ALTERNATIVE-RETRIEVAL",
+      "component": "Database_Search / Bedrock KB / WebSearch",
+      "description": "Alternative graphs retrieve unrestricted evidence and generate outside current normative invariants. Keep unavailable for new normative claims.",
+      "evidence": [
+        "code/src/agents/tools.py:109",
+        "code/src/agents/knowledge_base_agent.py:85",
+        "code/src/agents/research_assistant.py:29"
+      ]
+    }
+  ],
+  "future_tool_loop_compatibility": {
+    "calculator_possible": true,
+    "adapter_needed": "Existing Calculator or separately reviewed deterministic tool can be bound beside a future normative_rag tool; require typed action/authority policy and bounded loop.",
+    "blockers": [
+      "No normative_rag implementation/registration exists.",
+      "Default legacy Supabase paths must not remain an alternate normative source.",
+      "No proven typed follow-up provenance/authority policy."
+    ],
+    "recommendation": "Prefer one normative_rag boundary wrapping selected current core, with vector and structural metadata strategies internal, before considering full nested subgraph embedding."
+  },
+  "source_files": [
+    {
+      "path": "code/src/agents/__init__.py",
+      "sha256": "6daf4877fadefafeccb6e1210813f43f4bce0cf2d9dd3facdf6b707cc7b90bc5",
+      "declarations": [],
+      "purpose": "agent graph, tool definitions, graph registry or helper as detailed below",
+      "status": "STATICALLY_INSPECTED"
+    },
+    {
+      "path": "code/src/agents/agents.py",
+      "sha256": "b8544d480e7379ad92df24ac4a1abcac1a5729ad01736b7b60bfe1d3487e4497",
+      "declarations": [
+        {
+          "name": "Agent",
+          "type": "ClassDef",
+          "line": 29,
+          "end_line": 31
+        },
+        {
+          "name": "get_agent",
+          "type": "FunctionDef",
+          "line": 62,
+          "end_line": 63
+        },
+        {
+          "name": "get_all_agent_info",
+          "type": "FunctionDef",
+          "line": 66,
+          "end_line": 69
+        }
+      ],
+      "purpose": "agent graph, tool definitions, graph registry or helper as detailed below",
+      "status": "STATICALLY_INSPECTED"
+    },
+    {
+      "path": "code/src/agents/bg_task_agent/bg_task_agent.py",
+      "sha256": "e86c1fd69b26e728ee9acc96c1b3a58ba63ea3560aa26afac421c4f249a28699",
+      "declarations": [
+        {
+          "name": "AgentState",
+          "type": "ClassDef",
+          "line": 13,
+          "end_line": 17
+        },
+        {
+          "name": "wrap_model",
+          "type": "FunctionDef",
+          "line": 20,
+          "end_line": 25
+        },
+        {
+          "name": "acall_model",
+          "type": "AsyncFunctionDef",
+          "line": 28,
+          "end_line": 34
+        },
+        {
+          "name": "bg_task",
+          "type": "AsyncFunctionDef",
+          "line": 37,
+          "end_line": 50
+        }
+      ],
+      "purpose": "agent graph, tool definitions, graph registry or helper as detailed below",
+      "status": "STATICALLY_INSPECTED"
+    },
+    {
+      "path": "code/src/agents/bg_task_agent/task.py",
+      "sha256": "d7536b1b61be9c8195098dc6a738ebc5b6512644bc1da7bd6199a084344013e5",
+      "declarations": [
+        {
+          "name": "Task",
+          "type": "ClassDef",
+          "line": 11,
+          "end_line": 53
+        }
+      ],
+      "purpose": "agent graph, tool definitions, graph registry or helper as detailed below",
+      "status": "STATICALLY_INSPECTED"
+    },
+    {
+      "path": "code/src/agents/chatbot.py",
+      "sha256": "cb6ea985d68a610279679444fe8d4a6a245c961a8bbe03c4a67aac8b1a88422d",
+      "declarations": [
+        {
+          "name": "chatbot",
+          "type": "AsyncFunctionDef",
+          "line": 9,
+          "end_line": 23
+        }
+      ],
+      "purpose": "agent graph, tool definitions, graph registry or helper as detailed below",
+      "status": "STATICALLY_INSPECTED"
+    },
+    {
+      "path": "code/src/agents/chatbot_generic.py",
+      "sha256": "6b45d6b1240052cdc12e1faf19b68a95946df670da2874733051be78384aab23",
+      "declarations": [
+        {
+          "name": "AgentState",
+          "type": "ClassDef",
+          "line": 18,
+          "end_line": 21
+        },
+        {
+          "name": "wrap_model",
+          "type": "FunctionDef",
+          "line": 37,
+          "end_line": 44
+        },
+        {
+          "name": "acall_model",
+          "type": "AsyncFunctionDef",
+          "line": 47,
+          "end_line": 62
+        },
+        {
+          "name": "pending_tool_calls",
+          "type": "FunctionDef",
+          "line": 76,
+          "end_line": 83
+        }
+      ],
+      "purpose": "agent graph, tool definitions, graph registry or helper as detailed below",
+      "status": "STATICALLY_INSPECTED"
+    },
+    {
+      "path": "code/src/agents/chatbot_ufpi.py",
+      "sha256": "487a7075de3f562d847311038e0cc6c63563156240e33d154b0dbf7a569e8095",
+      "declarations": [
+        {
+          "name": "AgentState",
+          "type": "ClassDef",
+          "line": 19,
+          "end_line": 25
+        },
+        {
+          "name": "wrap_model",
+          "type": "FunctionDef",
+          "line": 850,
+          "end_line": 856
+        },
+        {
+          "name": "acall_model",
+          "type": "AsyncFunctionDef",
+          "line": 859,
+          "end_line": 874
+        },
+        {
+          "name": "pending_tool_calls",
+          "type": "FunctionDef",
+          "line": 890,
+          "end_line": 896
+        }
+      ],
+      "purpose": "agent graph, tool definitions, graph registry or helper as detailed below",
+      "status": "STATICALLY_INSPECTED"
+    },
+    {
+      "path": "code/src/agents/chatbot_ufpi_agentic.py",
+      "sha256": "d3a7641f065b7f1fc9640079c8448097c64951c6e83dc4d08201aa94e83e75c4",
+      "declarations": [],
+      "purpose": "agent graph, tool definitions, graph registry or helper as detailed below",
+      "status": "STATICALLY_INSPECTED"
+    },
+    {
+      "path": "code/src/agents/chatbot_ufpi_v2.py",
+      "sha256": "782a490ea23fd878bfe346e1f43cef6e7a61d49e8a7ececb0ccb0e28c69d837a",
+      "declarations": [
+        {
+          "name": "AgentState",
+          "type": "ClassDef",
+          "line": 19,
+          "end_line": 25
+        },
+        {
+          "name": "wrap_model",
+          "type": "FunctionDef",
+          "line": 474,
+          "end_line": 480
+        },
+        {
+          "name": "acall_model",
+          "type": "AsyncFunctionDef",
+          "line": 483,
+          "end_line": 498
+        },
+        {
+          "name": "pending_tool_calls",
+          "type": "FunctionDef",
+          "line": 513,
+          "end_line": 519
+        }
+      ],
+      "purpose": "agent graph, tool definitions, graph registry or helper as detailed below",
+      "status": "STATICALLY_INSPECTED"
+    },
+    {
+      "path": "code/src/agents/command_agent.py",
+      "sha256": "4fc4b0e3c3f780a9e5313cdb90786990e91b71bfacfafec4765f72ecc267ff81",
+      "declarations": [
+        {
+          "name": "AgentState",
+          "type": "ClassDef",
+          "line": 9,
+          "end_line": 13
+        },
+        {
+          "name": "node_a",
+          "type": "FunctionDef",
+          "line": 19,
+          "end_line": 35
+        },
+        {
+          "name": "node_b",
+          "type": "FunctionDef",
+          "line": 38,
+          "end_line": 40
+        },
+        {
+          "name": "node_c",
+          "type": "FunctionDef",
+          "line": 43,
+          "end_line": 45
+        }
+      ],
+      "purpose": "agent graph, tool definitions, graph registry or helper as detailed below",
+      "status": "STATICALLY_INSPECTED"
+    },
+    {
+      "path": "code/src/agents/interrupt_agent.py",
+      "sha256": "500adc130d6f42cf148f6679d53df74b13a688d9a186bb79733535776444426f",
+      "declarations": [
+        {
+          "name": "AgentState",
+          "type": "ClassDef",
+          "line": 21,
+          "end_line": 27
+        },
+        {
+          "name": "wrap_model",
+          "type": "FunctionDef",
+          "line": 30,
+          "end_line": 37
+        },
+        {
+          "name": "background",
+          "type": "AsyncFunctionDef",
+          "line": 47,
+          "end_line": 54
+        },
+        {
+          "name": "BirthdateExtraction",
+          "type": "ClassDef",
+          "line": 68,
+          "end_line": 74
+        },
+        {
+          "name": "determine_birthdate",
+          "type": "AsyncFunctionDef",
+          "line": 77,
+          "end_line": 172
+        },
+        {
+          "name": "generate_response",
+          "type": "AsyncFunctionDef",
+          "line": 190,
+          "end_line": 217
+        }
+      ],
+      "purpose": "agent graph, tool definitions, graph registry or helper as detailed below",
+      "status": "STATICALLY_INSPECTED"
+    },
+    {
+      "path": "code/src/agents/knowledge_base_agent.py",
+      "sha256": "f2bbcc9809ca9b0462bcbc2783a10b2fcacb6f0f852fb73771ecacf793c54a31",
+      "declarations": [
+        {
+          "name": "AgentState",
+          "type": "ClassDef",
+          "line": 19,
+          "end_line": 24
+        },
+        {
+          "name": "get_kb_retriever",
+          "type": "FunctionDef",
+          "line": 28,
+          "end_line": 44
+        },
+        {
+          "name": "wrap_model",
+          "type": "FunctionDef",
+          "line": 47,
+          "end_line": 82
+        },
+        {
+          "name": "retrieve_documents",
+          "type": "AsyncFunctionDef",
+          "line": 85,
+          "end_line": 121
+        },
+        {
+          "name": "prepare_augmented_prompt",
+          "type": "AsyncFunctionDef",
+          "line": 124,
+          "end_line": 144
+        },
+        {
+          "name": "acall_model",
+          "type": "AsyncFunctionDef",
+          "line": 147,
+          "end_line": 154
+        }
+      ],
+      "purpose": "agent graph, tool definitions, graph registry or helper as detailed below",
+      "status": "STATICALLY_INSPECTED"
+    },
+    {
+      "path": "code/src/agents/langgraph_supervisor_agent.py",
+      "sha256": "fcd0e882e1dd5978566226b5f12e04a3c5a1b32f6493c5b3259b8cdb8d1f3378",
+      "declarations": [
+        {
+          "name": "add",
+          "type": "FunctionDef",
+          "line": 9,
+          "end_line": 11
+        },
+        {
+          "name": "multiply",
+          "type": "FunctionDef",
+          "line": 14,
+          "end_line": 16
+        },
+        {
+          "name": "web_search",
+          "type": "FunctionDef",
+          "line": 19,
+          "end_line": 28
+        }
+      ],
+      "purpose": "agent graph, tool definitions, graph registry or helper as detailed below",
+      "status": "STATICALLY_INSPECTED"
+    },
+    {
+      "path": "code/src/agents/llama_guard.py",
+      "sha256": "0a24e3cd7c54ec2990cb65426727da0c2997c89267fc154a2e8ecef6f4aa77be",
+      "declarations": [
+        {
+          "name": "SafetyAssessment",
+          "type": "ClassDef",
+          "line": 11,
+          "end_line": 14
+        },
+        {
+          "name": "LlamaGuardOutput",
+          "type": "ClassDef",
+          "line": 17,
+          "end_line": 21
+        },
+        {
+          "name": "parse_llama_guard_output",
+          "type": "FunctionDef",
+          "line": 61,
+          "end_line": 75
+        },
+        {
+          "name": "LlamaGuard",
+          "type": "ClassDef",
+          "line": 78,
+          "end_line": 107
+        }
+      ],
+      "purpose": "agent graph, tool definitions, graph registry or helper as detailed below",
+      "status": "STATICALLY_INSPECTED"
+    },
+    {
+      "path": "code/src/agents/rag_assistant.py",
+      "sha256": "a9574e1b7b5774849f49e16e18cc3217b8affd6ab332a0f693afd8c63f8279a1",
+      "declarations": [
+        {
+          "name": "AgentState",
+          "type": "ClassDef",
+          "line": 20,
+          "end_line": 27
+        },
+        {
+          "name": "wrap_model",
+          "type": "FunctionDef",
+          "line": 50,
+          "end_line": 56
+        },
+        {
+          "name": "format_safety_message",
+          "type": "FunctionDef",
+          "line": 59,
+          "end_line": 63
+        },
+        {
+          "name": "acall_model",
+          "type": "AsyncFunctionDef",
+          "line": 66,
+          "end_line": 90
+        },
+        {
+          "name": "llama_guard_input",
+          "type": "AsyncFunctionDef",
+          "line": 93,
+          "end_line": 96
+        },
+        {
+          "name": "block_unsafe_content",
+          "type": "AsyncFunctionDef",
+          "line": 99,
+          "end_line": 101
+        },
+        {
+          "name": "check_safety",
+          "type": "FunctionDef",
+          "line": 114,
+          "end_line": 120
+        },
+        {
+          "name": "pending_tool_calls",
+          "type": "FunctionDef",
+          "line": 135,
+          "end_line": 141
+        }
+      ],
+      "purpose": "agent graph, tool definitions, graph registry or helper as detailed below",
+      "status": "STATICALLY_INSPECTED"
+    },
+    {
+      "path": "code/src/agents/research_assistant.py",
+      "sha256": "e9336e9aee6a6041ed91d776ee55ba520a3e0d132d07c937c17d252673a1d862",
+      "declarations": [
+        {
+          "name": "AgentState",
+          "type": "ClassDef",
+          "line": 18,
+          "end_line": 25
+        },
+        {
+          "name": "wrap_model",
+          "type": "FunctionDef",
+          "line": 54,
+          "end_line": 60
+        },
+        {
+          "name": "format_safety_message",
+          "type": "FunctionDef",
+          "line": 63,
+          "end_line": 67
+        },
+        {
+          "name": "acall_model",
+          "type": "AsyncFunctionDef",
+          "line": 70,
+          "end_line": 91
+        },
+        {
+          "name": "llama_guard_input",
+          "type": "AsyncFunctionDef",
+          "line": 94,
+          "end_line": 97
+        },
+        {
+          "name": "block_unsafe_content",
+          "type": "AsyncFunctionDef",
+          "line": 100,
+          "end_line": 102
+        },
+        {
+          "name": "check_safety",
+          "type": "FunctionDef",
+          "line": 115,
+          "end_line": 121
+        },
+        {
+          "name": "pending_tool_calls",
+          "type": "FunctionDef",
+          "line": 136,
+          "end_line": 142
+        }
+      ],
+      "purpose": "agent graph, tool definitions, graph registry or helper as detailed below",
+      "status": "STATICALLY_INSPECTED"
+    },
+    {
+      "path": "code/src/agents/tools.py",
+      "sha256": "661e906480a9e1d6a095382793e2e822d5ceecc0ac12f035b615d370f36a2072",
+      "declarations": [
+        {
+          "name": "calculator_func",
+          "type": "FunctionDef",
+          "line": 20,
+          "end_line": 48
+        },
+        {
+          "name": "get_current_datetime_func",
+          "type": "FunctionDef",
+          "line": 55,
+          "end_line": 82
+        },
+        {
+          "name": "format_contexts",
+          "type": "FunctionDef",
+          "line": 90,
+          "end_line": 91
+        },
+        {
+          "name": "load_chroma_db",
+          "type": "FunctionDef",
+          "line": 94,
+          "end_line": 106
+        },
+        {
+          "name": "database_search_func",
+          "type": "FunctionDef",
+          "line": 109,
+          "end_line": 120
+        },
+        {
+          "name": "_init_clients",
+          "type": "FunctionDef",
+          "line": 141,
+          "end_line": 162
+        },
+        {
+          "name": "_create_embedding",
+          "type": "FunctionDef",
+          "line": 165,
+          "end_line": 170
+        },
+        {
+          "name": "_call_rag_function",
+          "type": "FunctionDef",
+          "line": 173,
+          "end_line": 191
+        },
+        {
+          "name": "_format_rag_results",
+          "type": "FunctionDef",
+          "line": 194,
+          "end_line": 263
+        },
+        {
+          "name": "supabase_rag_search_func",
+          "type": "FunctionDef",
+          "line": 266,
+          "end_line": 294
+        }
+      ],
+      "purpose": "agent graph, tool definitions, graph registry or helper as detailed below",
+      "status": "STATICALLY_INSPECTED"
+    },
+    {
+      "path": "code/src/agents/tools_v2.py",
+      "sha256": "44a5c9bf62328bb60613e3cca3b52b22f1af1430ea535900a8039af91611cf6b",
+      "declarations": [
+        {
+          "name": "_init_clients",
+          "type": "FunctionDef",
+          "line": 30,
+          "end_line": 51
+        },
+        {
+          "name": "_validate_hierarchical_filters",
+          "type": "FunctionDef",
+          "line": 54,
+          "end_line": 112
+        },
+        {
+          "name": "_build_metadata_filters",
+          "type": "FunctionDef",
+          "line": 115,
+          "end_line": 139
+        },
+        {
+          "name": "_create_embedding",
+          "type": "FunctionDef",
+          "line": 142,
+          "end_line": 148
+        },
+        {
+          "name": "_call_rag_function",
+          "type": "FunctionDef",
+          "line": 151,
+          "end_line": 171
+        },
+        {
+          "name": "_call_metadata_only_function",
+          "type": "FunctionDef",
+          "line": 174,
+          "end_line": 190
+        },
+        {
+          "name": "_format_results",
+          "type": "FunctionDef",
+          "line": 193,
+          "end_line": 278
+        },
+        {
+          "name": "supabase_semantic_search_func",
+          "type": "FunctionDef",
+          "line": 285,
+          "end_line": 343
+        },
+        {
+          "name": "supabase_metadata_search_func",
+          "type": "FunctionDef",
+          "line": 350,
+          "end_line": 473
+        }
+      ],
+      "purpose": "agent graph, tool definitions, graph registry or helper as detailed below",
+      "status": "STATICALLY_INSPECTED"
+    },
+    {
+      "path": "code/src/agents/utils.py",
+      "sha256": "b1f699788fec8db0336ed85d4f639fdcbf038d05f7370a098325e071f95e90cd",
+      "declarations": [
+        {
+          "name": "CustomData",
+          "type": "ClassDef",
+          "line": 8,
+          "end_line": 17
+        }
+      ],
+      "purpose": "agent graph, tool definitions, graph registry or helper as detailed below",
+      "status": "STATICALLY_INSPECTED"
+    }
+  ],
+  "non_source_files": {
+    "compiled_cache_files": 38,
+    "handling": "Binary __pycache__ files listed as generated artifacts; not executed/disassembled or treated as authoritative source."
+  },
+  "secrets": {
+    "detected_in_inspected_agents_source": false,
+    "environment_or_private_credentials_read": false
+  },
+  "limitations": [
+    "Providers and tool backend reachability not tested.",
+    "Generated supervisor topology derives from installed dependency sources; deployment environment versions can differ.",
+    "No LangGraph invocation was performed, so failure behavior is static expectation."
+  ],
+  "configuration_risks": [
+    {
+      "description": "UserInput.model defaults to hardcoded GPT_4O_MINI, independent of Settings.DEFAULT_MODEL selected by configured providers; explicit nullable model=None is forwarded and bypasses .get fallback, so get_model(None) raises unsupported model.",
+      "status": "STATIC_CODE_PATH; no runtime reproduction",
+      "evidence": [
+        "code/src/schema/schema.py:47",
+        "code/src/service/service.py:112",
+        "code/src/agents/chatbot_ufpi_v2.py:484",
+        "code/src/core/llm.py:71"
+      ]
+    },
+    {
+      "description": "Azure wrapper sets timeout60/max_retries3; other wrappers largely inherit SDK retry settings. No agent application-level RetryPolicy is configured.",
+      "evidence": [
+        "code/src/core/llm.py:94",
+        "code/src/agents/chatbot_ufpi_v2.py:524"
+      ]
+    }
+  ]
+}

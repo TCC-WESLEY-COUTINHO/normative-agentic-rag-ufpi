@@ -1,0 +1,13 @@
+# Uses an external PostgreSQL (for example a managed database service) for the conversation
+# checkpoints instead of the postgres container. Use with the demo file:
+#   docker compose -f compose.demo.yaml -f deploy/compose.external-postgres.yaml up -d --build --wait
+# Required in .env: POSTGRES_HOST, POSTGRES_PASSWORD; optional POSTGRES_PORT, POSTGRES_DB, POSTGRES_USER.
+# The database and user must exist; the backend creates its tables on start.
+services:
+  postgres:
+    # Never started with this override (the profile is not enabled).
+    profiles: ["container-postgres"]
+  backend:
+    environment:
+      POSTGRES_HOST: ${POSTGRES_HOST:?Defina POSTGRES_HOST (endereço do PostgreSQL externo) no .env}
+    depends_on: !reset {}

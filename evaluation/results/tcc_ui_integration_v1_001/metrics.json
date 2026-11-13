@@ -1,0 +1,57 @@
+{
+  "Integrated Agent Selection Preservation": {
+    "numerator": 12,
+    "denominator": 12,
+    "unit": "UI requests"
+  },
+  "Typed Message Rendering Rate": {
+    "numerator": 11,
+    "denominator": 11,
+    "unit": "successful ChatMessages"
+  },
+  "Official Reference Rendering Rate": {
+    "numerator": 26,
+    "denominator": 26,
+    "unit": "structurally unique references per last response"
+  },
+  "Content-to-Reference Parsing Count": {
+    "numerator": 0,
+    "denominator": 26,
+    "unit": "rendered references; source audit and art999 AppTest"
+  },
+  "Grounded Follow-up Rendering Rate": {
+    "numerator": 2,
+    "denominator": 2,
+    "unit": "grounded UI probes"
+  },
+  "Calculator Rendering Rate": {
+    "numerator": 2,
+    "denominator": 2,
+    "unit": "calculator UI probes"
+  },
+  "Thread Continuity Rate": {
+    "numerator": 10,
+    "denominator": 10,
+    "unit": "requests in original conversation"
+  },
+  "New Conversation Thread Reset Rate": {
+    "numerator": 1,
+    "denominator": 1,
+    "unit": "new conversation action"
+  },
+  "Legacy Fallback Count": {
+    "numerator": 0,
+    "denominator": 1,
+    "unit": "unavailable integrated service probe"
+  },
+  "Private Field UI Leakage Count": {
+    "numerator": 0,
+    "denominator": 12,
+    "unit": "observed UI screens"
+  },
+  "UI Probe Success Rate": {
+    "numerator": 12,
+    "denominator": 12,
+    "unit": "frozen UI cases"
+  }
+}

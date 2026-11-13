@@ -1,0 +1,15 @@
+{
+  "recorded_at": "2026-11-01T17:07:34.836113+00:00",
+  "initial_files": 861,
+  "unchanged": 860,
+  "changes": [
+    {
+      "path": "code/compose.yaml",
+      "before": "bf635acefa94ae3a91a41950ead703e85385a380d6738989bcf07982ba11fea8",
+      "after": "e39f1c6462070702cb70351df73b8fb6a1f49884557c9c8cf42692558fc1180b"
+    }
+  ],
+  "index_identical": true,
+  "index_count": 507,
+  "index_sha256": "ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a"
+}

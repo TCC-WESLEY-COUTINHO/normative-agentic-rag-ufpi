@@ -1,0 +1,12 @@
+{
+  "status": "?? evaluation/results/calculator_tool_routing_v1_001/\n",
+  "branch": "feat/calculator-tool-routing-v1\n",
+  "head": "d827d4e275eba604aba5a84aa564507ce66349fb\n",
+  "log": "d827d4e (HEAD -> feat/calculator-tool-routing-v1, feat/conversation-memory-followups-v1) test: verify conversational isolation and grounded continuation\n8e52479 feat: persist normative memory and grounded follow-ups\n4f7dfda test: define conversation memory and follow-up boundaries\n01b95c5 (feat/typed-normative-transport-v1) test: verify typed normative invoke and stream contracts\nbeb638d feat: transport normative results through service and client\n8bfedc7 test: define typed normative transport boundaries\n459dab7 (feat/agent-normative-integration-v1) test: verify normative agent emission and bypass protection\n9c8fd2f feat: integrate normative rag capability into agent graph\n205948d test: define authoritative normative agent boundary\n19a0aed (feat/retrieval-strategies-v1) test: verify retrieval strategy integration\n9e28513 feat: add metadata and filtered retrieval strategies\nc97f177 test: define retrieval strategy boundaries\n367e27f (feat/normative-tool-facade-v1) test: verify normative facade integration contracts\nd3c5cc8 feat: add normative rag facade\n986f421 test: define normative tool contract boundaries\n",
+  "diff": "",
+  "cached_diff": "",
+  "stat": "",
+  "source_branch_before_switch": "feat/conversation-memory-followups-v1",
+  "source_status_before_switch": "",
+  "branch_created_from": "d827d4e275eba604aba5a84aa564507ce66349fb"
+}

@@ -1,0 +1,1066 @@
+{
+  "n": 5,
+  "failures": 0,
+  "router": {
+    "n": 5,
+    "errors": 0,
+    "route_accuracy": 0.6,
+    "wrong_route_rate": 0.4,
+    "clarification_recall": null,
+    "clarification_precision": 0.0,
+    "expected_clarification_n": 0,
+    "predicted_clarification_n": 2,
+    "confusion_matrix": {
+      "graduacao": {
+        "graduacao": 0,
+        "pos_graduacao": 0,
+        "ambas": 0,
+        "esclarecer": 0
+      },
+      "pos_graduacao": {
+        "graduacao": 0,
+        "pos_graduacao": 3,
+        "ambas": 0,
+        "esclarecer": 2
+      },
+      "ambas": {
+        "graduacao": 0,
+        "pos_graduacao": 0,
+        "ambas": 0,
+        "esclarecer": 0
+      },
+      "esclarecer": {
+        "graduacao": 0,
+        "pos_graduacao": 0,
+        "ambas": 0,
+        "esclarecer": 0
+      }
+    }
+  },
+  "retrieval": {
+    "evidence_complete_at_5": 0.6,
+    "hit_at_1": 0.2,
+    "hit_at_3": 0.6,
+    "hit_at_5": 0.6,
+    "mrr_at_5": 0.4,
+    "ndcg_at_5": 0.452371901428583,
+    "recall_at_1": 0.2,
+    "recall_at_3": 0.6,
+    "recall_at_5": 0.6,
+    "wrong_norm_at_5": 0.19999999999999998
+  },
+  "retrieval_answerable_n": 5,
+  "version": {
+    "generated_question_n": 3,
+    "obsolete_context_rate_at_5": 0.0,
+    "compliance_violation_rate": 0,
+    "removal_count": 0,
+    "removal_reasons": {},
+    "current_norm_hit_at_5": 0.6666666666666666,
+    "outdated_provision_query_n": 0,
+    "outdated_provision_exposed_query_n": 0,
+    "outdated_provision_exposure_rate": null,
+    "applied_amendment_n": 0
+  },
+  "human_scores": null,
+  "by_sector": {
+    "pos_graduacao": {
+      "n": 5,
+      "failures": 0,
+      "router": {
+        "n": 5,
+        "errors": 0,
+        "route_accuracy": 0.6,
+        "wrong_route_rate": 0.4,
+        "clarification_recall": null,
+        "clarification_precision": 0.0,
+        "expected_clarification_n": 0,
+        "predicted_clarification_n": 2,
+        "confusion_matrix": {
+          "graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "pos_graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 3,
+            "ambas": 0,
+            "esclarecer": 2
+          },
+          "ambas": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "esclarecer": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          }
+        }
+      },
+      "retrieval": {
+        "evidence_complete_at_5": 0.6,
+        "hit_at_1": 0.2,
+        "hit_at_3": 0.6,
+        "hit_at_5": 0.6,
+        "mrr_at_5": 0.4,
+        "ndcg_at_5": 0.452371901428583,
+        "recall_at_1": 0.2,
+        "recall_at_3": 0.6,
+        "recall_at_5": 0.6,
+        "wrong_norm_at_5": 0.19999999999999998
+      },
+      "retrieval_answerable_n": 5,
+      "version": {
+        "generated_question_n": 3,
+        "obsolete_context_rate_at_5": 0.0,
+        "compliance_violation_rate": 0,
+        "removal_count": 0,
+        "removal_reasons": {},
+        "current_norm_hit_at_5": 0.6666666666666666,
+        "outdated_provision_query_n": 0,
+        "outdated_provision_exposed_query_n": 0,
+        "outdated_provision_exposure_rate": null,
+        "applied_amendment_n": 0
+      },
+      "human_scores": null
+    }
+  },
+  "by_norm": {
+    "ufpi-658-2024": {
+      "n": 1,
+      "failures": 0,
+      "router": {
+        "n": 1,
+        "errors": 0,
+        "route_accuracy": 1.0,
+        "wrong_route_rate": 0.0,
+        "clarification_recall": null,
+        "clarification_precision": null,
+        "expected_clarification_n": 0,
+        "predicted_clarification_n": 0,
+        "confusion_matrix": {
+          "graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "pos_graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 1,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "ambas": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "esclarecer": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          }
+        }
+      },
+      "retrieval": {
+        "evidence_complete_at_5": 1,
+        "hit_at_1": 1,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "wrong_norm_at_5": 0.6
+      },
+      "retrieval_answerable_n": 1,
+      "version": {
+        "generated_question_n": 1,
+        "obsolete_context_rate_at_5": 0.0,
+        "compliance_violation_rate": 0,
+        "removal_count": 0,
+        "removal_reasons": {},
+        "current_norm_hit_at_5": null,
+        "outdated_provision_query_n": 0,
+        "outdated_provision_exposed_query_n": 0,
+        "outdated_provision_exposure_rate": null,
+        "applied_amendment_n": 0
+      },
+      "human_scores": null
+    },
+    "ufpi-956-2025": {
+      "n": 4,
+      "failures": 0,
+      "router": {
+        "n": 4,
+        "errors": 0,
+        "route_accuracy": 0.5,
+        "wrong_route_rate": 0.5,
+        "clarification_recall": null,
+        "clarification_precision": 0.0,
+        "expected_clarification_n": 0,
+        "predicted_clarification_n": 2,
+        "confusion_matrix": {
+          "graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "pos_graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 2,
+            "ambas": 0,
+            "esclarecer": 2
+          },
+          "ambas": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "esclarecer": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          }
+        }
+      },
+      "retrieval": {
+        "evidence_complete_at_5": 0.5,
+        "hit_at_1": 0,
+        "hit_at_3": 0.5,
+        "hit_at_5": 0.5,
+        "mrr_at_5": 0.25,
+        "ndcg_at_5": 0.31546487678572877,
+        "recall_at_1": 0.0,
+        "recall_at_3": 0.5,
+        "recall_at_5": 0.5,
+        "wrong_norm_at_5": 0.0
+      },
+      "retrieval_answerable_n": 4,
+      "version": {
+        "generated_question_n": 2,
+        "obsolete_context_rate_at_5": 0.0,
+        "compliance_violation_rate": 0,
+        "removal_count": 0,
+        "removal_reasons": {},
+        "current_norm_hit_at_5": 0.6666666666666666,
+        "outdated_provision_query_n": 0,
+        "outdated_provision_exposed_query_n": 0,
+        "outdated_provision_exposure_rate": null,
+        "applied_amendment_n": 0
+      },
+      "human_scores": null
+    }
+  },
+  "by_category": {
+    "comparacao_historica": {
+      "n": 1,
+      "failures": 0,
+      "router": {
+        "n": 1,
+        "errors": 0,
+        "route_accuracy": 0.0,
+        "wrong_route_rate": 1.0,
+        "clarification_recall": null,
+        "clarification_precision": 0.0,
+        "expected_clarification_n": 0,
+        "predicted_clarification_n": 1,
+        "confusion_matrix": {
+          "graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "pos_graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 1
+          },
+          "ambas": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "esclarecer": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          }
+        }
+      },
+      "retrieval": {
+        "evidence_complete_at_5": 0,
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 0,
+        "mrr_at_5": 0,
+        "ndcg_at_5": 0.0,
+        "recall_at_1": 0.0,
+        "recall_at_3": 0.0,
+        "recall_at_5": 0.0
+      },
+      "retrieval_answerable_n": 1,
+      "version": {
+        "generated_question_n": 0,
+        "obsolete_context_rate_at_5": null,
+        "compliance_violation_rate": null,
+        "removal_count": 0,
+        "removal_reasons": {},
+        "current_norm_hit_at_5": null,
+        "outdated_provision_query_n": 0,
+        "outdated_provision_exposed_query_n": 0,
+        "outdated_provision_exposure_rate": null,
+        "applied_amendment_n": 0
+      },
+      "human_scores": null
+    },
+    "recuperacao_concorrente": {
+      "n": 1,
+      "failures": 0,
+      "router": {
+        "n": 1,
+        "errors": 0,
+        "route_accuracy": 1.0,
+        "wrong_route_rate": 0.0,
+        "clarification_recall": null,
+        "clarification_precision": null,
+        "expected_clarification_n": 0,
+        "predicted_clarification_n": 0,
+        "confusion_matrix": {
+          "graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "pos_graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 1,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "ambas": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "esclarecer": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          }
+        }
+      },
+      "retrieval": {
+        "evidence_complete_at_5": 1,
+        "hit_at_1": 0,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr_at_5": 0.5,
+        "ndcg_at_5": 0.6309297535714575,
+        "recall_at_1": 0.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "wrong_norm_at_5": 0.0
+      },
+      "retrieval_answerable_n": 1,
+      "version": {
+        "generated_question_n": 1,
+        "obsolete_context_rate_at_5": 0.0,
+        "compliance_violation_rate": 0,
+        "removal_count": 0,
+        "removal_reasons": {},
+        "current_norm_hit_at_5": 1,
+        "outdated_provision_query_n": 0,
+        "outdated_provision_exposed_query_n": 0,
+        "outdated_provision_exposure_rate": null,
+        "applied_amendment_n": 0
+      },
+      "human_scores": null
+    },
+    "regra_atual": {
+      "n": 1,
+      "failures": 0,
+      "router": {
+        "n": 1,
+        "errors": 0,
+        "route_accuracy": 1.0,
+        "wrong_route_rate": 0.0,
+        "clarification_recall": null,
+        "clarification_precision": null,
+        "expected_clarification_n": 0,
+        "predicted_clarification_n": 0,
+        "confusion_matrix": {
+          "graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "pos_graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 1,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "ambas": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "esclarecer": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          }
+        }
+      },
+      "retrieval": {
+        "evidence_complete_at_5": 1,
+        "hit_at_1": 0,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr_at_5": 0.5,
+        "ndcg_at_5": 0.6309297535714575,
+        "recall_at_1": 0.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "wrong_norm_at_5": 0.0
+      },
+      "retrieval_answerable_n": 1,
+      "version": {
+        "generated_question_n": 1,
+        "obsolete_context_rate_at_5": 0.0,
+        "compliance_violation_rate": 0,
+        "removal_count": 0,
+        "removal_reasons": {},
+        "current_norm_hit_at_5": 1,
+        "outdated_provision_query_n": 0,
+        "outdated_provision_exposed_query_n": 0,
+        "outdated_provision_exposure_rate": null,
+        "applied_amendment_n": 0
+      },
+      "human_scores": null
+    },
+    "regra_historica": {
+      "n": 1,
+      "failures": 0,
+      "router": {
+        "n": 1,
+        "errors": 0,
+        "route_accuracy": 1.0,
+        "wrong_route_rate": 0.0,
+        "clarification_recall": null,
+        "clarification_precision": null,
+        "expected_clarification_n": 0,
+        "predicted_clarification_n": 0,
+        "confusion_matrix": {
+          "graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "pos_graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 1,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "ambas": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "esclarecer": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          }
+        }
+      },
+      "retrieval": {
+        "evidence_complete_at_5": 1,
+        "hit_at_1": 1,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "wrong_norm_at_5": 0.6
+      },
+      "retrieval_answerable_n": 1,
+      "version": {
+        "generated_question_n": 1,
+        "obsolete_context_rate_at_5": 0.0,
+        "compliance_violation_rate": 0,
+        "removal_count": 0,
+        "removal_reasons": {},
+        "current_norm_hit_at_5": null,
+        "outdated_provision_query_n": 0,
+        "outdated_provision_exposed_query_n": 0,
+        "outdated_provision_exposure_rate": null,
+        "applied_amendment_n": 0
+      },
+      "human_scores": null
+    },
+    "vigencia": {
+      "n": 1,
+      "failures": 0,
+      "router": {
+        "n": 1,
+        "errors": 0,
+        "route_accuracy": 0.0,
+        "wrong_route_rate": 1.0,
+        "clarification_recall": null,
+        "clarification_precision": 0.0,
+        "expected_clarification_n": 0,
+        "predicted_clarification_n": 1,
+        "confusion_matrix": {
+          "graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "pos_graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 1
+          },
+          "ambas": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "esclarecer": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          }
+        }
+      },
+      "retrieval": {
+        "evidence_complete_at_5": 0,
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 0,
+        "mrr_at_5": 0,
+        "ndcg_at_5": 0.0,
+        "recall_at_1": 0.0,
+        "recall_at_3": 0.0,
+        "recall_at_5": 0.0
+      },
+      "retrieval_answerable_n": 1,
+      "version": {
+        "generated_question_n": 0,
+        "obsolete_context_rate_at_5": null,
+        "compliance_violation_rate": null,
+        "removal_count": 0,
+        "removal_reasons": {},
+        "current_norm_hit_at_5": 0,
+        "outdated_provision_query_n": 0,
+        "outdated_provision_exposed_query_n": 0,
+        "outdated_provision_exposure_rate": null,
+        "applied_amendment_n": 0
+      },
+      "human_scores": null
+    }
+  },
+  "by_domain": {
+    "pos_graduacao": {
+      "n": 5,
+      "failures": 0,
+      "router": {
+        "n": 5,
+        "errors": 0,
+        "route_accuracy": 0.6,
+        "wrong_route_rate": 0.4,
+        "clarification_recall": null,
+        "clarification_precision": 0.0,
+        "expected_clarification_n": 0,
+        "predicted_clarification_n": 2,
+        "confusion_matrix": {
+          "graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "pos_graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 3,
+            "ambas": 0,
+            "esclarecer": 2
+          },
+          "ambas": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "esclarecer": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          }
+        }
+      },
+      "retrieval": {
+        "evidence_complete_at_5": 0.6,
+        "hit_at_1": 0.2,
+        "hit_at_3": 0.6,
+        "hit_at_5": 0.6,
+        "mrr_at_5": 0.4,
+        "ndcg_at_5": 0.452371901428583,
+        "recall_at_1": 0.2,
+        "recall_at_3": 0.6,
+        "recall_at_5": 0.6,
+        "wrong_norm_at_5": 0.19999999999999998
+      },
+      "retrieval_answerable_n": 5,
+      "version": {
+        "generated_question_n": 3,
+        "obsolete_context_rate_at_5": 0.0,
+        "compliance_violation_rate": 0,
+        "removal_count": 0,
+        "removal_reasons": {},
+        "current_norm_hit_at_5": 0.6666666666666666,
+        "outdated_provision_query_n": 0,
+        "outdated_provision_exposed_query_n": 0,
+        "outdated_provision_exposure_rate": null,
+        "applied_amendment_n": 0
+      },
+      "human_scores": null
+    }
+  },
+  "by_temporal_relation": {
+    "revocation": {
+      "n": 5,
+      "failures": 0,
+      "router": {
+        "n": 5,
+        "errors": 0,
+        "route_accuracy": 0.6,
+        "wrong_route_rate": 0.4,
+        "clarification_recall": null,
+        "clarification_precision": 0.0,
+        "expected_clarification_n": 0,
+        "predicted_clarification_n": 2,
+        "confusion_matrix": {
+          "graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "pos_graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 3,
+            "ambas": 0,
+            "esclarecer": 2
+          },
+          "ambas": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "esclarecer": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          }
+        }
+      },
+      "retrieval": {
+        "evidence_complete_at_5": 0.6,
+        "hit_at_1": 0.2,
+        "hit_at_3": 0.6,
+        "hit_at_5": 0.6,
+        "mrr_at_5": 0.4,
+        "ndcg_at_5": 0.452371901428583,
+        "recall_at_1": 0.2,
+        "recall_at_3": 0.6,
+        "recall_at_5": 0.6,
+        "wrong_norm_at_5": 0.19999999999999998
+      },
+      "retrieval_answerable_n": 5,
+      "version": {
+        "generated_question_n": 3,
+        "obsolete_context_rate_at_5": 0.0,
+        "compliance_violation_rate": 0,
+        "removal_count": 0,
+        "removal_reasons": {},
+        "current_norm_hit_at_5": 0.6666666666666666,
+        "outdated_provision_query_n": 0,
+        "outdated_provision_exposed_query_n": 0,
+        "outdated_provision_exposure_rate": null,
+        "applied_amendment_n": 0
+      },
+      "human_scores": null
+    }
+  },
+  "by_sector_category": {
+    "pos_graduacao": {
+      "comparacao_historica": {
+        "n": 1,
+        "failures": 0,
+        "router": {
+          "n": 1,
+          "errors": 0,
+          "route_accuracy": 0.0,
+          "wrong_route_rate": 1.0,
+          "clarification_recall": null,
+          "clarification_precision": 0.0,
+          "expected_clarification_n": 0,
+          "predicted_clarification_n": 1,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 1
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            },
+            "esclarecer": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            }
+          }
+        },
+        "retrieval": {
+          "evidence_complete_at_5": 0,
+          "hit_at_1": 0,
+          "hit_at_3": 0,
+          "hit_at_5": 0,
+          "mrr_at_5": 0,
+          "ndcg_at_5": 0.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0
+        },
+        "retrieval_answerable_n": 1,
+        "version": {
+          "generated_question_n": 0,
+          "obsolete_context_rate_at_5": null,
+          "compliance_violation_rate": null,
+          "removal_count": 0,
+          "removal_reasons": {},
+          "current_norm_hit_at_5": null,
+          "outdated_provision_query_n": 0,
+          "outdated_provision_exposed_query_n": 0,
+          "outdated_provision_exposure_rate": null,
+          "applied_amendment_n": 0
+        },
+        "human_scores": null
+      },
+      "recuperacao_concorrente": {
+        "n": 1,
+        "failures": 0,
+        "router": {
+          "n": 1,
+          "errors": 0,
+          "route_accuracy": 1.0,
+          "wrong_route_rate": 0.0,
+          "clarification_recall": null,
+          "clarification_precision": null,
+          "expected_clarification_n": 0,
+          "predicted_clarification_n": 0,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 1,
+              "ambas": 0,
+              "esclarecer": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            },
+            "esclarecer": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            }
+          }
+        },
+        "retrieval": {
+          "evidence_complete_at_5": 1,
+          "hit_at_1": 0,
+          "hit_at_3": 1,
+          "hit_at_5": 1,
+          "mrr_at_5": 0.5,
+          "ndcg_at_5": 0.6309297535714575,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "wrong_norm_at_5": 0.0
+        },
+        "retrieval_answerable_n": 1,
+        "version": {
+          "generated_question_n": 1,
+          "obsolete_context_rate_at_5": 0.0,
+          "compliance_violation_rate": 0,
+          "removal_count": 0,
+          "removal_reasons": {},
+          "current_norm_hit_at_5": 1,
+          "outdated_provision_query_n": 0,
+          "outdated_provision_exposed_query_n": 0,
+          "outdated_provision_exposure_rate": null,
+          "applied_amendment_n": 0
+        },
+        "human_scores": null
+      },
+      "regra_atual": {
+        "n": 1,
+        "failures": 0,
+        "router": {
+          "n": 1,
+          "errors": 0,
+          "route_accuracy": 1.0,
+          "wrong_route_rate": 0.0,
+          "clarification_recall": null,
+          "clarification_precision": null,
+          "expected_clarification_n": 0,
+          "predicted_clarification_n": 0,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 1,
+              "ambas": 0,
+              "esclarecer": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            },
+            "esclarecer": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            }
+          }
+        },
+        "retrieval": {
+          "evidence_complete_at_5": 1,
+          "hit_at_1": 0,
+          "hit_at_3": 1,
+          "hit_at_5": 1,
+          "mrr_at_5": 0.5,
+          "ndcg_at_5": 0.6309297535714575,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "wrong_norm_at_5": 0.0
+        },
+        "retrieval_answerable_n": 1,
+        "version": {
+          "generated_question_n": 1,
+          "obsolete_context_rate_at_5": 0.0,
+          "compliance_violation_rate": 0,
+          "removal_count": 0,
+          "removal_reasons": {},
+          "current_norm_hit_at_5": 1,
+          "outdated_provision_query_n": 0,
+          "outdated_provision_exposed_query_n": 0,
+          "outdated_provision_exposure_rate": null,
+          "applied_amendment_n": 0
+        },
+        "human_scores": null
+      },
+      "regra_historica": {
+        "n": 1,
+        "failures": 0,
+        "router": {
+          "n": 1,
+          "errors": 0,
+          "route_accuracy": 1.0,
+          "wrong_route_rate": 0.0,
+          "clarification_recall": null,
+          "clarification_precision": null,
+          "expected_clarification_n": 0,
+          "predicted_clarification_n": 0,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 1,
+              "ambas": 0,
+              "esclarecer": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            },
+            "esclarecer": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            }
+          }
+        },
+        "retrieval": {
+          "evidence_complete_at_5": 1,
+          "hit_at_1": 1,
+          "hit_at_3": 1,
+          "hit_at_5": 1,
+          "mrr_at_5": 1.0,
+          "ndcg_at_5": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "wrong_norm_at_5": 0.6
+        },
+        "retrieval_answerable_n": 1,
+        "version": {
+          "generated_question_n": 1,
+          "obsolete_context_rate_at_5": 0.0,
+          "compliance_violation_rate": 0,
+          "removal_count": 0,
+          "removal_reasons": {},
+          "current_norm_hit_at_5": null,
+          "outdated_provision_query_n": 0,
+          "outdated_provision_exposed_query_n": 0,
+          "outdated_provision_exposure_rate": null,
+          "applied_amendment_n": 0
+        },
+        "human_scores": null
+      },
+      "vigencia": {
+        "n": 1,
+        "failures": 0,
+        "router": {
+          "n": 1,
+          "errors": 0,
+          "route_accuracy": 0.0,
+          "wrong_route_rate": 1.0,
+          "clarification_recall": null,
+          "clarification_precision": 0.0,
+          "expected_clarification_n": 0,
+          "predicted_clarification_n": 1,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 1
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            },
+            "esclarecer": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            }
+          }
+        },
+        "retrieval": {
+          "evidence_complete_at_5": 0,
+          "hit_at_1": 0,
+          "hit_at_3": 0,
+          "hit_at_5": 0,
+          "mrr_at_5": 0,
+          "ndcg_at_5": 0.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0
+        },
+        "retrieval_answerable_n": 1,
+        "version": {
+          "generated_question_n": 0,
+          "obsolete_context_rate_at_5": null,
+          "compliance_violation_rate": null,
+          "removal_count": 0,
+          "removal_reasons": {},
+          "current_norm_hit_at_5": 0,
+          "outdated_provision_query_n": 0,
+          "outdated_provision_exposed_query_n": 0,
+          "outdated_provision_exposure_rate": null,
+          "applied_amendment_n": 0
+        },
+        "human_scores": null
+      }
+    }
+  }
+}

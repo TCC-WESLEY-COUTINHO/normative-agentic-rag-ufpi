@@ -1,0 +1,121 @@
+{
+  "base": "706bd7cc5e7f333032c7de7b58ed89dc41c09bd0",
+  "implementation_packaging_head": "fa567262ab2dabe7ec59f09796416c6888e8cbb3",
+  "files": [
+    {
+      "path": ".dockerignore",
+      "working_sha256": "d3c0b0a0a19864f16a57c17df8a33d9c783866796ee8b59dd0da9b1b3cd9bf6c",
+      "head_blob_sha256": "d3c0b0a0a19864f16a57c17df8a33d9c783866796ee8b59dd0da9b1b3cd9bf6c"
+    },
+    {
+      "path": "code/.dockerignore",
+      "working_sha256": "680afb286f15388b0734e6fcf143ff760094061fab2af6447918ec57cfc2e35f",
+      "head_blob_sha256": "19b6b52ab084e9a6e42b065a0bd65cead571a19798049f024dd5a8c99ab543ae"
+    },
+    {
+      "path": "code/.env.example",
+      "working_sha256": "e443f937c7176c2d1f9bb604581b64c2f0d9499e459472e4b8ff592ef0ed910b",
+      "head_blob_sha256": "ea831bd3a1cc51f3555b29e926e2b475ee4c84939fe2368a41e992d45158c15d"
+    },
+    {
+      "path": "code/compose.prod.yaml",
+      "working_sha256": "5d9ac8dbcf3b25a2efdb1fcd5ea56b8db5b3e2a20e1857cf0438a72645552a64",
+      "head_blob_sha256": "1b97a3ea9d09feefa868a2cd9eba3c8f20c5cd724c974c7d8a8f5f1b8a1dcf1b"
+    },
+    {
+      "path": "code/compose.yaml",
+      "working_sha256": "bf635acefa94ae3a91a41950ead703e85385a380d6738989bcf07982ba11fea8",
+      "head_blob_sha256": "300bd6ebec2318621fcf2356d905036f4cb60fe923d416670b40786c8694b946"
+    },
+    {
+      "path": "code/docker/Dockerfile.app",
+      "working_sha256": "b3aaa8fe89d7eb5965ef11848938937caaf5df47e7f613b71dd30ced8f6cdf8d",
+      "head_blob_sha256": "d4cc79b7d96376241091d13f8fe4e67506eb2222fee40b4b91b39222cd58cf32"
+    },
+    {
+      "path": "code/docker/Dockerfile.service",
+      "working_sha256": "f1c08bab62a0756895372b2eea914340ffa2196c118faa5ae86138cf5248c282",
+      "head_blob_sha256": "55501c27dabcf0fa56e4b94e401369fde1b393a9b597162f12a1225116a97255"
+    },
+    {
+      "path": "code/docs/integrated-runtime.md",
+      "working_sha256": "2e9155dbfeb9855018de714f91dbd5418274c985fe5b051e3c62a2d3a8d85dad",
+      "head_blob_sha256": "2e9155dbfeb9855018de714f91dbd5418274c985fe5b051e3c62a2d3a8d85dad"
+    },
+    {
+      "path": "code/src/agents/agents.py",
+      "working_sha256": "76ad0472cc849cb31ceb6285e1cefb534fad3b23969280d245dfe08046ad66a1",
+      "head_blob_sha256": "92eabe516d5311ea28703194f384bfa384dde7022eca7ddfd57c23805d11f1f5"
+    },
+    {
+      "path": "code/src/rag_baseline/integrated_runtime.py",
+      "working_sha256": "9ad39d0c766aaaab0955537573a4d0283a29e2ea9e6b617fb418a650df21e570",
+      "head_blob_sha256": "9ad39d0c766aaaab0955537573a4d0283a29e2ea9e6b617fb418a650df21e570"
+    },
+    {
+      "path": "code/src/schema/schema.py",
+      "working_sha256": "837516605d47e8145efa516d8195614897c3a8c3f124d6e7d9c6e587dc600dd7",
+      "head_blob_sha256": "99acfed6c7f12aab67f8ad3737c72591cbdf1ae8a58eadaa055e2cba8db31040"
+    },
+    {
+      "path": "code/src/service/service.py",
+      "working_sha256": "0df6c5d223620807ee412e201733839a1034b0c905323475ca7cabfe9d26783d",
+      "head_blob_sha256": "800b571fbbf470148d914c80488cce3be36bf19200e3930046cb2e3fdcf24638"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_integrated_runtime.py",
+      "working_sha256": "48a660e2a5f6257e62d8866772ce8ddd421706d9d3c8864a0492db3e6f398363",
+      "head_blob_sha256": "48a660e2a5f6257e62d8866772ce8ddd421706d9d3c8864a0492db3e6f398363"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_runtime_packaging.py",
+      "working_sha256": "8253c000a0d9111b2255d38d547167dd20c456cdf06ca9b4b458400ca8a854fc",
+      "head_blob_sha256": "8253c000a0d9111b2255d38d547167dd20c456cdf06ca9b4b458400ca8a854fc"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_typed_normative_transport.py",
+      "working_sha256": "b36948fd212cbab3b46bd14303af24db9ce0f3a09d782d0fb1d924ce145a7ccd",
+      "head_blob_sha256": "b36948fd212cbab3b46bd14303af24db9ce0f3a09d782d0fb1d924ce145a7ccd"
+    },
+    {
+      "path": "evaluation/results/runtime_registration_packaging_v1_001/audit_workspace.py",
+      "working_sha256": "38f730fec7671e3bb472f1c0742689b969b1ba8f4bc006c5849b1f84daf3d0e8",
+      "head_blob_sha256": null
+    },
+    {
+      "path": "evaluation/results/runtime_registration_packaging_v1_001/finalize_evidence.py",
+      "working_sha256": "e4c6dbebfd163e597ac210e39d20e930e0f3379326d95dc22eb38ad4c928a4cc",
+      "head_blob_sha256": null
+    },
+    {
+      "path": "evaluation/results/runtime_registration_packaging_v1_001/freeze_protocol.py",
+      "working_sha256": "72e960005aebd078809502937dcec7a7423cbf526d4cae1ff7abf0f143318548",
+      "head_blob_sha256": null
+    },
+    {
+      "path": "evaluation/results/runtime_registration_packaging_v1_001/local_probes.py",
+      "working_sha256": "e240dd2571a8ec87b9d6ab12180ceb56f34de7537a7c4170cb66117f90ed4a83",
+      "head_blob_sha256": null
+    },
+    {
+      "path": "evaluation/results/runtime_registration_packaging_v1_001/packaging_audit.json",
+      "working_sha256": "70829db3a392e453c67b12f20ec30c1a9201863dbaa31af1aa3402d745067a49",
+      "head_blob_sha256": null
+    },
+    {
+      "path": "evaluation/results/runtime_registration_packaging_v1_001/prepare_evidence.py",
+      "working_sha256": "662955237299e5d285f369f94f9da45d609e42d64d18ee81e700362d7003e176",
+      "head_blob_sha256": null
+    },
+    {
+      "path": "evaluation/results/runtime_registration_packaging_v1_001/runtime_audit.json",
+      "working_sha256": "4c3e30247cc7cd99baa5c3fb2ed63914f7b80ebffaa0aaf1b6796137111ecf38",
+      "head_blob_sha256": null
+    },
+    {
+      "path": "evaluation/results/runtime_registration_packaging_v1_001/verify_local.py",
+      "working_sha256": "b39db399d84e6df50ece9767616026b78842fcdb0700b795fa7b3ce69e1e3991",
+      "head_blob_sha256": null
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+/* Bisco. Motion is decoration: with reduced motion the figure stays still on its expression. */
+.ufpinho { position: relative; flex: none; width: var(--ufpinho-size); height: var(--ufpinho-size); }
+.ufpinho-home { --ufpinho-size: 11.75rem; margin: 0 auto var(--s-2); }
+.ufpinho-loading { --ufpinho-size: 5.75rem; }
+.ufpinho-chat { --ufpinho-size: 2.75rem; }
+
+/* The still picture and, on top of it once loaded, the live rig share one square. */
+.ufpinho .bisco-host,
+.ufpinho .bisco-still { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.ufpinho .bisco-host { overflow: visible; }
+.ufpinho .bisco-host.bisco-live > .bisco-still { visibility: hidden; }
+/* The live layers stay invisible until all of them are decoded, then replace the still picture in
+   one step: a half-loaded rig can never show its eyes beside the still picture's. */
+.ufpinho .bisco-host:not(.bisco-live) > .bisco-float { visibility: hidden; }
+
+/* A text selection passing over the figure would paint the whole picture square blue, and an image
+   could be dragged away. Only the figure opts out: message text stays selectable. */
+.ufpinho,
+.ufpinho img,
+.ufpinho svg,
+.ufpinho image {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+.ufpinho-interactive { cursor: pointer; -webkit-tap-highlight-color: transparent; border-radius: 50%; }
+.ufpinho-interactive:focus { outline: none; }
+.ufpinho-interactive:focus-visible { outline: 3px solid var(--c-interact); outline-offset: 4px; }
+
+/* Halo behind the home figure: institutional blue, purple only at the edge. */
+.ufpinho-home::before,
+.ufpinho-ghost::before {
+  content: "";
+  position: absolute;
+  inset: -12% -14% -8%;
+  border-radius: 50%;
+  background: radial-gradient(
+    closest-side,
+    color-mix(in srgb, var(--c-brand) 11%, transparent) 30%,
+    color-mix(in srgb, var(--c-interact) 5%, transparent) 64%,
+    transparent
+  );
+}
+
+/* Transition ghost: fixed to the viewport, under the composer, never clickable. Its own figure
+   only changes expression; it never floats, boils or blinks while flying. */
+.ufpinho-ghost {
+  position: fixed;
+  z-index: 50;
+  margin: 0;
+  transform-origin: 0 0;
+  pointer-events: none;
+}
+.ufpinho-ghost,
+.ufpinho-ghost * { animation: none !important; }
+.ufpinho-ghost::before { transition: opacity var(--ufpinho-flight, 450ms) ease; }
+.ufpinho-ghost.is-dim::before { opacity: 0; }
+.ufpinho-ghost.is-leaving { opacity: 0; transition: opacity 240ms ease; }
+.ufpinho-home.ufpinho-landed::before { animation: ufpinho-halo-in 420ms ease both; }
+@keyframes ufpinho-halo-in { from { opacity: 0; } to { opacity: 1; } }
+
+/* After the first answer the loading figure is a new arrival, not the same character travelling:
+   it enters quietly in place. When it is a flight target it is hidden until Bisco lands. */
+.ufpinho-loading { animation: ufpinho-enter 320ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes ufpinho-enter {
+  from { opacity: 0; transform: scale(0.86); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Live rig (bisco.js): whole-character motion lives only on shared parents, never on a layer. */
+.ufpinho .bisco-float,
+.ufpinho .bisco-sway,
+.ufpinho .bisco-react,
+.ufpinho .bisco-head,
+.ufpinho .bisco-tilt { position: absolute; inset: 0; transform-origin: 50% 58%; }
+.ufpinho .bisco-react { transform-origin: 50% 82%; }
+.ufpinho .bisco-tilt { transition: transform 1.1s cubic-bezier(0.45, 0.05, 0.35, 1); }
+.ufpinho .bisco-svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; display: block; }
+.ufpinho .bisco { --bisco-bob: 1.2%; --bisco-sway: 0.7deg; }
+.ufpinho .bisco--answering { --bisco-bob: 0.55%; --bisco-sway: 0.3deg; }
+.ufpinho .bisco--thinking { --bisco-bob: 1.4%; }
+/* The newest answer's avatar only breathes, by about a pixel: no sway. */
+.ufpinho-chat .bisco { --bisco-bob: 2.2%; --bisco-sway: 0deg; }
+.ufpinho .bisco--float .bisco-float { animation: bisco-bob 4.7s ease-in-out infinite; }
+.ufpinho .bisco--float .bisco-sway { animation: bisco-sway 6.3s ease-in-out infinite; }
+.ufpinho .bisco--paused .bisco-float,
+.ufpinho .bisco--paused .bisco-sway { animation-play-state: paused; }
+/* While a flight hides the destination, it waits, so it starts from rest when Bisco lands. */
+.ufpinho[style*="hidden"] .bisco-float,
+.ufpinho[style*="hidden"] .bisco-sway { animation-play-state: paused; }
+@keyframes bisco-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(calc(var(--bisco-bob) * -1)); }
+}
+@keyframes bisco-sway {
+  0%, 100% { transform: rotate(0deg); }
+  30% { transform: rotate(var(--bisco-sway)); }
+  72% { transform: rotate(calc(var(--bisco-sway) * -1)); }
+}
+
+@media (max-width: 768px) {
+  .ufpinho-home { --ufpinho-size: 8.75rem; }
+  .ufpinho-loading { --ufpinho-size: 4.75rem; }
+  [class*="st-key-msg_ai"] .ufpinho-chat { --ufpinho-size: 2.375rem; }
+}
+
+.ufpinho .bisco--reduced .bisco-float,
+.ufpinho .bisco--reduced .bisco-sway { animation: none !important; }
+.ufpinho .bisco--reduced .bisco-tilt { transition: none; transform: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  .ufpinho,
+  .ufpinho *,
+  .ufpinho .bisco-float,
+  .ufpinho .bisco-sway { animation: none !important; transition: none !important; }
+}

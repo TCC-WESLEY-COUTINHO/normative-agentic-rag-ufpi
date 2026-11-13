@@ -1,0 +1,185 @@
+{
+  "technical_only": true,
+  "cases": [
+    {
+      "id": "01_reopen_repeat",
+      "turns": [
+        "Qual o prazo na graduação?",
+        "repita"
+      ],
+      "expected_action": "GROUNDED_TRANSFORM",
+      "expected_facade_calls": 1,
+      "purpose": "real SQLite close/reopen"
+    },
+    {
+      "id": "02_rephrase",
+      "turns": [
+        "ANSWER",
+        "Explique mais simples"
+      ],
+      "expected_action": "GROUNDED_TRANSFORM",
+      "expected_facade_calls": 0,
+      "purpose": "public source only"
+    },
+    {
+      "id": "03_summary",
+      "turns": [
+        "ANSWER",
+        "Resuma"
+      ],
+      "expected_action": "GROUNDED_TRANSFORM",
+      "expected_facade_calls": 0,
+      "purpose": "summary without retrieval"
+    },
+    {
+      "id": "04_domain_shift_core",
+      "turns": [
+        "Posso cancelar uma disciplina na graduação?",
+        "E na pós?"
+      ],
+      "expected_action": "CONTEXTUAL_NORMATIVE_RAG",
+      "expected_facade_calls": 1,
+      "purpose": "real Router and new post evidence"
+    },
+    {
+      "id": "05_continue_pending",
+      "turns": [
+        "Posso cancelar uma disciplina?",
+        "graduação"
+      ],
+      "expected_action": "CONTINUE_CLARIFICATION",
+      "expected_facade_calls": 1,
+      "purpose": "same original question and UUID"
+    },
+    {
+      "id": "06_other_thread_reply",
+      "turns": [
+        "CLARIFICATION thread X",
+        "pós-graduação thread Y"
+      ],
+      "expected_action": "NORMATIVE_RAG",
+      "expected_facade_calls": 1,
+      "purpose": "foreign pending not consumed"
+    },
+    {
+      "id": "07_social_pending",
+      "turns": [
+        "CLARIFICATION",
+        "Obrigado"
+      ],
+      "expected_action": "SAFE_DIRECT",
+      "expected_facade_calls": 0,
+      "purpose": "pending preserved across reopen"
+    },
+    {
+      "id": "08_cancel_pending",
+      "turns": [
+        "CLARIFICATION",
+        "Cancelar"
+      ],
+      "expected_action": "CLEAR_PENDING",
+      "expected_facade_calls": 0,
+      "purpose": "pending cleared, last valid result retained"
+    },
+    {
+      "id": "09_stale_transform",
+      "turns": [
+        "registry stamp mismatch",
+        "Explique melhor"
+      ],
+      "expected_action": "GROUNDED_TRANSFORM",
+      "expected_facade_calls": 0,
+      "purpose": "safe deterministic repeat request"
+    },
+    {
+      "id": "10_stale_fresh_query",
+      "turns": [
+        "STALE",
+        "Nova pergunta completa na graduação"
+      ],
+      "expected_action": "NORMATIVE_RAG",
+      "expected_facade_calls": 1,
+      "purpose": "replace with newly authorized result"
+    },
+    {
+      "id": "11_other_user",
+      "turns": [
+        "ANSWER A/X",
+        "Repita B/X"
+      ],
+      "expected_action": "GROUNDED_TRANSFORM",
+      "expected_facade_calls": 0,
+      "purpose": "no foreign authority"
+    },
+    {
+      "id": "12_other_agent",
+      "turns": [
+        "ANSWER agent1",
+        "Repita agent2"
+      ],
+      "expected_action": "GROUNDED_TRANSFORM",
+      "expected_facade_calls": 0,
+      "purpose": "agent namespace"
+    },
+    {
+      "id": "13_core_fallback",
+      "turns": [
+        "core fallback",
+        "Explique melhor"
+      ],
+      "expected_action": "GROUNDED_TRANSFORM",
+      "expected_facade_calls": 0,
+      "purpose": "zero transformer calls"
+    },
+    {
+      "id": "14_new_date",
+      "turns": [
+        "ANSWER",
+        "Explique melhor"
+      ],
+      "expected_action": "GROUNDED_TRANSFORM",
+      "expected_facade_calls": 0,
+      "purpose": "fake transformer adds 20 de maio de 2099; guard falls back"
+    },
+    {
+      "id": "15_concurrent_users_threads",
+      "turns": [
+        "A/X and B/X",
+        "A/X and A/Y"
+      ],
+      "expected_action": "NORMATIVE_RAG",
+      "expected_facade_calls": 1,
+      "purpose": "separate memory/correlation in each concurrent invocation"
+    },
+    {
+      "id": "16_pending_concurrent",
+      "turns": [
+        "pending A/X reply",
+        "fresh B/X question"
+      ],
+      "expected_action": "CONTINUE_CLARIFICATION + NORMATIVE_RAG",
+      "expected_facade_calls": 1,
+      "purpose": "original correlation only on A"
+    },
+    {
+      "id": "17_http_summary",
+      "turns": [
+        "Pergunta completa",
+        "Resuma"
+      ],
+      "expected_action": "GROUNDED_TRANSFORM",
+      "expected_facade_calls": 0,
+      "purpose": "ASGI invoke and AgentClient typed result"
+    },
+    {
+      "id": "18_http_repeat",
+      "turns": [
+        "HTTP ANSWER",
+        "Repita"
+      ],
+      "expected_action": "GROUNDED_TRANSFORM",
+      "expected_facade_calls": 0,
+      "purpose": "SSE stream_tokens true only terminal typed result"
+    }
+  ]
+}

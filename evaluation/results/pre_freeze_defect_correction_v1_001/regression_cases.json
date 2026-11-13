@@ -1,0 +1,237 @@
+{
+  "kind": "pre-freeze regression cases used for correction; not independent scientific TEST",
+  "controlled_post": [
+    {
+      "question": "como entrar na pós?",
+      "router_input": "como entrar na pós-graduação?",
+      "expected_domain": "pos_graduacao",
+      "status": "ANSWER",
+      "pending_clarification": null
+    },
+    {
+      "question": "como entrar na pós-graduação?",
+      "router_input": "como entrar na pós-graduação?",
+      "expected_domain": "pos_graduacao",
+      "status": "ANSWER",
+      "pending_clarification": null
+    },
+    {
+      "question": "como faço para entrar na pós?",
+      "router_input": "como faço para entrar na pós-graduação?",
+      "expected_domain": "pos_graduacao",
+      "status": "ANSWER",
+      "pending_clarification": null
+    },
+    {
+      "question": "como funciona o ingresso na pós?",
+      "router_input": "como funciona o ingresso na pós-graduação?",
+      "expected_domain": "pos_graduacao",
+      "status": "ANSWER",
+      "pending_clarification": null
+    },
+    {
+      "question": "quais os requisitos da pós?",
+      "router_input": "quais os requisitos da pós-graduação?",
+      "expected_domain": "pos_graduacao",
+      "status": "ANSWER",
+      "pending_clarification": null
+    },
+    {
+      "question": "como concorrer para a pós?",
+      "router_input": "como concorrer para a pós-graduação?",
+      "expected_domain": "pos_graduacao",
+      "status": "ANSWER",
+      "pending_clarification": null
+    },
+    {
+      "question": "como entrar pela pós?",
+      "router_input": "como entrar pela pós-graduação?",
+      "expected_domain": "pos_graduacao",
+      "status": "ANSWER",
+      "pending_clarification": null
+    }
+  ],
+  "controlled_grad": [
+    {
+      "question": "como entrar na graduação?",
+      "domain": "graduacao",
+      "status": "ANSWER"
+    },
+    {
+      "question": "como faço para entrar na graduação?",
+      "domain": "graduacao",
+      "status": "ANSWER"
+    }
+  ],
+  "controlled_ambiguous": [
+    {
+      "question": "como entrar?",
+      "status": "CLARIFICATION"
+    },
+    {
+      "question": "como funciona o ingresso?",
+      "status": "CLARIFICATION"
+    },
+    {
+      "question": "quais são os requisitos para ingresso?",
+      "status": "CLARIFICATION"
+    }
+  ],
+  "counterexamples": [
+    {
+      "question": "qual era a regra pós-alteração?",
+      "router_input_unchanged": true,
+      "post_override": false
+    },
+    {
+      "question": "como ficou após a alteração?",
+      "router_input_unchanged": true,
+      "post_override": false
+    },
+    {
+      "question": "regra pós-2025",
+      "router_input_unchanged": true,
+      "post_override": false
+    },
+    {
+      "question": "qual era a regra na pós-alteração?",
+      "router_input_unchanged": true,
+      "post_override": false
+    },
+    {
+      "question": "regra da pós-2025",
+      "router_input_unchanged": true,
+      "post_override": false
+    }
+  ],
+  "both": {
+    "question": "na graduação e na pós",
+    "domain": "ambas"
+  },
+  "post_after_grad": {
+    "new_operation": true,
+    "domain": "pos_graduacao",
+    "pending_clarification": null
+  },
+  "bibliography_variants": [
+    "Fontes:\n- Resolução 956/2025, art. 62",
+    "Referências:\n1. Resolução 956/2025, art. 62",
+    "Sources:\n- Resolução 956/2025, art. 62",
+    "## Fontes normativas\n- Resolução 956/2025, art. 62",
+    "**Referências:**\n1) Resolução 956/2025, art. 62",
+    "Fontes:\n• Resolução 956/2025, art. 62",
+    "Fontes consultadas:\n- Resolução 956/2025, art. 62",
+    "Fontes oficiais:\n- Resolução 956/2025, art. 62",
+    "Bibliografia:\n- Resolução 956/2025, art. 62",
+    "Fontes:\n- Resolução 956/2025,\n  art. 62"
+  ],
+  "other_tests": [
+    "six legitimate prose/nonterminal cases",
+    "one regeneration only then existing fallback",
+    "composer does not append sources",
+    "typed exact evidence/serialization/checkpoint/grounded repeat/SSE",
+    "UI one source region,art999 counterexample,structural dedup,rerun,no chunk_id",
+    "legacy missing evidence text",
+    "Router prompt level versus subtype contract"
+  ],
+  "local_http_ui_cases": [
+    {
+      "case": "explicit_post_clean",
+      "question": "como entrar na pós?",
+      "domain": "pos_graduacao",
+      "strategy": "dense_vector",
+      "norm_ids": [
+        "ufpi-956-2025"
+      ],
+      "eligible_ids": [
+        "ufpi-956-2025-art-1-idx-000000",
+        "ufpi-956-2025-art-63-idx-000061",
+        "ufpi-956-2025-art-62-idx-000060",
+        "ufpi-956-2025-art-31-idx-000029",
+        "ufpi-956-2025-art-57-idx-000055"
+      ],
+      "status": "ANSWER"
+    },
+    {
+      "case": "explicit_grad",
+      "question": "qual a média para passar na graduação?",
+      "domain": "graduacao",
+      "strategy": "dense_vector",
+      "norm_ids": [
+        "ufpi-177-2012"
+      ],
+      "eligible_ids": [
+        "ufpi-177-2012-art-1-idx-000000",
+        "ufpi-177-2012-art-5-idx-000004",
+        "ufpi-177-2012-art-18-idx-000017",
+        "ufpi-177-2012-art-4-idx-000003",
+        "ufpi-177-2012-art-14-idx-000013"
+      ],
+      "status": "ANSWER"
+    },
+    {
+      "case": "explicit_post_after_grad",
+      "question": "como entrar na pós?",
+      "domain": "pos_graduacao",
+      "strategy": "dense_vector",
+      "norm_ids": [
+        "ufpi-956-2025"
+      ],
+      "eligible_ids": [
+        "ufpi-956-2025-art-1-idx-000000",
+        "ufpi-956-2025-art-63-idx-000061",
+        "ufpi-956-2025-art-62-idx-000060",
+        "ufpi-956-2025-art-31-idx-000029",
+        "ufpi-956-2025-art-57-idx-000055"
+      ],
+      "status": "ANSWER"
+    },
+    {
+      "case": "multiple_references",
+      "question": "como funciona o ingresso na pós-graduação?",
+      "domain": "pos_graduacao",
+      "strategy": "dense_vector",
+      "norm_ids": [
+        "ufpi-956-2025"
+      ],
+      "eligible_ids": [
+        "ufpi-956-2025-art-1-idx-000000",
+        "ufpi-956-2025-art-63-idx-000061",
+        "ufpi-956-2025-art-62-idx-000060",
+        "ufpi-956-2025-art-31-idx-000029",
+        "ufpi-956-2025-art-57-idx-000055"
+      ],
+      "status": "ANSWER"
+    }
+  ],
+  "manual_real_provider_cases": [
+    {
+      "case": "explicit_post_clean",
+      "question": "como entrar na pós?",
+      "domain": "pos_graduacao",
+      "status": "ANSWER",
+      "passed": true
+    },
+    {
+      "case": "explicit_grad",
+      "question": "qual a média para passar na graduação?",
+      "domain": "graduacao",
+      "status": "ANSWER",
+      "passed": true
+    },
+    {
+      "case": "explicit_post_after_grad",
+      "question": "como entrar na pós?",
+      "domain": "pos_graduacao",
+      "status": "ANSWER",
+      "passed": true
+    },
+    {
+      "case": "multiple_references",
+      "question": "como funciona o ingresso na pós-graduação?",
+      "domain": "pos_graduacao",
+      "status": "ANSWER",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+[
+  {
+    "command": [
+      "code/.venv/Scripts/ruff.exe",
+      "check",
+      "--config",
+      "code/pyproject.toml",
+      "code/src/rag_baseline/conversation_contracts.py",
+      "code/src/rag_baseline/conversation_graph.py",
+      "code/src/rag_baseline/conversation_policy.py",
+      "code/src/rag_baseline/conversation_transform.py",
+      "code/src/rag_baseline/agent_graph.py",
+      "code/src/schema/schema.py",
+      "code/src/service/normative_transport.py",
+      "code/src/service/service.py",
+      "code/tests/rag_baseline/test_conversation_memory_followups.py",
+      "code/tests/rag_baseline/test_conversation_memory_transport.py",
+      "code/tests/memory/test_normative_checkpoint_serialization.py",
+      "evaluation/results/conversation_memory_followups_v1_001/local_probes.py"
+    ],
+    "exit_code": 0,
+    "stdout": "All checks passed!\n",
+    "stderr": "",
+    "timestamp": "2026-11-01T01:19:42.805871+00:00"
+  },
+  {
+    "command": [
+      "code/.venv/Scripts/ruff.exe",
+      "format",
+      "--check",
+      "--config",
+      "code/pyproject.toml",
+      "code/src/rag_baseline/conversation_contracts.py",
+      "code/src/rag_baseline/conversation_graph.py",
+      "code/src/rag_baseline/conversation_policy.py",
+      "code/src/rag_baseline/conversation_transform.py",
+      "code/src/rag_baseline/agent_graph.py",
+      "code/src/schema/schema.py",
+      "code/src/service/normative_transport.py",
+      "code/src/service/service.py",
+      "code/tests/rag_baseline/test_conversation_memory_followups.py",
+      "code/tests/rag_baseline/test_conversation_memory_transport.py",
+      "code/tests/memory/test_normative_checkpoint_serialization.py",
+      "evaluation/results/conversation_memory_followups_v1_001/local_probes.py"
+    ],
+    "exit_code": 0,
+    "stdout": "12 files already formatted\n",
+    "stderr": "",
+    "timestamp": "2026-11-01T01:19:42.828174+00:00"
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "warning: in the working copy of 'code/src/rag_baseline/agent_graph.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'code/src/service/normative_transport.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'code/tests/rag_baseline/test_conversation_memory_followups.py', LF will be replaced by CRLF the next time Git touches it\n"
+  }
+]

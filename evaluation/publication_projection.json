@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-20",
+  "kind": "editorial_projection_after_execution",
+  "execution_manifest_hashes_are_unchanged": true,
+  "originals_retained_locally": true,
+  "scientific_payload_changed": false,
+  "validation_completed": false,
+  "files": [
+    {
+      "path": "evaluation/datasets/graduacao_v1.json",
+      "execution_or_prepublication_sha256": "2fb2142d7c0b114ec31e087f49b17f0b3c5c738cc0ed2ee7f0e9769e572068b2",
+      "published_sha256": "5ee7806dd7d2822943ed7229d685ad4f8e9f4c6785c3b7a384ac5c7c0331360a",
+      "removed_editorial_fields": [
+        "items[].review.authoring"
+      ]
+    },
+    {
+      "path": "evaluation/datasets/graduacao_v2.json",
+      "execution_or_prepublication_sha256": "bc5ad31492fe4724665ba15580046a29ac98d6b072283c7cd74bdacec5856844",
+      "published_sha256": "6b414b1acebccb610588893fb142e6a2be3501a0a8791303f2f046f2dc52e230",
+      "removed_editorial_fields": [
+        "items[].annotation_note",
+        "items[].review.authoring"
+      ]
+    },
+    {
+      "path": "evaluation/datasets/pos_graduacao_v1.json",
+      "execution_or_prepublication_sha256": "57304adb52685a2f3af89e134e2d41618b16797d20aaf5a6084fd96d769625d0",
+      "published_sha256": "76dda0ebb5a4f8f8c7fc8b7c35152d900869da0b1d0ffc891bcdcc626eafe323",
+      "removed_editorial_fields": [
+        "items[].review.authoring"
+      ]
+    },
+    {
+      "path": "evaluation/datasets/pos_graduacao_v2.json",
+      "execution_or_prepublication_sha256": "2487baeaf07954e8abbc79fc23320cc7a8cbae6f7657dead8348bdd444699842",
+      "published_sha256": "7226634ad11ffd4e5033aaa787ccafd3bc32ae97b90c5dfeb5ef0df20cacd33f",
+      "removed_editorial_fields": [
+        "items[].review.authoring",
+        "items[].review.pdf_visual_check"
+      ]
+    },
+    {
+      "path": "evaluation/datasets/pos_graduacao_v2.md",
+      "execution_or_prepublication_sha256": "f88b093ff51e248ea73fa98ab40900d543673b713ace1922a52f123f4cd2a6b0",
+      "published_sha256": "516103ecd5239605da645250695f6c142766df2e2ce21ec89f5193678633ffca",
+      "removed_editorial_fields": []
+    },
+    {
+      "path": "evaluation/decisions.md",
+      "execution_or_prepublication_sha256": "ddc41e3c985c81655b04ea8849e364d73df6b7ce127604905781e24a6ea16424",
+      "published_sha256": "ad47f204b040bf939f52414f732107a91170621db08078fae7c7e83d978d2ffa",
+      "removed_editorial_fields": []
+    },
+    {
+      "path": "evaluation/protocol.md",
+      "execution_or_prepublication_sha256": "34f853107e2274cd2671c0d0216ac835f58625554f47fad8e7572e3d63428113",
+      "published_sha256": "37fbb2e2612aa32f4ea359b2faf641636c9654e79811b897392d631ff8930af1",
+      "removed_editorial_fields": []
+    },
+    {
+      "path": "evaluation/protocol_v2.md",
+      "execution_or_prepublication_sha256": "2740cfcb7aa3fb18f84e08f43c28814bcfd951c925458a8ff7861e8e89cb1043",
+      "published_sha256": "772e2544cada60ea6d2447a58a908226aa191eb11af47653900201886d967b1a",
+      "removed_editorial_fields": []
+    },
+    {
+      "path": "evaluation/README.md",
+      "execution_or_prepublication_sha256": "7bd34958bcd9c8c3cf38e08821b422cb157ee291617dde1fd7554bc2ecd45f0e",
+      "published_sha256": "9c8dd703dde4e42565e73f72fe2bf2e7b597c96b8ae30d067857ab251e63ae6c",
+      "removed_editorial_fields": []
+    },
+    {
+      "path": "evaluation/results/pilot_001/REPORT.md",
+      "execution_or_prepublication_sha256": "6ffaa72be3cccb0e814a62701068cc2fa1ec76bd75a369ceabfb72d5127fad10",
+      "published_sha256": "87885eb6acbbd3acad43ee03e96e30227adb4a39a9fd4e162d8f861d08404571",
+      "removed_editorial_fields": []
+    },
+    {
+      "path": "evaluation/results/pilot_003/rows.jsonl",
+      "execution_or_prepublication_sha256": "157803596dc1477b20da2378474f94b270102fbf1a3aacea4731acb24a48dbb4",
+      "published_sha256": "842ac69fa0542bdf628f75797c002a76249c65f5f4b16fabbbe7bf3dbd276ecc",
+      "removed_editorial_fields": [
+        "annotation_note",
+        "review.authoring",
+        "review.pdf_visual_check"
+      ]
+    },
+    {
+      "path": "evaluation/datasets/VALIDATION_V2.md",
+      "execution_or_prepublication_sha256": "46d1ee92e04407a31c48f44b2358aa84cb80ef51706eba5c24539ab7ca01033d",
+      "published_sha256": "027b90f244774853c71e1b78f589e95eb9f8979093a3c08d2a808a5352ab6d8f",
+      "removed_editorial_fields": []
+    }
+  ]
+}

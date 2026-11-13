@@ -1,0 +1,632 @@
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF   [100%]
+================================== FAILURES ===================================
+___________ test_public_roundtrip_preserves_operation_state[ANSWER] ___________
+tests\rag_baseline\test_normative_tool_contracts.py:38: in test_public_roundtrip_preserves_operation_state
+    result = contracts.NormativeToolResult.model_validate(state_data(status))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+_______ test_public_roundtrip_preserves_operation_state[CLARIFICATION] ________
+tests\rag_baseline\test_normative_tool_contracts.py:38: in test_public_roundtrip_preserves_operation_state
+    result = contracts.NormativeToolResult.model_validate(state_data(status))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+___________ test_public_roundtrip_preserves_operation_state[ERROR] ____________
+tests\rag_baseline\test_normative_tool_contracts.py:38: in test_public_roundtrip_preserves_operation_state
+    result = contracts.NormativeToolResult.model_validate(state_data(status))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+___________ test_persistence_roundtrip_keeps_internal_audit[ANSWER] ___________
+tests\rag_baseline\test_normative_tool_contracts.py:58: in test_persistence_roundtrip_keeps_internal_audit
+    result = contracts.NormativeToolResult.model_validate(data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+_______ test_persistence_roundtrip_keeps_internal_audit[CLARIFICATION] ________
+tests\rag_baseline\test_normative_tool_contracts.py:58: in test_persistence_roundtrip_keeps_internal_audit
+    result = contracts.NormativeToolResult.model_validate(data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+___________ test_persistence_roundtrip_keeps_internal_audit[ERROR] ____________
+tests\rag_baseline\test_normative_tool_contracts.py:58: in test_persistence_roundtrip_keeps_internal_audit
+    result = contracts.NormativeToolResult.model_validate(data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+________________ test_public_dump_cannot_opt_in_internal_audit ________________
+tests\rag_baseline\test_normative_tool_contracts.py:68: in test_public_dump_cannot_opt_in_internal_audit
+    result = contracts.NormativeToolResult(**answer_data(), internal_audit=audit_data())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+______ test_missing_identity_is_not_silently_defaulted[contract_version] ______
+tests\rag_baseline\test_normative_tool_contracts.py:80: in test_missing_identity_is_not_silently_defaulted
+    contracts.NormativeToolResult.model_validate(data)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+________ test_missing_identity_is_not_silently_defaulted[core_version] ________
+tests\rag_baseline\test_normative_tool_contracts.py:80: in test_missing_identity_is_not_silently_defaulted
+    contracts.NormativeToolResult.model_validate(data)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+_______ test_missing_identity_is_not_silently_defaulted[correlation_id] _______
+tests\rag_baseline\test_normative_tool_contracts.py:80: in test_missing_identity_is_not_silently_defaulted
+    contracts.NormativeToolResult.model_validate(data)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+___________ test_invalid_answer_contract_fails_explicitly[update0] ____________
+tests\rag_baseline\test_normative_tool_contracts.py:93: in test_invalid_answer_contract_fails_explicitly
+    contracts.NormativeToolResult.model_validate({**answer_data(), **update})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+___________ test_invalid_answer_contract_fails_explicitly[update1] ____________
+tests\rag_baseline\test_normative_tool_contracts.py:93: in test_invalid_answer_contract_fails_explicitly
+    contracts.NormativeToolResult.model_validate({**answer_data(), **update})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+___________ test_invalid_answer_contract_fails_explicitly[update2] ____________
+tests\rag_baseline\test_normative_tool_contracts.py:93: in test_invalid_answer_contract_fails_explicitly
+    contracts.NormativeToolResult.model_validate({**answer_data(), **update})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+___________ test_invalid_answer_contract_fails_explicitly[update3] ____________
+tests\rag_baseline\test_normative_tool_contracts.py:93: in test_invalid_answer_contract_fails_explicitly
+    contracts.NormativeToolResult.model_validate({**answer_data(), **update})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+___________ test_invalid_answer_contract_fails_explicitly[update4] ____________
+tests\rag_baseline\test_normative_tool_contracts.py:93: in test_invalid_answer_contract_fails_explicitly
+    contracts.NormativeToolResult.model_validate({**answer_data(), **update})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+___________ test_invalid_answer_contract_fails_explicitly[update5] ____________
+tests\rag_baseline\test_normative_tool_contracts.py:93: in test_invalid_answer_contract_fails_explicitly
+    contracts.NormativeToolResult.model_validate({**answer_data(), **update})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+___________ test_invalid_answer_contract_fails_explicitly[update6] ____________
+tests\rag_baseline\test_normative_tool_contracts.py:93: in test_invalid_answer_contract_fails_explicitly
+    contracts.NormativeToolResult.model_validate({**answer_data(), **update})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+___________ test_invalid_answer_contract_fails_explicitly[update7] ____________
+tests\rag_baseline\test_normative_tool_contracts.py:93: in test_invalid_answer_contract_fails_explicitly
+    contracts.NormativeToolResult.model_validate({**answer_data(), **update})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+___________ test_invalid_answer_contract_fails_explicitly[update8] ____________
+tests\rag_baseline\test_normative_tool_contracts.py:93: in test_invalid_answer_contract_fails_explicitly
+    contracts.NormativeToolResult.model_validate({**answer_data(), **update})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+___________ test_invalid_answer_contract_fails_explicitly[update9] ____________
+tests\rag_baseline\test_normative_tool_contracts.py:93: in test_invalid_answer_contract_fails_explicitly
+    contracts.NormativeToolResult.model_validate({**answer_data(), **update})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+___________ test_invalid_answer_contract_fails_explicitly[update10] ___________
+tests\rag_baseline\test_normative_tool_contracts.py:93: in test_invalid_answer_contract_fails_explicitly
+    contracts.NormativeToolResult.model_validate({**answer_data(), **update})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+___________ test_invalid_answer_contract_fails_explicitly[update11] ___________
+tests\rag_baseline\test_normative_tool_contracts.py:93: in test_invalid_answer_contract_fails_explicitly
+    contracts.NormativeToolResult.model_validate({**answer_data(), **update})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+___________ test_invalid_answer_contract_fails_explicitly[update12] ___________
+tests\rag_baseline\test_normative_tool_contracts.py:93: in test_invalid_answer_contract_fails_explicitly
+    contracts.NormativeToolResult.model_validate({**answer_data(), **update})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+_ test_non_answer_cannot_masquerade_as_normative_answer[CLARIFICATION-update0] _
+tests\rag_baseline\test_normative_tool_contracts.py:105: in test_non_answer_cannot_masquerade_as_normative_answer
+    contracts.NormativeToolResult.model_validate({**state_data(status), **update})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+_ test_non_answer_cannot_masquerade_as_normative_answer[CLARIFICATION-update1] _
+tests\rag_baseline\test_normative_tool_contracts.py:105: in test_non_answer_cannot_masquerade_as_normative_answer
+    contracts.NormativeToolResult.model_validate({**state_data(status), **update})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+_ test_non_answer_cannot_masquerade_as_normative_answer[CLARIFICATION-update2] _
+tests\rag_baseline\test_normative_tool_contracts.py:105: in test_non_answer_cannot_masquerade_as_normative_answer
+    contracts.NormativeToolResult.model_validate({**state_data(status), **update})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+____ test_non_answer_cannot_masquerade_as_normative_answer[ERROR-update3] _____
+tests\rag_baseline\test_normative_tool_contracts.py:105: in test_non_answer_cannot_masquerade_as_normative_answer
+    contracts.NormativeToolResult.model_validate({**state_data(status), **update})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+____ test_non_answer_cannot_masquerade_as_normative_answer[ERROR-update4] _____
+tests\rag_baseline\test_normative_tool_contracts.py:105: in test_non_answer_cannot_masquerade_as_normative_answer
+    contracts.NormativeToolResult.model_validate({**state_data(status), **update})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+____ test_non_answer_cannot_masquerade_as_normative_answer[ERROR-update5] _____
+tests\rag_baseline\test_normative_tool_contracts.py:105: in test_non_answer_cannot_masquerade_as_normative_answer
+    contracts.NormativeToolResult.model_validate({**state_data(status), **update})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+___________ test_message_text_cannot_fabricate_temporal_provenance ____________
+tests\rag_baseline\test_normative_tool_contracts.py:110: in test_message_text_cannot_fabricate_temporal_provenance
+    contracts.NormativeToolResult(**{**answer_data(), "temporal_provenance": FINAL})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+__________ test_invalid_persistence_record_fails_explicitly[version] __________
+tests\rag_baseline\test_normative_tool_contracts.py:115: in test_invalid_persistence_record_fails_explicitly
+    payload = contracts.NormativeToolResult(**answer_data()).to_persistence()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+___________ test_invalid_persistence_record_fails_explicitly[extra] ___________
+tests\rag_baseline\test_normative_tool_contracts.py:115: in test_invalid_persistence_record_fails_explicitly
+    payload = contracts.NormativeToolResult(**answer_data()).to_persistence()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+______ test_invalid_persistence_record_fails_explicitly[missing_result] _______
+tests\rag_baseline\test_normative_tool_contracts.py:115: in test_invalid_persistence_record_fails_explicitly
+    payload = contracts.NormativeToolResult(**answer_data()).to_persistence()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_contracts.py:18: in __getattr__
+    pytest.fail("NormativeToolResult is not implemented")
+E   Failed: NormativeToolResult is not implemented
+____ test_delegates_automatic_filtered_query_and_preserves_official_result ____
+tests\rag_baseline\test_normative_tool_facade.py:49: in test_delegates_automatic_filtered_query_and_preserves_official_result
+    facade, calls = fake_core(monkeypatch, module, core)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+_____________ test_result_does_not_alias_mutable_core_provenance ______________
+tests\rag_baseline\test_normative_tool_facade.py:67: in test_result_does_not_alias_mutable_core_provenance
+    facade, _ = fake_core(monkeypatch, module, core)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+__________ test_creates_distinct_operation_ids_without_thread_state ___________
+tests\rag_baseline\test_normative_tool_facade.py:76: in test_creates_distinct_operation_ids_without_thread_state
+    facade, _ = fake_core(monkeypatch, module)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+______ test_bypass_arguments_rejected_by_real_signature[version_filter] _______
+tests\rag_baseline\test_normative_tool_facade.py:87: in test_bypass_arguments_rejected_by_real_signature
+    facade, calls = fake_core(monkeypatch, module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+____ test_bypass_arguments_rejected_by_real_signature[use_version_filter] _____
+tests\rag_baseline\test_normative_tool_facade.py:87: in test_bypass_arguments_rejected_by_real_signature
+    facade, calls = fake_core(monkeypatch, module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+_______ test_bypass_arguments_rejected_by_real_signature[manual_scope] ________
+tests\rag_baseline\test_normative_tool_facade.py:87: in test_bypass_arguments_rejected_by_real_signature
+    facade, calls = fake_core(monkeypatch, module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+___________ test_bypass_arguments_rejected_by_real_signature[scope] ___________
+tests\rag_baseline\test_normative_tool_facade.py:87: in test_bypass_arguments_rejected_by_real_signature
+    facade, calls = fake_core(monkeypatch, module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+__________ test_bypass_arguments_rejected_by_real_signature[sector] ___________
+tests\rag_baseline\test_normative_tool_facade.py:87: in test_bypass_arguments_rejected_by_real_signature
+    facade, calls = fake_core(monkeypatch, module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+___________ test_bypass_arguments_rejected_by_real_signature[top_k] ___________
+tests\rag_baseline\test_normative_tool_facade.py:87: in test_bypass_arguments_rejected_by_real_signature
+    facade, calls = fake_core(monkeypatch, module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+___________ test_bypass_arguments_rejected_by_real_signature[model] ___________
+tests\rag_baseline\test_normative_tool_facade.py:87: in test_bypass_arguments_rejected_by_real_signature
+    facade, calls = fake_core(monkeypatch, module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+________ test_bypass_arguments_rejected_by_real_signature[temperature] ________
+tests\rag_baseline\test_normative_tool_facade.py:87: in test_bypass_arguments_rejected_by_real_signature
+    facade, calls = fake_core(monkeypatch, module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+_____ test_bypass_arguments_rejected_by_real_signature[retrieval_backend] _____
+tests\rag_baseline\test_normative_tool_facade.py:87: in test_bypass_arguments_rejected_by_real_signature
+    facade, calls = fake_core(monkeypatch, module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+______ test_bypass_arguments_rejected_by_real_signature[skip_grounding] _______
+tests\rag_baseline\test_normative_tool_facade.py:87: in test_bypass_arguments_rejected_by_real_signature
+    facade, calls = fake_core(monkeypatch, module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+________ test_bypass_arguments_rejected_by_real_signature[skip_guard] _________
+tests\rag_baseline\test_normative_tool_facade.py:87: in test_bypass_arguments_rejected_by_real_signature
+    facade, calls = fake_core(monkeypatch, module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+_______ test_bypass_arguments_rejected_by_real_signature[raw_retrieval] _______
+tests\rag_baseline\test_normative_tool_facade.py:87: in test_bypass_arguments_rejected_by_real_signature
+    facade, calls = fake_core(monkeypatch, module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+________ test_bypass_arguments_rejected_by_real_signature[raw_search] _________
+tests\rag_baseline\test_normative_tool_facade.py:87: in test_bypass_arguments_rejected_by_real_signature
+    facade, calls = fake_core(monkeypatch, module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+______ test_clarification_returns_to_parent_without_answer_or_interrupt _______
+tests\rag_baseline\test_normative_tool_facade.py:99: in test_clarification_returns_to_parent_without_answer_or_interrupt
+    facade, _ = fake_core(monkeypatch, module, core)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+_ test_exception_mapping_never_exposes_exception_text[error0-provider_error] __
+tests\rag_baseline\test_normative_tool_facade.py:114: in test_exception_mapping_never_exposes_exception_text
+    facade, _ = fake_core(monkeypatch, module, error=error)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+_ test_exception_mapping_never_exposes_exception_text[error1-index_unavailable] _
+tests\rag_baseline\test_normative_tool_facade.py:114: in test_exception_mapping_never_exposes_exception_text
+    facade, _ = fake_core(monkeypatch, module, error=error)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+_ test_exception_mapping_never_exposes_exception_text[error2-invalid_request] _
+tests\rag_baseline\test_normative_tool_facade.py:114: in test_exception_mapping_never_exposes_exception_text
+    facade, _ = fake_core(monkeypatch, module, error=error)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+_ test_exception_mapping_never_exposes_exception_text[error3-internal_error] __
+tests\rag_baseline\test_normative_tool_facade.py:114: in test_exception_mapping_never_exposes_exception_text
+    facade, _ = fake_core(monkeypatch, module, error=error)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+_ test_invalid_or_failed_core_result_is_not_normative_answer[no_structured-invalid_core_result] _
+tests\rag_baseline\test_normative_tool_facade.py:145: in test_invalid_or_failed_core_result_is_not_normative_answer
+    facade, _ = fake_core(monkeypatch, module, core)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+_ test_invalid_or_failed_core_result_is_not_normative_answer[no_audit-invalid_core_result] _
+tests\rag_baseline\test_normative_tool_facade.py:145: in test_invalid_or_failed_core_result_is_not_normative_answer
+    facade, _ = fake_core(monkeypatch, module, core)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+_ test_invalid_or_failed_core_result_is_not_normative_answer[v1_audit-invalid_core_result] _
+tests\rag_baseline\test_normative_tool_facade.py:145: in test_invalid_or_failed_core_result_is_not_normative_answer
+    facade, _ = fake_core(monkeypatch, module, core)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+_ test_invalid_or_failed_core_result_is_not_normative_answer[unfiltered-invalid_core_result] _
+tests\rag_baseline\test_normative_tool_facade.py:145: in test_invalid_or_failed_core_result_is_not_normative_answer
+    facade, _ = fake_core(monkeypatch, module, core)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+_ test_invalid_or_failed_core_result_is_not_normative_answer[manual-invalid_core_result] _
+tests\rag_baseline\test_normative_tool_facade.py:145: in test_invalid_or_failed_core_result_is_not_normative_answer
+    facade, _ = fake_core(monkeypatch, module, core)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+_ test_invalid_or_failed_core_result_is_not_normative_answer[mismatched_domain-invalid_core_result] _
+tests\rag_baseline\test_normative_tool_facade.py:145: in test_invalid_or_failed_core_result_is_not_normative_answer
+    facade, _ = fake_core(monkeypatch, module, core)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+_ test_invalid_or_failed_core_result_is_not_normative_answer[raw_in_final-invalid_core_result] _
+tests\rag_baseline\test_normative_tool_facade.py:145: in test_invalid_or_failed_core_result_is_not_normative_answer
+    facade, _ = fake_core(monkeypatch, module, core)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+_ test_invalid_or_failed_core_result_is_not_normative_answer[bad_provenance-invalid_core_result] _
+tests\rag_baseline\test_normative_tool_facade.py:145: in test_invalid_or_failed_core_result_is_not_normative_answer
+    facade, _ = fake_core(monkeypatch, module, core)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+_ test_invalid_or_failed_core_result_is_not_normative_answer[generation_error-provider_error] _
+tests\rag_baseline\test_normative_tool_facade.py:145: in test_invalid_or_failed_core_result_is_not_normative_answer
+    facade, _ = fake_core(monkeypatch, module, core)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+_ test_invalid_or_failed_core_result_is_not_normative_answer[empty_context-no_eligible_context] _
+tests\rag_baseline\test_normative_tool_facade.py:145: in test_invalid_or_failed_core_result_is_not_normative_answer
+    facade, _ = fake_core(monkeypatch, module, core)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+_______________ test_invalid_input_does_not_invoke_core[empty] ________________
+tests\rag_baseline\test_normative_tool_facade.py:155: in test_invalid_input_does_not_invoke_core
+    facade, calls = fake_core(monkeypatch, module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+_____________ test_invalid_input_does_not_invoke_core[whitespace] _____________
+tests\rag_baseline\test_normative_tool_facade.py:155: in test_invalid_input_does_not_invoke_core
+    facade, calls = fake_core(monkeypatch, module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+______________ test_invalid_input_does_not_invoke_core[too_long] ______________
+tests\rag_baseline\test_normative_tool_facade.py:155: in test_invalid_input_does_not_invoke_core
+    facade, calls = fake_core(monkeypatch, module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:42: in fake_core
+    monkeypatch.setattr(module, "AgenticRagService", Core)
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+___________ test_real_pipeline_equivalence_and_structured_grounding ___________
+tests\rag_baseline\test_normative_tool_facade.py:208: in test_real_pipeline_equivalence_and_structured_grounding
+    result = await module.NormativeRagFacade(service, router, vf).query(question)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+__ test_real_pipeline_clarification_has_no_retrieval_generation_or_interrupt __
+tests\rag_baseline\test_normative_tool_facade.py:221: in test_real_pipeline_clarification_has_no_retrieval_generation_or_interrupt
+    result = await module.NormativeRagFacade(service, router, vf).query("Posso cancelar?")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+___ test_v2_fallback_remains_authoritative_answer_with_separate_core_status ___
+tests\rag_baseline\test_normative_tool_facade.py:229: in test_v2_fallback_remains_authoritative_answer_with_separate_core_status
+    result = await module.NormativeRagFacade(service, router, vf).query("Art. 68 na graduação antes da alteração?")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_normative_tool_facade.py:24: in __getattr__
+    pytest.fail("NormativeRagFacade is not implemented")
+E   Failed: NormativeRagFacade is not implemented
+=========================== short test summary info ===========================
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_public_roundtrip_preserves_operation_state[ANSWER]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_public_roundtrip_preserves_operation_state[CLARIFICATION]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_public_roundtrip_preserves_operation_state[ERROR]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_persistence_roundtrip_keeps_internal_audit[ANSWER]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_persistence_roundtrip_keeps_internal_audit[CLARIFICATION]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_persistence_roundtrip_keeps_internal_audit[ERROR]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_public_dump_cannot_opt_in_internal_audit
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_missing_identity_is_not_silently_defaulted[contract_version]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_missing_identity_is_not_silently_defaulted[core_version]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_missing_identity_is_not_silently_defaulted[correlation_id]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update0]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update1]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update2]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update3]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update4]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update5]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update6]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update7]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update8]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update9]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update10]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update11]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update12]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_non_answer_cannot_masquerade_as_normative_answer[CLARIFICATION-update0]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_non_answer_cannot_masquerade_as_normative_answer[CLARIFICATION-update1]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_non_answer_cannot_masquerade_as_normative_answer[CLARIFICATION-update2]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_non_answer_cannot_masquerade_as_normative_answer[ERROR-update3]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_non_answer_cannot_masquerade_as_normative_answer[ERROR-update4]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_non_answer_cannot_masquerade_as_normative_answer[ERROR-update5]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_message_text_cannot_fabricate_temporal_provenance
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_persistence_record_fails_explicitly[version]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_persistence_record_fails_explicitly[extra]
+FAILED tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_persistence_record_fails_explicitly[missing_result]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_delegates_automatic_filtered_query_and_preserves_official_result
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_result_does_not_alias_mutable_core_provenance
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_creates_distinct_operation_ids_without_thread_state
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[version_filter]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[use_version_filter]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[manual_scope]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[scope]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[sector]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[top_k]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[model]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[temperature]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[retrieval_backend]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[skip_grounding]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[skip_guard]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[raw_retrieval]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[raw_search]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_clarification_returns_to_parent_without_answer_or_interrupt
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_exception_mapping_never_exposes_exception_text[error0-provider_error]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_exception_mapping_never_exposes_exception_text[error1-index_unavailable]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_exception_mapping_never_exposes_exception_text[error2-invalid_request]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_exception_mapping_never_exposes_exception_text[error3-internal_error]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_invalid_or_failed_core_result_is_not_normative_answer[no_structured-invalid_core_result]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_invalid_or_failed_core_result_is_not_normative_answer[no_audit-invalid_core_result]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_invalid_or_failed_core_result_is_not_normative_answer[v1_audit-invalid_core_result]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_invalid_or_failed_core_result_is_not_normative_answer[unfiltered-invalid_core_result]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_invalid_or_failed_core_result_is_not_normative_answer[manual-invalid_core_result]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_invalid_or_failed_core_result_is_not_normative_answer[mismatched_domain-invalid_core_result]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_invalid_or_failed_core_result_is_not_normative_answer[raw_in_final-invalid_core_result]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_invalid_or_failed_core_result_is_not_normative_answer[bad_provenance-invalid_core_result]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_invalid_or_failed_core_result_is_not_normative_answer[generation_error-provider_error]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_invalid_or_failed_core_result_is_not_normative_answer[empty_context-no_eligible_context]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_invalid_input_does_not_invoke_core[empty]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_invalid_input_does_not_invoke_core[whitespace]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_invalid_input_does_not_invoke_core[too_long]
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_real_pipeline_equivalence_and_structured_grounding
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_real_pipeline_clarification_has_no_retrieval_generation_or_interrupt
+FAILED tests/rag_baseline/test_normative_tool_facade.py::test_v2_fallback_remains_authoritative_answer_with_separate_core_status
+70 failed in 1.36s

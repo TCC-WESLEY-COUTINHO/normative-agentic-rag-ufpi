@@ -1,0 +1,58 @@
+{
+  "files": {
+    ".dockerignore": {
+      "sha256": "d3c0b0a0a19864f16a57c17df8a33d9c783866796ee8b59dd0da9b1b3cd9bf6c",
+      "bytes": 322,
+      "crlf_count": 0,
+      "lf_count": 15,
+      "shebang": false
+    },
+    "code/.dockerignore": {
+      "sha256": "680afb286f15388b0734e6fcf143ff760094061fab2af6447918ec57cfc2e35f",
+      "bytes": 172,
+      "crlf_count": 18,
+      "lf_count": 18,
+      "shebang": false
+    },
+    "code/docker/Dockerfile.service": {
+      "sha256": "f1c08bab62a0756895372b2eea914340ffa2196c118faa5ae86138cf5248c282",
+      "bytes": 1075,
+      "crlf_count": 28,
+      "lf_count": 28,
+      "shebang": false
+    },
+    "code/docker/Dockerfile.app": {
+      "sha256": "b3aaa8fe89d7eb5965ef11848938937caaf5df47e7f613b71dd30ced8f6cdf8d",
+      "bytes": 793,
+      "crlf_count": 24,
+      "lf_count": 24,
+      "shebang": false
+    },
+    "code/compose.yaml": {
+      "sha256": "bf635acefa94ae3a91a41950ead703e85385a380d6738989bcf07982ba11fea8",
+      "bytes": 2546,
+      "crlf_count": 88,
+      "lf_count": 88,
+      "shebang": false
+    },
+    "code/compose.prod.yaml": {
+      "sha256": "5d9ac8dbcf3b25a2efdb1fcd5ea56b8db5b3e2a20e1857cf0438a72645552a64",
+      "bytes": 2549,
+      "crlf_count": 96,
+      "lf_count": 96,
+      "shebang": false
+    },
+    "code/src/run_service.py": {
+      "sha256": "3ff8adb97c572d29bd78f5b9a850156aa97c6ab7628fa525275884c8fb2cee2f",
+      "bytes": 965,
+      "crlf_count": 22,
+      "lf_count": 22,
+      "shebang": false
+    }
+  },
+  "root": ".",
+  "index_path": "code/.local/chroma",
+  "build_context": ".",
+  "dockerfile": "code/docker/Dockerfile.service",
+  "tag": "normative-agentic-rag-ufpi:runtime-smoke"
+}

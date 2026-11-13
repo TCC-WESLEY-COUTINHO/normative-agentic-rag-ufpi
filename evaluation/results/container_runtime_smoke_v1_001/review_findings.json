@@ -1,0 +1,29 @@
+{
+    "reviewed_at":  "2026-11-01T17:17:18.1642970Z",
+    "base":  "ccf71406849634b7f7fae3f31b9d9d7217fac831",
+    "product_head":  "cdc4996",
+    "scope":  "Committed narrow healthcheck fix and regression plus operational evidence",
+    "critical":  [
+
+                 ],
+    "important":  [
+
+                  ],
+    "minor":  [
+                  {
+                      "impact":  "Portable host-only execution is weaker evidence than the recorded image execution.",
+                      "disposition":  "deferred; recorded RED/GREEN inside the real image and real Compose healthy status are authoritative",
+                      "finding":  "Regression resolves the configured executable from the executor PATH; a host containing curl cannot reproduce the original missing-image-executable failure.",
+                      "file":  "code/tests/integration/test_service_container_healthcheck.py",
+                      "line":  35
+                  }
+              ],
+    "verdict":  "No blocking engineering findings",
+    "outside_exercised_scope":  [
+                                    "Real provider connectivity/credentials/embedding retrieval/answer quality",
+                                    "Universal absence of network traffic or secrets beyond instrumented APIs/application tree",
+                                    "Production deploy/authentication/live PostgreSQL or Mongo/legacy default-agent responses",
+                                    "Historical ownership or physical Chroma housekeeping before the run"
+                                ],
+    "finalization_checks":  "Recorded in verification.json and cleanup.json; explicit log staging is required."
+}

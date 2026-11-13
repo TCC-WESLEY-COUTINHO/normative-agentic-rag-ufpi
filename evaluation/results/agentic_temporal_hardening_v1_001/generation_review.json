@@ -1,0 +1,163 @@
+{
+  "method": "Inspeção técnica das saídas preservadas, sem validação jurídica humana e sem escore agregado de qualidade.",
+  "generated_responses_reviewed": 11,
+  "cases_with_explicit_generation_findings": 3,
+  "reviews": [
+    {
+      "condition": "smoke_001",
+      "id": "P1_current",
+      "generation_attempted": true,
+      "findings": [
+        {
+          "layer": "GENERATION",
+          "code": "citation_granularity_prompt_not_followed",
+          "evidence": "A resposta gerada acrescenta parágrafos/incisos nas citações, apesar da restrição a fonte/artigo; o automático também produz a localização malformada Art. 4º do Art. 3º."
+        }
+      ],
+      "notes": [
+        "A elegibilidade temporal do contexto não atesta correção das afirmações ou localizações geradas."
+      ]
+    },
+    {
+      "condition": "smoke_001",
+      "id": "P2_historical",
+      "generation_attempted": true,
+      "findings": [],
+      "notes": []
+    },
+    {
+      "condition": "smoke_001",
+      "id": "P3_validity",
+      "generation_attempted": false,
+      "findings": [],
+      "notes": []
+    },
+    {
+      "condition": "smoke_001",
+      "id": "G1_current",
+      "generation_attempted": false,
+      "findings": [],
+      "notes": []
+    },
+    {
+      "condition": "smoke_001",
+      "id": "G2_unaffected",
+      "generation_attempted": true,
+      "findings": [],
+      "notes": [
+        "RETRIEVAL: art. 69 não está nos cinco chunks. O texto gerado abstém-se; generation_attempts=1 mede chamada, não resposta substantiva correta."
+      ]
+    },
+    {
+      "condition": "smoke_001",
+      "id": "G3_historical",
+      "generation_attempted": false,
+      "findings": [],
+      "notes": []
+    },
+    {
+      "condition": "smoke_001",
+      "id": "G4_amendment",
+      "generation_attempted": true,
+      "findings": [],
+      "notes": []
+    },
+    {
+      "condition": "smoke_001",
+      "id": "E2_calendar",
+      "generation_attempted": false,
+      "findings": [],
+      "notes": []
+    },
+    {
+      "condition": "smoke_001",
+      "id": "R2_ambiguous",
+      "generation_attempted": false,
+      "findings": [],
+      "notes": []
+    },
+    {
+      "condition": "smoke_manual_001",
+      "id": "P1_current",
+      "generation_attempted": true,
+      "findings": [
+        {
+          "layer": "GENERATION",
+          "code": "citation_granularity_prompt_not_followed",
+          "evidence": "A resposta gerada acrescenta parágrafos/incisos nas citações, apesar da restrição a fonte/artigo; o automático também produz a localização malformada Art. 4º do Art. 3º."
+        }
+      ],
+      "notes": [
+        "A elegibilidade temporal do contexto não atesta correção das afirmações ou localizações geradas."
+      ]
+    },
+    {
+      "condition": "smoke_manual_001",
+      "id": "P2_historical",
+      "generation_attempted": true,
+      "findings": [],
+      "notes": [
+        "Conteúdo da 658 preservado; a resposta usa a atribuição Segundo a Resolução e verbos no futuro. Contextualização histórica menos explícita que no automático; não se atribuiu acurácia jurídica."
+      ]
+    },
+    {
+      "condition": "smoke_manual_001",
+      "id": "P3_validity",
+      "generation_attempted": true,
+      "findings": [],
+      "notes": []
+    },
+    {
+      "condition": "smoke_manual_001",
+      "id": "G1_current",
+      "generation_attempted": true,
+      "findings": [],
+      "notes": []
+    },
+    {
+      "condition": "smoke_manual_001",
+      "id": "G2_unaffected",
+      "generation_attempted": true,
+      "findings": [],
+      "notes": [
+        "RETRIEVAL: art. 69 não está nos cinco chunks. O texto gerado abstém-se; generation_attempts=1 mede chamada, não resposta substantiva correta."
+      ]
+    },
+    {
+      "condition": "smoke_manual_001",
+      "id": "G3_historical",
+      "generation_attempted": true,
+      "findings": [
+        {
+          "layer": "GENERATION",
+          "code": "historical_context_misinterpreted",
+          "evidence": "O art. 68 original foi preservado e o ato posterior excluído, mas a resposta nega disponibilidade da redação anterior e chama a redação de vigente."
+        }
+      ],
+      "notes": [
+        "Também acrescenta §4º na citação final. Não foi mascarado por pós-processamento nem corrigido por tuning."
+      ]
+    },
+    {
+      "condition": "smoke_manual_001",
+      "id": "G4_amendment",
+      "generation_attempted": true,
+      "findings": [],
+      "notes": []
+    },
+    {
+      "condition": "smoke_manual_001",
+      "id": "E2_calendar",
+      "generation_attempted": false,
+      "findings": [],
+      "notes": []
+    },
+    {
+      "condition": "smoke_manual_001",
+      "id": "R2_ambiguous",
+      "generation_attempted": false,
+      "findings": [],
+      "notes": []
+    }
+  ]
+}

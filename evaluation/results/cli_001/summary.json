@@ -1,0 +1,32 @@
+{
+  "kind": "development_cli_audit",
+  "groups": {
+    "pos_graduacao": {
+      "n": 20,
+      "answerable_n": 16,
+      "clarification_expected_n": 4,
+      "observed_response_kinds": {
+        "generated": 20
+      },
+      "errors": 0,
+      "wrong_scope_for_explicit_level": [],
+      "metrics": {
+        "recall_at_1": 0.6979166666666666,
+        "hit_at_1": 0.9375,
+        "recall_at_3": 0.9166666666666666,
+        "hit_at_3": 1,
+        "recall_at_5": 1.0,
+        "hit_at_5": 1,
+        "evidence_complete_at_5": 1,
+        "mrr_at_5": 0.96875,
+        "ndcg_at_5": 0.9490147624454457,
+        "wrong_norm_at_5": 0.0
+      },
+      "output_sha256": "711c1e493af55f29d2a404d19ef40acb693a14d809b9fa7c39a34f4d635a59b0"
+    }
+  },
+  "human_answer_accuracy": null,
+  "human_scores": null,
+  "scope_policy_is_not_a_learned_router": true,
+  "interpretation": "Retrieval and execution checks, not normative answer accuracy or a controlled ablation."
+}

@@ -1,0 +1,12 @@
+**
+!code/pyproject.toml
+!code/uv.lock
+!code/src/client/**
+!code/src/schema/**
+!code/src/rag_baseline/**
+!code/src/chat_ui/**
+!code/src/static/**
+!code/src/streamlit_app.py
+code/src/**/__pycache__/
+code/src/**/*.pyc
+code/src/**/*.egg-info/

@@ -1,0 +1,47 @@
+{
+  "red": [
+    {
+      "artifact": "tdd_guard_config_red.txt",
+      "result": "12 failed, 15 deselected, 2 warnings in 9.04s"
+    },
+    {
+      "artifact": "tdd_red.txt",
+      "result": "45 failed in 2.20s"
+    },
+    {
+      "artifact": "tdd_review_red.txt",
+      "result": "3 failed, 27 deselected, 2 warnings in 8.42s"
+    },
+    {
+      "artifact": "tdd_review_variants_red.txt",
+      "result": "3 failed, 34 deselected, 2 warnings in 8.47s"
+    },
+    {
+      "artifact": "tdd_transport_guard_red.txt",
+      "result": "15 failed, 2 passed, 2 warnings in 9.12s"
+    }
+  ],
+  "green": [
+    {
+      "selection": "initial_memory",
+      "passed": 45
+    },
+    {
+      "selection": "memory_and_adapter",
+      "passed": 62
+    },
+    {
+      "selection": "composed_with_previous_transport_agent",
+      "passed": 174
+    },
+    {
+      "selection": "new_memory_before_last_variants",
+      "passed": 86
+    },
+    {
+      "selection": "final_new_focused",
+      "passed": 89
+    }
+  ],
+  "all_behavior_fixes_before_freeze": true
+}

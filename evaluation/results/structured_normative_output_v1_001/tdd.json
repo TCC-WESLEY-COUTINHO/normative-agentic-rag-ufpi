@@ -1,0 +1,51 @@
+{
+  "initial_red": {
+    "command": "pytest tests/rag_baseline/test_normative_output.py -q -p no:cacheprovider --tb=short",
+    "failed": 36,
+    "passed": 1,
+    "expected_causes": [
+      "missing structured-output module",
+      "missing output audit",
+      "one generation with no guard"
+    ]
+  },
+  "first_green": {
+    "passed": 37,
+    "failed": 0
+  },
+  "additional_red_cycles": [
+    {
+      "failed": 2,
+      "passed": 37,
+      "classes": [
+        "provider failure audit",
+        "separate output metrics"
+      ]
+    },
+    {
+      "failed": 7,
+      "passed": 42,
+      "classes": [
+        "affirmative negation scope",
+        "bare repeal",
+        "article list",
+        "academic publication"
+      ]
+    },
+    {
+      "failed": 5,
+      "passed": 49,
+      "classes": [
+        "direct negative clauses",
+        "academic publication predicate",
+        "dotted identifier",
+        "article association"
+      ]
+    }
+  ],
+  "final_green": {
+    "passed": 54,
+    "failed": 0
+  },
+  "real_provider_calls_in_unit_tests": 0
+}

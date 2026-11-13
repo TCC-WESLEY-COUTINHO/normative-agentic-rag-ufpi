@@ -1,0 +1,41 @@
+{
+  "display": "normative_references: exact final IDs and norm/article identity; rank/id ordering; norm/article/role dedup; article/source ceiling; no subdivision promotion",
+  "body": "NormativeOutputGuard uses displayed reference pairs for article authorization and unconditionally rejects every SUBDIVISION match",
+  "coupling": "Display reference list is also the body article universe, and no separate subdivision permission is consumed",
+  "subdivision": "Regex covers paragraph, inciso, al?nea and article-comma-Roman; all matches become unvalidated_subdivision",
+  "caput": "Not present in SUBDIVISION pattern",
+  "unknown": "Negation pattern lacks N?o h? elementos suficientes para confirmar se; the matching est? em vigor is consequently rejected",
+  "residual_chronology": [
+    {
+      "id": "A_grad_historical",
+      "repetition": 9,
+      "category": "unsupported effectivity boundary"
+    },
+    {
+      "id": "E_validity",
+      "repetition": 3,
+      "category": "unsupported immediate effect"
+    },
+    {
+      "id": "E_validity",
+      "repetition": 6,
+      "category": "unsupported immediate effect"
+    },
+    {
+      "id": "E_validity",
+      "repetition": 7,
+      "category": "unsupported immediate effect"
+    },
+    {
+      "id": "E_validity",
+      "repetition": 10,
+      "category": "unsupported immediate effect"
+    },
+    {
+      "id": "E_validity",
+      "repetition": 9,
+      "category": "unsupported publication-relative efficacy boundary"
+    }
+  ],
+  "preservation": "No previous result files changed; code audit before implementation"
+}

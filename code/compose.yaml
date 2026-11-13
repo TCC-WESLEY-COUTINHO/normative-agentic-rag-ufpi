@@ -1,3 +1,5 @@
+# LEGADO: serviço anterior ao protótipo do TCC II (agente chatbot_ufpi_v2, PostgreSQL; desenvolvimento). Para o protótipo atual (A''-J v2 com a
+# interface Bisco), use compose.demo.yaml e scripts/start-local.cmd, na raiz do repositório.
 services:
   postgres:
     image: postgres:16
@@ -17,8 +19,10 @@ services:
 
   agent_service:
     build:
-      context: .
-      dockerfile: docker/Dockerfile.service
+      context: ..
+      dockerfile: code/docker/Dockerfile.service
+    environment:
+      CHROMA_PERSIST_DIR: /app/index
     ports:
       - "8080:8080"
     env_file:
@@ -27,30 +31,38 @@ services:
       postgres:
         condition: service_healthy
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8080/info"]
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://localhost:8080/health', timeout=3)"
       interval: 5s
       timeout: 5s
       retries: 5
     # Volume mount of development-only credentials since compose watch doesn't sync ignored files and doesn't do initial sync when the service starts
     volumes:
       - ./privatecredentials:/privatecredentials
+      - ./.local/chroma:/app/index
     develop:
       watch:
         - path: src/agents/
           action: sync+restart
-          target: /app/agents/
+          target: /app/code/src/agents/
         - path: src/schema/
           action: sync+restart
-          target: /app/schema/
+          target: /app/code/src/schema/
         - path: src/service/
           action: sync+restart
-          target: /app/service/
+          target: /app/code/src/service/
         - path: src/core/
           action: sync+restart
-          target: /app/core/
+          target: /app/code/src/core/
         - path: src/memory/
           action: sync+restart
-          target: /app/memory/
+          target: /app/code/src/memory/
+        - path: src/rag_baseline/
+          action: sync+restart
+          target: /app/code/src/rag_baseline/
   streamlit_app:
     build:
       context: .
@@ -70,13 +82,13 @@ services:
       watch:
         - path: src/client/
           action: sync+restart
-          target: /app/client/
+          target: /app/code/src/client/
         - path: src/schema/
           action: sync+restart
-          target: /app/schema/
+          target: /app/code/src/schema/
         - path: src/streamlit_app.py
           action: sync+restart
-          target: /app/streamlit_app.py
+          target: /app/code/src/streamlit_app.py
 
 volumes:
   postgres_data:

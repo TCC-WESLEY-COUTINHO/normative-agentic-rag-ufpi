@@ -1,0 +1,52 @@
+{
+  "pairs": [
+    {
+      "pair": "grad_coordinator",
+      "case_ids": [
+        "G1_current",
+        "G3_historical"
+      ],
+      "different_final_context": true,
+      "final_ids": [
+        [
+          "ufpi-1056-2026-art-1-idx-000000",
+          "ufpi-177-2012-art-68-idx-000067",
+          "ufpi-177-2012-art-69-idx-000068",
+          "ufpi-177-2012-art-66-idx-000065",
+          "ufpi-177-2012-art-63-idx-000062"
+        ],
+        [
+          "ufpi-177-2012-art-68-idx-000067",
+          "ufpi-177-2012-art-69-idx-000068",
+          "ufpi-177-2012-art-66-idx-000065",
+          "ufpi-177-2012-art-80-idx-000079",
+          "ufpi-177-2012-art-79-idx-000078"
+        ]
+      ]
+    },
+    {
+      "pair": "post_defense",
+      "case_ids": [
+        "P1_current",
+        "P2_historical"
+      ],
+      "different_final_context": true,
+      "final_ids": [
+        [
+          "ufpi-956-2025-art-28-idx-000027",
+          "ufpi-956-2025-art-49-idx-000047",
+          "ufpi-956-2025-art-54-idx-000052",
+          "ufpi-956-2025-art-3-idx-000002",
+          "ufpi-956-2025-art-53-idx-000051"
+        ],
+        [
+          "ufpi-658-2024-art-40-idx-000039",
+          "ufpi-658-2024-art-43-idx-000042",
+          "ufpi-658-2024-art-44-idx-000043",
+          "ufpi-658-2024-art-28-idx-000027",
+          "ufpi-658-2024-art-46-idx-000045"
+        ]
+      ]
+    }
+  ]
+}

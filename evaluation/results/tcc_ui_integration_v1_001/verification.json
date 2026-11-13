@@ -1,0 +1,114 @@
+[
+  {
+    "timestamp": "2026-11-01T18:52:09.999622+00:00",
+    "command": [
+      "code/.venv/Scripts/ruff.exe",
+      "check",
+      "code/src/streamlit_app.py",
+      "code/src/client/client.py",
+      "code/tests/app",
+      "evaluation\\results\\tcc_ui_integration_v1_001\\evidence_audit.py",
+      "evaluation\\results\\tcc_ui_integration_v1_001\\index_snapshot.py",
+      "evaluation\\results\\tcc_ui_integration_v1_001\\local_service.py",
+      "evaluation\\results\\tcc_ui_integration_v1_001\\local_smoke.py",
+      "evaluation\\results\\tcc_ui_integration_v1_001\\run_checks.py"
+    ],
+    "exit_code": 0,
+    "stdout": "All checks passed!\n",
+    "stderr": ""
+  },
+  {
+    "timestamp": "2026-11-01T18:52:09.999622+00:00",
+    "command": [
+      "code/.venv/Scripts/ruff.exe",
+      "format",
+      "--check",
+      "code/src/streamlit_app.py",
+      "code/src/client/client.py",
+      "code/tests/app",
+      "evaluation\\results\\tcc_ui_integration_v1_001\\evidence_audit.py",
+      "evaluation\\results\\tcc_ui_integration_v1_001\\index_snapshot.py",
+      "evaluation\\results\\tcc_ui_integration_v1_001\\local_service.py",
+      "evaluation\\results\\tcc_ui_integration_v1_001\\local_smoke.py",
+      "evaluation\\results\\tcc_ui_integration_v1_001\\run_checks.py"
+    ],
+    "exit_code": 0,
+    "stdout": "10 files already formatted\n",
+    "stderr": ""
+  },
+  {
+    "timestamp": "2026-11-01T18:52:09.999622+00:00",
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "timestamp": "2026-11-01T18:52:09.999622+00:00",
+    "command": [
+      "git",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "timestamp": "2026-11-01T18:53:34.398894+00:00",
+    "command": [
+      "code/.venv/Scripts/ruff.exe",
+      "check",
+      "code/src/streamlit_app.py",
+      "code/src/client/client.py",
+      "code/tests/app",
+      "evaluation\\results\\tcc_ui_integration_v1_001"
+    ],
+    "exit_code": 0,
+    "stdout": "All checks passed!\n",
+    "stderr": ""
+  },
+  {
+    "timestamp": "2026-11-01T18:53:34.398894+00:00",
+    "command": [
+      "code/.venv/Scripts/ruff.exe",
+      "format",
+      "--check",
+      "code/src/streamlit_app.py",
+      "code/src/client/client.py",
+      "code/tests/app",
+      "evaluation\\results\\tcc_ui_integration_v1_001"
+    ],
+    "exit_code": 0,
+    "stdout": "12 files already formatted\n",
+    "stderr": ""
+  },
+  {
+    "timestamp": "2026-11-01T18:53:34.398894+00:00",
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "timestamp": "2026-11-01T18:53:34.398894+00:00",
+    "command": [
+      "git",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

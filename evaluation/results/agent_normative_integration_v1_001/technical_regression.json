@@ -1,0 +1,2081 @@
+{
+  "metrics": {
+    "action_policy_accuracy": [
+      24,
+      24
+    ],
+    "normative_bypass": [
+      0,
+      18
+    ],
+    "authoritative_answer_preservation": [
+      24,
+      24
+    ],
+    "structured_result_preservation": [
+      26,
+      26
+    ],
+    "clarification_preservation": [
+      1,
+      1
+    ],
+    "direct_false_allow": [
+      0,
+      12
+    ],
+    "one_facade_call_per_normative_turn": [
+      18,
+      18
+    ]
+  },
+  "cases": [
+    {
+      "id": "ACTION-001",
+      "action": "DIRECT",
+      "audit": {
+        "action": "DIRECT",
+        "action_reason_code": "safe_greeting",
+        "correlation_id": "1b598155-fee0-4e8d-94a4-4bd15583fe03",
+        "nodes_visited": [
+          "action_policy",
+          "direct_response"
+        ],
+        "normative_tool_called": false,
+        "facade_calls": 0,
+        "normative_status": null,
+        "retrieval_strategy": null,
+        "authoritative_emission": false,
+        "final_source": "direct_response",
+        "tool_exception_type": null
+      },
+      "result": null,
+      "final_message": "Olá!",
+      "typed_result": null,
+      "structured_preserved": null,
+      "answer_identical": null,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "expected_action": "DIRECT",
+      "normative_question": false
+    },
+    {
+      "id": "ACTION-002",
+      "action": "DIRECT",
+      "audit": {
+        "action": "DIRECT",
+        "action_reason_code": "safe_greeting",
+        "correlation_id": "4b514543-c034-487a-b376-1f59e701245a",
+        "nodes_visited": [
+          "action_policy",
+          "direct_response"
+        ],
+        "normative_tool_called": false,
+        "facade_calls": 0,
+        "normative_status": null,
+        "retrieval_strategy": null,
+        "authoritative_emission": false,
+        "final_source": "direct_response",
+        "tool_exception_type": null
+      },
+      "result": null,
+      "final_message": "Bom dia!",
+      "typed_result": null,
+      "structured_preserved": null,
+      "answer_identical": null,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "expected_action": "DIRECT",
+      "normative_question": false
+    },
+    {
+      "id": "ACTION-003",
+      "action": "DIRECT",
+      "audit": {
+        "action": "DIRECT",
+        "action_reason_code": "safe_thanks",
+        "correlation_id": "5e4bdeee-2571-4fcb-97ee-7201ac64a94b",
+        "nodes_visited": [
+          "action_policy",
+          "direct_response"
+        ],
+        "normative_tool_called": false,
+        "facade_calls": 0,
+        "normative_status": null,
+        "retrieval_strategy": null,
+        "authoritative_emission": false,
+        "final_source": "direct_response",
+        "tool_exception_type": null
+      },
+      "result": null,
+      "final_message": "De nada!",
+      "typed_result": null,
+      "structured_preserved": null,
+      "answer_identical": null,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "expected_action": "DIRECT",
+      "normative_question": false
+    },
+    {
+      "id": "ACTION-004",
+      "action": "DIRECT",
+      "audit": {
+        "action": "DIRECT",
+        "action_reason_code": "safe_thanks",
+        "correlation_id": "e17cad37-5959-402d-87c1-2c73f0b1da1e",
+        "nodes_visited": [
+          "action_policy",
+          "direct_response"
+        ],
+        "normative_tool_called": false,
+        "facade_calls": 0,
+        "normative_status": null,
+        "retrieval_strategy": null,
+        "authoritative_emission": false,
+        "final_source": "direct_response",
+        "tool_exception_type": null
+      },
+      "result": null,
+      "final_message": "De nada!",
+      "typed_result": null,
+      "structured_preserved": null,
+      "answer_identical": null,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "expected_action": "DIRECT",
+      "normative_question": false
+    },
+    {
+      "id": "ACTION-005",
+      "action": "DIRECT",
+      "audit": {
+        "action": "DIRECT",
+        "action_reason_code": "safe_acknowledgement",
+        "correlation_id": "7dcff162-1363-43fd-a0a0-14889362eb90",
+        "nodes_visited": [
+          "action_policy",
+          "direct_response"
+        ],
+        "normative_tool_called": false,
+        "facade_calls": 0,
+        "normative_status": null,
+        "retrieval_strategy": null,
+        "authoritative_emission": false,
+        "final_source": "direct_response",
+        "tool_exception_type": null
+      },
+      "result": null,
+      "final_message": "Certo.",
+      "typed_result": null,
+      "structured_preserved": null,
+      "answer_identical": null,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "expected_action": "DIRECT",
+      "normative_question": false
+    },
+    {
+      "id": "ACTION-006",
+      "action": "DIRECT",
+      "audit": {
+        "action": "DIRECT",
+        "action_reason_code": "safe_farewell",
+        "correlation_id": "931a6d2d-f280-4f3f-ada5-45ff18f00182",
+        "nodes_visited": [
+          "action_policy",
+          "direct_response"
+        ],
+        "normative_tool_called": false,
+        "facade_calls": 0,
+        "normative_status": null,
+        "retrieval_strategy": null,
+        "authoritative_emission": false,
+        "final_source": "direct_response",
+        "tool_exception_type": null
+      },
+      "result": null,
+      "final_message": "Até mais!",
+      "typed_result": null,
+      "structured_preserved": null,
+      "answer_identical": null,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "expected_action": "DIRECT",
+      "normative_question": false
+    },
+    {
+      "id": "ACTION-007",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "0a9ef5f0-54dc-4779-b75d-52937d4577fa",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "ANSWER",
+        "retrieval_strategy": "dense_vector",
+        "authoritative_emission": true,
+        "final_source": "normative_result.answer",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-68",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução 177/2012",
+            "article": "68",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 68",
+            "temporal_role": "historical"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "historical",
+          "requested_time_context": {
+            "norm_ids": [],
+            "before_amendment": true,
+            "relation_query": null,
+            "article": "68",
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-68",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "68",
+              "temporal_action": "historical_preserved",
+              "normative_status": "desconhecida",
+              "temporal_role": "historical",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": true,
+            "must_not_claim_current_validity": true,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": true,
+            "must_not_present_successor_as_historical_predecessor": true,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": true,
+            "must_not_duplicate_superseded_wording": true,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Contexto histórico.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "HISTORICAL_CONTEXT",
+              "norm_id": null,
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "graduacao",
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "0a9ef5f0-54dc-4779-b75d-52937d4577fa",
+        "error_code": null,
+        "safe_message": null
+      },
+      "final_message": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": true,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "expected_action": "NORMATIVE_RAG",
+      "normative_question": true
+    },
+    {
+      "id": "ACTION-008",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "9e5e0cd1-d15d-42c8-b320-c71ea2a3532c",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "ANSWER",
+        "retrieval_strategy": "dense_vector",
+        "authoritative_emission": true,
+        "final_source": "normative_result.answer",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-68",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução 177/2012",
+            "article": "68",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 68",
+            "temporal_role": "historical"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "historical",
+          "requested_time_context": {
+            "norm_ids": [],
+            "before_amendment": true,
+            "relation_query": null,
+            "article": "68",
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-68",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "68",
+              "temporal_action": "historical_preserved",
+              "normative_status": "desconhecida",
+              "temporal_role": "historical",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": true,
+            "must_not_claim_current_validity": true,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": true,
+            "must_not_present_successor_as_historical_predecessor": true,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": true,
+            "must_not_duplicate_superseded_wording": true,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Contexto histórico.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "HISTORICAL_CONTEXT",
+              "norm_id": null,
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "graduacao",
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "9e5e0cd1-d15d-42c8-b320-c71ea2a3532c",
+        "error_code": null,
+        "safe_message": null
+      },
+      "final_message": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": true,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "expected_action": "NORMATIVE_RAG",
+      "normative_question": true
+    },
+    {
+      "id": "ACTION-009",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "5d5f77c6-b4ab-4b8c-aca7-a1b1590acbb0",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "ANSWER",
+        "retrieval_strategy": "dense_vector",
+        "authoritative_emission": true,
+        "final_source": "normative_result.answer",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-68",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução 177/2012",
+            "article": "68",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 68",
+            "temporal_role": "historical"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "historical",
+          "requested_time_context": {
+            "norm_ids": [],
+            "before_amendment": true,
+            "relation_query": null,
+            "article": "68",
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-68",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "68",
+              "temporal_action": "historical_preserved",
+              "normative_status": "desconhecida",
+              "temporal_role": "historical",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": true,
+            "must_not_claim_current_validity": true,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": true,
+            "must_not_present_successor_as_historical_predecessor": true,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": true,
+            "must_not_duplicate_superseded_wording": true,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Contexto histórico.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "HISTORICAL_CONTEXT",
+              "norm_id": null,
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "graduacao",
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "5d5f77c6-b4ab-4b8c-aca7-a1b1590acbb0",
+        "error_code": null,
+        "safe_message": null
+      },
+      "final_message": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": true,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "expected_action": "NORMATIVE_RAG",
+      "normative_question": true
+    },
+    {
+      "id": "ACTION-010",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "070a90f1-e43b-4ec4-a33f-f72ed47541c4",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "ANSWER",
+        "retrieval_strategy": "dense_vector",
+        "authoritative_emission": true,
+        "final_source": "normative_result.answer",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-68",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução 177/2012",
+            "article": "68",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 68",
+            "temporal_role": "historical"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "historical",
+          "requested_time_context": {
+            "norm_ids": [],
+            "before_amendment": true,
+            "relation_query": null,
+            "article": "68",
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-68",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "68",
+              "temporal_action": "historical_preserved",
+              "normative_status": "desconhecida",
+              "temporal_role": "historical",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": true,
+            "must_not_claim_current_validity": true,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": true,
+            "must_not_present_successor_as_historical_predecessor": true,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": true,
+            "must_not_duplicate_superseded_wording": true,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Contexto histórico.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "HISTORICAL_CONTEXT",
+              "norm_id": null,
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "graduacao",
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "070a90f1-e43b-4ec4-a33f-f72ed47541c4",
+        "error_code": null,
+        "safe_message": null
+      },
+      "final_message": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": true,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "expected_action": "NORMATIVE_RAG",
+      "normative_question": true
+    },
+    {
+      "id": "ACTION-011",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "da836afb-7124-4975-99d2-b1e804a96ea7",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "ANSWER",
+        "retrieval_strategy": "dense_vector",
+        "authoritative_emission": true,
+        "final_source": "normative_result.answer",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-68",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução 177/2012",
+            "article": "68",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 68",
+            "temporal_role": "historical"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "historical",
+          "requested_time_context": {
+            "norm_ids": [],
+            "before_amendment": true,
+            "relation_query": null,
+            "article": "68",
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-68",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "68",
+              "temporal_action": "historical_preserved",
+              "normative_status": "desconhecida",
+              "temporal_role": "historical",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": true,
+            "must_not_claim_current_validity": true,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": true,
+            "must_not_present_successor_as_historical_predecessor": true,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": true,
+            "must_not_duplicate_superseded_wording": true,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Contexto histórico.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "HISTORICAL_CONTEXT",
+              "norm_id": null,
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "graduacao",
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "da836afb-7124-4975-99d2-b1e804a96ea7",
+        "error_code": null,
+        "safe_message": null
+      },
+      "final_message": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": true,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "expected_action": "NORMATIVE_RAG",
+      "normative_question": true
+    },
+    {
+      "id": "ACTION-012",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "5be182bd-770a-49a2-8793-79e1eb67e82d",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "ANSWER",
+        "retrieval_strategy": "dense_vector",
+        "authoritative_emission": true,
+        "final_source": "normative_result.answer",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-68",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução 177/2012",
+            "article": "68",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 68",
+            "temporal_role": "historical"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "historical",
+          "requested_time_context": {
+            "norm_ids": [],
+            "before_amendment": true,
+            "relation_query": null,
+            "article": "68",
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-68",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "68",
+              "temporal_action": "historical_preserved",
+              "normative_status": "desconhecida",
+              "temporal_role": "historical",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": true,
+            "must_not_claim_current_validity": true,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": true,
+            "must_not_present_successor_as_historical_predecessor": true,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": true,
+            "must_not_duplicate_superseded_wording": true,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Contexto histórico.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "HISTORICAL_CONTEXT",
+              "norm_id": null,
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "graduacao",
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "5be182bd-770a-49a2-8793-79e1eb67e82d",
+        "error_code": null,
+        "safe_message": null
+      },
+      "final_message": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": true,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "expected_action": "NORMATIVE_RAG",
+      "normative_question": true
+    },
+    {
+      "id": "ACTION-013",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "f60fb70e-9b5d-434d-b021-fcf318cc8145",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "ANSWER",
+        "retrieval_strategy": "dense_vector",
+        "authoritative_emission": true,
+        "final_source": "normative_result.answer",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-68",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução 177/2012",
+            "article": "68",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 68",
+            "temporal_role": "historical"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "historical",
+          "requested_time_context": {
+            "norm_ids": [],
+            "before_amendment": true,
+            "relation_query": null,
+            "article": "68",
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-68",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "68",
+              "temporal_action": "historical_preserved",
+              "normative_status": "desconhecida",
+              "temporal_role": "historical",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": true,
+            "must_not_claim_current_validity": true,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": true,
+            "must_not_present_successor_as_historical_predecessor": true,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": true,
+            "must_not_duplicate_superseded_wording": true,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Contexto histórico.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "HISTORICAL_CONTEXT",
+              "norm_id": null,
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "graduacao",
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "f60fb70e-9b5d-434d-b021-fcf318cc8145",
+        "error_code": null,
+        "safe_message": null
+      },
+      "final_message": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": true,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "expected_action": "NORMATIVE_RAG",
+      "normative_question": true
+    },
+    {
+      "id": "ACTION-014",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "04aed8eb-37a3-4b03-b268-2846e1631024",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "ANSWER",
+        "retrieval_strategy": "dense_vector",
+        "authoritative_emission": true,
+        "final_source": "normative_result.answer",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-68",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução 177/2012",
+            "article": "68",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 68",
+            "temporal_role": "historical"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "historical",
+          "requested_time_context": {
+            "norm_ids": [],
+            "before_amendment": true,
+            "relation_query": null,
+            "article": "68",
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-68",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "68",
+              "temporal_action": "historical_preserved",
+              "normative_status": "desconhecida",
+              "temporal_role": "historical",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": true,
+            "must_not_claim_current_validity": true,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": true,
+            "must_not_present_successor_as_historical_predecessor": true,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": true,
+            "must_not_duplicate_superseded_wording": true,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Contexto histórico.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "HISTORICAL_CONTEXT",
+              "norm_id": null,
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "graduacao",
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "04aed8eb-37a3-4b03-b268-2846e1631024",
+        "error_code": null,
+        "safe_message": null
+      },
+      "final_message": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": true,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "expected_action": "NORMATIVE_RAG",
+      "normative_question": true
+    },
+    {
+      "id": "ACTION-015",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "b51e9495-7ecf-4756-b80b-2e00ce60501a",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "ANSWER",
+        "retrieval_strategy": "dense_vector",
+        "authoritative_emission": true,
+        "final_source": "normative_result.answer",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-68",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução 177/2012",
+            "article": "68",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 68",
+            "temporal_role": "historical"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "historical",
+          "requested_time_context": {
+            "norm_ids": [],
+            "before_amendment": true,
+            "relation_query": null,
+            "article": "68",
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-68",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "68",
+              "temporal_action": "historical_preserved",
+              "normative_status": "desconhecida",
+              "temporal_role": "historical",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": true,
+            "must_not_claim_current_validity": true,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": true,
+            "must_not_present_successor_as_historical_predecessor": true,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": true,
+            "must_not_duplicate_superseded_wording": true,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Contexto histórico.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "HISTORICAL_CONTEXT",
+              "norm_id": null,
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "graduacao",
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "b51e9495-7ecf-4756-b80b-2e00ce60501a",
+        "error_code": null,
+        "safe_message": null
+      },
+      "final_message": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": true,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "expected_action": "NORMATIVE_RAG",
+      "normative_question": true
+    },
+    {
+      "id": "ACTION-016",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "9187fe0d-782d-4a7a-83fe-e22a2531163b",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "ANSWER",
+        "retrieval_strategy": "dense_vector",
+        "authoritative_emission": true,
+        "final_source": "normative_result.answer",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-68",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução 177/2012",
+            "article": "68",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 68",
+            "temporal_role": "historical"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "historical",
+          "requested_time_context": {
+            "norm_ids": [],
+            "before_amendment": true,
+            "relation_query": null,
+            "article": "68",
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-68",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "68",
+              "temporal_action": "historical_preserved",
+              "normative_status": "desconhecida",
+              "temporal_role": "historical",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": true,
+            "must_not_claim_current_validity": true,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": true,
+            "must_not_present_successor_as_historical_predecessor": true,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": true,
+            "must_not_duplicate_superseded_wording": true,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Contexto histórico.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "HISTORICAL_CONTEXT",
+              "norm_id": null,
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "graduacao",
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "9187fe0d-782d-4a7a-83fe-e22a2531163b",
+        "error_code": null,
+        "safe_message": null
+      },
+      "final_message": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": true,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "expected_action": "NORMATIVE_RAG",
+      "normative_question": true
+    },
+    {
+      "id": "ACTION-017",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "82c498a8-9300-45c0-840d-b851039a0014",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "ANSWER",
+        "retrieval_strategy": "dense_vector",
+        "authoritative_emission": true,
+        "final_source": "normative_result.answer",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-68",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução 177/2012",
+            "article": "68",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 68",
+            "temporal_role": "historical"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "historical",
+          "requested_time_context": {
+            "norm_ids": [],
+            "before_amendment": true,
+            "relation_query": null,
+            "article": "68",
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-68",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "68",
+              "temporal_action": "historical_preserved",
+              "normative_status": "desconhecida",
+              "temporal_role": "historical",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": true,
+            "must_not_claim_current_validity": true,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": true,
+            "must_not_present_successor_as_historical_predecessor": true,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": true,
+            "must_not_duplicate_superseded_wording": true,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Contexto histórico.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "HISTORICAL_CONTEXT",
+              "norm_id": null,
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "graduacao",
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "82c498a8-9300-45c0-840d-b851039a0014",
+        "error_code": null,
+        "safe_message": null
+      },
+      "final_message": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": true,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "expected_action": "NORMATIVE_RAG",
+      "normative_question": true
+    },
+    {
+      "id": "ACTION-018",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "b562a29c-d3ad-4951-af9b-5d6f2c92ffad",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "ANSWER",
+        "retrieval_strategy": "dense_vector",
+        "authoritative_emission": true,
+        "final_source": "normative_result.answer",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-68",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução 177/2012",
+            "article": "68",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 68",
+            "temporal_role": "historical"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "historical",
+          "requested_time_context": {
+            "norm_ids": [],
+            "before_amendment": true,
+            "relation_query": null,
+            "article": "68",
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-68",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "68",
+              "temporal_action": "historical_preserved",
+              "normative_status": "desconhecida",
+              "temporal_role": "historical",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": true,
+            "must_not_claim_current_validity": true,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": true,
+            "must_not_present_successor_as_historical_predecessor": true,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": true,
+            "must_not_duplicate_superseded_wording": true,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Contexto histórico.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "HISTORICAL_CONTEXT",
+              "norm_id": null,
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "graduacao",
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "b562a29c-d3ad-4951-af9b-5d6f2c92ffad",
+        "error_code": null,
+        "safe_message": null
+      },
+      "final_message": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": true,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "expected_action": "NORMATIVE_RAG",
+      "normative_question": true
+    },
+    {
+      "id": "ACTION-019",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "07a3474f-ed6d-4234-8b1b-a53b2621aeca",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "ANSWER",
+        "retrieval_strategy": "dense_vector",
+        "authoritative_emission": true,
+        "final_source": "normative_result.answer",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-68",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução 177/2012",
+            "article": "68",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 68",
+            "temporal_role": "historical"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "historical",
+          "requested_time_context": {
+            "norm_ids": [],
+            "before_amendment": true,
+            "relation_query": null,
+            "article": "68",
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-68",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "68",
+              "temporal_action": "historical_preserved",
+              "normative_status": "desconhecida",
+              "temporal_role": "historical",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": true,
+            "must_not_claim_current_validity": true,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": true,
+            "must_not_present_successor_as_historical_predecessor": true,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": true,
+            "must_not_duplicate_superseded_wording": true,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Contexto histórico.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "HISTORICAL_CONTEXT",
+              "norm_id": null,
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "graduacao",
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "07a3474f-ed6d-4234-8b1b-a53b2621aeca",
+        "error_code": null,
+        "safe_message": null
+      },
+      "final_message": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": true,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "expected_action": "NORMATIVE_RAG",
+      "normative_question": false
+    },
+    {
+      "id": "ACTION-020",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "414d05ab-96a9-4c85-911a-774c3ac5b237",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "ANSWER",
+        "retrieval_strategy": "dense_vector",
+        "authoritative_emission": true,
+        "final_source": "normative_result.answer",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-68",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução 177/2012",
+            "article": "68",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 68",
+            "temporal_role": "historical"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "historical",
+          "requested_time_context": {
+            "norm_ids": [],
+            "before_amendment": true,
+            "relation_query": null,
+            "article": "68",
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-68",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "68",
+              "temporal_action": "historical_preserved",
+              "normative_status": "desconhecida",
+              "temporal_role": "historical",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": true,
+            "must_not_claim_current_validity": true,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": true,
+            "must_not_present_successor_as_historical_predecessor": true,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": true,
+            "must_not_duplicate_superseded_wording": true,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Contexto histórico.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "HISTORICAL_CONTEXT",
+              "norm_id": null,
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "graduacao",
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "414d05ab-96a9-4c85-911a-774c3ac5b237",
+        "error_code": null,
+        "safe_message": null
+      },
+      "final_message": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": true,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "expected_action": "NORMATIVE_RAG",
+      "normative_question": false
+    },
+    {
+      "id": "ACTION-021",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "1027a5b0-7431-4c3f-bf87-7df1c1394dc9",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "ANSWER",
+        "retrieval_strategy": "dense_vector",
+        "authoritative_emission": true,
+        "final_source": "normative_result.answer",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-68",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução 177/2012",
+            "article": "68",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 68",
+            "temporal_role": "historical"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "historical",
+          "requested_time_context": {
+            "norm_ids": [],
+            "before_amendment": true,
+            "relation_query": null,
+            "article": "68",
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-68",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "68",
+              "temporal_action": "historical_preserved",
+              "normative_status": "desconhecida",
+              "temporal_role": "historical",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": true,
+            "must_not_claim_current_validity": true,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": true,
+            "must_not_present_successor_as_historical_predecessor": true,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": true,
+            "must_not_duplicate_superseded_wording": true,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Contexto histórico.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "HISTORICAL_CONTEXT",
+              "norm_id": null,
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "graduacao",
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "1027a5b0-7431-4c3f-bf87-7df1c1394dc9",
+        "error_code": null,
+        "safe_message": null
+      },
+      "final_message": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": true,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "expected_action": "NORMATIVE_RAG",
+      "normative_question": false
+    },
+    {
+      "id": "ACTION-022",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "73b27675-860a-498b-8f0c-670ba055af77",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "ANSWER",
+        "retrieval_strategy": "dense_vector",
+        "authoritative_emission": true,
+        "final_source": "normative_result.answer",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-68",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução 177/2012",
+            "article": "68",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 68",
+            "temporal_role": "historical"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "historical",
+          "requested_time_context": {
+            "norm_ids": [],
+            "before_amendment": true,
+            "relation_query": null,
+            "article": "68",
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-68",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "68",
+              "temporal_action": "historical_preserved",
+              "normative_status": "desconhecida",
+              "temporal_role": "historical",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": true,
+            "must_not_claim_current_validity": true,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": true,
+            "must_not_present_successor_as_historical_predecessor": true,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": true,
+            "must_not_duplicate_superseded_wording": true,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Contexto histórico.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "HISTORICAL_CONTEXT",
+              "norm_id": null,
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "graduacao",
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "73b27675-860a-498b-8f0c-670ba055af77",
+        "error_code": null,
+        "safe_message": null
+      },
+      "final_message": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": true,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "expected_action": "NORMATIVE_RAG",
+      "normative_question": false
+    },
+    {
+      "id": "ACTION-023",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "d034aecd-0f63-4ecc-9349-877d7f649e8d",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "ANSWER",
+        "retrieval_strategy": "dense_vector",
+        "authoritative_emission": true,
+        "final_source": "normative_result.answer",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-68",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução 177/2012",
+            "article": "68",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 68",
+            "temporal_role": "historical"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "historical",
+          "requested_time_context": {
+            "norm_ids": [],
+            "before_amendment": true,
+            "relation_query": null,
+            "article": "68",
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-68",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "68",
+              "temporal_action": "historical_preserved",
+              "normative_status": "desconhecida",
+              "temporal_role": "historical",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": true,
+            "must_not_claim_current_validity": true,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": true,
+            "must_not_present_successor_as_historical_predecessor": true,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": true,
+            "must_not_duplicate_superseded_wording": true,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Contexto histórico.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "HISTORICAL_CONTEXT",
+              "norm_id": null,
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "graduacao",
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "d034aecd-0f63-4ecc-9349-877d7f649e8d",
+        "error_code": null,
+        "safe_message": null
+      },
+      "final_message": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": true,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "expected_action": "NORMATIVE_RAG",
+      "normative_question": false
+    },
+    {
+      "id": "ACTION-024",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "c60a58f6-bf59-4dc6-88a4-0f20b240890c",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "ANSWER",
+        "retrieval_strategy": "dense_vector",
+        "authoritative_emission": true,
+        "final_source": "normative_result.answer",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-68",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução 177/2012",
+            "article": "68",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 68",
+            "temporal_role": "historical"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "historical",
+          "requested_time_context": {
+            "norm_ids": [],
+            "before_amendment": true,
+            "relation_query": null,
+            "article": "68",
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-68",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "68",
+              "temporal_action": "historical_preserved",
+              "normative_status": "desconhecida",
+              "temporal_role": "historical",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": true,
+            "must_not_claim_current_validity": true,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": true,
+            "must_not_present_successor_as_historical_predecessor": true,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": true,
+            "must_not_duplicate_superseded_wording": true,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Contexto histórico.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "HISTORICAL_CONTEXT",
+              "norm_id": null,
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "graduacao",
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "c60a58f6-bf59-4dc6-88a4-0f20b240890c",
+        "error_code": null,
+        "safe_message": null
+      },
+      "final_message": "Resposta final do núcleo.\nFontes oficiais: Resolução 177/2012, art. 68.",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": true,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "expected_action": "NORMATIVE_RAG",
+      "normative_question": false
+    }
+  ],
+  "scope": "Operational fixtures, not a scientific classifier benchmark or legal gold."
+}

@@ -1,0 +1,15 @@
+{
+  "unchanged_service_functions": {
+    "lifespan": true,
+    "history": true,
+    "feedback": true,
+    "info": true,
+    "health_check": true
+  },
+  "legacy_builder_body_identical": true,
+  "client_bytes_identical": true,
+  "public_contract_versions_unchanged": true,
+  "new_derived_contract_version": "1",
+  "default_agent": "chatbot_ufpi_v2",
+  "registry_unchanged": true
+}

@@ -1,0 +1,198 @@
+{
+  "selected_version": "Structured Normative Output V2",
+  "selected_head": "34c42c7d1d46edd09a720b2d672be6493f665eb1",
+  "implementation_head": "ea255c8c28d392f83442c6f85c750f1d410f098d",
+  "mode": "audit only; no44-case rerun",
+  "state": "AgenticState(MessagesState,total=False)",
+  "graph": {
+    "nodes": [
+      "route_query",
+      "clarify",
+      "reroute",
+      "retrieve",
+      "version_filter",
+      "generate"
+    ],
+    "entry": "route_query",
+    "edges": [
+      [
+        "route_query",
+        "clarify if ambiguous else retrieve"
+      ],
+      [
+        "clarify",
+        "END if result else reroute"
+      ],
+      [
+        "reroute",
+        "END if unresolved else retrieve"
+      ],
+      [
+        "retrieve",
+        "version_filter"
+      ],
+      [
+        "version_filter",
+        "generate"
+      ],
+      [
+        "generate",
+        "END"
+      ]
+    ],
+    "interactive": "build_graph(interactive=True) uses interrupt; service supplies saver",
+    "noninteractive": "AgenticRagService.query uses noninteractive graph and returns QueryResult",
+    "evidence": [
+      "code/src/rag_baseline/agentic.py:127",
+      "code/src/rag_baseline/agentic.py:419",
+      "code/src/rag_baseline/agentic.py:440"
+    ]
+  },
+  "actual_order": [
+    "Domain Router and Temporal Intent",
+    "Retrieval with temporal pre-exclusions",
+    "Version Filter",
+    "TemporalGroundingContext",
+    "V2 generation/guard/max-one-retry/composition"
+  ],
+  "history_behavior": "Only latest human content/current question+clarification; resets chunks/result/grounding; no arbitrary ellipsis resolution",
+  "public_api": {
+    "query": "/query",
+    "health": "/health",
+    "request_fields": [
+      "question",
+      "sector",
+      "clarification",
+      "version_filter"
+    ],
+    "no_thread_session_stream": true,
+    "unsafe_controls": [
+      "version_filter=false omits grounding/V2 path",
+      "manual_scope bypasses Domain Router",
+      "bare RagService.query has no grounding"
+    ]
+  },
+  "retrieval": {
+    "path": "code/src/rag_baseline/service.py:95",
+    "signature": "async retrieve(question, *, sector=None, excluded_sources=None, query_embedding=None) -> list[RetrievedChunk]",
+    "backend": "Chroma persistent cosine HNSW",
+    "collection": "ufpi_duas_regulacoes_setor",
+    "embedding": "OpenRouter openai/text-embedding-3-small",
+    "top_k": 5,
+    "filters": [
+      "sector",
+      "source $nin excluded_sources"
+    ],
+    "returns": [
+      "stable id",
+      "content",
+      "source",
+      "article_number",
+      "optional norm_id/status/hierarchy",
+      "rank",
+      "distance"
+    ],
+    "missing": [
+      "no public norm/article exact lookup",
+      "no norm source-allowlist filter",
+      "no metadata strategy"
+    ]
+  },
+  "adapter_seam": "Per-invocation service-compatible facade injected into existing graph: delegate generation unchanged, select retrieval internally without shared mutable request state",
+  "tool_result_mapping": [
+    {
+      "field": "answer",
+      "exists": "QueryResult.answer",
+      "visibility": "public guarded composed answer",
+      "evidence": [
+        "code/src/rag_baseline/models.py:78",
+        "code/src/rag_baseline/service.py:174"
+      ]
+    },
+    {
+      "field": "references",
+      "exists": "QueryResult.references and normative_output.references; latter carries norm/chunk/locator/role",
+      "visibility": "public authoritative references; retrieved content optionally displayed",
+      "evidence": [
+        "code/src/rag_baseline/models.py:79",
+        "code/src/rag_baseline/output_contracts.py:12",
+        "code/src/rag_baseline/output_contracts.py:71"
+      ]
+    },
+    {
+      "field": "temporal_provenance",
+      "exists": "normative_output.temporal_provenance, state.temporal_grounding, result.version_filter",
+      "visibility": "allowlisted public summary vs full internal evidence/audit",
+      "evidence": [
+        "code/src/rag_baseline/output_contracts.py:74",
+        "code/src/rag_baseline/agentic.py:33",
+        "code/src/rag_baseline/agentic.py:412"
+      ]
+    },
+    {
+      "field": "status",
+      "exists": "normative_output.status accepted/regenerated/fallback; clarify/error/insufficient paths need explicit adapter mapping",
+      "visibility": "public coarse outcome; GenerationAudit internal",
+      "evidence": [
+        "code/src/rag_baseline/output_contracts.py:75",
+        "code/src/rag_baseline/models.py:88",
+        "code/src/rag_baseline/models.py:92",
+        "code/src/rag_baseline/agentic.py:154"
+      ]
+    },
+    {
+      "field": "domain",
+      "exists": "selected_scope and route.scope graduacao|pos_graduacao|ambas; do not assume grad|post|both literal names",
+      "visibility": "public",
+      "evidence": [
+        "code/src/rag_baseline/models.py:85",
+        "code/src/rag_baseline/agentic.py:409",
+        "code/src/rag_baseline/agentic.py:411"
+      ]
+    },
+    {
+      "field": "retrieval_strategy",
+      "exists": "No public selected vector/metadata enum; current retrieve uses dense vector; routing_audit is not retrieval strategy",
+      "visibility": "future explicit coarse public field",
+      "evidence": [
+        "code/src/rag_baseline/models.py:77",
+        "code/src/rag_baseline/service.py:112",
+        "code/src/rag_baseline/service.py:117"
+      ]
+    },
+    {
+      "field": "needs_clarification",
+      "exists": "QueryResult.needs_clarification/clarification_question; current interactive SSE flattens to AI text",
+      "visibility": "public typed branch outcome",
+      "evidence": [
+        "code/src/rag_baseline/models.py:83",
+        "code/src/rag_baseline/agentic.py:169",
+        "code/src/service/service.py:228"
+      ]
+    },
+    {
+      "field": "audit metadata",
+      "exists": "output_audit,response_kind,generation_attempts excluded; GenerationAudit raw/regenerated bodies/violations",
+      "visibility": "internal; exclude from generic metadata/custom_data exposure",
+      "evidence": [
+        "code/src/rag_baseline/models.py:89",
+        "code/src/rag_baseline/output_contracts.py:58"
+      ]
+    }
+  ],
+  "limits": [
+    "V2 documentary chronology exposure7/44 remains",
+    "Known recall6/6 is bounded",
+    "B/G/E4 false positives remain",
+    "No legal-correctness guarantee"
+  ],
+  "evidence": [
+    "code/src/rag_baseline/agentic.py:199",
+    "code/src/rag_baseline/agentic.py:283",
+    "code/src/rag_baseline/agentic.py:307",
+    "code/src/rag_baseline/agentic.py:358",
+    "code/src/rag_baseline/api.py:15",
+    "code/src/rag_baseline/service.py:125",
+    "code/src/rag_baseline/vector_store.py:79"
+  ]
+}

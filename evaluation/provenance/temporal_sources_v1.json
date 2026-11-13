@@ -1,0 +1,77 @@
+{
+  "checked_on": "2026-10-28",
+  "official_domains_only": true,
+  "method": "Downloaded official PDFs; direct visual inspection of cited pages and exact corpus evidence. No old corpus reconversion.",
+  "sources": [
+    {
+      "norm_id": "ufpi-177-2012",
+      "title": "Resolução CEPEX/UFPI nº 177, de 5 de novembro de 2012 — consolidação atualizada em 2023",
+      "number": "177",
+      "date": "2012-11-05",
+      "url": "https://ufpi.br/arquivos_download/arquivos/Parfor/REGULAMENTO_GERAL_DA_GRADUAÇÃO_-_177.2012_atualizada_2023_para_site_1_.pdf",
+      "sha256": "b5cf8085c758b4e5f07e37db404900926737235e2d315ccd88761353d1484fe0",
+      "source_matches_existing_pdf": true,
+      "evidence_pdf_page": 23,
+      "evidence_excerpt": "O coordenador de estágio do curso será um docente efetivo escolhido entre os professores orientadores do estágio, cuja designação deverá ser efetivada por portaria da unidade acadêmica a qual o estágio está vinculado, quando o colegiado entender necessária a existência de um coordenador para o conjunto das atividades de estágio, com as atribuições de:"
+    },
+    {
+      "norm_id": "ufpi-956-2025",
+      "title": "Resolução CEPEX/UFPI nº 956, de 18 de dezembro de 2025",
+      "number": "956",
+      "date": "2025-12-18",
+      "url": "https://ufpi.br/images/Portarias/Portarias%202025/CEPEX%20953%20A%20956.pdf",
+      "sha256": "ae2af3e6909baf1c1ff7cef3690e3e2adf12d7bd53cadf7bb5db925fb9255ace",
+      "container": "Pacote oficial CEPEX 953 a 956, 22 páginas",
+      "evidence_pdf_page": 22,
+      "evidence_printed_page": 17,
+      "existing_local_pdf_sha256": "d4b0861f5c3211fcf59c702577cfadc4633b16301dfa23748bfce410ef37ab9a",
+      "evidence_excerpt": "Art. 62. Ficam revogadas: [...] VI - a Resolução CEPEX/UFPI Nº 658, de 22 de abril de 2024; e [...]",
+      "substantive_comparison": {
+        "article": "53",
+        "pdf_page": 20,
+        "printed_page": 15,
+        "text": "divulgada com antecedência mínima de dez dias"
+      }
+    },
+    {
+      "norm_id": "ufpi-658-2024",
+      "url": "https://www.sigaa.ufpi.br/sigaa/verProducao?idProducao=6869447&key=18c6011be067380f348deb69741d19c1",
+      "title": "Resolução CEPEX/UFPI nº 658/2024",
+      "number": "658",
+      "date": "2024-04-22",
+      "sha256": "2dc41b821dbe62cc40e5e57f2c48fbf1b4e7d5f7b34a89f1ad78619187fb3050",
+      "provenance_path": "evaluation/provenance/658_2024_temporal_v1.json"
+    },
+    {
+      "norm_id": "ufpi-1056-2026",
+      "url": "https://ufpi.br/images/Resoluo%20CEPEXUFPI%20N%201.056_%20de%2017%20de%20Agosto%20de%202026%201.pdf",
+      "title": "Resolução CEPEX/UFPI nº 1.056/2026",
+      "number": "1056",
+      "date": "2026-08-17",
+      "sha256": "0f9690d60110f71f622814ea914d5de644de5946acaf5cd6ba04395f24922c5b",
+      "provenance_path": "evaluation/provenance/1056_2026_temporal_v1.json"
+    }
+  ],
+  "relations": [
+    {
+      "type": "revocation",
+      "base_norm_id": "ufpi-658-2024",
+      "by": "ufpi-956-2025",
+      "article": "62",
+      "item": "VI"
+    },
+    {
+      "type": "amendment",
+      "base_norm_id": "ufpi-177-2012",
+      "target": {
+        "article": "68",
+        "paragraph": "4"
+      },
+      "by": "ufpi-1056-2026",
+      "basis_article": "1",
+      "base_norm_revoked": false,
+      "scope": "Only introductory paragraph text replaced; subitems a-g preserved"
+    }
+  ],
+  "publication_dates_not_inferred": true
+}

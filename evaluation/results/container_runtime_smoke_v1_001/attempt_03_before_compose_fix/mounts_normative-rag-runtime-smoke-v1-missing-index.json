@@ -1,0 +1,26 @@
+[
+  {
+    "Type": "bind",
+    "Source": "/var/tmp/normative-runtime-smoke-y245djy_/containers-1793551425481199326/normative-rag-runtime-smoke-v1-missing-index",
+    "Destination": "/observations",
+    "Mode": "",
+    "RW": true,
+    "Propagation": "rprivate"
+  },
+  {
+    "Type": "bind",
+    "Source": "evaluation/results/container_runtime_smoke_v1_001",
+    "Destination": "/smoke",
+    "Mode": "",
+    "RW": false,
+    "Propagation": "rprivate"
+  },
+  {
+    "Type": "bind",
+    "Source": "/var/tmp/normative-runtime-smoke-y245djy_/containers-1793551425481199326/normative-rag-runtime-smoke-v1-missing-index-sqlite",
+    "Destination": "/app/state",
+    "Mode": "",
+    "RW": true,
+    "Propagation": "rprivate"
+  }
+]

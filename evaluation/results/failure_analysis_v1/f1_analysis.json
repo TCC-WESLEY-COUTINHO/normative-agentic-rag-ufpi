@@ -1,0 +1,337 @@
+{
+  "case_ids": [
+    "TEMP-POS-003",
+    "TEMP-POS-004",
+    "TEMP-GRAD-005",
+    "TEMP-GRAD-001"
+  ],
+  "failure_layer": "model scope decision",
+  "observations": [
+    "All 45 model outputs pass RouterDecision schema validation.",
+    "15/40 problematic-case runs request clarification before normalization.",
+    "Postgraduate raw clarification asks lato versus stricto sensu; undergraduate raw clarification asks for the already stated level.",
+    "Each request contains only the system prompt, current question and JSON schema; no prior conversation state.",
+    "The application replaces clarification wording but preserves the model decision."
+  ],
+  "root_cause": "The model itself chooses clarification despite explicit level. The unconstrained request schema accepts this choice; the post-parser only normalizes the clarification wording. No parser/schema rejection or prior conversation caused the observed failures.",
+  "causal_limit": "Prompt and schema changes are debug interventions on observed cases. They do not establish generalization or eliminate provider failures; no confirmatory quality claim.",
+  "red": {
+    "command": "ROUTER_REGRESSION_RUN=f1_before python -m pytest tests/rag_baseline/test_router_failure_regression.py -q",
+    "failed": 5,
+    "passed": 4,
+    "reason": "Wrong scope in real recorded model decisions"
+  },
+  "baseline_summary": {
+    "TEMP-POS-003": {
+      "runs": 10,
+      "counts": {
+        "pos_graduacao": 8,
+        "esclarecer": 2
+      },
+      "route_stability_rate": 0.8,
+      "expected_route_rate": 0.8
+    },
+    "TEMP-POS-004": {
+      "runs": 10,
+      "counts": {
+        "pos_graduacao": 5,
+        "esclarecer": 5
+      },
+      "route_stability_rate": 0.5,
+      "expected_route_rate": 0.5
+    },
+    "TEMP-GRAD-005": {
+      "runs": 10,
+      "counts": {
+        "graduacao": 5,
+        "esclarecer": 5
+      },
+      "route_stability_rate": 0.5,
+      "expected_route_rate": 0.5
+    },
+    "TEMP-GRAD-001": {
+      "runs": 10,
+      "counts": {
+        "graduacao": 7,
+        "esclarecer": 3
+      },
+      "route_stability_rate": 0.7,
+      "expected_route_rate": 0.7
+    },
+    "CONTROL-POS": {
+      "runs": 1,
+      "counts": {
+        "pos_graduacao": 1
+      },
+      "route_stability_rate": 1.0,
+      "expected_route_rate": 1.0
+    },
+    "CONTROL-956": {
+      "runs": 1,
+      "counts": {
+        "esclarecer": 1
+      },
+      "route_stability_rate": 1.0,
+      "expected_route_rate": 0.0
+    },
+    "CONTROL-GRAD": {
+      "runs": 1,
+      "counts": {
+        "graduacao": 1
+      },
+      "route_stability_rate": 1.0,
+      "expected_route_rate": 1.0
+    },
+    "CONTROL-RGG": {
+      "runs": 1,
+      "counts": {
+        "graduacao": 1
+      },
+      "route_stability_rate": 1.0,
+      "expected_route_rate": 1.0
+    },
+    "CONTROL-AMBIGUOUS": {
+      "runs": 1,
+      "counts": {
+        "esclarecer": 1
+      },
+      "route_stability_rate": 1.0,
+      "expected_route_rate": 1.0
+    }
+  },
+  "prompt_intervention": {
+    "directory": "../failure_regression_v1_001/f1_after",
+    "result": "2 failed, 7 passed in recorded-response regression",
+    "remaining_failures": {
+      "TEMP-POS-004": 3,
+      "TEMP-GRAD-005": 2
+    },
+    "conclusion": "Instruction-only change is insufficient; not accepted as the final fix."
+  },
+  "schema_red": {
+    "result": "4 failed, 1 passed, 9 skipped",
+    "property": "The outgoing schema accepts a null scope despite a level signal."
+  },
+  "schema_intervention": {
+    "strategy": "Reuse existing scope detector solely to disallow null/clarification when a level signal exists. Preserve model choice among graduation, postgraduate and both. No keyword catalogue or dataset lookup.",
+    "intermediate": "f1_schema_after restricts exact scope and passes the known live cases, but fails an existing short comparison test; it is not the delivered schema.",
+    "regression": "The short comparison regression was observed failing and then passing after only disallowing null instead of fixing the exact scope."
+  },
+  "protected_files_unchanged": 176,
+  "index_records_unchanged": 507,
+  "status": "open_no_production_fix",
+  "production_router_restored": true,
+  "bugfix_commit": null,
+  "withdrawal": {
+    "reason": "Existing lexical scope detector cannot distinguish uncertain clarification or incidental historical mentions from a resolved current level. Restricting null breaks legitimate clarification.",
+    "counterexamples": [
+      "Nao sei se meu curso e graduacao ou pos-graduacao.",
+      "Na graduacao eu podia trancar; no meu curso atual tambem posso?"
+    ],
+    "test_before_withdrawal": "2 failed, 1 passed, 9 skipped",
+    "test_after_withdrawal": "19 passed, 9 skipped",
+    "retained_test": "test_unresolved_level_can_remain_unresolved"
+  },
+  "accepted_intervention": null,
+  "withdrawn_schema_summary": {
+    "TEMP-POS-003": {
+      "runs": 10,
+      "counts": {
+        "pos_graduacao": 10
+      },
+      "route_stability_rate": 1.0,
+      "expected_route_rate": 1.0
+    },
+    "TEMP-POS-004": {
+      "runs": 10,
+      "counts": {
+        "pos_graduacao": 10
+      },
+      "route_stability_rate": 1.0,
+      "expected_route_rate": 1.0
+    },
+    "TEMP-GRAD-005": {
+      "runs": 10,
+      "counts": {
+        "graduacao": 10
+      },
+      "route_stability_rate": 1.0,
+      "expected_route_rate": 1.0
+    },
+    "TEMP-GRAD-001": {
+      "runs": 10,
+      "counts": {
+        "graduacao": 10
+      },
+      "route_stability_rate": 1.0,
+      "expected_route_rate": 1.0
+    },
+    "CONTROL-POS": {
+      "runs": 1,
+      "counts": {
+        "pos_graduacao": 1
+      },
+      "route_stability_rate": 1.0,
+      "expected_route_rate": 1.0
+    },
+    "CONTROL-956": {
+      "runs": 1,
+      "counts": {
+        "pos_graduacao": 1
+      },
+      "route_stability_rate": 1.0,
+      "expected_route_rate": 1.0
+    },
+    "CONTROL-GRAD": {
+      "runs": 1,
+      "counts": {
+        "graduacao": 1
+      },
+      "route_stability_rate": 1.0,
+      "expected_route_rate": 1.0
+    },
+    "CONTROL-RGG": {
+      "runs": 1,
+      "counts": {
+        "graduacao": 1
+      },
+      "route_stability_rate": 1.0,
+      "expected_route_rate": 1.0
+    },
+    "CONTROL-AMBIGUOUS": {
+      "runs": 1,
+      "counts": {
+        "esclarecer": 1
+      },
+      "route_stability_rate": 1.0,
+      "expected_route_rate": 1.0
+    }
+  },
+  "withdrawn_schema_verification": {
+    "rag_tests": 206,
+    "warnings": 2,
+    "seconds": 25.5,
+    "run": "failure_regression_v1_001/f1_final",
+    "note": "WITHDRAWN INTERVENTION: observed-case success does not describe the delivered Router."
+  },
+  "withdrawn_variant_verification": {
+    "focused": {
+      "passed": 37,
+      "skipped": 9,
+      "seconds": 7.86
+    },
+    "project_suite": {
+      "passed": 260,
+      "skipped": 11,
+      "warnings": 4,
+      "seconds": 36.37
+    },
+    "ruff": "passed",
+    "git_diff_check": "passed"
+  },
+  "attempted_prompt_change": "Only clarify level mapping and scope boundary in ROUTER_PROMPT; parser, schema, model, temperature and fallback remain unchanged.",
+  "retained_router_summary": {
+    "TEMP-POS-003": {
+      "runs": 10,
+      "counts": {
+        "pos_graduacao": 6,
+        "esclarecer": 4
+      },
+      "route_stability_rate": 0.6,
+      "expected_route_rate": 0.6
+    },
+    "TEMP-POS-004": {
+      "runs": 10,
+      "counts": {
+        "pos_graduacao": 4,
+        "esclarecer": 6
+      },
+      "route_stability_rate": 0.6,
+      "expected_route_rate": 0.4
+    },
+    "TEMP-GRAD-005": {
+      "runs": 10,
+      "counts": {
+        "graduacao": 4,
+        "esclarecer": 6
+      },
+      "route_stability_rate": 0.6,
+      "expected_route_rate": 0.4
+    },
+    "TEMP-GRAD-001": {
+      "runs": 10,
+      "counts": {
+        "graduacao": 7,
+        "esclarecer": 3
+      },
+      "route_stability_rate": 0.7,
+      "expected_route_rate": 0.7
+    },
+    "CONTROL-POS": {
+      "runs": 1,
+      "counts": {
+        "pos_graduacao": 1
+      },
+      "route_stability_rate": 1.0,
+      "expected_route_rate": 1.0
+    },
+    "CONTROL-956": {
+      "runs": 1,
+      "counts": {
+        "esclarecer": 1
+      },
+      "route_stability_rate": 1.0,
+      "expected_route_rate": 0.0
+    },
+    "CONTROL-GRAD": {
+      "runs": 1,
+      "counts": {
+        "graduacao": 1
+      },
+      "route_stability_rate": 1.0,
+      "expected_route_rate": 1.0
+    },
+    "CONTROL-RGG": {
+      "runs": 1,
+      "counts": {
+        "graduacao": 1
+      },
+      "route_stability_rate": 1.0,
+      "expected_route_rate": 1.0
+    },
+    "CONTROL-AMBIGUOUS": {
+      "runs": 1,
+      "counts": {
+        "esclarecer": 1
+      },
+      "route_stability_rate": 1.0,
+      "expected_route_rate": 1.0
+    }
+  },
+  "retained_router_source_identical_to_initial": true,
+  "retained_capture_test": {
+    "failed": 5,
+    "passed": 7,
+    "seconds": 0.4,
+    "failed_cases": [
+      "TEMP-POS-003",
+      "TEMP-POS-004",
+      "TEMP-GRAD-005",
+      "TEMP-GRAD-001",
+      "CONTROL-956"
+    ]
+  },
+  "additional_final_control_failure": [
+    {
+      "case_id": "CONTROL-956",
+      "raw_content": "{\"clarification_question\":null,\"needs_clarification\":true,\"reason_code\":\"ambiguous_academic_level\",\"scope\":null}",
+      "validation_error": "ValidationError",
+      "router_output": {
+        "scope": null,
+        "needs_clarification": true,
+        "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "reason_code": "invalid_model_decision"
+      }
+    }
+  ]
+}

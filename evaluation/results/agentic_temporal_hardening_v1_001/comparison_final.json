@@ -1,0 +1,290 @@
+{
+  "conditions": {
+    "controlled": {
+      "n": 22,
+      "legal_gold": false,
+      "generation_semantics_automatically_scored": false,
+      "metrics": {
+        "temporal_classification_accuracy": {
+          "numerator": 22,
+          "denominator": 22,
+          "value": 1.0
+        },
+        "obsolete_context_exposure_rate": {
+          "numerator": 0,
+          "denominator": 12,
+          "value": 0.0
+        },
+        "current_norm_hit_rate": {
+          "numerator": 11,
+          "denominator": 11,
+          "value": 1.0
+        },
+        "compliance_violation_rate": {
+          "numerator": 0,
+          "denominator": 11,
+          "value": 0.0
+        },
+        "historical_preservation_rate": {
+          "numerator": 6,
+          "denominator": 6,
+          "value": 1.0
+        },
+        "amendment_application_accuracy": {
+          "numerator": 6,
+          "denominator": 6,
+          "value": 1.0
+        },
+        "amendment_isolation_accuracy": {
+          "numerator": 2,
+          "denominator": 2,
+          "value": 1.0
+        },
+        "final_context_eligibility_rate": {
+          "numerator": 21,
+          "denominator": 21,
+          "value": 1.0
+        },
+        "reference_eligibility_rate": {
+          "numerator": 21,
+          "denominator": 21,
+          "value": 1.0
+        },
+        "insufficient_evidence_abstention_rate": {
+          "numerator": 4,
+          "denominator": 4,
+          "value": 1.0
+        },
+        "expected_answer_action_accuracy": {
+          "numerator": 22,
+          "denominator": 22,
+          "value": 1.0
+        }
+      },
+      "failures_by_layer": {}
+    },
+    "automatic": {
+      "n": 9,
+      "legal_gold": false,
+      "generation_semantics_automatically_scored": false,
+      "metrics": {
+        "temporal_classification_accuracy": {
+          "numerator": 9,
+          "denominator": 9,
+          "value": 1.0
+        },
+        "obsolete_context_exposure_rate": {
+          "numerator": 0,
+          "denominator": 10,
+          "value": 0.0
+        },
+        "current_norm_hit_rate": {
+          "numerator": 3,
+          "denominator": 5,
+          "value": 0.6
+        },
+        "compliance_violation_rate": {
+          "numerator": 0,
+          "denominator": 4,
+          "value": 0.0
+        },
+        "historical_preservation_rate": {
+          "numerator": 1,
+          "denominator": 2,
+          "value": 0.5
+        },
+        "amendment_application_accuracy": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "amendment_isolation_accuracy": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "final_context_eligibility_rate": {
+          "numerator": 20,
+          "denominator": 20,
+          "value": 1.0
+        },
+        "reference_eligibility_rate": {
+          "numerator": 20,
+          "denominator": 20,
+          "value": 1.0
+        },
+        "insufficient_evidence_abstention_rate": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0
+        },
+        "expected_answer_action_accuracy": {
+          "numerator": 5,
+          "denominator": 9,
+          "value": 0.5555555555555556
+        }
+      },
+      "failures_by_layer": {
+        "RETRIEVAL": 1,
+        "ROUTER": 4
+      }
+    },
+    "manual": {
+      "n": 9,
+      "legal_gold": false,
+      "generation_semantics_automatically_scored": false,
+      "metrics": {
+        "temporal_classification_accuracy": {
+          "numerator": 9,
+          "denominator": 9,
+          "value": 1.0
+        },
+        "obsolete_context_exposure_rate": {
+          "numerator": 0,
+          "denominator": 20,
+          "value": 0.0
+        },
+        "current_norm_hit_rate": {
+          "numerator": 5,
+          "denominator": 5,
+          "value": 1.0
+        },
+        "compliance_violation_rate": {
+          "numerator": 0,
+          "denominator": 4,
+          "value": 0.0
+        },
+        "historical_preservation_rate": {
+          "numerator": 2,
+          "denominator": 2,
+          "value": 1.0
+        },
+        "amendment_application_accuracy": {
+          "numerator": 2,
+          "denominator": 2,
+          "value": 1.0
+        },
+        "amendment_isolation_accuracy": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0
+        },
+        "final_context_eligibility_rate": {
+          "numerator": 35,
+          "denominator": 35,
+          "value": 1.0
+        },
+        "reference_eligibility_rate": {
+          "numerator": 35,
+          "denominator": 35,
+          "value": 1.0
+        },
+        "insufficient_evidence_abstention_rate": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0
+        },
+        "expected_answer_action_accuracy": {
+          "numerator": 9,
+          "denominator": 9,
+          "value": 1.0
+        }
+      },
+      "failures_by_layer": {
+        "RETRIEVAL": 1
+      }
+    }
+  },
+  "controlled_pairs": [
+    {
+      "pair": "grad_coordinator",
+      "case_ids": [
+        "G1_current",
+        "G3_historical"
+      ],
+      "different_final_context": true,
+      "final_ids": [
+        [
+          "ufpi-177-2012-art-68-idx-000067"
+        ],
+        [
+          "ufpi-177-2012-art-68-idx-000067"
+        ]
+      ]
+    },
+    {
+      "pair": "post_defense",
+      "case_ids": [
+        "P1_current",
+        "P2_historical"
+      ],
+      "different_final_context": true,
+      "final_ids": [
+        [
+          "ufpi-956-2025-art-53-idx-000051"
+        ],
+        [
+          "ufpi-658-2024-art-43-idx-000042"
+        ]
+      ]
+    }
+  ],
+  "live_manual_pairs": [
+    {
+      "pair": "grad_coordinator",
+      "case_ids": [
+        "G1_current",
+        "G3_historical"
+      ],
+      "different_final_context": true,
+      "final_ids": [
+        [
+          "ufpi-1056-2026-art-1-idx-000000",
+          "ufpi-177-2012-art-68-idx-000067",
+          "ufpi-177-2012-art-69-idx-000068",
+          "ufpi-177-2012-art-66-idx-000065",
+          "ufpi-177-2012-art-63-idx-000062"
+        ],
+        [
+          "ufpi-177-2012-art-68-idx-000067",
+          "ufpi-177-2012-art-69-idx-000068",
+          "ufpi-177-2012-art-66-idx-000065",
+          "ufpi-177-2012-art-80-idx-000079",
+          "ufpi-177-2012-art-79-idx-000078"
+        ]
+      ]
+    },
+    {
+      "pair": "post_defense",
+      "case_ids": [
+        "P1_current",
+        "P2_historical"
+      ],
+      "different_final_context": true,
+      "final_ids": [
+        [
+          "ufpi-956-2025-art-28-idx-000027",
+          "ufpi-956-2025-art-49-idx-000047",
+          "ufpi-956-2025-art-54-idx-000052",
+          "ufpi-956-2025-art-3-idx-000002",
+          "ufpi-956-2025-art-53-idx-000051"
+        ],
+        [
+          "ufpi-658-2024-art-40-idx-000039",
+          "ufpi-658-2024-art-43-idx-000042",
+          "ufpi-658-2024-art-44-idx-000043",
+          "ufpi-658-2024-art-28-idx-000027",
+          "ufpi-658-2024-art-46-idx-000045"
+        ]
+      ]
+    }
+  ],
+  "negative_results": {
+    "router_auto": 4,
+    "retrieval_auto": 1,
+    "retrieval_manual": 1,
+    "generated_responses_inspected": 11,
+    "explicit_generation_issue_cases": 3
+  },
+  "interpretation": "Technical invariants and pipeline actions only; not legal validity or aggregate answer accuracy."
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "development_cli_focused_regression",
+  "attendance": {
+    "generation_attempts": 2,
+    "unrequested_example_pattern_present": false,
+    "errors": 0,
+    "article_20_retrieved": true,
+    "records": 1
+  },
+  "interactive": {
+    "resumed_response_kind": "generated",
+    "resumed_only_pos_graduacao": true,
+    "first_response_kind": "clarification",
+    "article_37_retrieved": true,
+    "resumed_generation_attempts": 1,
+    "records": 2,
+    "first_generation_attempts": 0,
+    "errors": 0
+  },
+  "output_sha256": {
+    "attendance": "5004b9b1f2f609a5f05f6acac8dc3b3c8deed111c5ee98dbda917c55a871c760",
+    "interactive": "6ec928087e63b63f92fe1284d788240e8c3bf170a6db53f7e796db8967d70d36"
+  },
+  "human_scores": null,
+  "interpretation": "Verificação dirigida de execução, escopo e padrão formal; não é acurácia normativa nem amostra independente."
+}

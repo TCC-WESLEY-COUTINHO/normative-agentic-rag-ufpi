@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "candidate_gold": true,
+  "purpose": "functional_smoke_not_confirmatory",
+  "items": [
+    {
+      "id": "SMOKE-001",
+      "question": "Qual a frequência mínima para um aluno de graduação?",
+      "expected_scope": "graduacao",
+      "expected_action": "responder",
+      "sector": "graduacao",
+      "norm_id": "ufpi-177-2012",
+      "evidence": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "111",
+          "text": "**Art. 111. Será considerado \"aprovado\" no componente curricular o aluno que:**\n1. I - obtiver frequência igual ou superior a 75% (setenta e cinco por cento) da carga horária do componente curricular e média aritmética igual ou superior a 7 (sete) nas avaliações parciais;\n2. II - submetido ao exame final, obtiver média aritmética igual ou superior a 6 (seis), resultante da média aritmética das avaliações parciais e da nota do exame final."
+        }
+      ],
+      "reference_answer": "A frequência mínima é 75%, conforme o art. 111."
+    },
+    {
+      "id": "SMOKE-002",
+      "question": "Quais são os requisitos para defesa da dissertação no mestrado da pós-graduação?",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder",
+      "sector": "pos_graduacao",
+      "norm_id": "ufpi-956-2025",
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "3",
+          "text": "Art. 3º O Mestrado, Acadêmico ou Profissional, requer o cumprimento dos seguintes requisitos:\n- | -duração mínima de doze e máxima de vinte e quatro meses, permitida a prorrogação por até seis meses, mediante aprovação do Colegiado Simples.\n- Il -aprovação em exame de proficiência em uma língua estrangeira;\n- Ill -integralização curricular de, no mínimo, trinta créditos, dos quais seis são relativos à dissertação, observada a distribuição entre disciplinas obrigatórias, optativas e atividades complementares, definida no Regimento Interno do PPG;\n- IV -realização do Estágio Docência, nos termos definidos nesta Resolução;\n- V -realização de Exame de Qualificação, quando previsto no Regimento Interno do PPG; e\n- VI -apresentação oral e defesa de Dissertação.\n- $ 1º O Regimento Interno do PPG pode estabelecer durações específicas, desde que respeitados os limites do inciso |.\n- $ 2º Caso o PPG opte pela realização do Exame de Qualificação (inciso V), seu Regimento Interno deverá detalhar os procedimentos, prazos e modalidades de avaliação.\n- S$ 3º A defesa da Dissertação (inciso VI) somente ocorrerá após a integralização total dos créditos em disciplinas e atividades complementares.\n- $ 4º É permitido o aproveitamento de créditos cursados em outros Programas da UFPI ou em outra Instituição de Ensino Superior -IES, desde que em áreas afins e de interesse para a dissertação, mediante aprovação do Colegiado Simples.\n- $ 5º Cada PPG poderá estabelecer requisitos adicionais, em seu Regimento Interno, para a obtenção do título de mestre."
+        }
+      ],
+      "reference_answer": "Exige integralização dos créditos em disciplinas e atividades complementares antes da defesa, além dos demais requisitos do art. 3 e do regimento do PPG."
+    },
+    {
+      "id": "SMOKE-003",
+      "question": "Compare a frequência mínima na graduação e na pós-graduação.",
+      "expected_scope": "ambas",
+      "expected_action": "responder",
+      "sector": null,
+      "norm_id": "ufpi-177-2012",
+      "evidence": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article_number": "111",
+          "text": "**Art. 111. Será considerado \"aprovado\" no componente curricular o aluno que:**\n1. I - obtiver frequência igual ou superior a 75% (setenta e cinco por cento) da carga horária do componente curricular e média aritmética igual ou superior a 7 (sete) nas avaliações parciais;\n2. II - submetido ao exame final, obtiver média aritmética igual ou superior a 6 (seis), resultante da média aritmética das avaliações parciais e da nota do exame final."
+        },
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "20",
+          "text": "Art. 20. A verificação do rendimento acadêmico é feita por disciplina e abrange os aspectos de assiduidade e eficiência, ambos eliminatórios.\n- $ 1º Acritério do professor, a avaliação da eficiência é feita por um ou mais dos seguintes meios: provas, exames, trabalhos ou projetos.\n\n- $ 2º O resultado final da verificação é expresso em notas na escala de zero a dez com, no máximo, uma casa decimal.\n- $ 3º É considerado aprovado o(a) discente que obtiver nota mínima sete e frequência igual ou superior a 75% (setenta e cinco por cento).\n- S$ 4º As atividades de qualificação, de dissertação e de tese podem ser desenvolvidas por mais de um período letivo, conforme o Regimento Interno de cada PPG.\n- S 5º Para efeito de registro, o número de notas parciais deve ser proporcional à carga horária da disciplina, respeitado o mínimo de:\n- | -duas, nas disciplinas com carga horária igual ou inferior a quarenta e cinco horas;\n- Il -três, nas disciplinas com carga horária de sessenta a setenta e cinco horas; e\n- Ill -quatro, nas disciplinas com carga horária superior a setenta e cinco horas."
+        }
+      ],
+      "reference_answer": "Os dois snapshots exigem frequência mínima de 75%; os requisitos de nota devem ser avaliados separadamente."
+    },
+    {
+      "id": "SMOKE-004",
+      "question": "Posso cancelar uma disciplina?",
+      "expected_scope": null,
+      "expected_action": "esclarecer",
+      "sector": null,
+      "norm_id": null,
+      "evidence": [],
+      "reference_answer": "Perguntar se a dúvida é sobre graduação ou pós-graduação."
+    }
+  ]
+}

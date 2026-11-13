@@ -6,6 +6,7 @@ from chromadb.config import Settings as ChromaSettings
 from chromadb.errors import NotFoundError
 
 from rag_baseline.models import CorpusChunk, RetrievedChunk
+from rag_baseline.scope import validate_sector
 
 
 class ChromaVectorStore:
@@ -44,8 +45,21 @@ class ChromaVectorStore:
             embeddings=embeddings,
         )
 
+    def synchronize(self, chunks: list[CorpusChunk], embeddings: list[list[float]]) -> None:
+        """Make the collection contain exactly the supplied corpus chunks."""
+        self.upsert(chunks, embeddings)
+        expected_ids = {chunk.id for chunk in chunks}
+        stored_ids = set(self.collection.get()["ids"])
+        obsolete_ids = sorted(stored_ids - expected_ids)
+        if obsolete_ids:
+            self.collection.delete(ids=obsolete_ids)
+
     def count(self) -> int:
         return self.collection.count()
+
+    def available_sectors(self) -> set[str]:
+        rows = self.collection.get(include=["metadatas"])
+        return {m["sector"] for m in (rows["metadatas"] or []) if m and m.get("sector")}
 
     def reset(self) -> None:
         try:
@@ -54,13 +68,30 @@ class ChromaVectorStore:
             pass
         self.collection = self._get_or_create_collection()
 
-    def query(self, embedding: list[float], top_k: int) -> list[RetrievedChunk]:
+    def query(
+        self,
+        embedding: list[float],
+        top_k: int,
+        *,
+        sector: str | None = None,
+        excluded_sources: list[str] | None = None,
+    ) -> list[RetrievedChunk]:
+        validate_sector(sector)
+        if top_k < 1:
+            raise ValueError("top_k deve ser positivo.")
         if self.count() == 0:
             return []
+        clauses = []
+        if sector is not None:
+            clauses.append({"sector": sector})
+        if excluded_sources:
+            clauses.append({"source": {"$nin": excluded_sources}})
+        where = {"$and": clauses} if len(clauses) > 1 else (clauses[0] if clauses else None)
         result = self.collection.query(
             query_embeddings=[embedding],
             n_results=min(top_k, self.count()),
             include=["documents", "metadatas", "distances"],
+            where=where,
         )
         ids = result["ids"][0]
         documents = result["documents"][0] if result["documents"] else []

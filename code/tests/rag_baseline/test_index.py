@@ -68,9 +68,9 @@ class FakeStore:
             self.events.append("reset")
         self.chunks = []
 
-    def upsert(self, chunks, embeddings) -> None:
+    def synchronize(self, chunks, embeddings) -> None:
         if self.events is not None:
-            self.events.append("upsert")
+            self.events.append("synchronize")
         self.chunks = chunks
         self.embeddings = embeddings
 
@@ -124,7 +124,7 @@ async def test_rebuild_generates_embeddings_before_resetting_collection(tmp_path
         rebuild=True,
     )
 
-    assert events == ["embed", "reset", "upsert"]
+    assert events == ["embed", "reset", "synchronize"]
 
 
 @pytest.mark.asyncio

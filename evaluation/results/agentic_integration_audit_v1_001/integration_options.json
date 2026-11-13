@@ -1,0 +1,108 @@
+{
+  "recommendation": "B",
+  "options": [
+    {
+      "id": "A",
+      "architecture": "Expose vector_search/metadata_search directly to high-level agent",
+      "advantages": [
+        "Simple legacy binding reuse",
+        "Separate search control"
+      ],
+      "complexity": "low initially, high invariant enforcement",
+      "control": "Temporal/V2 sequence can be bypassed",
+      "compatibility": "Legacy compatible; frozen invariant incompatible",
+      "nested_interrupts": "No unified clarification owner",
+      "streaming": "Raw tool/model events can leak early",
+      "testability": "Many bypass combinations",
+      "bypass_risk": "high",
+      "verdict": "DO_NOT_USE for normative final answers"
+    },
+    {
+      "id": "B",
+      "architecture": "One normative_rag facade; internal vector/metadata; noninteractive frozen core query",
+      "advantages": [
+        "Small frozen-core impact",
+        "Reuse conversation tool loop",
+        "Keep both search strategies",
+        "Independent later calculator"
+      ],
+      "complexity": "moderate; explicit adapters",
+      "control": "One gateway validates routing/filtering/grounding; output gate still mandatory",
+      "compatibility": "Existing service-compatible injection and QueryResult",
+      "nested_interrupts": "Parent-owned structured clarification avoids nesting",
+      "streaming": "Progress events and complete validated result",
+      "testability": "Contract/bypass/strategy tests",
+      "bypass_risk": "low for retrieval bypass when raw capabilities removed; DIRECT semantic misuse needs app policy",
+      "verdict": "RECOMMENDED"
+    },
+    {
+      "id": "C",
+      "architecture": "Embed complete normative graph as parent subgraph",
+      "advantages": [
+        "Native graph observability",
+        "Typed state flow"
+      ],
+      "complexity": "high",
+      "control": "Sequence enforced only if parent cannot skip/overwrite result",
+      "compatibility": "Framework fits; reducers/namespaces/transport need adapters",
+      "nested_interrupts": "Correlated resumes, replay/idempotence needed",
+      "streaming": "Filter nested raw model tokens; lift full result",
+      "testability": "Broader checkpoint/resume/stream integration tests",
+      "bypass_risk": "low only with enforced parent flow",
+      "verdict": "Viable later; not minimal first integration"
+    }
+  ],
+  "action_vs_domain": {
+    "action": "DIRECT/NORMATIVE_RAG/CLARIFY/future tool; existing LLM calling is not enforcement",
+    "domain": "RouterDecision graduacao/pos_graduacao/ambas or null+needs_clarification; only for normative action"
+  },
+  "clarification": "Parent saves original question/correlation; core noninteractive query returns clarification; next call passes original question plus clarification",
+  "next_implementation_plan": [
+    {
+      "step": 1,
+      "deliverable": "Versioned NormativeToolResult/public-internal result handle and emission contract",
+      "gate": "Roundtrip references/status; reject disable flags"
+    },
+    {
+      "step": 2,
+      "deliverable": "Noninteractive facade over current AgenticRagService.query; force router/filter",
+      "gate": "Structured clarification; no bare service query/generate"
+    },
+    {
+      "step": 3,
+      "deliverable": "Per-call retrieval facade delegates current vector path unchanged",
+      "gate": "No shared mutable strategy state; frozen vector regression"
+    },
+    {
+      "step": 4,
+      "deliverable": "Metadata exact lookup and norm-filtered vector adapter over existing Chroma",
+      "gate": "Resolve438 missing norm_id by ID/registry source; specify rank/score; no reindex/subdivision promotion"
+    },
+    {
+      "step": 5,
+      "deliverable": "Register normative_rag as the only normative capability; explicit action/budget policy",
+      "gate": "No raw search tools; canonical follow-up question still goes through Domain Router"
+    },
+    {
+      "step": 6,
+      "deliverable": "Persist validated result/provenance/domain and ownership separately from messages",
+      "gate": "Serializer/restart/multi-user/multi-agent/staleness tests"
+    },
+    {
+      "step": 7,
+      "deliverable": "Parent clarification/pending-original-question continuation",
+      "gate": "No nested interrupt or repeated tool execution"
+    },
+    {
+      "step": 8,
+      "deliverable": "Transport/history/run_id/stream gate and later packaging checks",
+      "gate": "No pre-guard normative tokens; preserve references/provenance; no deploy in audit"
+    },
+    {
+      "step": 9,
+      "deliverable": "New integration-focused multi-turn/bypass/contract acceptance tests",
+      "gate": "Explain prior result without retrieval; E na pós needs fresh evidence; do not tune/re-run44 cases"
+    }
+  ],
+  "implemented": false
+}

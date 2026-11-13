@@ -1,0 +1,199 @@
+{
+  "schema": "execution_snapshot_preservation_v2",
+  "source_run": "pilot_003",
+  "run_manifest": "evaluation/results/pilot_003/manifest.json",
+  "description": "Files in this snapshot, which may be partial. byte_preserved files match the hash in the run manifest. scientific_projection files have their own hash and do not reproduce the historical hash. not_included lists inputs recorded in the run manifest that are absent from this snapshot. Verification uses only repository files.",
+  "files": [
+    {
+      "relative_path": "code/src/agents/tools_v2.py",
+      "sha256": "44a5c9bf62328bb60613e3cca3b52b22f1af1430ea535900a8039af91611cf6b",
+      "byte_size": 20074,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "pilot_003"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/__init__.py",
+      "sha256": "539056baaeba82639effc582df1b127da66d551b25146d7c41d7e6118b3c3ae3",
+      "byte_size": 72,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "pilot_003"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/analyze_experiment.py",
+      "sha256": "3775da46d3415fff60e019d7e4dc1bfd89907a1fa756c27c71f49c39ae69e101",
+      "byte_size": 1175,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "pilot_003"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/api.py",
+      "sha256": "67458c79f65e5838838960247c4664ad33fe573f0d2c197b2348ab3690f74557",
+      "byte_size": 4424,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "pilot_003"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/config.py",
+      "sha256": "527e61d0e147ca2b0d8d85d3ed82e7f6a0472eaa6328dff32c61b919573fb0fc",
+      "byte_size": 1267,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "pilot_003"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/corpus.py",
+      "sha256": "a0894063ca5450aa405ad87cf273ab6a3863ab15dce3972aaac3768b91551ed6",
+      "byte_size": 3986,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "pilot_003"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/experiment_v2.py",
+      "sha256": "0f626aea8b5f1290488ac4bd9beeabd1250094ccbddc62f899d3f2d286abe3cb",
+      "byte_size": 14509,
+      "role": "source module",
+      "preservation_kind": "scientific_projection",
+      "source_run": "pilot_003",
+      "normalization": "non-scientific metadata normalized"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/experiment.py",
+      "sha256": "adfb541ee53c91f3018136f04047a247f08619007005ffcc04806b56778c0e30",
+      "byte_size": 14796,
+      "role": "source module",
+      "preservation_kind": "scientific_projection",
+      "source_run": "pilot_003",
+      "normalization": "non-scientific metadata normalized"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/index.py",
+      "sha256": "f4301ffbbd3970e48c23358174aae26c1fb56170bf57cacb44dac70e6effc824",
+      "byte_size": 4255,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "pilot_003"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/models.py",
+      "sha256": "a9b04320642e0bd7a179a33c37672a7cca7c619a66576e43c237ea47f5b8f241",
+      "byte_size": 1970,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "pilot_003"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/openrouter.py",
+      "sha256": "feec50ecadab9646c0f2411c229867ebc4bd6f453121c845725a9ff2e2705360",
+      "byte_size": 5036,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "pilot_003"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/profiles.py",
+      "sha256": "77fe0c054ef11a9e817b77bfe15f7e5b7734cf44ad2a72cdb8b9a0a1b89259f1",
+      "byte_size": 1993,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "pilot_003"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/retrieve.py",
+      "sha256": "b37609b19c1d80298055f76e920226531cb7ddb3516aaaaa1cd096a77cddf0bc",
+      "byte_size": 3157,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "pilot_003"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/scope.py",
+      "sha256": "c0286726b404dbfa1640ea0966a7040cfc26e505f1d7619692d416b111d2702d",
+      "byte_size": 1078,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "pilot_003"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/service.py",
+      "sha256": "8b53919f10501b5827002cf9272b59ea0c6fe381a8f8e9dbda59ea6867828fa1",
+      "byte_size": 3827,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "pilot_003"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/vector_store.py",
+      "sha256": "ce7c739578fa78d021ededfb1bc333d929f4cb349d77341b3b5a3e7451ba25fb",
+      "byte_size": 3829,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "pilot_003"
+    },
+    {
+      "relative_path": "code/uv.lock",
+      "sha256": "77231f9e910d13c1d9f85bff90100c1de8eb86671fdf0e1cf8d373e931fc726f",
+      "byte_size": 808915,
+      "role": "dependency lock",
+      "preservation_kind": "byte_preserved",
+      "source_run": "pilot_003"
+    },
+    {
+      "relative_path": "evaluation/corpora/graduacao_setor_v2.json",
+      "sha256": "58e5b9f1ced636054b0627fdf6f2ec5350f14b967b47bc91735dd4a87b43e7c1",
+      "byte_size": 412633,
+      "role": "normative corpus",
+      "preservation_kind": "byte_preserved",
+      "source_run": "pilot_003"
+    },
+    {
+      "relative_path": "evaluation/corpora/pos_graduacao_setor_v2.json",
+      "sha256": "cb9674286486c409e62bb6bd9ebebb0cdb3a05828351a16ae0da8f633f11102a",
+      "byte_size": 68852,
+      "role": "normative corpus",
+      "preservation_kind": "byte_preserved",
+      "source_run": "pilot_003"
+    },
+    {
+      "relative_path": "evaluation/datasets/graduacao_v2.json",
+      "sha256": "fde3328237457a53b87d631f8c7f45fcd8f7d38745b144864b27916351739267",
+      "byte_size": 75393,
+      "role": "candidate dataset",
+      "preservation_kind": "scientific_projection",
+      "source_run": "pilot_003",
+      "normalization": "non-scientific metadata normalized"
+    },
+    {
+      "relative_path": "evaluation/datasets/pos_graduacao_v2.json",
+      "sha256": "a4ffda065d11959837078eb02530871bb90e4e6d95f6b4771729bcc99de1a649",
+      "byte_size": 52219,
+      "role": "candidate dataset",
+      "preservation_kind": "scientific_projection",
+      "source_run": "pilot_003",
+      "normalization": "non-scientific metadata normalized"
+    },
+    {
+      "relative_path": "evaluation/protocol_v2.md",
+      "sha256": "9d7c4d72ba6d4b2a0a0af7c8538dd81a689cc9b40b5e28925cad95f37646587e",
+      "byte_size": 9306,
+      "role": "evaluation protocol",
+      "preservation_kind": "scientific_projection",
+      "source_run": "pilot_003",
+      "normalization": "non-scientific metadata normalized"
+    },
+    {
+      "relative_path": "evaluation/results/pilot_003/rows.jsonl",
+      "sha256": "b428339522d8e81e7494867f88b6839b51c4628cc7353367cae8b65207dee16e",
+      "byte_size": 1389404,
+      "role": "run records",
+      "preservation_kind": "scientific_projection",
+      "source_run": "pilot_003",
+      "normalization": "non-scientific metadata normalized"
+    }
+  ],
+  "not_included": []
+}

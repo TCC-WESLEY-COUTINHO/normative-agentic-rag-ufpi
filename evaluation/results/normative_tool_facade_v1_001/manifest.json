@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-10-31T16:26:52.819201+00:00",
+  "work": "NormativeToolResult V1 and NormativeRagFacade V1; no tool registration",
+  "initial_branch": "audit/agentic-conversational-integration-v1",
+  "initial_head": "61d2bc0e3db4b967aafb0f8127da9c109f0c2f06",
+  "branch": "feat/normative-tool-facade-v1",
+  "initial_tree_clean": true,
+  "selected_core": "Structured Normative Output V2",
+  "contract_version": "1",
+  "core_version": "structured_output_v2",
+  "retrieval_strategy": "dense_vector",
+  "implementation_head": "d3c5cc8ae9c1925c9c6cd75ee6da70ce88e4051b",
+  "implementation_hashes": {
+    "code/src/rag_baseline/tool_contracts.py": "8a958049f6ab1b4a9c22578c9fb049541a6e34cd1ebe695844c7d1cbf8fccdf3",
+    "code/src/rag_baseline/tool_facade.py": "962bb6ab8408bf6d03a98a23479b935d4f4cc6dcf3d90320edd7a656b00ba179",
+    "code/tests/rag_baseline/normative_facade_fixtures.py": "f0a925b2c4e1b518ac0e1837e88f96d4e89b2883a70fef2a184fdd14d0b2050a",
+    "code/tests/rag_baseline/test_normative_tool_contracts.py": "cf59b60ea18045e12ea79528a263e0ffa895c3195087db257490299baa75e3d1",
+    "code/tests/rag_baseline/test_normative_tool_facade.py": "d04c95faaccca255aa0f36cd5cc34a483df39326ec8156630e731e46853227fc"
+  },
+  "preservation_baseline": "preservation_before.json",
+  "protected_files": 555,
+  "index_count": 507,
+  "index_sha256": "ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a",
+  "real_provider_calls": 0,
+  "previous_experiment_repeated": false,
+  "decision_count": 12,
+  "execution_count": 22,
+  "evidence_commit": "Containing local verification-artifact commit",
+  "artifacts_manifest": "ARTIFACTS.json"
+}

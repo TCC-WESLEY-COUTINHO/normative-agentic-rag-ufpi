@@ -1,0 +1,48 @@
+{
+  "agents": [
+    {
+      "experimental": false,
+      "available": true,
+      "unavailable_reason": null,
+      "key": "chatbot_ufpi_agentic",
+      "description": "Consulta UFPI com roteamento de nível e filtro explícito de vigência."
+    },
+    {
+      "experimental": false,
+      "available": true,
+      "unavailable_reason": null,
+      "key": "chatbot_ufpi",
+      "description": "Assistente acadêmico especializado no RGG da UFPI."
+    },
+    {
+      "experimental": false,
+      "available": true,
+      "unavailable_reason": null,
+      "key": "chatbot_ufpi_v2",
+      "description": "Assistente acadêmico especializado no RGG da UFPI (v2) com busca semântica e por metadados."
+    },
+    {
+      "experimental": false,
+      "available": true,
+      "unavailable_reason": null,
+      "key": "chatbot_generic",
+      "description": "Chatbot genérico simples para responder dúvidas gerais com suporte a cálculos."
+    },
+    {
+      "experimental": true,
+      "available": true,
+      "unavailable_reason": null,
+      "key": "chatbot_ufpi_integrated_v1",
+      "description": "Experimental, non-default: consulta normativa integrada, memória e calculator determinística."
+    }
+  ],
+  "models": [
+    "fake",
+    "google/gemini-2.5-flash",
+    "gpt-4o",
+    "gpt-4o-mini",
+    "gpt-5-mini-2025-08-07"
+  ],
+  "default_agent": "chatbot_ufpi_v2",
+  "default_model": "gpt-4o-mini"
+}

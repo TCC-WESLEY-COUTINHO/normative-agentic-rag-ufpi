@@ -1,0 +1,38 @@
+{
+  "case_id": "TEMP-GRAD-002",
+  "question": "Como era a redação do art. 68, §4º da Resolução 177/2012 no regulamento da graduação atualizado em 2023, antes da alteração de 2026?",
+  "classification": "embedding miss with ranking competition and semantic query underspecification",
+  "target_eligible": true,
+  "target_has_norm_article_sector_hierarchy": true,
+  "query_rewritten": false,
+  "production_top_k": 5,
+  "original_query_contains": [
+    "graduacao",
+    "177/2012",
+    "art. 68"
+  ],
+  "checks": [
+    {
+      "sector": null,
+      "top5_equal_original": true,
+      "repeat_top5_equal": [
+        true,
+        true
+      ]
+    },
+    {
+      "sector": "graduacao",
+      "top5_equal_original": true,
+      "repeat_top5_equal": [
+        true,
+        true
+      ]
+    }
+  ],
+  "root_cause_evidence": "Dense semantic ranking does not act as exact article-number lookup. Adding already present identifiers does not recover target in top20; substantive coordinator wording moves it to rank5 global/rank2 graduation. Removing temporal wording still leaves rank350/rank292. Target representation includes norm, sector, chapter and article.",
+  "limits": "These ablations do not isolate a particular embedding dimension or prove chunk length causality. Existing vector origin lacks historical receipt.",
+  "fix": null,
+  "reason_no_fix": "No lost query reference or erroneous filter found. Re-embedding/changing index is frozen; exact lookup, rewriting or reranking would introduce a retrieval strategy beyond this bug diagnosis.",
+  "test": "Three independent embeddings of the unchanged original question reproduce identical top5 in both retrieval scopes.",
+  "bugfix_commit": null
+}

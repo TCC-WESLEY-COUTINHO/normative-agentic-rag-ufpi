@@ -1,0 +1,78 @@
+[
+    {
+        "Id": "sha256:3496896a631a3bcf6a71f117bf30d4d2abd9cdfbe657cf0956f17faefb32d9d5",
+        "RepoTags": [
+            "normative-agentic-rag-ufpi:runtime-smoke"
+        ],
+        "RepoDigests": [
+            "normative-agentic-rag-ufpi@sha256:3496896a631a3bcf6a71f117bf30d4d2abd9cdfbe657cf0956f17faefb32d9d5"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-11-01T13:32:52.581633677-03:00",
+        "Config": {
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.3",
+                "PYTHON_PIP_VERSION=24.0",
+                "PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/dbf0c85f76fb6e1ab42aa672ffca6f0a675d9ee4/public/get-pip.py",
+                "PYTHON_GET_PIP_SHA256=dfe9fd5c28dc98b5ac17979a953ea550cec37ae1b47a5116007395bfacff2ab9",
+                "UV_PROJECT_ENVIRONMENT=/usr/local/",
+                "UV_COMPILE_BYTECODE=1",
+                "PYTHONPATH=/app/code/src"
+            ],
+            "Cmd": [
+                "python",
+                "src/run_service.py"
+            ],
+            "WorkingDir": "/app/code",
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 1859608777,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:5d4427064ecc46e3c2add169e9b5eafc7ed2be7861081ec925938ab628ac0e25",
+                "sha256:146826fa3ca090520765c1cee50f779ead1662bfd94d413cff5b9ba519b23a7a",
+                "sha256:b3232f6d8e2e151357179f44d5db1c01771d9dc6062171638bce130ac7ad4745",
+                "sha256:a9435642a9e345ccd40f519eb9ce194fab252fbf2af7d526afefb4471f51d4cd",
+                "sha256:2eb7c5261c956b64b3d1de7cfdd31b6a54999a4ab80acabccf9f2171d0796b60",
+                "sha256:d14cc854718ab86fbee1a6610ada8413007f200a833cb8eff598a6fea5576227",
+                "sha256:3a271866e5f3ec5f5c8d6f4bae032f8955a800afd01387755fe11933953d4e80",
+                "sha256:43a5d76c1bdac0b58085ebbb7d0745b79019084b5eb2d3a92fbc2cbb9f86f311",
+                "sha256:e8976c53869cedae90ddd5a9d5659056a37b8264525659b5febf7441a2266ac9",
+                "sha256:174cd92485bd007f2208c92acabc9b762c90fef393bde5297d24b57b1465a51e",
+                "sha256:0380cf85649ba387b6f019c63cf064eb266a1e08a77cefdfe8bea12969e530be",
+                "sha256:2c5972a29b6bff2bea46baeb6514ee5296c9153fc24e26262706139bb4b4b461",
+                "sha256:142bc2e72b11237f325523a9a5213d8fa1ccab36fbddecb8e37fe333b788a718",
+                "sha256:455153f0980a5a00c7a2e58d4d53f7b5306817d9775f95c0fa7973fb17501574",
+                "sha256:c7f127117e2b2241b9abb30548a39a3e3ccda6dc92c3efe41c9e44ade47538b7",
+                "sha256:35f1b6fabe35094a877c154f493fbeaa2f3fefed16c4d73568a2033d64fc3f55",
+                "sha256:f94ac44b6c1fce17fd48d401c5789b500c27fca671e8b0ce9055e1ceca7ec14b",
+                "sha256:395b0ed269ae03fc1e0aa5f89a59ac6b013441cc2e0a79283b132feadc27569d",
+                "sha256:e196c6a425ffb1e7a6741eb51204daf89fdd3b61a53d5d7ffb5147f19bc28d14",
+                "sha256:77fcc0dcd49743f5466035b1b156630a157d9a3c388ac52aa694a5202fc21595",
+                "sha256:4239ad1231a8db98f71fd3942d2ebd057878305f7218b1e8abf3f1bac8ebb5ca"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-11-01T16:33:22.244555503Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:3496896a631a3bcf6a71f117bf30d4d2abd9cdfbe657cf0956f17faefb32d9d5",
+            "size": 856
+        },
+        "Identity": {
+            "Build": [
+                {
+                    "Ref": "groa4o1wcbk3pklryqc66pfj8",
+                    "CreatedAt": "2026-11-01T13:34:06.1142217-03:00"
+                }
+            ]
+        }
+    }
+]

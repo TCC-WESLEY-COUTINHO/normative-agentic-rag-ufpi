@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "initial_head": "6aa833d40ec9568aa920947ec7b4cfd74fde6622",
+  "initial_branch": "fix/temporal-generation-grounding-v1",
+  "initial_status": "clean",
+  "work_branch": "fix/structured-normative-output-v1",
+  "settings": {
+    "llm_model": "qwen/qwen3-30b-a3b-instruct-2507",
+    "embedding_model": "openai/text-embedding-3-small",
+    "temperature": 0.0,
+    "max_tokens": 800,
+    "top_k": 5,
+    "base_url": "https://openrouter.ai/api/v1"
+  },
+  "source_results": "evaluation/results/temporal_generation_grounding_v1_001",
+  "source_hashes": {
+    "manifest.json": "0b9a3b8a5484496e8569629cdf9e57ea1231753a8180fd05a349318aef0db5d2",
+    "frozen_contexts.json": "e6778f9215a443a2ce258a46258591299f93af671821b567b85e8bf870ca5348",
+    "before.jsonl": "6bcb37a85f6015528511b2430b4bf5ef2fad3b9738f1d634db677f11ba57051d",
+    "after.jsonl": "0acf923b4132f757c93a0a845cfc45f715f585c77459daaadff3b72b86c9320e",
+    "annotations.jsonl": "f6a9c9598d147a1122eb94a524e12de81b2481406f2ac258a6aca756463c7f04",
+    "summary.json": "0ed254635d889045fac162717ff6fc9dbedcb6618c814cbbf1a611cd4fc3e246"
+  },
+  "first_generation_count": 44,
+  "maximum_provider_calls": 88,
+  "repetitions": {
+    "A_grad_historical": 10,
+    "B_grad_current": 1,
+    "C_post_historical": 10,
+    "D_post_current": 1,
+    "E_validity": 10,
+    "F_comparison": 1,
+    "G_unknown": 1,
+    "H_citation": 10
+  },
+  "routing": "manual_scope_fixed_final_context",
+  "retrieval_calls": 0,
+  "embedding_calls": 0,
+  "reindexing": false,
+  "maximum_regenerations": 1,
+  "change": "Deterministic reference/status composition plus answer_body instructions and bounded output guard."
+}

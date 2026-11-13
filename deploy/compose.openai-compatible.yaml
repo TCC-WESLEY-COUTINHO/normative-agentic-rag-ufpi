@@ -1,0 +1,32 @@
+# Any OpenAI-compatible provider for generation and embeddings: a local server (Ollama, or vLLM
+# behind a proxy that serves chat and embeddings) or a remote one (OpenAI, Groq, Together, ...).
+# This is NOT the evaluated configuration. Jev exists only on the OpenRouter Decisions API, so the
+# conversational layer defaults to A' (closed grammar, no interpreter); the structured LLM
+# interpreter can be used instead with COMPAT_CONVERSATION_INTERPRETER=structured_llm. The identity
+# endpoint reports evaluated_configuration=false.
+#
+# Variables (in .env): COMPAT_LLM_BASE_URL, COMPAT_LLM_API_KEY, COMPAT_LLM_MODEL,
+# COMPAT_EMBEDDING_MODEL, optional COMPAT_ROUTER_MODEL, COMPAT_INDEX_DIR,
+# COMPAT_CONVERSATION_INTERPRETER, COMPAT_CONVERSATION_INTERPRETER_CONFIG.
+#
+# 1. Index with the provider's embedding model (once per embedding model):
+#    docker compose -f compose.demo.yaml -f deploy/compose.openai-compatible.yaml run --rm --no-deps \
+#      backend python -m rag_baseline.index --profile duas-regulacoes --rebuild
+# 2. Start (add -f deploy/compose.api.yaml to publish the API):
+#    docker compose -f compose.demo.yaml -f deploy/compose.openai-compatible.yaml up -d --build --wait
+services:
+  backend:
+    environment:
+      OPENROUTER_BASE_URL: ${COMPAT_LLM_BASE_URL:-http://host.docker.internal:11434/v1}
+      OPENROUTER_API_KEY: ${COMPAT_LLM_API_KEY:-local}
+      LLM_MODEL: ${COMPAT_LLM_MODEL:?Defina COMPAT_LLM_MODEL (modelo de chat do provedor)}
+      ROUTER_MODEL: ${COMPAT_ROUTER_MODEL:-}
+      EMBEDDING_MODEL: ${COMPAT_EMBEDDING_MODEL:?Defina COMPAT_EMBEDDING_MODEL (modelo de embeddings do provedor)}
+      CONVERSATION_INTERPRETER: ${COMPAT_CONVERSATION_INTERPRETER:-none}
+      CONVERSATION_INTERPRETER_CONFIG: ${COMPAT_CONVERSATION_INTERPRETER_CONFIG:-{}}
+      PROTOTYPE_ALLOW_UNEVALUATED_CONFIG: "true"
+    volumes:
+      # Vectors depend on the embedding model: each model needs its own index.
+      - ${COMPAT_INDEX_DIR:-./.local/index-compat}:/app/index
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

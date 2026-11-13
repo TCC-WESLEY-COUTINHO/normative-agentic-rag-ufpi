@@ -1,0 +1,460 @@
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF.FF..FFF......F        [100%]
+================================== FAILURES ===================================
+_ test_reference_parser_recognizes_bound_document_article[Resolu\xe7\xe3o 177/2012, art. 68-ufpi-177-2012-68] _
+tests\rag_baseline\test_retrieval_strategies.py:58: in test_reference_parser_recognizes_bound_document_article
+    parsed = policy.NormativeQueryReferenceParser(registry).parse(query)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+_ test_reference_parser_recognizes_bound_document_article[Resolu\xe7\xe3o n\xba 177/2012, art 68-ufpi-177-2012-68] _
+tests\rag_baseline\test_retrieval_strategies.py:58: in test_reference_parser_recognizes_bound_document_article
+    parsed = policy.NormativeQueryReferenceParser(registry).parse(query)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+_ test_reference_parser_recognizes_bound_document_article[artigo 53 da Resolu\xe7\xe3o 956/2025-ufpi-956-2025-53] _
+tests\rag_baseline\test_retrieval_strategies.py:58: in test_reference_parser_recognizes_bound_document_article
+    parsed = policy.NormativeQueryReferenceParser(registry).parse(query)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+_ test_reference_parser_recognizes_bound_document_article[Art. 37 da 658/2024-ufpi-658-2024-37] _
+tests\rag_baseline\test_retrieval_strategies.py:58: in test_reference_parser_recognizes_bound_document_article
+    parsed = policy.NormativeQueryReferenceParser(registry).parse(query)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+_ test_reference_parser_recognizes_bound_document_article[1.056/2026, artigo 1-ufpi-1056-2026-1] _
+tests\rag_baseline\test_retrieval_strategies.py:58: in test_reference_parser_recognizes_bound_document_article
+    parsed = policy.NormativeQueryReferenceParser(registry).parse(query)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+_ test_reference_parser_recognizes_bound_document_article[1056/2026, art. 2-ufpi-1056-2026-2] _
+tests\rag_baseline\test_retrieval_strategies.py:58: in test_reference_parser_recognizes_bound_document_article
+    parsed = policy.NormativeQueryReferenceParser(registry).parse(query)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+_ test_reference_parser_recognizes_bound_document_article[art. 68, \xa74\xba da 177/2012-ufpi-177-2012-68] _
+tests\rag_baseline\test_retrieval_strategies.py:58: in test_reference_parser_recognizes_bound_document_article
+    parsed = policy.NormativeQueryReferenceParser(registry).parse(query)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+____________ test_non_normative_numbers_are_not_norms[faltam 20%] _____________
+tests\rag_baseline\test_retrieval_strategies.py:66: in test_non_normative_numbers_are_not_norms
+    parsed = policy.NormativeQueryReferenceParser(registry).parse(query)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+______________ test_non_normative_numbers_are_not_norms[10 dias] ______________
+tests\rag_baseline\test_retrieval_strategies.py:66: in test_non_normative_numbers_are_not_norms
+    parsed = policy.NormativeQueryReferenceParser(registry).parse(query)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+____________ test_non_normative_numbers_are_not_norms[turma 2025] _____________
+tests\rag_baseline\test_retrieval_strategies.py:66: in test_non_normative_numbers_are_not_norms
+    parsed = policy.NormativeQueryReferenceParser(registry).parse(query)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+_____________ test_non_normative_numbers_are_not_norms[nota 7/10] _____________
+tests\rag_baseline\test_retrieval_strategies.py:66: in test_non_normative_numbers_are_not_norms
+    parsed = policy.NormativeQueryReferenceParser(registry).parse(query)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+_ test_selector_is_conservative_without_unique_binding[Posso cancelar uma disciplina?-dense_vector] _
+tests\rag_baseline\test_retrieval_strategies.py:85: in test_selector_is_conservative_without_unique_binding
+    plan = policy.RetrievalStrategySelector(registry).select(query, scope="ambas")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+_ test_selector_is_conservative_without_unique_binding[O que diz o art. 68?-dense_vector] _
+tests\rag_baseline\test_retrieval_strategies.py:85: in test_selector_is_conservative_without_unique_binding
+    plan = policy.RetrievalStrategySelector(registry).select(query, scope="ambas")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+_ test_selector_is_conservative_without_unique_binding[\xa74\xba-dense_vector] _
+tests\rag_baseline\test_retrieval_strategies.py:85: in test_selector_is_conservative_without_unique_binding
+    plan = policy.RetrievalStrategySelector(registry).select(query, scope="ambas")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+_ test_selector_is_conservative_without_unique_binding[na resolu\xe7\xe3o antiga-dense_vector] _
+tests\rag_baseline\test_retrieval_strategies.py:85: in test_selector_is_conservative_without_unique_binding
+    plan = policy.RetrievalStrategySelector(registry).select(query, scope="ambas")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+_ test_selector_is_conservative_without_unique_binding[Resolu\xe7\xe3o 956/2025-dense_vector] _
+tests\rag_baseline\test_retrieval_strategies.py:85: in test_selector_is_conservative_without_unique_binding
+    plan = policy.RetrievalStrategySelector(registry).select(query, scope="ambas")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+_ test_selector_is_conservative_without_unique_binding[Na Resolu\xe7\xe3o 956/2025, onde fala sobre cancelamento?-vector_filtered] _
+tests\rag_baseline\test_retrieval_strategies.py:85: in test_selector_is_conservative_without_unique_binding
+    plan = policy.RetrievalStrategySelector(registry).select(query, scope="ambas")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+_ test_selector_is_conservative_without_unique_binding[Resolu\xe7\xe3o 177/2012, art. 68-metadata_exact] _
+tests\rag_baseline\test_retrieval_strategies.py:85: in test_selector_is_conservative_without_unique_binding
+    plan = policy.RetrievalStrategySelector(registry).select(query, scope="ambas")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+_ test_selector_is_conservative_without_unique_binding[Compare a 658/2024 com a 956/2025.-dense_vector] _
+tests\rag_baseline\test_retrieval_strategies.py:85: in test_selector_is_conservative_without_unique_binding
+    plan = policy.RetrievalStrategySelector(registry).select(query, scope="ambas")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+_ test_selector_is_conservative_without_unique_binding[Compare os arts. 52 e 53 da Resolu\xe7\xe3o 956/2025.-dense_vector] _
+tests\rag_baseline\test_retrieval_strategies.py:85: in test_selector_is_conservative_without_unique_binding
+    plan = policy.RetrievalStrategySelector(registry).select(query, scope="ambas")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+_ test_selector_is_conservative_without_unique_binding[Compare os artigos 52 a 54 da Resolu\xe7\xe3o 956/2025.-dense_vector] _
+tests\rag_baseline\test_retrieval_strategies.py:85: in test_selector_is_conservative_without_unique_binding
+    plan = policy.RetrievalStrategySelector(registry).select(query, scope="ambas")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+_ test_selector_is_conservative_without_unique_binding[Art. 68 na gradua\xe7\xe3o; a Resolu\xe7\xe3o 956/2025 trata de outro assunto?-dense_vector] _
+tests\rag_baseline\test_retrieval_strategies.py:85: in test_selector_is_conservative_without_unique_binding
+    plan = policy.RetrievalStrategySelector(registry).select(query, scope="ambas")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+_ test_selector_is_conservative_without_unique_binding[Art. 1 da Resolu\xe7\xe3o 999/2099-dense_vector] _
+tests\rag_baseline\test_retrieval_strategies.py:85: in test_selector_is_conservative_without_unique_binding
+    plan = policy.RetrievalStrategySelector(registry).select(query, scope="ambas")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+_ test_selector_is_conservative_without_unique_binding[Art. 1 da Resolu\xe7\xe3o 01056/2026-dense_vector] _
+tests\rag_baseline\test_retrieval_strategies.py:85: in test_selector_is_conservative_without_unique_binding
+    plan = policy.RetrievalStrategySelector(registry).select(query, scope="ambas")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+____ test_selector_does_not_correct_router_scope[graduacao-scope_conflict] ____
+tests\rag_baseline\test_retrieval_strategies.py:94: in test_selector_does_not_correct_router_scope
+    plan = policy.RetrievalStrategySelector(registry).select("956/2025, art. 53", scope=scope)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+____ test_selector_does_not_correct_router_scope[pos_graduacao-consistent] ____
+tests\rag_baseline\test_retrieval_strategies.py:94: in test_selector_does_not_correct_router_scope
+    plan = policy.RetrievalStrategySelector(registry).select("956/2025, art. 53", scope=scope)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+________ test_selector_does_not_correct_router_scope[ambas-consistent] ________
+tests\rag_baseline\test_retrieval_strategies.py:94: in test_selector_does_not_correct_router_scope
+    plan = policy.RetrievalStrategySelector(registry).select("956/2025, art. 53", scope=scope)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+___ test_selector_does_not_correct_router_scope[None-router_clarification] ____
+tests\rag_baseline\test_retrieval_strategies.py:94: in test_selector_does_not_correct_router_scope
+    plan = policy.RetrievalStrategySelector(registry).select("956/2025, art. 53", scope=scope)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+_______________ test_unknown_norm_is_reported_without_guessing ________________
+tests\rag_baseline\test_retrieval_strategies.py:99: in test_unknown_norm_is_reported_without_guessing
+    plan = policy.RetrievalStrategySelector(registry).select("Art. 3 da 999/2099", scope="graduacao")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+__ test_identity_uses_structural_priority_without_status[explicit-metadata] ___
+tests\rag_baseline\test_retrieval_strategies.py:113: in test_identity_uses_structural_priority_without_status
+    identity = policy.NormativeIdentityResolver(registry).resolve(chunk_id, row)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+_____ test_identity_uses_structural_priority_without_status[id-chunk_id] ______
+tests\rag_baseline\test_retrieval_strategies.py:113: in test_identity_uses_structural_priority_without_status
+    identity = policy.NormativeIdentityResolver(registry).resolve(chunk_id, row)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+____ test_identity_uses_structural_priority_without_status[source-source] _____
+tests\rag_baseline\test_retrieval_strategies.py:113: in test_identity_uses_structural_priority_without_status
+    identity = policy.NormativeIdentityResolver(registry).resolve(chunk_id, row)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+___ test_identity_uses_structural_priority_without_status[unknown-unknown] ____
+tests\rag_baseline\test_retrieval_strategies.py:113: in test_identity_uses_structural_priority_without_status
+    identity = policy.NormativeIdentityResolver(registry).resolve(chunk_id, row)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+__________________ test_conflicting_identity_is_not_used[id] __________________
+tests\rag_baseline\test_retrieval_strategies.py:124: in test_conflicting_identity_is_not_used
+    identity = policy.NormativeIdentityResolver(registry).resolve(chunk_id, row)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+________________ test_conflicting_identity_is_not_used[sector] ________________
+tests\rag_baseline\test_retrieval_strategies.py:124: in test_conflicting_identity_is_not_used
+    identity = policy.NormativeIdentityResolver(registry).resolve(chunk_id, row)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:27: in __getattr__
+    pytest.fail("Retrieval policy is not implemented")
+E   Failed: Retrieval policy is not implemented
+_ test_metadata_exact_finds_real_articles_without_vector_score[ufpi-177-2012-68] _
+tests\rag_baseline\test_retrieval_strategies.py:179: in test_metadata_exact_finds_real_articles_without_vector_score
+    found = engines.MetadataExactEngine(service.vector_store.collection, policy.NormativeIdentityResolver(registry)).retrieve(norm, article, top_k=5)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:38: in __getattr__
+    pytest.fail("Retrieval engines are not implemented")
+E   Failed: Retrieval engines are not implemented
+_ test_metadata_exact_finds_real_articles_without_vector_score[ufpi-956-2025-53] _
+tests\rag_baseline\test_retrieval_strategies.py:179: in test_metadata_exact_finds_real_articles_without_vector_score
+    found = engines.MetadataExactEngine(service.vector_store.collection, policy.NormativeIdentityResolver(registry)).retrieve(norm, article, top_k=5)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:38: in __getattr__
+    pytest.fail("Retrieval engines are not implemented")
+E   Failed: Retrieval engines are not implemented
+_ test_metadata_exact_finds_real_articles_without_vector_score[ufpi-658-2024-37] _
+tests\rag_baseline\test_retrieval_strategies.py:179: in test_metadata_exact_finds_real_articles_without_vector_score
+    found = engines.MetadataExactEngine(service.vector_store.collection, policy.NormativeIdentityResolver(registry)).retrieve(norm, article, top_k=5)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:38: in __getattr__
+    pytest.fail("Retrieval engines are not implemented")
+E   Failed: Retrieval engines are not implemented
+_ test_metadata_exact_finds_real_articles_without_vector_score[ufpi-1056-2026-1] _
+tests\rag_baseline\test_retrieval_strategies.py:179: in test_metadata_exact_finds_real_articles_without_vector_score
+    found = engines.MetadataExactEngine(service.vector_store.collection, policy.NormativeIdentityResolver(registry)).retrieve(norm, article, top_k=5)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:38: in __getattr__
+    pytest.fail("Retrieval engines are not implemented")
+E   Failed: Retrieval engines are not implemented
+_____________ test_metadata_rank_is_structural_not_vector_ranking _____________
+tests\rag_baseline\test_retrieval_strategies.py:193: in test_metadata_rank_is_structural_not_vector_ranking
+    engine = engines.MetadataExactEngine(service.vector_store.collection, policy.NormativeIdentityResolver(registry))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:38: in __getattr__
+    pytest.fail("Retrieval engines are not implemented")
+E   Failed: Retrieval engines are not implemented
+___ test_filtered_query_restricts_ids_before_topk[ufpi-177-2012-graduacao] ____
+tests\rag_baseline\test_retrieval_strategies.py:204: in test_filtered_query_restricts_ids_before_topk
+    engine = engines.FilteredVectorEngine(service, policy.NormativeIdentityResolver(registry))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:38: in __getattr__
+    pytest.fail("Retrieval engines are not implemented")
+E   Failed: Retrieval engines are not implemented
+_ test_filtered_query_restricts_ids_before_topk[ufpi-956-2025-pos_graduacao] __
+tests\rag_baseline\test_retrieval_strategies.py:204: in test_filtered_query_restricts_ids_before_topk
+    engine = engines.FilteredVectorEngine(service, policy.NormativeIdentityResolver(registry))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:38: in __getattr__
+    pytest.fail("Retrieval engines are not implemented")
+E   Failed: Retrieval engines are not implemented
+_ test_filtered_query_restricts_ids_before_topk[ufpi-658-2024-pos_graduacao] __
+tests\rag_baseline\test_retrieval_strategies.py:204: in test_filtered_query_restricts_ids_before_topk
+    engine = engines.FilteredVectorEngine(service, policy.NormativeIdentityResolver(registry))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:38: in __getattr__
+    pytest.fail("Retrieval engines are not implemented")
+E   Failed: Retrieval engines are not implemented
+___________________ test_filtered_reuses_supplied_embedding ___________________
+tests\rag_baseline\test_retrieval_strategies.py:221: in test_filtered_reuses_supplied_embedding
+    found = await engines.FilteredVectorEngine(service, policy.NormativeIdentityResolver(registry)).retrieve(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:38: in __getattr__
+    pytest.fail("Retrieval engines are not implemented")
+E   Failed: Retrieval engines are not implemented
+_________________ test_metadata_respects_temporal_exclusions __________________
+tests\rag_baseline\test_retrieval_strategies.py:229: in test_metadata_respects_temporal_exclusions
+    found = engines.MetadataExactEngine(service.vector_store.collection, policy.NormativeIdentityResolver(registry)).retrieve(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\rag_baseline\test_retrieval_strategies.py:38: in __getattr__
+    pytest.fail("Retrieval engines are not implemented")
+E   Failed: Retrieval engines are not implemented
+_ test_facade_reports_actual_strategy_and_same_v2[Requisitos na gradua\xe7\xe3o?-graduacao-dense_vector] _
+tests\rag_baseline\test_retrieval_strategies.py:248: in test_facade_reports_actual_strategy_and_same_v2
+    assert result.internal_audit.retrieval_audit["strategy"] == strategy
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\pydantic\main.py:891: in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+E   AttributeError: 'NormativeToolAudit' object has no attribute 'retrieval_audit'
+_ test_facade_reports_actual_strategy_and_same_v2[Art. 68 da 177/2012 na gradua\xe7\xe3o-graduacao-metadata_exact] _
+tests\rag_baseline\test_retrieval_strategies.py:245: in test_facade_reports_actual_strategy_and_same_v2
+    assert result.status.value == "ANSWER" and result.retrieval_strategy.value == strategy
+E   AssertionError: assert ('ANSWER' == 'ANSWER'
+E     
+E       ANSWER and 'dense_vector' == 'metadata_exact'
+E     
+E     - metadata_exact
+E     + dense_vector)
+_ test_facade_reports_actual_strategy_and_same_v2[Na 956/2025, tema de defesa na p\xf3s-pos_graduacao-vector_filtered] _
+tests\rag_baseline\test_retrieval_strategies.py:245: in test_facade_reports_actual_strategy_and_same_v2
+    assert result.status.value == "ANSWER" and result.retrieval_strategy.value == strategy
+E   AssertionError: assert ('ANSWER' == 'ANSWER'
+E     
+E       ANSWER and 'dense_vector' == 'vector_filtered'
+E     
+E     - vector_filtered
+E     + dense_vector)
+_ test_facade_reports_actual_strategy_and_same_v2[Art. 53 da 956/2025-ambas-metadata_exact] _
+tests\rag_baseline\test_retrieval_strategies.py:245: in test_facade_reports_actual_strategy_and_same_v2
+    assert result.status.value == "ANSWER" and result.retrieval_strategy.value == strategy
+E   AssertionError: assert ('ANSWER' == 'ANSWER'
+E     
+E       ANSWER and 'dense_vector' == 'metadata_exact'
+E     
+E     - metadata_exact
+E     + dense_vector)
+__________________ test_router_conflict_stops_all_retrieval ___________________
+tests\rag_baseline\test_retrieval_strategies.py:259: in test_router_conflict_stops_all_retrieval
+    assert result.status.value == "ERROR" and result.answer is None
+E   AssertionError: assert ('ANSWER' == 'ERROR'
+E     
+E     - ERROR
+E     + ANSWER)
+_ test_same_revoked_norm_current_vs_historical_uses_temporal_pipeline[metadata_exact] _
+tests\rag_baseline\test_retrieval_strategies.py:287: in test_same_revoked_norm_current_vs_historical_uses_temporal_pipeline
+    assert past.status.value == "ANSWER" and past.retrieval_strategy.value == strategy
+E   AssertionError: assert ('ANSWER' == 'ANSWER'
+E     
+E       ANSWER and 'dense_vector' == 'metadata_exact'
+E     
+E     - metadata_exact
+E     + dense_vector)
+_ test_same_revoked_norm_current_vs_historical_uses_temporal_pipeline[vector_filtered] _
+tests\rag_baseline\test_retrieval_strategies.py:287: in test_same_revoked_norm_current_vs_historical_uses_temporal_pipeline
+    assert past.status.value == "ANSWER" and past.retrieval_strategy.value == strategy
+E   AssertionError: assert ('ANSWER' == 'ANSWER'
+E     
+E       ANSWER and 'dense_vector' == 'vector_filtered'
+E     
+E     - vector_filtered
+E     + dense_vector)
+____________ test_dense_adapter_preserves_exact_retrieve_arguments ____________
+tests\rag_baseline\test_retrieval_strategies.py:308: in test_dense_adapter_preserves_exact_retrieve_arguments
+    from rag_baseline.retrieval_service import StrategyRagService, RetrievalExecution
+E   ModuleNotFoundError: No module named 'rag_baseline.retrieval_service'
+____ test_concurrent_requests_do_not_share_strategy_or_norm_filters[mixed] ____
+tests\rag_baseline\test_retrieval_strategies.py:328: in test_concurrent_requests_do_not_share_strategy_or_norm_filters
+    assert first.retrieval_strategy.value == ("metadata_exact" if pair == "mixed" else "vector_filtered")
+E   AssertionError: assert 'dense_vector' == 'metadata_exact'
+E     
+E     - metadata_exact
+E     + dense_vector
+_ test_concurrent_requests_do_not_share_strategy_or_norm_filters[two_filtered] _
+tests\rag_baseline\test_retrieval_strategies.py:328: in test_concurrent_requests_do_not_share_strategy_or_norm_filters
+    assert first.retrieval_strategy.value == ("metadata_exact" if pair == "mixed" else "vector_filtered")
+E   AssertionError: assert 'dense_vector' == 'vector_filtered'
+E     
+E     - vector_filtered
+E     + dense_vector
+_____ test_metadata_evidence_and_legacy_reference_allow_missing_distance ______
+tests\rag_baseline\test_retrieval_strategies.py:345: in test_metadata_evidence_and_legacy_reference_allow_missing_distance
+    evidence = RetrievedChunk(**chunks[0].model_dump(), rank=1, distance=None)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   pydantic_core._pydantic_core.ValidationError: 1 validation error for RetrievedChunk
+E   distance
+E     Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]
+E       For further information visit https://errors.pydantic.dev/2.10/v/float_type
+=========================== short test summary info ===========================
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_reference_parser_recognizes_bound_document_article[Resolu\xe7\xe3o 177/2012, art. 68-ufpi-177-2012-68]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_reference_parser_recognizes_bound_document_article[Resolu\xe7\xe3o n\xba 177/2012, art 68-ufpi-177-2012-68]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_reference_parser_recognizes_bound_document_article[artigo 53 da Resolu\xe7\xe3o 956/2025-ufpi-956-2025-53]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_reference_parser_recognizes_bound_document_article[Art. 37 da 658/2024-ufpi-658-2024-37]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_reference_parser_recognizes_bound_document_article[1.056/2026, artigo 1-ufpi-1056-2026-1]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_reference_parser_recognizes_bound_document_article[1056/2026, art. 2-ufpi-1056-2026-2]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_reference_parser_recognizes_bound_document_article[art. 68, \xa74\xba da 177/2012-ufpi-177-2012-68]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_non_normative_numbers_are_not_norms[faltam 20%]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_non_normative_numbers_are_not_norms[10 dias]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_non_normative_numbers_are_not_norms[turma 2025]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_non_normative_numbers_are_not_norms[nota 7/10]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_selector_is_conservative_without_unique_binding[Posso cancelar uma disciplina?-dense_vector]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_selector_is_conservative_without_unique_binding[O que diz o art. 68?-dense_vector]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_selector_is_conservative_without_unique_binding[\xa74\xba-dense_vector]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_selector_is_conservative_without_unique_binding[na resolu\xe7\xe3o antiga-dense_vector]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_selector_is_conservative_without_unique_binding[Resolu\xe7\xe3o 956/2025-dense_vector]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_selector_is_conservative_without_unique_binding[Na Resolu\xe7\xe3o 956/2025, onde fala sobre cancelamento?-vector_filtered]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_selector_is_conservative_without_unique_binding[Resolu\xe7\xe3o 177/2012, art. 68-metadata_exact]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_selector_is_conservative_without_unique_binding[Compare a 658/2024 com a 956/2025.-dense_vector]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_selector_is_conservative_without_unique_binding[Compare os arts. 52 e 53 da Resolu\xe7\xe3o 956/2025.-dense_vector]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_selector_is_conservative_without_unique_binding[Compare os artigos 52 a 54 da Resolu\xe7\xe3o 956/2025.-dense_vector]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_selector_is_conservative_without_unique_binding[Art. 68 na gradua\xe7\xe3o; a Resolu\xe7\xe3o 956/2025 trata de outro assunto?-dense_vector]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_selector_is_conservative_without_unique_binding[Art. 1 da Resolu\xe7\xe3o 999/2099-dense_vector]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_selector_is_conservative_without_unique_binding[Art. 1 da Resolu\xe7\xe3o 01056/2026-dense_vector]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_selector_does_not_correct_router_scope[graduacao-scope_conflict]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_selector_does_not_correct_router_scope[pos_graduacao-consistent]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_selector_does_not_correct_router_scope[ambas-consistent]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_selector_does_not_correct_router_scope[None-router_clarification]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_unknown_norm_is_reported_without_guessing
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_identity_uses_structural_priority_without_status[explicit-metadata]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_identity_uses_structural_priority_without_status[id-chunk_id]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_identity_uses_structural_priority_without_status[source-source]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_identity_uses_structural_priority_without_status[unknown-unknown]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_conflicting_identity_is_not_used[id]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_conflicting_identity_is_not_used[sector]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_metadata_exact_finds_real_articles_without_vector_score[ufpi-177-2012-68]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_metadata_exact_finds_real_articles_without_vector_score[ufpi-956-2025-53]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_metadata_exact_finds_real_articles_without_vector_score[ufpi-658-2024-37]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_metadata_exact_finds_real_articles_without_vector_score[ufpi-1056-2026-1]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_metadata_rank_is_structural_not_vector_ranking
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_filtered_query_restricts_ids_before_topk[ufpi-177-2012-graduacao]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_filtered_query_restricts_ids_before_topk[ufpi-956-2025-pos_graduacao]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_filtered_query_restricts_ids_before_topk[ufpi-658-2024-pos_graduacao]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_filtered_reuses_supplied_embedding
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_metadata_respects_temporal_exclusions
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_facade_reports_actual_strategy_and_same_v2[Requisitos na gradua\xe7\xe3o?-graduacao-dense_vector]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_facade_reports_actual_strategy_and_same_v2[Art. 68 da 177/2012 na gradua\xe7\xe3o-graduacao-metadata_exact]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_facade_reports_actual_strategy_and_same_v2[Na 956/2025, tema de defesa na p\xf3s-pos_graduacao-vector_filtered]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_facade_reports_actual_strategy_and_same_v2[Art. 53 da 956/2025-ambas-metadata_exact]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_router_conflict_stops_all_retrieval
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_same_revoked_norm_current_vs_historical_uses_temporal_pipeline[metadata_exact]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_same_revoked_norm_current_vs_historical_uses_temporal_pipeline[vector_filtered]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_dense_adapter_preserves_exact_retrieve_arguments
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_concurrent_requests_do_not_share_strategy_or_norm_filters[mixed]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_concurrent_requests_do_not_share_strategy_or_norm_filters[two_filtered]
+FAILED tests/rag_baseline/test_retrieval_strategies.py::test_metadata_evidence_and_legacy_reference_allow_missing_distance
+56 failed, 9 passed in 8.42s

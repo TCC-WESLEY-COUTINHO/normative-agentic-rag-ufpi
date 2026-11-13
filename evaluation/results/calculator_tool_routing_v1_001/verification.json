@@ -1,0 +1,107 @@
+{
+  "ruff_check": {
+    "command": [
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Scripts\\ruff.exe",
+      "check",
+      "--config",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\pyproject.toml",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\src\\rag_baseline\\calculator.py",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\src\\rag_baseline\\calculator_contracts.py",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\src\\rag_baseline\\conversation_policy.py",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\src\\rag_baseline\\conversation_graph.py",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\src\\schema\\schema.py",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\src\\service\\normative_transport.py",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\tests\\rag_baseline\\test_calculator_tool_routing.py",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\tests\\rag_baseline\\test_calculator_transport.py"
+    ],
+    "cwd": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code",
+    "exit_code": 0,
+    "output": "All checks passed!\n"
+  },
+  "ruff_format": {
+    "command": [
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Scripts\\ruff.exe",
+      "format",
+      "--check",
+      "--config",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\pyproject.toml",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\src\\rag_baseline\\calculator.py",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\src\\rag_baseline\\calculator_contracts.py",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\src\\rag_baseline\\conversation_policy.py",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\src\\rag_baseline\\conversation_graph.py",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\src\\schema\\schema.py",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\src\\service\\normative_transport.py",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\tests\\rag_baseline\\test_calculator_tool_routing.py",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\tests\\rag_baseline\\test_calculator_transport.py"
+    ],
+    "cwd": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code",
+    "exit_code": 0,
+    "output": "8 files already formatted\n"
+  },
+  "ruff_evidence_check": {
+    "command": [
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Scripts\\ruff.exe",
+      "check",
+      "--config",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\pyproject.toml",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\evaluation\\results\\calculator_tool_routing_v1_001\\audit_workspace.py",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\evaluation\\results\\calculator_tool_routing_v1_001\\finalize_evidence.py",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\evaluation\\results\\calculator_tool_routing_v1_001\\freeze_protocol.py",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\evaluation\\results\\calculator_tool_routing_v1_001\\local_probes.py",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\evaluation\\results\\calculator_tool_routing_v1_001\\prepare_evidence.py",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\evaluation\\results\\calculator_tool_routing_v1_001\\verify_local.py"
+    ],
+    "cwd": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi",
+    "exit_code": 0,
+    "output": "All checks passed!\n"
+  },
+  "ruff_evidence_format": {
+    "command": [
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Scripts\\ruff.exe",
+      "format",
+      "--check",
+      "--config",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\pyproject.toml",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\evaluation\\results\\calculator_tool_routing_v1_001\\audit_workspace.py",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\evaluation\\results\\calculator_tool_routing_v1_001\\finalize_evidence.py",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\evaluation\\results\\calculator_tool_routing_v1_001\\freeze_protocol.py",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\evaluation\\results\\calculator_tool_routing_v1_001\\local_probes.py",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\evaluation\\results\\calculator_tool_routing_v1_001\\prepare_evidence.py",
+      "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\evaluation\\results\\calculator_tool_routing_v1_001\\verify_local.py"
+    ],
+    "cwd": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi",
+    "exit_code": 0,
+    "output": "6 files already formatted\n"
+  },
+  "git_diff_check": {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "cwd": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi",
+    "exit_code": 0,
+    "output": ""
+  },
+  "git_cached_diff_check": {
+    "command": [
+      "git",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "cwd": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi",
+    "exit_code": 0,
+    "output": ""
+  },
+  "git_status": {
+    "command": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "cwd": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi",
+    "exit_code": 0,
+    "output": "A  evaluation/datasets/tool_routing_calculator_v1.json\nA  evaluation/results/calculator_tool_routing_v1_001/.gitattributes\nA  evaluation/results/calculator_tool_routing_v1_001/ARTIFACTS.json\nA  evaluation/results/calculator_tool_routing_v1_001/REPORT.md\nA  evaluation/results/calculator_tool_routing_v1_001/audit_workspace.py\nA  evaluation/results/calculator_tool_routing_v1_001/contract_checks.json\nA  evaluation/results/calculator_tool_routing_v1_001/decision_log.jsonl\nA  evaluation/results/calculator_tool_routing_v1_001/execution_log.jsonl\nAM evaluation/results/calculator_tool_routing_v1_001/finalize_evidence.py\nA  evaluation/results/calculator_tool_routing_v1_001/freeze_protocol.py\nA  evaluation/results/calculator_tool_routing_v1_001/git_cached_diff_check.txt\nA  evaluation/results/calculator_tool_routing_v1_001/git_diff_check.txt\nA  evaluation/results/calculator_tool_routing_v1_001/git_status.txt\nA  evaluation/results/calculator_tool_routing_v1_001/initial_audit.json\nA  evaluation/results/calculator_tool_routing_v1_001/legacy_calculator_audit.json\nA  evaluation/results/calculator_tool_routing_v1_001/local_probes.json\nA  evaluation/results/calculator_tool_routing_v1_001/local_probes.py\nA  evaluation/results/calculator_tool_routing_v1_001/manifest.json\nA  evaluation/results/calculator_tool_routing_v1_001/prepare_evidence.py\nA  evaluation/results/calculator_tool_routing_v1_001/preservation.json\nA  evaluation/results/calculator_tool_routing_v1_001/preservation_before.json\nA  evaluation/results/calculator_tool_routing_v1_001/probe_rows.jsonl\nA  evaluation/results/calculator_tool_routing_v1_001/probe_stdout.txt\nA  evaluation/results/calculator_tool_routing_v1_001/pytest_agent.txt\nA  evaluation/results/calculator_tool_routing_v1_001/pytest_calculator.txt\nA  evaluation/results/calculator_tool_routing_v1_001/pytest_client.txt\nA  evaluation/results/calculator_tool_routing_v1_001/pytest_conversation_memory.txt\nA  evaluation/results/calculator_tool_routing_v1_001/pytest_facade.txt\nA  evaluation/results/calculator_tool_routing_v1_001/pytest_full.txt\nA  evaluation/results/calculator_tool_routing_v1_001/pytest_legacy_app_integration.txt\nA  evaluation/results/calculator_tool_routing_v1_001/pytest_legacy_core.txt\nA  evaluation/results/calculator_tool_routing_v1_001/pytest_memory.txt\nA  evaluation/results/calculator_tool_routing_v1_001/pytest_rag_baseline.txt\nA  evaluation/results/calculator_tool_routing_v1_001/pytest_retrieval.txt\nA  evaluation/results/calculator_tool_routing_v1_001/pytest_service.txt\nA  evaluation/results/calculator_tool_routing_v1_001/pytest_structured.txt\nA  evaluation/results/calculator_tool_routing_v1_001/pytest_temporal.txt\nA  evaluation/results/calculator_tool_routing_v1_001/pytest_transport.txt\nA  evaluation/results/calculator_tool_routing_v1_001/review_findings.json\nA  evaluation/results/calculator_tool_routing_v1_001/ruff_check.txt\nA  evaluation/results/calculator_tool_routing_v1_001/ruff_check_initial.txt\nA  evaluation/results/calculator_tool_routing_v1_001/ruff_evidence_check.txt\nA  evaluation/results/calculator_tool_routing_v1_001/ruff_evidence_format.txt\nA  evaluation/results/calculator_tool_routing_v1_001/ruff_format.txt\nA  evaluation/results/calculator_tool_routing_v1_001/tdd_green_initial.txt\nA  evaluation/results/calculator_tool_routing_v1_001/tdd_integration_green.txt\nA  evaluation/results/calculator_tool_routing_v1_001/tdd_numeric_bounds_red.txt\nA  evaluation/results/calculator_tool_routing_v1_001/tdd_red.txt\nA  evaluation/results/calculator_tool_routing_v1_001/tdd_review_green.txt\nA  evaluation/results/calculator_tool_routing_v1_001/tdd_review_red.txt\nA  evaluation/results/calculator_tool_routing_v1_001/technical_protocol.json\nA  evaluation/results/calculator_tool_routing_v1_001/test_results.json\nAM evaluation/results/calculator_tool_routing_v1_001/verification.json\nA  evaluation/results/calculator_tool_routing_v1_001/verification_initial.json\nA  evaluation/results/calculator_tool_routing_v1_001/verify_local.py\n"
+  }
+}

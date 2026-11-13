@@ -1,0 +1,10 @@
+.........                                                                [100%]
+============================== warnings summary ===============================
+tests/client/test_client.py::test_astream
+  D:\faculdade\TCC\RAG\normative-agentic-rag-ufpi\code\src\client\client.py:311: RuntimeWarning: coroutine 'AsyncMockMixin._execute_mock_call' was never awaited
+    response.raise_for_status()
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+9 passed, 1 warning in 0.14s

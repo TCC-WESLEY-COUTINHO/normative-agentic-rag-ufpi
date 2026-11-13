@@ -1,0 +1,58 @@
+{
+  "findings": [
+    {
+      "id": "R-01",
+      "severity": "Important",
+      "problem": "Quoted/parenthesized/numbered locators escaped comparison.",
+      "reproductions": [
+        "alínea “b”",
+        "inciso (VI)",
+        "Art. nº 177",
+        "Art. n.º 177"
+      ],
+      "resolution": "Scoped label/value parsing accepts common punctuation and numbering markers before comparison.",
+      "status": "resolved_before_freeze"
+    },
+    {
+      "id": "R-02",
+      "severity": "Important",
+      "problem": "Yearless resolution reused article numeral as apparent numeric permission.",
+      "reproductions": [
+        "Resolução 68.",
+        "Resolução n.º 68"
+      ],
+      "resolution": "Separate typed resolution-number comparison.",
+      "status": "resolved_before_freeze"
+    },
+    {
+      "id": "R-03",
+      "severity": "Important",
+      "problem": "Temporal forms escaped observable patterns.",
+      "reproductions": [
+        "A norma passa a valer hoje.",
+        "A norma se aplica a partir de hoje.",
+        "A norma valerá futuramente."
+      ],
+      "resolution": "Observable temporal roots/clauses expanded; source fallback remains exact.",
+      "status": "resolved_before_freeze"
+    },
+    {
+      "id": "R-04",
+      "severity": "Important",
+      "problem": "Caller agent_config could select private checkpoint metadata.",
+      "reproductions": [
+        "checkpoint_id",
+        "checkpoint_ns",
+        "checkpoint_map",
+        "storage_key",
+        "conversation_identity"
+      ],
+      "resolution": "Reject reserved keys only for the memory-enabled graph.",
+      "status": "resolved_before_freeze"
+    }
+  ],
+  "remaining_critical": 0,
+  "remaining_important": 0,
+  "review_scope": "code/contracts and reproducible engineering examples; no legal or general linguistic certification",
+  "final_reproductions_blocked": true
+}

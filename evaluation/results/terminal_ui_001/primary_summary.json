@@ -1,0 +1,46 @@
+{
+  "phase": "filtered_before_unfiltered",
+  "groups": {
+    "pos_pos.jsonl": {
+      "n": 20,
+      "errors": 1,
+      "answerable_n": 16,
+      "metrics_observed_n": 15,
+      "metrics": {
+        "recall_at_1": 0.6777777777777778,
+        "hit_at_1": 0.9333333333333333,
+        "recall_at_3": 0.9111111111111111,
+        "hit_at_3": 1,
+        "recall_at_5": 1,
+        "hit_at_5": 1,
+        "evidence_complete_at_5": 1,
+        "mrr_at_5": 0.9666666666666667,
+        "ndcg_at_5": 0.9456157466084755,
+        "wrong_norm_at_5": 0
+      },
+      "output_sha256": "70331232b0057f16919943be426ff1c7ed6bb30b96a840f962df4fcfdaa6f42b"
+    },
+    "grad_grad.jsonl": {
+      "n": 20,
+      "errors": 2,
+      "answerable_n": 6,
+      "metrics_observed_n": 5,
+      "metrics": {
+        "recall_at_1": 0.6,
+        "hit_at_1": 1,
+        "recall_at_3": 0.8,
+        "hit_at_3": 1,
+        "recall_at_5": 0.9,
+        "hit_at_5": 1,
+        "evidence_complete_at_5": 0.8,
+        "mrr_at_5": 1,
+        "ndcg_at_5": 0.8452588771061833,
+        "wrong_norm_at_5": 0
+      },
+      "output_sha256": "f96ead1a6631f9771c8842cfa2d4b88c74c7797790de5280dfd236f4251feb24"
+    }
+  },
+  "calculation": "Existing experiment_v2.metrics_for and candidate qrels; same as final audit.",
+  "human_scores": null,
+  "selection_or_threshold_applied": false
+}

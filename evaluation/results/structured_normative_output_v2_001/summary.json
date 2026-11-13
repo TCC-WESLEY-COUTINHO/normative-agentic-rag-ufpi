@@ -1,0 +1,847 @@
+{
+  "status": "provisional_technical_not_legal_gold",
+  "queries": 44,
+  "provider_calls": 55,
+  "provider_errors": 0,
+  "metrics": {
+    "raw_ULER": {
+      "numerator": 3,
+      "denominator": 44,
+      "value": 0.06818181818181818
+    },
+    "raw_UCER": {
+      "numerator": 10,
+      "denominator": 44,
+      "value": 0.22727272727272727
+    },
+    "raw_TCR": {
+      "numerator": 0,
+      "denominator": 44,
+      "value": 0.0
+    },
+    "final_ULER": {
+      "numerator": 0,
+      "denominator": 44,
+      "value": 0.0
+    },
+    "final_UCER": {
+      "numerator": 7,
+      "denominator": 44,
+      "value": 0.1590909090909091
+    },
+    "final_TCR": {
+      "numerator": 0,
+      "denominator": 44,
+      "value": 0.0
+    },
+    "official_reference_response": {
+      "numerator": 0,
+      "denominator": 44,
+      "value": 0.0
+    },
+    "official_reference_entry": {
+      "numerator": 0,
+      "denominator": 213,
+      "value": 0.0
+    },
+    "SLAR": {
+      "numerator": 78,
+      "denominator": 80,
+      "value": 0.975
+    },
+    "SLFRR": {
+      "numerator": 2,
+      "denominator": 80,
+      "value": 0.025
+    },
+    "guard_detected_UCER": {
+      "numerator": 6,
+      "denominator": 44,
+      "value": 0.13636363636363635
+    },
+    "known_chronology_detection_recall": {
+      "numerator": 6,
+      "denominator": 6,
+      "value": 1.0
+    },
+    "guard_activation": {
+      "numerator": 11,
+      "denominator": 44,
+      "value": 0.25
+    },
+    "regeneration_success": {
+      "numerator": 9,
+      "denominator": 11,
+      "value": 0.8181818181818182
+    },
+    "fallback": {
+      "numerator": 2,
+      "denominator": 44,
+      "value": 0.045454545454545456
+    },
+    "answer_completion": {
+      "numerator": 42,
+      "denominator": 44,
+      "value": 0.9545454545454546
+    },
+    "guard_false_positive": {
+      "numerator": 2,
+      "denominator": 44,
+      "value": 0.045454545454545456
+    }
+  },
+  "per_case": {
+    "A_grad_historical": {
+      "raw_ULER": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "raw_UCER": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "raw_TCR": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "final_ULER": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "final_UCER": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "final_TCR": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "official_reference_response": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "official_reference_entry": {
+        "numerator": 0,
+        "denominator": 50,
+        "value": 0.0
+      },
+      "SLAR": {
+        "numerator": 23,
+        "denominator": 23,
+        "value": 1.0
+      },
+      "SLFRR": {
+        "numerator": 0,
+        "denominator": 23,
+        "value": 0.0
+      },
+      "guard_detected_UCER": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "known_chronology_detection_recall": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "guard_activation": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "regeneration_success": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "fallback": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "answer_completion": {
+        "numerator": 10,
+        "denominator": 10,
+        "value": 1.0
+      },
+      "guard_false_positive": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      }
+    },
+    "B_grad_current": {
+      "raw_ULER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "raw_UCER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "raw_TCR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "final_ULER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "final_UCER": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "final_TCR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "official_reference_response": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "official_reference_entry": {
+        "numerator": 0,
+        "denominator": 5,
+        "value": 0.0
+      },
+      "SLAR": {
+        "numerator": 0,
+        "denominator": 2,
+        "value": 0.0
+      },
+      "SLFRR": {
+        "numerator": 2,
+        "denominator": 2,
+        "value": 1.0
+      },
+      "guard_detected_UCER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "known_chronology_detection_recall": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "guard_activation": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "regeneration_success": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "fallback": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "answer_completion": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "guard_false_positive": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      }
+    },
+    "C_post_historical": {
+      "raw_ULER": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "raw_UCER": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "raw_TCR": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "final_ULER": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "final_UCER": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "final_TCR": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "official_reference_response": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "official_reference_entry": {
+        "numerator": 0,
+        "denominator": 50,
+        "value": 0.0
+      },
+      "SLAR": {
+        "numerator": 8,
+        "denominator": 8,
+        "value": 1.0
+      },
+      "SLFRR": {
+        "numerator": 0,
+        "denominator": 8,
+        "value": 0.0
+      },
+      "guard_detected_UCER": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "known_chronology_detection_recall": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "guard_activation": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "regeneration_success": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "fallback": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "answer_completion": {
+        "numerator": 10,
+        "denominator": 10,
+        "value": 1.0
+      },
+      "guard_false_positive": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      }
+    },
+    "D_post_current": {
+      "raw_ULER": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "raw_UCER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "raw_TCR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "final_ULER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "final_UCER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "final_TCR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "official_reference_response": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "official_reference_entry": {
+        "numerator": 0,
+        "denominator": 5,
+        "value": 0.0
+      },
+      "SLAR": {
+        "numerator": 10,
+        "denominator": 10,
+        "value": 1.0
+      },
+      "SLFRR": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "guard_detected_UCER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "known_chronology_detection_recall": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "guard_activation": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "regeneration_success": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "fallback": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "answer_completion": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "guard_false_positive": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      }
+    },
+    "E_validity": {
+      "raw_ULER": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "raw_UCER": {
+        "numerator": 10,
+        "denominator": 10,
+        "value": 1.0
+      },
+      "raw_TCR": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "final_ULER": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "final_UCER": {
+        "numerator": 6,
+        "denominator": 10,
+        "value": 0.6
+      },
+      "final_TCR": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "official_reference_response": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "official_reference_entry": {
+        "numerator": 0,
+        "denominator": 50,
+        "value": 0.0
+      },
+      "SLAR": {
+        "numerator": 25,
+        "denominator": 25,
+        "value": 1.0
+      },
+      "SLFRR": {
+        "numerator": 0,
+        "denominator": 25,
+        "value": 0.0
+      },
+      "guard_detected_UCER": {
+        "numerator": 6,
+        "denominator": 10,
+        "value": 0.6
+      },
+      "known_chronology_detection_recall": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "guard_activation": {
+        "numerator": 6,
+        "denominator": 10,
+        "value": 0.6
+      },
+      "regeneration_success": {
+        "numerator": 5,
+        "denominator": 6,
+        "value": 0.8333333333333334
+      },
+      "fallback": {
+        "numerator": 1,
+        "denominator": 10,
+        "value": 0.1
+      },
+      "answer_completion": {
+        "numerator": 9,
+        "denominator": 10,
+        "value": 0.9
+      },
+      "guard_false_positive": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      }
+    },
+    "F_comparison": {
+      "raw_ULER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "raw_UCER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "raw_TCR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "final_ULER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "final_UCER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "final_TCR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "official_reference_response": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "official_reference_entry": {
+        "numerator": 0,
+        "denominator": 2,
+        "value": 0.0
+      },
+      "SLAR": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "SLFRR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "guard_detected_UCER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "known_chronology_detection_recall": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "guard_activation": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "regeneration_success": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "fallback": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "answer_completion": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "guard_false_positive": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      }
+    },
+    "G_unknown": {
+      "raw_ULER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "raw_UCER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "raw_TCR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "final_ULER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "final_UCER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "final_TCR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "official_reference_response": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "official_reference_entry": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "SLAR": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "SLFRR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "guard_detected_UCER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "known_chronology_detection_recall": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "guard_activation": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "regeneration_success": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "fallback": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "answer_completion": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "guard_false_positive": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      }
+    },
+    "H_citation": {
+      "raw_ULER": {
+        "numerator": 2,
+        "denominator": 10,
+        "value": 0.2
+      },
+      "raw_UCER": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "raw_TCR": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "final_ULER": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "final_UCER": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "final_TCR": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "official_reference_response": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "official_reference_entry": {
+        "numerator": 0,
+        "denominator": 50,
+        "value": 0.0
+      },
+      "SLAR": {
+        "numerator": 10,
+        "denominator": 10,
+        "value": 1.0
+      },
+      "SLFRR": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "guard_detected_UCER": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "known_chronology_detection_recall": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "guard_activation": {
+        "numerator": 2,
+        "denominator": 10,
+        "value": 0.2
+      },
+      "regeneration_success": {
+        "numerator": 2,
+        "denominator": 2,
+        "value": 1.0
+      },
+      "fallback": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "answer_completion": {
+        "numerator": 10,
+        "denominator": 10,
+        "value": 1.0
+      },
+      "guard_false_positive": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      }
+    }
+  },
+  "secondary": {
+    "first_raw_false_positive_queries": [
+      {
+        "id": "B_grad_current",
+        "repetition": 1
+      },
+      {
+        "id": "G_unknown",
+        "repetition": 1
+      }
+    ],
+    "retry_false_positive_queries": [
+      {
+        "id": "E_validity",
+        "repetition": 4
+      }
+    ],
+    "all_queries_affected_by_false_positive": {
+      "numerator": 3,
+      "denominator": 44,
+      "value": 0.06818181818181818
+    },
+    "narrow_publication_effectivity_raw_UCER": {
+      "numerator": 6,
+      "denominator": 44,
+      "value": 0.13636363636363635
+    },
+    "narrow_publication_effectivity_final_UCER": {
+      "numerator": 0,
+      "denominator": 44,
+      "value": 0.0
+    },
+    "direct_chronology_recall_on_new_raw": {
+      "numerator": 6,
+      "denominator": 10,
+      "value": 0.6
+    },
+    "broad_final_chronology_dates": 7,
+    "completed_without_primary_exposure": {
+      "numerator": 35,
+      "denominator": 44,
+      "value": 0.7954545454545454
+    },
+    "strict_alternative_final_TCR_if_B_preservation_is_current_certification": {
+      "numerator": 1,
+      "denominator": 44,
+      "value": 0.022727272727272728
+    },
+    "retry_false_positive_rate": {
+      "numerator": 1,
+      "denominator": 11,
+      "value": 0.09090909090909091
+    },
+    "unsupported_document_date_mentions_final": 8,
+    "documentary_date_metric_interpretation": "Broad unsupported chronology includes full documentary dates without structured support; this does not identify them as publication/effectivity or prove factual falsity. Narrow publication/effectivity sensitivity is separately reported."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "sha256:3496896a631a3bcf6a71f117bf30d4d2abd9cdfbe657cf0956f17faefb32d9d5",
+  "tags": [
+    "normative-agentic-rag-ufpi:runtime-smoke"
+  ],
+  "size_bytes": 1859608777,
+  "os": "linux",
+  "architecture": "amd64",
+  "working_dir": "/app/code",
+  "cmd": [
+    "python",
+    "src/run_service.py"
+  ],
+  "environment_names": [
+    "PATH",
+    "LANG",
+    "GPG_KEY",
+    "PYTHON_VERSION",
+    "PYTHON_PIP_VERSION",
+    "PYTHON_GET_PIP_URL",
+    "PYTHON_GET_PIP_SHA256",
+    "UV_PROJECT_ENVIRONMENT",
+    "UV_COMPILE_BYTECODE",
+    "PYTHONPATH"
+  ]
+}

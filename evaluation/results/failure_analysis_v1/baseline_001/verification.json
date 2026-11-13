@@ -1,0 +1,8 @@
+{
+  "command": "python -m pytest tests/rag_baseline -q",
+  "exit_code": 0,
+  "passed": 191,
+  "warnings": 2,
+  "seconds": 21.0,
+  "note": "Current available RAG tests; earlier report count is not assumed."
+}

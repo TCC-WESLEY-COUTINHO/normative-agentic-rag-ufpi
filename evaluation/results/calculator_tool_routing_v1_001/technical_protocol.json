@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "frozen_at": "2026-11-01T02:17:14.544228+00:00",
+  "kind": "finite_engineering_protocol_no_legal_gold",
+  "external_io": "Blocked socket connections and HTTP sends; exact in-process ASGI exception only",
+  "groups": [
+    "arithmetic_addition",
+    "arithmetic_division",
+    "invalid_expression",
+    "division_by_zero",
+    "date_offset",
+    "date_difference",
+    "ambiguous_a_partir_de",
+    "business_days_unsupported",
+    "normative_mixed_question",
+    "pending_calculator_and_continuation",
+    "normative_answer_calculator_grounded_transform",
+    "typed_invoke",
+    "typed_stream",
+    "concurrent_calculator_metadata_exact_and_date"
+  ],
+  "expectations": {
+    "technical_cases": 60,
+    "normative_false_routes": 0,
+    "supported_calculator_false_routes": 0,
+    "external_calls": 0,
+    "memory_and_pending": "Exact equality of stored model including persistence envelope/stamp",
+    "stream": "One complete message and DONE, stream_tokens=True",
+    "concurrency": "Distinct namespaces, calculator results, normative correlation and memory"
+  },
+  "hashes": {
+    "code/src/rag_baseline/calculator.py": "6cefd3d7291507bffe700919d02c7e96fea29d4fe6c9136e8747ee5d5e53abee",
+    "code/src/rag_baseline/calculator_contracts.py": "dc6f17c31771302877407f8a0b56e1c327e56fd3f00a2085921815d7238c058a",
+    "code/src/rag_baseline/conversation_policy.py": "e3d1488cafdd7acd9162ebdb051c4ed94340a0262b378803817efc8320312915",
+    "code/src/rag_baseline/conversation_graph.py": "1411179e07c2fc4f9f51624863ba8829ea550c5d48055d17629fb9486aefc8ba",
+    "code/src/schema/schema.py": "105b742e75829392b6acda46840c1abdf7ca9436f8b75e1ac44828f3affb1720",
+    "code/src/service/normative_transport.py": "31a69c23a98a58674787f29c058213ed5f70df9b4ed01936640fbc6734eeebcf",
+    "code/tests/rag_baseline/test_calculator_tool_routing.py": "f12b687d367df5ba81d1904432eee1f31e596b1c4f1644c0be3a645261b59cfb",
+    "code/tests/rag_baseline/test_calculator_transport.py": "0146ce6f6ee98a9ca62beaf57c6381eae8d44b0e628a7d18909e352013b1e81b",
+    "evaluation/datasets/tool_routing_calculator_v1.json": "508a4239e5f1ab4fbb450c679f22e767fa924380d7e8628137760976e5aeb6f9",
+    "evaluation/results/calculator_tool_routing_v1_001/local_probes.py": "dd1ea49a02388e1f5d7792b2d78a4633b1042e9f39bc78c59cb1a5782eb4dfa2"
+  }
+}

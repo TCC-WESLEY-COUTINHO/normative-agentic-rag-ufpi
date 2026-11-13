@@ -1,0 +1,9 @@
+.....................................                                    [100%]
+============================== warnings summary ===============================
+tests/rag_baseline/test_integrated_runtime.py::test_registered_info_readiness_direct_calculator_and_shutdown
+tests/rag_baseline/test_integrated_runtime.py::test_registered_info_readiness_direct_calculator_and_shutdown
+  code\.venv\Lib\site-packages\langchain_core\tools\base.py:1314: PydanticDeprecatedSince20: The `__fields__` attribute is deprecated, use `model_fields` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+    fields = getattr(cls, "model_fields", {}) or getattr(cls, "__fields__", {})
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+37 passed, 2 warnings in 24.25s

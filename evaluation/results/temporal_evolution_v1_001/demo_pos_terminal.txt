@@ -1,0 +1,90 @@
+┌───────────────────────────┐
+│ Assistente Normativo UFPI │
+│ Graduação e Pós-graduação │
+│ Baseline RAG              │
+└───────────────────────────┘
+API: conectada
+Corpus: 507 chunks
+ Status     ok                               
+ Coleção    ufpi_duas_regulacoes_setor       
+ Embedding  openai/text-embedding-3-small    
+ LLM        qwen/qwen3-30b-a3b-instruct-2507 
+Escopo selecionado: automatico (somente recuperação).
+┌────────────────────────────────────────────────── ROTA AUTOMÁTICA ───────────────────────────────────────────────────┐
+│ Pós-graduação                                                                                                        │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────── Resposta ──────────────────────────────────────────────────────┐
+│ Na pós-graduação da UFPI, a defesa de dissertação ou tese deve ser divulgada com antecedência mínima de dez dias,    │
+│ conforme estabelecido no Art. 53, § 1º, da Resolução CEPEX/UFPI nº 956/2025.                                         │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+                                    REFERÊNCIAS UTILIZADAS                                    
+┌──────┬────────┬───────────────┬──────────────────────────────────┬─────────────┬───────────┐
+│ Rank │ Artigo │ Setor         │ Fonte                            │ Localização │ Distância │
+├──────┼────────┼───────────────┼──────────────────────────────────┼─────────────┼───────────┤
+│    1 │ 52     │ pos_graduacao │ Resolução CEPEX/UFPI nº 956/2025 │ Cap. VI     │    0.3221 │
+│    2 │ 53     │ pos_graduacao │ Resolução CEPEX/UFPI nº 956/2025 │ Cap. VI     │    0.3487 │
+│    3 │ 54     │ pos_graduacao │ Resolução CEPEX/UFPI nº 956/2025 │ Cap. VI     │    0.3794 │
+│    4 │ 56     │ pos_graduacao │ Resolução CEPEX/UFPI nº 956/2025 │ Cap. VII    │    0.4071 │
+│    5 │ 55     │ pos_graduacao │ Resolução CEPEX/UFPI nº 956/2025 │ Cap. VI     │    0.4132 │
+└──────┴────────┴───────────────┴──────────────────────────────────┴─────────────┴───────────┘
+┌────────────────────────────────────────────────────── VIGÊNCIA ──────────────────────────────────────────────────────┐
+│ Candidatos: 5                                                                                                        │
+│ Removidos após retrieval: 0                                                                                          │
+│ Normas excluídas antes do top 5: ['ufpi-658-2024']                                                                   │
+│ Contextos faltantes para top 5: 0                                                                                    │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+Exclusão prévia: ufpi-658-2024 · revogada
+Base: Resolução CEPEX/UFPI nº 956/2025, art. 62, VI
+┌───────────────────────────────────────────────── Trecho 1 · Art. 52 ─────────────────────────────────────────────────┐
+│ Setor: pos_graduacao                                                                                                 │
+│ Fonte: Resolução CEPEX/UFPI nº 956/2025                                                                              │
+│ Capítulo: VI — DOS EXAMES E DA DEFESA DE DISSERTAÇÃO OU DE TESE                                                      │
+│                                                                                                                      │
+│ Art. 52. Os documentos da Dissertação ou Tese devem ser entregues pelo(a) orientador(a) à Coordenação, no mínimo     │
+│ trinta dias antes da data proposta para a defesa.                                                                    │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────── Trecho 2 · Art. 53 ─────────────────────────────────────────────────┐
+│ Setor: pos_graduacao                                                                                                 │
+│ Fonte: Resolução CEPEX/UFPI nº 956/2025                                                                              │
+│ Capítulo: VI — DOS EXAMES E DA DEFESA DE DISSERTAÇÃO OU DE TESE                                                      │
+│                                                                                                                      │
+│ Art. 53. A defesa da dissertação ou tese é realizada em sessão pública, em dia e horário definidos pela Coordenação  │
+│ do Programa, e divulgada com antecedência mínima de dez dias.                                                        │
+│ - $ 1º A defesa (caput) pode ser realizada nos formatos presencial, híbrido ou remoto, conforme o Regimento Interno. │
+│ - $ 2º Em casos excepcionais que exijam sigilo, a defesa pode ocorrer em sessão restrita, mediante aprovação do      │
+│ Colegiado Simples.                                                                                                   │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────── Trecho 3 · Art. 54 ─────────────────────────────────────────────────┐
+│ Setor: pos_graduacao                                                                                                 │
+│ Fonte: Resolução CEPEX/UFPI nº 956/2025                                                                              │
+│ Capítulo: VI — DOS EXAMES E DA DEFESA DE DISSERTAÇÃO OU DE TESE                                                      │
+│                                                                                                                      │
+│ Art. 54. O resultado da defesa de Dissertação e Tese é expresso pelas menções: Aprovado (Ap) ou Não Aprovado (NAp).  │
+│ - $ 1º Em caso de aprovação com modificações sugeridas pela banca, o(a) discente deve efetuar as mudanças no prazo   │
+│ máximo de sessenta dias corridos, sob pena de anulação da defesa.                                                    │
+│                                                                                                                      │
+│ - $ 2º A entrega da versão final corrigida (do 8 1º) é requisito obrigatório para a solicitação do diploma.          │
+│ - $ 3º A validação das modificações (8 1º) é de responsabilidade do(a) orientador(a) e deve ser formalizada à        │
+│ Coordenação do Programa antes da entrega da versão final (8 1º).                                                     │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────── Trecho 4 · Art. 56 ─────────────────────────────────────────────────┐
+│ Setor: pos_graduacao                                                                                                 │
+│ Fonte: Resolução CEPEX/UFPI nº 956/2025                                                                              │
+│ Capítulo: VII — DOS TÍTULOS E DOS DIPLOMAS                                                                           │
+│                                                                                                                      │
+│ Art. 56. A solicitação do diploma de Mestre ou Doutor, após o cumprimento dos requisitos acadêmicos (art. 3º e art.  │
+│ 4º), exige a entrega dos seguintes documentos à Coordenação:                                                         │
+│ - | -versão final da Dissertação ou Tese, em arquivo digital;                                                        │
+│ - Il -termo de autorização para depósito no Repositório Institucional da UFPI;                                       │
+│ - Ill -cópia da ata da defesa; e                                                                                     │
+│ - IV -comprovante de regularidade (Nada Consta) junto às Bibliotecas da UFPI.                                        │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────── Trecho 5 · Art. 55 ─────────────────────────────────────────────────┐
+│ Setor: pos_graduacao                                                                                                 │
+│ Fonte: Resolução CEPEX/UFPI nº 956/2025                                                                              │
+│ Capítulo: VI — DOS EXAMES E DA DEFESA DE DISSERTAÇÃO OU DE TESE                                                      │
+│                                                                                                                      │
+│ Art. 55. Na ausência ou impedimento do(a) orientador(a) nas bancas de Qualificação ou Defesa, a presidência é        │
+│ exercida pelo(a) coorientador(a), se houver, ou por docente designado pelo Colegiado Simples.                        │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+Tempo: 7.3 s · LLM: qwen/qwen3-30b-a3b-instruct-2507 · Embedding: openai/text-embedding-3-small

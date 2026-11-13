@@ -1,0 +1,76 @@
+{
+  "protocol_hash": "d0de48137560243da08f3d53a0b1b01e76bfd5ae107e24747b9d369e18b68cb6",
+  "rows": 72,
+  "metrics": {
+    "Tool Routing Accuracy": [
+      60,
+      60
+    ],
+    "Tool Call Count Agreement": [
+      60,
+      60
+    ],
+    "Calculator Execution Accuracy": [
+      16,
+      16
+    ],
+    "Calculator-to-Normative Route Avoidance": [
+      16,
+      16
+    ],
+    "Private Field Exclusion": [
+      72,
+      72
+    ],
+    "Calculator External Call Avoidance": [
+      43,
+      43
+    ],
+    "Unsafe Expression Rejection Rate": [
+      11,
+      11
+    ],
+    "Ambiguous Date Rule Rejection Rate": [
+      2,
+      2
+    ],
+    "Normative-to-Calculator Route Avoidance": [
+      18,
+      18
+    ],
+    "Calculator Memory Preservation Rate": [
+      4,
+      4
+    ],
+    "Pending Preservation Rate": [
+      2,
+      2
+    ],
+    "Clarification Correlation Continuity": [
+      1,
+      1
+    ],
+    "Grounded Follow-up Source Preservation": [
+      1,
+      1
+    ],
+    "Concurrent Result Isolation": [
+      1,
+      1
+    ],
+    "Typed Calculator Transport Preservation": [
+      2,
+      2
+    ],
+    "Invoke/Stream Calculator Agreement": [
+      1,
+      1
+    ],
+    "SSE Complete Message and DONE": [
+      1,
+      1
+    ]
+  },
+  "external_call_attempts": 0,
+  "all_hashes_unchanged": true
+}

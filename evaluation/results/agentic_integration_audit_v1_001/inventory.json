@@ -1,0 +1,3281 @@
+{
+  "agents": [
+    {
+      "path": "code/src/agents/chatbot_generic.py",
+      "purpose": "General conversation with calculator and local datetime.",
+      "status": "REGISTERED_ALTERNATIVE",
+      "dependencies": [
+        "LangGraph"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "name": "chatbot_generic",
+      "details_artifact": "legacy_agents_graphs.json"
+    },
+    {
+      "path": "code/src/agents/chatbot_ufpi.py",
+      "purpose": "RGG-specialist legacy normative assistant.",
+      "status": "REGISTERED_ALTERNATIVE",
+      "dependencies": [
+        "LangGraph"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "name": "chatbot_ufpi",
+      "details_artifact": "legacy_agents_graphs.json"
+    },
+    {
+      "path": "code/src/agents/chatbot_ufpi_v2.py",
+      "purpose": "RGG-specialist legacy normative assistant with vector and metadata tools.",
+      "status": "REGISTERED_DEFAULT",
+      "dependencies": [
+        "LangGraph"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "name": "chatbot_ufpi_v2",
+      "details_artifact": "legacy_agents_graphs.json"
+    },
+    {
+      "path": "code/src/agents/chatbot.py",
+      "purpose": "Simple functional conversational entrypoint.",
+      "status": "UNREGISTERED_IMPORTED_MODULE_GRAPH",
+      "dependencies": [
+        "LangGraph"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "name": "chatbot",
+      "details_artifact": "legacy_agents_graphs.json"
+    },
+    {
+      "path": "code/src/agents/command_agent.py",
+      "purpose": "Demonstrate Command-based dynamic graph routing.",
+      "status": "UNREGISTERED_IMPORTED_MODULE_GRAPH",
+      "dependencies": [
+        "LangGraph"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "name": "command_agent",
+      "details_artifact": "legacy_agents_graphs.json"
+    },
+    {
+      "path": "code/src/agents/bg_task_agent/bg_task_agent.py",
+      "purpose": "Demonstrate custom streaming background tasks before final model.",
+      "status": "UNREGISTERED_IMPORTED_MODULE_GRAPH",
+      "dependencies": [
+        "LangGraph"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "name": "bg_task_agent",
+      "details_artifact": "legacy_agents_graphs.json"
+    },
+    {
+      "path": "code/src/agents/rag_assistant.py",
+      "purpose": "Safety-checked handbook RAG assistant.",
+      "status": "UNREGISTERED_IMPORTED_MODULE_GRAPH",
+      "dependencies": [
+        "LangGraph"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "name": "rag_assistant",
+      "details_artifact": "legacy_agents_graphs.json"
+    },
+    {
+      "path": "code/src/agents/research_assistant.py",
+      "purpose": "Safety-checked web/weather/calculator assistant.",
+      "status": "UNREGISTERED_IMPORTED_MODULE_GRAPH",
+      "dependencies": [
+        "LangGraph"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "name": "research_assistant",
+      "details_artifact": "legacy_agents_graphs.json"
+    },
+    {
+      "path": "code/src/agents/knowledge_base_agent.py",
+      "purpose": "Always retrieve Amazon Bedrock Knowledge Base then augment prompt.",
+      "status": "UNREGISTERED_IMPORTED_MODULE_GRAPH",
+      "dependencies": [
+        "LangGraph"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "name": "kb_agent",
+      "details_artifact": "legacy_agents_graphs.json"
+    },
+    {
+      "path": "code/src/agents/interrupt_agent.py",
+      "purpose": "Birthdate extraction/store and user clarification example.",
+      "status": "UNREGISTERED_IMPORTED_MODULE_GRAPH",
+      "dependencies": [
+        "LangGraph"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "name": "interrupt_agent",
+      "details_artifact": "legacy_agents_graphs.json"
+    },
+    {
+      "path": "code/src/agents/langgraph_supervisor_agent.py",
+      "purpose": "Supervisor example orchestrating math and static research workers.",
+      "status": "UNREGISTERED_IMPORTED_MODULE_GRAPH",
+      "dependencies": [
+        "LangGraph"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "name": "langgraph_supervisor_agent",
+      "details_artifact": "legacy_agents_graphs.json"
+    },
+    {
+      "path": "code/src/agents/chatbot_ufpi_agentic.py",
+      "purpose": "Registered wrapper of current normative graph, interactive clarification enabled.",
+      "status": "REGISTERED_CURRENT_CORE_WRAPPER",
+      "dependencies": [
+        "LangGraph"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "name": "chatbot_ufpi_agentic",
+      "details_artifact": "legacy_agents_graphs.json"
+    }
+  ],
+  "graphs": [
+    {
+      "path": "code/src/agents/chatbot_generic.py",
+      "purpose": "chatbot_generic",
+      "status": "AUDITED",
+      "dependencies": [
+        "LangGraph"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "topology": {
+        "name": "chatbot_generic",
+        "nodes": [
+          "model",
+          "tools"
+        ],
+        "edges": [
+          [
+            "START",
+            "model"
+          ],
+          [
+            "tools",
+            "model"
+          ]
+        ],
+        "conditional_edges": [
+          {
+            "from": "model",
+            "router": "pending_tool_calls",
+            "routes": {
+              "tools": "tools",
+              "done": "END"
+            },
+            "condition": "AIMessage.tool_calls present"
+          }
+        ],
+        "entry_point": "model",
+        "terminal_nodes": [
+          "model without tool_calls"
+        ],
+        "tool_nodes": [
+          "tools"
+        ],
+        "interrupts": [],
+        "checkpointer": null,
+        "checkpointer_note": "No saver at compile time; service attaches saver/store to registered graphs only.",
+        "state_reducers": {
+          "messages": "add_messages, inherited from MessagesState",
+          "other_fields": "overwrite/default LastValue except managed RemainingSteps"
+        },
+        "evidence": [
+          "code/src/agents/chatbot_generic.py:66"
+        ]
+      }
+    },
+    {
+      "path": "code/src/agents/chatbot_ufpi.py",
+      "purpose": "chatbot_ufpi",
+      "status": "AUDITED",
+      "dependencies": [
+        "LangGraph"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "topology": {
+        "name": "chatbot_ufpi",
+        "nodes": [
+          "model",
+          "tools"
+        ],
+        "edges": [
+          [
+            "START",
+            "model"
+          ],
+          [
+            "tools",
+            "model"
+          ]
+        ],
+        "conditional_edges": [
+          {
+            "from": "model",
+            "router": "pending_tool_calls",
+            "routes": {
+              "tools": "tools",
+              "done": "END"
+            },
+            "condition": "AIMessage.tool_calls present"
+          }
+        ],
+        "entry_point": "model",
+        "terminal_nodes": [
+          "model without tool_calls"
+        ],
+        "tool_nodes": [
+          "tools"
+        ],
+        "interrupts": [],
+        "checkpointer": null,
+        "checkpointer_note": "No saver at compile time; service attaches saver/store to registered graphs only.",
+        "state_reducers": {
+          "messages": "add_messages, inherited from MessagesState",
+          "other_fields": "overwrite/default LastValue except managed RemainingSteps"
+        },
+        "evidence": [
+          "code/src/agents/chatbot_ufpi.py:878"
+        ]
+      }
+    },
+    {
+      "path": "code/src/agents/chatbot_ufpi_v2.py",
+      "purpose": "chatbot_ufpi_v2",
+      "status": "AUDITED",
+      "dependencies": [
+        "LangGraph"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "topology": {
+        "name": "chatbot_ufpi_v2",
+        "nodes": [
+          "model",
+          "tools"
+        ],
+        "edges": [
+          [
+            "START",
+            "model"
+          ],
+          [
+            "tools",
+            "model"
+          ]
+        ],
+        "conditional_edges": [
+          {
+            "from": "model",
+            "router": "pending_tool_calls",
+            "routes": {
+              "tools": "tools",
+              "done": "END"
+            },
+            "condition": "AIMessage.tool_calls present"
+          }
+        ],
+        "entry_point": "model",
+        "terminal_nodes": [
+          "model without tool_calls"
+        ],
+        "tool_nodes": [
+          "tools"
+        ],
+        "interrupts": [],
+        "checkpointer": null,
+        "checkpointer_note": "No saver at compile time; service attaches saver/store to registered graphs only.",
+        "state_reducers": {
+          "messages": "add_messages, inherited from MessagesState",
+          "other_fields": "overwrite/default LastValue except managed RemainingSteps"
+        },
+        "evidence": [
+          "code/src/agents/chatbot_ufpi_v2.py:502"
+        ]
+      }
+    },
+    {
+      "path": "code/src/agents/rag_assistant.py",
+      "purpose": "rag_assistant",
+      "status": "AUDITED",
+      "dependencies": [
+        "LangGraph"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "topology": {
+        "name": "rag_assistant",
+        "nodes": [
+          "guard_input",
+          "model",
+          "tools",
+          "block_unsafe_content"
+        ],
+        "edges": [
+          [
+            "START",
+            "guard_input"
+          ],
+          [
+            "block_unsafe_content",
+            "END"
+          ],
+          [
+            "tools",
+            "model"
+          ]
+        ],
+        "conditional_edges": [
+          {
+            "from": "guard_input",
+            "router": "check_safety",
+            "routes": {
+              "unsafe": "block_unsafe_content",
+              "safe": "model"
+            }
+          },
+          {
+            "from": "model",
+            "router": "pending_tool_calls",
+            "routes": {
+              "tools": "tools",
+              "done": "END"
+            }
+          }
+        ],
+        "entry_point": "guard_input",
+        "terminal_nodes": [
+          "block_unsafe_content",
+          "model without tool_calls"
+        ],
+        "tool_nodes": [
+          "tools"
+        ],
+        "interrupts": [],
+        "checkpointer": null,
+        "checkpointer_note": "No saver at compile time; service attaches saver/store to registered graphs only.",
+        "state_reducers": {
+          "messages": "add_messages, inherited from MessagesState",
+          "other_fields": "overwrite/default LastValue except managed RemainingSteps"
+        },
+        "evidence": [
+          "code/src/agents/rag_assistant.py:104"
+        ]
+      }
+    },
+    {
+      "path": "code/src/agents/research_assistant.py",
+      "purpose": "research_assistant",
+      "status": "AUDITED",
+      "dependencies": [
+        "LangGraph"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "topology": {
+        "name": "research_assistant",
+        "nodes": [
+          "guard_input",
+          "model",
+          "tools",
+          "block_unsafe_content"
+        ],
+        "edges": [
+          [
+            "START",
+            "guard_input"
+          ],
+          [
+            "block_unsafe_content",
+            "END"
+          ],
+          [
+            "tools",
+            "model"
+          ]
+        ],
+        "conditional_edges": [
+          {
+            "from": "guard_input",
+            "router": "check_safety",
+            "routes": {
+              "unsafe": "block_unsafe_content",
+              "safe": "model"
+            }
+          },
+          {
+            "from": "model",
+            "router": "pending_tool_calls",
+            "routes": {
+              "tools": "tools",
+              "done": "END"
+            }
+          }
+        ],
+        "entry_point": "guard_input",
+        "terminal_nodes": [
+          "block_unsafe_content",
+          "model without tool_calls"
+        ],
+        "tool_nodes": [
+          "tools"
+        ],
+        "interrupts": [],
+        "checkpointer": null,
+        "checkpointer_note": "No saver at compile time; service attaches saver/store to registered graphs only.",
+        "state_reducers": {
+          "messages": "add_messages, inherited from MessagesState",
+          "other_fields": "overwrite/default LastValue except managed RemainingSteps"
+        },
+        "evidence": [
+          "code/src/agents/research_assistant.py:105"
+        ]
+      }
+    },
+    {
+      "path": "code/src/agents/command_agent.py",
+      "purpose": "command_agent",
+      "status": "AUDITED",
+      "dependencies": [
+        "LangGraph"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "topology": {
+        "name": "command_agent",
+        "nodes": [
+          "node_a",
+          "node_b",
+          "node_c"
+        ],
+        "edges": [
+          [
+            "START",
+            "node_a"
+          ]
+        ],
+        "conditional_edges": [
+          {
+            "from": "node_a",
+            "mechanism": "Command.goto after random.choice",
+            "routes": [
+              "node_b",
+              "node_c"
+            ]
+          }
+        ],
+        "entry_point": "node_a",
+        "terminal_nodes": [
+          "node_b",
+          "node_c"
+        ],
+        "tool_nodes": [],
+        "interrupts": [],
+        "checkpointer": null,
+        "checkpointer_note": "No saver at compile time; service attaches saver/store to registered graphs only.",
+        "state_reducers": {
+          "messages": "add_messages, inherited from MessagesState",
+          "other_fields": "overwrite/default LastValue except managed RemainingSteps"
+        },
+        "evidence": [
+          "code/src/agents/command_agent.py:48"
+        ]
+      }
+    },
+    {
+      "path": "code/src/agents/bg_task_agent/bg_task_agent.py",
+      "purpose": "bg_task_agent",
+      "status": "AUDITED",
+      "dependencies": [
+        "LangGraph"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "topology": {
+        "name": "bg_task_agent",
+        "nodes": [
+          "bg_task",
+          "model"
+        ],
+        "edges": [
+          [
+            "START",
+            "bg_task"
+          ],
+          [
+            "bg_task",
+            "model"
+          ],
+          [
+            "model",
+            "END"
+          ]
+        ],
+        "conditional_edges": [],
+        "entry_point": "bg_task",
+        "terminal_nodes": [
+          "model"
+        ],
+        "tool_nodes": [],
+        "interrupts": [],
+        "checkpointer": null,
+        "checkpointer_note": "No saver at compile time; service attaches saver/store to registered graphs only.",
+        "state_reducers": {
+          "messages": "add_messages, inherited from MessagesState",
+          "other_fields": "overwrite/default LastValue except managed RemainingSteps"
+        },
+        "evidence": [
+          "code/src/agents/bg_task_agent/bg_task_agent.py:53"
+        ]
+      }
+    },
+    {
+      "path": "code/src/agents/knowledge_base_agent.py",
+      "purpose": "kb_agent",
+      "status": "AUDITED",
+      "dependencies": [
+        "LangGraph"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "topology": {
+        "name": "kb_agent",
+        "nodes": [
+          "retrieve_documents",
+          "prepare_augmented_prompt",
+          "model"
+        ],
+        "edges": [
+          [
+            "START",
+            "retrieve_documents"
+          ],
+          [
+            "retrieve_documents",
+            "prepare_augmented_prompt"
+          ],
+          [
+            "prepare_augmented_prompt",
+            "model"
+          ],
+          [
+            "model",
+            "END"
+          ]
+        ],
+        "conditional_edges": [],
+        "entry_point": "retrieve_documents",
+        "terminal_nodes": [
+          "model"
+        ],
+        "tool_nodes": [],
+        "interrupts": [],
+        "checkpointer": null,
+        "checkpointer_note": "No saver at compile time; service attaches saver/store to registered graphs only.",
+        "state_reducers": {
+          "messages": "add_messages, inherited from MessagesState",
+          "other_fields": "overwrite/default LastValue except managed RemainingSteps"
+        },
+        "evidence": [
+          "code/src/agents/knowledge_base_agent.py:157"
+        ]
+      }
+    },
+    {
+      "path": "code/src/agents/interrupt_agent.py",
+      "purpose": "interrupt_agent",
+      "status": "AUDITED",
+      "dependencies": [
+        "LangGraph"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "topology": {
+        "name": "interrupt_agent",
+        "nodes": [
+          "background",
+          "determine_birthdate",
+          "generate_response"
+        ],
+        "edges": [
+          [
+            "START",
+            "background"
+          ],
+          [
+            "background",
+            "determine_birthdate"
+          ],
+          [
+            "determine_birthdate",
+            "generate_response"
+          ],
+          [
+            "generate_response",
+            "END"
+          ]
+        ],
+        "conditional_edges": [],
+        "entry_point": "background",
+        "terminal_nodes": [
+          "generate_response"
+        ],
+        "tool_nodes": [],
+        "interrupts": [
+          {
+            "node": "determine_birthdate",
+            "payload": "birthdate question or invalid format",
+            "resumption": "interrupt value appended as HumanMessage, recursive determine_birthdate call",
+            "evidence": [
+              "code/src/agents/interrupt_agent.py:138",
+              "code/src/agents/interrupt_agent.py:149"
+            ]
+          }
+        ],
+        "checkpointer": null,
+        "checkpointer_note": "No saver at compile time; service attaches saver/store to registered graphs only.",
+        "state_reducers": {
+          "messages": "add_messages, inherited from MessagesState",
+          "other_fields": "overwrite/default LastValue except managed RemainingSteps"
+        },
+        "evidence": [
+          "code/src/agents/interrupt_agent.py:220"
+        ]
+      }
+    },
+    {
+      "path": "code/src/agents/chatbot.py",
+      "purpose": "chatbot",
+      "status": "AUDITED",
+      "dependencies": [
+        "LangGraph"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "topology": {
+        "name": "chatbot",
+        "nodes": [
+          "chatbot functional entrypoint"
+        ],
+        "edges": [
+          [
+            "START",
+            "chatbot"
+          ],
+          [
+            "chatbot",
+            "END"
+          ]
+        ],
+        "conditional_edges": [],
+        "entry_point": "chatbot",
+        "terminal_nodes": [
+          "entrypoint.final"
+        ],
+        "tool_nodes": [],
+        "interrupts": [],
+        "checkpointer": null,
+        "checkpointer_note": "No saver at compile time; service attaches saver/store to registered graphs only.",
+        "state_reducers": {
+          "messages": "manual previous + inputs + response in save; functional previous state, not MessagesState reducer"
+        },
+        "evidence": [
+          "code/src/agents/chatbot.py:8"
+        ]
+      }
+    },
+    {
+      "path": "code/src/agents/langgraph_supervisor_agent.py",
+      "purpose": "langgraph_supervisor_agent",
+      "status": "AUDITED",
+      "dependencies": [
+        "LangGraph"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "topology": {
+        "name": "langgraph_supervisor_agent",
+        "nodes": [
+          "supervisor (prebuilt subgraph)",
+          "math_expert (prebuilt subgraph)",
+          "research_expert (prebuilt subgraph)"
+        ],
+        "edges": [
+          [
+            "START",
+            "supervisor"
+          ],
+          [
+            "math_expert",
+            "supervisor"
+          ],
+          [
+            "research_expert",
+            "supervisor"
+          ]
+        ],
+        "conditional_edges": [
+          {
+            "from": "supervisor",
+            "mechanism": "generated parent Command handoff",
+            "routes": {
+              "transfer_to_math_expert": "math_expert",
+              "transfer_to_research_expert": "research_expert",
+              "no tool calls": "END"
+            }
+          }
+        ],
+        "entry_point": "supervisor",
+        "terminal_nodes": [
+          "supervisor without calls"
+        ],
+        "tool_nodes": [
+          "supervisor/tools",
+          "math_expert/tools",
+          "research_expert/tools"
+        ],
+        "interrupts": [],
+        "checkpointer": null,
+        "checkpointer_note": "No saver at compile time; service attaches saver/store to registered graphs only.",
+        "state_reducers": {
+          "messages": "add_messages, inherited from MessagesState",
+          "other_fields": "overwrite/default LastValue except managed RemainingSteps"
+        },
+        "evidence": [
+          "code/src/agents/langgraph_supervisor_agent.py:46",
+          "code/.venv/Lib/site-packages/langgraph_supervisor/supervisor.py:415"
+        ],
+        "nested_graphs": [
+          {
+            "name": "supervisor",
+            "nodes": [
+              "agent",
+              "tools"
+            ],
+            "edges": [
+              [
+                "START",
+                "agent"
+              ],
+              [
+                "tools",
+                "agent"
+              ]
+            ],
+            "conditional_edges": [
+              {
+                "from": "agent",
+                "condition": "no calls -> END; each tool call -> Send(tools) (installed default version v2)"
+              }
+            ],
+            "evidence": [
+              "code/.venv/Lib/site-packages/langgraph/prebuilt/chat_agent_executor.py:635",
+              "code/.venv/Lib/site-packages/langgraph/prebuilt/chat_agent_executor.py:663"
+            ]
+          },
+          {
+            "name": "math_expert",
+            "nodes": [
+              "agent",
+              "tools"
+            ],
+            "edges": [
+              [
+                "START",
+                "agent"
+              ],
+              [
+                "tools",
+                "agent"
+              ]
+            ],
+            "conditional_edges": [
+              {
+                "from": "agent",
+                "condition": "no calls -> END; each tool call -> Send(tools) (installed default version v2)"
+              }
+            ],
+            "evidence": [
+              "code/.venv/Lib/site-packages/langgraph/prebuilt/chat_agent_executor.py:635",
+              "code/.venv/Lib/site-packages/langgraph/prebuilt/chat_agent_executor.py:663"
+            ]
+          },
+          {
+            "name": "research_expert",
+            "nodes": [
+              "agent",
+              "tools"
+            ],
+            "edges": [
+              [
+                "START",
+                "agent"
+              ],
+              [
+                "tools",
+                "agent"
+              ]
+            ],
+            "conditional_edges": [
+              {
+                "from": "agent",
+                "condition": "no calls -> END; each tool call -> Send(tools) (installed default version v2)"
+              }
+            ],
+            "evidence": [
+              "code/.venv/Lib/site-packages/langgraph/prebuilt/chat_agent_executor.py:635",
+              "code/.venv/Lib/site-packages/langgraph/prebuilt/chat_agent_executor.py:663"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "path": "code/src/agents/chatbot_ufpi_agentic.py",
+      "purpose": "chatbot_ufpi_agentic",
+      "status": "AUDITED",
+      "dependencies": [
+        "LangGraph"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "topology": {
+        "name": "chatbot_ufpi_agentic",
+        "nodes": [
+          "route_query",
+          "clarify",
+          "reroute",
+          "retrieve",
+          "version_filter",
+          "generate"
+        ],
+        "edges": [
+          [
+            "START",
+            "route_query"
+          ],
+          [
+            "retrieve",
+            "version_filter"
+          ],
+          [
+            "version_filter",
+            "generate"
+          ],
+          [
+            "generate",
+            "END"
+          ]
+        ],
+        "conditional_edges": [
+          {
+            "from": "route_query",
+            "routes": "needs_clarification -> clarify; else retrieve"
+          },
+          {
+            "from": "clarify",
+            "routes": "result present -> END; else reroute"
+          },
+          {
+            "from": "reroute",
+            "routes": "result present -> END; else retrieve"
+          }
+        ],
+        "entry_point": "route_query",
+        "terminal_nodes": [
+          "generate",
+          "clarify terminal result",
+          "reroute unresolved result"
+        ],
+        "tool_nodes": [],
+        "interrupts": [
+          {
+            "node": "clarify",
+            "condition": "interactive and clarification is None",
+            "payload": "decision.clarification_question",
+            "evidence": [
+              "code/src/rag_baseline/agentic.py:242"
+            ]
+          }
+        ],
+        "checkpointer": null,
+        "checkpointer_note": "build_graph checkpointer defaults None; registered wrapper build_graph(interactive=True), then service attaches thread saver.",
+        "state_reducers": {
+          "messages": "add_messages, inherited from MessagesState",
+          "other_fields": "overwrite/default LastValue except managed RemainingSteps"
+        },
+        "evidence": [
+          "code/src/rag_baseline/agentic.py:420"
+        ]
+      }
+    }
+  ],
+  "states": [
+    {
+      "path": "code/src/agents/bg_task_agent/bg_task_agent.py",
+      "purpose": "AgentState",
+      "status": "AUDITED",
+      "dependencies": [
+        "MessagesState"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "schema": {
+        "class": "AgentState",
+        "evidence": "code/src/agents/bg_task_agent/bg_task_agent.py:13",
+        "base": "MessagesState",
+        "fields": []
+      }
+    },
+    {
+      "path": "code/src/agents/chatbot_generic.py",
+      "purpose": "AgentState",
+      "status": "AUDITED",
+      "dependencies": [
+        "MessagesState"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "schema": {
+        "class": "AgentState",
+        "evidence": "code/src/agents/chatbot_generic.py:18",
+        "base": "MessagesState",
+        "fields": [
+          {
+            "name": "remaining_steps",
+            "annotation": "RemainingSteps",
+            "evidence": "code/src/agents/chatbot_generic.py:21"
+          }
+        ]
+      }
+    },
+    {
+      "path": "code/src/agents/chatbot_ufpi.py",
+      "purpose": "AgentState",
+      "status": "AUDITED",
+      "dependencies": [
+        "MessagesState"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "schema": {
+        "class": "AgentState",
+        "evidence": "code/src/agents/chatbot_ufpi.py:19",
+        "base": "MessagesState",
+        "fields": [
+          {
+            "name": "remaining_steps",
+            "annotation": "RemainingSteps",
+            "evidence": "code/src/agents/chatbot_ufpi.py:25"
+          }
+        ]
+      }
+    },
+    {
+      "path": "code/src/agents/chatbot_ufpi_v2.py",
+      "purpose": "AgentState",
+      "status": "AUDITED",
+      "dependencies": [
+        "MessagesState"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "schema": {
+        "class": "AgentState",
+        "evidence": "code/src/agents/chatbot_ufpi_v2.py:19",
+        "base": "MessagesState",
+        "fields": [
+          {
+            "name": "remaining_steps",
+            "annotation": "RemainingSteps",
+            "evidence": "code/src/agents/chatbot_ufpi_v2.py:25"
+          }
+        ]
+      }
+    },
+    {
+      "path": "code/src/agents/command_agent.py",
+      "purpose": "AgentState",
+      "status": "AUDITED",
+      "dependencies": [
+        "MessagesState"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "schema": {
+        "class": "AgentState",
+        "evidence": "code/src/agents/command_agent.py:9",
+        "base": "MessagesState",
+        "fields": []
+      }
+    },
+    {
+      "path": "code/src/agents/interrupt_agent.py",
+      "purpose": "AgentState",
+      "status": "AUDITED",
+      "dependencies": [
+        "MessagesState"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "schema": {
+        "class": "AgentState",
+        "evidence": "code/src/agents/interrupt_agent.py:21",
+        "base": "MessagesState",
+        "fields": [
+          {
+            "name": "birthdate",
+            "annotation": "datetime | None",
+            "evidence": "code/src/agents/interrupt_agent.py:27"
+          }
+        ]
+      }
+    },
+    {
+      "path": "code/src/agents/knowledge_base_agent.py",
+      "purpose": "AgentState",
+      "status": "AUDITED",
+      "dependencies": [
+        "MessagesState"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "schema": {
+        "class": "AgentState",
+        "evidence": "code/src/agents/knowledge_base_agent.py:19",
+        "base": "MessagesState",
+        "fields": [
+          {
+            "name": "remaining_steps",
+            "annotation": "RemainingSteps",
+            "evidence": "code/src/agents/knowledge_base_agent.py:22"
+          },
+          {
+            "name": "retrieved_documents",
+            "annotation": "list[dict[str, Any]]",
+            "evidence": "code/src/agents/knowledge_base_agent.py:23"
+          },
+          {
+            "name": "kb_documents",
+            "annotation": "str",
+            "evidence": "code/src/agents/knowledge_base_agent.py:24"
+          }
+        ]
+      }
+    },
+    {
+      "path": "code/src/agents/rag_assistant.py",
+      "purpose": "AgentState",
+      "status": "AUDITED",
+      "dependencies": [
+        "MessagesState"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "schema": {
+        "class": "AgentState",
+        "evidence": "code/src/agents/rag_assistant.py:20",
+        "base": "MessagesState",
+        "fields": [
+          {
+            "name": "safety",
+            "annotation": "LlamaGuardOutput",
+            "evidence": "code/src/agents/rag_assistant.py:26"
+          },
+          {
+            "name": "remaining_steps",
+            "annotation": "RemainingSteps",
+            "evidence": "code/src/agents/rag_assistant.py:27"
+          }
+        ]
+      }
+    },
+    {
+      "path": "code/src/agents/research_assistant.py",
+      "purpose": "AgentState",
+      "status": "AUDITED",
+      "dependencies": [
+        "MessagesState"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "schema": {
+        "class": "AgentState",
+        "evidence": "code/src/agents/research_assistant.py:18",
+        "base": "MessagesState",
+        "fields": [
+          {
+            "name": "safety",
+            "annotation": "LlamaGuardOutput",
+            "evidence": "code/src/agents/research_assistant.py:24"
+          },
+          {
+            "name": "remaining_steps",
+            "annotation": "RemainingSteps",
+            "evidence": "code/src/agents/research_assistant.py:25"
+          }
+        ]
+      }
+    },
+    {
+      "path": "code/src/rag_baseline/agentic.py",
+      "purpose": "AgenticState",
+      "status": "AUDITED",
+      "dependencies": [
+        "MessagesState"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "schema": {
+        "class": "AgenticState",
+        "evidence": "code/src/rag_baseline/agentic.py:19",
+        "base": "MessagesState",
+        "fields": [
+          {
+            "name": "question",
+            "annotation": "str",
+            "evidence": "code/src/rag_baseline/agentic.py:20"
+          },
+          {
+            "name": "clarification",
+            "annotation": "str | None",
+            "evidence": "code/src/rag_baseline/agentic.py:21"
+          },
+          {
+            "name": "decision",
+            "annotation": "RouterDecision | ProbeDecision",
+            "evidence": "code/src/rag_baseline/agentic.py:22"
+          },
+          {
+            "name": "chunks",
+            "annotation": "list[RetrievedChunk]",
+            "evidence": "code/src/rag_baseline/agentic.py:23"
+          },
+          {
+            "name": "audit",
+            "annotation": "VersionAudit",
+            "evidence": "code/src/rag_baseline/agentic.py:24"
+          },
+          {
+            "name": "result",
+            "annotation": "QueryResult",
+            "evidence": "code/src/rag_baseline/agentic.py:25"
+          },
+          {
+            "name": "use_version_filter",
+            "annotation": "bool",
+            "evidence": "code/src/rag_baseline/agentic.py:26"
+          },
+          {
+            "name": "historical",
+            "annotation": "bool",
+            "evidence": "code/src/rag_baseline/agentic.py:27"
+          },
+          {
+            "name": "error",
+            "annotation": "str | None",
+            "evidence": "code/src/rag_baseline/agentic.py:28"
+          },
+          {
+            "name": "routing_audit",
+            "annotation": "dict | None",
+            "evidence": "code/src/rag_baseline/agentic.py:29"
+          },
+          {
+            "name": "query_embedding",
+            "annotation": "list[float] | None",
+            "evidence": "code/src/rag_baseline/agentic.py:30"
+          },
+          {
+            "name": "temporal_intent",
+            "annotation": "TemporalIntent",
+            "evidence": "code/src/rag_baseline/agentic.py:31"
+          },
+          {
+            "name": "manual_scope",
+            "annotation": "str | None",
+            "evidence": "code/src/rag_baseline/agentic.py:32"
+          },
+          {
+            "name": "temporal_grounding",
+            "annotation": "TemporalGroundingContext | None",
+            "evidence": "code/src/rag_baseline/agentic.py:33"
+          }
+        ]
+      }
+    }
+  ],
+  "memory": [
+    {
+      "path": "code/src/memory/__init__.py",
+      "purpose": "Checkpoint/store factory and validation",
+      "status": "AUDITED",
+      "dependencies": [
+        "LangGraph checkpoint backend"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "details": {
+        "path": "code/src/memory/__init__.py",
+        "function_inventory": [
+          {
+            "name": "initialize_database",
+            "evidence": "code/src/memory/__init__.py:13"
+          },
+          {
+            "name": "initialize_store",
+            "evidence": "code/src/memory/__init__.py:28"
+          }
+        ]
+      }
+    },
+    {
+      "path": "code/src/memory/mongodb.py",
+      "purpose": "Checkpoint/store factory and validation",
+      "status": "AUDITED",
+      "dependencies": [
+        "LangGraph checkpoint backend"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "details": {
+        "path": "code/src/memory/mongodb.py",
+        "function_inventory": [
+          {
+            "name": "_has_auth_credentials",
+            "evidence": "code/src/memory/mongodb.py:12"
+          },
+          {
+            "name": "validate_mongo_config",
+            "evidence": "code/src/memory/mongodb.py:22"
+          },
+          {
+            "name": "get_mongo_connection_string",
+            "evidence": "code/src/memory/mongodb.py:38"
+          },
+          {
+            "name": "get_mongo_saver",
+            "evidence": "code/src/memory/mongodb.py:55"
+          }
+        ]
+      }
+    },
+    {
+      "path": "code/src/memory/postgres.py",
+      "purpose": "Checkpoint/store factory and validation",
+      "status": "AUDITED",
+      "dependencies": [
+        "LangGraph checkpoint backend"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "details": {
+        "path": "code/src/memory/postgres.py",
+        "function_inventory": [
+          {
+            "name": "validate_postgres_config",
+            "evidence": "code/src/memory/postgres.py:14"
+          },
+          {
+            "name": "get_postgres_connection_string",
+            "evidence": "code/src/memory/postgres.py:40"
+          },
+          {
+            "name": "get_postgres_saver",
+            "evidence": "code/src/memory/postgres.py:53"
+          },
+          {
+            "name": "get_postgres_store",
+            "evidence": "code/src/memory/postgres.py:77"
+          }
+        ]
+      }
+    },
+    {
+      "path": "code/src/memory/sqlite.py",
+      "purpose": "Checkpoint/store factory and validation",
+      "status": "AUDITED",
+      "dependencies": [
+        "LangGraph checkpoint backend"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER",
+      "details": {
+        "path": "code/src/memory/sqlite.py",
+        "function_inventory": [
+          {
+            "name": "get_sqlite_saver",
+            "evidence": "code/src/memory/sqlite.py:9"
+          },
+          {
+            "name": "get_sqlite_store",
+            "evidence": "code/src/memory/sqlite.py:33"
+          },
+          {
+            "name": "__init__",
+            "evidence": "code/src/memory/sqlite.py:17"
+          },
+          {
+            "name": "__aenter__",
+            "evidence": "code/src/memory/sqlite.py:20"
+          },
+          {
+            "name": "__aexit__",
+            "evidence": "code/src/memory/sqlite.py:23"
+          },
+          {
+            "name": "setup",
+            "evidence": "code/src/memory/sqlite.py:27"
+          }
+        ]
+      }
+    }
+  ],
+  "service": [
+    {
+      "path": "code/src/service/service.py",
+      "purpose": "FastAPI endpoints, saver lifecycle, streaming/history/feedback",
+      "status": "AUDITED",
+      "dependencies": [
+        "agents",
+        "memory",
+        "schema",
+        "LangSmith"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER"
+    },
+    {
+      "path": "code/src/service/utils.py",
+      "purpose": "Message and token projection",
+      "status": "AUDITED",
+      "dependencies": [
+        "LangChain messages",
+        "ChatMessage"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER"
+    },
+    {
+      "path": "code/src/service/__init__.py",
+      "purpose": "Re-export FastAPI app for service entrypoint",
+      "status": "existing_read_only",
+      "dependencies": [
+        "service.service"
+      ],
+      "integration_relevance": "Package public import contract; preserve or adapt transport outside frozen core"
+    }
+  ],
+  "client": [
+    {
+      "path": "code/src/client/client.py",
+      "purpose": "Sync/async HTTP/SSE client",
+      "status": "AUDITED",
+      "dependencies": [
+        "httpx",
+        "schema"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER"
+    },
+    {
+      "path": "code/src/streamlit_app.py",
+      "purpose": "Session, conversation, tools, sharing, feedback UI",
+      "status": "AUDITED",
+      "dependencies": [
+        "Streamlit",
+        "AgentClient"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER"
+    },
+    {
+      "path": "code/src/run_agent.py",
+      "purpose": "Registry default standalone runner",
+      "status": "AUDITED",
+      "dependencies": [
+        "agents"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER"
+    },
+    {
+      "path": "code/src/run_service.py",
+      "purpose": "Uvicorn entry",
+      "status": "AUDITED",
+      "dependencies": [
+        "service"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER"
+    },
+    {
+      "path": "code/src/run_client.py",
+      "purpose": "Client demonstration",
+      "status": "AUDITED",
+      "dependencies": [
+        "AgentClient"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER"
+    },
+    {
+      "path": "code/src/client/__init__.py",
+      "purpose": "Re-export AgentClient and AgentClientError",
+      "status": "existing_read_only",
+      "dependencies": [
+        "client.client"
+      ],
+      "integration_relevance": "Package public import contract; preserve or adapt transport outside frozen core"
+    }
+  ],
+  "tools": [
+    {
+      "path": "code/src/agents/tools.py",
+      "purpose": "Evaluate numerical expressions using numexpr and pi/e.",
+      "status": "BOUND_TO_SERVICE_REGISTERED_AGENT",
+      "dependencies": [
+        "numexpr",
+        "math"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER: deterministic independent tool; existing implementation already exists, no new calculator needed in audit.",
+      "name": "Calculator"
+    },
+    {
+      "path": "code/src/agents/tools.py",
+      "purpose": "Return server local current date/time in Brazilian Portuguese.",
+      "status": "BOUND_TO_SERVICE_REGISTERED_AGENT",
+      "dependencies": [
+        "Python datetime"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER: non-normative date helper; timezone and trust boundary should be explicit.",
+      "name": "GetCurrentDateTime"
+    },
+    {
+      "path": "code/src/agents/tools.py",
+      "purpose": "Search legacy company handbook Chroma.",
+      "status": "BOUND_TO_UNREGISTERED_ALTERNATIVE",
+      "dependencies": [
+        "langchain_chroma",
+        "langchain_openai.OpenAIEmbeddings",
+        "OPENAI_API_KEY"
+      ],
+      "integration_relevance": "DO_NOT_USE for normative evidence; superseded by current RagService.retrieve.",
+      "name": "Database_Search"
+    },
+    {
+      "path": "code/src/agents/tools.py",
+      "purpose": "Legacy semantic normative evidence search with arbitrary optional metadata dictionary.",
+      "status": "BOUND_TO_SERVICE_REGISTERED_AGENT",
+      "dependencies": [
+        "openai.OpenAI",
+        "supabase.Client",
+        "dotenv",
+        "OPENAI_API_KEY",
+        "SUPABASE_URL",
+        "SUPABASE_KEY"
+      ],
+      "integration_relevance": "REPLACE backend with current dense retrieval; preserve vector strategy only inside normative_rag.",
+      "name": "Supabase_RAG_Search"
+    },
+    {
+      "path": "code/src/agents/tools_v2.py",
+      "purpose": "Scoped semantic normative evidence retrieval.",
+      "status": "BOUND_TO_SERVICE_REGISTERED_AGENT",
+      "dependencies": [
+        "openai.OpenAI",
+        "supabase.Client",
+        "dotenv",
+        "rag_baseline.scope.source_scopes",
+        "OPENAI_API_KEY",
+        "SUPABASE_URL",
+        "SUPABASE_KEY"
+      ],
+      "integration_relevance": "REPLACE remote backend with RagService.retrieve adapter internal to normative_rag; keep relevance responsibility separate from VersionFilter.",
+      "name": "Supabase_Semantic_Search"
+    },
+    {
+      "path": "code/src/agents/tools_v2.py",
+      "purpose": "Retrieve normative text by exact hierarchical metadata filters; no query/semantic ranking.",
+      "status": "BOUND_TO_SERVICE_REGISTERED_AGENT",
+      "dependencies": [
+        "openai.OpenAI (initialization only)",
+        "supabase.Client",
+        "dotenv",
+        "rag_baseline.scope.source_scopes",
+        "OPENAI_API_KEY (still required)",
+        "SUPABASE_URL",
+        "SUPABASE_KEY"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER concept only: implement structural evidence lookup over current IDs/registry and existing metadata, behind normative_rag and mandatory temporal pipeline; do not reuse Supabase backend.",
+      "name": "Supabase_Metadata_Search"
+    },
+    {
+      "path": "code/src/agents/langgraph_supervisor_agent.py",
+      "purpose": "Add two numbers.",
+      "status": "BOUND_TO_UNREGISTERED_ALTERNATIVE",
+      "dependencies": [],
+      "integration_relevance": "REUSE_WITH_ADAPTER as deterministic arithmetic demonstration",
+      "name": "add"
+    },
+    {
+      "path": "code/src/agents/langgraph_supervisor_agent.py",
+      "purpose": "Multiply two numbers.",
+      "status": "BOUND_TO_UNREGISTERED_ALTERNATIVE",
+      "dependencies": [],
+      "integration_relevance": "REUSE_WITH_ADAPTER as deterministic arithmetic demonstration",
+      "name": "multiply"
+    },
+    {
+      "path": "code/src/agents/langgraph_supervisor_agent.py",
+      "purpose": "Return fixed2024 FAANG headcount text; does not search the web.",
+      "status": "BOUND_TO_UNREGISTERED_ALTERNATIVE",
+      "dependencies": [],
+      "integration_relevance": "DO_NOT_USE as search: static fixture",
+      "name": "web_search"
+    },
+    {
+      "path": "code/src/agents/research_assistant.py",
+      "purpose": "Web search",
+      "status": "BOUND_TO_UNREGISTERED_ALTERNATIVE",
+      "dependencies": [
+        "langchain_community",
+        "DuckDuckGoSearchAPIWrapper",
+        "external DuckDuckGo network"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER for non-normative tasks only",
+      "name": "WebSearch"
+    },
+    {
+      "path": "code/src/agents/research_assistant.py",
+      "purpose": "Current weather lookup",
+      "status": "CONDITIONALLY_BOUND_IF_WEATHER_KEY_SET",
+      "dependencies": [
+        "langchain_community",
+        "OpenWeatherMapAPIWrapper",
+        "OPENWEATHERMAP_API_KEY",
+        "external OpenWeatherMap network"
+      ],
+      "integration_relevance": "REUSE_WITH_ADAPTER for non-normative tasks only",
+      "name": "Weather"
+    },
+    {
+      "path": "code/src/agents/langgraph_supervisor_agent.py",
+      "purpose": "Generated supervisor handoff to math_expert",
+      "status": "GENERATED_TOOL_BOUND_TO_UNREGISTERED_SUPERVISOR",
+      "dependencies": [
+        "langgraph_supervisor",
+        "langgraph"
+      ],
+      "integration_relevance": "DO_NOT_USE for initial integration",
+      "name": "transfer_to_math_expert"
+    },
+    {
+      "path": "code/src/agents/langgraph_supervisor_agent.py",
+      "purpose": "Generated supervisor handoff to research_expert",
+      "status": "GENERATED_TOOL_BOUND_TO_UNREGISTERED_SUPERVISOR",
+      "dependencies": [
+        "langgraph_supervisor",
+        "langgraph"
+      ],
+      "integration_relevance": "DO_NOT_USE for initial integration",
+      "name": "transfer_to_research_expert"
+    }
+  ],
+  "retrieval": [
+    {
+      "path": "code/src/agents/tools.py",
+      "purpose": "Legacy Supabase RAG + handbook Chroma",
+      "status": "AUDITED",
+      "dependencies": [
+        "Supabase",
+        "OpenAI",
+        "LangChain Chroma"
+      ],
+      "integration_relevance": "REPLACE normative backend"
+    },
+    {
+      "path": "code/src/agents/tools_v2.py",
+      "purpose": "Legacy vector/metadata RPCs",
+      "status": "AUDITED",
+      "dependencies": [
+        "Supabase",
+        "OpenAI"
+      ],
+      "integration_relevance": "REPLACE backend; keep search roles"
+    },
+    {
+      "path": "code/src/rag_baseline/service.py",
+      "purpose": "Current async dense retrieval and V2 generation",
+      "status": "AUDITED",
+      "dependencies": [
+        "OpenRouter",
+        "ChromaVectorStore"
+      ],
+      "integration_relevance": "REUSE_AS_IS behind adapter"
+    },
+    {
+      "path": "code/src/rag_baseline/vector_store.py",
+      "purpose": "Current typed Chroma evidence",
+      "status": "AUDITED",
+      "dependencies": [
+        "chromadb"
+      ],
+      "integration_relevance": "REUSE_AS_IS; future metadata facade"
+    },
+    {
+      "path": "code/scripts/embedding_load.py",
+      "purpose": "Legacy Supabase ingestion/diagnostic; not executed",
+      "status": "AUDITED",
+      "dependencies": [
+        "OpenAI",
+        "Supabase"
+      ],
+      "integration_relevance": "DO_NOT_USE to restore/reindex frozen core"
+    },
+    {
+      "path": "code/scripts/embedding_load_v2.py",
+      "purpose": "Legacy Supabase ingestion/diagnostic; not executed",
+      "status": "AUDITED",
+      "dependencies": [
+        "OpenAI",
+        "Supabase"
+      ],
+      "integration_relevance": "DO_NOT_USE to restore/reindex frozen core"
+    },
+    {
+      "path": "code/scripts/test_embedding_search.py",
+      "purpose": "Legacy Supabase ingestion/diagnostic; not executed",
+      "status": "AUDITED",
+      "dependencies": [
+        "OpenAI",
+        "Supabase"
+      ],
+      "integration_relevance": "DO_NOT_USE to restore/reindex frozen core"
+    }
+  ],
+  "config": [
+    {
+      "path": "code/src/core/settings.py",
+      "purpose": "Legacy settings/provider/memory selection",
+      "status": "AUDITED",
+      "dependencies": [],
+      "integration_relevance": "REUSE_WITH_ADAPTER"
+    },
+    {
+      "path": "code/src/core/llm.py",
+      "purpose": "Cached multi-provider model factory",
+      "status": "AUDITED",
+      "dependencies": [],
+      "integration_relevance": "REUSE_WITH_ADAPTER"
+    },
+    {
+      "path": "code/src/rag_baseline/config.py",
+      "purpose": "Separate frozen-core configuration",
+      "status": "AUDITED",
+      "dependencies": [],
+      "integration_relevance": "REUSE_WITH_ADAPTER"
+    },
+    {
+      "path": "code/langgraph.json",
+      "purpose": "Alternative deployment selects research_assistant",
+      "status": "AUDITED",
+      "dependencies": [],
+      "integration_relevance": "REUSE_WITH_ADAPTER"
+    },
+    {
+      "path": "code/.env.example",
+      "purpose": "Variable names/examples only",
+      "status": "AUDITED",
+      "dependencies": [],
+      "integration_relevance": "REUSE_WITH_ADAPTER"
+    },
+    {
+      "path": "code/compose.yaml",
+      "purpose": "Development deployment contracts",
+      "status": "AUDITED",
+      "dependencies": [],
+      "integration_relevance": "REUSE_WITH_ADAPTER"
+    },
+    {
+      "path": "code/compose.prod.yaml",
+      "purpose": "Production deployment contracts",
+      "status": "AUDITED",
+      "dependencies": [],
+      "integration_relevance": "REUSE_WITH_ADAPTER"
+    },
+    {
+      "path": "code/docker/Dockerfile.service",
+      "purpose": "Service packaging; normative package missing",
+      "status": "AUDITED",
+      "dependencies": [],
+      "integration_relevance": "REUSE_WITH_ADAPTER"
+    },
+    {
+      "path": "code/docker/Dockerfile.app",
+      "purpose": "Client UI packaging",
+      "status": "AUDITED",
+      "dependencies": [],
+      "integration_relevance": "REUSE_WITH_ADAPTER"
+    },
+    {
+      "path": "code/pyproject.toml",
+      "purpose": "Declared dependency constraints",
+      "status": "AUDITED",
+      "dependencies": [],
+      "integration_relevance": "REUSE_WITH_ADAPTER"
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "Locked dependency versions",
+      "status": "AUDITED",
+      "dependencies": [],
+      "integration_relevance": "REUSE_WITH_ADAPTER"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "code/uv.lock",
+      "purpose": "langgraph",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "langgraph",
+        "declared": [
+          "langgraph ~=0.5.0"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:37"
+        ],
+        "locked": [
+          "0.5.2"
+        ],
+        "lock_evidence": "code/uv.lock:1917",
+        "installed": "0.5.2",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\langgraph-0.5.2.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "langgraph-checkpoint",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "langgraph-checkpoint",
+        "declared": [],
+        "declared_evidence": [],
+        "locked": [
+          "2.1.0"
+        ],
+        "lock_evidence": "code/uv.lock:1964",
+        "installed": "2.1.0",
+        "installed_satisfies_declared": null,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\langgraph_checkpoint-2.1.0.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "langgraph-checkpoint-sqlite",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "langgraph-checkpoint-sqlite",
+        "declared": [
+          "langgraph-checkpoint-sqlite ~=2.0.1"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:40"
+        ],
+        "locked": [
+          "2.0.10"
+        ],
+        "lock_evidence": "code/uv.lock:2007",
+        "installed": "2.0.10",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\langgraph_checkpoint_sqlite-2.0.10.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "langgraph-checkpoint-postgres",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "langgraph-checkpoint-postgres",
+        "declared": [
+          "langgraph-checkpoint-postgres ~=2.0.13"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:39"
+        ],
+        "locked": [
+          "2.0.21"
+        ],
+        "lock_evidence": "code/uv.lock:1992",
+        "installed": "2.0.21",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\langgraph_checkpoint_postgres-2.0.21.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "langgraph-checkpoint-mongodb",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "langgraph-checkpoint-mongodb",
+        "declared": [
+          "langgraph-checkpoint-mongodb ~=0.1.3"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:38"
+        ],
+        "locked": [
+          "0.1.4"
+        ],
+        "lock_evidence": "code/uv.lock:1977",
+        "installed": "0.1.4",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\langgraph_checkpoint_mongodb-0.1.4.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "langgraph-supervisor",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "langgraph-supervisor",
+        "declared": [
+          "langgraph-supervisor ~=0.0.27"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:41"
+        ],
+        "locked": [
+          "0.0.27"
+        ],
+        "lock_evidence": "code/uv.lock:2084",
+        "installed": "0.0.27",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\langgraph_supervisor-0.0.27.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "langgraph-cli",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "langgraph-cli",
+        "declared": [],
+        "declared_evidence": [],
+        "locked": [
+          "0.3.3"
+        ],
+        "lock_evidence": "code/uv.lock:2021",
+        "installed": "0.3.3",
+        "installed_satisfies_declared": null,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\langgraph_cli-0.3.3.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "langgraph-api",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "langgraph-api",
+        "declared": [],
+        "declared_evidence": [],
+        "locked": [
+          "0.2.44"
+        ],
+        "lock_evidence": "code/uv.lock:1934",
+        "installed": "0.2.44",
+        "installed_satisfies_declared": null,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\langgraph_api-0.2.44.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "langgraph-runtime-inmem",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "langgraph-runtime-inmem",
+        "declared": [],
+        "declared_evidence": [],
+        "locked": [
+          "0.2.1"
+        ],
+        "lock_evidence": "code/uv.lock:2054",
+        "installed": "0.2.1",
+        "installed_satisfies_declared": null,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\langgraph_runtime_inmem-0.2.1.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "langchain",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "langchain",
+        "declared": [],
+        "declared_evidence": [],
+        "locked": [
+          "0.3.26"
+        ],
+        "lock_evidence": "code/uv.lock:1691",
+        "installed": "0.3.26",
+        "installed_satisfies_declared": null,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\langchain-0.3.26.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "langchain-core",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "langchain-core",
+        "declared": [
+          "langchain-core ~=0.3.33"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:26"
+        ],
+        "locked": [
+          "0.3.68"
+        ],
+        "lock_evidence": "code/uv.lock:1778",
+        "installed": "0.3.68",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\langchain_core-0.3.68.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "langchain-community",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "langchain-community",
+        "declared": [
+          "langchain-community ~=0.3.16"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:27"
+        ],
+        "locked": [
+          "0.3.27"
+        ],
+        "lock_evidence": "code/uv.lock:1754",
+        "installed": "0.3.27",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\langchain_community-0.3.27.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "langchain-openai",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "langchain-openai",
+        "declared": [
+          "langchain-openai ~=0.3.0"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:35"
+        ],
+        "locked": [
+          "0.3.19"
+        ],
+        "lock_evidence": "code/uv.lock:1872",
+        "installed": "0.3.19",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\langchain_openai-0.3.19.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "langchain-anthropic",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "langchain-anthropic",
+        "declared": [
+          "langchain-anthropic ~= 0.3.0"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:28"
+        ],
+        "locked": [
+          "0.3.15"
+        ],
+        "lock_evidence": "code/uv.lock:1709",
+        "installed": "0.3.15",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\langchain_anthropic-0.3.15.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "langchain-aws",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "langchain-aws",
+        "declared": [
+          "langchain-aws ~=0.2.14"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:29"
+        ],
+        "locked": [
+          "0.2.24"
+        ],
+        "lock_evidence": "code/uv.lock:1723",
+        "installed": "0.2.24",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\langchain_aws-0.2.24.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "langchain-chroma",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "langchain-chroma",
+        "declared": [
+          "langchain-chroma ~=0.2.3"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:30"
+        ],
+        "locked": [
+          "0.2.4"
+        ],
+        "lock_evidence": "code/uv.lock:1739",
+        "installed": "0.2.4",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\langchain_chroma-0.2.4.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "langchain-google-genai",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "langchain-google-genai",
+        "declared": [
+          "langchain-google-genai ~=2.0.11"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:31"
+        ],
+        "locked": [
+          "2.0.11"
+        ],
+        "lock_evidence": "code/uv.lock:1796",
+        "installed": "2.0.11",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\langchain_google_genai-2.0.11.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "langchain-google-vertexai",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "langchain-google-vertexai",
+        "declared": [
+          "langchain-google-vertexai>=2.0.7"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:32"
+        ],
+        "locked": [
+          "2.0.7"
+        ],
+        "lock_evidence": "code/uv.lock:1811",
+        "installed": "2.0.7",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\langchain_google_vertexai-2.0.7.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "langchain-groq",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "langchain-groq",
+        "declared": [
+          "langchain-groq ~=0.2.1"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:33"
+        ],
+        "locked": [
+          "0.2.5"
+        ],
+        "lock_evidence": "code/uv.lock:1828",
+        "installed": "0.2.5",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\langchain_groq-0.2.5.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "langchain-ollama",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "langchain-ollama",
+        "declared": [
+          "langchain-ollama ~=0.2.3"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:34"
+        ],
+        "locked": [
+          "0.2.3"
+        ],
+        "lock_evidence": "code/uv.lock:1859",
+        "installed": "0.2.3",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\langchain_ollama-0.2.3.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "streamlit",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "streamlit",
+        "declared": [
+          "streamlit ~=1.40.1"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:57"
+        ],
+        "locked": [
+          "1.40.2"
+        ],
+        "lock_evidence": "code/uv.lock:4195",
+        "installed": "1.40.2",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\streamlit-1.40.2.dist-info",
+        "wheel_tags": [
+          "py2-none-any",
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "fastapi",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "fastapi",
+        "declared": [
+          "fastapi ~=0.115.5"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:22"
+        ],
+        "locked": [
+          "0.115.14"
+        ],
+        "lock_evidence": "code/uv.lock:837",
+        "installed": "0.115.14",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\fastapi-0.115.14.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "pydantic",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "pydantic",
+        "declared": [
+          "pydantic ~=2.10.1"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:50",
+          "code/pyproject.toml:88"
+        ],
+        "locked": [
+          "2.10.6"
+        ],
+        "lock_evidence": "code/uv.lock:3390",
+        "installed": "2.10.6",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\pydantic-2.10.6.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "pydantic-core",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "pydantic-core",
+        "declared": [],
+        "declared_evidence": [],
+        "locked": [
+          "2.27.2"
+        ],
+        "lock_evidence": "code/uv.lock:3404",
+        "installed": "2.27.2",
+        "installed_satisfies_declared": null,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\pydantic_core-2.27.2.dist-info",
+        "wheel_tags": [
+          "cp311-cp311-win_amd64"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "pydantic-settings",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "pydantic-settings",
+        "declared": [
+          "pydantic-settings ~=2.6.1"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:51"
+        ],
+        "locked": [
+          "2.6.1"
+        ],
+        "lock_evidence": "code/uv.lock:3457",
+        "installed": "2.6.1",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\pydantic_settings-2.6.1.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "chromadb",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "chromadb",
+        "declared": [
+          "chromadb ~=1.0.15"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:19"
+        ],
+        "locked": [
+          "1.0.15"
+        ],
+        "lock_evidence": "code/uv.lock:559",
+        "installed": "1.0.15",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\chromadb-1.0.15.dist-info",
+        "wheel_tags": [
+          "cp39-abi3-win_amd64"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "httpx",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "httpx",
+        "declared": [
+          "httpx ~=0.27.2"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:24"
+        ],
+        "locked": [
+          "0.27.2"
+        ],
+        "lock_evidence": "code/uv.lock:1406",
+        "installed": "0.27.2",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\httpx-0.27.2.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "openai",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "openai",
+        "declared": [
+          "openai>=1.93.3"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:60"
+        ],
+        "locked": [
+          "1.93.3"
+        ],
+        "lock_evidence": "code/uv.lock:2642",
+        "installed": "1.93.3",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\openai-1.93.3.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "supabase",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "supabase",
+        "declared": [
+          "supabase>=2.22.2"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:61"
+        ],
+        "locked": [
+          "2.22.2"
+        ],
+        "lock_evidence": "code/uv.lock:4244",
+        "installed": "2.22.2",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\supabase-2.22.2.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "postgrest",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "postgrest",
+        "declared": [],
+        "declared_evidence": [],
+        "locked": [
+          "2.22.2"
+        ],
+        "lock_evidence": "code/uv.lock:2999",
+        "installed": "2.22.2",
+        "installed_satisfies_declared": null,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\postgrest-2.22.2.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "gotrue",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "gotrue",
+        "declared": [],
+        "declared_evidence": [],
+        "locked": [],
+        "lock_evidence": null,
+        "installed": null,
+        "installed_satisfies_declared": null,
+        "installed_matches_lock": null,
+        "distribution_metadata_path": null,
+        "wheel_tags": [],
+        "wheel_supports_current_interpreter": null
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "realtime",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "realtime",
+        "declared": [],
+        "declared_evidence": [],
+        "locked": [
+          "2.5.3"
+        ],
+        "lock_evidence": "code/uv.lock:3729",
+        "installed": "2.5.3",
+        "installed_satisfies_declared": null,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\realtime-2.5.3.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "storage3",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "storage3",
+        "declared": [],
+        "declared_evidence": [],
+        "locked": [
+          "0.12.1"
+        ],
+        "lock_evidence": "code/uv.lock:4181",
+        "installed": "0.12.1",
+        "installed_satisfies_declared": null,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\storage3-0.12.1.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "supabase-auth",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "supabase-auth",
+        "declared": [],
+        "declared_evidence": [],
+        "locked": [
+          "2.22.2"
+        ],
+        "lock_evidence": "code/uv.lock:4261",
+        "installed": "2.22.2",
+        "installed_satisfies_declared": null,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\supabase_auth-2.22.2.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "supabase-functions",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "supabase-functions",
+        "declared": [],
+        "declared_evidence": [],
+        "locked": [
+          "2.22.2"
+        ],
+        "lock_evidence": "code/uv.lock:4275",
+        "installed": "2.22.2",
+        "installed_satisfies_declared": null,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\supabase_functions-2.22.2.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "langsmith",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "langsmith",
+        "declared": [
+          "langsmith ~=0.4.0"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:42"
+        ],
+        "locked": [
+          "0.4.4"
+        ],
+        "lock_evidence": "code/uv.lock:2098",
+        "installed": "0.4.4",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\langsmith-0.4.4.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "langfuse",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "langfuse",
+        "declared": [
+          "langfuse ~=2.60.5"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:36"
+        ],
+        "locked": [
+          "2.60.9"
+        ],
+        "lock_evidence": "code/uv.lock:1898",
+        "installed": "2.60.9",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\langfuse-2.60.9.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "psycopg",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "psycopg",
+        "declared": [
+          "psycopg[binary,pool] ~=3.2.4"
+        ],
+        "declared_evidence": [
+          "code/pyproject.toml:48"
+        ],
+        "locked": [
+          "3.2.9"
+        ],
+        "lock_evidence": "code/uv.lock:3161",
+        "installed": "3.2.9",
+        "installed_satisfies_declared": true,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\psycopg-3.2.9.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "psycopg-pool",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "psycopg-pool",
+        "declared": [],
+        "declared_evidence": [],
+        "locked": [
+          "3.2.6"
+        ],
+        "lock_evidence": "code/uv.lock:3222",
+        "installed": "3.2.6",
+        "installed_satisfies_declared": null,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\psycopg_pool-3.2.6.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "pymongo",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "pymongo",
+        "declared": [],
+        "declared_evidence": [],
+        "locked": [
+          "4.12.1"
+        ],
+        "lock_evidence": "code/uv.lock:3507",
+        "installed": "4.12.1",
+        "installed_satisfies_declared": null,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\pymongo-4.12.1.dist-info",
+        "wheel_tags": [
+          "cp311-cp311-win_amd64"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "aiosqlite",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "aiosqlite",
+        "declared": [],
+        "declared_evidence": [],
+        "locked": [
+          "0.21.0"
+        ],
+        "lock_evidence": "code/uv.lock:235",
+        "installed": "0.21.0",
+        "installed_satisfies_declared": null,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\aiosqlite-0.21.0.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "ormsgpack",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "ormsgpack",
+        "declared": [],
+        "declared_evidence": [],
+        "locked": [
+          "1.10.0"
+        ],
+        "lock_evidence": "code/uv.lock:2796",
+        "installed": "1.10.0",
+        "installed_satisfies_declared": null,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\ormsgpack-1.10.0.dist-info",
+        "wheel_tags": [
+          "cp311-cp311-win_amd64"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "pytest",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "pytest",
+        "declared": [],
+        "declared_evidence": [],
+        "locked": [
+          "8.4.1"
+        ],
+        "lock_evidence": "code/uv.lock:3610",
+        "installed": "8.4.1",
+        "installed_satisfies_declared": null,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\pytest-8.4.1.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "pytest-asyncio",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "pytest-asyncio",
+        "declared": [],
+        "declared_evidence": [],
+        "locked": [
+          "1.0.0"
+        ],
+        "lock_evidence": "code/uv.lock:3626",
+        "installed": "1.0.0",
+        "installed_satisfies_declared": null,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\pytest_asyncio-1.0.0.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    },
+    {
+      "path": "code/uv.lock",
+      "purpose": "pytest-env",
+      "status": "METADATA_AUDITED",
+      "dependencies": [],
+      "integration_relevance": "Metadata compatible; live runtime coverage limited",
+      "version_details": {
+        "name": "pytest-env",
+        "declared": [],
+        "declared_evidence": [],
+        "locked": [
+          "1.1.5"
+        ],
+        "lock_evidence": "code/uv.lock:3652",
+        "installed": "1.1.5",
+        "installed_satisfies_declared": null,
+        "installed_matches_lock": true,
+        "distribution_metadata_path": "D:\\faculdade\\TCC\\RAG\\normative-agentic-rag-ufpi\\code\\.venv\\Lib\\site-packages\\pytest_env-1.1.5.dist-info",
+        "wheel_tags": [
+          "py3-none-any"
+        ],
+        "wheel_supports_current_interpreter": true
+      }
+    }
+  ],
+  "tests": [
+    {
+      "path": "code/tests/app/test_streamlit_app.py",
+      "purpose": "Existing app tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/client/test_client.py",
+      "purpose": "Existing client tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/core/test_llm.py",
+      "purpose": "Existing core tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/core/test_settings.py",
+      "purpose": "Existing core tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/integration/test_docker_e2e.py",
+      "purpose": "Existing integration tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_adaptive_router_v2.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_agentic_evaluation.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_agentic_pipeline.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_analyze_experiment.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_api.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_audit_terminal.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_citation_failure_regression.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_content_locators_v2.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_corpus.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_experiment.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_incremental_index.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_index.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_normative_output.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_openrouter.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_pilot_v2.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_profiles.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_rag_service.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_resolution_956_integration.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_response_failure_regression.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_retrieve.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_router_agentic.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_router_failure_regression.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_router_probe_v2.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_routing_evaluation_v2.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_sector_v2.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_structured_evaluation_v2.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_temporal_grounding.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_temporal_invariants.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_temporal_versions.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_terminal_scope.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_vector_store.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_versioning.py",
+      "purpose": "Existing rag_baseline tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/service/test_auth.py",
+      "purpose": "Existing service tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/service/test_service.py",
+      "purpose": "Existing service tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/service/test_service_e2e.py",
+      "purpose": "Existing service tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/service/test_service_streaming.py",
+      "purpose": "Existing service tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    },
+    {
+      "path": "code/tests/service/test_utils.py",
+      "purpose": "Existing service tests",
+      "status": "EXECUTED_OR_FULL_SUITE_COVERED",
+      "dependencies": [
+        "pytest"
+      ],
+      "integration_relevance": "Baseline only; no edits"
+    }
+  ],
+  "companion_artifacts": [
+    "legacy_agents_graphs.json",
+    "tool_inventory.json",
+    "service_client_contracts.json",
+    "state_contracts.json",
+    "memory_configuration.json",
+    "corpus_metadata_inventory.json",
+    "dependency_occurrences.json"
+  ]
+}

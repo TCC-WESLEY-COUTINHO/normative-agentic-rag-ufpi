@@ -1,0 +1,30 @@
+{
+  "algorithm": "SHA-256",
+  "scope": "Exact new evidence artifact bytes; excludes this manifest",
+  "files": {
+    ".gitattributes": "730a35ae3d558080083c3103d9ac8100c3f6561678092abe341701dfa331eb1d",
+    "decision_log.jsonl": "ee68ec412410989dd652b3965fa208d38561e579bb436367f5366b201a8b9c50",
+    "execution_log.jsonl": "0501970b7569787812ea9d27b0bad599b704f0efd70c06be09578de30fe82d76",
+    "existing_contracts.json": "b58d280a4413d214d9626b6c7176d9296bbed9437d189598286ac20e6a202769",
+    "first_implementation_check.txt": "7d75cebcec380b6657bb5dc960c47c8866e69979181fd52ef1dd8c10339e778d",
+    "initial_audit.json": "d10b6a7649610246b1e42366421b23b8ec266478b8f35a86187895c10f40c1f2",
+    "local_probes.json": "0d20f7073f3f190240a8ab0504d98eb917b057822c3c8745cb04377f18aa718e",
+    "local_probes.py": "cffa15b7a756d88bd0bc6ba633833dc17a2d001f968b41cbc2d78447c228b85d",
+    "manifest.json": "d4661b19ddff7459950c5564955ef9cabd4a78bec1e5c70b3cc2c7ff59735e9e",
+    "preservation.json": "0c85846402f9c43a0330e58caff4f8d5176d34ca2f44e3d65a0fe9b0bb8e313a",
+    "preservation_before.json": "2b945cc6762441ceedaa388d4dc5fb66a8acadf6ec0bd84c952ba9ca9b8d97c2",
+    "pytest_focused.txt": "aac86c7cd26619d5e092fba261ba069e2358a8652be146f45ff09ee0c0c79e70",
+    "pytest_full.txt": "fa7fb90a69e81a70377bdc2058771829ea43892567f9f34c51a38a88d379f579",
+    "pytest_legacy.txt": "63d3462173d1ec32af0bbf54d144b538b8d714aede027f55cdb268e304101f36",
+    "pytest_rag_baseline.txt": "3c87f5fe78b99d05381fe5000facd7c38d2a70703cf5d1ac88da3a20ffa7b02d",
+    "pytest_structured.txt": "64b5ca518009c424ce69fce4b25259d7c63545232dfe5e884518e03903d7cab6",
+    "pytest_temporal.txt": "2e543360478e5a1acc88b6997f7a7fa8a90187780bd497defea12f6126b279df",
+    "REPORT.md": "a671b9fcd57d35b9e10eb76828274562c9c897d407b138ce11083b4fd944e3b9",
+    "review_findings.json": "65f7869ce4503bcfce5e1deb0477c1432ce7a9256c63c43534029a5d25de12f1",
+    "tdd_cycles.json": "aede48e96b7c69831134be843fa5d2c60b7a2d9af3957f151518136e0e34b802",
+    "tdd_red.txt": "8240641a42635f1e57762ec5b3725246e348cd8616e93b5121036ea7eff2c9b4",
+    "tdd_red_verified.txt": "5252f8abb0198b657baf9740192abd12013494fe817b473560c6f7392b7fb49d",
+    "test_results.json": "d555ddb87e3ae5bba6a70f395655836535ed6a2c6bfd8d4a63d0e173159af31b",
+    "verification.json": "48bfb8db64910b9d7f512551fa79ec30fb3d25d7d3cf4f294146c0b9d6361202"
+  }
+}

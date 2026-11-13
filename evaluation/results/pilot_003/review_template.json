@@ -1,0 +1,1618 @@
+[
+  {
+    "annotation_id": "V2-A001",
+    "question": "Posso pedir para a UFPI mudar a estrutura curricular do meu curso para a mais recente?",
+    "answer": "Sim, você pode solicitar a mudança de estrutura curricular para a mais recente, desde que a solicitação seja feita pela coordenação do curso com a anuência do aluno, conforme estabelecido no **Art. 306** do Regulamento Geral da Graduação da UFPI.\n\nO **Art. 305** define que a mudança de estrutura curricular consiste na desvinculação do aluno da estrutura curricular de origem e sua vinculação à proposta curricular mais recente do seu curso.\n\nPortanto, a mudança é possível, mas depende da solicitação formal da coordenação do curso, com seu consentimento, e do cumprimento dos critérios previstos no projeto pedagógico do curso (PPC), caso haja exigências específicas.\n\n> **Fonte:** Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus), Art. 305 e Art. 306.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "É possível vincular o aluno à estrutura curricular mais recente em substituição à anterior. A coordenação solicita a mudança à DAA/PREG com anuência do aluno; o PPC pode prever situações de mudança compulsória.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A002",
+    "question": "Meu certificado de inglês tem quatro anos. Ainda vale para comprovar proficiência no mestrado?",
+    "answer": "Não, seu certificado de inglês não vale mais para comprovar proficiência no mestrado.\n\nDe acordo com o **Art. 34, § IV** da **Resolução CEPEX/UFPI nº 956/2025**, os exames de proficiência têm validade de **três anos**. Como seu certificado tem quatro anos, ele já está fora do prazo de validade.\n\n**Fonte:** Resolução CEPEX/UFPI nº 956/2025, Capítulo IV - DA ADMISSÃO, MATRÍCULA E TRANSFERÊNCIA, Art. 34, § IV.",
+    "expected_action": "answer",
+    "required_facts": [
+      "Em regra, não: os exames de proficiência têm validade de três anos.",
+      "Programas em rede são exceção e seguem os critérios das instituições-sede."
+    ],
+    "reference_answer": "Em regra, não: os exames de proficiência têm validade de três anos. Programas em rede são exceção e seguem os critérios das instituições-sede.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A003",
+    "question": "Vou fazer estágio de docência no mestrado. Quanto tempo dura, quantas horas faço e o que entrego no final?",
+    "answer": "De acordo com a Resolução CEPEX/UFPI nº 956/2025, no setor de pós-graduação:\n\n- **Duração do estágio**: O Estágio Docência no mestrado tem duração mínima de **um semestre** (Art. 44).\n\n- **Carga horária**: A carga horária é de **quatro a seis horas semanais**, limitadas a **sessenta horas por semestre letivo** (Art. 45).\n\n- **Entregas no final**: No término das atividades, o(a) discente deve elaborar o **Relatório Final do Estágio Docência** em até 30 dias, que deve conter, no mínimo:\n  - dados do(a) discente, da disciplina e do(a) professor(a) supervisor(a);\n  - descrição das atividades desenvolvidas (tópicos abordados, ementas e referências);\n  - autoavaliação do(a) discente; e\n  - parecer do professor supervisor (Art. 48).\n\nO relatório, após avaliação do(a) orientador(a) e do(a) professor(a) supervisor(a), deve ser submetido à aprovação do Colegiado Simples (Art. 48, § 1º).",
+    "expected_action": "answer",
+    "required_facts": [
+      "No mestrado, a duração mínima é um semestre; o início exige aprovação do PED pelo Colegiado Simples e ciência da instância responsável pela disciplina, preferencialmente após concluir os créditos obrigatórios.",
+      "A carga é de quatro a seis horas semanais, limitada a 60 horas por semestre, com no máximo 50% em sala de aula; o estagiário não substitui o professor.",
+      "O relatório final deve ser elaborado em até 30 dias após as atividades, avaliado pelo orientador e supervisor e submetido à aprovação do Colegiado Simples."
+    ],
+    "reference_answer": "No mestrado, a duração mínima é um semestre; o início exige aprovação do PED pelo Colegiado Simples e ciência da instância responsável pela disciplina, preferencialmente após concluir os créditos obrigatórios. A carga é de quatro a seis horas semanais, limitada a 60 horas por semestre, com no máximo 50% em sala de aula; o estagiário não substitui o professor. O relatório final deve ser elaborado em até 30 dias após as atividades, avaliado pelo orientador e supervisor e submetido à aprovação do Colegiado Simples.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A004",
+    "question": "Qual é a nota mínima que eu preciso para ser aprovado depois de realizar o Exame Final?",
+    "answer": "A nota mínima necessária para ser aprovado após realizar o Exame Final é **6 (seis)**.\n\n**Fundamentação normativa:**\n\nDe acordo com o **Art. 111, inciso II**, da Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação:\n\n> **\"II - submetido ao exame final, obtiver média aritmética igual ou superior a 6 (seis), resultante da média aritmética das avaliações parciais e da nota do exame final.\"**\n\nAlém disso, o **Art. 118** reafirma que a média final mínima para aprovação, após o cálculo definido no Art. 117 (que inclui o exame final), é de **6 (seis)**.\n\nPortanto, para aprovação após o exame final, a média final resultante da média parcial e da nota do exame final deve ser igual ou superior a 6 (seis).",
+    "expected_action": "answer",
+    "required_facts": [
+      "A média final, calculada pela média aritmética simples entre a média parcial e a nota do exame final, deve ser igual ou superior a 6."
+    ],
+    "reference_answer": "A média final, calculada pela média aritmética simples entre a média parcial e a nota do exame final, deve ser igual ou superior a 6.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A005",
+    "question": "Se eu for aluno de curso em regime de crédito e quiser cancelar uma disciplina, qual é a carga horária mínima de componentes curriculares que eu tenho que manter?",
+    "answer": "De acordo com o **Art. 229, § 2º**, da **Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação**, o aluno de curso em regime de crédito pode realizar o cancelamento de componentes curriculares, desde que, após o cancelamento, o aluno se mantenha matriculado em componentes curriculares que somem, **pelo menos, 12 (doze) créditos**.\n\nConsiderando que **1 (um) crédito corresponde a 15 (quinze) horas de aula** (conforme **Art. 45, § 1º**), a carga horária mínima correspondente a 12 créditos é:\n\n12 créditos × 15 horas = **180 horas**\n\nPortanto, o aluno deve manter uma carga horária mínima de **180 horas** em componentes curriculares após o cancelamento.\n\n**Resposta final:**  \nO aluno de curso em regime de crédito deve manter, após o cancelamento, uma carga horária mínima de **180 horas** em componentes curriculares.  \n\n**Fonte:** Art. 229, § 2º, e Art. 45, § 1º, da Resolução nº 177/2012 CEPEX/UFPI.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "Após o cancelamento, deve permanecer matriculado em componentes que somem pelo menos 12 créditos. Alunos ingressantes não podem cancelar componentes no nível curricular de ingresso.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A006",
+    "question": "Não passei na qualificação do mestrado. Posso tentar de novo? Até quando?",
+    "answer": "Sim, você pode tentar novamente.\n\nDe acordo com o **Art. 49, § 3º**, da **Resolução CEPEX/UFPI nº 956/2025**, o(a) discente que não obtiver êxito no Exame de Qualificação tem direito a uma nova oportunidade, a ser realizada perante a mesma banca examinadora, **observados os prazos máximos previstos no Regimento Interno de cada PPG**, os quais **não poderão exceder três meses**.\n\nPortanto, você pode tentar novamente, **no prazo máximo de três meses**, contados a partir da data da primeira prova, conforme estabelecido no Regimento Interno do seu Programa de Pós-Graduação.\n\n> **Fonte:** Resolução CEPEX/UFPI nº 956/2025, Capítulo VI - Dos Exames e da Defesa de Dissertação ou de Tese, Art. 49, § 3º.",
+    "expected_action": "answer",
+    "required_facts": [
+      "Há direito a uma nova oportunidade, no prazo definido pelo Regimento Interno do PPG, que não pode exceder três meses no mestrado.",
+      "A nova oportunidade ocorre perante a mesma banca; impedimento de membros exige aprovação de nova composição pelo Colegiado Simples."
+    ],
+    "reference_answer": "Há direito a uma nova oportunidade, no prazo definido pelo Regimento Interno do PPG, que não pode exceder três meses no mestrado. A nova oportunidade ocorre perante a mesma banca; impedimento de membros exige aprovação de nova composição pelo Colegiado Simples.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A007",
+    "question": "Já cancelei uma matéria uma vez. Posso cancelar de novo?",
+    "answer": "De acordo com o **Art. 37, Parágrafo único**, da **Resolução CEPEX/UFPI nº 956/2025**, o cancelamento da mesma disciplina só é permitido uma vez, **exceto por motivo de doença, devidamente comprovado pela Perícia Médica da Universidade**.\n\nPortanto, **não é permitido cancelar novamente a mesma disciplina**, salvo se houver comprovação de doença por meio da Perícia Médica da Universidade.\n\n**Fonte:** Resolução CEPEX/UFPI nº 956/2025, Art. 37, Parágrafo único.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "Após esclarecer que se trata de pós-graduação: a mesma disciplina só pode ser cancelada uma vez, salvo doença comprovada pela Perícia Médica; o cancelamento exige prazo do calendário, parecer favorável do orientador e aprovação do Colegiado Simples.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A008",
+    "question": "Quero transferir meu mestrado para outro programa. O que é necessário e meu prazo começa de novo?",
+    "answer": "Para transferir seu mestrado para outro programa, conforme a Resolução CEPEX/UFPI nº 956/2025, são necessários os seguintes requisitos:\n\n1. **Aprovação do Colegiado Simples** do novo programa, com base na existência de vagas e na observância dos critérios definidos no Regimento Interno (Art. 39, §1º).  \n2. **Apresentação do histórico escolar** e dos **respectivos planos de ensino das disciplinas cursadas** (Art. 39, §2º).  \n3. A matrícula do discente transferido obedece às normas de aproveitamento de estudos, conforme o Art. 36 (Resolução CEPEX/UFPI nº 956/2025).  \n\nAlém disso, **os prazos máximo e mínimo de conclusão do curso são reiniciados a partir da data de ingresso no novo Programa** (Art. 39, §4º).  \n\nPortanto, sim, seu prazo de conclusão começa de novo a partir da data de ingresso no novo programa.",
+    "expected_action": "answer",
+    "required_facts": [
+      "A transferência é admitida entre programas similares ou afins recomendados pela CAPES, no mesmo nível, com aprovação do Colegiado Simples, existência de vagas e critérios do Regimento Interno.",
+      "O aluno deve apresentar histórico e planos de ensino; a matrícula segue as regras de aproveitamento de estudos.",
+      "Os prazos mínimo e máximo de conclusão reiniciam a partir do ingresso no novo programa."
+    ],
+    "reference_answer": "A transferência é admitida entre programas similares ou afins recomendados pela CAPES, no mesmo nível, com aprovação do Colegiado Simples, existência de vagas e critérios do Regimento Interno. O aluno deve apresentar histórico e planos de ensino; a matrícula segue as regras de aproveitamento de estudos. Os prazos mínimo e máximo de conclusão reiniciam a partir do ingresso no novo programa.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A009",
+    "question": "Sou mestrando e já dei aula. Posso ser dispensado do estágio de docência? Se não, posso fazê-lo fora da UFPI?",
+    "answer": "Sim, você pode ser dispensado do Estágio Docência, desde que comprove experiência prévia como docente do ensino superior, conforme previsto no **Art. 42, inciso I**, da **Resolução CEPEX/UFPI nº 956/2025**, no setor de **pós-graduação**.\n\n### 1. **Dispensa do Estágio Docência:**\nO art. 42, inciso I, permite a dispensa do Estágio Docência para o(a) discente de **Mestrado** que comprovar experiência prévia como docente do ensino superior, pelo período mínimo de **um semestre**.\n\nComo você é mestrando e já deu aula (experiência como docente do ensino superior), **você preenche os requisitos para a dispensa**, desde que comprove essa experiência com documentação apropriada (como atestado de atividades docentes, contrato, carteira de trabalho, etc.).\n\nA dispensa depende da **aprovação do Colegiado Simples** do seu programa.\n\n> **Fonte:** Resolução CEPEX/UFPI nº 956/2025, Art. 42, inciso I – Setor: pos_graduacao\n\n---\n\n### 2. **Realização do Estágio Docência fora da UFPI:**\nSe você **não for dispensado**, o Estágio Docência pode ser realizado em **outras instituições de ensino superior ou na rede pública de ensino médio**, **mediante autorização do(a) orientador(a) e aprovação do Colegiado Simples**.\n\nO art. 41, parágrafo único, permite essa possibilidade.\n\n> **Fonte:** Resolução CEPEX/UFPI nº 956/2025, Art. 41, parágrafo único – Setor: pos_graduacao\n\n---\n\n### Conclusão:\n- ✅ **Sim, você pode ser dispensado do Estágio Docência**, desde que comprove experiência docente no ensino superior por pelo menos um semestre, com aprovação do Colegiado Simples.\n- ✅ **Se não for dispensado**, pode realizar o estágio fora da UFPI, desde que com autorização do orientador e aprovação do Colegiado Simples.\n\n> **Recomendação:** Documente sua experiência docente e encaminhe o pedido de dispensa ao Colegiado Simples do seu programa.",
+    "expected_action": "answer",
+    "required_facts": [
+      "A dispensa depende de aprovação do Colegiado Simples e comprovação de pelo menos um semestre de docência no ensino superior ou lato sensu; para lato sensu, devem ser cursos presenciais de especialização ou aperfeiçoamento com carga compatível ao PED. Vínculo docente atual em instituição de EBTT é outra hipótese.",
+      "O estágio pode ocorrer em outra instituição de ensino superior ou na rede pública de ensino médio, com autorização do orientador e aprovação do Colegiado Simples."
+    ],
+    "reference_answer": "A dispensa depende de aprovação do Colegiado Simples e comprovação de pelo menos um semestre de docência no ensino superior ou lato sensu; para lato sensu, devem ser cursos presenciais de especialização ou aperfeiçoamento com carga compatível ao PED. Vínculo docente atual em instituição de EBTT é outra hipótese. O estágio pode ocorrer em outra instituição de ensino superior ou na rede pública de ensino médio, com autorização do orientador e aprovação do Colegiado Simples.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A010",
+    "question": "Caso eu esteja grávida ou com uma afecção de saúde, posso solicitar o Regime de Exercícios Domiciliares?",
+    "answer": "Sim, você pode solicitar o Regime de Exercícios Domiciliares se estiver grávida ou com uma afecção de saúde, desde que cumpra os requisitos previstos no Regulamento Geral da Graduação da UFPI.\n\nDe acordo com o **Art. 242, inciso I**, a aluna gestante tem direito ao regime de exercícios domiciliares em situações específicas, como a partir do oitavo mês de gestação, até 60 dias após o nascimento da criança, ou por até 90 dias após o nascimento, desde que comprovado com certidão de nascimento e documento de identificação da mãe, ambos autenticados em cartório.\n\nAlém disso, conforme o **Art. 242, inciso III**, o aluno portador de afecções definidas em lei também tem direito ao regime de exercícios domiciliares.\n\nPara ambos os casos, é necessário o **requerimento ao chefe do departamento ou da unidade acadêmica especializada**, conforme estabelece o **Art. 244**, e, no caso de afecções, a **junta médica da UFPI deverá ser ouvida**, conforme previsto no **§ 3º do Art. 244**.\n\nPortanto, a solicitação é permitida, desde que comprovada com documentação adequada e seguidas as etapas administrativas previstas.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "Sim. A norma contempla gestantes com comprovação médica e alunos portadores das afecções definidas em lei. Os prazos variam conforme a hipótese: há acompanhamento a partir do oitavo mês e situações de 60 dias após o parto ou 90 dias quando solicitado apenas após o nascimento. Nas hipóteses dos incisos I e III, pode haver prorrogação mediante laudo da junta médica da UFPI.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A011",
+    "question": "Faço mestrado e estou doente. Qual é a diferença entre cancelar uma matéria e trancar o curso?",
+    "answer": "A diferença entre cancelar uma matéria e trancar o curso, no contexto do mestrado na UFPI, está definida pelas normas específicas da pós-graduação, conforme o **TRECHO 2** da Resolução CEPEX/UFPI nº 956/2025.\n\n### 1. **Trancamento de curso (para pós-graduação)**\nDe acordo com o **Art. 38** da Resolução CEPEX/UFPI nº 956/2025:\n- É permitido o trancamento do curso por motivo de **doença**, desde que **comprovada pela Perícia Médica da Universidade**.\n- O trancamento pode durar **até 12 meses**.\n- O período de trancamento **não é computado** para efeito dos prazos de conclusão do curso.\n\n> ✅ **Conclusão**: Trancar o curso significa suspender oficialmente as atividades acadêmicas do discente por até 12 meses, por motivo de doença comprovada, sem prejuízo do vínculo com o curso e sem contar para o prazo de conclusão.\n\n---\n\n### 2. **Cancelamento de matéria (não previsto diretamente na pós-graduação)**\nO conceito de \"cancelar uma matéria\" **não é tratado diretamente na Resolução nº 956/2025**, que regula a pós-graduação. No entanto, o **TRECHO 4** da Resolução nº 177/2012 (que trata da graduação) menciona o **trancamento de matrícula em componente curricular**, que é o mais próximo do que se poderia chamar de \"cancelar uma matéria\".\n\nMas é importante destacar:\n- O **trancamento de matrícula em componente curricular** (Art. 287) é um mecanismo **exclusivo da graduação**, e **não se aplica ao mestrado**.\n- Além disso, esse trancamento é **voluntário**, **limitado a 2 vezes por componente curricular**, e **não pode ser feito após 1/3 do período letivo**.\n\n> ❌ **Conclusão**: No mestrado, **não existe o procedimento de \"cancelar uma matéria\"** como no sistema de graduação. O discente não pode simplesmente \"cancelar\" uma disciplina. Se precisar suspender estudos em uma disciplina, deve optar por **trancamento de curso**, que é o único mecanismo previsto para pós-graduação em caso de doença.\n\n---\n\n### ✅ Resumo da diferença:\n| Situação | Aplicável ao mestrado? | O que acontece? | Fonte |\n|--------|------------------------|----------------|------|\n| **Trancamento de curso** | ✅ Sim | Suspensão das atividades por até 12 meses, por doença comprovada; não conta para prazo de conclusão. | Art. 38, Resolução CEPEX/UFPI nº 956/2025 |\n| **Cancelamento de matéria** | ❌ Não | Não é previsto na pós-graduação. O mecanismo de trancamento de componente curricular é exclusivo da graduação. | Art. 287, Resolução nº 177/2012 |\n\n---\n\n### 📌 Recomendação:\nComo você está fazendo mestrado e está doente, **o procedimento correto é solicitar o tr",
+    "expected_action": "answer",
+    "required_facts": [
+      "Cancelar ou substituir matrícula em disciplina exige respeito ao Calendário Acadêmico, parecer favorável do orientador e aprovação do Colegiado Simples; a mesma disciplina só pode ser cancelada uma vez, salvo doença comprovada pela Perícia Médica da Universidade.",
+      "O trancamento do curso por doença comprovada pela Perícia Médica pode durar até 12 meses.",
+      "O período de trancamento por doença não conta para os prazos de conclusão do curso."
+    ],
+    "reference_answer": "Cancelar ou substituir matrícula em disciplina exige respeito ao Calendário Acadêmico, parecer favorável do orientador e aprovação do Colegiado Simples; a mesma disciplina só pode ser cancelada uma vez, salvo doença comprovada pela Perícia Médica da Universidade. O trancamento do curso por doença comprovada pela Perícia Médica pode durar até 12 meses. O período de trancamento por doença não conta para os prazos de conclusão do curso.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A012",
+    "question": "Qual é a nota mínima que eu preciso para ser aprovado depois de realizar o Exame Final?",
+    "answer": "A nota mínima necessária para ser aprovado após realizar o Exame Final é **6 (seis)**.\n\n**Fundamentação normativa:**\n\nDe acordo com o **Art. 111, inciso II**, da Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação:\n\n> **\"II - submetido ao exame final, obtiver média aritmética igual ou superior a 6 (seis), resultante da média aritmética das avaliações parciais e da nota do exame final.\"**\n\nPortanto, para aprovação após o exame final, o aluno deve alcançar uma média final igual ou superior a 6 (seis).",
+    "expected_action": "answer",
+    "required_facts": [
+      "A média final, calculada pela média aritmética simples entre a média parcial e a nota do exame final, deve ser igual ou superior a 6."
+    ],
+    "reference_answer": "A média final, calculada pela média aritmética simples entre a média parcial e a nota do exame final, deve ser igual ou superior a 6.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A013",
+    "question": "O que acontece se eu não conseguir integralizar meu curso no limite máximo estabelecido?",
+    "answer": "Se você não conseguir integralizar seu curso no limite máximo estabelecido pelo projeto pedagógico do curso (PPC), **seu curso será automaticamente cancelado**, conforme estabelece o **Art. 24 da Resolução nº 177/2012 CEPEX/UFPI**.\n\nEsse cancelamento ocorre no período letivo regular em que o limite máximo for ultrapassado, **sem necessidade de processo administrativo prévio**, desde que não haja prorrogação concedida.\n\nNo entanto, é possível solicitar **prorrogação do prazo** de integralização, desde que atendidos os requisitos do **Art. 25 da mesma Resolução**:\n\n- Para alunos com **necessidades especiais, afecção congênita ou adquirida que reduzam a capacidade de aprendizagem**, pode ser concedida prorrogação de até **50% do limite máximo fixado**, mediante avaliação da **Junta Médica da UFPI**.\n- Em **outros casos**, pode ser concedida prorrogação de até **dois períodos letivos**, desde que o **cronograma elaborado pelo coordenador do curso** preveja a conclusão do curso nesse prazo.\n\n> ⚠️ Importante:  \n> - A **apreciação do pedido** de prorrogação exige **requerimento formal**, **justificativa**, **histórico escolar** e **cronograma dos componentes curriculares** a serem cursados (§ 1º do Art. 25).  \n> - Após o cancelamento do curso por decurso do prazo máximo, o retorno à UFPI só é possível mediante **novo ingresso**, podendo haver aproveitamento de estudos anteriores (§ 2º do Art. 25).  \n> - Os períodos de trancamento de curso **não são computados** no limite máximo (§ 5º do Art. 23).\n\nPortanto, **não concluir o curso no limite máximo acarreta o cancelamento**, salvo se houver prorrogação formalmente concedida.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "O art. 24 prevê cancelamento por extrapolar o limite máximo do PPC. Há possibilidade de prorrogação pela CAMEN nas condições do art. 25, mediante processo formal. O art. 345 prevê edital e prazo para justificar a situação antes do cancelamento definitivo quando não apresentada justificativa.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A014",
+    "question": "Já fiz matérias de pós em outra universidade. Como posso aproveitar isso no meu mestrado?",
+    "answer": "Para aproveitar disciplinas cursadas em outro Programa de Pós-Graduação (em outra instituição de ensino superior - IES) no seu Mestrado na UFPI, é necessário observar o disposto no **Art. 36** da **Resolução CEPEX/UFPI nº 956/2025**, que trata do aproveitamento de estudos.\n\nDe acordo com o **Art. 36, § 1º**, o aproveitamento é autorizado quando:\n\n- a disciplina cursada com aprovação tiver conteúdo e duração idênticos, equivalentes ou superiores à do curso pretendido;  \n- **ou** os estudos realizados em duas ou mais disciplinas se complementarem em uma ou mais disciplinas do curso pretendido;  \n- **ou** os estudos, embora não atendendo aos incisos anteriores, guardarem afinidade com a área de concentração e forem de interesse para o desenvolvimento da dissertação.\n\nAlém disso, o **Art. 36, § 2º** estabelece que os aproveitamentos são registrados no histórico escolar pelo sistema da Universidade, com o nome e a carga horária da disciplina.\n\n**Procedimento recomendado:**\n\n1. Reúna os documentos comprobatórios das disciplinas cursadas, como:\n   - Histórico escolar da instituição anterior;\n   - Planos de ensino (emendas ou programas das disciplinas);\n   - Comprovante de aprovação em cada disciplina.\n\n2. Apresente o pedido de aproveitamento ao **Colegiado Simples do PPG** (Programa de Pós-Graduação) em que você está matriculado, com todos os documentos acima.\n\n3. O Colegiado Simples analisará o pedido com base nos critérios do art. 36, considerando a equivalência de conteúdo, carga horária e pertinência para o seu curso de Mestrado.\n\n4. A decisão será formalizada e o aproveitamento será registrado no histórico escolar, conforme o **Art. 36, § 2º**.\n\n> **Importante:** O aproveitamento depende da aprovação do Colegiado Simples e do cumprimento dos limites estabelecidos no Regimento Interno do PPG. Cada PPG pode ter critérios específicos, que devem ser consultados.\n\n**Fonte:** Resolução CEPEX/UFPI nº 956/2025, Art. 36.",
+    "expected_action": "answer",
+    "required_facts": [
+      "É possível aproveitar créditos de outro PPG ou IES em áreas afins e de interesse para a dissertação, mediante aprovação do Colegiado Simples, respeitando o Regimento Interno do PPG.",
+      "Podem ser aceitas disciplinas aprovadas de conteúdo e duração idênticos, equivalentes ou superiores; estudos complementares entre disciplinas; ou estudos afins à área e de interesse para a dissertação.",
+      "O aproveitamento é registrado no histórico pelo sistema da Universidade, com nome e carga horária da disciplina."
+    ],
+    "reference_answer": "É possível aproveitar créditos de outro PPG ou IES em áreas afins e de interesse para a dissertação, mediante aprovação do Colegiado Simples, respeitando o Regimento Interno do PPG. Podem ser aceitas disciplinas aprovadas de conteúdo e duração idênticos, equivalentes ou superiores; estudos complementares entre disciplinas; ou estudos afins à área e de interesse para a dissertação. O aproveitamento é registrado no histórico pelo sistema da Universidade, com nome e carga horária da disciplina.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A015",
+    "question": "Estou montando a banca da minha tese. Quantas pessoas preciso chamar e quem pode participar?",
+    "answer": "Você está em pós-graduação (mestrado ou doutorado), com base no contexto normativo fornecido. A seguir, as informações relevantes para a montagem da banca de defesa de tese, conforme a **Resolução CEPEX/UFPI nº 956/2025**, no setor de **pós-graduação**:\n\n---\n\n### ✅ **Quantas pessoas você precisa chamar?**\n\n- **Para Doutorado**:  \n  A banca de defesa de tese é formada por **cinco membros titulares** e **dois suplentes** (Art. 51, caput).\n\n- **Para Mestrado**:  \n  A banca de defesa de dissertação é formada por **três membros titulares** e **um suplente** (Art. 51, caput).\n\n> ⚠️ **Observação**: O número mínimo de membros titulares é obrigatório. O suplente é necessário apenas para substituição em caso de impedimento.\n\n---\n\n### ✅ **Quem pode participar?**\n\nOs membros da banca devem ser **docentes com titulação de Doutor**, conforme o Art. 51, §2º:\n\n- **Mínimo de membros externos ao PPG**:\n  - **Mestrado**: pelo menos **um docente externo ao PPG**.\n  - **Doutorado**: pelo menos **dois docentes externos ao PPG**.\n\n- **Composição geral**:\n  - Podem integrar a banca: docentes do PPG, de outros PPGs da UFPI ou convidados de outras instituições (Art. 51, §2º).\n\n- **Presidência da banca**:\n  - Cabe ao(a) **orientador(a)** (Art. 51, §1º).\n  - Em caso de ausência ou impedimento do(a) orientador(a), a presidência é exercida pelo(a) **coorientador(a)**, se houver, ou por docente designado pelo Colegiado Simples (Art. 55).\n\n- **Coorientador(a)**:\n  - Pode integrar a banca como membro adicional (além do mínimo), com direito a voto (Art. 51, §4º).\n\n- **Requisitos de imparcialidade**:\n  - A composição deve garantir imparcialidade, evitando conflitos de interesse, parentesco, filiação ou relações societárias entre membros ou com o(a) discente (Art. 51, §3º).\n\n---\n\n### ✅ **Resumo final:**\n\n| Item | Mestrado | Doutorado |\n|------|----------|-----------|\n| Membros titulares mínimos | 3 | 5 |\n| Membros suplentes mínimos | 1 | 2 |\n| Docentes externos ao PPG mínimos | 1 | 2 |\n| Presidência | Orientador(a) | Orientador(a) |\n| Coorientador(a) pode participar? | Sim, como membro adicional com voto | Sim, como membro adicional com voto |\n\n---\n\n### 📌 Fonte:\n- **Resolução CEPEX/UFPI nº 956/2025**, Capítulo VI – Dos Exames e da Defesa de Dissertação ou Tese, arts. 51, 53, 55.\n\n> ✅ **Recomendação**: Consulte o **Regimento Interno do seu PPG** para detalhes sobre formatos de defesa (presencial",
+    "expected_action": "answer",
+    "required_facts": [
+      "No doutorado são necessários pelo menos cinco titulares e dois suplentes, com pelo menos dois docentes externos ao PPG.",
+      "A banca é aprovada pelo Colegiado Simples, ouvido o orientador, que a preside.",
+      "Deve haver imparcialidade, evitando conflitos de interesse e relações de parentesco, filiação ou societárias com o discente; o coorientador pode participar como membro adicional ao mínimo, com voto."
+    ],
+    "reference_answer": "No doutorado são necessários pelo menos cinco titulares e dois suplentes, com pelo menos dois docentes externos ao PPG. A banca é aprovada pelo Colegiado Simples, ouvido o orientador, que a preside. Deve haver imparcialidade, evitando conflitos de interesse e relações de parentesco, filiação ou societárias com o discente; o coorientador pode participar como membro adicional ao mínimo, com voto.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A016",
+    "question": "Se eu for impedido de participar de uma avaliação (prova), posso requerer a oportunidade de fazer a segunda chamada?",
+    "answer": "Sim, você pode requerer a oportunidade de fazer a segunda chamada se for impedido de participar de uma avaliação.\n\nDe acordo com o **Art. 108 da Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação**, o aluno que estiver impedido de participar de qualquer avaliação tem direito de requerer a oportunidade de realizá-la em segunda chamada.\n\n> **Art. 108. Impedido de participar de qualquer avaliação, o aluno tem direito de requerer a oportunidade de realizá-la em segunda chamada.**\n\nO requerimento deve ser feito ao professor responsável pela disciplina, devidamente justificado e comprovado, e protocolado à chefia do departamento ou curso no prazo de 3 (três) dias úteis, contado a partir da data da avaliação não realizada.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "Sim. O requerimento dirigido ao professor deve ser justificado e comprovado, protocolado na chefia do departamento ou curso ao qual o componente está vinculado. O prazo é de 3 dias úteis a partir da avaliação não realizada; pode requerer o aluno ou procurador legalmente constituído.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A017",
+    "question": "Passei na defesa da dissertação, mas a banca pediu ajustes. Quanto tempo tenho para entregar?",
+    "answer": "Você tem até **sessenta dias corridos** para entregar a versão final corrigida da dissertação, conforme estabelecido no § 1º do Art. 54 da Resolução CEPEX/UFPI nº 956/2025.\n\n**Fonte:** Resolução CEPEX/UFPI nº 956/2025, Capítulo VI - Dos Exames e da Defesa de Dissertação ou Tese, Art. 54, § 1º.",
+    "expected_action": "answer",
+    "required_facts": [
+      "As modificações devem ser feitas em até 60 dias corridos, sob pena de anulação da defesa.",
+      "O orientador deve validar as alterações e formalizá-las à Coordenação antes da entrega da versão final, que é obrigatória para solicitar o diploma."
+    ],
+    "reference_answer": "As modificações devem ser feitas em até 60 dias corridos, sob pena de anulação da defesa. O orientador deve validar as alterações e formalizá-las à Coordenação antes da entrega da versão final, que é obrigatória para solicitar o diploma.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A018",
+    "question": "Minha nota foi 6,5 e tenho 80% de presença. Já estou aprovado?",
+    "answer": "Não, você não está aprovado.\n\nDe acordo com o **Art. 20, § 3º**, da **Resolução CEPEX/UFPI nº 956/2025** (Setor: pos_graduacao), é considerado aprovado o(a) discente que obtiver **nota mínima sete** e frequência igual ou superior a 75%.\n\nVocê obteve nota 6,5, que está abaixo do mínimo exigido (7,0), mesmo com frequência de 80% (acima do mínimo de 75%).\n\nPortanto, **não atende ao critério de aprovação por eficiência**, sendo considerado(a) **reprovado(a)** nesta disciplina.\n\n**Fonte:** Resolução CEPEX/UFPI nº 956/2025, Art. 20, § 3º.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "Após esclarecer que se trata de pós-graduação: não, pois a nota mínima é sete; a frequência mínima é 75%.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A019",
+    "question": "Por quantos períodos letivos posso solicitar o Trancamento do Curso?",
+    "answer": "O trancamento de curso pode ser solicitado por até **2 (dois) períodos letivos regulares**, consecutivos ou não, conforme estabelecido no **Art. 292, § 1º**, da Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação.\n\nEm situação de excepcionalidade, devidamente comprovada, a Diretoria de Administração Acadêmica (DAA/PREG) poderá conceder trancamento de curso por mais **2 (dois) períodos letivos**, além do limite fixado no § 1º do Art. 292, conforme previsto no **Art. 293**, com as situações de excepcionalidade especificadas no § 1º (como afastamento para estudo no exterior, afastamento do servidor público, acompanhamento de parente até segundo grau ou cônjuge, ou doença comprovada pela junta médica da UFPI).\n\nPortanto, o limite máximo de trancamento de curso é de **4 (quatro) períodos letivos**, desde que haja comprovação de situação de excepcionalidade e aprovação da DAA/PREG.\n\n**Fonte:** Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (art. 292, § 1º e art. 293).",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "A regra geral é no máximo dois períodos letivos regulares, consecutivos ou não, solicitados a cada período no prazo do calendário correspondente a um terço do período letivo. Em excepcionalidade comprovada, a DAA/PREG pode conceder até dois períodos adicionais, nos termos do art. 293.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A020",
+    "question": "Minha nota foi 6,5 e tenho 80% de presença. Já estou aprovado?",
+    "answer": "Sim, você está aprovado.\n\n**Fundamentação normativa:**\n\nDe acordo com o **Art. 111, I**, da **Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação**, o aluno será considerado \"aprovado\" no componente curricular se:\n\n- obtiver frequência igual ou superior a 75% da carga horária do componente curricular;  \n- e média aritmética igual ou superior a 7 (sete) nas avaliações parciais.\n\nNo seu caso:\n- Sua frequência é de 80%, o que atende ao requisito de **75%**;\n- Sua nota final é de **6,5**, que é **inferior a 7**.\n\nPortanto, **não atende ao requisito de média aritmética igual ou superior a 7**.\n\nNo entanto, o **Art. 111, II** prevê que o aluno pode ser aprovado **submetido ao exame final**, desde que obtenha média aritmética igual ou superior a 6 (seis), resultante da média das avaliações parciais e da nota do exame final.\n\nComo sua nota final é **6,5**, que é **superior a 6**, e você tem **80% de presença (acima de 75%)**, **você está aprovado**, desde que tenha sido submetido ao exame final e essa nota de 6,5 seja a média final resultante do cálculo previsto no Art. 117 (média das avaliações parciais e do exame final).\n\nAlém disso, o **Art. 118** reafirma que a média final mínima para aprovação é **6 (seis)**, o que também é atendido.\n\n**Conclusão:**  \nSim, você está aprovado, **desde que sua nota final de 6,5 seja o resultado da média entre as avaliações parciais e o exame final**, conforme previsto no Art. 111, II, e que sua frequência (80%) esteja de acordo com o exigido.\n\n**Fonte:**  \n- Art. 111, I e II — Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação  \n- Art. 118 — Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "Após esclarecer que se trata de pós-graduação: não, pois a nota mínima é sete; a frequência mínima é 75%.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A021",
+    "question": "Qual é o prazo para terminar o doutorado? Posso prorrogar?",
+    "answer": "O prazo para conclusão do doutorado na UFPI é regulamentado conforme o **Art. 4º, inciso I**, da **Resolução CEPEX/UFPI nº 956/2025**, que estabelece:\n\n- **Duração mínima**: vinte e quatro meses;  \n- **Duração máxima**: quarenta e oito meses.\n\nAlém disso, é permitida a **prorrogação por até doze meses**, **mediante aprovação do Colegiado Simples**, conforme o **§ 1º do mesmo artigo**.\n\nPortanto, o prazo para terminar o doutorado é de até 48 meses, podendo ser prorrogado por até 12 meses, desde que aprovado pelo Colegiado Simples.",
+    "expected_action": "answer",
+    "required_facts": [
+      "A duração mínima é 24 meses e a máxima é 48 meses.",
+      "É permitida prorrogação de até 12 meses mediante aprovação do Colegiado Simples."
+    ],
+    "reference_answer": "A duração mínima é 24 meses e a máxima é 48 meses. É permitida prorrogação de até 12 meses mediante aprovação do Colegiado Simples.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A022",
+    "question": "O que é a Láurea Universitária e quais são os requisitos de excelência para recebê-la?",
+    "answer": "A **Láurea Universitária** é o título de honra conferido pela Universidade Federal do Piauí (UFPI) ao aluno da turma concluinte de cada curso de graduação que, no período letivo, apresentar o **maior índice de rendimento acadêmico (IRA)**, considerando até a 4ª casa decimal, desde que atendidos os requisitos previstos no Art. 338 da Resolução nº 177/2012-CEPEX/UFPI.\n\nOs **requisitos de excelência** para a concessão da Láurea Universitária são os seguintes, conforme estabelecido no **Art. 338**:\n\n1. Ter ingressado na UFPI mediante vestibular ou SiSU;  \n2. Não ter incorrido em reprovação, qualquer que seja o motivo, em qualquer componente curricular, ao longo de todo o curso;  \n3. Ter concluído **duas ou mais atividades distintas** dentre as seguintes:  \n   - Participação em programa de monitoria cadastrado na PREG, com certificado ou documento equivalente;  \n   - Participação em programa de educação tutorial (PET) cadastrado na PREXC, com certificado ou documento equivalente;  \n   - Participação em projeto de pesquisa cadastrado na PROPESQI, com certificado ou documento equivalente;  \n   - Participação em projeto de extensão cadastrado na PREXC, com certificado ou documento equivalente;  \n   - Participação no Programa Institucional de Bolsas de Iniciação à Docência (PIBID), com certificado ou documento equivalente;  \n   - Participação em Programa de Apoio Acadêmico cadastrado na PREG, com certificado ou documento equivalente;  \n   - Participação em Empresas Juniores e/ou Incubadoras de Empresas cadastradas na PREXC, com certificado ou documento equivalente;  \n   - Participação em Ligas Acadêmicas, com certificado ou documento equivalente;  \n   - Publicação (ou aceitação para publicação) de artigo em periódico indexado Qualis A ou B, em coautoria com docente vinculado ao curso do aluno (desde que a atividade esteja registrada no Currículo Lattes do aluno);  \n4. Não ter sofrido penalidade de qualquer natureza em todo o curso de graduação;  \n5. Ter índice de rendimento acadêmico (IRA) igual ou superior a **8,5 (oito vírgula cinco)**;  \n6. Ter aprovação por média em todos os componentes curriculares;  \n7. Não ter trancamento de qualquer natureza;  \n8. Não haver no histórico escolar crédito concedido ou crédito automático.\n\nEsses requisitos devem ser cumpridos para que o aluno seja considerado elegível à Láurea Universitária, conforme o procedimento estabelecido nos arts. 337, 338, 339 e 340 da Resolução nº 177/2012-CEPEX/UFPI.",
+    "expected_action": "answer",
+    "required_facts": [
+      "É a honraria ao concluinte com maior IRA da turma, atendidos os requisitos do art. 338.",
+      "Exige ingresso por vestibular ou SiSU, ausência de reprovação, pelo menos duas atividades distintas elencadas na norma e ausência de penalidade.",
+      "Exige IRA de pelo menos 8,5, aprovação por média em todos os componentes, nenhum trancamento e nenhum crédito concedido ou automático no histórico."
+    ],
+    "reference_answer": "É a honraria ao concluinte com maior IRA da turma, atendidos os requisitos do art. 338. Exige ingresso por vestibular ou SiSU, ausência de reprovação, pelo menos duas atividades distintas elencadas na norma e ausência de penalidade. Exige IRA de pelo menos 8,5, aprovação por média em todos os componentes, nenhum trancamento e nenhum crédito concedido ou automático no histórico.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A023",
+    "question": "Estou terminando o mestrado. Além de defender, o que preciso cumprir e entregar para pedir o diploma?",
+    "answer": "Para solicitar o diploma de Mestre na UFPI, após o cumprimento dos requisitos acadêmicos, você deve entregar à Coordenação os seguintes documentos, conforme estabelecido na **Resolução CEPEX/UFPI nº 956/2025**, no **Capítulo VII - Dos Títulos e dos Diplomas**, **Art. 56**:\n\n- Versão final da Dissertação, em arquivo digital;  \n- Termo de autorização para depósito no Repositório Institucional da UFPI;  \n- Cópia da ata da defesa;  \n- Comprovante de regularidade (Nada Consta) junto às Bibliotecas da UFPI.\n\nAlém disso, é obrigatório que você tenha:\n\n- Aprovado o Exame de Qualificação, se previsto no Regimento Interno do PPG (Art. 3º, inciso V);  \n- Integralizado, no mínimo, trinta créditos, dos quais seis são relativos à dissertação (Art. 3º, inciso III);  \n- Realizado o Estágio Docência, nos termos da Resolução (Art. 3º, inciso IV);  \n- Aprovado em exame de proficiência em uma língua estrangeira (Art. 3º, inciso II);  \n- Apresentado e defendido a Dissertação (Art. 3º, inciso VI);  \n- Realizado as modificações sugeridas pela banca, caso haja, no prazo máximo de sessenta dias corridos após a defesa, com validação formal do(a) orientador(a) (Art. 54, §§ 1º e 3º);  \n- Entregue a versão final corrigida da Dissertação à Coordenação do Programa, conforme exigido pelo Art. 54, § 2º.\n\nPortanto, além da defesa, você deve cumprir todos os requisitos acima e entregar os documentos especificados no **Art. 56**.",
+    "expected_action": "answer",
+    "required_facts": [
+      "É preciso cumprir os requisitos do mestrado: prazo, proficiência em língua estrangeira, mínimo de 30 créditos com seis de dissertação, estágio de docência, qualificação quando prevista e defesa; o PPG pode estabelecer requisitos adicionais.",
+      "Se a banca solicitar modificações, elas devem ser feitas em até 60 dias corridos e validadas pelo orientador; a versão final corrigida é requisito do diploma.",
+      "Entregar à Coordenação a versão final digital da dissertação, autorização de depósito no Repositório Institucional, cópia da ata da defesa e Nada Consta das Bibliotecas."
+    ],
+    "reference_answer": "É preciso cumprir os requisitos do mestrado: prazo, proficiência em língua estrangeira, mínimo de 30 créditos com seis de dissertação, estágio de docência, qualificação quando prevista e defesa; o PPG pode estabelecer requisitos adicionais. Se a banca solicitar modificações, elas devem ser feitas em até 60 dias corridos e validadas pelo orientador; a versão final corrigida é requisito do diploma. Entregar à Coordenação a versão final digital da dissertação, autorização de depósito no Repositório Institucional, cópia da ata da defesa e Nada Consta das Bibliotecas.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A024",
+    "question": "Quantos créditos preciso completar no mestrado? A dissertação entra nessa conta?",
+    "answer": "De acordo com o **Art. 3º, inciso III**, da **Resolução CEPEX/UFPI nº 956/2025**, o Mestrado exige a **integralização curricular de, no mínimo, trinta créditos**, dos quais **seis são relativos à dissertação**.\n\nPortanto, **sim, a dissertação entra nessa conta**.\n\n**Fonte:** Resolução CEPEX/UFPI nº 956/2025, Art. 3º, inciso III.",
+    "expected_action": "answer",
+    "required_facts": [
+      "O mínimo é de 30 créditos, dos quais seis são relativos à dissertação.",
+      "A distribuição entre disciplinas obrigatórias, optativas e atividades complementares segue o Regimento Interno do PPG."
+    ],
+    "reference_answer": "O mínimo é de 30 créditos, dos quais seis são relativos à dissertação. A distribuição entre disciplinas obrigatórias, optativas e atividades complementares segue o Regimento Interno do PPG.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A025",
+    "question": "Não passei na qualificação do mestrado. Posso tentar de novo? Até quando?",
+    "answer": "Sim, você pode tentar novamente.\n\nDe acordo com o **Art. 49, § 3º**, da **Resolução CEPEX/UFPI nº 956/2025**, o(a) discente que não obtiver êxito em qualquer fase do Exame de Qualificação tem direito a uma nova oportunidade, a ser realizada perante a mesma banca examinadora, **observados os prazos máximos previstos no Regimento Interno de cada PPG**, os quais **não poderão exceder três meses**.\n\nPortanto, você pode tentar novamente, **no prazo máximo de três meses**, contados a partir da data da primeira prova, conforme estabelecido no Regimento Interno do seu Programa de Pós-Graduação.\n\n> **Fonte:** Resolução CEPEX/UFPI nº 956/2025, Capítulo VI - Dos Exames e da Defesa de Dissertação ou de Tese, Art. 49, § 3º.",
+    "expected_action": "answer",
+    "required_facts": [
+      "Há direito a uma nova oportunidade, no prazo definido pelo Regimento Interno do PPG, que não pode exceder três meses no mestrado.",
+      "A nova oportunidade ocorre perante a mesma banca; impedimento de membros exige aprovação de nova composição pelo Colegiado Simples."
+    ],
+    "reference_answer": "Há direito a uma nova oportunidade, no prazo definido pelo Regimento Interno do PPG, que não pode exceder três meses no mestrado. A nova oportunidade ocorre perante a mesma banca; impedimento de membros exige aprovação de nova composição pelo Colegiado Simples.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A026",
+    "question": "Vou fazer estágio de docência no mestrado. Quanto tempo dura, quantas horas faço e o que entrego no final?",
+    "answer": "De acordo com o contexto normativo fornecido, para o estágio docência no mestrado da UFPI:\n\n1. **Duração do estágio**:  \n   O estágio docência no mestrado tem duração mínima de **um semestre**, conforme estabelecido no **Art. 44, caput**, da Resolução CEPEX/UFPI nº 956/2025 (Setor: pos_graduacao).\n\n2. **Carga horária**:  \n   A carga horária do estágio docência é de **quatro a seis horas semanais**, limitadas a **sessenta horas por semestre letivo**, conforme previsto no **Art. 45, caput**, da mesma resolução.\n\n3. **O que deve ser entregue no final**:  \n   O(a) discente deve elaborar o **Relatório Final do Estágio Docência** em até 30 dias após o término das atividades, conforme o **Art. 48, caput**, da Resolução CEPEX/UFPI nº 956/2025.  \n   O relatório deve conter, no mínimo:  \n   - dados do(a) discente, da disciplina e do(a) professor(a) supervisor(a);  \n   - descrição das atividades desenvolvidas (tópicos abordados, ementas e referências);  \n   - autoavaliação do(a) discente; e  \n   - parecer do professor supervisor.  \n   Após avaliação do(a) orientador(a) e do(a) professor(a) supervisor(a), o relatório deve ser submetido à aprovação do Colegiado Simples.\n\n**Fontes normativas**:  \n- Art. 44, caput – Resolução CEPEX/UFPI nº 956/2025 (pos_graduacao)  \n- Art. 45, caput – Resolução CEPEX/UFPI nº 956/2025 (pos_graduacao)  \n- Art. 48 – Resolução CEPEX/UFPI nº 956/2025 (pos_graduacao)",
+    "expected_action": "answer",
+    "required_facts": [
+      "No mestrado, a duração mínima é um semestre; o início exige aprovação do PED pelo Colegiado Simples e ciência da instância responsável pela disciplina, preferencialmente após concluir os créditos obrigatórios.",
+      "A carga é de quatro a seis horas semanais, limitada a 60 horas por semestre, com no máximo 50% em sala de aula; o estagiário não substitui o professor.",
+      "O relatório final deve ser elaborado em até 30 dias após as atividades, avaliado pelo orientador e supervisor e submetido à aprovação do Colegiado Simples."
+    ],
+    "reference_answer": "No mestrado, a duração mínima é um semestre; o início exige aprovação do PED pelo Colegiado Simples e ciência da instância responsável pela disciplina, preferencialmente após concluir os créditos obrigatórios. A carga é de quatro a seis horas semanais, limitada a 60 horas por semestre, com no máximo 50% em sala de aula; o estagiário não substitui o professor. O relatório final deve ser elaborado em até 30 dias após as atividades, avaliado pelo orientador e supervisor e submetido à aprovação do Colegiado Simples.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A027",
+    "question": "Estou terminando o mestrado. Além de defender, o que preciso cumprir e entregar para pedir o diploma?",
+    "answer": "Para solicitar o diploma de Mestre na UFPI, após o cumprimento dos requisitos acadêmicos, você deve entregar à Coordenação os seguintes documentos, conforme estabelecido na **Resolução CEPEX/UFPI nº 956/2025**, no **Capítulo VII - Dos Títulos e dos Diplomas**, **Art. 56**:\n\n- **Versão final da Dissertação**, em arquivo digital;  \n- **Termo de autorização para depósito no Repositório Institucional da UFPI**;  \n- **Cópia da ata da defesa**;  \n- **Comprovante de regularidade (Nada Consta) junto às Bibliotecas da UFPI**.\n\nAlém disso, é obrigatório que você tenha:\n\n- **Aprovado a defesa da Dissertação** (com menção \"Aprovado\" – Ap), conforme **Art. 54, §1º**, que exige a realização das modificações sugeridas pela banca, se houver, no prazo máximo de **sessenta dias corridos** após a defesa;  \n- **Entregue a versão final corrigida** da Dissertação, com a **validação das modificações pelo(a) orientador(a)**, formalizada à Coordenação do Programa, conforme **Art. 54, §2º e §3º**.\n\nPortanto, além da defesa, você deve cumprir as modificações (se houver), entregar a versão final corrigida com validação do orientador e apresentar os quatro documentos listados no Art. 56.",
+    "expected_action": "answer",
+    "required_facts": [
+      "É preciso cumprir os requisitos do mestrado: prazo, proficiência em língua estrangeira, mínimo de 30 créditos com seis de dissertação, estágio de docência, qualificação quando prevista e defesa; o PPG pode estabelecer requisitos adicionais.",
+      "Se a banca solicitar modificações, elas devem ser feitas em até 60 dias corridos e validadas pelo orientador; a versão final corrigida é requisito do diploma.",
+      "Entregar à Coordenação a versão final digital da dissertação, autorização de depósito no Repositório Institucional, cópia da ata da defesa e Nada Consta das Bibliotecas."
+    ],
+    "reference_answer": "É preciso cumprir os requisitos do mestrado: prazo, proficiência em língua estrangeira, mínimo de 30 créditos com seis de dissertação, estágio de docência, qualificação quando prevista e defesa; o PPG pode estabelecer requisitos adicionais. Se a banca solicitar modificações, elas devem ser feitas em até 60 dias corridos e validadas pelo orientador; a versão final corrigida é requisito do diploma. Entregar à Coordenação a versão final digital da dissertação, autorização de depósito no Repositório Institucional, cópia da ata da defesa e Nada Consta das Bibliotecas.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A028",
+    "question": "O que é a Láurea Universitária e quais são os requisitos de excelência para recebê-la?",
+    "answer": "A **Láurea Universitária** é o título de honra conferido pela Universidade Federal do Piauí (UFPI) ao aluno da turma concluinte de cada curso de graduação que, no período letivo correspondente, apresentar o **maior índice de rendimento acadêmico (IRA)**, considerando até a 4ª casa decimal, desde que atendidos os requisitos estabelecidos no Art. 338 da Resolução nº 177/2012-CEPEX/UFPI.\n\nOs **requisitos de excelência** para a concessão da Láurea Universitária são os seguintes:\n\n1. Ter ingressado na UFPI mediante vestibular ou SiSU;  \n2. Não ter incorrido em reprovação, qualquer que seja o motivo, em qualquer componente curricular, ao longo de todo o curso;  \n3. Ter concluído **duas ou mais atividades distintas** dentre as seguintes:  \n   - Participação em programa de monitoria cadastrado na Pró-Reitoria de Ensino de Graduação (PREG);  \n   - Participação em programa de educação tutorial (PET) cadastrado na Pró-Reitoria de Extensão (PREXC);  \n   - Participação em projeto de pesquisa cadastrado na Pró-Reitoria de Pesquisa (PROPESQI);  \n   - Participação em projeto de extensão cadastrado na Pró-Reitoria de Extensão (PREXC);  \n   - Participação no Programa Institucional de Bolsas de Iniciação à Docência (PIBID);  \n   - Participação em Programa de Apoio Acadêmico cadastrado na PREG;  \n   - Participação em Empresas Juniores e/ou Incubadoras de Empresas cadastradas na PREXC;  \n   - Participação em Ligas Acadêmicas;  \n   - Publicação (ou aceitação para publicação) de artigo em periódico indexado Qualis A ou B, em coautoria com docente vinculado ao curso do aluno (desde que a atividade esteja registrada no Currículo Lattes do aluno);  \n4. Não ter sofrido penalidade de qualquer natureza em todo o curso de graduação;  \n5. Ter índice de rendimento acadêmico (IRA) igual ou superior a 8,5 (oito vírgula cinco);  \n6. Ter aprovação por média em todos os componentes curriculares;  \n7. Não ter trancamento de qualquer natureza;  \n8. Não haver no histórico escolar crédito concedido ou crédito automático.\n\nEsses requisitos estão previstos no **Art. 338** da Resolução nº 177/2012-CEPEX/UFPI.\n\nA concessão da Láurea Universitária é formalizada por meio de diploma confeccionado pela Diretoria de Administração Acadêmica (DAA/PREG), com chancela do ato de concessão, e é conferida pelo Reitor, ou por seu representante legal, em ato público e solene, preferencialmente na colação de grau, conforme previsto no **Art. 341** da mesma resolução.",
+    "expected_action": "answer",
+    "required_facts": [
+      "É a honraria ao concluinte com maior IRA da turma, atendidos os requisitos do art. 338.",
+      "Exige ingresso por vestibular ou SiSU, ausência de reprovação, pelo menos duas atividades distintas elencadas na norma e ausência de penalidade.",
+      "Exige IRA de pelo menos 8,5, aprovação por média em todos os componentes, nenhum trancamento e nenhum crédito concedido ou automático no histórico."
+    ],
+    "reference_answer": "É a honraria ao concluinte com maior IRA da turma, atendidos os requisitos do art. 338. Exige ingresso por vestibular ou SiSU, ausência de reprovação, pelo menos duas atividades distintas elencadas na norma e ausência de penalidade. Exige IRA de pelo menos 8,5, aprovação por média em todos os componentes, nenhum trancamento e nenhum crédito concedido ou automático no histórico.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A029",
+    "question": "Se eu for aluno de curso em regime de crédito e quiser cancelar uma disciplina, qual é a carga horária mínima de componentes curriculares que eu tenho que manter?",
+    "answer": "De acordo com o **Art. 229, § 2º**, da **Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação**, o aluno de curso em regime de crédito pode realizar o cancelamento de componentes curriculares, desde que, após o cancelamento, o aluno se mantenha matriculado em componentes curriculares que somem, **pelo menos, 12 (doze) créditos**.\n\nConsiderando que **1 (um) crédito corresponde a 15 (quinze) horas de aula** (Art. 45, § 1º), a carga horária mínima correspondente a 12 créditos é:\n\n12 créditos × 15 horas = **180 horas**\n\nPortanto, o aluno deve manter uma carga horária mínima de **180 horas** em componentes curriculares após o cancelamento.\n\n**Fonte:** Art. 229, § 2º, e Art. 45, § 1º, da Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "Após o cancelamento, deve permanecer matriculado em componentes que somem pelo menos 12 créditos. Alunos ingressantes não podem cancelar componentes no nível curricular de ingresso.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A030",
+    "question": "Se eu for impedido de participar de uma avaliação (prova), posso requerer a oportunidade de fazer a segunda chamada?",
+    "answer": "Sim, você pode requerer a oportunidade de fazer a segunda chamada se for impedido de participar de uma avaliação.\n\nDe acordo com o **Art. 108 da Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação**, o aluno que estiver impedido de participar de qualquer avaliação tem direito de requerer a realização da prova em segunda chamada.\n\n> **Art. 108. Impedido de participar de qualquer avaliação, o aluno tem direito de requerer a oportunidade de realizá-la em segunda chamada.**\n\nO requerimento deve ser justificado e protocolado no prazo de 3 (três) dias úteis após a data da avaliação não realizada, conforme previsto no § 1º do mesmo artigo.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "Sim. O requerimento dirigido ao professor deve ser justificado e comprovado, protocolado na chefia do departamento ou curso ao qual o componente está vinculado. O prazo é de 3 dias úteis a partir da avaliação não realizada; pode requerer o aluno ou procurador legalmente constituído.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A031",
+    "question": "O que é o ajuste de turmas e quando ele é realizado durante o semestre?",
+    "answer": "O ajuste de turmas é o ato de aumentar ou diminuir o número de vagas de uma turma, bem como dividir, fundir ou excluir turmas, conforme estabelecido no **Art. 224** da Resolução nº 177/2012-CEPEX/UFPI.\n\nEsse ajuste é realizado **após a matrícula e acréscimo**, em data definida no Calendário Acadêmico, conforme previsto no **Art. 225** da mesma resolução.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "Ajuste de turmas é aumentar ou diminuir vagas e dividir, fundir ou excluir turmas antes do processamento da matrícula. Cabe ao departamento ou unidade acadêmica especializada e ocorre após matrícula e acréscimo na data do Calendário Acadêmico.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A032",
+    "question": "Tirei 6,5 numa matéria do mestrado e fui a 80% das aulas. Passei?",
+    "answer": "Com base no contexto normativo fornecido, a resposta é:\n\n**Não, você não passou.**\n\n**Fundamentação:**\n\nO caso refere-se a um curso de **pós-graduação (mestrado)**, conforme indicado na pergunta. A norma aplicável é a **Resolução CEPEX/UFPI nº 956/2025**, que regula a pós-graduação.\n\nDe acordo com o **Art. 20, § 3º**, da referida resolução:\n\n> \"É considerado aprovado o(a) discente que obtiver nota mínima sete e frequência igual ou superior a 75% (setenta e cinco por cento).\"\n\nVocê obteve:\n- Nota final: **6,5** → **inferior a 7,0**;\n- Frequência: **80%** → **superior a 75%** (satisfeito).\n\nComo a **nota final é inferior a 7,0**, mesmo com frequência adequada, **não se enquadra na condição de aprovação** prevista no artigo citado.\n\nPortanto, **você foi reprovado** nesta disciplina.\n\n**Fonte:** Resolução CEPEX/UFPI nº 956/2025, Art. 20, § 3º.",
+    "expected_action": "answer",
+    "required_facts": [
+      "Não: a nota mínima para aprovação é sete.",
+      "A frequência de 80% atende ao mínimo de 75%, mas não compensa a nota insuficiente."
+    ],
+    "reference_answer": "Não: a nota mínima para aprovação é sete. A frequência de 80% atende ao mínimo de 75%, mas não compensa a nota insuficiente.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A033",
+    "question": "Quanto tempo tenho para terminar o mestrado? Dá para pedir mais prazo?",
+    "answer": "O tempo máximo para conclusão do Mestrado na UFPI é de **vinte e quatro meses**, conforme estabelecido no **Art. 3º, inciso I**, da **Resolução CEPEX/UFPI nº 956/2025** (Setor: pos_graduacao).\n\nÉ permitida a **prorrogação por até seis meses**, desde que autorizada pelo **Colegiado Simples** do Programa de Pós-Graduação (PPG), conforme o **§ 1º do Art. 3º** da mesma resolução.\n\nPortanto, o prazo total para conclusão do mestrado pode chegar a **30 meses** (24 meses iniciais + 6 meses de prorrogação).\n\n> **Fonte:** Resolução CEPEX/UFPI nº 956/2025, Art. 3º, inciso I e § 1º.",
+    "expected_action": "answer",
+    "required_facts": [
+      "A duração mínima é 12 meses e a máxima é 24 meses.",
+      "É permitida prorrogação de até seis meses mediante aprovação do Colegiado Simples."
+    ],
+    "reference_answer": "A duração mínima é 12 meses e a máxima é 24 meses. É permitida prorrogação de até seis meses mediante aprovação do Colegiado Simples.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A034",
+    "question": "Posso pedir para a UFPI mudar a estrutura curricular do meu curso para a mais recente?",
+    "answer": "Sim, você pode solicitar a mudança de estrutura curricular para a mais recente, desde que cumpra os requisitos estabelecidos no Regulamento Geral da Graduação da UFPI.\n\nDe acordo com o **Art. 305** da Resolução nº 177/2012 CEPEX/UFPI:\n\n> **Art. 305. A mudança de estrutura curricular consiste na desvinculação do aluno da estrutura curricular de origem e sua vinculação a outra que corresponda à proposta curricular mais recente do seu curso.**\n\nAlém disso, o **Art. 306** estabelece que:\n\n> **Art. 306. A mudança de estrutura curricular deverá ser solicitada à Diretoria de Administração Acadêmica (DAA/PREG) pela coordenação do curso, com a anuência do aluno.**\n\nPortanto, a solicitação deve ser feita pela coordenação do curso, com seu consentimento. A decisão final depende da coordenação, conforme critérios definidos no Projeto Pedagógico do Curso (PPC), podendo haver limitações ou processos seletivos, conforme previsto no **Art. 301**.\n\n**Conclusão:**  \nVocê pode solicitar a mudança para a estrutura curricular mais recente, mas a solicitação deve ser feita pela coordenação do curso com sua anuência, e a concessão depende dos critérios estabelecidos no PPC.\n\n**Fontes:**  \n- Art. 305 e Art. 306 da Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "É possível vincular o aluno à estrutura curricular mais recente em substituição à anterior. A coordenação solicita a mudança à DAA/PREG com anuência do aluno; o PPC pode prever situações de mudança compulsória.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A035",
+    "question": "Reprovei na qualificação do doutorado. Como funciona a segunda tentativa e o que acontece se eu reprovar de novo?",
+    "answer": "De acordo com a Resolução CEPEX/UFPI nº 956/2025, no setor de pós-graduação:\n\n**Sobre a segunda tentativa do Exame de Qualificação de Doutorado:**\n\nArt. 49, § 3º:  \n> \"O(a) discente que não obtiver êxito em qualquer fase do Exame de Qualificação tem direito a uma nova oportunidade, a ser realizada perante a mesma banca examinadora, observados os prazos máximos previstos no Regimento Interno de cada PPG, os quais não poderão exceder três meses (Mestrado) ou seis meses, no caso de Doutorado, com a mesma banca examinadora.\"\n\nPortanto, você tem direito a uma nova tentativa do Exame de Qualificação de Doutorado, a ser realizada no prazo máximo de **seis meses**, perante a **mesma banca examinadora**, desde que respeitados os prazos estabelecidos pelo Regimento Interno do seu Programa de Pós-Graduação (PPG).\n\n**Sobre o que acontece se reprovar de novo:**\n\nArt. 21, inciso IV:  \n> \"O desligamento do(a) discente do PPG ocorre nas seguintes hipóteses: ... IV - reprovação por duas vezes em Exame de Qualificação...\"\n\nAssim, **se reprovar pela segunda vez no Exame de Qualificação**, haverá o **desligamento do(a) discente do PPG**, conforme previsto no art. 21, inciso IV.\n\n**Conclusão:**\n- Você tem direito a uma nova tentativa do Exame de Qualificação de Doutorado, no prazo máximo de **seis meses**, com a **mesma banca**.\n- Se reprovar novamente, **será desligado(a) do programa**, conforme estabelecido no art. 21, inciso IV.\n\n> **Fonte:** Resolução CEPEX/UFPI nº 956/2025, art. 49, § 3º e art. 21, inciso IV.",
+    "expected_action": "answer",
+    "required_facts": [
+      "Há uma nova oportunidade, dentro do prazo do Regimento Interno, limitado a seis meses no doutorado.",
+      "A banca é a mesma, salvo impedimento de membros e aprovação de nova composição pelo Colegiado Simples.",
+      "Duas reprovações no Exame de Qualificação levam ao desligamento do PPG."
+    ],
+    "reference_answer": "Há uma nova oportunidade, dentro do prazo do Regimento Interno, limitado a seis meses no doutorado. A banca é a mesma, salvo impedimento de membros e aprovação de nova composição pelo Colegiado Simples. Duas reprovações no Exame de Qualificação levam ao desligamento do PPG.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A036",
+    "question": "Qual é o prazo para terminar o doutorado? Posso prorrogar?",
+    "answer": "O prazo para conclusão do doutorado na UFPI é regulamentado pela **Resolução CEPEX/UFPI nº 956/2025**, no **Capítulo I - DA FINALIDADE E DA ORGANIZAÇÃO**, **Art. 4º**, inciso I:\n\n> \"duração mínima de vinte e quatro e máxima de quarenta e oito meses, permitida a prorrogação por até doze meses, mediante aprovação do Colegiado Simples.\"\n\n### Resposta:\n- **Prazo máximo para conclusão do doutorado:** 48 meses (4 anos).\n- **Prazo mínimo:** 24 meses (2 anos).\n- **Pode prorrogar?** Sim, por até **12 meses**, desde que haja **aprovação do Colegiado Simples**.\n\nFonte: **Resolução CEPEX/UFPI nº 956/2025, Art. 4º, inciso I**.",
+    "expected_action": "answer",
+    "required_facts": [
+      "A duração mínima é 24 meses e a máxima é 48 meses.",
+      "É permitida prorrogação de até 12 meses mediante aprovação do Colegiado Simples."
+    ],
+    "reference_answer": "A duração mínima é 24 meses e a máxima é 48 meses. É permitida prorrogação de até 12 meses mediante aprovação do Colegiado Simples.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A037",
+    "question": "Estou montando a banca da minha tese. Quantas pessoas preciso chamar e quem pode participar?",
+    "answer": "Você está em pós-graduação (mestrado ou doutorado), com base no contexto normativo fornecido.\n\n### Quantas pessoas você precisa chamar?\n\nDe acordo com o **Art. 51** da Resolução CEPEX/UFPI nº 956/2025:\n\n- **Para Doutorado**: a banca é formada por **cinco membros titulares** e **dois suplentes**.\n- **Para Mestrado**: a banca é formada por **três membros titulares** e **um suplente**.\n\n> **Observação**: O número total de membros (titulares + suplentes) é o mínimo exigido. O coorientador pode integrar a banca como membro adicional (além do mínimo), com direito a voto (Art. 51, § 4º).\n\n---\n\n### Quem pode participar?\n\nDe acordo com o **Art. 51**, § 2º:\n\n- A banca deve incluir **membros externos** ao PPG:\n  - **Mestrado**: no mínimo **um docente externo ao PPG**.\n  - **Doutorado**: no mínimo **dois docentes externos ao PPG**.\n\nAlém disso, conforme o **Art. 50**, § 1º:\n\n- Todos os membros da banca (titulares e suplentes) devem ser **docentes com titulação de Doutor**.\n- Podem ser docentes do PPG, de outros PPGs da UFPI ou convidados de outras instituições.\n\n> **Importante**: A composição deve garantir imparcialidade, evitando conflitos de interesse, parentesco, filiação ou relações societárias entre membros ou com o(a) discente (Art. 51, § 3º).\n\n---\n\n### Conclusão:\n\n- **Número mínimo de membros**:\n  - Mestrado: **3 titulares + 1 suplente** (total: 4).\n  - Doutorado: **5 titulares + 2 suplentes** (total: 7).\n- **Membros externos obrigatórios**:\n  - Mestrado: **1 docente externo ao PPG**.\n  - Doutorado: **2 docentes externos ao PPG**.\n- **Requisitos dos membros**: todos devem ser docentes com **doutorado**.\n- **Coorientador**: pode integrar a banca como membro adicional (com direito a voto), desde que aprovado pelo Colegiado Simples (Art. 51, § 4º).\n\n> **Fonte**: Resolução CEPEX/UFPI nº 956/2025, Art. 50 e Art. 51.\n\nSe precisar de ajuda para montar a lista de membros, posso ajudar com base no seu programa.",
+    "expected_action": "answer",
+    "required_facts": [
+      "No doutorado são necessários pelo menos cinco titulares e dois suplentes, com pelo menos dois docentes externos ao PPG.",
+      "A banca é aprovada pelo Colegiado Simples, ouvido o orientador, que a preside.",
+      "Deve haver imparcialidade, evitando conflitos de interesse e relações de parentesco, filiação ou societárias com o discente; o coorientador pode participar como membro adicional ao mínimo, com voto."
+    ],
+    "reference_answer": "No doutorado são necessários pelo menos cinco titulares e dois suplentes, com pelo menos dois docentes externos ao PPG. A banca é aprovada pelo Colegiado Simples, ouvido o orientador, que a preside. Deve haver imparcialidade, evitando conflitos de interesse e relações de parentesco, filiação ou societárias com o discente; o coorientador pode participar como membro adicional ao mínimo, com voto.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A038",
+    "question": "Qual é o prazo máximo que o professor tem para divulgar a nota de uma prova?",
+    "answer": "O prazo máximo para o professor divulgar a nota de uma avaliação é de **10 (dez) dias úteis**, contados a partir da realização da avaliação, conforme estabelecido no **Art. 106, § 2º**, da Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação.  \n\nEsse prazo está sujeito aos limites estabelecidos no Calendário Acadêmico.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "O professor deve divulgar o resultado no sistema em até dez dias úteis após a avaliação, respeitados os limites do Calendário Acadêmico. Não pode realizar nova avaliação antes de divulgar o resultado anterior.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A039",
+    "question": "Qual é o prazo máximo que o professor tem para divulgar a nota de uma prova?",
+    "answer": "O prazo máximo para o professor divulgar a nota de uma avaliação é de **10 (dez) dias úteis**, contados a partir da realização da avaliação, conforme estabelecido no **Art. 106, § 2º**, da **Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação**.\n\n> **Art. 106, § 2º**: *É obrigatória a divulgação do rendimento da avaliação feita pelo professor da disciplina, no prazo máximo de 10 (dez) dias úteis, contado este prazo a partir da realização da avaliação, ressalvados os limites de datas do Calendário Acadêmico.*",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "O professor deve divulgar o resultado no sistema em até dez dias úteis após a avaliação, respeitados os limites do Calendário Acadêmico. Não pode realizar nova avaliação antes de divulgar o resultado anterior.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A040",
+    "question": "Se eu quiser fazer matérias de períodos à frente do meu (adiantamento), eu tenho prioridade na hora da matrícula?",
+    "answer": "Sim, você tem prioridade na matrícula para disciplinas de períodos à frente (adiantamento), **desde que cumpra os requisitos previstos no Art. 223, inciso IV, da Resolução nº 177/2012-CEPEX/UFPI**, que trata do preenchimento de vagas nas turmas.\n\nDe acordo com o **Art. 223, inciso IV**, o aluno **adiantando** — aquele que não é formando e cujo componente curricular objeto da matrícula seja, na estrutura curricular a que está vinculado, de um nível posterior ao nível curricular a ser utilizado para cursar — tem prioridade no preenchimento de vagas, **desde que o curso esteja em regime de crédito** (conforme § 3º do mesmo artigo).\n\nAlém disso, o **§ 2º do Art. 223** estabelece que, **em cada nível da ordem de prioridade**, o critério de desempate entre alunos é o **índice de rendimento acadêmico (IRA)**.\n\nPortanto, **você tem prioridade** como aluno adiantando, **mas apenas se o seu curso for em regime de crédito** e se houver vaga disponível. Caso contrário, a matrícula pode não ser permitida.\n\n> **Fonte:** Art. 223, inciso IV, e § 3º, da Resolução nº 177/2012-CEPEX/UFPI.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "Aluno adiantando ocupa a quarta prioridade: depois de nivelado, formando e em pendência. O critério de adiantamento se aplica apenas a cursos em regime de crédito.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A041",
+    "question": "Tirei 6,5 numa matéria do mestrado e fui a 80% das aulas. Passei?",
+    "answer": "Não, você não passou.\n\nDe acordo com o **Art. 20, § 3º**, da **Resolução CEPEX/UFPI nº 956/2025**, para ser considerado aprovado o(a) discente deve obter **nota mínima sete** e **frequência igual ou superior a 75%**.\n\nVocê obteve nota 6,5 (inferior a 7) e frequência de 80% (acima de 75%). Como a **nota mínima é eliminatória**, mesmo com frequência adequada, você **não atendeu ao critério de aprovação**.\n\n**Fonte:** Resolução CEPEX/UFPI nº 956/2025, Capítulo II, Seção IV, Art. 20, § 3º.",
+    "expected_action": "answer",
+    "required_facts": [
+      "Não: a nota mínima para aprovação é sete.",
+      "A frequência de 80% atende ao mínimo de 75%, mas não compensa a nota insuficiente."
+    ],
+    "reference_answer": "Não: a nota mínima para aprovação é sete. A frequência de 80% atende ao mínimo de 75%, mas não compensa a nota insuficiente.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A042",
+    "question": "O que acontece se o professor agendar uma prova nova, mas ainda não divulgou a nota da avaliação anterior?",
+    "answer": "Se o professor agendar uma nova avaliação sem ter divulgado a nota da avaliação anterior, **a avaliação agendada será cancelada**, conforme estabelecido no **Art. 106, § 3º**, da Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação.\n\nO referido dispositivo determina que:\n\n> **\"Não deve ser realizada avaliação alguma sem que o rendimento acadêmico da avaliação anterior tenha sido divulgado pelo professor, sob pena de a avaliação agendada ser cancelada.\"**\n\nAlém disso, o **§ 5º** do mesmo artigo prevê que, **constatada a não divulgação dos resultados da avaliação anterior**, o chefe de departamento ou chefe de curso deverá:\n\n> **\"cancelar a avaliação programada e determinar a publicação dos resultados da avaliação anterior no prazo máximo de 2 (dois) dias úteis.\"**\n\nPortanto, a realização da nova avaliação não pode ocorrer enquanto a nota da anterior não for divulgada, e, caso contrário, o cancelamento é obrigatório.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "Não deve ocorrer nova avaliação sem divulgação do resultado anterior, sob pena de cancelamento da avaliação agendada. Qualquer aluno da turma pode protocolar pedido no departamento ou chefia de curso até dois dias úteis antes da avaliação; constatada a ausência de divulgação, a chefia cancela a prova e determina publicação em até dois dias úteis.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A043",
+    "question": "Sou mestrando e já dei aula. Posso ser dispensado do estágio de docência? Se não, posso fazê-lo fora da UFPI?",
+    "answer": null,
+    "expected_action": "answer",
+    "required_facts": [
+      "A dispensa depende de aprovação do Colegiado Simples e comprovação de pelo menos um semestre de docência no ensino superior ou lato sensu; para lato sensu, devem ser cursos presenciais de especialização ou aperfeiçoamento com carga compatível ao PED. Vínculo docente atual em instituição de EBTT é outra hipótese.",
+      "O estágio pode ocorrer em outra instituição de ensino superior ou na rede pública de ensino médio, com autorização do orientador e aprovação do Colegiado Simples."
+    ],
+    "reference_answer": "A dispensa depende de aprovação do Colegiado Simples e comprovação de pelo menos um semestre de docência no ensino superior ou lato sensu; para lato sensu, devem ser cursos presenciais de especialização ou aperfeiçoamento com carga compatível ao PED. Vínculo docente atual em instituição de EBTT é outra hipótese. O estágio pode ocorrer em outra instituição de ensino superior ou na rede pública de ensino médio, com autorização do orientador e aprovação do Colegiado Simples.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A044",
+    "question": "Como a UFPI calcula minha 'média geral' (o tal do IRA)?",
+    "answer": "A UFPI calcula o **Índice de Rendimento Acadêmico (IRA)** com base no **Art. 124** do Regulamento Geral da Graduação (Resolução nº 177/2012 CEPEX/UFPI), que estabelece:\n\n> **Art. 124. O Índice de Rendimento Acadêmico - IRA é a média do rendimento escolar final obtido pelo aluno nos componentes curriculares que concluiu, ponderadas pela carga horária discente dos componentes, conforme fórmula matemática definida no Anexo II deste Regulamento.**\n\n**Parágrafo único.** No cálculo do IRA, são levados em consideração os componentes curriculares aproveitados ou cursados pelo aluno, com aprovação ou reprovação, durante o curso de graduação, **excetuando-se**:\n- os trancamentos e cancelamentos de matrícula;\n- os componentes curriculares dispensados;\n- as atividades complementares;\n- os componentes curriculares cujo rendimento acadêmico não é expresso de forma numérica.\n\nPortanto, o IRA é uma média ponderada pelas cargas horárias dos componentes curriculares concluídos (com aprovação ou reprovação), excluindo-se os casos especificados no parágrafo único.",
+    "expected_action": "answer",
+    "required_facts": [
+      "O IRA é a média dos rendimentos finais dos componentes concluídos, ponderada pela carga horária discente.",
+      "Inclui aprovação e reprovação; exclui trancamentos, cancelamentos, dispensas, atividades complementares e componentes sem nota numérica.",
+      "O IRA consta do histórico escolar."
+    ],
+    "reference_answer": "O IRA é a média dos rendimentos finais dos componentes concluídos, ponderada pela carga horária discente. Inclui aprovação e reprovação; exclui trancamentos, cancelamentos, dispensas, atividades complementares e componentes sem nota numérica. O IRA consta do histórico escolar.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A045",
+    "question": "Faço mestrado e estou doente. Qual é a diferença entre cancelar uma matéria e trancar o curso?",
+    "answer": "A diferença entre cancelar uma matéria e trancar o curso, no contexto do mestrado na UFPI, está definida nos artigos 37 e 38 da Resolução CEPEX/UFPI nº 956/2025, ambos do setor de pós-graduação.\n\n1. **Cancelamento de disciplina (Art. 37)**  \n   - É permitido ao discente cancelar ou substituir matrícula em disciplina, **dentro do prazo do Calendário Acadêmico**, desde que haja **parecer favorável do orientador** e **aprovação do Colegiado Simples**.  \n   - O cancelamento da mesma disciplina só é permitido **uma vez**, **exceto por motivo de doença**, devidamente comprovada pela Perícia Médica da Universidade.  \n   - **Efeito**: Apenas a disciplina é cancelada; o discente permanece matriculado no curso.\n\n2. **Trancamento do curso (Art. 38)**  \n   - É permitido ao discente trancar o curso por motivo de doença, **comprovada pela Perícia Médica da Universidade**, por **até 12 meses**.  \n   - O período de trancamento **não é computado** para efeito dos prazos de conclusão do curso.  \n   - **Efeito**: O discente suspende sua matrícula no curso inteiro por até 12 meses, sem avançar no cronograma de conclusão.\n\n**Conclusão**:  \n- Cancelar uma matéria afeta apenas uma disciplina, com restrição de uma vez, salvo por doença.  \n- Trancar o curso suspende toda a matrícula por até 12 meses, por motivo de doença, e não conta para o prazo de conclusão.\n\n**Fontes**:  \n- Art. 37 e Art. 38 da Resolução CEPEX/UFPI nº 956/2025 (setor: pos_graduacao).",
+    "expected_action": "answer",
+    "required_facts": [
+      "Cancelar ou substituir matrícula em disciplina exige respeito ao Calendário Acadêmico, parecer favorável do orientador e aprovação do Colegiado Simples; a mesma disciplina só pode ser cancelada uma vez, salvo doença comprovada pela Perícia Médica da Universidade.",
+      "O trancamento do curso por doença comprovada pela Perícia Médica pode durar até 12 meses.",
+      "O período de trancamento por doença não conta para os prazos de conclusão do curso."
+    ],
+    "reference_answer": "Cancelar ou substituir matrícula em disciplina exige respeito ao Calendário Acadêmico, parecer favorável do orientador e aprovação do Colegiado Simples; a mesma disciplina só pode ser cancelada uma vez, salvo doença comprovada pela Perícia Médica da Universidade. O trancamento do curso por doença comprovada pela Perícia Médica pode durar até 12 meses. O período de trancamento por doença não conta para os prazos de conclusão do curso.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A046",
+    "question": "Quantos créditos preciso completar no mestrado? A dissertação entra nessa conta?",
+    "answer": "De acordo com o **Art. 3º, inciso III**, da **Resolução CEPEX/UFPI nº 956/2025**, o Mestrado exige a **integralização curricular de, no mínimo, trinta créditos**, dos quais **seis são relativos à dissertação**.\n\nPortanto, **sim, a dissertação entra nessa conta**.\n\n**Fonte:** Resolução CEPEX/UFPI nº 956/2025, Capítulo I, Art. 3º, inciso III.",
+    "expected_action": "answer",
+    "required_facts": [
+      "O mínimo é de 30 créditos, dos quais seis são relativos à dissertação.",
+      "A distribuição entre disciplinas obrigatórias, optativas e atividades complementares segue o Regimento Interno do PPG."
+    ],
+    "reference_answer": "O mínimo é de 30 créditos, dos quais seis são relativos à dissertação. A distribuição entre disciplinas obrigatórias, optativas e atividades complementares segue o Regimento Interno do PPG.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A047",
+    "question": "Qual é a frequência mínima que eu preciso ter nas aulas para não ser reprovado por falta?",
+    "answer": "A frequência mínima necessária para não ser reprovado por falta é de **75% (setenta e cinco por cento)** da carga horária do componente curricular.\n\nEssa regra está prevista no **Art. 112, inciso I**, da Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação:\n\n> **Art. 112. Será considerado \"reprovado\" o aluno que se incluir em um dos três itens:**\n> \n> **I - obtiver frequência inferior a 75% (setenta e cinco por cento) da carga horária do componente curricular;**\n\nPortanto, para não ser reprovado por falta, é necessário ter frequência igual ou superior a 75%.",
+    "expected_action": "answer",
+    "required_facts": [
+      "Frequência mínima de 75% da carga horária; abaixo disso há reprovação por falta.",
+      "A resposta trata de assiduidade, não garante aprovação por nota."
+    ],
+    "reference_answer": "É necessária frequência igual ou superior a 75% da carga horária do componente curricular. Frequência inferior a 75% causa reprovação por falta.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A048",
+    "question": "Quais motivos são aceitos para justificar a minha ausência em uma avaliação e solicitar a segunda chamada?",
+    "answer": "Os motivos aceitos para justificar a ausência em uma avaliação e solicitar a segunda chamada estão previstos no **Art. 108, § 2º**, da **Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação**.\n\nSão eles:\n\n- a) doença;  \n- b) doença ou óbito de familiares diretos;  \n- c) audiência judicial;  \n- d) militares, policiais e outros profissionais em missão oficial;  \n- e) participação em congressos, reuniões oficiais ou eventos culturais representando a UFPI, o Município ou o Estado;  \n- f) outros motivos que, apresentados, possam ser julgados procedentes.\n\nEsses motivos devem ser comprovados e o requerimento de segunda chamada deve ser protocolado no prazo de 3 (três) dias úteis, contado a partir da data da avaliação não realizada.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "São previstos doença, doença ou óbito de familiares diretos, audiência judicial, missão oficial e participação em eventos representando a UFPI, Município ou Estado. Também podem ser aceitos outros motivos julgados procedentes.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A049",
+    "question": "Quantas vezes posso trancar a matrícula em um componente curricular?",
+    "answer": "De acordo com o **Art. 287, § 2º**, da Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação:\n\n> **Não será permitido trancamento de matrícula no mesmo componente curricular por mais de 2 (duas) vezes, em períodos letivos consecutivos ou não.**\n\nPortanto, **você pode trancar a matrícula em um mesmo componente curricular no máximo duas vezes**, independentemente de serem consecutivas ou não.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "O mesmo componente pode ser trancado no máximo duas vezes, em períodos consecutivos ou não. O pedido deve respeitar o limite de um terço do período letivo e o Calendário Acadêmico.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A050",
+    "question": "Meu curso pode ser cancelado se eu reprovar a mesma disciplina muitas vezes?",
+    "answer": "Sim, seu curso pode ser cancelado se você reprovar a mesma disciplina três vezes, conforme previsto no **Art. 344, inciso VIII**, da **Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação**.\n\n> **Art. 344. O cancelamento de curso ocorrerá nas seguintes situações:**\n> ...\n> VIII - três reprovações no mesmo componente curricular em períodos consecutivos ou não;\n\nEsse dispositivo estabelece que, independentemente de serem consecutivas ou não, **três reprovações no mesmo componente curricular acarretam o cancelamento do curso**.\n\nPortanto, se você reprovar a mesma disciplina três vezes, o curso será cancelado, salvo se houver alguma exceção prevista em norma (como o caso do § 2º do art. 344, que trata de processos disciplinares, mas não se aplica diretamente a este cenário).",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "Sim. Três reprovações no mesmo componente, consecutivas ou não, são hipótese de cancelamento. A PREG deve publicar edital com prazo para justificativa; a ausência de justificativa no prazo acarreta cancelamento definitivo.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A051",
+    "question": "Se eu aproveitar créditos de outra faculdade (ou de outro curso da UFPI), a nota dessas matérias entra no cálculo do meu IRA?",
+    "answer": "Não, a nota dos componentes curriculares aproveitados — seja de outra instituição de ensino superior (IES) ou de outro curso da UFPI — **não entra no cálculo do Índice de Rendimento Acadêmico (IRA)**.\n\nDe acordo com os dispositivos normativos:\n\n- **Art. 257** da Resolução nº 177/2012-CEPEX/UFPI estabelece que os componentes curriculares cursados em outra IES, cujos estudos sejam aproveitados na UFPI, implicam o registro no histórico escolar como **CC (crédito concedido)** e **não serão considerados para fins de apuração do IRA**.\n\n- **Art. 258** reforça que, quando componentes curriculares oriundos de cursos concluídos na UFPI são aproveitados em outro curso, o registro será com a nota anterior acrescida da ocorrência **CC (crédito concedido)**, mas **não devem compor o IRA**.\n\nAlém disso, o **Art. 124**, parágrafo único, explicita que, no cálculo do IRA, são considerados os componentes curriculares **aproveitados ou cursados pelo aluno com aprovação ou reprovação**, **excetuando-se** os componentes cujo rendimento acadêmico **não é expresso de forma numérica**, o que inclui os aproveitamentos com registro como CC.\n\nPortanto, **a nota dos créditos aproveitados não entra no IRA**, independentemente de serem de outra IES ou de outro curso da UFPI.\n\n**Fontes:**  \n- Art. 257 e Art. 258, Resolução nº 177/2012-CEPEX/UFPI  \n- Art. 124, parágrafo único, Resolução nº 177/2012-CEPEX/UFPI",
+    "expected_action": "answer",
+    "required_facts": [
+      "Não. Estudos aproveitados de outra IES são registrados como crédito concedido e não entram no IRA.",
+      "Componentes de curso já concluído na UFPI, aproveitados em outro curso, recebem a nota anterior acrescida de CC e também não compõem o IRA."
+    ],
+    "reference_answer": "Não. Estudos aproveitados de outra IES são registrados como crédito concedido e não entram no IRA. Componentes de curso já concluído na UFPI, aproveitados em outro curso, recebem a nota anterior acrescida de CC e também não compõem o IRA.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A052",
+    "question": "Reprovei na qualificação do doutorado. Como funciona a segunda tentativa e o que acontece se eu reprovar de novo?",
+    "answer": "De acordo com o contexto normativo fornecido:\n\n- **Segunda tentativa do Exame de Qualificação de Doutorado**:  \n  Conforme o **Art. 49, § 3º**, do **Regulamento de Pós-Graduação (Resolução CEPEX/UFPI nº 956/2025)**, o(a) discente que não obtiver êxito no Exame de Qualificação tem direito a uma nova oportunidade, a ser realizada perante a **mesma banca examinadora**, observados os prazos máximos previstos no Regimento Interno do PPG, **não podendo exceder seis meses** no caso de Doutorado.\n\n- **Reprovação na segunda tentativa**:  \n  Conforme o **Art. 21, inciso IV**, da mesma Resolução (CEPEX/UFPI nº 956/2025), o desligamento do(a) discente do Programa de Pós-Graduação ocorre em caso de **reprovação por duas vezes em Exame de Qualificação**.\n\nPortanto, se você reprovar novamente na segunda tentativa do Exame de Qualificação de Doutorado, **será desligado(a) do PPG**, conforme previsto no artigo citado.\n\n> **Fontes**:  \n> - Art. 49, § 3º, Resolução CEPEX/UFPI nº 956/2025 (pós-graduação)  \n> - Art. 21, inciso IV, Resolução CEPEX/UFPI nº 956/2025 (pós-graduação)",
+    "expected_action": "answer",
+    "required_facts": [
+      "Há uma nova oportunidade, dentro do prazo do Regimento Interno, limitado a seis meses no doutorado.",
+      "A banca é a mesma, salvo impedimento de membros e aprovação de nova composição pelo Colegiado Simples.",
+      "Duas reprovações no Exame de Qualificação levam ao desligamento do PPG."
+    ],
+    "reference_answer": "Há uma nova oportunidade, dentro do prazo do Regimento Interno, limitado a seis meses no doutorado. A banca é a mesma, salvo impedimento de membros e aprovação de nova composição pelo Colegiado Simples. Duas reprovações no Exame de Qualificação levam ao desligamento do PPG.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A053",
+    "question": "Quantas faltas posso ter numa disciplina do doutorado sem reprovar?",
+    "answer": "De acordo com o **Art. 20, § 3º**, da **Resolução CEPEX/UFPI nº 956/2025**, para ser considerado aprovado em uma disciplina do doutorado, o(a) discente deve ter **frequência igual ou superior a 75%**.\n\nIsso significa que o número máximo de faltas permitidas é de **25% da carga horária total da disciplina**.\n\nPortanto, **você pode ter até 25% de faltas em uma disciplina do doutorado sem reprovar**, desde que a frequência mínima de 75% seja cumprida.\n\n> **Fonte:** Resolução CEPEX/UFPI nº 956/2025, Art. 20, § 3º.",
+    "expected_action": "answer",
+    "required_facts": [
+      "É preciso frequentar pelo menos 75% da carga horária da disciplina; faltar a mais de 25% reprova por frequência.",
+      "A aprovação também exige nota mínima sete."
+    ],
+    "reference_answer": "É preciso frequentar pelo menos 75% da carga horária da disciplina; faltar a mais de 25% reprova por frequência. A aprovação também exige nota mínima sete.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A054",
+    "question": "Quero transferir meu mestrado para outro programa. O que é necessário e meu prazo começa de novo?",
+    "answer": "Para transferir seu mestrado para outro programa de pós-graduação na UFPI, são necessários os seguintes requisitos, conforme a Resolução CEPEX/UFPI nº 956/2025, do setor de pós-graduação:\n\n1. **Programa similar ou afim** – a transferência é permitida apenas para programas similares ou afins, recomendados pela CAPES, e no mesmo nível de formação (mestrado).\n\n2. **Aprovação do Colegiado Simples** – a transferência depende da aprovação do Colegiado Simples do novo programa.\n\n3. **Vagas disponíveis** – a aprovação depende da existência de vagas no novo programa.\n\n4. **Critérios definidos no Regimento Interno** – o processo deve observar os critérios estabelecidos no Regimento Interno do Programa de Pós-Graduação (PPG) de destino.\n\n5. **Documentação exigida** – o discente transferido deve apresentar:\n   - histórico escolar;\n   - planos de ensino das disciplinas cursadas (Art. 39, § 2º).\n\n6. **Aproveitamento de estudos** – a matrícula do discente transferido obedece às normas de aproveitamento de estudos, conforme o Art. 36 da Resolução. O aproveitamento é autorizado pelo Colegiado Simples, desde que:\n   - a disciplina cursada tenha conteúdo e duração idênticos, equivalentes ou superiores à do curso pretendido;\n   - os estudos realizados em duas ou mais disciplinas se complementem em uma ou mais disciplinas do curso pretendido; ou\n   - os estudos, embora não atendam aos incisos anteriores, guardem afinidade com a área de concentração e sejam de interesse para o desenvolvimento da dissertação.\n\n7. **Reinício dos prazos de conclusão** – os prazos máximo e mínimo de conclusão do curso são **reiniciados a partir da data de ingresso no novo Programa** (Art. 39, § 4º).\n\n**Conclusão:**  \nSim, seu prazo de conclusão do curso começa de novo a partir da data de ingresso no novo programa.  \nPara realizar a transferência, você deve comprovar que o programa de destino é similar ou afim, obter aprovação do Colegiado Simples, apresentar histórico escolar e planos de ensino, e respeitar os critérios do Regimento Interno do PPG de destino.",
+    "expected_action": "answer",
+    "required_facts": [
+      "A transferência é admitida entre programas similares ou afins recomendados pela CAPES, no mesmo nível, com aprovação do Colegiado Simples, existência de vagas e critérios do Regimento Interno.",
+      "O aluno deve apresentar histórico e planos de ensino; a matrícula segue as regras de aproveitamento de estudos.",
+      "Os prazos mínimo e máximo de conclusão reiniciam a partir do ingresso no novo programa."
+    ],
+    "reference_answer": "A transferência é admitida entre programas similares ou afins recomendados pela CAPES, no mesmo nível, com aprovação do Colegiado Simples, existência de vagas e critérios do Regimento Interno. O aluno deve apresentar histórico e planos de ensino; a matrícula segue as regras de aproveitamento de estudos. Os prazos mínimo e máximo de conclusão reiniciam a partir do ingresso no novo programa.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A055",
+    "question": "Meu curso pode ser cancelado se eu reprovar a mesma disciplina muitas vezes?",
+    "answer": "Não, o curso **não é automaticamente cancelado** apenas por reprovação repetida em uma mesma disciplina.\n\nDe acordo com os trechos normativos fornecidos, o cancelamento do curso está relacionado a **abandono** ou **não efetivação de matrícula**, e não à reprovação em disciplinas.\n\nO Art. 347 do Regulamento Geral da Graduação (Resolução nº 177/2012 CEPEX/UFPI) estabelece que caracteriza abandono de curso quando o aluno:\n\n- Não efetua matrícula curricular (Art. 217);\n- Deixa de frequentar as aulas nos primeiros 15 dias (para alunos de perfil zero);\n- Deixa de requerer prorrogação antes do término do prazo de interrupção;\n- Deixa de efetivar matrícula no período subsequente ao término do prazo de interrupção;\n- Deixa de efetivar matrícula em disciplinas durante **dois períodos letivos consecutivos**.\n\nA reprovação em disciplina, mesmo que repetida, **não está prevista como causa de cancelamento de curso** nesses dispositivos.\n\nPortanto, **reprovação frequente em uma disciplina não acarreta o cancelamento do curso**, desde que o aluno continue matriculado e cumpra os requisitos de permanência.\n\n> **Fonte:** Art. 347, § único, e Art. 352, ambos da Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "Sim. Três reprovações no mesmo componente, consecutivas ou não, são hipótese de cancelamento. A PREG deve publicar edital com prazo para justificativa; a ausência de justificativa no prazo acarreta cancelamento definitivo.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A056",
+    "question": "Estou doente e preciso parar o curso por um tempo. Quanto tempo posso ficar afastado?",
+    "answer": "Você pode ficar afastado do curso por até **12 meses**, desde que o afastamento seja por motivo de doença **devidamente comprovado pela Perícia Médica da Universidade**, conforme estabelecido no **Art. 38 da Resolução CEPEX/UFPI nº 956/2025**, que trata do trancamento de curso na pós-graduação.\n\nNo entanto, **se você está cursando graduação**, o afastamento por doença pode ser concedido por até **2 (dois) períodos letivos**, **em situação de excepcionalidade**, desde que comprovada pela junta médica da UFPI, conforme o **Art. 293 da Resolução nº 177/2012 CEPEX/UFPI**.\n\nAlém disso, o **Art. 242, § único**, da mesma Resolução nº 177/2012 permite a prorrogação do regime de exercícios domiciliares (que pode ser uma alternativa ao trancamento) em casos de doença, desde que comprovado por laudo da junta médica da UFPI.\n\n**Importante:**  \n- O período de trancamento **não é computado** para efeito dos prazos de conclusão do curso, conforme o **Parágrafo único do Art. 38** (pós-graduação).  \n- Para a **graduação**, o trancamento por doença está previsto no **Art. 293, § 1º, inciso d**, e o prazo máximo é de **2 períodos letivos**.\n\n**Conclusão:**  \n- Se for **pós-graduação**: até **12 meses**, com comprovação médica pela Perícia Médica da UFPI.  \n- Se for **graduação**: até **2 períodos letivos**, com comprovação médica pela junta médica da UFPI.\n\nPor favor, confirme o nível do seu curso (graduação ou pós-graduação) para que possa ser fornecida a orientação exata.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "Após esclarecer que se trata de pós-graduação: doença comprovada pela Perícia Médica da Universidade permite trancamento de até 12 meses, sem contar esse período nos prazos de conclusão.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A057",
+    "question": "Fui reprovado por média, mas minha nota parcial foi 5,0. Eu tenho direito ao Exame Final?",
+    "answer": "Não, você não tem direito ao Exame Final.\n\nDe acordo com o **Art. 113** do Regulamento Geral da Graduação da UFPI (Resolução nº 177/2012 CEPEX/UFPI), **é reprovado no componente curricular o aluno cuja média final for menor que 4 (quatro)**. Além disso, **o aluno que não atingir a média final mínima de 4,0 não poderá se submeter ao exame final**.\n\nApesar de sua média parcial ser 5,0 (o que, por si só, poderia permitir o exame final se a média final fosse menor que 4,0), o Art. 116 exige que o aluno tenha **média parcial maior ou igual a 4 e menor que 7** **e** que **satisfaça os requisitos de assiduidade** para ter direito ao exame final. No entanto, o Art. 113 estabelece claramente que **a reprovação por média final inferior a 4,0 impede a realização do exame final**, independentemente da média parcial.\n\nPortanto, **a reprovação por média final inferior a 4,0 exclui o direito ao exame final**, conforme previsto no **Art. 113**, que é norma mais específica e restritiva do que o Art. 116.\n\n**Fonte:** Art. 113, Resolução nº 177/2012 CEPEX/UFPI – Regulamento Geral da Graduação.",
+    "expected_action": "answer",
+    "required_facts": [
+      "Sim, média parcial 5,0 está no intervalo maior ou igual a 4 e menor que 7 exigido para o exame final.",
+      "O direito depende também do cumprimento da assiduidade."
+    ],
+    "reference_answer": "Sim, média parcial 5,0 está no intervalo maior ou igual a 4 e menor que 7 exigido para o exame final. O direito depende também do cumprimento da assiduidade.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A058",
+    "question": "Caso eu esteja grávida ou com uma afecção de saúde, posso solicitar o Regime de Exercícios Domiciliares?",
+    "answer": "Sim, você pode solicitar o Regime de Exercícios Domiciliares se estiver grávida ou com uma afecção de saúde, desde que cumpra os requisitos previstos no Regulamento Geral da Graduação da UFPI.\n\n**Base normativa:**\n\n- **Art. 242, I** da Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus) estabelece que o regime de exercícios domiciliares aplica-se à **aluna gestante**, desde que comprovado por atestado médico, com direito a acompanhamento didático pedagógico especial em situações específicas (a partir do oitavo mês de gestação, após o nascimento da criança, etc.).\n\n- **Art. 242, III** da mesma resolução prevê que o regime também se aplica ao **aluno portador de afecções definidas em lei**.\n\nAlém disso, conforme **Art. 244, § 1º**, o requerimento para os portadores de afecções deve ser feito logo após a constatação da afecção, com prazo máximo até a metade do período previsto no atestado médico para o afastamento, e a junta médica da UFPI deverá ser ouvida nesses casos.\n\nPortanto, tanto na condição de gestante quanto de portador de afecção, você tem direito ao regime, desde que comprove a situação com os documentos exigidos e siga o procedimento estabelecido.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "Sim. A norma contempla gestantes com comprovação médica e alunos portadores das afecções definidas em lei. Os prazos variam conforme a hipótese: há acompanhamento a partir do oitavo mês e situações de 60 dias após o parto ou 90 dias quando solicitado apenas após o nascimento. Nas hipóteses dos incisos I e III, pode haver prorrogação mediante laudo da junta médica da UFPI.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A059",
+    "question": "Fui reprovado por média, mas minha nota parcial foi 5,0. Eu tenho direito ao Exame Final?",
+    "answer": "Não, você **não tem direito ao Exame Final**.\n\nDe acordo com o **Art. 116** do Regulamento Geral da Graduação da UFPI (Resolução nº 177/2012 CEPEX/UFPI), o aluno tem direito ao exame final **apenas se sua média parcial for maior ou igual a 4 (quatro) e menor que 7 (sete)**, **desde que satisfaça os requisitos de assiduidade**.\n\nNo entanto, o **Art. 113** estabelece claramente que:\n\n> **\"É reprovado no componente curricular o aluno cuja média final for menor que 4 (quatro). Neste caso, o aluno não poderá se submeter ao exame final.\"**\n\nA sua situação — reprovado por média com nota parcial de 5,0 — indica que, mesmo com média parcial acima de 4,0, sua **média final foi inferior a 4,0**, o que, conforme o art. 113, **impede a realização do exame final**.\n\nPortanto, **não há direito ao exame final** quando a reprovação ocorre por média final abaixo de 4,0, mesmo que a média parcial esteja entre 4,0 e 7,0.\n\n**Fonte:** Art. 113 e Art. 116 da Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação.",
+    "expected_action": "answer",
+    "required_facts": [
+      "Sim, média parcial 5,0 está no intervalo maior ou igual a 4 e menor que 7 exigido para o exame final.",
+      "O direito depende também do cumprimento da assiduidade."
+    ],
+    "reference_answer": "Sim, média parcial 5,0 está no intervalo maior ou igual a 4 e menor que 7 exigido para o exame final. O direito depende também do cumprimento da assiduidade.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A060",
+    "question": "O que o professor tem que apresentar no primeiro dia de aula?",
+    "answer": "O professor deve apresentar, no primeiro dia de aula, o **programa do componente curricular ou o plano da disciplina**, conforme estabelecido no **Art. 41, § 2º**, da Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação.\n\n**Fonte:** Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus), Setor: graduacao, Art. 41, § 2º.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "O docente deve apresentar o programa do componente ou plano da disciplina no primeiro dia de aula e implantá-lo no sistema antes do período letivo. O plano inclui identificação, ementa, objetivos, metodologia, conteúdo, recursos, avaliação, referências básicas (três a cinco), complementares e cronograma das aulas e avaliações.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A061",
+    "question": "O que o professor tem que apresentar no primeiro dia de aula?",
+    "answer": "O professor deve apresentar, no primeiro dia de aula, o programa do componente curricular ou o plano da disciplina.\n\n**Fonte:** Art. 41, § 2º, da Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus).",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "O docente deve apresentar o programa do componente ou plano da disciplina no primeiro dia de aula e implantá-lo no sistema antes do período letivo. O plano inclui identificação, ementa, objetivos, metodologia, conteúdo, recursos, avaliação, referências básicas (três a cinco), complementares e cronograma das aulas e avaliações.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A062",
+    "question": "Quantas vezes posso trancar a matrícula em um componente curricular?",
+    "answer": "De acordo com o **Art. 287, § 2º**, da **Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação**, **não será permitido trancamento de matrícula no mesmo componente curricular por mais de 2 (duas) vezes**, em períodos letivos consecutivos ou não.\n\nPortanto, você pode trancar a matrícula em um mesmo componente curricular **no máximo duas vezes**.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "O mesmo componente pode ser trancado no máximo duas vezes, em períodos consecutivos ou não. O pedido deve respeitar o limite de um terço do período letivo e o Calendário Acadêmico.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A063",
+    "question": "Como a UFPI calcula minha 'média geral' (o tal do IRA)?",
+    "answer": "A UFPI calcula o **Índice de Rendimento Acadêmico (IRA)** com base no **Art. 124** do Regulamento Geral da Graduação (Resolução nº 177/2012 CEPEX/UFPI), que estabelece:\n\n> **Art. 124. O Índice de Rendimento Acadêmico - IRA é a média do rendimento escolar final obtido pelo aluno nos componentes curriculares que concluiu, ponderadas pela carga horária discente dos componentes, conforme fórmula matemática definida no Anexo II deste Regulamento.**\n\n**Parágrafo único.** No cálculo do IRA, são levados em consideração os componentes curriculares aproveitados ou cursados pelo aluno, com aprovação ou reprovação, durante o curso de graduação, **excetuando-se**:\n- os trancamentos e cancelamentos de matrícula;\n- os componentes curriculares dispensados;\n- as atividades complementares;\n- os componentes curriculares cujo rendimento acadêmico não é expresso de forma numérica.\n\nPortanto, o IRA é uma média ponderada pelas cargas horárias dos componentes curriculares concluídos (com aprovação ou reprovação), excluindo-se os casos especificados no parágrafo único.",
+    "expected_action": "answer",
+    "required_facts": [
+      "O IRA é a média dos rendimentos finais dos componentes concluídos, ponderada pela carga horária discente.",
+      "Inclui aprovação e reprovação; exclui trancamentos, cancelamentos, dispensas, atividades complementares e componentes sem nota numérica.",
+      "O IRA consta do histórico escolar."
+    ],
+    "reference_answer": "O IRA é a média dos rendimentos finais dos componentes concluídos, ponderada pela carga horária discente. Inclui aprovação e reprovação; exclui trancamentos, cancelamentos, dispensas, atividades complementares e componentes sem nota numérica. O IRA consta do histórico escolar.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A064",
+    "question": "Estou doente e preciso parar o curso por um tempo. Quanto tempo posso ficar afastado?",
+    "answer": "Você pode ficar afastado do curso por até 12 meses, mediante comprovação de doença pela Perícia Médica da Universidade.\n\n**Fonte:** Resolução CEPEX/UFPI nº 956/2025, Art. 38, caput.  \n**Observação:** O período de trancamento por motivo de doença **não é computado** para efeito dos prazos de conclusão do curso.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "Após esclarecer que se trata de pós-graduação: doença comprovada pela Perícia Médica da Universidade permite trancamento de até 12 meses, sem contar esse período nos prazos de conclusão.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A065",
+    "question": "O que é o ajuste de turmas e quando ele é realizado durante o semestre?",
+    "answer": "O ajuste de turmas é o ato de aumentar ou diminuir o número de vagas de uma turma, bem como dividir, fundir ou excluir turmas, conforme estabelecido no Art. 224 da Resolução nº 177/2012-CEPEX/UFPI.\n\nEsse ajuste é realizado **após a matrícula e acréscimo**, em data definida no Calendário Acadêmico, conforme previsto no Art. 225 da mesma resolução.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "Ajuste de turmas é aumentar ou diminuir vagas e dividir, fundir ou excluir turmas antes do processamento da matrícula. Cabe ao departamento ou unidade acadêmica especializada e ocorre após matrícula e acréscimo na data do Calendário Acadêmico.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A066",
+    "question": "Qual é a frequência mínima que eu preciso ter nas aulas para não ser reprovado por falta?",
+    "answer": "A frequência mínima necessária para não ser reprovado por falta é de **75% (setenta e cinco por cento)** da carga horária do componente curricular.\n\nEssa exigência está prevista no **Art. 112, inciso I**, da Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação:\n\n> **Art. 112. Será considerado \"reprovado\" o aluno que se incluir em um dos três itens:**\n> \n> 1. I - obtiver frequência inferior a 75% (setenta e cinco por cento) da carga horária do componente curricular;\n\nPortanto, para não ser reprovado por falta, é necessário ter frequência igual ou superior a 75%.",
+    "expected_action": "answer",
+    "required_facts": [
+      "Frequência mínima de 75% da carga horária; abaixo disso há reprovação por falta.",
+      "A resposta trata de assiduidade, não garante aprovação por nota."
+    ],
+    "reference_answer": "É necessária frequência igual ou superior a 75% da carga horária do componente curricular. Frequência inferior a 75% causa reprovação por falta.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A067",
+    "question": "O que acontece se o professor agendar uma prova nova, mas ainda não divulgou a nota da avaliação anterior?",
+    "answer": "Se o professor agendar uma nova avaliação sem ter divulgado a nota da avaliação anterior, **a avaliação agendada será cancelada**, conforme estabelecido no **Art. 106, § 3º**, da Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação.\n\nO referido dispositivo determina que:\n\n> **§ 3º Não deve ser realizada avaliação alguma sem que o rendimento acadêmico da avaliação anterior tenha sido divulgado pelo professor, sob pena de a avaliação agendada ser cancelada.**\n\nAlém disso, o **§ 5º** prevê que, **constatada a não divulgação dos resultados da avaliação anterior**, o chefe de departamento ou chefe de curso **deverá cancelar a avaliação programada** e **determinar a publicação dos resultados da avaliação anterior no prazo máximo de 2 (dois) dias úteis**.\n\nPortanto, a realização de uma nova avaliação é vedada até que a nota da avaliação anterior seja divulgada, sob pena de cancelamento da nova prova.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "Não deve ocorrer nova avaliação sem divulgação do resultado anterior, sob pena de cancelamento da avaliação agendada. Qualquer aluno da turma pode protocolar pedido no departamento ou chefia de curso até dois dias úteis antes da avaliação; constatada a ausência de divulgação, a chefia cancela a prova e determina publicação em até dois dias úteis.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A068",
+    "question": "O que acontece se eu não conseguir integralizar meu curso no limite máximo estabelecido?",
+    "answer": "Se você não conseguir integralizar seu curso no limite máximo estabelecido pelo projeto pedagógico do curso (PPC), **seu curso será automaticamente cancelado**, conforme estabelece o **Art. 24** do Regulamento Geral da Graduação da UFPI.\n\n> **Art. 24.** O aluno cuja integralização curricular não ocorrer no limite máximo estabelecido pelo projeto pedagógico do curso (PPC) a que esteja vinculado terá o seu curso automaticamente cancelado.\n\nAlém disso, conforme o **§ 1º do mesmo artigo**, no ato do cadastro institucional, você é notificado da obrigação de integralização curricular no limite máximo, com a entrega de documento contendo esse limite, que deve ser assinado por você.\n\nCaso o curso seja cancelado por decurso do prazo máximo, **o retorno à UFPI só poderá ocorrer mediante novo ingresso**, podendo ser admitido o aproveitamento de estudos anteriores, quando for o caso, conforme o **§ 2º do Art. 25**.\n\n> **§ 2º** Após o cancelamento do curso por decurso de prazo máximo para a sua conclusão, o eventual retorno à UFPI só poderá ocorrer mediante novo ingresso, sendo admitido o aproveitamento de estudos anteriores, quando for o caso.\n\nPortanto, é essencial que você esteja atento ao limite máximo de períodos letivos para conclusão do curso e, caso não consiga concluí-lo dentro desse prazo, procure, com antecedência, a Câmara de Ensino de Graduação (CAMEN) para verificar a possibilidade de prorrogação, conforme o **Art. 25**, desde que preenchidos os requisitos legais.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "O art. 24 prevê cancelamento por extrapolar o limite máximo do PPC. Há possibilidade de prorrogação pela CAMEN nas condições do art. 25, mediante processo formal. O art. 345 prevê edital e prazo para justificar a situação antes do cancelamento definitivo quando não apresentada justificativa.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A069",
+    "question": "Reprovei duas vezes na mesma matéria. Posso perder minha vaga?",
+    "answer": "Sim, é possível que você perca sua vaga, dependendo da situação específica, conforme o regulamento da UFPI.\n\nDe acordo com o **Art. 113** do Regulamento Geral da Graduação (Resolução nº 177/2012 CEPEX/UFPI):\n\n> **Art. 113. É reprovado no componente curricular o aluno cuja média final for menor que 4 (quatro). Neste caso, o aluno não poderá se submeter ao exame final.**\n\nIsso significa que, se você foi reprovado duas vezes na mesma disciplina (ou seja, em duas ocasiões distintas, com ou sem exame final), e não houver possibilidade de recuperação ou reingresso, o curso pode ser cancelado, especialmente se o aluno não cumprir os requisitos de permanência.\n\nAlém disso, o **Art. 345**, em seu § 1º, estabelece:\n\n> **§ 1º Não sendo apresentada a justificativa no prazo previsto no edital, será efetuado o cancelamento definitivo do vínculo do aluno com a instituição.**\n\nOu seja, se o aluno não justificar sua situação acadêmica após o edital de cancelamento do curso (por reprovação repetida ou falta de aproveitamento), o vínculo com a instituição será cancelado definitivamente.\n\nPorém, o **Art. 345, § 2º**, prevê uma exceção:\n\n> **§ 2º O aluno cujo nome conste no edital referido no *caput* deste artigo e que teve sua matrícula cancelada, que possua aproveitamento com índice de rendimento acadêmico (IRA) igual ou superior a 6 (seis), ou que tenha integralizado 75% (setenta e cinco por cento) ou mais do currículo, poderá requerer seu reingresso automático, por uma vez, no prazo de 10 (dez) dias, contados da data de publicação do edital informando o cancelamento da matrícula.**\n\nPortanto, **se você tiver IRA ≥ 6,0 ou tiver integralizado pelo menos 75% do currículo**, poderá requerer o reingresso automático, mesmo após duas reprovações na mesma matéria.\n\n**Conclusão:**\n- Se você **não atende aos requisitos do § 2º do Art. 345** (IRA < 6,0 e integralização < 75%), **pode perder sua vaga definitivamente**, pois o cancelamento será efetivado se não houver justificativa no prazo.\n- Se **atende aos requisitos**, você pode requerer o reingresso automático no prazo de 10 dias após o edital.\n\n**Fonte:** Resolução nº 177/2012 CEPEX/UFPI – Regulamento Geral da Graduação (Setor: graduacao)  \n**Artigos aplicáveis:** Art. 113, Art. 345, § 1º e § 2º.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "Após esclarecer que se trata de pós-graduação: duas reprovações na mesma disciplina levam ao desligamento do PPG.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A070",
+    "question": "Quanto tempo tenho para terminar o mestrado? Dá para pedir mais prazo?",
+    "answer": "De acordo com a Resolução CEPEX/UFPI nº 956/2025, no setor de pós-graduação:\n\n- A duração mínima do Mestrado é de **doze meses** e a máxima é de **vinte e quatro meses** (Art. 3º, inciso I).\n- É permitida a **prorrogação por até seis meses**, desde que autorizada pelo **Colegiado Simples** (Art. 3º, § 1º).\n\nPortanto, você tem até 24 meses para concluir o mestrado, podendo solicitar mais 6 meses de prorrogação, desde que comprovado o interesse e aprovado pelo Colegiado Simples.",
+    "expected_action": "answer",
+    "required_facts": [
+      "A duração mínima é 12 meses e a máxima é 24 meses.",
+      "É permitida prorrogação de até seis meses mediante aprovação do Colegiado Simples."
+    ],
+    "reference_answer": "A duração mínima é 12 meses e a máxima é 24 meses. É permitida prorrogação de até seis meses mediante aprovação do Colegiado Simples.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A071",
+    "question": "Quantas faltas posso ter numa disciplina do doutorado sem reprovar?",
+    "answer": "De acordo com o **TRECHO 4**, que trata do funcionamento do programa de pós-graduação (doutorado), especificamente no artigo 20, §3º, a frequência mínima exigida para aprovação em disciplina é **igual ou superior a 75%**.\n\nPortanto, o aluno pode ter, no máximo, **25% de faltas** em uma disciplina do doutorado sem reprovação.\n\n**Fonte:** Resolução CEPEX/UFPI nº 956/2025, Art. 20, §3º.  \n**Setor:** pos_graduacao",
+    "expected_action": "answer",
+    "required_facts": [
+      "É preciso frequentar pelo menos 75% da carga horária da disciplina; faltar a mais de 25% reprova por frequência.",
+      "A aprovação também exige nota mínima sete."
+    ],
+    "reference_answer": "É preciso frequentar pelo menos 75% da carga horária da disciplina; faltar a mais de 25% reprova por frequência. A aprovação também exige nota mínima sete.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A072",
+    "question": "Já cancelei uma matéria uma vez. Posso cancelar de novo?",
+    "answer": "A pergunta refere-se à possibilidade de cancelar uma disciplina novamente, após já ter cancelado uma vez.\n\nCom base nos trechos normativos fornecidos, a resposta depende do nível do curso do aluno (graduação ou pós-graduação), pois as regras são distintas.\n\nNo entanto, **não há indicação no contexto fornecido sobre o nível do curso do aluno** (graduação ou pós-graduação). A pergunta é feita com base em uma experiência anterior (\"já cancelei uma matéria uma vez\"), mas não se especifica se é em graduação ou pós-graduação.\n\nAnalisando os trechos:\n\n- **TRECHO 5** (Resolução CEPEX/UFPI nº 956/2025 – pós-graduação) trata do cancelamento de matrícula em disciplina na pós-graduação.  \n  > Art. 37: \"O cancelamento da mesma disciplina só é permitido uma vez, exceto por motivo de doença, devidamente comprovado pela Perícia Médica da Universidade.\"\n\n  Isso indica que, **na pós-graduação**, o cancelamento da mesma disciplina **só pode ser feito uma vez**, exceto em caso de doença comprovada.\n\n- **TRECHOS 1 a 4** tratam da graduação, mas **não mencionam limitação de número de cancelamentos de disciplinas**, apenas condições para o cancelamento (como o número de créditos, regime de curso, etc.).\n\nPortanto, **se o aluno está na pós-graduação**, a resposta é **não**, ele **não pode cancelar novamente a mesma disciplina**, exceto por motivo de doença comprovada.\n\nSe o aluno está na **graduação**, **não há proibição explícita de cancelar a mesma disciplina mais de uma vez**, desde que respeitadas as demais condições (como o número mínimo de créditos, regime de curso, etc.).\n\n**Conclusão:**  \nComo **não foi especificado o nível do curso** (graduação ou pós-graduação), **não é possível aplicar com certeza a regra correta**.\n\n👉 **Solicite esclarecimento sobre o nível do curso (graduação ou pós-graduação) para responder com precisão.**",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "Após esclarecer que se trata de pós-graduação: a mesma disciplina só pode ser cancelada uma vez, salvo doença comprovada pela Perícia Médica; o cancelamento exige prazo do calendário, parecer favorável do orientador e aprovação do Colegiado Simples.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A073",
+    "question": "Reprovei duas vezes na mesma matéria. Posso perder minha vaga?",
+    "answer": "Sim, você pode perder sua vaga.\n\nDe acordo com o **Art. 21, inciso IV**, da **Resolução CEPEX/UFPI nº 956/2025**, o desligamento do(a) discente do Programa de Pós-Graduação (PPG) ocorre em caso de **reprovação por duas vezes em Exame de Qualificação**.\n\nNo entanto, a sua pergunta refere-se à **reprovação duas vezes na mesma disciplina**, o que está previsto no **Art. 21, inciso I**, que estabelece:\n\n> **\"reprovação por duas vezes na mesma disciplina;\"**\n\nEssa hipótese é uma das causas para o **desligamento do(a) discente do PPG**.\n\nPortanto, **reprovação duas vezes na mesma disciplina acarreta o desligamento**, conforme previsto no **Art. 21, inciso I**, da Resolução CEPEX/UFPI nº 956/2025.\n\n**Fonte:** Resolução CEPEX/UFPI nº 956/2025, Capítulo II, Seção IV, Art. 21, inciso I.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "Após esclarecer que se trata de pós-graduação: duas reprovações na mesma disciplina levam ao desligamento do PPG.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A074",
+    "question": "Se eu quiser fazer matérias de períodos à frente do meu (adiantamento), eu tenho prioridade na hora da matrícula?",
+    "answer": "Não, você **não tem prioridade** na hora da matrícula para fazer matérias de períodos à frente do seu (adiantamento), conforme o art. 223 da Resolução nº 177/2012-CEPEX/UFPI.\n\nDe acordo com o art. 223, **a ordem de prioridade para o preenchimento de vagas nas turmas é definida da seguinte forma**:\n\n1. Aluno nivelado;  \n2. Aluno formando;  \n3. Aluno em pendência;  \n4. Aluno adiantando;  \n5. Aluno cursando componente curricular eletivo.\n\nO **inciso IV** refere-se ao **aluno adiantando**, ou seja, aquele que cursa um componente curricular de um nível posterior ao seu nível curricular atual. No entanto, **esse critério só é aplicável para alunos de cursos em regime de crédito** (§ 3º do art. 223), e **não confere prioridade automática** — ele está apenas **no final da ordem de prioridade**, após os demais tipos de alunos.\n\nAlém disso, o **índice de rendimento acadêmico (IRA)** é o critério de desempate **dentro de cada nível de prioridade** (§ 2º do art. 223), o que significa que, mesmo sendo aluno adiantando, você só terá chance de se matricular se houver vagas remanescentes após a alocação dos alunos com prioridade superior.\n\nPortanto, **você não tem prioridade** na matrícula por estar adiantando; ao contrário, está na **última posição da ordem de prioridade**, exceto se o curso for em regime de crédito e houver vagas disponíveis após os demais alunos com prioridade.\n\n**Fonte:** Art. 223, § 3º, da Resolução nº 177/2012-CEPEX/UFPI — Regulamento Geral da Graduação.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "Aluno adiantando ocupa a quarta prioridade: depois de nivelado, formando e em pendência. O critério de adiantamento se aplica apenas a cursos em regime de crédito.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A075",
+    "question": "Se eu aproveitar créditos de outra faculdade (ou de outro curso da UFPI), a nota dessas matérias entra no cálculo do meu IRA?",
+    "answer": "Não, a nota dos componentes curriculares aproveitados — seja de outra instituição de ensino superior (IES) ou de outro curso da UFPI — **não entra no cálculo do Índice de Rendimento Acadêmico (IRA)**.\n\nConforme estabelecido no **Art. 257** e **Art. 258** do Regulamento Geral da Graduação da UFPI:\n\n- **Art. 257**: \"Os componentes curriculares cursados em outra IES, cujos estudos sejam aproveitados na UFPI, implicam o registro no histórico escolar como CC (crédito concedido) e **não serão considerados para fins de apuração do índice de rendimento acadêmico (IRA)**.\"\n\n- **Art. 258**: \"Os componentes curriculares oriundos de cursos concluídos na UFPI, aproveitadas em outro curso, implicarão o registro da nota obtida anteriormente acrescida da ocorrência CC (crédito concedido), **não devendo compor o índice de rendimento acadêmico (IRA)**.\"\n\nAlém disso, o **Art. 124** reforça que o IRA é calculado com base nos componentes curriculares que o aluno concluiu durante o curso de graduação, **excetuando-se** os componentes curriculares cujo rendimento acadêmico não é expresso de forma numérica — o que inclui os aproveitados, conforme os artigos anteriores.\n\nPortanto, **os créditos aproveitados são registrados com a indicação \"CC\" e não influenciam o IRA**, independentemente de a nota ter sido obtida em outra IES ou em outro curso da UFPI.",
+    "expected_action": "answer",
+    "required_facts": [
+      "Não. Estudos aproveitados de outra IES são registrados como crédito concedido e não entram no IRA.",
+      "Componentes de curso já concluído na UFPI, aproveitados em outro curso, recebem a nota anterior acrescida de CC e também não compõem o IRA."
+    ],
+    "reference_answer": "Não. Estudos aproveitados de outra IES são registrados como crédito concedido e não entram no IRA. Componentes de curso já concluído na UFPI, aproveitados em outro curso, recebem a nota anterior acrescida de CC e também não compõem o IRA.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A076",
+    "question": "Quais motivos são aceitos para justificar a minha ausência em uma avaliação e solicitar a segunda chamada?",
+    "answer": "Os motivos aceitos para justificar a ausência em uma avaliação e solicitar a segunda chamada estão previstos no **Art. 108, § 2º**, da **Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação**.\n\nSão eles:\n\n- a) doença;  \n- b) doença ou óbito de familiares diretos;  \n- c) audiência judicial;  \n- d) militares, policiais e outros profissionais em missão oficial;  \n- e) participação em congressos, reuniões oficiais ou eventos culturais representando a UFPI, o Município ou o Estado;  \n- f) outros motivos que, apresentados, possam ser julgados procedentes.\n\nEsses motivos devem ser comprovados e o requerimento de segunda chamada deve ser protocolado no prazo de 3 (três) dias úteis, contado a partir da data da avaliação não realizada.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "São previstos doença, doença ou óbito de familiares diretos, audiência judicial, missão oficial e participação em eventos representando a UFPI, Município ou Estado. Também podem ser aceitos outros motivos julgados procedentes.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A077",
+    "question": "Já fiz matérias de pós em outra universidade. Como posso aproveitar isso no meu mestrado?",
+    "answer": "O aproveitamento de estudos realizados em pós-graduação em outra instituição para o curso de mestrado na UFPI é regido pela **Resolução CEPEX/UFPI nº 956/2025**, no setor de **pós-graduação**.\n\nDe acordo com o **Art. 36** dessa resolução:\n\n> O aproveitamento de estudos para integralização curricular, incluindo créditos cursados no Mestrado para o Doutorado, é autorizado pelo Colegiado Simples, observados os limites estabelecidos no Regimento Interno de cada PPG.\n\nPara que o aproveitamento seja autorizado, devem ser atendidos os seguintes requisitos (§ 1º do Art. 36):\n\n- a) a disciplina cursada com aprovação tiver conteúdo e duração idênticos, equivalentes ou superiores à do curso pretendido;  \n- b) os estudos realizados em duas ou mais disciplinas se complementarem em uma ou mais disciplinas do curso pretendido; ou  \n- c) os estudos, embora não atendendo aos incisos anteriores, guardarem afinidade com a área de concentração e forem de interesse para o desenvolvimento da dissertação.\n\nAlém disso, o **§ 2º** do mesmo artigo estabelece que os aproveitamentos serão registrados no histórico escolar pelo sistema da Universidade, com o nome e a carga horária da disciplina.\n\n### Recomendação:\nVocê deve apresentar um pedido formal ao **Colegiado Simples do seu Programa de Pós-Graduação (PPG)**, com os seguintes documentos:\n- Histórico escolar atualizado da instituição de origem, com carga horária e resultado da aprovação;\n- Programa da disciplina cursada;\n- Comprovante de reconhecimento do curso de pós-graduação na instituição de origem (se aplicável);\n- Tradução oficial juramentada (se o documento for em língua estrangeira), conforme exigido pelo Regimento Interno do PPG.\n\nO Colegiado Simples analisará o pedido com base nos critérios do Art. 36 e no Regimento Interno do seu PPG.\n\n> **Fonte:** Resolução CEPEX/UFPI nº 956/2025, Art. 36.",
+    "expected_action": "answer",
+    "required_facts": [
+      "É possível aproveitar créditos de outro PPG ou IES em áreas afins e de interesse para a dissertação, mediante aprovação do Colegiado Simples, respeitando o Regimento Interno do PPG.",
+      "Podem ser aceitas disciplinas aprovadas de conteúdo e duração idênticos, equivalentes ou superiores; estudos complementares entre disciplinas; ou estudos afins à área e de interesse para a dissertação.",
+      "O aproveitamento é registrado no histórico pelo sistema da Universidade, com nome e carga horária da disciplina."
+    ],
+    "reference_answer": "É possível aproveitar créditos de outro PPG ou IES em áreas afins e de interesse para a dissertação, mediante aprovação do Colegiado Simples, respeitando o Regimento Interno do PPG. Podem ser aceitas disciplinas aprovadas de conteúdo e duração idênticos, equivalentes ou superiores; estudos complementares entre disciplinas; ou estudos afins à área e de interesse para a dissertação. O aproveitamento é registrado no histórico pelo sistema da Universidade, com nome e carga horária da disciplina.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A078",
+    "question": "Passei na defesa da dissertação, mas a banca pediu ajustes. Quanto tempo tenho para entregar?",
+    "answer": "Você tem até **sessenta dias corridos** para entregar a versão final corrigida da dissertação, conforme estabelecido no § 1º do Art. 54 da Resolução CEPEX/UFPI nº 956/2025.\n\n**Fonte:** Resolução CEPEX/UFPI nº 956/2025, Capítulo VI - Dos Exames e da Defesa de Dissertação ou Tese, Art. 54, § 1º.",
+    "expected_action": "answer",
+    "required_facts": [
+      "As modificações devem ser feitas em até 60 dias corridos, sob pena de anulação da defesa.",
+      "O orientador deve validar as alterações e formalizá-las à Coordenação antes da entrega da versão final, que é obrigatória para solicitar o diploma."
+    ],
+    "reference_answer": "As modificações devem ser feitas em até 60 dias corridos, sob pena de anulação da defesa. O orientador deve validar as alterações e formalizá-las à Coordenação antes da entrega da versão final, que é obrigatória para solicitar o diploma.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A079",
+    "question": "Por quantos períodos letivos posso solicitar o Trancamento do Curso?",
+    "answer": "O trancamento de curso pode ser solicitado por até **2 (dois) períodos letivos regulares**, consecutivos ou não, conforme estabelecido no **§ 1º do Art. 292** do Regulamento Geral da Graduação da UFPI (Resolução nº 177/2012-CEPEX).\n\nAlém disso, em situações de excepcionalidade, devidamente comprovadas, a Diretoria de Administração Acadêmica (DAA/PREG) poderá conceder trancamento de curso por até **2 (dois) períodos letivos adicionais**, totalizando até **4 (quatro) períodos letivos**, conforme o **Art. 293**, com as seguintes situações consideradas de excepcionalidade:\n- afastamento para estudo no exterior, com comprovação de bolsa ou programa de mobilidade;\n- afastamento do aluno servidor público, por necessidade de serviço;\n- acompanhamento de parente consanguíneo até segundo grau ou cônjuge;\n- afastamento por motivos de doença, comprovada pela junta médica da UFPI.\n\nPortanto, o limite máximo de trancamento de curso é de **4 períodos letivos**, desde que haja comprovação de uma das situações de excepcionalidade previstas no Art. 293.",
+    "expected_action": "clarify",
+    "required_facts": [
+      "Solicitar o nível do curso antes de aplicar uma regra.",
+      "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+    ],
+    "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+    "conditional_answer": "A regra geral é no máximo dois períodos letivos regulares, consecutivos ou não, solicitados a cada período no prazo do calendário correspondente a um terço do período letivo. Em excepcionalidade comprovada, a DAA/PREG pode conceder até dois períodos adicionais, nos termos do art. 293.",
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  },
+  {
+    "annotation_id": "V2-A080",
+    "question": "Meu certificado de inglês tem quatro anos. Ainda vale para comprovar proficiência no mestrado?",
+    "answer": "Não, seu certificado de inglês não vale mais para comprovar proficiência no mestrado.\n\nDe acordo com o **Art. 34, § IV** da **Resolução CEPEX/UFPI nº 956/2025**, os exames de proficiência em língua estrangeira têm **validade de três anos**.\n\nComo seu certificado tem quatro anos, ele já está fora do período de validade estipulado pela norma.\n\n**Fonte:** Resolução CEPEX/UFPI nº 956/2025, Capítulo IV, Art. 34, § IV.",
+    "expected_action": "answer",
+    "required_facts": [
+      "Em regra, não: os exames de proficiência têm validade de três anos.",
+      "Programas em rede são exceção e seguem os critérios das instituições-sede."
+    ],
+    "reference_answer": "Em regra, não: os exames de proficiência têm validade de três anos. Programas em rede são exceção e seguem os critérios das instituições-sede.",
+    "conditional_answer": null,
+    "reviewer_id": null,
+    "score_0_2": null,
+    "correct": null,
+    "complete": null,
+    "clarified": null,
+    "evidence_sufficient": null,
+    "unsupported_claims": null,
+    "notes": null
+  }
+]

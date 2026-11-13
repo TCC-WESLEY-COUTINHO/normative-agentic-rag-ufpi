@@ -1,0 +1,130 @@
+{
+  "timestamp": "2026-11-02T16:21:21.521255+00:00",
+  "endpoint": "http://127.0.0.1:8080/chatbot_ufpi_integrated_v1/stream",
+  "case": "TEMP-GRAD-002",
+  "thread_id": "ab92cf95-470a-42c2-83bd-fa65db672579",
+  "question": "Como era a redação do art. 68, §4º da Resolução 177/2012 no regulamento da graduação atualizado em 2023, antes da alteração de 2026?",
+  "events": [
+    "message",
+    "DONE"
+  ],
+  "messages": [
+    {
+      "type": "ai",
+      "content": "Esta resposta considera a redação histórica solicitada e não certifica sua vigência atual.\nO dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nA redação do art. 68, parágrafo 4º, da Resolução 177/2012, CEPEX/UFPI, vigente antes da alteração promovida pela Resolução 1056/2026, estabelecia que o coordenador de estágio do curso seria um docente efetivo escolhido entre os professores orientadores do estágio, cuja designação deveria ser efetivada por portaria da unidade acadêmica a qual o estágio estava vinculado, quando o colegiado entendesse necessária a existência de um coordenador para o conjunto das atividades de estágio. As atribuições do coordenador de estágio do curso incluíam: coordenar a elaboração ou adequações de normas ou critérios específicos do estágio do curso, com base no regulamento; informar à Coordenadoria de Estágio Obrigatório (CEO/PREG) os campos de estágio, quando for o caso, para fins de celebração de convênios e termos de compromisso; fazer, ao final de cada período, levantamento do número de alunos aptos e pretendentes ao estágio, em função da programação semestral; elaborar, a cada semestre, junto com os orientadores de estágio, as programações de estágio obrigatório que seriam enviadas à CEO/PREG no prazo estabelecido no Calendário Acadêmico; orientar e encaminhar os alunos ao campo de estágio; acompanhar o desenvolvimento do estágio, tendo em vista a consecução dos objetivos propostos; e enviar à CEO/PREG, ao final de cada período letivo, o relatório correspondente ao estágio obrigatório do curso.\n\nEssa redação constava do regulamento da graduação da UFPI em sua versão consolidada em 2023, antes da alteração promovida pela Resolução 1056/2026, que modificou o dispositivo. A norma-base, Resolução 177/2012, permaneceu vigente em parte, com alteração parcial, não sendo revogada integralmente.",
+      "normative_result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Esta resposta considera a redação histórica solicitada e não certifica sua vigência atual.\nO dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nA redação do art. 68, parágrafo 4º, da Resolução 177/2012, CEPEX/UFPI, vigente antes da alteração promovida pela Resolução 1056/2026, estabelecia que o coordenador de estágio do curso seria um docente efetivo escolhido entre os professores orientadores do estágio, cuja designação deveria ser efetivada por portaria da unidade acadêmica a qual o estágio estava vinculado, quando o colegiado entendesse necessária a existência de um coordenador para o conjunto das atividades de estágio. As atribuições do coordenador de estágio do curso incluíam: coordenar a elaboração ou adequações de normas ou critérios específicos do estágio do curso, com base no regulamento; informar à Coordenadoria de Estágio Obrigatório (CEO/PREG) os campos de estágio, quando for o caso, para fins de celebração de convênios e termos de compromisso; fazer, ao final de cada período, levantamento do número de alunos aptos e pretendentes ao estágio, em função da programação semestral; elaborar, a cada semestre, junto com os orientadores de estágio, as programações de estágio obrigatório que seriam enviadas à CEO/PREG no prazo estabelecido no Calendário Acadêmico; orientar e encaminhar os alunos ao campo de estágio; acompanhar o desenvolvimento do estágio, tendo em vista a consecução dos objetivos propostos; e enviar à CEO/PREG, ao final de cada período letivo, o relatório correspondente ao estágio obrigatório do curso.\n\nEssa redação constava do regulamento da graduação da UFPI em sua versão consolidada em 2023, antes da alteração promovida pela Resolução 1056/2026, que modificou o dispositivo. A norma-base, Resolução 177/2012, permaneceu vigente em parte, com alteração parcial, não sendo revogada integralmente.",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-art-68-idx-000067",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "68",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 68",
+            "temporal_role": "historical",
+            "evidence_text": "**Art. 68. O estágio curricular obrigatório, para a sua regularidade, envolve:**\n1. I - Coordenadoria de Estágio Obrigatório (CEO/PREG);\n2. II - orientador de estágio;\n3. III - supervisor de campo;\n4. IV - coordenador de estágio do curso, quando for o caso.\n> § 1º A Coordenadoria de Estágio Obrigatório (CEO/PREG) tem como atribuições básicas:\n> * a) viabilizar as condições necessárias ao desenvolvimento do estágio obrigatório na UFPI;\n> * b) propor normas e diretrizes gerais para a operacionalização dos estágios obrigatórios;\n> * c) assessorar as coordenações de estágios nos cursos na elaboração e sistematização das programações relativas ao estágio obrigatório, como participar do acompanhamento, controle e avaliação da sua execução;\n> * d) providenciar as assinaturas de convênios entre a UFPI e as instituições de campos de estágio;\n> * e) organizar e manter atualizado, juntamente com as coordenações de estágio dos cursos, um sistema de documentação e cadastramento dos estágios.\n> § 2º O orientador do estágio será um professor do quadro da UFPI responsável pelo acompanhamento didático-pedagógico do aluno durante a realização desta atividade, com as atribuições de:\n> * a) elaborar junto ao coordenador de estágio do curso a programação semestral de estágios obrigatórios;\n> * b) orientar os alunos na elaboração dos seus planos e relatórios de estágio;\n> * c) acompanhar e orientar a execução das atividades dos estagiários;\n> * d) avaliar o desempenho dos estagiários atribuindo-lhes conceitos expressos sob a forma adotada pela UFPI;\n> * e) enviar ao coordenador de estágio do curso, ao final de cada período letivo, o relatório correspondente aos estágios obrigatórios dos alunos sob a sua responsabilidade.\n> § 3º O supervisor de campo será um profissional lotado na unidade de realização do estágio, responsável, nesse local, pelo acompanhamento do aluno durante o desenvolvimento da atividade.\n> § 4º O coordenador de estágio do curso será um docente efetivo escolhido entre os professores orientadores do estágio, cuja designação deverá ser efetivada por portaria da unidade acadêmica a qual o estágio está vinculado, quando o colegiado entender necessária a existência de um coordenador para o conjunto das atividades de estágio, com as atribuições de:\n> * a) coordenar a elaboração ou adequações de normas ou critérios específicos do estágio do curso, com base neste Regulamento;\n> * b) informar à Coordenadoria de Estágio Obrigatório (CEO/PREG) os campos de estágio, quando for o caso, tendo em vista a celebração de convênios e termos de compromisso;\n> * c) fazer, ao final de cada período, levantamento do número de alunos aptos e pretendentes ao estágio, em função da programação semestral;\n> * d) elaborar, a cada semestre, junto com os orientadores de estágio, as programações de estágio obrigatório que serão enviadas à Coordenadoria de Estágio Obrigatório (CEO/PREG) no prazo estabelecido no Calendário Acadêmico;\n> * e) orientar e encaminhar os alunos ao campo de estágio;\n> * f) acompanhar o desenvolvimento do estágio, tendo em vista a consecução dos objetivos propostos;\n> * g) enviar à Coordenadoria de Estágio Obrigatório (CEO/PREG), ao final de cada período letivo, o relatório correspondente ao estágio obrigatório do curso."
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "historical",
+          "requested_time_context": {
+            "norm_ids": [
+              "ufpi-177-2012"
+            ],
+            "before_amendment": true,
+            "relation_query": null,
+            "article": "68",
+            "paragraph": "4",
+            "requested_year": null,
+            "historical_wording": true,
+            "document_year": 2023
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-art-68-idx-000067",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "68",
+              "temporal_action": "historical_preserved",
+              "normative_status": "desconhecida",
+              "temporal_role": "historical",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [
+            {
+              "relation": "AMENDED_BY",
+              "source_norm": "ufpi-177-2012",
+              "target_norm": "ufpi-1056-2026",
+              "target_article": "68",
+              "target_paragraph": "4",
+              "evidence_source": "Resolução CEPEX/UFPI nº 1.056/2026",
+              "evidence_article": "1"
+            }
+          ],
+          "generation_constraints": {
+            "must_frame_as_historical": true,
+            "must_not_claim_current_validity": true,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": false,
+            "must_not_present_successor_as_historical_predecessor": true,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": true,
+            "must_not_duplicate_superseded_wording": false,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Esta resposta considera a redação histórica solicitada e não certifica sua vigência atual.\nO dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "HISTORICAL_CONTEXT",
+              "norm_id": null,
+              "target_norm": null,
+              "role": null
+            },
+            {
+              "kind": "AMENDED_BY",
+              "norm_id": "ufpi-177-2012",
+              "target_norm": "ufpi-1056-2026",
+              "role": null
+            },
+            {
+              "kind": "STATUS_UNKNOWN",
+              "norm_id": "ufpi-177-2012",
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "graduacao",
+        "retrieval_strategy": "metadata_exact",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "a60ca49b-b525-4145-88a6-e1145a62eaf4",
+        "error_code": null,
+        "safe_message": null
+      },
+      "grounded_followup_result": null,
+      "calculator_result": null,
+      "tool_calls": [],
+      "tool_call_id": null,
+      "run_id": "ddca1541-7c57-4600-a2be-5eddcc0ebd11",
+      "response_metadata": {},
+      "custom_data": {}
+    }
+  ],
+  "http_status": 200,
+  "terminal": "ANSWER",
+  "core_status": "accepted",
+  "verification": "PASS: public final-only HTTP/SSE answer, no clarification/fallback"
+}

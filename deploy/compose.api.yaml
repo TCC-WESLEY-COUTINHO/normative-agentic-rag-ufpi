@@ -1,0 +1,8 @@
+# Publishes the backend API on the host (loopback by default), for clients other than the web
+# interface. Use with the demo file:
+#   docker compose -f compose.demo.yaml -f deploy/compose.api.yaml up -d --wait backend
+# (add "interface" or omit the service names to also start the interface)
+services:
+  backend:
+    ports:
+      - "${API_BIND_ADDRESS:-127.0.0.1}:${API_PORT:-8080}:8080"

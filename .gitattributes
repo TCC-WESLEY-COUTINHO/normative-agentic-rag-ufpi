@@ -1,0 +1,58 @@
+# Preserve the bytes hashed in CLI response manifests across Windows checkouts.
+evaluation/results/cli_*/*.jsonl text eol=lf
+evaluation/results/terminal_ui_*/*.jsonl -text whitespace=cr-at-eol
+
+# Keep imported and frozen temporal evidence identical to recorded SHA-256 bytes.
+evaluation/corpora/*_temporal_v1.json -text whitespace=cr-at-eol
+evaluation/provenance/*_temporal_v1.json -text whitespace=cr-at-eol
+evaluation/provenance/temporal_sources_v1.json -text whitespace=cr-at-eol
+evaluation/datasets/temporal_candidates_v2.json -text whitespace=cr-at-eol
+evaluation/datasets/temporal_pos_v1.json -text whitespace=cr-at-eol
+evaluation/datasets/temporal_graduacao_v1.json -text whitespace=cr-at-eol
+evaluation/results/temporal_*/** -text whitespace=cr-at-eol
+
+# Rich terminal captures intentionally retain alignment padding verbatim.
+evaluation/results/temporal_evolution_v1_001/demo_*_terminal.txt -text whitespace=-blank-at-eol,cr-at-eol
+
+# Preserve exact bytes of failure-analysis captures and their recorded hashes.
+evaluation/results/failure_analysis_v1/** -text whitespace=cr-at-eol
+evaluation/results/failure_regression_v1_001/** -text whitespace=cr-at-eol
+
+# Preserve scientific routing inputs and raw paired evidence by recorded bytes.
+evaluation/datasets/routing_v2_candidates_v1.json -text whitespace=cr-at-eol
+evaluation/results/router_v2_exploratory_001/** -text whitespace=cr-at-eol
+
+# Preserve exact V2 experiment bytes and recorded SHA-256 values.
+evaluation/results/structured_normative_output_v2_001/** -text whitespace=cr-at-eol
+
+# Preserve recorded bytes of execution snapshots and their preservation manifests.
+evaluation/results/pilot_001/execution_snapshot/** -text -whitespace
+evaluation/results/pilot_003/execution_snapshot/** -text -whitespace
+evaluation/results/cli_001/execution_snapshot/** -text -whitespace
+
+# Preserve exact bytes of experimental condition V2 (frozen SHA-256 manifests).
+code/src/rag_baseline/integrated_runtime.py -text
+code/src/rag_baseline/conversation_interpretation/__init__.py -text
+code/src/rag_baseline/conversation_interpretation/base.py -text
+code/src/rag_baseline/conversation_interpretation/contracts.py -text
+code/src/rag_baseline/conversation_interpretation/factory.py -text
+code/src/rag_baseline/conversation_interpretation/hybrid.py -text
+code/src/rag_baseline/conversation_interpretation/jev.py -text
+code/src/rag_baseline/conversation_interpretation/rules.py -text
+code/src/rag_baseline/conversation_interpretation/structured_llm.py -text
+code/src/rag_baseline/conversation_interpretation/transition_v2.py -text
+code/tests/rag_baseline/test_declared_level_r2.py -text
+code/tests/rag_baseline/test_natural_clarification_r1.py -text
+code/tests/rag_baseline/test_transition_v2.py -text
+evaluation/adaptive_rag/__init__.py -text
+evaluation/adaptive_rag/analyze.py -text
+evaluation/adaptive_rag/dataset.py -text
+evaluation/adaptive_rag/run.py -text
+evaluation/adaptive_rag/split.py -text
+
+# Operational start scripts run inside WSL.
+code/scripts/*_local.sh text eol=lf
+
+# POSIX launchers of the demo run inside Linux/WSL.
+scripts/*.sh text eol=lf
+scripts/*.cmd text eol=crlf

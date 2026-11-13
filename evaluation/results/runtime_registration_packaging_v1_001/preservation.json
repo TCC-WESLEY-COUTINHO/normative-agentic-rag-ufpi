@@ -1,0 +1,72 @@
+{
+  "initial_files": 798,
+  "unchanged": 788,
+  "authorized_changes": [
+    {
+      "path": "code/.dockerignore",
+      "before": "260aa17413eac2b206b09ec1c164b62d008e01662a8ea8485dc145a6c568a1c6",
+      "after": "680afb286f15388b0734e6fcf143ff760094061fab2af6447918ec57cfc2e35f"
+    },
+    {
+      "path": "code/.env.example",
+      "before": "c731bb7cb1b83a35b4dba847ab148a620068b8cb645e3b21cf812c0692f02862",
+      "after": "e443f937c7176c2d1f9bb604581b64c2f0d9499e459472e4b8ff592ef0ed910b"
+    },
+    {
+      "path": "code/compose.prod.yaml",
+      "before": "c83c7e8ee22b48981e4bc279c09e0bb4a5822b74c11e010bb7460b2c483dbf67",
+      "after": "5d9ac8dbcf3b25a2efdb1fcd5ea56b8db5b3e2a20e1857cf0438a72645552a64"
+    },
+    {
+      "path": "code/compose.yaml",
+      "before": "1add08c4d3ba84209bcc594915ae74eb91ce672d577e8d5a52f68130463e496b",
+      "after": "bf635acefa94ae3a91a41950ead703e85385a380d6738989bcf07982ba11fea8"
+    },
+    {
+      "path": "code/docker/Dockerfile.app",
+      "before": "6e6e6a97b160941903a4710e5fae4417ce8f3a5d89a00bd0f830cad5691165e0",
+      "after": "b3aaa8fe89d7eb5965ef11848938937caaf5df47e7f613b71dd30ced8f6cdf8d"
+    },
+    {
+      "path": "code/docker/Dockerfile.service",
+      "before": "c71d36f6e4d132ae403e3fbfbaf4f0f25c296d0354ddd1a7753bdfe33a1c7a1f",
+      "after": "f1c08bab62a0756895372b2eea914340ffa2196c118faa5ae86138cf5248c282"
+    },
+    {
+      "path": "code/src/agents/agents.py",
+      "before": "b8544d480e7379ad92df24ac4a1abcac1a5729ad01736b7b60bfe1d3487e4497",
+      "after": "76ad0472cc849cb31ceb6285e1cefb534fad3b23969280d245dfe08046ad66a1"
+    },
+    {
+      "path": "code/src/schema/schema.py",
+      "before": "105b742e75829392b6acda46840c1abdf7ca9436f8b75e1ac44828f3affb1720",
+      "after": "837516605d47e8145efa516d8195614897c3a8c3f124d6e7d9c6e587dc600dd7"
+    },
+    {
+      "path": "code/src/service/service.py",
+      "before": "9c3d86d51372b461e229831ca112342bd6347f7a38afa1a5322efb8012445803",
+      "after": "0df6c5d223620807ee412e201733839a1034b0c905323475ca7cabfe9d26783d"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_typed_normative_transport.py",
+      "before": "986b46ecf95c7dc78a27eca34b4d0918870d17509b08ba5acb342c22b61b5f4d",
+      "after": "b36948fd212cbab3b46bd14303af24db9ce0f3a09d782d0fb1d924ce145a7ccd"
+    }
+  ],
+  "index_identical": true,
+  "index_count": 507,
+  "index_sha256": "ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a",
+  "previous_results_identical": true,
+  "allowed_existing_files": [
+    "code/.dockerignore",
+    "code/.env.example",
+    "code/compose.prod.yaml",
+    "code/compose.yaml",
+    "code/docker/Dockerfile.app",
+    "code/docker/Dockerfile.service",
+    "code/src/agents/agents.py",
+    "code/src/schema/schema.py",
+    "code/src/service/service.py",
+    "code/tests/rag_baseline/test_typed_normative_transport.py"
+  ]
+}

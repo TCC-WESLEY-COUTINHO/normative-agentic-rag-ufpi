@@ -96,7 +96,9 @@ class OpenRouterClient:
                 if not all(isinstance(embedding, list) for embedding in batch_embeddings):
                     raise ValueError
             except (KeyError, TypeError, ValueError) as exc:
-                raise OpenRouterError("OpenRouter retornou embeddings em formato inválido.") from exc
+                raise OpenRouterError(
+                    "OpenRouter retornou embeddings em formato inválido."
+                ) from exc
             embeddings.extend(batch_embeddings)
         return embeddings
 
@@ -119,4 +121,35 @@ class OpenRouterClient:
                 raise ValueError
         except (KeyError, IndexError, TypeError, ValueError) as exc:
             raise OpenRouterError("OpenRouter retornou uma resposta de chat inválida.") from exc
+        return content
+
+    async def structured_chat(
+        self, *, system_prompt: str, user_prompt: str, schema: dict, model: str
+    ) -> str:
+        response = await self._post(
+            "/chat/completions",
+            {
+                "model": model,
+                "messages": [
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt},
+                ],
+                "temperature": float(self.llm_temperature),
+                "max_tokens": self.llm_max_tokens,
+                "response_format": {
+                    "type": "json_schema",
+                    "json_schema": {
+                        "name": "RouterDecision",
+                        "strict": True,
+                        "schema": schema,
+                    },
+                },
+            },
+        )
+        try:
+            content = response["choices"][0]["message"]["content"]
+            if not isinstance(content, str) or not content.strip():
+                raise ValueError
+        except (KeyError, IndexError, TypeError, ValueError) as exc:
+            raise OpenRouterError("OpenRouter retornou decisão estruturada inválida.") from exc
         return content

@@ -1,484 +1,635 @@
+"""Single-agent TCC chat. Authority and conversation memory remain in the service."""
+
 import asyncio
 import os
-import urllib.parse
-import uuid
+import re
 from collections.abc import AsyncGenerator
+from pathlib import Path
+from uuid import UUID, uuid4
 
+import httpx
 import streamlit as st
+import streamlit.components.v1 as components
 from dotenv import load_dotenv
-from pydantic import ValidationError
+from PIL import Image
 
-from client import AgentClient, AgentClientError
-from schema import ChatHistory, ChatMessage
-from schema.task_data import TaskData, TaskDataStatus
+from chat_ui.character import character_markup
+from chat_ui.conversations import (
+    RENAME_MAX_CHARACTERS,
+    RESPONSE_TIMEOUT_SECONDS,
+    Conversation,
+    clean_title,
+    escape_widget_label,
+    title_from_question,
+)
+from chat_ui.rendering import copy_markup, literal_markdown, note_markup, sources_markup
+from chat_ui.theme import stylesheet
+from client import AgentClient
+from schema import ChatMessage
 
-# A Streamlit app for interacting with the langgraph agent via a simple chat interface.
-# The app has three main functions which are all run async:
+TCC_AGENT_ID = "chatbot_ufpi_integrated_v1"
+APP_NAME = "Bisco"
+APP_ROLE = "Assistente Normativo"
+APP_TITLE = f"{APP_NAME} · {APP_ROLE} da UFPI"
+APP_GREETING = "Olá! Eu sou o Bisco."
+APP_LEAD = "Seu assistente virtual para consultas aos regulamentos acadêmicos da UFPI."
+SESSION_VERSION = 3
+UNAVAILABLE = "O assistente está temporariamente indisponível. Tente novamente em instantes."
+INTERNAL_ERROR = "Não foi possível obter a resposta: o serviço encontrou um erro interno."
+CONNECTION_LOST = "A conexão com o assistente foi interrompida antes do fim da resposta."
+REQUEST_ERROR = "Não foi possível obter a resposta agora. Tente novamente."
+TIMED_OUT = "A resposta demorou mais que o esperado. Tente novamente."
+INTERRUPTED = "A resposta anterior foi interrompida antes de terminar."
+RESEARCH_NOTICE = (
+    "Protótipo de pesquisa. Consulte os documentos oficiais para confirmar as informações."
+)
+SESSION_NOTICE = (
+    "As conversas ficam apenas nesta aba. Ao recarregar ou fechar a página, a lista é perdida."
+)
+FALLBACK_LABEL = "Resposta inconclusiva"
+FALLBACK_NOTICE = (
+    "Os trechos abaixo foram consultados, mas não sustentaram uma resposta conclusiva. "
+    "Consulte o texto da norma."
+)
+UNCONFIRMED_LABEL = "Origem não confirmada"
+UNCONFIRMED_NOTICE = "A resposta em que este texto se baseia não aparece nesta conversa."
+ABSTENTION_LABEL = "Sem resposta normativa"
+ABSTENTION_NOTICE = "Nenhum trecho normativo foi usado nesta resposta."
+CLARIFICATION_LABEL = "Preciso de um esclarecimento"
+HISTORICAL_LABEL = "Consulta histórica"
+HISTORICAL_NOTICE = "O texto localizado não certifica a vigência da norma naquele momento."
+UNANSWERED_LABEL = "Sem resposta"
+UNANSWERED_NOTICE = "Esta pergunta não foi concluída."
+PROGRESS = "Analisando sua pergunta…"
+PLACEHOLDER = "Faça sua pergunta sobre os regulamentos da UFPI..."
+UNAVAILABLE_STATUSES = frozenset({502, 503, 504})
+UNREACHABLE_ERRORS = (httpx.ConnectError, httpx.TimeoutException)
+CHAT_UI = Path(__file__).parent / "chat_ui"
+# Page scripts, in order; bisco.js (the character runtime) is inserted before character.js.
+PAGE_SCRIPTS = ("bridge.js", "presentation.js", "transition.js", "character.js")
 
-# - main() - sets up the streamlit app and high level structure
-# - draw_messages() - draws a set of chat messages - either replaying existing messages
-#   or streaming new ones.
-# - handle_feedback() - Draws a feedback widget and records feedback from the user.
 
-# The app heavily uses AgentClient to interact with the agent's FastAPI endpoints.
+def character_runtime() -> str:
+    """Bisco's rig runtime (bisco.js, the same file the character lab runs as an ES module) as a
+    classic script, preceded by the rig data it draws from.
+
+    It runs inside its own strict function scope: none of its names, function declarations
+    included, can reach the shared page script and replace another script's function. Only
+    BiscoRuntime is published."""
+    source = (CHAT_UI / "bisco.js").read_text(encoding="utf-8")
+    source = re.sub(r"^export (?=const |class |function )", "", source, flags=re.MULTILINE)
+    rig = (CHAT_UI / "bisco_rig.json").read_text(encoding="utf-8").strip()
+    return (
+        f"var BISCO_RIG = {rig};\n"
+        f'var BiscoRuntime = (function () {{\n"use strict";\n{source}\n'
+        "return { BiscoCharacter };\n})();"
+    )
 
 
-APP_TITLE = "Agent Service Toolkit"
-APP_ICON = "🧰"
-USER_ID_COOKIE = "user_id"
+BRIDGE_SCRIPT = "\n".join(
+    [
+        *((CHAT_UI / name).read_text(encoding="utf-8") for name in PAGE_SCRIPTS[:3]),
+        character_runtime(),
+        (CHAT_UI / PAGE_SCRIPTS[3]).read_text(encoding="utf-8"),
+    ]
+)
+# Bisco's neutral face, rendered from the same rig layers the page draws, on a transparent
+# background. 64 px stays sharp on high-density tabs and downscales cleanly to 16-32.
+FAVICON = Image.open(Path(__file__).parent / "static" / "bisco" / "favicon-64.png")
 
 
-def get_or_create_user_id() -> str:
-    """Get the user ID from session state or URL parameters, or create a new one if it doesn't exist."""
-    # Check if user_id exists in session state
-    if USER_ID_COOKIE in st.session_state:
-        return st.session_state[USER_ID_COOKIE]
+def active_conversation() -> Conversation:
+    return st.session_state.conversations[st.session_state.thread_id]
 
-    # Try to get from URL parameters using the new st.query_params
-    if USER_ID_COOKIE in st.query_params:
-        user_id = st.query_params[USER_ID_COOKIE]
-        st.session_state[USER_ID_COOKIE] = user_id
-        return user_id
 
-    # Generate a new user_id if not found
-    user_id = str(uuid.uuid4())
+def activate(conversation: Conversation) -> None:
+    """`thread_id` and `messages` always describe exactly one stored conversation."""
+    st.session_state.thread_id = conversation.thread_id
+    st.session_state.messages = conversation.messages
+    st.session_state.pop("confirm_delete", None)
 
-    # Store in session state for this session
-    st.session_state[USER_ID_COOKIE] = user_id
 
-    # Also add to URL parameters so it can be bookmarked/shared
-    st.query_params[USER_ID_COOKIE] = user_id
+def new_conversation() -> None:
+    """Start a local conversation; existing backend checkpoints are retained."""
+    conversations = st.session_state.conversations
+    if conversations and not active_conversation().messages:
+        return
+    conversation = Conversation()
+    conversations[conversation.thread_id] = conversation
+    activate(conversation)
+    st.session_state.scroll_target = "top"
 
-    return user_id
+
+def open_conversation(thread_id: str) -> None:
+    activate(st.session_state.conversations[thread_id])
+    st.session_state.scroll_target = "bottom"
+
+
+def rename_conversation(thread_id: str, key: str) -> None:
+    title = clean_title(st.session_state.get(key, ""))
+    if title:
+        st.session_state.conversations[thread_id].title = title
+
+
+def ask_delete(thread_id: str) -> None:
+    st.session_state.confirm_delete = thread_id
+
+
+def delete_conversation(thread_id: str) -> None:
+    """Remove from this list only; the service keeps no user-facing delete operation."""
+    conversations = st.session_state.conversations
+    was_active = st.session_state.thread_id == thread_id
+    del conversations[thread_id]
+    st.session_state.pop("confirm_delete", None)
+    if was_active:
+        replacement = Conversation()
+        conversations[replacement.thread_id] = replacement
+        activate(replacement)
+
+
+def initialize_session() -> None:
+    """Migrate legacy sessions once, without adopting URL identities/history."""
+    try:
+        UUID(st.session_state.get("user_id", ""))
+    except (ValueError, TypeError, AttributeError):
+        st.session_state.user_id = str(uuid4())
+    if st.session_state.get("_tcc_ui_version") != SESSION_VERSION:
+        st.session_state.conversations = {}
+        # The home opens at its top: on a short screen Streamlit would otherwise start it at the
+        # bottom, hiding the figure and the greeting.
+        new_conversation()
+        for key in ("agent_client", "agent_id", "agent", "model", "pending_turn", "in_flight"):
+            st.session_state.pop(key, None)
+        st.session_state._tcc_ui_version = SESSION_VERSION
+    for key in ("agent", "agent_id", "thread_id", "user_id"):
+        if key in st.query_params:
+            del st.query_params[key]
+
+
+def recover_interrupted_turn() -> None:
+    """A run stopped mid-request cannot be resumed: say so instead of showing silence."""
+    if (turn := st.session_state.pop("in_flight", None)) is None:
+        return
+    conversation = st.session_state.conversations.get(turn["thread_id"])
+    answered = conversation is not None and conversation.messages[-1].type != "human"
+    if conversation is not None and not answered:
+        conversation.error = INTERRUPTED
+        conversation.failed_question = turn["question"]
+
+
+def start_turn(question: str) -> None:
+    # Several controls can fire before the same rerun (composer and "Tentar novamente"): the first
+    # question in flight wins and the others are not recorded, so nothing appears as asked
+    # without having been sent.
+    if "pending_turn" in st.session_state:
+        return
+    conversation = active_conversation()
+    if not conversation.messages:
+        conversation.title = title_from_question(question)
+    conversation.messages.append(ChatMessage(type="human", content=question))
+    conversation.error = conversation.failed_question = None
+    st.session_state.pending_turn = {"thread_id": conversation.thread_id, "question": question}
+
+
+def submit_composer() -> None:
+    if question := st.session_state.get("composer"):
+        start_turn(question)
+
+
+def retry_turn(thread_id: str) -> None:
+    if "pending_turn" in st.session_state:
+        return
+    conversation = st.session_state.conversations[thread_id]
+    question, conversation.failed_question = conversation.failed_question, None
+    conversation.error = None
+    st.session_state.pending_turn = {"thread_id": thread_id, "question": question}
+
+
+def current_theme() -> str:
+    return st.session_state.get("theme_mode", "system")
+
+
+def set_theme(mode: str) -> None:
+    st.session_state.theme_mode = mode
+
+
+def scroll_page(target: str) -> None:
+    """One placement at our own marker; a fresh script body forces it to execute.
+
+    Streamlit keeps its scroll container at the bottom while content grows, so the page is never
+    moved against that: only "top" (an empty conversation) and "bottom" are requested.
+
+    "bottom" moves the conversation's own scroll container to its end, so the new question and the
+    thinking figure sit above the pinned composer, whatever the reader's position was. Once at the
+    end, Streamlit follows the turn as it grows. Growth while the turn is being built is kept at
+    the end by the page script (keepTurnEnd in bridge.js), which yields to the reader's gestures.
+    """
+    anchors = {"top": "conversation-top", "bottom": "chat-bottom-anchor", "focus": None}
+    if target == "bottom":
+        placement = (
+            "const scroller = anchor && anchor.closest('section.stMain');\n"
+            "if (scroller) scroller.scrollTop = scroller.scrollHeight;\n"
+        )
+    else:
+        placement = "if (anchor) anchor.scrollIntoView({block: 'start'});\n"
+    components.html(
+        f"<script>/* {target} {uuid4()} */\n"
+        "const doc = window.parent.document;\n"
+        f"const anchor = doc.getElementById('{anchors[target] or ''}');\n"
+        f"{placement}"
+        "const touch = window.parent.matchMedia('(pointer: coarse)').matches;\n"
+        "const box = doc.querySelector('[data-testid=\"stChatInputTextArea\"]');\n"
+        "if (box && !box.disabled && !touch) box.focus({preventScroll: true});\n"
+        "</script>",
+        height=0,
+        scrolling=False,
+    )
+
+
+def agent_base_url() -> str:
+    return (
+        os.getenv("AGENT_URL")
+        or f"http://{os.getenv('HOST', 'localhost')}:{os.getenv('PORT', '8080')}"
+    ).rstrip("/")
+
+
+def render_sidebar(busy: bool) -> None:
+    with st.sidebar:
+        # The same Bisco as everywhere else, smiling, as a still picture; the UFPI mark is not used
+        # without a verified official source.
+        head = character_markup("happy", variant="chat", uid="brand")
+        st.markdown(
+            f'<div class="ufpi-brand">{head}<div class="ufpi-brand-text">'
+            f'<span class="ufpi-brand-name">{APP_NAME}</span>'
+            f'<span class="ufpi-brand-role">{APP_ROLE}</span></div></div>',
+            unsafe_allow_html=True,
+        )
+        st.button(
+            "Nova conversa",
+            key="new_conversation",
+            icon=":material/add:",
+            use_container_width=True,
+            disabled=busy,
+            on_click=new_conversation,
+        )
+        listed = [c for c in st.session_state.conversations.values() if c.messages]
+        if listed:
+            st.markdown('<p class="ufpi-section-label">Conversas</p>', unsafe_allow_html=True)
+        for conversation in reversed(listed):
+            render_conversation_row(conversation, busy)
+        if listed:
+            st.markdown(
+                f'<p class="ufpi-sidebar-note">{SESSION_NOTICE}</p>', unsafe_allow_html=True
+            )
+        render_theme_control(busy)
+
+
+def render_theme_control(busy: bool) -> None:
+    """Both directions exist; the stylesheet shows the one that leaves the current palette.
+
+    The server cannot know the system preference, and this is what lets it stay the default.
+    """
+    with st.container(key="theme_control"):
+        for mode, label, icon in (
+            ("dark", "Usar tema escuro", ":material/dark_mode:"),
+            ("light", "Usar tema claro", ":material/light_mode:"),
+        ):
+            st.button(
+                label,
+                key=f"theme_to_{mode}",
+                icon=icon,
+                disabled=busy,
+                on_click=set_theme,
+                args=(mode,),
+            )
+
+
+def render_conversation_row(conversation: Conversation, busy: bool) -> None:
+    thread_id = conversation.thread_id
+    is_active = thread_id == st.session_state.thread_id
+    state = "active" if is_active else "idle"
+    with st.container(key=f"conv_row_{thread_id}"):
+        title_column, menu_column = st.columns([5, 1], gap="small", vertical_alignment="center")
+        title_column.button(
+            escape_widget_label(conversation.title),
+            key=f"conv_open_{state}_{thread_id}",
+            use_container_width=True,
+            disabled=busy,
+            on_click=open_conversation,
+            args=(thread_id,),
+        )
+        with menu_column.container(key=f"conv_menu_{thread_id}"):
+            with st.popover(":material/more_horiz:", disabled=busy):
+                rename_key = f"conv_title_{thread_id}"
+                st.text_input(
+                    "Nome da conversa",
+                    value=conversation.title,
+                    key=rename_key,
+                    max_chars=RENAME_MAX_CHARACTERS,
+                    on_change=rename_conversation,
+                    args=(thread_id, rename_key),
+                )
+                if st.session_state.get("confirm_delete") == thread_id:
+                    st.button(
+                        "Confirmar exclusão",
+                        key=f"conv_delete_confirm_{thread_id}",
+                        use_container_width=True,
+                        on_click=delete_conversation,
+                        args=(thread_id,),
+                    )
+                else:
+                    st.button(
+                        "Excluir conversa",
+                        key=f"conv_delete_{thread_id}",
+                        use_container_width=True,
+                        on_click=ask_delete,
+                        args=(thread_id,),
+                    )
+
+
+def render_composer(busy: bool) -> None:
+    st.chat_input(PLACEHOLDER, key="composer", disabled=busy, on_submit=submit_composer)
+
+
+def render_empty_state(busy: bool) -> None:
+    with st.container(key="empty_state"):
+        st.markdown(
+            character_markup(
+                "happy",
+                variant="home",
+                uid="home",
+                label="Bisco, o assistente. Ativar para receber um cumprimento",
+                lead="home",
+                interactive=True,
+            ),
+            unsafe_allow_html=True,
+        )
+        greeting = APP_GREETING.replace(
+            APP_NAME, f'<span class="ufpi-name-gradient">{APP_NAME}</span>', 1
+        )
+        st.markdown(f'<h1 class="ufpi-greeting">{greeting}</h1>', unsafe_allow_html=True)
+        st.markdown(f'<p class="ufpi-empty-lead">{APP_LEAD}</p>', unsafe_allow_html=True)
+        # On the home the composer sits in the flow, right under the greeting.
+        with st.container(key="home_composer"):
+            render_composer(busy)
+
+
+def state_note(label: str, text: str = "", *, kind: str = "neutral") -> None:
+    st.caption(note_markup(label, text, kind), unsafe_allow_html=True)
+
+
+def render_sources(result, *, conclusive: bool = True) -> None:
+    if not result.references:
+        return
+    provenance = result.temporal_provenance
+    uncertified = frozenset(
+        state.chunk_id
+        for state in (provenance.evidence_states if provenance else ())
+        if state.normative_status == "desconhecida"
+    )
+    st.markdown(
+        sources_markup(
+            result.references,
+            domain=result.domain,
+            uncertified_chunks=uncertified,
+            conclusive=conclusive,
+        ),
+        unsafe_allow_html=True,
+    )
+
+
+def source_state(message: ChatMessage, history: list[ChatMessage]) -> str | None:
+    """A follow-up carries only its source's id, so the source's state is read from the history.
+
+    An answer that never reached this page, as after a failed delivery, cannot vouch for anything.
+    """
+    followup = message.grounded_followup_result
+    if followup is None:
+        return None
+    for earlier in history:
+        result = earlier.normative_result
+        if result is not None and result.correlation_id == followup.source_correlation_id:
+            return "inconclusive" if result.core_status == "fallback" else "conclusive"
+    return "unknown"
+
+
+def message_expression(message: ChatMessage, history: list[ChatMessage] = ()) -> str | None:
+    """The expression follows the typed state, never the wording, and never smiles at an answer:
+    a pleasant face must not read as a sign that the content was validated."""
+    if message.type == "human":
+        return None
+    normative = message.normative_result
+    if normative is not None and normative.status == "CLARIFICATION":
+        slot = "clarification"
+    elif (normative is not None and normative.status == "ERROR") or (
+        message.calculator_result is not None and message.calculator_result.status == "ERROR"
+    ):
+        slot = "error"
+    elif source_state(message, history) in ("inconclusive", "unknown") or (
+        normative is not None and normative.core_status in ("abstained", "fallback")
+    ):
+        slot = "abstained"
+    else:
+        slot = "neutral"
+    return slot
+
+
+def render_message(
+    message: ChatMessage, index: int, history: list[ChatMessage], *, lead: str | None = None
+) -> None:
+    """Content is presentation text; typed contracts alone select the renderer."""
+    with (
+        st.container(key=f"msg_{message.type}_{index}"),
+        st.chat_message(message.type),
+    ):
+        if message.type == "human":
+            st.text(message.content)
+            return
+        normative = message.normative_result
+        calculator = message.calculator_result
+        if normative is not None and normative.status == "CLARIFICATION":
+            state_note(CLARIFICATION_LABEL)
+        elif normative is not None and normative.core_status == "abstained":
+            state_note(ABSTENTION_LABEL, ABSTENTION_NOTICE)
+        elif normative is not None and normative.core_status == "fallback":
+            state_note(FALLBACK_LABEL, FALLBACK_NOTICE, kind="caution")
+        if normative is not None and normative.status == "ERROR":
+            st.warning(message.content)
+        elif calculator is not None and calculator.status == "ERROR":
+            st.warning(calculator.safe_message)
+        else:
+            # Its own block, so the page script can present a freshly received answer
+            # (presentation.js); the stored content is rendered whole, as for any other message.
+            with st.container(key=f"ans_{index}"):
+                st.markdown(literal_markdown(message.content))
+            st.markdown(copy_markup(message.content), unsafe_allow_html=True)
+        if normative is not None and normative.status == "ANSWER":
+            provenance = normative.temporal_provenance
+            if provenance is not None and provenance.temporal_intent == "historical":
+                state_note(HISTORICAL_LABEL, HISTORICAL_NOTICE)
+            render_sources(normative, conclusive=normative.core_status != "fallback")
+        elif (grounded := message.grounded_followup_result) is not None:
+            repeated = grounded.kind == "REPEAT" or grounded.guard_status == "FALLBACK_TO_SOURCE"
+            st.caption(
+                "Repetição da resposta normativa anterior."
+                if repeated
+                else "Reformulação baseada na resposta normativa anterior."
+            )
+            state = source_state(message, history)
+            if state == "inconclusive":
+                state_note(FALLBACK_LABEL, FALLBACK_NOTICE, kind="caution")
+            elif state == "unknown":
+                state_note(UNCONFIRMED_LABEL, UNCONFIRMED_NOTICE, kind="caution")
+            render_sources(grounded, conclusive=state == "conclusive")
+        st.markdown(
+            character_markup(
+                message_expression(message, history), variant="chat", uid=str(index), lead=lead
+            ),
+            unsafe_allow_html=True,
+        )
+
+
+def render_conversation(conversation: Conversation, busy: bool) -> None:
+    st.markdown('<div id="conversation-top"></div>', unsafe_allow_html=True)
+    if not conversation.messages:
+        render_empty_state(busy)
+    last_question = max(
+        (i for i, m in enumerate(conversation.messages) if m.type == "human"), default=None
+    )
+    for index, message in enumerate(conversation.messages):
+        if index == last_question:
+            st.markdown('<div id="last-turn"></div>', unsafe_allow_html=True)
+        # Only the newest answer is the figure the head travels to; older answers keep still.
+        newest = index == len(conversation.messages) - 1 and not busy
+        lead = f"{conversation.thread_id}-{index}" if newest else None
+        render_message(message, index, conversation.messages, lead=lead)
+        following = conversation.messages[index + 1 : index + 2]
+        if message.type == "human" and following and following[0].type == "human":
+            state_note(UNANSWERED_LABEL, UNANSWERED_NOTICE)
+    if busy:
+        st.markdown(
+            '<div class="ufpi-progress" role="status" aria-live="polite">'
+            f"{character_markup('thinking', variant='loading', uid='loading', lead='loading')}"
+            f'<span class="ufpi-progress-label">{PROGRESS}</span></div>',
+            unsafe_allow_html=True,
+        )
+    elif conversation.error:
+        with st.container(key="msg_ai_failure"), st.chat_message("ai"):
+            st.markdown(
+                character_markup(
+                    "error",
+                    variant="chat",
+                    uid="failure",
+                    lead=f"{conversation.thread_id}-failure",
+                ),
+                unsafe_allow_html=True,
+            )
+            st.error(conversation.error)
+        if conversation.failed_question:
+            st.button(
+                "Tentar novamente",
+                key="retry_turn",
+                on_click=retry_turn,
+                args=(conversation.thread_id,),
+            )
+    st.markdown('<div id="chat-bottom-anchor"></div>', unsafe_allow_html=True)
+
+
+async def receive_message(events: AsyncGenerator[ChatMessage | str, None]) -> ChatMessage:
+    """The integrated stream contains one complete AI message; DONE is client-owned."""
+    final = None
+    async for event in events:
+        if not isinstance(event, ChatMessage) or event.type != "ai" or final is not None:
+            raise ValueError("Unexpected integrated stream payload.")
+        # Revalidate even constructed instances before retaining/displaying a payload.
+        final = ChatMessage.model_validate(event.model_dump())
+    if final is None:
+        raise ValueError("Missing integrated response.")
+    return final
+
+
+def safe_service_error(error: Exception) -> str:
+    """Read HTTP status through the existing client's chained exception, never its text."""
+    seen = set()
+    current = error
+    while current is not None and id(current) not in seen:
+        seen.add(id(current))
+        if isinstance(current, TimeoutError):
+            return TIMED_OUT
+        if isinstance(current, UNREACHABLE_ERRORS):
+            return UNAVAILABLE
+        if isinstance(current, httpx.TransportError):
+            return CONNECTION_LOST
+        if isinstance(current, httpx.HTTPStatusError):
+            status = current.response.status_code
+            if status in UNAVAILABLE_STATUSES:
+                return UNAVAILABLE
+            if status >= 500:
+                return INTERNAL_ERROR
+        current = current.__cause__ or current.__context__
+    return REQUEST_ERROR
+
+
+async def process_pending_turn(client: AgentClient) -> None:
+    turn = st.session_state.pop("pending_turn")
+    st.session_state.in_flight = turn
+    conversation = st.session_state.conversations[turn["thread_id"]]
+    scroll_page("bottom")
+    try:
+        async with asyncio.timeout(RESPONSE_TIMEOUT_SECONDS):
+            response = await receive_message(
+                client.astream(
+                    message=turn["question"],
+                    thread_id=conversation.thread_id,
+                    user_id=st.session_state.user_id,
+                )
+            )
+        conversation.messages.append(response)
+    except Exception as error:
+        # The public UI boundary also handles malformed transport payloads safely.
+        conversation.error = safe_service_error(error)
+        conversation.failed_question = turn["question"]
+    st.session_state.pop("in_flight", None)
+    st.session_state.scroll_target = "focus"
+    st.rerun()
 
 
 async def main() -> None:
-    st.set_page_config(
-        page_title=APP_TITLE,
-        page_icon=APP_ICON,
-        menu_items={},
-    )
+    st.set_page_config(page_title=APP_TITLE, page_icon=FAVICON, menu_items={})
+    load_dotenv(dotenv_path=Path.cwd() / ".env")
+    initialize_session()
+    recover_interrupted_turn()
+    with st.container(key="ufpi_style"):
+        st.markdown(stylesheet(current_theme()), unsafe_allow_html=True)
+    # Second element on every screen: Streamlit identifies elements by position, so the page script
+    # survives every rerun only if nothing that varies is rendered before it.
+    scripts = st.container(key="ufpi_scripts")
+    with scripts:
+        components.html(f"<script>{BRIDGE_SCRIPT}</script>", height=0, scrolling=False)
 
-    # Hide the streamlit upper-right chrome
-    st.html(
-        """
-        <style>
-        [data-testid="stStatusWidget"] {
-                visibility: hidden;
-                height: 0%;
-                position: fixed;
-            }
-        </style>
-        """,
-    )
-    if st.get_option("client.toolbarMode") != "minimal":
-        st.set_option("client.toolbarMode", "minimal")
-        await asyncio.sleep(0.1)
-        st.rerun()
-
-    # Get or create user ID
-    user_id = get_or_create_user_id()
+    busy = "pending_turn" in st.session_state
+    render_sidebar(busy)
 
     if "agent_client" not in st.session_state:
-        load_dotenv()
-        agent_url = os.getenv("AGENT_URL")
-        if not agent_url:
-            host = os.getenv("HOST", "0.0.0.0")
-            port = os.getenv("PORT", 8080)
-            agent_url = f"http://{host}:{port}"
-        try:
-            with st.spinner("Connecting to agent service..."):
-                st.session_state.agent_client = AgentClient(base_url=agent_url)
-        except AgentClientError as e:
-            st.error(f"Error connecting to agent service at {agent_url}: {e}")
-            st.markdown("The service might be booting up. Try again in a few seconds.")
-            st.stop()
-    agent_client: AgentClient = st.session_state.agent_client
+        agent_url = agent_base_url()
+        # Skip /info default selection: requests always name the integrated agent.
+        st.session_state.agent_client = AgentClient(base_url=agent_url, get_info=False)
+    client: AgentClient = st.session_state.agent_client
+    client.update_agent(TCC_AGENT_ID, verify=False)
 
-    if "thread_id" not in st.session_state:
-        thread_id = st.query_params.get("thread_id")
-        if not thread_id:
-            thread_id = str(uuid.uuid4())
-            messages = []
-        else:
-            try:
-                messages: ChatHistory = agent_client.get_history(thread_id=thread_id).messages
-            except AgentClientError:
-                st.error("No message history found for this Thread ID.")
-                messages = []
-        st.session_state.messages = messages
-        st.session_state.thread_id = thread_id
+    render_conversation(active_conversation(), busy)
+    if active_conversation().messages:
+        # In a conversation the composer is pinned under the messages.
+        render_composer(busy)
+    st._bottom.markdown(
+        f'<p class="ufpi-research-notice">{RESEARCH_NOTICE}</p>', unsafe_allow_html=True
+    )
 
-    # Config options
-    with st.sidebar:
-        st.header(f"{APP_ICON} {APP_TITLE}")
-
-        ""
-        "Full toolkit for running an AI agent service built with LangGraph, FastAPI and Streamlit"
-        ""
-
-        if st.button(":material/chat: New Chat", use_container_width=True):
-            st.session_state.messages = []
-            st.session_state.thread_id = str(uuid.uuid4())
-            st.rerun()
-
-        with st.popover(":material/settings: Settings", use_container_width=True):
-            model_idx = agent_client.info.models.index(agent_client.info.default_model)
-            model = st.selectbox("LLM to use", options=agent_client.info.models, index=model_idx)
-            agent_list = [a.key for a in agent_client.info.agents]
-            agent_idx = agent_list.index(agent_client.info.default_agent)
-            agent_client.agent = st.selectbox(
-                "Agent to use",
-                options=agent_list,
-                index=agent_idx,
-            )
-            use_streaming = st.toggle("Stream results", value=True)
-
-            # Display user ID (for debugging or user information)
-            st.text_input("User ID (read-only)", value=user_id, disabled=True)
-
-        @st.dialog("Architecture")
-        def architecture_dialog() -> None:
-            st.image(
-                "https://github.com/JoshuaC215/agent-service-toolkit/blob/main/media/agent_architecture.png?raw=true"
-            )
-            "[View full size on Github](https://github.com/JoshuaC215/agent-service-toolkit/blob/main/media/agent_architecture.png)"
-            st.caption(
-                "App hosted on [Streamlit Cloud](https://share.streamlit.io/) with FastAPI service running in [Azure](https://learn.microsoft.com/en-us/azure/app-service/)"
-            )
-
-        if st.button(":material/schema: Architecture", use_container_width=True):
-            architecture_dialog()
-
-        with st.popover(":material/policy: Privacy", use_container_width=True):
-            st.write(
-                "Prompts, responses and feedback in this app are anonymously recorded and saved to LangSmith for product evaluation and improvement purposes only."
-            )
-
-        @st.dialog("Share/resume chat")
-        def share_chat_dialog() -> None:
-            session = st.runtime.get_instance()._session_mgr.list_active_sessions()[0]
-            st_base_url = urllib.parse.urlunparse(
-                [session.client.request.protocol, session.client.request.host, "", "", "", ""]
-            )
-            # if it's not localhost, switch to https by default
-            if not st_base_url.startswith("https") and "localhost" not in st_base_url:
-                st_base_url = st_base_url.replace("http", "https")
-            # Include both thread_id and user_id in the URL for sharing to maintain user identity
-            chat_url = (
-                f"{st_base_url}?thread_id={st.session_state.thread_id}&{USER_ID_COOKIE}={user_id}"
-            )
-            st.markdown(f"**Chat URL:**\n```text\n{chat_url}\n```")
-            st.info("Copy the above URL to share or revisit this chat")
-
-        if st.button(":material/upload: Share/resume chat", use_container_width=True):
-            share_chat_dialog()
-
-        "[View the source code](https://github.com/JoshuaC215/agent-service-toolkit)"
-        st.caption(
-            "Made with :material/favorite: by [Joshua](https://www.linkedin.com/in/joshua-k-carroll/) in Oakland"
-        )
-
-    # Draw existing messages
-    messages: list[ChatMessage] = st.session_state.messages
-
-    if len(messages) == 0:
-        match agent_client.agent:
-            case "chatbot":
-                WELCOME = "Hello! I'm a simple chatbot. Ask me anything!"
-            case "interrupt-agent":
-                WELCOME = "Hello! I'm an interrupt agent. Tell me your birthday and I will predict your personality!"
-            case "research-assistant":
-                WELCOME = "Hello! I'm an AI-powered research assistant with web search and a calculator. Ask me anything!"
-            case "rag-assistant":
-                WELCOME = """Hello! I'm an AI-powered Company Policy & HR assistant with access to AcmeTech's Employee Handbook.
-                I can help you find information about benefits, remote work, time-off policies, company values, and more. Ask me anything!"""
-            case "chatbot_ufpi":
-                WELCOME = """Olá! Sou o **Assistente Acadêmico Virtual da UFPI** 🎓
-
-Sou especialista no **Regulamento Geral da Graduação (RGG)** da UFPI. Posso esclarecer dúvidas sobre normas acadêmicas do RGG
-Pergunte-me qualquer dúvida sobre o RGG!"""
-            case "chatbot_ufpi_v2":
-                WELCOME = """Olá! Sou o **Assistente Acadêmico Virtual da UFPI** 🎓
-
-Sou especialista no **Regulamento Geral da Graduação (RGG)** da UFPI. Posso esclarecer dúvidas sobre normas acadêmicas do RGG
-Pergunte-me qualquer dúvida sobre o RGG!"""
-            case _:
-                WELCOME = ""
-
-        with st.chat_message("ai"):
-            st.write(WELCOME)
-
-    # draw_messages() expects an async iterator over messages
-    async def amessage_iter() -> AsyncGenerator[ChatMessage, None]:
-        for m in messages:
-            yield m
-
-    await draw_messages(amessage_iter())
-
-    # Generate new message if the user provided new input
-    if user_input := st.chat_input():
-        messages.append(ChatMessage(type="human", content=user_input))
-        st.chat_message("human").write(user_input)
-        try:
-            if use_streaming:
-                stream = agent_client.astream(
-                    message=user_input,
-                    model=model,
-                    thread_id=st.session_state.thread_id,
-                    user_id=user_id,
-                )
-                await draw_messages(stream, is_new=True)
-            else:
-                response = await agent_client.ainvoke(
-                    message=user_input,
-                    model=model,
-                    thread_id=st.session_state.thread_id,
-                    user_id=user_id,
-                )
-                messages.append(response)
-                st.chat_message("ai").write(response.content)
-            st.rerun()  # Clear stale containers
-        except AgentClientError as e:
-            st.error(f"Error generating response: {e}")
-            st.stop()
-
-    # If messages have been generated, show feedback widget
-    if len(messages) > 0 and st.session_state.last_message:
-        with st.session_state.last_message:
-            await handle_feedback()
-
-
-async def draw_messages(
-    messages_agen: AsyncGenerator[ChatMessage | str, None],
-    is_new: bool = False,
-) -> None:
-    """
-    Draws a set of chat messages - either replaying existing messages
-    or streaming new ones.
-
-    This function has additional logic to handle streaming tokens and tool calls.
-    - Use a placeholder container to render streaming tokens as they arrive.
-    - Use a status container to render tool calls. Track the tool inputs and outputs
-      and update the status container accordingly.
-
-    The function also needs to track the last message container in session state
-    since later messages can draw to the same container. This is also used for
-    drawing the feedback widget in the latest chat message.
-
-    Args:
-        messages_aiter: An async iterator over messages to draw.
-        is_new: Whether the messages are new or not.
-    """
-
-    # Keep track of the last message container
-    last_message_type = None
-    st.session_state.last_message = None
-
-    # Placeholder for intermediate streaming tokens
-    streaming_content = ""
-    streaming_placeholder = None
-
-    # Iterate over the messages and draw them
-    while msg := await anext(messages_agen, None):
-        # str message represents an intermediate token being streamed
-        if isinstance(msg, str):
-            # If placeholder is empty, this is the first token of a new message
-            # being streamed. We need to do setup.
-            if not streaming_placeholder:
-                if last_message_type != "ai":
-                    last_message_type = "ai"
-                    st.session_state.last_message = st.chat_message("ai")
-                with st.session_state.last_message:
-                    streaming_placeholder = st.empty()
-
-            streaming_content += msg
-            streaming_placeholder.write(streaming_content)
-            continue
-        if not isinstance(msg, ChatMessage):
-            st.error(f"Unexpected message type: {type(msg)}")
-            st.write(msg)
-            st.stop()
-
-        match msg.type:
-            # A message from the user, the easiest case
-            case "human":
-                last_message_type = "human"
-                st.chat_message("human").write(msg.content)
-
-            # A message from the agent is the most complex case, since we need to
-            # handle streaming tokens and tool calls.
-            case "ai":
-                # If we're rendering new messages, store the message in session state
-                if is_new:
-                    st.session_state.messages.append(msg)
-
-                # If the last message type was not AI, create a new chat message
-                if last_message_type != "ai":
-                    last_message_type = "ai"
-                    st.session_state.last_message = st.chat_message("ai")
-
-                with st.session_state.last_message:
-                    # If the message has content, write it out.
-                    # Reset the streaming variables to prepare for the next message.
-                    if msg.content:
-                        if streaming_placeholder:
-                            streaming_placeholder.write(msg.content)
-                            streaming_content = ""
-                            streaming_placeholder = None
-                        else:
-                            st.write(msg.content)
-
-                    if msg.tool_calls:
-                        # Create a status container for each tool call and store the
-                        # status container by ID to ensure results are mapped to the
-                        # correct status container.
-                        call_results = {}
-                        for tool_call in msg.tool_calls:
-                            status = st.status(
-                                f"""Tool Call: {tool_call["name"]}""",
-                                state="running" if is_new else "complete",
-                            )
-                            call_results[tool_call["id"]] = status
-                            status.write("Input:")
-                            status.write(tool_call["args"])
-
-                        # Expect one ToolMessage for each tool call.
-                        for tool_call in msg.tool_calls:
-                            if "transfer_to" in tool_call["name"]:
-                                await handle_agent_msgs(messages_agen, call_results, is_new)
-                                break
-                            tool_result: ChatMessage = await anext(messages_agen)
-
-                            if tool_result.type != "tool":
-                                st.error(f"Unexpected ChatMessage type: {tool_result.type}")
-                                st.write(tool_result)
-                                st.stop()
-
-                            # Record the message if it's new, and update the correct
-                            # status container with the result
-                            if is_new:
-                                st.session_state.messages.append(tool_result)
-                            if tool_result.tool_call_id:
-                                status = call_results[tool_result.tool_call_id]
-                            status.write("Output:")
-                            status.write(tool_result.content)
-                            status.update(state="complete")
-
-            case "custom":
-                # CustomData example used by the bg-task-agent
-                # See:
-                # - src/agents/utils.py CustomData
-                # - src/agents/bg_task_agent/task.py
-                try:
-                    task_data: TaskData = TaskData.model_validate(msg.custom_data)
-                except ValidationError:
-                    st.error("Unexpected CustomData message received from agent")
-                    st.write(msg.custom_data)
-                    st.stop()
-
-                if is_new:
-                    st.session_state.messages.append(msg)
-
-                if last_message_type != "task":
-                    last_message_type = "task"
-                    st.session_state.last_message = st.chat_message(
-                        name="task", avatar=":material/manufacturing:"
-                    )
-                    with st.session_state.last_message:
-                        status = TaskDataStatus()
-
-                status.add_and_draw_task_data(task_data)
-
-            # In case of an unexpected message type, log an error and stop
-            case _:
-                st.error(f"Unexpected ChatMessage type: {msg.type}")
-                st.write(msg)
-                st.stop()
-
-
-async def handle_feedback() -> None:
-    """Draws a feedback widget and records feedback from the user."""
-
-    # Keep track of last feedback sent to avoid sending duplicates
-    if "last_feedback" not in st.session_state:
-        st.session_state.last_feedback = (None, None)
-
-    latest_run_id = st.session_state.messages[-1].run_id
-    feedback = st.feedback("stars", key=latest_run_id)
-
-    # If the feedback value or run ID has changed, send a new feedback record
-    if feedback is not None and (latest_run_id, feedback) != st.session_state.last_feedback:
-        # Normalize the feedback value (an index) to a score between 0 and 1
-        normalized_score = (feedback + 1) / 5.0
-
-        agent_client: AgentClient = st.session_state.agent_client
-        try:
-            await agent_client.acreate_feedback(
-                run_id=latest_run_id,
-                key="human-feedback-stars",
-                score=normalized_score,
-                kwargs={"comment": "In-line human feedback"},
-            )
-        except AgentClientError as e:
-            st.error(f"Error recording feedback: {e}")
-            st.stop()
-        st.session_state.last_feedback = (latest_run_id, feedback)
-        st.toast("Feedback recorded", icon=":material/reviews:")
-
-
-async def handle_agent_msgs(messages_agen, call_results, is_new):
-    """
-    This function segregates agent output into a status container.
-    It handles all messages after the initial tool call message
-    until it reaches the final AI message.
-    """
-    nested_popovers = {}
-    # looking for the Success tool call message
-    first_msg = await anext(messages_agen)
-    if is_new:
-        st.session_state.messages.append(first_msg)
-    status = call_results.get(getattr(first_msg, "tool_call_id", None))
-    # Process first message
-    if status and first_msg.content:
-        status.write(first_msg.content)
-        # Continue reading until finish_reason='stop'
-    while True:
-        # Check for completion on current message
-        finish_reason = getattr(first_msg, "response_metadata", {}).get("finish_reason")
-        # Break out of status container if finish_reason is anything other than "tool_calls"
-        if finish_reason is not None and finish_reason != "tool_calls":
-            if status:
-                status.update(state="complete")
-            break
-        # Read next message
-        sub_msg = await anext(messages_agen)
-        # this should only happen is skip_stream flag is removed
-        # if isinstance(sub_msg, str):
-        #     continue
-        if is_new:
-            st.session_state.messages.append(sub_msg)
-
-        if sub_msg.type == "tool" and sub_msg.tool_call_id in nested_popovers:
-            popover = nested_popovers[sub_msg.tool_call_id]
-            popover.write("**Output:**")
-            popover.write(sub_msg.content)
-            first_msg = sub_msg
-            continue
-        # Display content and tool calls using the same status
-        if status:
-            if sub_msg.content:
-                status.write(sub_msg.content)
-            if hasattr(sub_msg, "tool_calls") and sub_msg.tool_calls:
-                for tc in sub_msg.tool_calls:
-                    popover = status.popover(f"{tc['name']}", icon="🛠️")
-                    popover.write(f"**Tool:** {tc['name']}")
-                    popover.write("**Input:**")
-                    popover.write(tc["args"])
-                    # Store the popover reference using the tool call ID
-                    nested_popovers[tc["id"]] = popover
-        # Update first_msg for next iteration
-        first_msg = sub_msg
+    with scripts:
+        if busy:
+            await process_pending_turn(client)
+        elif target := st.session_state.pop("scroll_target", None):
+            scroll_page(target)
 
 
 if __name__ == "__main__":

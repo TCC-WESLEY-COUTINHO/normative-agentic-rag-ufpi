@@ -1,0 +1,54 @@
+..FFF.................                                                   [100%]
+================================== FAILURES ===================================
+_______ test_normative_exact_content_typed_sources_and_rerun[accepted] ________
+tests\app\test_tcc_ui.py:186: in test_normative_exact_content_typed_sources_and_rerun
+    assert at.chat_message[-1].markdown[0].value == message.content
+E   AssertionError: assert 'Resposta com...exto intacto!' == '  Resposta c...to intacto!  '
+E     
+E     -   Resposta com art. 999.
+E     ? --
+E     + Resposta com art. 999.
+E     - Texto intacto!  
+E     ?               --
+E     + Texto intacto!
+---------------------------- Captured stderr call -----------------------------
+2026-11-01 15:36:49.969 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+______ test_normative_exact_content_typed_sources_and_rerun[regenerated] ______
+tests\app\test_tcc_ui.py:186: in test_normative_exact_content_typed_sources_and_rerun
+    assert at.chat_message[-1].markdown[0].value == message.content
+E   AssertionError: assert 'Resposta com...exto intacto!' == '  Resposta c...to intacto!  '
+E     
+E     -   Resposta com art. 999.
+E     ? --
+E     + Resposta com art. 999.
+E     - Texto intacto!  
+E     ?               --
+E     + Texto intacto!
+---------------------------- Captured stderr call -----------------------------
+2026-11-01 15:36:50.001 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+_______ test_normative_exact_content_typed_sources_and_rerun[fallback] ________
+tests\app\test_tcc_ui.py:186: in test_normative_exact_content_typed_sources_and_rerun
+    assert at.chat_message[-1].markdown[0].value == message.content
+E   AssertionError: assert 'Resposta com...exto intacto!' == '  Resposta c...to intacto!  '
+E     
+E     -   Resposta com art. 999.
+E     ? --
+E     + Resposta com art. 999.
+E     - Texto intacto!  
+E     ?               --
+E     + Texto intacto!
+---------------------------- Captured stderr call -----------------------------
+2026-11-01 15:36:50.029 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+============================== warnings summary ===============================
+tests/app/test_tcc_ui.py::test_invalid_multiple_typed_results_rejected_by_existing_schema
+  code\.venv\Lib\site-packages\pydantic\main.py:426: UserWarning: Pydantic serializer warnings:
+    Expected `NormativeToolResult` but got `dict` with value `{'contract_version': '1',...e, 'safe_message': None}` - serialized value may not be as expected
+    Expected `CalculatorToolResult` but got `dict` with value `{'contract_version': '1',...e, 'safe_message': None}` - serialized value may not be as expected
+    return self.__pydantic_serializer__.to_python(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/app/test_tcc_ui.py::test_normative_exact_content_typed_sources_and_rerun[accepted]
+FAILED tests/app/test_tcc_ui.py::test_normative_exact_content_typed_sources_and_rerun[regenerated]
+FAILED tests/app/test_tcc_ui.py::test_normative_exact_content_typed_sources_and_rerun[fallback]
+3 failed, 19 passed, 1 warning in 1.50s

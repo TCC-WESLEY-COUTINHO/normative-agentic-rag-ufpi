@@ -1,0 +1,239 @@
+{
+  "confirmatory": false,
+  "accepted_fix_commit": "71bff32853e125ba2aed6b25e9117760a84b2eb5",
+  "cases": [
+    {
+      "case_id": "TEMP-POS-003",
+      "condition": "D",
+      "question": "A Resolução 658/2024 ainda pode reger hoje a pós-graduação da UFPI ou foi revogada? Qual ato e dispositivo estabelecem isso?",
+      "before": {
+        "router_output": {
+          "scope": null,
+          "needs_clarification": true,
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "reason_code": "ambiguous_academic_level"
+        },
+        "final_ids": [],
+        "answer": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?"
+      },
+      "after": {
+        "router_output": {
+          "scope": null,
+          "needs_clarification": true,
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "reason_code": "ambiguous_academic_level"
+        },
+        "final_ids": [],
+        "answer": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?"
+      },
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "case_id": "TEMP-POS-004",
+      "condition": "D",
+      "question": "Como era o prazo mínimo para divulgar a defesa na 658/2024 e como é na 956/2025, na pós-graduação da UFPI?",
+      "before": {
+        "router_output": {
+          "scope": null,
+          "needs_clarification": true,
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "reason_code": "ambiguous_academic_level"
+        },
+        "final_ids": [],
+        "answer": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?"
+      },
+      "after": {
+        "router_output": {
+          "scope": "pos_graduacao",
+          "needs_clarification": false,
+          "clarification_question": null,
+          "reason_code": "explicit_pos"
+        },
+        "final_ids": [
+          "ufpi-956-2025-art-53-idx-000051",
+          "ufpi-658-2024-art-43-idx-000042",
+          "ufpi-956-2025-art-52-idx-000050",
+          "ufpi-658-2024-art-67-idx-000066",
+          "ufpi-956-2025-art-35-idx-000033"
+        ],
+        "answer": "Na Resolução CEPEX/UFPI nº 658/2024, o prazo mínimo para divulgação da defesa é de sete dias de antecedência (Art. 43).\n\nNa Resolução CEPEX/UFPI nº 956/2025, o prazo mínimo para divulgação da defesa é de dez dias de antecedência (Art. 53)."
+      },
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "case_id": "TEMP-GRAD-005",
+      "condition": "D",
+      "question": "No art. 68, §4º da 177/2012, a redação que vale hoje na graduação da UFPI admite coordenador de estágio sem vínculo com a instituição nas condições previstas para programas institucionais, ou exige sempre professor efetivo?",
+      "before": {
+        "router_output": {
+          "scope": null,
+          "needs_clarification": true,
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "reason_code": "ambiguous_academic_level"
+        },
+        "final_ids": [],
+        "answer": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?"
+      },
+      "after": {
+        "router_output": {
+          "scope": null,
+          "needs_clarification": true,
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "reason_code": "ambiguous_academic_level"
+        },
+        "final_ids": [],
+        "answer": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?"
+      },
+      "expected_scope": "graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "case_id": "TEMP-GRAD-001",
+      "condition": "D",
+      "question": "Qual é a regra vigente do art. 68, §4º da graduação da UFPI para designar o coordenador de estágio em cursos de programas institucionais com docentes selecionados por edital, sem vínculo com a UFPI?",
+      "before": {
+        "router_output": {
+          "scope": "graduacao",
+          "needs_clarification": false,
+          "clarification_question": null,
+          "reason_code": "explicit_graduacao"
+        },
+        "final_ids": [
+          "ufpi-1056-2026-art-1-idx-000000",
+          "ufpi-177-2012-art-68-idx-000067",
+          "ufpi-177-2012-art-65-idx-000064",
+          "ufpi-177-2012-art-87-idx-000086",
+          "ufpi-177-2012-art-88-idx-000087"
+        ],
+        "answer": "A regra vigente do art. 68, § 4º, da Resolução nº 177/2012 CEPEX/UFPI, alterada pela Resolução CEPEX/UFPI nº 1.056/2026, para a designação do coordenador de estágio em cursos de programas institucionais com docentes selecionados por edital, sem vínculo com a UFPI, é a seguinte:\n\nO coordenador de estágio do curso poderá ser designado dentre os docentes selecionados para atuação no respectivo curso, independentemente de seu vínculo com a UFPI, hipótese em que o coordenador poderá ser designado dentre os docentes selecionados para atuação no respectivo curso, independentemente de seu vínculo com a UFPI.\n\n**Fonte:** Art. 68, § 4º, da Resolução nº 177/2012 CEPEX/UFPI, com alteração pelo Art. 1º da Resolução CEPEX/UFPI nº 1.056/2026."
+      },
+      "after": {
+        "router_output": {
+          "scope": "graduacao",
+          "needs_clarification": false,
+          "clarification_question": null,
+          "reason_code": "explicit_graduacao"
+        },
+        "final_ids": [
+          "ufpi-1056-2026-art-1-idx-000000",
+          "ufpi-177-2012-art-68-idx-000067",
+          "ufpi-177-2012-art-65-idx-000064",
+          "ufpi-177-2012-art-87-idx-000086",
+          "ufpi-177-2012-art-88-idx-000087"
+        ],
+        "answer": "A regra vigente do art. 68, § 4º, da Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação, conforme alterada pelo art. 1º da Resolução CEPEX/UFPI nº 1.056/2026, estabelece que, nos cursos ofertados no âmbito de políticas públicas ou programas institucionais de formação superior cuja composição do corpo docente seja realizada mediante processo seletivo disciplinado em edital específico, o coordenador de estágio do curso poderá ser designado dentre os docentes selecionados para atuação no respectivo curso, independentemente de seu vínculo com a UFPI.\n\nFonte: Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus), Art. 68, § 4º."
+      },
+      "expected_scope": "graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "case_id": "TEMP-GRAD-002",
+      "condition": "D",
+      "question": "Como era a redação do art. 68, §4º da Resolução 177/2012 no regulamento da graduação atualizado em 2023, antes da alteração de 2026?",
+      "before": {
+        "router_output": {
+          "scope": "graduacao",
+          "needs_clarification": false,
+          "clarification_question": null,
+          "reason_code": "explicit_graduacao"
+        },
+        "final_ids": [
+          "ufpi-177-2012-art-388-idx-000375",
+          "ufpi-177-2012-art-307-idx-000305",
+          "ufpi-177-2012-art-226-idx-000224",
+          "ufpi-177-2012-art-385-idx-000372",
+          "ufpi-177-2012-art-305-idx-000303"
+        ],
+        "answer": "Não há evidência nos trechos fornecidos sobre a redação do art. 68, §4º da Resolução nº 177/2012, nem sobre alterações posteriores à sua vigência, incluindo eventuais modificações em 2026. Os trechos apresentados não mencionam o art. 68 nem seu parágrafo 4º, tampouco indicam qualquer alteração desse dispositivo em 2026.\n\nAlém disso, a Resolução nº 177/2012, que é a norma vigente no contexto apresentado, não foi alterada por meio de uma resolução de 2026, conforme indicado pela ausência de qualquer menção a tal alteração nos trechos recuperados.\n\nPortanto, **não é possível responder à pergunta com base nos trechos fornecidos**, devido à **insuficiência de evidência** sobre o conteúdo do art. 68, §4º da Resolução nº 177/2012, nem sobre alterações posteriores."
+      },
+      "after": {
+        "router_output": {
+          "scope": "graduacao",
+          "needs_clarification": false,
+          "clarification_question": null,
+          "reason_code": "explicit_graduacao"
+        },
+        "final_ids": [
+          "ufpi-177-2012-art-388-idx-000375",
+          "ufpi-177-2012-art-307-idx-000305",
+          "ufpi-177-2012-art-226-idx-000224",
+          "ufpi-177-2012-art-385-idx-000372",
+          "ufpi-177-2012-art-305-idx-000303"
+        ],
+        "answer": "Não há evidência nos trechos fornecidos sobre a redação do art. 68, §4º da Resolução nº 177/2012 CEPEX/UFPI, nem sobre alterações posteriores à sua vigência, incluindo mudanças ocorridas em 2026. Os trechos disponíveis não mencionam o art. 68 nem seu parágrafo 4º, tampouco indicam qualquer alteração legislativa posterior à Resolução 177/2012 que tenha impactado esse dispositivo.\n\nAlém disso, a Resolução 177/2012 foi revogada parcialmente por outras normas, como a Resolução nº 089/2018-CEPEX (citada no Art. 226), mas não há menção a alterações no art. 68, §4º.\n\nPortanto, **não há suficiente evidência para responder à pergunta sobre a redação do art. 68, §4º da Resolução 177/2012 antes da alteração de 2026**, com base apenas nos trechos fornecidos."
+      },
+      "expected_scope": "graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "case_id": "TEMP-POS-001",
+      "condition": "D",
+      "question": "Na pós-graduação da UFPI, com qual antecedência mínima a defesa de dissertação ou tese deve ser divulgada atualmente?",
+      "before": {
+        "router_output": {
+          "scope": "pos_graduacao",
+          "needs_clarification": false,
+          "clarification_question": null,
+          "reason_code": "explicit_pos"
+        },
+        "final_ids": [
+          "ufpi-956-2025-art-52-idx-000050",
+          "ufpi-956-2025-art-53-idx-000051",
+          "ufpi-956-2025-art-54-idx-000052",
+          "ufpi-956-2025-art-56-idx-000054",
+          "ufpi-956-2025-art-55-idx-000053"
+        ],
+        "answer": "Na pós-graduação da UFPI, a defesa de dissertação ou tese deve ser divulgada com antecedência mínima de dez dias.\n\n**Fonte:** Resolução CEPEX/UFPI nº 956/2025, Capítulo VI - Dos Exames e da Defesa de Dissertação ou Tese, Art. 53, § 1º."
+      },
+      "after": {
+        "router_output": {
+          "scope": "pos_graduacao",
+          "needs_clarification": false,
+          "clarification_question": null,
+          "reason_code": "explicit_pos"
+        },
+        "final_ids": [
+          "ufpi-956-2025-art-52-idx-000050",
+          "ufpi-956-2025-art-53-idx-000051",
+          "ufpi-956-2025-art-54-idx-000052",
+          "ufpi-956-2025-art-56-idx-000054",
+          "ufpi-956-2025-art-55-idx-000053"
+        ],
+        "answer": "A defesa de dissertação ou tese na pós-graduação da UFPI deve ser divulgada com antecedência mínima de dez dias.\n\nFonte: Resolução CEPEX/UFPI nº 956/2025, Art. 53."
+      },
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "case_id": "TEMP-GRAD-002",
+      "condition": "B",
+      "question": "Como era a redação do art. 68, §4º da Resolução 177/2012 no regulamento da graduação atualizado em 2023, antes da alteração de 2026?",
+      "before": {
+        "router_output": null,
+        "final_ids": [
+          "ufpi-956-2025-art-62-idx-000060",
+          "ufpi-658-2024-art-66-idx-000065",
+          "ufpi-177-2012-art-388-idx-000375",
+          "ufpi-177-2012-art-307-idx-000305",
+          "ufpi-177-2012-art-226-idx-000224"
+        ],
+        "answer": "Não há evidência nos trechos fornecidos sobre a redação do **Art. 68, §4º** da **Resolução nº 177/2012/CEPEX**, nem sobre qualquer alteração posterior em 2026. O trecho referente ao Art. 68 não está presente nos documentos recuperados, tampouco há menção a alterações desse dispositivo em 2026.\n\nAlém disso, o **Art. 226** está explicitamente **revogado pela Resolução nº 089/2018-CEPEX**, mas isso não se aplica ao Art. 68, §4º.\n\nPortanto, **não é possível responder à pergunta com base nos trechos normativos fornecidos**, pois **falta evidência sobre o conteúdo do Art. 68, §4º da Resolução 177/2012**, nem sobre sua alteração em 2026.\n\n**Conclusão:** Insuficiência de evidência para responder."
+      },
+      "after": {
+        "router_output": null,
+        "final_ids": [
+          "ufpi-956-2025-art-62-idx-000060",
+          "ufpi-658-2024-art-66-idx-000065",
+          "ufpi-177-2012-art-388-idx-000375",
+          "ufpi-177-2012-art-307-idx-000305",
+          "ufpi-177-2012-art-226-idx-000224"
+        ],
+        "answer": "Não há evidência nos trechos fornecidos sobre a redação do art. 68, §4º da Resolução nº 177/2012/CEPEX no regulamento da graduação atualizado em 2023, antes da alteração de 2026. Os trechos disponíveis não mencionam o art. 68 nem seu parágrafo 4º, nem indicam qualquer alteração ou redação anterior desse dispositivo. \n\nPortanto, **não é possível responder com base nos trechos normativos fornecidos**."
+      },
+      "expected_scope": "graduacao",
+      "expected_action": "responder"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+data: {"type": "message", "content": {"type": "ai", "content": "Ol\u00e1!", "normative_result": null, "grounded_followup_result": null, "calculator_result": null, "tool_calls": [], "tool_call_id": null, "run_id": "0ad0e49e-16ba-4b71-b331-9f697033c1b5", "response_metadata": {}, "custom_data": {}}}
+
+data: [DONE]
+

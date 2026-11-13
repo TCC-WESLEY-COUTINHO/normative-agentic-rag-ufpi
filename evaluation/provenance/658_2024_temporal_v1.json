@@ -1,0 +1,68 @@
+{
+  "norm_id": "ufpi-658-2024",
+  "source": {
+    "url": "https://www.sigaa.ufpi.br/sigaa/verProducao?idProducao=6869447&key=18c6011be067380f348deb69741d19c1",
+    "title": "Resolução CEPEX/UFPI nº 658/2024",
+    "number": "658",
+    "date": "2024-04-22",
+    "file": "resolucao_658_2024_cepex.pdf",
+    "sha256": "2dc41b821dbe62cc40e5e57f2c48fbf1b4e7d5f7b34a89f1ad78619187fb3050",
+    "preamble": "## Ministério da Educação Universidade Federal do Piauí Gabinete do Reitor\n\n## RESOLUÇÃO CEPEX/UFPI Nº 658, DE 22 DE ABRIL DE 2024\n\nRegulamenta a Pós-Graduação Stricto Sensu, na Universidade Federal do Piauí e dá outras providências.\n\nO REITOR DA UNIVERSIDADE FEDERAL DO PIAUÍ — UFPI e PRESIDENTE DO CONSELHO DE ENSINO, PESQUISA E EXTENSÃO — CEPEX, no uso de suas atribuições legais e regimentais, tendo em vista decisão do mesmo Conselho em reunião de 08/04/2024 e, considerando:\n\n-o processo eletrônico nº 23111.016601/2024-61;\n\nRESOLVE:\n\n## CAPÍTULO |\n\n## DA FINALIDADE E DA ORGANIZAÇÃO"
+  },
+  "pipeline": {
+    "repository": "ingest_documents",
+    "code_commit": "58b032f4efb1ba01d02d583e1183a6d4db803705",
+    "docling_version": "2.121.0",
+    "code_sha256": {
+      "src/ingest_documents/docling_smoke.py": "4500a53fa839d606e5bbaef1bf6dcf3b9272dec0e0fd49655bac002d1990adb7",
+      "src/ingest_documents/legal_article_chunker.py": "87723fd5d548cc944fc4f9a09d5e8eb1beed3ab6a6f207f3c04d981d2909a2d2",
+      "src/ingest_documents/resolution_956.py": "1005764a4f9239bc18aa6b96d7cedc9b0bd584f1344ae3e84c82714be372a1a0"
+    },
+    "steps": [
+      "docling_smoke.build_converter (Portuguese full-page Tesseract OCR)",
+      "DocumentConverter.convert",
+      "DoclingDocument.export_to_markdown",
+      "legal_article_chunker.build_compatible_chunks",
+      "temporal metadata and stable IDs",
+      "legal_article_chunker.validate_corpus"
+    ],
+    "markdown_sha256": "ac43c6b213cb83cf0941bf5cb4942c82748b6cc1056a2fa1946f11eec5755eb7"
+  },
+  "corpus": {
+    "file": "chunks_v1.json",
+    "sha256": "ca0274876732d97ec577a540b849f870f9be15d5e0d4628985408d6c4ccf4c02",
+    "chunks": 67
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "preamble_detected"
+    ],
+    "metrics": {
+      "articles_detected": 67,
+      "chunks": 67,
+      "unique_articles": 67,
+      "duplicate_articles": [],
+      "empty_chunks": 0,
+      "missing_article_numbers": 0,
+      "multi_article_chunks": 0,
+      "implausible_order_transitions": 0,
+      "article_number_gaps": [],
+      "raw_article_starts": 67,
+      "article_count_ratio": 1.0,
+      "content_preservation_ratio": 0.984,
+      "articles_per_page": 3.526,
+      "preamble_characters": 589,
+      "without_chapter": 0,
+      "without_section": 50,
+      "without_subsection": 67,
+      "unique_ids": 67,
+      "duplicate_ids": 0,
+      "norm_id": "ufpi-658-2024",
+      "setor": "pos_graduacao",
+      "incorrect_norm_ids": 0,
+      "incorrect_sectors": 0
+    }
+  }
+}

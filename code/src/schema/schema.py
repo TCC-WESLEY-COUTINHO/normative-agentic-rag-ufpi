@@ -1,13 +1,20 @@
 from typing import Any, Literal, NotRequired
 
-from pydantic import BaseModel, Field, SerializeAsAny
+from pydantic import BaseModel, Field, SerializeAsAny, field_validator, model_validator
 from typing_extensions import TypedDict
 
+from rag_baseline.calculator_contracts import CalculatorToolResult
+from rag_baseline.conversation_contracts import GroundedFollowUpResult
+from rag_baseline.tool_contracts import NormativeToolResult, ToolStatus
 from schema.models import AllModelEnum, AnthropicModelName, OpenAIModelName
 
 
 class AgentInfo(BaseModel):
     """Info about an available agent."""
+
+    experimental: bool = False
+    available: bool = True
+    unavailable_reason: str | None = None
 
     key: str = Field(
         description="Agent key.",
@@ -99,6 +106,58 @@ class ChatMessage(BaseModel):
         description="Content of the message.",
         examples=["Hello, world!"],
     )
+    normative_result: NormativeToolResult | None = Field(
+        default=None,
+        description="Public typed result for the current normative turn; absent for conversation.",
+    )
+    grounded_followup_result: GroundedFollowUpResult | None = None
+    calculator_result: CalculatorToolResult | None = None
+
+    @field_validator("normative_result", mode="before")
+    @classmethod
+    def public_normative_result(cls, value):
+        if isinstance(value, NormativeToolResult):
+            # Never retain private generation diagnostics in the transport object.
+            return value.model_dump()
+        if isinstance(value, dict) and "internal_audit" in value:
+            raise ValueError("Private audit is not accepted by the public transport.")
+        return value
+
+    @model_validator(mode="after")
+    def authoritative_content(self):
+        if (
+            sum(
+                result is not None
+                for result in (
+                    self.normative_result,
+                    self.grounded_followup_result,
+                    self.calculator_result,
+                )
+            )
+            > 1
+        ):
+            raise ValueError("A message must contain at most one typed result.")
+        if self.calculator_result is not None:
+            if self.type != "ai" or self.content != self.calculator_result.content:
+                raise ValueError("Calculator transport must preserve its content exactly.")
+        if self.grounded_followup_result is not None:
+            if self.normative_result is not None:
+                raise ValueError("A message cannot contain normative and derived results together.")
+            if self.type != "ai" or self.content != self.grounded_followup_result.content:
+                raise ValueError(
+                    "Derived transport must preserve its presentation content exactly."
+                )
+        if self.normative_result is not None:
+            result = self.normative_result
+            expected = {
+                ToolStatus.ANSWER: result.answer,
+                ToolStatus.CLARIFICATION: result.clarification_question,
+                ToolStatus.ERROR: result.safe_message,
+            }[result.status]
+            if self.type != "ai" or self.content != expected:
+                raise ValueError("Normative transport must preserve authoritative content exactly.")
+        return self
+
     tool_calls: list[ToolCall] = Field(
         description="Tool calls in the message.",
         default=[],

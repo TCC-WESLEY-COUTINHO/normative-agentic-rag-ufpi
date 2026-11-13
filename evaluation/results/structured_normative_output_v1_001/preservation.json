@@ -1,0 +1,18 @@
+{
+  "protected_files": 305,
+  "changed_files": [],
+  "all_protected_files_identical": true,
+  "index_before_count": 507,
+  "index_after_count": 507,
+  "index_snapshot_identical": true,
+  "index_sha256": "ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a",
+  "ids_text_metadata_float32_embeddings_identical": true,
+  "service_functions_ast_identical": {
+    "retrieve": true,
+    "_context": true,
+    "_reference": true
+  },
+  "routers_agentic_filter_grounding_registry_corpora_datasets_old_results": "byte-identical protected hashes",
+  "reindexing": false,
+  "implementation_unchanged_during_and_after_experiment": true
+}

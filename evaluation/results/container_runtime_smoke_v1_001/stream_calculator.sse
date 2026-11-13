@@ -1,0 +1,4 @@
+data: {"type": "message", "content": {"type": "ai", "content": "4", "normative_result": null, "grounded_followup_result": null, "calculator_result": {"contract_version": "1", "status": "ANSWER", "operation_kind": "ARITHMETIC", "content": "4", "normalized_input": "2+2", "numeric_result": "4", "date_result": null, "days_result": null, "error_code": null, "safe_message": null}, "tool_calls": [], "tool_call_id": null, "run_id": "8432905f-defb-40e9-b60a-3e741567e42a", "response_metadata": {}, "custom_data": {}}}
+
+data: [DONE]
+

@@ -1,0 +1,13 @@
+{
+  "default": {
+    "nofile": [
+      1024,
+      1048576
+    ]
+  },
+  "test_override": [
+    65536,
+    65536
+  ],
+  "scope": "Only transient regression test containers; no daemon, production Compose, image or application change."
+}

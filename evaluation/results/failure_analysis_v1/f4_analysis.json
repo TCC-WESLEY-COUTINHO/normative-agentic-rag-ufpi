@@ -1,0 +1,40 @@
+{
+  "case_id": "TEMP-GRAD-001",
+  "failure_layer": "generation",
+  "runs": 10,
+  "repetition_runs": [
+    1,
+    2,
+    3,
+    5,
+    7,
+    8,
+    9,
+    10
+  ],
+  "raw_equals_service": true,
+  "service_equals_api_and_terminal": true,
+  "terminal_phrase_counts_equal_service": true,
+  "api_terminal_comparison_mode": "Each newly observed model answer is replayed through real local API serialization and terminal. Original historical provider bodies and original historical API/terminal traffic are not available.",
+  "context_findings": {
+    "unique_chunk_ids": true,
+    "amendment_applications": 1,
+    "effective_text_occurrences_in_base_target": 1,
+    "overlap_between_amending_act_and_amended_base": true
+  },
+  "cause": "The repeated clause is already in the provider message.content. Non-streaming OpenRouterClient.chat returns it unchanged; RagService, API serialization and terminal preserve it. Variation at temperature zero occurs with identical prompt/context.",
+  "causal_limit": "Context legitimately repeats overlapping legal wording across the base and amending act. Its causal contribution was not separately isolated. This is not evidence of duplicate amendment application.",
+  "test": "Two deterministic tests verify one amendment application and byte-preserving service/API/terminal boundaries using an actual captured repeated response.",
+  "fix": null,
+  "status": "stochastic_generation_failure_retained",
+  "bugfix_commit": null,
+  "no_response_deduplication": true,
+  "after_F3_only": {
+    "runs": 10,
+    "repetition_runs": [],
+    "all_answers_equal_across_boundaries": true,
+    "all_terminal_phrase_counts_equal_service": true,
+    "interpretation": "Observed 0/10 in this series after the citation prompt change. No dedicated F4 fix; do not infer guaranteed absence or a confirmed causal effect.",
+    "citation_instruction_limit": "The new outputs still cite paragraph 4 in graduation references despite the article-only instruction. Its text is supported by the context, but universal instruction compliance is not demonstrated."
+  }
+}

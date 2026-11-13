@@ -1,0 +1,73 @@
+{
+  "timestamp": "2026-11-01T18:42:20.189548+00:00",
+  "cases": [
+    [
+      "greeting",
+      "Oi",
+      "direct"
+    ],
+    [
+      "metadata_exact",
+      "Resolução 177/2012, art. 68",
+      "normative"
+    ],
+    [
+      "conceptual_dense",
+      "Na graduação, como funciona o estágio?",
+      "normative"
+    ],
+    [
+      "clarification",
+      "Posso cancelar uma disciplina?",
+      "clarification"
+    ],
+    [
+      "clarification_continuation",
+      "Graduação.",
+      "normative"
+    ],
+    [
+      "calculator",
+      "2+2",
+      "calculator"
+    ],
+    [
+      "calculator_date",
+      "Adicione 10 dias corridos a 05/11/2026.",
+      "calculator"
+    ],
+    [
+      "grounded_repeat",
+      "Repita",
+      "grounded"
+    ],
+    [
+      "grounded_summary",
+      "Resuma",
+      "grounded"
+    ],
+    [
+      "domain_switch",
+      "E na pós?",
+      "normative"
+    ],
+    [
+      "new_conversation",
+      "Repita",
+      "direct"
+    ],
+    [
+      "service_unavailable",
+      "Oi",
+      "unavailable"
+    ]
+  ],
+  "hashes": {
+    "code/src/streamlit_app.py": "31a71bc054502b8437872ecdc12f2428e8d6bacf601dd7fa34de167d48d5008d",
+    "code/src/client/client.py": "f1dac48c297df091975731d7b25b4cf574d6543f6e59d93820e10cfda0629752",
+    "evaluation/results/tcc_ui_integration_v1_001/local_service.py": "b655cf48a46c837b579d413bf586f588858c4a552c40ea70d914edba92632ab8",
+    "evaluation/results/tcc_ui_integration_v1_001/local_smoke.py": "4c8b152206eb0809e1bd1c91a9b5a084cbafe005f433842d337b9e0c8f7e93be"
+  },
+  "provider": "controlled; existing fixed vector; no embedding quality claim",
+  "network": "loopback HTTP/SSE; socket/DNS guard in backend; not universal packet capture"
+}

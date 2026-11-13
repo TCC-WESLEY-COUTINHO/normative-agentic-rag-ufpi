@@ -1,0 +1,273 @@
+{
+  "scope": "Engineering fixtures only; not legal gold",
+  "selections": [
+    {
+      "id": "RS-01",
+      "expected": "dense_vector",
+      "actual": "dense_vector",
+      "correct": true,
+      "consistency": "consistent"
+    },
+    {
+      "id": "RS-02",
+      "expected": "dense_vector",
+      "actual": "dense_vector",
+      "correct": true,
+      "consistency": "consistent"
+    },
+    {
+      "id": "RS-03",
+      "expected": "dense_vector",
+      "actual": "dense_vector",
+      "correct": true,
+      "consistency": "consistent"
+    },
+    {
+      "id": "RS-04",
+      "expected": "metadata_exact",
+      "actual": "metadata_exact",
+      "correct": true,
+      "consistency": "consistent"
+    },
+    {
+      "id": "RS-05",
+      "expected": "metadata_exact",
+      "actual": "metadata_exact",
+      "correct": true,
+      "consistency": "consistent"
+    },
+    {
+      "id": "RS-06",
+      "expected": "metadata_exact",
+      "actual": "metadata_exact",
+      "correct": true,
+      "consistency": "consistent"
+    },
+    {
+      "id": "RS-07",
+      "expected": "metadata_exact",
+      "actual": "metadata_exact",
+      "correct": true,
+      "consistency": "consistent"
+    },
+    {
+      "id": "RS-08",
+      "expected": "metadata_exact",
+      "actual": "metadata_exact",
+      "correct": true,
+      "consistency": "consistent"
+    },
+    {
+      "id": "RS-09",
+      "expected": "metadata_exact",
+      "actual": "metadata_exact",
+      "correct": true,
+      "consistency": "consistent"
+    },
+    {
+      "id": "RS-10",
+      "expected": "vector_filtered",
+      "actual": "vector_filtered",
+      "correct": true,
+      "consistency": "consistent"
+    },
+    {
+      "id": "RS-11",
+      "expected": "vector_filtered",
+      "actual": "vector_filtered",
+      "correct": true,
+      "consistency": "consistent"
+    },
+    {
+      "id": "RS-12",
+      "expected": "vector_filtered",
+      "actual": "vector_filtered",
+      "correct": true,
+      "consistency": "consistent"
+    },
+    {
+      "id": "RS-13",
+      "expected": "dense_vector",
+      "actual": "dense_vector",
+      "correct": true,
+      "consistency": "consistent"
+    },
+    {
+      "id": "RS-14",
+      "expected": "dense_vector",
+      "actual": "dense_vector",
+      "correct": true,
+      "consistency": "consistent"
+    },
+    {
+      "id": "RS-15",
+      "expected": "dense_vector",
+      "actual": "dense_vector",
+      "correct": true,
+      "consistency": "unknown_norm"
+    },
+    {
+      "id": "RS-16",
+      "expected": "dense_vector",
+      "actual": "dense_vector",
+      "correct": true,
+      "consistency": "consistent"
+    },
+    {
+      "id": "RS-17",
+      "expected": "dense_vector",
+      "actual": "dense_vector",
+      "correct": true,
+      "consistency": "consistent"
+    },
+    {
+      "id": "RS-18",
+      "expected": "dense_vector",
+      "actual": "dense_vector",
+      "correct": true,
+      "consistency": "consistent"
+    },
+    {
+      "id": "RS-19",
+      "expected": "dense_vector",
+      "actual": "dense_vector",
+      "correct": true,
+      "consistency": "consistent"
+    },
+    {
+      "id": "RS-20",
+      "expected": "dense_vector",
+      "actual": "dense_vector",
+      "correct": true,
+      "consistency": "consistent"
+    },
+    {
+      "id": "RS-21",
+      "expected": "dense_vector",
+      "actual": "dense_vector",
+      "correct": true,
+      "consistency": "consistent"
+    },
+    {
+      "id": "RS-22",
+      "expected": "dense_vector",
+      "actual": "dense_vector",
+      "correct": true,
+      "consistency": "consistent"
+    },
+    {
+      "id": "RS-23",
+      "expected": "dense_vector",
+      "actual": "dense_vector",
+      "correct": true,
+      "consistency": "consistent"
+    },
+    {
+      "id": "RS-24",
+      "expected": "metadata_exact",
+      "actual": "metadata_exact",
+      "correct": true,
+      "consistency": "consistent"
+    }
+  ],
+  "exact_lookups": [
+    {
+      "id": "RS-04",
+      "found": true,
+      "candidate_ids": [
+        "ufpi-177-2012-art-68-idx-000067"
+      ],
+      "distances": [
+        null
+      ]
+    },
+    {
+      "id": "RS-05",
+      "found": true,
+      "candidate_ids": [
+        "ufpi-956-2025-art-53-idx-000051"
+      ],
+      "distances": [
+        null
+      ]
+    },
+    {
+      "id": "RS-06",
+      "found": true,
+      "candidate_ids": [
+        "ufpi-658-2024-art-37-idx-000036"
+      ],
+      "distances": [
+        null
+      ]
+    },
+    {
+      "id": "RS-07",
+      "found": true,
+      "candidate_ids": [
+        "ufpi-1056-2026-art-1-idx-000000"
+      ],
+      "distances": [
+        null
+      ]
+    },
+    {
+      "id": "RS-08",
+      "found": true,
+      "candidate_ids": [
+        "ufpi-1056-2026-art-2-idx-000001"
+      ],
+      "distances": [
+        null
+      ]
+    },
+    {
+      "id": "RS-09",
+      "found": true,
+      "candidate_ids": [
+        "ufpi-177-2012-art-68-idx-000067"
+      ],
+      "distances": [
+        null
+      ]
+    },
+    {
+      "id": "RS-24",
+      "found": true,
+      "candidate_ids": [
+        "ufpi-177-2012-art-68-idx-000067"
+      ],
+      "distances": [
+        null
+      ]
+    }
+  ],
+  "metrics": {
+    "strategy_selection": {
+      "numerator": 24,
+      "denominator": 24
+    },
+    "exact_article_resolution": {
+      "numerator": 7,
+      "denominator": 7
+    },
+    "norm_filter_purity": {
+      "numerator": 15,
+      "denominator": 15
+    },
+    "dense_path_preservation": {
+      "numerator": 2,
+      "denominator": 2
+    },
+    "embedding_avoidance": {
+      "numerator": 7,
+      "denominator": 7
+    },
+    "router_scope_conflicts": {
+      "numerator": 1,
+      "denominator": 15
+    }
+  },
+  "f2_saved_evidence": "evaluation/results/failure_analysis_v1/f2_analysis.json",
+  "f2_note": "Article found structurally; facade still declines calendar applicability under frozen temporal policy"
+}

@@ -1,0 +1,65 @@
+{
+  "n": 9,
+  "legal_gold": false,
+  "generation_semantics_automatically_scored": false,
+  "metrics": {
+    "temporal_classification_accuracy": {
+      "numerator": 9,
+      "denominator": 9,
+      "value": 1.0
+    },
+    "obsolete_context_exposure_rate": {
+      "numerator": 0,
+      "denominator": 20,
+      "value": 0.0
+    },
+    "current_norm_hit_rate": {
+      "numerator": 5,
+      "denominator": 5,
+      "value": 1.0
+    },
+    "compliance_violation_rate": {
+      "numerator": 0,
+      "denominator": 4,
+      "value": 0.0
+    },
+    "historical_preservation_rate": {
+      "numerator": 2,
+      "denominator": 2,
+      "value": 1.0
+    },
+    "amendment_application_accuracy": {
+      "numerator": 2,
+      "denominator": 2,
+      "value": 1.0
+    },
+    "amendment_isolation_accuracy": {
+      "numerator": 1,
+      "denominator": 1,
+      "value": 1.0
+    },
+    "final_context_eligibility_rate": {
+      "numerator": 35,
+      "denominator": 35,
+      "value": 1.0
+    },
+    "reference_eligibility_rate": {
+      "numerator": 35,
+      "denominator": 35,
+      "value": 1.0
+    },
+    "insufficient_evidence_abstention_rate": {
+      "numerator": 1,
+      "denominator": 1,
+      "value": 1.0
+    },
+    "expected_answer_action_accuracy": {
+      "numerator": 9,
+      "denominator": 9,
+      "value": 1.0
+    }
+  },
+  "failures_by_layer": {
+    "RETRIEVAL": 1
+  }
+}

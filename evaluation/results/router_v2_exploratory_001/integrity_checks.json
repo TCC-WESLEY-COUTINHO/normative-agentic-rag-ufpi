@@ -1,0 +1,26 @@
+{
+  "phase_checks": {
+    "dev_001": {
+      "output_hashes_match_git_blobs": true,
+      "completed": true
+    },
+    "test_001": {
+      "output_hashes_match_git_blobs": true,
+      "completed": true
+    },
+    "stability_001": {
+      "output_hashes_match_git_blobs": true,
+      "completed": true
+    }
+  },
+  "configured_secret_matches": 0,
+  "operational_ai_artifacts_detected": 0,
+  "changed_files_n": 46,
+  "router_prompt_sha256": "99001ee605f25691d193cec0202001be608fd832e19b8f03665e5a21df16f93d",
+  "generator_prompt_sha256": "ccf0374117c24920648661f4699e7291d59596450ead6b3f69bc59fcb10da3f3",
+  "ruff_format_files": 13,
+  "git_diff_check_initial": true,
+  "git_diff_cached_check": true,
+  "protected_files_n": 234,
+  "index_count": 507
+}

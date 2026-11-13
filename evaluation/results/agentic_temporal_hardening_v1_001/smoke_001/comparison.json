@@ -1,0 +1,40 @@
+{
+  "pairs": [
+    {
+      "pair": "grad_coordinator",
+      "case_ids": [
+        "G1_current",
+        "G3_historical"
+      ],
+      "different_final_context": false,
+      "final_ids": [
+        [],
+        []
+      ]
+    },
+    {
+      "pair": "post_defense",
+      "case_ids": [
+        "P1_current",
+        "P2_historical"
+      ],
+      "different_final_context": true,
+      "final_ids": [
+        [
+          "ufpi-956-2025-art-28-idx-000027",
+          "ufpi-956-2025-art-49-idx-000047",
+          "ufpi-956-2025-art-54-idx-000052",
+          "ufpi-956-2025-art-3-idx-000002",
+          "ufpi-956-2025-art-53-idx-000051"
+        ],
+        [
+          "ufpi-658-2024-art-40-idx-000039",
+          "ufpi-658-2024-art-43-idx-000042",
+          "ufpi-658-2024-art-44-idx-000043",
+          "ufpi-658-2024-art-28-idx-000027",
+          "ufpi-658-2024-art-46-idx-000045"
+        ]
+      ]
+    }
+  ]
+}

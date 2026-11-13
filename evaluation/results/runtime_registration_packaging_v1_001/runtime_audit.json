@@ -1,0 +1,31 @@
+{
+  "source_head": "706bd7cc5e7f333032c7de7b58ed89dc41c09bd0",
+  "source_branch": "feat/calculator-tool-routing-v1",
+  "initial_status": "clean",
+  "default_agent": "chatbot_ufpi_v2",
+  "legacy_agents": {
+    "chatbot_ufpi_agentic": "Consulta UFPI com roteamento de nível e filtro explícito de vigência.",
+    "chatbot_ufpi": "Assistente acadêmico especializado no RGG da UFPI.",
+    "chatbot_ufpi_v2": "Assistente acadêmico especializado no RGG da UFPI (v2) com busca semântica e por metadados.",
+    "chatbot_generic": "Chatbot genérico simples para responder dúvidas gerais com suporte a cálculos."
+  },
+  "before": "Eager imports of unused agents and supervisor model; four registry entries; service injects saver/store into ready graphs; Docker lacks rag_baseline/assets",
+  "entrypoint": "code/src/run_service.py -> uvicorn service:app -> lifespan -> existing memory factories -> registry initialization",
+  "default_memory_backend_code": "sqlite",
+  "compose_prod_backend": "postgres",
+  "live_backends_tested": [
+    "sqlite"
+  ],
+  "after": "Import-safe registration; explicit context-managed integrated assembly in normal lifespan; stable non-default ID",
+  "runtime_settings": "Existing duas-regulacoes profile and BaselineSettings; registry override optional; paths anchored at code/",
+  "lifecycle_ownership": {
+    "saver_store": "Existing application lifespan/factories; integrated runtime borrows saver",
+    "chroma": "Runtime-owned lease or external-owner borrowed system; last owned lease stops; partial acquisition cleaned",
+    "provider": "Runtime calls optional aclose; existing OpenRouter per-request HTTP context owns client",
+    "transformer": "No presentation provider; deterministic fallback; no resource to close",
+    "postgres_mongo": "Existing factory context managers, not live validated"
+  },
+  "failure_policy": "Expected experimental asset/config failure -> unavailable, legacy survives; database/store or unexpected errors -> startup fails",
+  "provider_boundary": "Request model/config does not override scientific internal models",
+  "langgraph_decision": "Unchanged separate research-assistant entrypoint; not service default"
+}

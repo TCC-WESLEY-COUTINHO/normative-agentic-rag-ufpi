@@ -1,0 +1,22 @@
+[
+  {
+    "id": "SMOKE-001",
+    "expected_scope": "graduacao",
+    "expected_action": "responder"
+  },
+  {
+    "id": "SMOKE-002",
+    "expected_scope": "pos_graduacao",
+    "expected_action": "responder"
+  },
+  {
+    "id": "SMOKE-003",
+    "expected_scope": "ambas",
+    "expected_action": "responder"
+  },
+  {
+    "id": "SMOKE-004",
+    "expected_scope": null,
+    "expected_action": "esclarecer"
+  }
+]

@@ -1,0 +1,3443 @@
+{
+  "exploratory": true,
+  "phases": {
+    "dev_001": {
+      "policies": {
+        "intent_v1": {
+          "n": 43,
+          "correct_n": 34,
+          "route_accuracy": 0.7906976744186046,
+          "wrong_route_rate": 0.0,
+          "clarification_precision": 0.5714285714285714,
+          "clarification_recall": 1.0,
+          "unnecessary_clarification_rate": 0.2903225806451613,
+          "macro_f1": 0.8368181818181818,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 9,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 2,
+              "error": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 9,
+              "ambas": 0,
+              "esclarecer": 7,
+              "error": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 4,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "esclarecer": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 12,
+              "error": 0
+            }
+          },
+          "errors": 0,
+          "probe_activation_rate": 0.0,
+          "probe_resolution_rate": null,
+          "probe_assisted_route_accuracy": null,
+          "probe_n": 0,
+          "clarification_output_n": 21,
+          "gold_clarification_n": 12,
+          "answerable_n": 31,
+          "decision_accuracy_on_probe": null,
+          "efficiency": {
+            "latency_mean": 2.509712953487652,
+            "latency_p50": 2.210864299995592,
+            "latency_p95": 5.693955189998086,
+            "llm_calls_per_query": 1,
+            "retrieval_calls_per_query": 0,
+            "embedding_calls_per_query": 0,
+            "reported_tokens_per_query": 687.8139534883721,
+            "reported_cost_per_query": 7.208790697674419e-05,
+            "cost_complete_n": 43,
+            "token_complete_n": 43
+          },
+          "bias_given_activated_probe": {
+            "graduacao": {
+              "n": 0,
+              "dominant_same_n": 0,
+              "dominant_same_rate": null,
+              "crossed_route_n": 0
+            },
+            "pos_graduacao": {
+              "n": 0,
+              "dominant_same_n": 0,
+              "dominant_same_rate": null,
+              "crossed_route_n": 0
+            }
+          },
+          "by_category": {
+            "ambiguous": {
+              "n": 12,
+              "correct_n": 12,
+              "route_accuracy": 1.0,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": 1.0,
+              "clarification_recall": 1.0,
+              "unnecessary_clarification_rate": null,
+              "macro_f1": 0.25,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 12,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.0,
+              "probe_resolution_rate": null,
+              "probe_assisted_route_accuracy": null,
+              "probe_n": 0,
+              "clarification_output_n": 12,
+              "gold_clarification_n": 12,
+              "answerable_n": 0
+            },
+            "cross_domain": {
+              "n": 4,
+              "correct_n": 4,
+              "route_accuracy": 1.0,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": null,
+              "clarification_recall": null,
+              "unnecessary_clarification_rate": 0.0,
+              "macro_f1": 0.25,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 4,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.0,
+              "probe_resolution_rate": null,
+              "probe_assisted_route_accuracy": null,
+              "probe_n": 0,
+              "clarification_output_n": 0,
+              "gold_clarification_n": 0,
+              "answerable_n": 4
+            },
+            "explicit_graduacao": {
+              "n": 11,
+              "correct_n": 9,
+              "route_accuracy": 0.8181818181818182,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": 0.0,
+              "clarification_recall": null,
+              "unnecessary_clarification_rate": 0.18181818181818182,
+              "macro_f1": 0.225,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 9,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 2,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.0,
+              "probe_resolution_rate": null,
+              "probe_assisted_route_accuracy": null,
+              "probe_n": 0,
+              "clarification_output_n": 2,
+              "gold_clarification_n": 0,
+              "answerable_n": 11
+            },
+            "explicit_pos": {
+              "n": 16,
+              "correct_n": 9,
+              "route_accuracy": 0.5625,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": 0.0,
+              "clarification_recall": null,
+              "unnecessary_clarification_rate": 0.4375,
+              "macro_f1": 0.18,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 9,
+                  "ambas": 0,
+                  "esclarecer": 7,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.0,
+              "probe_resolution_rate": null,
+              "probe_assisted_route_accuracy": null,
+              "probe_n": 0,
+              "clarification_output_n": 7,
+              "gold_clarification_n": 0,
+              "answerable_n": 16
+            }
+          }
+        },
+        "adaptive_distribution_v2": {
+          "n": 43,
+          "correct_n": 33,
+          "route_accuracy": 0.7674418604651163,
+          "wrong_route_rate": 0.20930232558139536,
+          "clarification_precision": 0.75,
+          "clarification_recall": 0.25,
+          "unnecessary_clarification_rate": 0.03225806451612903,
+          "macro_f1": 0.7631048387096775,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 11,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 15,
+              "ambas": 0,
+              "esclarecer": 1,
+              "error": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 4,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "esclarecer": {
+              "graduacao": 9,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 3,
+              "error": 0
+            }
+          },
+          "errors": 0,
+          "probe_activation_rate": 0.4883720930232558,
+          "probe_resolution_rate": 0.8095238095238095,
+          "probe_assisted_route_accuracy": 0.5238095238095238,
+          "probe_n": 21,
+          "clarification_output_n": 4,
+          "gold_clarification_n": 12,
+          "answerable_n": 31,
+          "decision_accuracy_on_probe": 0.5238095238095238,
+          "efficiency": {
+            "latency_mean": 3.015786379068781,
+            "latency_p50": 2.37664770000265,
+            "latency_p95": 6.4407060299985455,
+            "llm_calls_per_query": 1,
+            "retrieval_calls_per_query": 0.4883720930232558,
+            "embedding_calls_per_query": 0.4883720930232558,
+            "reported_tokens_per_query": 699.953488372093,
+            "reported_cost_per_query": 7.233069767441861e-05,
+            "cost_complete_n": 43,
+            "token_complete_n": 43
+          },
+          "bias_given_activated_probe": {
+            "graduacao": {
+              "n": 2,
+              "dominant_same_n": 2,
+              "dominant_same_rate": 1.0,
+              "crossed_route_n": 0
+            },
+            "pos_graduacao": {
+              "n": 7,
+              "dominant_same_n": 6,
+              "dominant_same_rate": 0.8571428571428571,
+              "crossed_route_n": 0
+            }
+          },
+          "by_category": {
+            "ambiguous": {
+              "n": 12,
+              "correct_n": 3,
+              "route_accuracy": 0.25,
+              "wrong_route_rate": 0.75,
+              "clarification_precision": 1.0,
+              "clarification_recall": 0.25,
+              "unnecessary_clarification_rate": null,
+              "macro_f1": 0.1,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 9,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 3,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 1.0,
+              "probe_resolution_rate": 0.75,
+              "probe_assisted_route_accuracy": 0.25,
+              "probe_n": 12,
+              "clarification_output_n": 3,
+              "gold_clarification_n": 12,
+              "answerable_n": 0
+            },
+            "cross_domain": {
+              "n": 4,
+              "correct_n": 4,
+              "route_accuracy": 1.0,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": null,
+              "clarification_recall": null,
+              "unnecessary_clarification_rate": 0.0,
+              "macro_f1": 0.25,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 4,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.0,
+              "probe_resolution_rate": null,
+              "probe_assisted_route_accuracy": null,
+              "probe_n": 0,
+              "clarification_output_n": 0,
+              "gold_clarification_n": 0,
+              "answerable_n": 4
+            },
+            "explicit_graduacao": {
+              "n": 11,
+              "correct_n": 11,
+              "route_accuracy": 1.0,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": null,
+              "clarification_recall": null,
+              "unnecessary_clarification_rate": 0.0,
+              "macro_f1": 0.25,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 11,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.18181818181818182,
+              "probe_resolution_rate": 1.0,
+              "probe_assisted_route_accuracy": 1.0,
+              "probe_n": 2,
+              "clarification_output_n": 0,
+              "gold_clarification_n": 0,
+              "answerable_n": 11
+            },
+            "explicit_pos": {
+              "n": 16,
+              "correct_n": 15,
+              "route_accuracy": 0.9375,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": 0.0,
+              "clarification_recall": null,
+              "unnecessary_clarification_rate": 0.0625,
+              "macro_f1": 0.24193548387096775,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 15,
+                  "ambas": 0,
+                  "esclarecer": 1,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.4375,
+              "probe_resolution_rate": 0.8571428571428571,
+              "probe_assisted_route_accuracy": 0.8571428571428571,
+              "probe_n": 7,
+              "clarification_output_n": 1,
+              "gold_clarification_n": 0,
+              "answerable_n": 16
+            }
+          }
+        },
+        "adaptive_llm_v2": {
+          "n": 43,
+          "correct_n": 32,
+          "route_accuracy": 0.7441860465116279,
+          "wrong_route_rate": 0.20930232558139536,
+          "clarification_precision": 0.3333333333333333,
+          "clarification_recall": 0.08333333333333333,
+          "unnecessary_clarification_rate": 0.0,
+          "macro_f1": 0.7158808933002482,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 11,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 16,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 4,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "esclarecer": {
+              "graduacao": 9,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 1,
+              "error": 2
+            }
+          },
+          "errors": 2,
+          "probe_activation_rate": 0.4883720930232558,
+          "probe_resolution_rate": 0.8571428571428571,
+          "probe_assisted_route_accuracy": 0.47619047619047616,
+          "probe_n": 21,
+          "clarification_output_n": 3,
+          "gold_clarification_n": 12,
+          "answerable_n": 31,
+          "decision_accuracy_on_probe": 0.47619047619047616,
+          "efficiency": {
+            "latency_mean": 4.153902213952807,
+            "latency_p50": 3.421470400004182,
+            "latency_p95": 10.19631867000862,
+            "llm_calls_per_query": 1.4883720930232558,
+            "retrieval_calls_per_query": 0.4883720930232558,
+            "embedding_calls_per_query": 0.4883720930232558,
+            "reported_tokens_per_query": 1519.2325581395348,
+            "reported_cost_per_query": 0.00015385069767441862,
+            "cost_complete_n": 43,
+            "token_complete_n": 43
+          },
+          "bias_given_activated_probe": {
+            "graduacao": {
+              "n": 2,
+              "dominant_same_n": 2,
+              "dominant_same_rate": 1.0,
+              "crossed_route_n": 0
+            },
+            "pos_graduacao": {
+              "n": 7,
+              "dominant_same_n": 6,
+              "dominant_same_rate": 0.8571428571428571,
+              "crossed_route_n": 0
+            }
+          },
+          "by_category": {
+            "ambiguous": {
+              "n": 12,
+              "correct_n": 1,
+              "route_accuracy": 0.08333333333333333,
+              "wrong_route_rate": 0.75,
+              "clarification_precision": 0.3333333333333333,
+              "clarification_recall": 0.08333333333333333,
+              "unnecessary_clarification_rate": null,
+              "macro_f1": 0.038461538461538464,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 9,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 1,
+                  "error": 2
+                }
+              },
+              "errors": 2,
+              "probe_activation_rate": 1.0,
+              "probe_resolution_rate": 0.75,
+              "probe_assisted_route_accuracy": 0.08333333333333333,
+              "probe_n": 12,
+              "clarification_output_n": 3,
+              "gold_clarification_n": 12,
+              "answerable_n": 0
+            },
+            "cross_domain": {
+              "n": 4,
+              "correct_n": 4,
+              "route_accuracy": 1.0,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": null,
+              "clarification_recall": null,
+              "unnecessary_clarification_rate": 0.0,
+              "macro_f1": 0.25,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 4,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.0,
+              "probe_resolution_rate": null,
+              "probe_assisted_route_accuracy": null,
+              "probe_n": 0,
+              "clarification_output_n": 0,
+              "gold_clarification_n": 0,
+              "answerable_n": 4
+            },
+            "explicit_graduacao": {
+              "n": 11,
+              "correct_n": 11,
+              "route_accuracy": 1.0,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": null,
+              "clarification_recall": null,
+              "unnecessary_clarification_rate": 0.0,
+              "macro_f1": 0.25,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 11,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.18181818181818182,
+              "probe_resolution_rate": 1.0,
+              "probe_assisted_route_accuracy": 1.0,
+              "probe_n": 2,
+              "clarification_output_n": 0,
+              "gold_clarification_n": 0,
+              "answerable_n": 11
+            },
+            "explicit_pos": {
+              "n": 16,
+              "correct_n": 16,
+              "route_accuracy": 1.0,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": null,
+              "clarification_recall": null,
+              "unnecessary_clarification_rate": 0.0,
+              "macro_f1": 0.25,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 16,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.4375,
+              "probe_resolution_rate": 1.0,
+              "probe_assisted_route_accuracy": 1.0,
+              "probe_n": 7,
+              "clarification_output_n": 0,
+              "gold_clarification_n": 0,
+              "answerable_n": 16
+            }
+          }
+        }
+      },
+      "actual_physical_work": {
+        "llm_calls": 64,
+        "embedding_calls": 21,
+        "retrieval_calls": 21,
+        "token_usage": 65327,
+        "reported_tokens": 65327,
+        "token_coverage": 1.0,
+        "cost": 0.00661558,
+        "reported_cost": 0.00661558,
+        "cost_coverage": 1.0
+      },
+      "paired_note": "physical calls shared; per-policy latency/cost are measured phase sums for standalone cascades, not three separately executed deployments"
+    },
+    "test_001": {
+      "policies": {
+        "intent_v1": {
+          "n": 23,
+          "correct_n": 16,
+          "route_accuracy": 0.6956521739130435,
+          "wrong_route_rate": 0.0,
+          "clarification_precision": 0.5625,
+          "clarification_recall": 1.0,
+          "unnecessary_clarification_rate": 0.5,
+          "macro_f1": 0.6913636363636364,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 1,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 2,
+              "error": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 3,
+              "ambas": 0,
+              "esclarecer": 5,
+              "error": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 3,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "esclarecer": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 9,
+              "error": 0
+            }
+          },
+          "errors": 0,
+          "probe_activation_rate": 0.0,
+          "probe_resolution_rate": null,
+          "probe_assisted_route_accuracy": null,
+          "probe_n": 0,
+          "clarification_output_n": 16,
+          "gold_clarification_n": 9,
+          "answerable_n": 14,
+          "decision_accuracy_on_probe": null,
+          "efficiency": {
+            "latency_mean": 2.5881580304330387,
+            "latency_p50": 2.1636830999923404,
+            "latency_p95": 5.6333306100015745,
+            "llm_calls_per_query": 1,
+            "retrieval_calls_per_query": 0,
+            "embedding_calls_per_query": 0,
+            "reported_tokens_per_query": 683.3913043478261,
+            "reported_cost_per_query": 7.170739130434782e-05,
+            "cost_complete_n": 23,
+            "token_complete_n": 23
+          },
+          "bias_given_activated_probe": {
+            "graduacao": {
+              "n": 0,
+              "dominant_same_n": 0,
+              "dominant_same_rate": null,
+              "crossed_route_n": 0
+            },
+            "pos_graduacao": {
+              "n": 0,
+              "dominant_same_n": 0,
+              "dominant_same_rate": null,
+              "crossed_route_n": 0
+            }
+          },
+          "by_category": {
+            "ambiguous": {
+              "n": 9,
+              "correct_n": 9,
+              "route_accuracy": 1.0,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": 1.0,
+              "clarification_recall": 1.0,
+              "unnecessary_clarification_rate": null,
+              "macro_f1": 0.25,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 9,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.0,
+              "probe_resolution_rate": null,
+              "probe_assisted_route_accuracy": null,
+              "probe_n": 0,
+              "clarification_output_n": 9,
+              "gold_clarification_n": 9,
+              "answerable_n": 0
+            },
+            "cross_domain": {
+              "n": 3,
+              "correct_n": 3,
+              "route_accuracy": 1.0,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": null,
+              "clarification_recall": null,
+              "unnecessary_clarification_rate": 0.0,
+              "macro_f1": 0.25,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 3,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.0,
+              "probe_resolution_rate": null,
+              "probe_assisted_route_accuracy": null,
+              "probe_n": 0,
+              "clarification_output_n": 0,
+              "gold_clarification_n": 0,
+              "answerable_n": 3
+            },
+            "explicit_graduacao": {
+              "n": 3,
+              "correct_n": 1,
+              "route_accuracy": 0.3333333333333333,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": 0.0,
+              "clarification_recall": null,
+              "unnecessary_clarification_rate": 0.6666666666666666,
+              "macro_f1": 0.125,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 1,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 2,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.0,
+              "probe_resolution_rate": null,
+              "probe_assisted_route_accuracy": null,
+              "probe_n": 0,
+              "clarification_output_n": 2,
+              "gold_clarification_n": 0,
+              "answerable_n": 3
+            },
+            "explicit_pos": {
+              "n": 8,
+              "correct_n": 3,
+              "route_accuracy": 0.375,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": 0.0,
+              "clarification_recall": null,
+              "unnecessary_clarification_rate": 0.625,
+              "macro_f1": 0.13636363636363635,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 3,
+                  "ambas": 0,
+                  "esclarecer": 5,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.0,
+              "probe_resolution_rate": null,
+              "probe_assisted_route_accuracy": null,
+              "probe_n": 0,
+              "clarification_output_n": 5,
+              "gold_clarification_n": 0,
+              "answerable_n": 8
+            }
+          }
+        },
+        "adaptive_distribution_v2": {
+          "n": 23,
+          "correct_n": 12,
+          "route_accuracy": 0.5217391304347826,
+          "wrong_route_rate": 0.43478260869565216,
+          "clarification_precision": 0.0,
+          "clarification_recall": 0.0,
+          "unnecessary_clarification_rate": 0.07142857142857142,
+          "macro_f1": 0.5580357142857143,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 3,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 1,
+              "pos_graduacao": 6,
+              "ambas": 0,
+              "esclarecer": 1,
+              "error": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 3,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "esclarecer": {
+              "graduacao": 9,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            }
+          },
+          "errors": 0,
+          "probe_activation_rate": 0.6956521739130435,
+          "probe_resolution_rate": 0.9375,
+          "probe_assisted_route_accuracy": 0.3125,
+          "probe_n": 16,
+          "clarification_output_n": 1,
+          "gold_clarification_n": 9,
+          "answerable_n": 14,
+          "decision_accuracy_on_probe": 0.3125,
+          "efficiency": {
+            "latency_mean": 3.2547078695636666,
+            "latency_p50": 3.11529379998683,
+            "latency_p95": 6.600857480004195,
+            "llm_calls_per_query": 1,
+            "retrieval_calls_per_query": 0.6956521739130435,
+            "embedding_calls_per_query": 0.6956521739130435,
+            "reported_tokens_per_query": 699.8260869565217,
+            "reported_cost_per_query": 7.203608695652174e-05,
+            "cost_complete_n": 23,
+            "token_complete_n": 23
+          },
+          "bias_given_activated_probe": {
+            "graduacao": {
+              "n": 2,
+              "dominant_same_n": 2,
+              "dominant_same_rate": 1.0,
+              "crossed_route_n": 0
+            },
+            "pos_graduacao": {
+              "n": 5,
+              "dominant_same_n": 4,
+              "dominant_same_rate": 0.8,
+              "crossed_route_n": 1
+            }
+          },
+          "by_category": {
+            "ambiguous": {
+              "n": 9,
+              "correct_n": 0,
+              "route_accuracy": 0.0,
+              "wrong_route_rate": 1.0,
+              "clarification_precision": null,
+              "clarification_recall": 0.0,
+              "unnecessary_clarification_rate": null,
+              "macro_f1": 0.0,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 9,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 1.0,
+              "probe_resolution_rate": 1.0,
+              "probe_assisted_route_accuracy": 0.0,
+              "probe_n": 9,
+              "clarification_output_n": 0,
+              "gold_clarification_n": 9,
+              "answerable_n": 0
+            },
+            "cross_domain": {
+              "n": 3,
+              "correct_n": 3,
+              "route_accuracy": 1.0,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": null,
+              "clarification_recall": null,
+              "unnecessary_clarification_rate": 0.0,
+              "macro_f1": 0.25,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 3,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.0,
+              "probe_resolution_rate": null,
+              "probe_assisted_route_accuracy": null,
+              "probe_n": 0,
+              "clarification_output_n": 0,
+              "gold_clarification_n": 0,
+              "answerable_n": 3
+            },
+            "explicit_graduacao": {
+              "n": 3,
+              "correct_n": 3,
+              "route_accuracy": 1.0,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": null,
+              "clarification_recall": null,
+              "unnecessary_clarification_rate": 0.0,
+              "macro_f1": 0.25,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 3,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.6666666666666666,
+              "probe_resolution_rate": 1.0,
+              "probe_assisted_route_accuracy": 1.0,
+              "probe_n": 2,
+              "clarification_output_n": 0,
+              "gold_clarification_n": 0,
+              "answerable_n": 3
+            },
+            "explicit_pos": {
+              "n": 8,
+              "correct_n": 6,
+              "route_accuracy": 0.75,
+              "wrong_route_rate": 0.125,
+              "clarification_precision": 0.0,
+              "clarification_recall": null,
+              "unnecessary_clarification_rate": 0.125,
+              "macro_f1": 0.21428571428571427,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 1,
+                  "pos_graduacao": 6,
+                  "ambas": 0,
+                  "esclarecer": 1,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.625,
+              "probe_resolution_rate": 0.8,
+              "probe_assisted_route_accuracy": 0.6,
+              "probe_n": 5,
+              "clarification_output_n": 1,
+              "gold_clarification_n": 0,
+              "answerable_n": 8
+            }
+          }
+        },
+        "adaptive_llm_v2": {
+          "n": 23,
+          "correct_n": 13,
+          "route_accuracy": 0.5652173913043478,
+          "wrong_route_rate": 0.391304347826087,
+          "clarification_precision": 0.0,
+          "clarification_recall": 0.0,
+          "unnecessary_clarification_rate": 0.07142857142857142,
+          "macro_f1": 0.5833333333333334,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 3,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 7,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 1
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 3,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "esclarecer": {
+              "graduacao": 9,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            }
+          },
+          "errors": 1,
+          "probe_activation_rate": 0.6956521739130435,
+          "probe_resolution_rate": 0.9375,
+          "probe_assisted_route_accuracy": 0.375,
+          "probe_n": 16,
+          "clarification_output_n": 1,
+          "gold_clarification_n": 9,
+          "answerable_n": 14,
+          "decision_accuracy_on_probe": 0.375,
+          "efficiency": {
+            "latency_mean": 4.4957526913020285,
+            "latency_p50": 4.314532299977145,
+            "latency_p95": 7.76722169000568,
+            "llm_calls_per_query": 1.6956521739130435,
+            "retrieval_calls_per_query": 0.6956521739130435,
+            "embedding_calls_per_query": 0.6956521739130435,
+            "reported_tokens_per_query": 1864.608695652174,
+            "reported_cost_per_query": 0.00019159086956521739,
+            "cost_complete_n": 23,
+            "token_complete_n": 23
+          },
+          "bias_given_activated_probe": {
+            "graduacao": {
+              "n": 2,
+              "dominant_same_n": 2,
+              "dominant_same_rate": 1.0,
+              "crossed_route_n": 0
+            },
+            "pos_graduacao": {
+              "n": 5,
+              "dominant_same_n": 4,
+              "dominant_same_rate": 0.8,
+              "crossed_route_n": 0
+            }
+          },
+          "by_category": {
+            "ambiguous": {
+              "n": 9,
+              "correct_n": 0,
+              "route_accuracy": 0.0,
+              "wrong_route_rate": 1.0,
+              "clarification_precision": null,
+              "clarification_recall": 0.0,
+              "unnecessary_clarification_rate": null,
+              "macro_f1": 0.0,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 9,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 1.0,
+              "probe_resolution_rate": 1.0,
+              "probe_assisted_route_accuracy": 0.0,
+              "probe_n": 9,
+              "clarification_output_n": 0,
+              "gold_clarification_n": 9,
+              "answerable_n": 0
+            },
+            "cross_domain": {
+              "n": 3,
+              "correct_n": 3,
+              "route_accuracy": 1.0,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": null,
+              "clarification_recall": null,
+              "unnecessary_clarification_rate": 0.0,
+              "macro_f1": 0.25,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 3,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.0,
+              "probe_resolution_rate": null,
+              "probe_assisted_route_accuracy": null,
+              "probe_n": 0,
+              "clarification_output_n": 0,
+              "gold_clarification_n": 0,
+              "answerable_n": 3
+            },
+            "explicit_graduacao": {
+              "n": 3,
+              "correct_n": 3,
+              "route_accuracy": 1.0,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": null,
+              "clarification_recall": null,
+              "unnecessary_clarification_rate": 0.0,
+              "macro_f1": 0.25,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 3,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.6666666666666666,
+              "probe_resolution_rate": 1.0,
+              "probe_assisted_route_accuracy": 1.0,
+              "probe_n": 2,
+              "clarification_output_n": 0,
+              "gold_clarification_n": 0,
+              "answerable_n": 3
+            },
+            "explicit_pos": {
+              "n": 8,
+              "correct_n": 7,
+              "route_accuracy": 0.875,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": 0.0,
+              "clarification_recall": null,
+              "unnecessary_clarification_rate": 0.125,
+              "macro_f1": 0.23333333333333334,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 7,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 1
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 1,
+              "probe_activation_rate": 0.625,
+              "probe_resolution_rate": 0.8,
+              "probe_assisted_route_accuracy": 0.8,
+              "probe_n": 5,
+              "clarification_output_n": 1,
+              "gold_clarification_n": 0,
+              "answerable_n": 8
+            }
+          }
+        }
+      },
+      "actual_physical_work": {
+        "llm_calls": 39,
+        "embedding_calls": 16,
+        "retrieval_calls": 16,
+        "token_usage": 42886,
+        "reported_tokens": 42886,
+        "token_coverage": 1.0,
+        "cost": 0.00440659,
+        "reported_cost": 0.00440659,
+        "cost_coverage": 1.0
+      },
+      "paired_note": "physical calls shared; per-policy latency/cost are measured phase sums for standalone cascades, not three separately executed deployments"
+    },
+    "stability_001": {
+      "policies": {
+        "intent_v1": {
+          "n": 60,
+          "correct_n": 45,
+          "route_accuracy": 0.75,
+          "wrong_route_rate": 0.0,
+          "clarification_precision": 0.4,
+          "clarification_recall": 1.0,
+          "unnecessary_clarification_rate": 0.3,
+          "macro_f1": 0.5473382749326146,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 12,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 8,
+              "error": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 23,
+              "ambas": 0,
+              "esclarecer": 7,
+              "error": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "esclarecer": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 10,
+              "error": 0
+            }
+          },
+          "errors": 0,
+          "probe_activation_rate": 0.0,
+          "probe_resolution_rate": null,
+          "probe_assisted_route_accuracy": null,
+          "probe_n": 0,
+          "clarification_output_n": 25,
+          "gold_clarification_n": 10,
+          "answerable_n": 50,
+          "decision_accuracy_on_probe": null,
+          "efficiency": {
+            "latency_mean": 2.14324440333318,
+            "latency_p50": 1.960382050005137,
+            "latency_p95": 4.813749895001818,
+            "llm_calls_per_query": 1,
+            "retrieval_calls_per_query": 0,
+            "embedding_calls_per_query": 0,
+            "reported_tokens_per_query": 699.8666666666667,
+            "reported_cost_per_query": 7.38195e-05,
+            "cost_complete_n": 60,
+            "token_complete_n": 60
+          },
+          "bias_given_activated_probe": {
+            "graduacao": {
+              "n": 0,
+              "dominant_same_n": 0,
+              "dominant_same_rate": null,
+              "crossed_route_n": 0
+            },
+            "pos_graduacao": {
+              "n": 0,
+              "dominant_same_n": 0,
+              "dominant_same_rate": null,
+              "crossed_route_n": 0
+            }
+          },
+          "by_category": {
+            "ambiguous": {
+              "n": 10,
+              "correct_n": 10,
+              "route_accuracy": 1.0,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": 1.0,
+              "clarification_recall": 1.0,
+              "unnecessary_clarification_rate": null,
+              "macro_f1": 0.25,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 10,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.0,
+              "probe_resolution_rate": null,
+              "probe_assisted_route_accuracy": null,
+              "probe_n": 0,
+              "clarification_output_n": 10,
+              "gold_clarification_n": 10,
+              "answerable_n": 0
+            },
+            "explicit_graduacao": {
+              "n": 20,
+              "correct_n": 12,
+              "route_accuracy": 0.6,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": 0.0,
+              "clarification_recall": null,
+              "unnecessary_clarification_rate": 0.4,
+              "macro_f1": 0.1875,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 12,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 8,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.0,
+              "probe_resolution_rate": null,
+              "probe_assisted_route_accuracy": null,
+              "probe_n": 0,
+              "clarification_output_n": 8,
+              "gold_clarification_n": 0,
+              "answerable_n": 20
+            },
+            "explicit_pos": {
+              "n": 30,
+              "correct_n": 23,
+              "route_accuracy": 0.7666666666666667,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": 0.0,
+              "clarification_recall": null,
+              "unnecessary_clarification_rate": 0.23333333333333334,
+              "macro_f1": 0.2169811320754717,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 23,
+                  "ambas": 0,
+                  "esclarecer": 7,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.0,
+              "probe_resolution_rate": null,
+              "probe_assisted_route_accuracy": null,
+              "probe_n": 0,
+              "clarification_output_n": 7,
+              "gold_clarification_n": 0,
+              "answerable_n": 30
+            }
+          }
+        },
+        "adaptive_distribution_v2": {
+          "n": 60,
+          "correct_n": 60,
+          "route_accuracy": 1.0,
+          "wrong_route_rate": 0.0,
+          "clarification_precision": 1.0,
+          "clarification_recall": 1.0,
+          "unnecessary_clarification_rate": 0.0,
+          "macro_f1": 0.75,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 20,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 30,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "esclarecer": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 10,
+              "error": 0
+            }
+          },
+          "errors": 0,
+          "probe_activation_rate": 0.4166666666666667,
+          "probe_resolution_rate": 0.6,
+          "probe_assisted_route_accuracy": 1.0,
+          "probe_n": 25,
+          "clarification_output_n": 10,
+          "gold_clarification_n": 10,
+          "answerable_n": 50,
+          "decision_accuracy_on_probe": 1.0,
+          "efficiency": {
+            "latency_mean": 2.56969212666736,
+            "latency_p50": 2.3167671999908634,
+            "latency_p95": 5.162459609992943,
+            "llm_calls_per_query": 1,
+            "retrieval_calls_per_query": 0.4166666666666667,
+            "embedding_calls_per_query": 0.4166666666666667,
+            "reported_tokens_per_query": 713.55,
+            "reported_cost_per_query": 7.409316666666667e-05,
+            "cost_complete_n": 60,
+            "token_complete_n": 60
+          },
+          "bias_given_activated_probe": {
+            "graduacao": {
+              "n": 8,
+              "dominant_same_n": 8,
+              "dominant_same_rate": 1.0,
+              "crossed_route_n": 0
+            },
+            "pos_graduacao": {
+              "n": 7,
+              "dominant_same_n": 7,
+              "dominant_same_rate": 1.0,
+              "crossed_route_n": 0
+            }
+          },
+          "by_category": {
+            "ambiguous": {
+              "n": 10,
+              "correct_n": 10,
+              "route_accuracy": 1.0,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": 1.0,
+              "clarification_recall": 1.0,
+              "unnecessary_clarification_rate": null,
+              "macro_f1": 0.25,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 10,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 1.0,
+              "probe_resolution_rate": 0.0,
+              "probe_assisted_route_accuracy": 1.0,
+              "probe_n": 10,
+              "clarification_output_n": 10,
+              "gold_clarification_n": 10,
+              "answerable_n": 0
+            },
+            "explicit_graduacao": {
+              "n": 20,
+              "correct_n": 20,
+              "route_accuracy": 1.0,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": null,
+              "clarification_recall": null,
+              "unnecessary_clarification_rate": 0.0,
+              "macro_f1": 0.25,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 20,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.4,
+              "probe_resolution_rate": 1.0,
+              "probe_assisted_route_accuracy": 1.0,
+              "probe_n": 8,
+              "clarification_output_n": 0,
+              "gold_clarification_n": 0,
+              "answerable_n": 20
+            },
+            "explicit_pos": {
+              "n": 30,
+              "correct_n": 30,
+              "route_accuracy": 1.0,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": null,
+              "clarification_recall": null,
+              "unnecessary_clarification_rate": 0.0,
+              "macro_f1": 0.25,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 30,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.23333333333333334,
+              "probe_resolution_rate": 1.0,
+              "probe_assisted_route_accuracy": 1.0,
+              "probe_n": 7,
+              "clarification_output_n": 0,
+              "gold_clarification_n": 0,
+              "answerable_n": 30
+            }
+          }
+        },
+        "adaptive_llm_v2": {
+          "n": 60,
+          "correct_n": 50,
+          "route_accuracy": 0.8333333333333334,
+          "wrong_route_rate": 0.11666666666666667,
+          "clarification_precision": 0.0,
+          "clarification_recall": 0.0,
+          "unnecessary_clarification_rate": 0.0,
+          "macro_f1": 0.47388059701492535,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 20,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 30,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "esclarecer": {
+              "graduacao": 0,
+              "pos_graduacao": 7,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 3
+            }
+          },
+          "errors": 3,
+          "probe_activation_rate": 0.4166666666666667,
+          "probe_resolution_rate": 0.88,
+          "probe_assisted_route_accuracy": 0.6,
+          "probe_n": 25,
+          "clarification_output_n": 3,
+          "gold_clarification_n": 10,
+          "answerable_n": 50,
+          "decision_accuracy_on_probe": 0.6,
+          "efficiency": {
+            "latency_mean": 3.6255055383328,
+            "latency_p50": 2.450166899994656,
+            "latency_p95": 8.205801939993398,
+            "llm_calls_per_query": 1.4166666666666667,
+            "retrieval_calls_per_query": 0.4166666666666667,
+            "embedding_calls_per_query": 0.4166666666666667,
+            "reported_tokens_per_query": 1429.1166666666666,
+            "reported_cost_per_query": 0.00014492133333333332,
+            "cost_complete_n": 60,
+            "token_complete_n": 60
+          },
+          "bias_given_activated_probe": {
+            "graduacao": {
+              "n": 8,
+              "dominant_same_n": 8,
+              "dominant_same_rate": 1.0,
+              "crossed_route_n": 0
+            },
+            "pos_graduacao": {
+              "n": 7,
+              "dominant_same_n": 7,
+              "dominant_same_rate": 1.0,
+              "crossed_route_n": 0
+            }
+          },
+          "by_category": {
+            "ambiguous": {
+              "n": 10,
+              "correct_n": 0,
+              "route_accuracy": 0.0,
+              "wrong_route_rate": 0.7,
+              "clarification_precision": 0.0,
+              "clarification_recall": 0.0,
+              "unnecessary_clarification_rate": null,
+              "macro_f1": 0.0,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 7,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 3
+                }
+              },
+              "errors": 3,
+              "probe_activation_rate": 1.0,
+              "probe_resolution_rate": 0.7,
+              "probe_assisted_route_accuracy": 0.0,
+              "probe_n": 10,
+              "clarification_output_n": 3,
+              "gold_clarification_n": 10,
+              "answerable_n": 0
+            },
+            "explicit_graduacao": {
+              "n": 20,
+              "correct_n": 20,
+              "route_accuracy": 1.0,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": null,
+              "clarification_recall": null,
+              "unnecessary_clarification_rate": 0.0,
+              "macro_f1": 0.25,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 20,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.4,
+              "probe_resolution_rate": 1.0,
+              "probe_assisted_route_accuracy": 1.0,
+              "probe_n": 8,
+              "clarification_output_n": 0,
+              "gold_clarification_n": 0,
+              "answerable_n": 20
+            },
+            "explicit_pos": {
+              "n": 30,
+              "correct_n": 30,
+              "route_accuracy": 1.0,
+              "wrong_route_rate": 0.0,
+              "clarification_precision": null,
+              "clarification_recall": null,
+              "unnecessary_clarification_rate": 0.0,
+              "macro_f1": 0.25,
+              "confusion_matrix": {
+                "graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "pos_graduacao": {
+                  "graduacao": 0,
+                  "pos_graduacao": 30,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "ambas": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                },
+                "esclarecer": {
+                  "graduacao": 0,
+                  "pos_graduacao": 0,
+                  "ambas": 0,
+                  "esclarecer": 0,
+                  "error": 0
+                }
+              },
+              "errors": 0,
+              "probe_activation_rate": 0.23333333333333334,
+              "probe_resolution_rate": 1.0,
+              "probe_assisted_route_accuracy": 1.0,
+              "probe_n": 7,
+              "clarification_output_n": 0,
+              "gold_clarification_n": 0,
+              "answerable_n": 30
+            }
+          }
+        }
+      },
+      "actual_physical_work": {
+        "llm_calls": 85,
+        "embedding_calls": 25,
+        "retrieval_calls": 25,
+        "token_usage": 85747,
+        "reported_tokens": 85747,
+        "token_coverage": 1.0,
+        "cost": 0.00869528,
+        "reported_cost": 0.00869528,
+        "cost_coverage": 1.0
+      },
+      "paired_note": "physical calls shared; per-policy latency/cost are measured phase sums for standalone cascades, not three separately executed deployments"
+    }
+  },
+  "paired_changes": {
+    "dev_001": {
+      "adaptive_distribution_v2": {
+        "improved": [
+          {
+            "id": "GRAD2-002",
+            "repeat": 1,
+            "question": "Qual é a frequência mínima que eu preciso ter nas aulas para não ser reprovado por falta?",
+            "expected_scope": "graduacao",
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-004",
+            "repeat": 1,
+            "question": "Qual é a nota mínima que eu preciso para ser aprovado depois de realizar o Exame Final?",
+            "expected_scope": "graduacao",
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "POS2-005",
+            "repeat": 1,
+            "question": "Qual é o prazo para terminar o doutorado? Posso prorrogar?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "POS2-009",
+            "repeat": 1,
+            "question": "Vou fazer estágio de docência no mestrado. Quanto tempo dura, quantas horas faço e o que entrego no final?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "POS2-012",
+            "repeat": 1,
+            "question": "Estou terminando o mestrado. Além de defender, o que preciso cumprir e entregar para pedir o diploma?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "POS2-015",
+            "repeat": 1,
+            "question": "Quero transferir meu mestrado para outro programa. O que é necessário e meu prazo começa de novo?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-POS-003",
+            "repeat": 1,
+            "question": "A Resolução 658/2024 ainda pode reger hoje a pós-graduação da UFPI ou foi revogada? Qual ato e dispositivo estabelecem isso?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-POS-005",
+            "repeat": 1,
+            "question": "Atualmente, a defesa de dissertação ou tese na pós-graduação da UFPI pode ser divulgada com apenas sete dias de antecedência?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          }
+        ],
+        "worsened": [
+          {
+            "id": "GRAD2-005",
+            "repeat": 1,
+            "question": "Se eu for impedido de participar de uma avaliação (prova), posso requerer a oportunidade de fazer a segunda chamada?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-007",
+            "repeat": 1,
+            "question": "Se eu for aluno de curso em regime de crédito e quiser cancelar uma disciplina, qual é a carga horária mínima de componentes curriculares que eu tenho que manter?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-008",
+            "repeat": 1,
+            "question": "O que acontece se eu não conseguir integralizar meu curso no limite máximo estabelecido?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-010",
+            "repeat": 1,
+            "question": "Por quantos períodos letivos posso solicitar o Trancamento do Curso?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-012",
+            "repeat": 1,
+            "question": "Caso eu esteja grávida ou com uma afecção de saúde, posso solicitar o Regime de Exercícios Domiciliares?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-016",
+            "repeat": 1,
+            "question": "Posso pedir para a UFPI mudar a estrutura curricular do meu curso para a mais recente?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-019",
+            "repeat": 1,
+            "question": "Qual é o prazo máximo que o professor tem para divulgar a nota de uma prova?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "REGRESSION-001",
+            "repeat": 1,
+            "question": "Não sei se meu curso é graduação ou pós-graduação.",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "REGRESSION-002",
+            "repeat": 1,
+            "question": "Na graduação eu podia trancar; no meu curso atual também posso?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          }
+        ]
+      },
+      "adaptive_llm_v2": {
+        "improved": [
+          {
+            "id": "CONTROL-956",
+            "repeat": 1,
+            "question": "Segundo a Resolução 956/2025, posso cancelar uma disciplina?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-002",
+            "repeat": 1,
+            "question": "Qual é a frequência mínima que eu preciso ter nas aulas para não ser reprovado por falta?",
+            "expected_scope": "graduacao",
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-004",
+            "repeat": 1,
+            "question": "Qual é a nota mínima que eu preciso para ser aprovado depois de realizar o Exame Final?",
+            "expected_scope": "graduacao",
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "POS2-005",
+            "repeat": 1,
+            "question": "Qual é o prazo para terminar o doutorado? Posso prorrogar?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "POS2-009",
+            "repeat": 1,
+            "question": "Vou fazer estágio de docência no mestrado. Quanto tempo dura, quantas horas faço e o que entrego no final?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "POS2-012",
+            "repeat": 1,
+            "question": "Estou terminando o mestrado. Além de defender, o que preciso cumprir e entregar para pedir o diploma?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "POS2-015",
+            "repeat": 1,
+            "question": "Quero transferir meu mestrado para outro programa. O que é necessário e meu prazo começa de novo?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-POS-003",
+            "repeat": 1,
+            "question": "A Resolução 658/2024 ainda pode reger hoje a pós-graduação da UFPI ou foi revogada? Qual ato e dispositivo estabelecem isso?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-POS-005",
+            "repeat": 1,
+            "question": "Atualmente, a defesa de dissertação ou tese na pós-graduação da UFPI pode ser divulgada com apenas sete dias de antecedência?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          }
+        ],
+        "worsened": [
+          {
+            "id": "GRAD2-005",
+            "repeat": 1,
+            "question": "Se eu for impedido de participar de uma avaliação (prova), posso requerer a oportunidade de fazer a segunda chamada?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-007",
+            "repeat": 1,
+            "question": "Se eu for aluno de curso em regime de crédito e quiser cancelar uma disciplina, qual é a carga horária mínima de componentes curriculares que eu tenho que manter?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-008",
+            "repeat": 1,
+            "question": "O que acontece se eu não conseguir integralizar meu curso no limite máximo estabelecido?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-010",
+            "repeat": 1,
+            "question": "Por quantos períodos letivos posso solicitar o Trancamento do Curso?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-012",
+            "repeat": 1,
+            "question": "Caso eu esteja grávida ou com uma afecção de saúde, posso solicitar o Regime de Exercícios Domiciliares?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-013",
+            "repeat": 1,
+            "question": "Meu curso pode ser cancelado se eu reprovar a mesma disciplina muitas vezes?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-016",
+            "repeat": 1,
+            "question": "Posso pedir para a UFPI mudar a estrutura curricular do meu curso para a mais recente?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-019",
+            "repeat": 1,
+            "question": "Qual é o prazo máximo que o professor tem para divulgar a nota de uma prova?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "POS2-018",
+            "repeat": 1,
+            "question": "Estou doente e preciso parar o curso por um tempo. Quanto tempo posso ficar afastado?",
+            "expected_scope": null,
+            "before": null,
+            "after": null,
+            "error": "judge_invalid"
+          },
+          {
+            "id": "REGRESSION-002",
+            "repeat": 1,
+            "question": "Na graduação eu podia trancar; no meu curso atual também posso?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "SMOKE-004",
+            "repeat": 1,
+            "question": "Posso cancelar uma disciplina?",
+            "expected_scope": null,
+            "before": null,
+            "after": null,
+            "error": "judge_invalid"
+          }
+        ]
+      }
+    },
+    "test_001": {
+      "adaptive_distribution_v2": {
+        "improved": [
+          {
+            "id": "GRAD2-001",
+            "repeat": 1,
+            "question": "Como a UFPI calcula minha 'média geral' (o tal do IRA)?",
+            "expected_scope": "graduacao",
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-011",
+            "repeat": 1,
+            "question": "O que é a Láurea Universitária e quais são os requisitos de excelência para recebê-la?",
+            "expected_scope": "graduacao",
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "POS2-006",
+            "repeat": 1,
+            "question": "Meu certificado de inglês tem quatro anos. Ainda vale para comprovar proficiência no mestrado?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "POS2-007",
+            "repeat": 1,
+            "question": "Não passei na qualificação do mestrado. Posso tentar de novo? Até quando?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "POS2-008",
+            "repeat": 1,
+            "question": "Passei na defesa da dissertação, mas a banca pediu ajustes. Quanto tempo tenho para entregar?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          }
+        ],
+        "worsened": [
+          {
+            "id": "GRAD2-006",
+            "repeat": 1,
+            "question": "Quais motivos são aceitos para justificar a minha ausência em uma avaliação e solicitar a segunda chamada?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-009",
+            "repeat": 1,
+            "question": "Quantas vezes posso trancar a matrícula em um componente curricular?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-014",
+            "repeat": 1,
+            "question": "O que acontece se o professor agendar uma prova nova, mas ainda não divulgou a nota da avaliação anterior?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-015",
+            "repeat": 1,
+            "question": "O que é o ajuste de turmas e quando ele é realizado durante o semestre?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-017",
+            "repeat": 1,
+            "question": "Se eu quiser fazer matérias de períodos à frente do meu (adiantamento), eu tenho prioridade na hora da matrícula?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-020",
+            "repeat": 1,
+            "question": "O que o professor tem que apresentar no primeiro dia de aula?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "POS2-017",
+            "repeat": 1,
+            "question": "Reprovei duas vezes na mesma matéria. Posso perder minha vaga?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "POS2-019",
+            "repeat": 1,
+            "question": "Já cancelei uma matéria uma vez. Posso cancelar de novo?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "POS2-020",
+            "repeat": 1,
+            "question": "Minha nota foi 6,5 e tenho 80% de presença. Já estou aprovado?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          }
+        ]
+      },
+      "adaptive_llm_v2": {
+        "improved": [
+          {
+            "id": "GRAD2-001",
+            "repeat": 1,
+            "question": "Como a UFPI calcula minha 'média geral' (o tal do IRA)?",
+            "expected_scope": "graduacao",
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-011",
+            "repeat": 1,
+            "question": "O que é a Láurea Universitária e quais são os requisitos de excelência para recebê-la?",
+            "expected_scope": "graduacao",
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "POS2-006",
+            "repeat": 1,
+            "question": "Meu certificado de inglês tem quatro anos. Ainda vale para comprovar proficiência no mestrado?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "POS2-007",
+            "repeat": 1,
+            "question": "Não passei na qualificação do mestrado. Posso tentar de novo? Até quando?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "POS2-008",
+            "repeat": 1,
+            "question": "Passei na defesa da dissertação, mas a banca pediu ajustes. Quanto tempo tenho para entregar?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "POS2-010",
+            "repeat": 1,
+            "question": "Já fiz matérias de pós em outra universidade. Como posso aproveitar isso no meu mestrado?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          }
+        ],
+        "worsened": [
+          {
+            "id": "GRAD2-006",
+            "repeat": 1,
+            "question": "Quais motivos são aceitos para justificar a minha ausência em uma avaliação e solicitar a segunda chamada?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-009",
+            "repeat": 1,
+            "question": "Quantas vezes posso trancar a matrícula em um componente curricular?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-014",
+            "repeat": 1,
+            "question": "O que acontece se o professor agendar uma prova nova, mas ainda não divulgou a nota da avaliação anterior?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-015",
+            "repeat": 1,
+            "question": "O que é o ajuste de turmas e quando ele é realizado durante o semestre?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-017",
+            "repeat": 1,
+            "question": "Se eu quiser fazer matérias de períodos à frente do meu (adiantamento), eu tenho prioridade na hora da matrícula?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "GRAD2-020",
+            "repeat": 1,
+            "question": "O que o professor tem que apresentar no primeiro dia de aula?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "POS2-017",
+            "repeat": 1,
+            "question": "Reprovei duas vezes na mesma matéria. Posso perder minha vaga?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "POS2-019",
+            "repeat": 1,
+            "question": "Já cancelei uma matéria uma vez. Posso cancelar de novo?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "POS2-020",
+            "repeat": 1,
+            "question": "Minha nota foi 6,5 e tenho 80% de presença. Já estou aprovado?",
+            "expected_scope": null,
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          }
+        ]
+      }
+    },
+    "stability_001": {
+      "adaptive_distribution_v2": {
+        "improved": [
+          {
+            "id": "TEMP-GRAD-001",
+            "repeat": 1,
+            "question": "Qual é a regra vigente do art. 68, §4º da graduação da UFPI para designar o coordenador de estágio em cursos de programas institucionais com docentes selecionados por edital, sem vínculo com a UFPI?",
+            "expected_scope": "graduacao",
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-POS-003",
+            "repeat": 1,
+            "question": "A Resolução 658/2024 ainda pode reger hoje a pós-graduação da UFPI ou foi revogada? Qual ato e dispositivo estabelecem isso?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-GRAD-001",
+            "repeat": 3,
+            "question": "Qual é a regra vigente do art. 68, §4º da graduação da UFPI para designar o coordenador de estágio em cursos de programas institucionais com docentes selecionados por edital, sem vínculo com a UFPI?",
+            "expected_scope": "graduacao",
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-GRAD-005",
+            "repeat": 3,
+            "question": "No art. 68, §4º da 177/2012, a redação que vale hoje na graduação da UFPI admite coordenador de estágio sem vínculo com a instituição nas condições previstas para programas institucionais, ou exige sempre professor efetivo?",
+            "expected_scope": "graduacao",
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-GRAD-001",
+            "repeat": 4,
+            "question": "Qual é a regra vigente do art. 68, §4º da graduação da UFPI para designar o coordenador de estágio em cursos de programas institucionais com docentes selecionados por edital, sem vínculo com a UFPI?",
+            "expected_scope": "graduacao",
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-POS-003",
+            "repeat": 4,
+            "question": "A Resolução 658/2024 ainda pode reger hoje a pós-graduação da UFPI ou foi revogada? Qual ato e dispositivo estabelecem isso?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-POS-004",
+            "repeat": 4,
+            "question": "Como era o prazo mínimo para divulgar a defesa na 658/2024 e como é na 956/2025, na pós-graduação da UFPI?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-GRAD-005",
+            "repeat": 5,
+            "question": "No art. 68, §4º da 177/2012, a redação que vale hoje na graduação da UFPI admite coordenador de estágio sem vínculo com a instituição nas condições previstas para programas institucionais, ou exige sempre professor efetivo?",
+            "expected_scope": "graduacao",
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-POS-003",
+            "repeat": 5,
+            "question": "A Resolução 658/2024 ainda pode reger hoje a pós-graduação da UFPI ou foi revogada? Qual ato e dispositivo estabelecem isso?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-POS-004",
+            "repeat": 5,
+            "question": "Como era o prazo mínimo para divulgar a defesa na 658/2024 e como é na 956/2025, na pós-graduação da UFPI?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-GRAD-001",
+            "repeat": 6,
+            "question": "Qual é a regra vigente do art. 68, §4º da graduação da UFPI para designar o coordenador de estágio em cursos de programas institucionais com docentes selecionados por edital, sem vínculo com a UFPI?",
+            "expected_scope": "graduacao",
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-GRAD-001",
+            "repeat": 7,
+            "question": "Qual é a regra vigente do art. 68, §4º da graduação da UFPI para designar o coordenador de estágio em cursos de programas institucionais com docentes selecionados por edital, sem vínculo com a UFPI?",
+            "expected_scope": "graduacao",
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-GRAD-005",
+            "repeat": 7,
+            "question": "No art. 68, §4º da 177/2012, a redação que vale hoje na graduação da UFPI admite coordenador de estágio sem vínculo com a instituição nas condições previstas para programas institucionais, ou exige sempre professor efetivo?",
+            "expected_scope": "graduacao",
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-POS-004",
+            "repeat": 7,
+            "question": "Como era o prazo mínimo para divulgar a defesa na 658/2024 e como é na 956/2025, na pós-graduação da UFPI?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-POS-004",
+            "repeat": 8,
+            "question": "Como era o prazo mínimo para divulgar a defesa na 658/2024 e como é na 956/2025, na pós-graduação da UFPI?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          }
+        ],
+        "worsened": []
+      },
+      "adaptive_llm_v2": {
+        "improved": [
+          {
+            "id": "TEMP-GRAD-001",
+            "repeat": 1,
+            "question": "Qual é a regra vigente do art. 68, §4º da graduação da UFPI para designar o coordenador de estágio em cursos de programas institucionais com docentes selecionados por edital, sem vínculo com a UFPI?",
+            "expected_scope": "graduacao",
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-POS-003",
+            "repeat": 1,
+            "question": "A Resolução 658/2024 ainda pode reger hoje a pós-graduação da UFPI ou foi revogada? Qual ato e dispositivo estabelecem isso?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-GRAD-001",
+            "repeat": 3,
+            "question": "Qual é a regra vigente do art. 68, §4º da graduação da UFPI para designar o coordenador de estágio em cursos de programas institucionais com docentes selecionados por edital, sem vínculo com a UFPI?",
+            "expected_scope": "graduacao",
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-GRAD-005",
+            "repeat": 3,
+            "question": "No art. 68, §4º da 177/2012, a redação que vale hoje na graduação da UFPI admite coordenador de estágio sem vínculo com a instituição nas condições previstas para programas institucionais, ou exige sempre professor efetivo?",
+            "expected_scope": "graduacao",
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-GRAD-001",
+            "repeat": 4,
+            "question": "Qual é a regra vigente do art. 68, §4º da graduação da UFPI para designar o coordenador de estágio em cursos de programas institucionais com docentes selecionados por edital, sem vínculo com a UFPI?",
+            "expected_scope": "graduacao",
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-POS-003",
+            "repeat": 4,
+            "question": "A Resolução 658/2024 ainda pode reger hoje a pós-graduação da UFPI ou foi revogada? Qual ato e dispositivo estabelecem isso?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-POS-004",
+            "repeat": 4,
+            "question": "Como era o prazo mínimo para divulgar a defesa na 658/2024 e como é na 956/2025, na pós-graduação da UFPI?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-GRAD-005",
+            "repeat": 5,
+            "question": "No art. 68, §4º da 177/2012, a redação que vale hoje na graduação da UFPI admite coordenador de estágio sem vínculo com a instituição nas condições previstas para programas institucionais, ou exige sempre professor efetivo?",
+            "expected_scope": "graduacao",
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-POS-003",
+            "repeat": 5,
+            "question": "A Resolução 658/2024 ainda pode reger hoje a pós-graduação da UFPI ou foi revogada? Qual ato e dispositivo estabelecem isso?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-POS-004",
+            "repeat": 5,
+            "question": "Como era o prazo mínimo para divulgar a defesa na 658/2024 e como é na 956/2025, na pós-graduação da UFPI?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-GRAD-001",
+            "repeat": 6,
+            "question": "Qual é a regra vigente do art. 68, §4º da graduação da UFPI para designar o coordenador de estágio em cursos de programas institucionais com docentes selecionados por edital, sem vínculo com a UFPI?",
+            "expected_scope": "graduacao",
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-GRAD-001",
+            "repeat": 7,
+            "question": "Qual é a regra vigente do art. 68, §4º da graduação da UFPI para designar o coordenador de estágio em cursos de programas institucionais com docentes selecionados por edital, sem vínculo com a UFPI?",
+            "expected_scope": "graduacao",
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-GRAD-005",
+            "repeat": 7,
+            "question": "No art. 68, §4º da 177/2012, a redação que vale hoje na graduação da UFPI admite coordenador de estágio sem vínculo com a instituição nas condições previstas para programas institucionais, ou exige sempre professor efetivo?",
+            "expected_scope": "graduacao",
+            "before": null,
+            "after": "graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-POS-004",
+            "repeat": 7,
+            "question": "Como era o prazo mínimo para divulgar a defesa na 658/2024 e como é na 956/2025, na pós-graduação da UFPI?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "TEMP-POS-004",
+            "repeat": 8,
+            "question": "Como era o prazo mínimo para divulgar a defesa na 658/2024 e como é na 956/2025, na pós-graduação da UFPI?",
+            "expected_scope": "pos_graduacao",
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          }
+        ],
+        "worsened": [
+          {
+            "id": "SMOKE-004",
+            "repeat": 1,
+            "question": "Posso cancelar uma disciplina?",
+            "expected_scope": null,
+            "before": null,
+            "after": null,
+            "error": "judge_invalid"
+          },
+          {
+            "id": "SMOKE-004",
+            "repeat": 2,
+            "question": "Posso cancelar uma disciplina?",
+            "expected_scope": null,
+            "before": null,
+            "after": null,
+            "error": "judge_invalid"
+          },
+          {
+            "id": "SMOKE-004",
+            "repeat": 3,
+            "question": "Posso cancelar uma disciplina?",
+            "expected_scope": null,
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "SMOKE-004",
+            "repeat": 4,
+            "question": "Posso cancelar uma disciplina?",
+            "expected_scope": null,
+            "before": null,
+            "after": null,
+            "error": "judge_invalid"
+          },
+          {
+            "id": "SMOKE-004",
+            "repeat": 5,
+            "question": "Posso cancelar uma disciplina?",
+            "expected_scope": null,
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "SMOKE-004",
+            "repeat": 6,
+            "question": "Posso cancelar uma disciplina?",
+            "expected_scope": null,
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "SMOKE-004",
+            "repeat": 7,
+            "question": "Posso cancelar uma disciplina?",
+            "expected_scope": null,
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "SMOKE-004",
+            "repeat": 8,
+            "question": "Posso cancelar uma disciplina?",
+            "expected_scope": null,
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "SMOKE-004",
+            "repeat": 9,
+            "question": "Posso cancelar uma disciplina?",
+            "expected_scope": null,
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          },
+          {
+            "id": "SMOKE-004",
+            "repeat": 10,
+            "question": "Posso cancelar uma disciplina?",
+            "expected_scope": null,
+            "before": null,
+            "after": "pos_graduacao",
+            "error": null
+          }
+        ]
+      }
+    }
+  },
+  "probe_dominance_by_gold": {
+    "dev_001": {
+      "graduacao": {
+        "n": 2,
+        "dominance_counts": {
+          "graduacao": 2
+        }
+      },
+      "pos_graduacao": {
+        "n": 7,
+        "dominance_counts": {
+          "graduacao": 1,
+          "pos_graduacao": 6
+        }
+      },
+      "esclarecer": {
+        "n": 12,
+        "dominance_counts": {
+          "graduacao": 11,
+          "pos_graduacao": 1
+        }
+      }
+    },
+    "test_001": {
+      "graduacao": {
+        "n": 2,
+        "dominance_counts": {
+          "graduacao": 2
+        }
+      },
+      "pos_graduacao": {
+        "n": 5,
+        "dominance_counts": {
+          "pos_graduacao": 4,
+          "graduacao": 1
+        }
+      },
+      "esclarecer": {
+        "n": 9,
+        "dominance_counts": {
+          "graduacao": 9
+        }
+      }
+    },
+    "stability_001": {
+      "graduacao": {
+        "n": 8,
+        "dominance_counts": {
+          "graduacao": 8
+        }
+      },
+      "pos_graduacao": {
+        "n": 7,
+        "dominance_counts": {
+          "pos_graduacao": 7
+        }
+      },
+      "esclarecer": {
+        "n": 10,
+        "dominance_counts": {
+          "graduacao": 10
+        }
+      }
+    }
+  },
+  "stability_aggregate": {
+    "intent_v1": {
+      "route_stability_rate": 0.75,
+      "expected_route_rate": 0.75,
+      "mean_entropy_bits": 0.6222553988193423
+    },
+    "adaptive_distribution_v2": {
+      "route_stability_rate": 1.0,
+      "expected_route_rate": 1.0,
+      "mean_entropy_bits": 0.0
+    },
+    "adaptive_llm_v2": {
+      "route_stability_rate": 0.95,
+      "expected_route_rate": 0.8333333333333334,
+      "mean_entropy_bits": 0.14688181653844878
+    }
+  },
+  "physical_total": {
+    "llm_calls": 188,
+    "embedding_calls": 62,
+    "retrieval_calls": 62,
+    "tokens": 193960,
+    "provider_cost": 0.01971745,
+    "calls_with_receipts": 250,
+    "network_calls": 250
+  },
+  "checks": {
+    "dev_001": {
+      "pairs": 43,
+      "rows": 129,
+      "same_probe_payloads_verified": true,
+      "outputs_sha256_verified": true,
+      "metrics_recomputed": true
+    },
+    "test_001": {
+      "pairs": 23,
+      "rows": 69,
+      "same_probe_payloads_verified": true,
+      "outputs_sha256_verified": true,
+      "metrics_recomputed": true
+    },
+    "stability_001": {
+      "pairs": 60,
+      "rows": 180,
+      "same_probe_payloads_verified": true,
+      "outputs_sha256_verified": true,
+      "metrics_recomputed": true
+    }
+  },
+  "threshold": 0.65,
+  "note": "DEV selected rows use calibrated .65; immutable raw DEV rows store initial .55 with all candidate decisions; no DEV/TEST scores pooled"
+}

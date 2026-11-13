@@ -1,0 +1,92 @@
+{
+  "results": [
+    {
+      "group": "legacy_core",
+      "command": "C:/Users/wesley/.local/bin/python3.11.exe -m pytest tests/core -q -p no:cacheprovider --tb=short",
+      "cwd": "code",
+      "exit_code": 0,
+      "passed": 23,
+      "failed": 0,
+      "skipped": 0,
+      "warnings": 0,
+      "summary": "23 passed in 5.52s",
+      "latency_seconds": 8.05534500000067,
+      "failure_classification": [],
+      "failure_test_ids": [],
+      "live_frontend_started": false,
+      "external_provider_calls_intentionally_made": false
+    },
+    {
+      "group": "legacy_service",
+      "command": "C:/Users/wesley/.local/bin/python3.11.exe -m pytest tests/service -q -p no:cacheprovider --tb=short",
+      "cwd": "code",
+      "exit_code": 0,
+      "passed": 24,
+      "failed": 0,
+      "skipped": 0,
+      "warnings": 3,
+      "summary": "24 passed, 3 warnings in 0.40s",
+      "latency_seconds": 15.40874599997187,
+      "failure_classification": [],
+      "failure_test_ids": [],
+      "live_frontend_started": false,
+      "external_provider_calls_intentionally_made": false
+    },
+    {
+      "group": "legacy_client",
+      "command": "C:/Users/wesley/.local/bin/python3.11.exe -m pytest tests/client -q -p no:cacheprovider --tb=short",
+      "cwd": "code",
+      "exit_code": 0,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "warnings": 1,
+      "summary": "9 passed, 1 warning in 0.11s",
+      "latency_seconds": 1.518025899946224,
+      "failure_classification": [],
+      "failure_test_ids": [],
+      "live_frontend_started": false,
+      "external_provider_calls_intentionally_made": false
+    },
+    {
+      "group": "legacy_app",
+      "command": "C:/Users/wesley/.local/bin/python3.11.exe -m pytest tests/app -q -p no:cacheprovider --tb=short",
+      "cwd": "code",
+      "exit_code": 0,
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "warnings": 0,
+      "summary": "7 passed in 1.68s",
+      "latency_seconds": 3.547737299988512,
+      "failure_classification": [],
+      "failure_test_ids": [],
+      "live_frontend_started": false,
+      "external_provider_calls_intentionally_made": false
+    },
+    {
+      "group": "legacy_docker",
+      "command": "C:/Users/wesley/.local/bin/python3.11.exe -m pytest tests/integration -q -p no:cacheprovider --tb=short",
+      "cwd": "code",
+      "exit_code": 0,
+      "passed": 0,
+      "failed": 0,
+      "skipped": 2,
+      "warnings": 0,
+      "summary": "2 skipped in 0.46s",
+      "latency_seconds": 1.74621000001207,
+      "failure_classification": [],
+      "failure_test_ids": [],
+      "live_frontend_started": false,
+      "external_provider_calls_intentionally_made": false
+    }
+  ],
+  "coverage_gaps": [
+    "No dedicated tests/agents directory",
+    "No dedicated tests/memory directory",
+    "RPC Supabase functions not exercised live",
+    "Docker tests require opt-in and were skipped",
+    "AppTest is an isolated UI test harness, not a live Streamlit server"
+  ],
+  "counting_note": "Counts parsed from actual pytest summaries; singular warning handled explicitly."
+}

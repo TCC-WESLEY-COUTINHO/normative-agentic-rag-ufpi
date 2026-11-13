@@ -1,0 +1,27 @@
+{
+  "status": "provisional_technical_annotations_not_legal_gold",
+  "method": "Explicit output inspection by the assistant against frozen pipeline decisions; no additional LLM-as-judge calls and no independent human legal validation.",
+  "frozen_before_after": true,
+  "unit": "one generated response",
+  "criteria": {
+    "TCR": "Denial of supplied historical text, assertion that historical text is current, contradiction of a recorded relation, or unsupported publication/effectivity chronology or temporal scope.",
+    "HFA": "Historical wording is identified as past/prior/historical and supplied historical text is not denied. Mere attribution to a numbered resolution with future-tense rules does not satisfy framing.",
+    "CSC": "Current answer respects the supplied eligible state; citation-only mistakes are counted separately.",
+    "UOR": "Positive certification of current validity or wording as vigente for a final norm whose registry status is desconhecida; a quoted user question or denied certification does not count.",
+    "TRC": "Compatible with the recorded revocation or partial amendment, without denying or reversing it. Separate date inventions remain TCR issues.",
+    "CGVR": "Explicit bibliographic/location citation contains paragraph, item or subitem beyond final metadata article ceiling. Mention of the requested provision as subject is not a bibliographic citation."
+  },
+  "applicability": {
+    "TCR": "All successful generated responses",
+    "HFA": "Historical responses",
+    "CSC": "Current responses",
+    "UOR": "Responses with any final unknown-status evidence",
+    "TRC": "Responses with a relevant known relation",
+    "CGVR": "Responses with normative references"
+  },
+  "limitations": [
+    "Semantic flags are transparent technical annotations, not independently validated gold.",
+    "No postprocessing, answer rewriting or changes to dataset/model/prompt after reading AFTER outputs.",
+    "Zero-denominator rates are null."
+  ]
+}

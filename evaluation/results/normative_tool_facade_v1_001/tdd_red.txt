@@ -1,0 +1,634 @@
+EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE   [100%]
+=================================== ERRORS ====================================
+__ ERROR at setup of test_public_roundtrip_preserves_operation_state[ANSWER] __
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_public_roundtrip_preserves_operation_state[CLARIFICATION] _
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+__ ERROR at setup of test_public_roundtrip_preserves_operation_state[ERROR] ___
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+__ ERROR at setup of test_persistence_roundtrip_keeps_internal_audit[ANSWER] __
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_persistence_roundtrip_keeps_internal_audit[CLARIFICATION] _
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+__ ERROR at setup of test_persistence_roundtrip_keeps_internal_audit[ERROR] ___
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_______ ERROR at setup of test_public_dump_cannot_opt_in_internal_audit _______
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_missing_identity_is_not_silently_defaulted[contract_version] _
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_missing_identity_is_not_silently_defaulted[core_version] _
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_missing_identity_is_not_silently_defaulted[correlation_id] _
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+__ ERROR at setup of test_invalid_answer_contract_fails_explicitly[update0] ___
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+__ ERROR at setup of test_invalid_answer_contract_fails_explicitly[update1] ___
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+__ ERROR at setup of test_invalid_answer_contract_fails_explicitly[update2] ___
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+__ ERROR at setup of test_invalid_answer_contract_fails_explicitly[update3] ___
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+__ ERROR at setup of test_invalid_answer_contract_fails_explicitly[update4] ___
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+__ ERROR at setup of test_invalid_answer_contract_fails_explicitly[update5] ___
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+__ ERROR at setup of test_invalid_answer_contract_fails_explicitly[update6] ___
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+__ ERROR at setup of test_invalid_answer_contract_fails_explicitly[update7] ___
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+__ ERROR at setup of test_invalid_answer_contract_fails_explicitly[update8] ___
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+__ ERROR at setup of test_invalid_answer_contract_fails_explicitly[update9] ___
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+__ ERROR at setup of test_invalid_answer_contract_fails_explicitly[update10] __
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+__ ERROR at setup of test_invalid_answer_contract_fails_explicitly[update11] __
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+__ ERROR at setup of test_invalid_answer_contract_fails_explicitly[update12] __
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_non_answer_cannot_masquerade_as_normative_answer[CLARIFICATION-update0] _
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_non_answer_cannot_masquerade_as_normative_answer[CLARIFICATION-update1] _
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_non_answer_cannot_masquerade_as_normative_answer[CLARIFICATION-update2] _
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_non_answer_cannot_masquerade_as_normative_answer[ERROR-update3] _
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_non_answer_cannot_masquerade_as_normative_answer[ERROR-update4] _
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_non_answer_cannot_masquerade_as_normative_answer[ERROR-update5] _
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+__ ERROR at setup of test_message_text_cannot_fabricate_temporal_provenance ___
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_invalid_persistence_record_fails_explicitly[version] _
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+__ ERROR at setup of test_invalid_persistence_record_fails_explicitly[extra] __
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_invalid_persistence_record_fails_explicitly[missing_result] _
+tests\rag_baseline\test_normative_tool_contracts.py:16: in contracts
+    assert importlib.util.find_spec(name) is not None, "NormativeToolResult is not implemented"
+E   AssertionError: NormativeToolResult is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_contracts')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_delegates_automatic_filtered_query_and_preserves_official_result _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+____ ERROR at setup of test_result_does_not_alias_mutable_core_provenance _____
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_creates_distinct_operation_ids_without_thread_state __
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_bypass_arguments_rejected_by_real_signature[version_filter] _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_bypass_arguments_rejected_by_real_signature[use_version_filter] _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_bypass_arguments_rejected_by_real_signature[manual_scope] _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+__ ERROR at setup of test_bypass_arguments_rejected_by_real_signature[scope] __
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_bypass_arguments_rejected_by_real_signature[sector] __
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+__ ERROR at setup of test_bypass_arguments_rejected_by_real_signature[top_k] __
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+__ ERROR at setup of test_bypass_arguments_rejected_by_real_signature[model] __
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_bypass_arguments_rejected_by_real_signature[temperature] _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_bypass_arguments_rejected_by_real_signature[retrieval_backend] _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_bypass_arguments_rejected_by_real_signature[skip_grounding] _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_bypass_arguments_rejected_by_real_signature[skip_guard] _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_bypass_arguments_rejected_by_real_signature[raw_retrieval] _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_bypass_arguments_rejected_by_real_signature[raw_search] _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_clarification_returns_to_parent_without_answer_or_interrupt _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_exception_mapping_never_exposes_exception_text[error0-provider_error] _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_exception_mapping_never_exposes_exception_text[error1-index_unavailable] _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_exception_mapping_never_exposes_exception_text[error2-invalid_request] _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_exception_mapping_never_exposes_exception_text[error3-internal_error] _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_invalid_or_failed_core_result_is_not_normative_answer[no_structured-invalid_core_result] _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_invalid_or_failed_core_result_is_not_normative_answer[no_audit-invalid_core_result] _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_invalid_or_failed_core_result_is_not_normative_answer[v1_audit-invalid_core_result] _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_invalid_or_failed_core_result_is_not_normative_answer[unfiltered-invalid_core_result] _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_invalid_or_failed_core_result_is_not_normative_answer[manual-invalid_core_result] _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_invalid_or_failed_core_result_is_not_normative_answer[mismatched_domain-invalid_core_result] _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_invalid_or_failed_core_result_is_not_normative_answer[raw_in_final-invalid_core_result] _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_invalid_or_failed_core_result_is_not_normative_answer[bad_provenance-invalid_core_result] _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_invalid_or_failed_core_result_is_not_normative_answer[generation_error-provider_error] _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_invalid_or_failed_core_result_is_not_normative_answer[empty_context-no_eligible_context] _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_________ ERROR at setup of test_invalid_input_does_not_invoke_core[] _________
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+________ ERROR at setup of test_invalid_input_does_not_invoke_core[  ] ________
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_invalid_input_does_not_invoke_core[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx] _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+__ ERROR at setup of test_real_pipeline_equivalence_and_structured_grounding __
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_real_pipeline_clarification_has_no_retrieval_generation_or_interrupt _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+_ ERROR at setup of test_v2_fallback_remains_authoritative_answer_with_separate_core_status _
+tests\rag_baseline\test_normative_tool_facade.py:21: in module
+    assert importlib.util.find_spec(name) is not None, "NormativeRagFacade is not implemented"
+E   AssertionError: NormativeRagFacade is not implemented
+E   assert None is not None
+E    +  where None = <function find_spec at 0x00000203C7C5F380>('rag_baseline.tool_facade')
+E    +    where <function find_spec at 0x00000203C7C5F380> = <module 'importlib.util' (frozen)>.find_spec
+E    +      where <module 'importlib.util' (frozen)> = importlib.util
+=========================== short test summary info ===========================
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_public_roundtrip_preserves_operation_state[ANSWER]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_public_roundtrip_preserves_operation_state[CLARIFICATION]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_public_roundtrip_preserves_operation_state[ERROR]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_persistence_roundtrip_keeps_internal_audit[ANSWER]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_persistence_roundtrip_keeps_internal_audit[CLARIFICATION]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_persistence_roundtrip_keeps_internal_audit[ERROR]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_public_dump_cannot_opt_in_internal_audit
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_missing_identity_is_not_silently_defaulted[contract_version]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_missing_identity_is_not_silently_defaulted[core_version]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_missing_identity_is_not_silently_defaulted[correlation_id]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update0]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update1]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update2]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update3]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update4]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update5]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update6]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update7]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update8]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update9]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update10]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update11]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_answer_contract_fails_explicitly[update12]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_non_answer_cannot_masquerade_as_normative_answer[CLARIFICATION-update0]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_non_answer_cannot_masquerade_as_normative_answer[CLARIFICATION-update1]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_non_answer_cannot_masquerade_as_normative_answer[CLARIFICATION-update2]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_non_answer_cannot_masquerade_as_normative_answer[ERROR-update3]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_non_answer_cannot_masquerade_as_normative_answer[ERROR-update4]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_non_answer_cannot_masquerade_as_normative_answer[ERROR-update5]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_message_text_cannot_fabricate_temporal_provenance
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_persistence_record_fails_explicitly[version]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_persistence_record_fails_explicitly[extra]
+ERROR tests/rag_baseline/test_normative_tool_contracts.py::test_invalid_persistence_record_fails_explicitly[missing_result]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_delegates_automatic_filtered_query_and_preserves_official_result
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_result_does_not_alias_mutable_core_provenance
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_creates_distinct_operation_ids_without_thread_state
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[version_filter]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[use_version_filter]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[manual_scope]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[scope]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[sector]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[top_k]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[model]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[temperature]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[retrieval_backend]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[skip_grounding]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[skip_guard]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[raw_retrieval]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_bypass_arguments_rejected_by_real_signature[raw_search]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_clarification_returns_to_parent_without_answer_or_interrupt
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_exception_mapping_never_exposes_exception_text[error0-provider_error]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_exception_mapping_never_exposes_exception_text[error1-index_unavailable]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_exception_mapping_never_exposes_exception_text[error2-invalid_request]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_exception_mapping_never_exposes_exception_text[error3-internal_error]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_invalid_or_failed_core_result_is_not_normative_answer[no_structured-invalid_core_result]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_invalid_or_failed_core_result_is_not_normative_answer[no_audit-invalid_core_result]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_invalid_or_failed_core_result_is_not_normative_answer[v1_audit-invalid_core_result]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_invalid_or_failed_core_result_is_not_normative_answer[unfiltered-invalid_core_result]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_invalid_or_failed_core_result_is_not_normative_answer[manual-invalid_core_result]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_invalid_or_failed_core_result_is_not_normative_answer[mismatched_domain-invalid_core_result]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_invalid_or_failed_core_result_is_not_normative_answer[raw_in_final-invalid_core_result]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_invalid_or_failed_core_result_is_not_normative_answer[bad_provenance-invalid_core_result]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_invalid_or_failed_core_result_is_not_normative_answer[generation_error-provider_error]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_invalid_or_failed_core_result_is_not_normative_answer[empty_context-no_eligible_context]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_invalid_input_does_not_invoke_core[]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_invalid_input_does_not_invoke_core[  ]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_invalid_input_does_not_invoke_core[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx]
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_real_pipeline_equivalence_and_structured_grounding
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_real_pipeline_clarification_has_no_retrieval_generation_or_interrupt
+ERROR tests/rag_baseline/test_normative_tool_facade.py::test_v2_fallback_remains_authoritative_answer_with_separate_core_status
+70 errors in 1.21s

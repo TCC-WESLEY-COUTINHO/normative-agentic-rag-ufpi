@@ -4,6 +4,7 @@ from collections.abc import AsyncGenerator, Generator
 from typing import Any
 
 import httpx
+from pydantic import ValidationError
 
 from schema import (
     ChatHistory,
@@ -18,6 +19,13 @@ from schema import (
 
 class AgentClientError(Exception):
     pass
+
+
+def _parse_message(payload: Any) -> ChatMessage:
+    try:
+        return ChatMessage.model_validate(payload)
+    except ValidationError:
+        raise AgentClientError("Server returned invalid message.") from None
 
 
 class AgentClient:
@@ -127,7 +135,7 @@ class AgentClient:
             except httpx.HTTPError as e:
                 raise AgentClientError(f"Error: {e}")
 
-        return ChatMessage.model_validate(response.json())
+        return _parse_message(response.json())
 
     def invoke(
         self,
@@ -172,7 +180,7 @@ class AgentClient:
         except httpx.HTTPError as e:
             raise AgentClientError(f"Error: {e}")
 
-        return ChatMessage.model_validate(response.json())
+        return _parse_message(response.json())
 
     def _parse_stream_line(self, line: str) -> ChatMessage | str | None:
         line = line.strip()
@@ -187,16 +195,12 @@ class AgentClient:
             match parsed["type"]:
                 case "message":
                     # Convert the JSON formatted message to an AnyMessage
-                    try:
-                        return ChatMessage.model_validate(parsed["content"])
-                    except Exception as e:
-                        raise Exception(f"Server returned invalid message: {e}")
+                    return _parse_message(parsed["content"])
                 case "token":
                     # Yield the str token directly
                     return parsed["content"]
                 case "error":
-                    error_msg = "Error: " + parsed["content"]
-                    return ChatMessage(type="ai", content=error_msg)
+                    raise AgentClientError("Server returned a stream error.")
         return None
 
     def stream(

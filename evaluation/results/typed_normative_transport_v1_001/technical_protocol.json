@@ -1,0 +1,116 @@
+{
+  "version": "1",
+  "frozen_at": "2026-10-31T18:12:45.887440+00:00",
+  "purpose": "Offline engineering transport contract probes, not legal/retrieval quality evaluation.",
+  "cases": [
+    [
+      "invoke_direct",
+      "invoke",
+      "Oi",
+      "graduacao",
+      "normal"
+    ],
+    [
+      "invoke_dense",
+      "invoke",
+      "Como solicitar matrícula na graduação?",
+      "graduacao",
+      "normal"
+    ],
+    [
+      "invoke_metadata",
+      "invoke",
+      "Art. 68 da 177/2012",
+      "graduacao",
+      "normal"
+    ],
+    [
+      "invoke_filtered",
+      "invoke",
+      "Na 956/2025, quais as regras de matrícula?",
+      "pos_graduacao",
+      "normal"
+    ],
+    [
+      "invoke_clarification",
+      "invoke",
+      "Qual é o prazo?",
+      null,
+      "normal"
+    ],
+    [
+      "invoke_error",
+      "invoke",
+      "Resolução 956/2025, art. 53 na graduação",
+      "graduacao",
+      "normal"
+    ],
+    [
+      "stream_direct",
+      "stream",
+      "Oi",
+      "graduacao",
+      "normal"
+    ],
+    [
+      "stream_answer",
+      "stream",
+      "Art. 69 da 177/2012",
+      "graduacao",
+      "normal"
+    ],
+    [
+      "stream_clarification",
+      "stream",
+      "Qual é o prazo?",
+      null,
+      "normal"
+    ],
+    [
+      "stream_fallback",
+      "stream",
+      "Art. 68 da 177/2012",
+      "graduacao",
+      "fallback"
+    ]
+  ],
+  "concurrency_pair": [
+    "metadata_exact invoke",
+    "vector_filtered stream"
+  ],
+  "agreement_pairs": [
+    "ANSWER",
+    "CLARIFICATION",
+    "ERROR"
+  ],
+  "agreement_method": "Replay the same completed gated execution through invoke/stream preserving its operation UUID; no production cache or repeated UUID assumption.",
+  "primary_groups": 11,
+  "primary_executions": 12,
+  "agreement_requests": 6,
+  "legacy_cases": [
+    "human",
+    "ai",
+    "tool",
+    "custom",
+    "token"
+  ],
+  "private_sentinels": [
+    "RAW_UNSUPPORTED_DRAFT",
+    "UNSAFE RAW"
+  ],
+  "frozen_hashes": {
+    "code/src/schema/schema.py": "0268a560dc12a0df5702ed10d70f60e134a76ebc1f2de50d58021ad604012aa8",
+    "code/src/service/service.py": "578441324438127ba93eacfdc96594a1e804376d7ffd7ddc9ebab41cbba8e734",
+    "code/src/service/normative_transport.py": "30294198dc01031b3e212f3fedaf1329e56e27e19c743a018fc3c2a18482615e",
+    "code/src/client/client.py": "b85d992f85770d2c1206e2566d3f0c916815288df7c4c31dcde5c1f8e37ea491",
+    "code/tests/rag_baseline/test_typed_normative_transport.py": "986b46ecf95c7dc78a27eca34b4d0918870d17509b08ba5acb342c22b61b5f4d",
+    "evaluation/results/typed_normative_transport_v1_001/local_probes.py": "f5bc8e2e82fce96356ea2fb8e4111b681159ee24b4802e0e66cb3d31c7ad1c7c",
+    "code/tests/rag_baseline/test_retrieval_strategies.py": "6fe68a02e1ccdef94488c56ca316ad7a83c6dbc3806e3af4d630abbb3264c41b",
+    "code/tests/rag_baseline/normative_facade_fixtures.py": "f0a925b2c4e1b518ac0e1837e88f96d4e89b2883a70fef2a184fdd14d0b2050a"
+  },
+  "metrics": "Numerator/denominator. Typed/content/correlation/raw over normative requests; references/provenance over ANSWER requests; leakage over all primary+agreement payloads; legacy over5fixtures; agreement over3pairs; default drift0/1.",
+  "policy": "No silent tuning or selective restart after final probes. Preserve all observed negative results and infrastructure errors.",
+  "external_api_calls_allowed": 0,
+  "revision": 2,
+  "environment": "Same fictitious constructor key as code/pyproject.toml pytest_env; external HTTP blocked; no real provider call."
+}

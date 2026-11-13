@@ -1,0 +1,99 @@
+{
+  "branch": "feat/conversation-memory-followups-v1",
+  "baseline": "01b95c5f84c785cf80d1fbc3ae0e02b269027a2d",
+  "commits_before_evidence": [
+    {
+      "sha": "4f7dfda5014fea76fb8794185f4c9f24b9e4de8f",
+      "message": "test: define conversation memory and follow-up boundaries"
+    },
+    {
+      "sha": "8e5247942ba9e4c622fc29e5de3800caab4d7863",
+      "message": "feat: persist normative memory and grounded follow-ups"
+    }
+  ],
+  "sources": [
+    {
+      "path": "code/src/rag_baseline/conversation_contracts.py",
+      "working_sha256": "baa58a813505baa39486842eceb9d5acdcd4b87b5090d5b9ebd7f697d5b17b3a",
+      "implementation_blob_sha256": "baa58a813505baa39486842eceb9d5acdcd4b87b5090d5b9ebd7f697d5b17b3a",
+      "normalized_text_equal": true
+    },
+    {
+      "path": "code/src/rag_baseline/conversation_graph.py",
+      "working_sha256": "59410cad6865058da96616db0c98940cf7ffecf1ab3aa889efdcb7cf2fb03910",
+      "implementation_blob_sha256": "59410cad6865058da96616db0c98940cf7ffecf1ab3aa889efdcb7cf2fb03910",
+      "normalized_text_equal": true
+    },
+    {
+      "path": "code/src/rag_baseline/conversation_policy.py",
+      "working_sha256": "7bb9c215e76a204e2a501af7230d0096d4f6f34fea9247e73bb3c586f4fd6f4a",
+      "implementation_blob_sha256": "7bb9c215e76a204e2a501af7230d0096d4f6f34fea9247e73bb3c586f4fd6f4a",
+      "normalized_text_equal": true
+    },
+    {
+      "path": "code/src/rag_baseline/conversation_transform.py",
+      "working_sha256": "0093fae23e7b25176a67f1b25c20bb5c8ca7ba9dba00529140f030db825e5905",
+      "implementation_blob_sha256": "0093fae23e7b25176a67f1b25c20bb5c8ca7ba9dba00529140f030db825e5905",
+      "normalized_text_equal": true
+    },
+    {
+      "path": "code/src/rag_baseline/agent_graph.py",
+      "working_sha256": "c4a679968b233c344436328f6155d586ddea5f24e75b1bc55d54f0ae36ef4902",
+      "implementation_blob_sha256": "c4a679968b233c344436328f6155d586ddea5f24e75b1bc55d54f0ae36ef4902",
+      "normalized_text_equal": true
+    },
+    {
+      "path": "code/src/schema/schema.py",
+      "working_sha256": "afaf16f9fa3778a056130b28952e2771025abd2ec3de4ba80c85f90c51ad1891",
+      "implementation_blob_sha256": "ce0c2f59adc0e0bb23260c92c9586881729eb639532875add170c29b1d4356fa",
+      "normalized_text_equal": true
+    },
+    {
+      "path": "code/src/service/normative_transport.py",
+      "working_sha256": "24404b8b8293ff8d6d3032fd2610cce14078bed5c78dc1fca48d8feda0c7a266",
+      "implementation_blob_sha256": "24404b8b8293ff8d6d3032fd2610cce14078bed5c78dc1fca48d8feda0c7a266",
+      "normalized_text_equal": true
+    },
+    {
+      "path": "code/src/service/service.py",
+      "working_sha256": "9c3d86d51372b461e229831ca112342bd6347f7a38afa1a5322efb8012445803",
+      "implementation_blob_sha256": "d767b37a2739834d0c874e8c5e3c32e8b3aa85bffdc95642e678cc7d3c4e4065",
+      "normalized_text_equal": true
+    },
+    {
+      "path": "code/tests/rag_baseline/test_conversation_memory_followups.py",
+      "working_sha256": "f1f4fad9bc5155eb2e395050c71b61e3ebc3e9b2a4fb77b28e3607c2bbee2d57",
+      "implementation_blob_sha256": "f1f4fad9bc5155eb2e395050c71b61e3ebc3e9b2a4fb77b28e3607c2bbee2d57",
+      "normalized_text_equal": true
+    },
+    {
+      "path": "code/tests/rag_baseline/test_conversation_memory_transport.py",
+      "working_sha256": "998438a6c89e885b7450c909a6745e013b551610e9ebbe179ed0e61bb4c567b9",
+      "implementation_blob_sha256": "998438a6c89e885b7450c909a6745e013b551610e9ebbe179ed0e61bb4c567b9",
+      "normalized_text_equal": true
+    },
+    {
+      "path": "code/tests/memory/test_normative_checkpoint_serialization.py",
+      "working_sha256": "5ada8ec3d01f3cfebdddb4e43892e79e60d521984172564903e76ddd531c89e9",
+      "implementation_blob_sha256": "5ada8ec3d01f3cfebdddb4e43892e79e60d521984172564903e76ddd531c89e9",
+      "normalized_text_equal": true
+    }
+  ],
+  "protocol_frozen_hashes": {
+    "code/src/rag_baseline/conversation_contracts.py": "baa58a813505baa39486842eceb9d5acdcd4b87b5090d5b9ebd7f697d5b17b3a",
+    "code/src/rag_baseline/conversation_graph.py": "59410cad6865058da96616db0c98940cf7ffecf1ab3aa889efdcb7cf2fb03910",
+    "code/src/rag_baseline/conversation_policy.py": "7bb9c215e76a204e2a501af7230d0096d4f6f34fea9247e73bb3c586f4fd6f4a",
+    "code/src/rag_baseline/conversation_transform.py": "0093fae23e7b25176a67f1b25c20bb5c8ca7ba9dba00529140f030db825e5905",
+    "code/src/rag_baseline/agent_graph.py": "c4a679968b233c344436328f6155d586ddea5f24e75b1bc55d54f0ae36ef4902",
+    "code/src/schema/schema.py": "afaf16f9fa3778a056130b28952e2771025abd2ec3de4ba80c85f90c51ad1891",
+    "code/src/service/service.py": "9c3d86d51372b461e229831ca112342bd6347f7a38afa1a5322efb8012445803",
+    "code/src/service/normative_transport.py": "24404b8b8293ff8d6d3032fd2610cce14078bed5c78dc1fca48d8feda0c7a266",
+    "code/tests/rag_baseline/test_conversation_memory_followups.py": "f1f4fad9bc5155eb2e395050c71b61e3ebc3e9b2a4fb77b28e3607c2bbee2d57",
+    "code/tests/rag_baseline/test_conversation_memory_transport.py": "998438a6c89e885b7450c909a6745e013b551610e9ebbe179ed0e61bb4c567b9",
+    "code/tests/memory/test_normative_checkpoint_serialization.py": "5ada8ec3d01f3cfebdddb4e43892e79e60d521984172564903e76ddd531c89e9",
+    "evaluation/results/conversation_memory_followups_v1_001/local_probes.py": "2080c2d0329e29b9cc26177ac2ed539b934356938bed196797dfe7f51ba6c56b",
+    "evaluation/datasets/conversation_followups_v1.json": "8f4ae3c19dcd1bd6f50b160ebbed8ce89732185eadd3f6b7dc2a44ad293256aa"
+  },
+  "evidence_commit_message": "test: verify conversational isolation and grounded continuation",
+  "evidence_sha_reported_in_chat": true
+}

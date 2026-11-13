@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Literal
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field, field_validator
@@ -6,12 +6,17 @@ from pydantic import BaseModel, Field, field_validator
 from rag_baseline.config import BaselineSettings
 from rag_baseline.models import QueryResult
 from rag_baseline.openrouter import OpenRouterClient, OpenRouterError
+from rag_baseline.profiles import apply_profile
+from rag_baseline.prompts import V2_SYSTEM_PROMPT
 from rag_baseline.service import CorpusNotIndexedError, RagService
 from rag_baseline.vector_store import ChromaVectorStore
 
 
 class QueryRequest(BaseModel):
     question: str = Field(min_length=1, max_length=4000)
+    sector: Literal["graduacao", "pos_graduacao", "ambos", "automatico"] = "ambos"
+    clarification: str | None = Field(default=None, min_length=1, max_length=1000)
+    version_filter: bool = True
 
     @field_validator("question")
     @classmethod
@@ -36,6 +41,7 @@ class _Runtime:
         self.settings = settings
         self._store: ChromaVectorStore | None = None
         self._service: RagService | None = None
+        self._agentic = None
 
     def store(self) -> ChromaVectorStore:
         if self._store is None:
@@ -65,8 +71,26 @@ class _Runtime:
                 top_k=self.settings.RETRIEVAL_TOP_K,
                 embedding_model=self.settings.EMBEDDING_MODEL,
                 llm_model=self.settings.LLM_MODEL,
+                system_prompt=V2_SYSTEM_PROMPT,
             )
         return self._service
+
+    def agentic(self):
+        if self._agentic is None:
+            from rag_baseline.agentic import AgenticRagService
+            from rag_baseline.router import NormativeRouter
+            from rag_baseline.versioning import NormativeRegistry, VersionFilter
+
+            service = self.service()
+            self._agentic = AgenticRagService(
+                service,
+                NormativeRouter(service.openrouter, model=self.settings.ROUTER_MODEL),
+                VersionFilter(NormativeRegistry.load()),
+                routing_mode=self.settings.ROUTING_MODE,
+                probe_top_k=self.settings.ROUTER_PROBE_TOP_K,
+                distribution_threshold=self.settings.ROUTER_DISTRIBUTION_THRESHOLD,
+            )
+        return self._agentic
 
 
 def _openrouter_status(error: OpenRouterError) -> int:
@@ -80,10 +104,11 @@ def create_app(
     *,
     service: Any | None = None,
     vector_store: Any | None = None,
+    agentic_service: Any | None = None,
 ) -> FastAPI:
-    current_settings = settings or BaselineSettings()
+    current_settings = settings or apply_profile(BaselineSettings(), "duas-regulacoes")
     runtime = _Runtime(current_settings)
-    app = FastAPI(title="Baseline RAG — Graduação UFPI")
+    app = FastAPI(title="Baseline RAG — Graduação e Pós-graduação UFPI")
 
     @app.get("/health", response_model=HealthResponse)
     def health() -> HealthResponse:
@@ -106,13 +131,45 @@ def create_app(
 
     @app.post("/query", response_model=QueryResult)
     async def query(payload: QueryRequest) -> QueryResult:
-        rag_service = service or runtime.service()
         try:
-            return await rag_service.query(payload.question)
+            if payload.sector == "automatico":
+                agentic = agentic_service or runtime.agentic()
+                return await agentic.query(
+                    payload.question,
+                    clarification=payload.clarification,
+                    use_version_filter=payload.version_filter,
+                )
+            if agentic_service is not None or service is None or isinstance(service, RagService):
+                if agentic_service is not None:
+                    agentic = agentic_service
+                elif service is not None:
+                    from rag_baseline.agentic import AgenticRagService
+                    from rag_baseline.router import NormativeRouter
+                    from rag_baseline.versioning import NormativeRegistry, VersionFilter
+
+                    agentic = AgenticRagService(
+                        service,
+                        NormativeRouter(service.openrouter),
+                        VersionFilter(NormativeRegistry.load()),
+                    )
+                else:
+                    agentic = runtime.agentic()
+                return await agentic.query(
+                    payload.question,
+                    scope="ambas" if payload.sector == "ambos" else payload.sector,
+                    clarification=payload.clarification,
+                    use_version_filter=payload.version_filter,
+                )
+            rag_service = service or runtime.service()
+            if payload.sector == "ambos":
+                return await rag_service.query(payload.question)
+            return await rag_service.query(payload.question, sector=payload.sector)
         except CorpusNotIndexedError as exc:
             raise HTTPException(status_code=503, detail=str(exc)) from exc
         except OpenRouterError as exc:
             raise HTTPException(status_code=_openrouter_status(exc), detail=str(exc)) from exc
+        except ValueError as exc:
+            raise HTTPException(status_code=503, detail=str(exc)) from exc
 
     return app
 

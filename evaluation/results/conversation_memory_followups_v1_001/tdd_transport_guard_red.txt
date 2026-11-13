@@ -1,0 +1,184 @@
+FFFFFFFFFFFFFFF..                                                        [100%]
+================================== FAILURES ===================================
+_______ test_service_derives_namespace_from_path_and_declared_identity ________
+code\tests\rag_baseline\test_conversation_memory_transport.py:25: in test_service_derives_namespace_from_path_and_declared_identity
+    kwargs, _ = await _handle_input(request, graph, agent_id=transport_tests.AGENT)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: _handle_input() got an unexpected keyword argument 'agent_id'
+____________ test_http_clarification_and_derived_transport[invoke] ____________
+code\src\client\client.py:133: in ainvoke
+    response.raise_for_status()
+code\.venv\Lib\site-packages\httpx\_models.py:763: in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+E   httpx.HTTPStatusError: Server error '500 Internal Server Error' for url 'http://test/chatbot_ufpi_integrated_v1/invoke'
+E   For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
+
+During handling of the above exception, another exception occurred:
+code\tests\rag_baseline\test_conversation_memory_transport.py:40: in test_http_clarification_and_derived_transport
+    first = await harness.client.ainvoke("Posso cancelar uma disciplina?", user_id="A", thread_id="X")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+code\src\client\client.py:135: in ainvoke
+    raise AgentClientError(f"Error: {e}")
+E   client.client.AgentClientError: Error: Server error '500 Internal Server Error' for url 'http://test/chatbot_ufpi_integrated_v1/invoke'
+E   For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
+------------------------------ Captured log call ------------------------------
+ERROR    service.service:service.py:200 An exception occurred: 'conversation_identity'
+____________ test_http_clarification_and_derived_transport[stream] ____________
+code\src\client\client.py:133: in ainvoke
+    response.raise_for_status()
+code\.venv\Lib\site-packages\httpx\_models.py:763: in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+E   httpx.HTTPStatusError: Server error '500 Internal Server Error' for url 'http://test/chatbot_ufpi_integrated_v1/invoke'
+E   For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
+
+During handling of the above exception, another exception occurred:
+code\tests\rag_baseline\test_conversation_memory_transport.py:40: in test_http_clarification_and_derived_transport
+    first = await harness.client.ainvoke("Posso cancelar uma disciplina?", user_id="A", thread_id="X")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+code\src\client\client.py:135: in ainvoke
+    raise AgentClientError(f"Error: {e}")
+E   client.client.AgentClientError: Error: Server error '500 Internal Server Error' for url 'http://test/chatbot_ufpi_integrated_v1/invoke'
+E   For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
+------------------------------ Captured log call ------------------------------
+ERROR    service.service:service.py:200 An exception occurred: 'conversation_identity'
+__________ test_http_other_namespace_does_not_continue_pending[user] __________
+code\src\client\client.py:133: in ainvoke
+    response.raise_for_status()
+code\.venv\Lib\site-packages\httpx\_models.py:763: in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+E   httpx.HTTPStatusError: Server error '500 Internal Server Error' for url 'http://test/chatbot_ufpi_integrated_v1/invoke'
+E   For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
+
+During handling of the above exception, another exception occurred:
+code\tests\rag_baseline\test_conversation_memory_transport.py:71: in test_http_other_namespace_does_not_continue_pending
+    first = await harness.client.ainvoke("Pergunta de A", user_id="A", thread_id="X")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+code\src\client\client.py:135: in ainvoke
+    raise AgentClientError(f"Error: {e}")
+E   client.client.AgentClientError: Error: Server error '500 Internal Server Error' for url 'http://test/chatbot_ufpi_integrated_v1/invoke'
+E   For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
+------------------------------ Captured log call ------------------------------
+ERROR    service.service:service.py:200 An exception occurred: 'conversation_identity'
+_________ test_http_other_namespace_does_not_continue_pending[thread] _________
+code\src\client\client.py:133: in ainvoke
+    response.raise_for_status()
+code\.venv\Lib\site-packages\httpx\_models.py:763: in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+E   httpx.HTTPStatusError: Server error '500 Internal Server Error' for url 'http://test/chatbot_ufpi_integrated_v1/invoke'
+E   For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
+
+During handling of the above exception, another exception occurred:
+code\tests\rag_baseline\test_conversation_memory_transport.py:71: in test_http_other_namespace_does_not_continue_pending
+    first = await harness.client.ainvoke("Pergunta de A", user_id="A", thread_id="X")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+code\src\client\client.py:135: in ainvoke
+    raise AgentClientError(f"Error: {e}")
+E   client.client.AgentClientError: Error: Server error '500 Internal Server Error' for url 'http://test/chatbot_ufpi_integrated_v1/invoke'
+E   For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
+------------------------------ Captured log call ------------------------------
+ERROR    service.service:service.py:200 An exception occurred: 'conversation_identity'
+_________ test_http_other_namespace_does_not_continue_pending[agent] __________
+code\src\client\client.py:133: in ainvoke
+    response.raise_for_status()
+code\.venv\Lib\site-packages\httpx\_models.py:763: in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+E   httpx.HTTPStatusError: Server error '500 Internal Server Error' for url 'http://test/chatbot_ufpi_integrated_v1/invoke'
+E   For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
+
+During handling of the above exception, another exception occurred:
+code\tests\rag_baseline\test_conversation_memory_transport.py:71: in test_http_other_namespace_does_not_continue_pending
+    first = await harness.client.ainvoke("Pergunta de A", user_id="A", thread_id="X")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+code\src\client\client.py:135: in ainvoke
+    raise AgentClientError(f"Error: {e}")
+E   client.client.AgentClientError: Error: Server error '500 Internal Server Error' for url 'http://test/chatbot_ufpi_integrated_v1/invoke'
+E   For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
+------------------------------ Captured log call ------------------------------
+ERROR    service.service:service.py:200 An exception occurred: 'conversation_identity'
+_________________ test_request_body_cannot_replace_path_agent _________________
+code\tests\rag_baseline\test_conversation_memory_transport.py:87: in test_request_body_cannot_replace_path_agent
+    assert response.status_code == 200
+E   assert 500 == 200
+E    +  where 500 = <Response [500 Internal Server Error]>.status_code
+------------------------------ Captured log call ------------------------------
+ERROR    service.service:service.py:200 An exception occurred: 'conversation_identity'
+_ test_guard_detects_compact_subdivision_and_identifier_year_expansion[Art. 68, VI] _
+code\tests\rag_baseline\test_conversation_memory_transport.py:100: in test_guard_detects_compact_subdivision_and_identifier_year_expansion
+    assert GroundedTransformGuard().check(value, candidate)
+E   AssertionError: assert []
+E    +  where [] = check(NormativeToolResult(contract_version='1', core_version='structured_output_v2', status=<ToolStatus.ANSWER: 'ANSWER'>, a...ication_question=None, correlation_id=UUID('8ab5d1af-9708-4555-a442-bf8c8a744c91'), error_code=None, safe_message=None), 'Art. 68, VI')
+E    +    where check = <rag_baseline.conversation_transform.GroundedTransformGuard object at 0x000002960EFF86D0>.check
+E    +      where <rag_baseline.conversation_transform.GroundedTransformGuard object at 0x000002960EFF86D0> = <class 'rag_baseline.conversation_transform.GroundedTransformGuard'>()
+_ test_guard_detects_compact_subdivision_and_identifier_year_expansion[par\xe1grafo \xfanico] _
+code\tests\rag_baseline\test_conversation_memory_transport.py:100: in test_guard_detects_compact_subdivision_and_identifier_year_expansion
+    assert GroundedTransformGuard().check(value, candidate)
+E   AssertionError: assert []
+E    +  where [] = check(NormativeToolResult(contract_version='1', core_version='structured_output_v2', status=<ToolStatus.ANSWER: 'ANSWER'>, a...ication_question=None, correlation_id=UUID('8ab5d1af-9708-4555-a442-bf8c8a744c91'), error_code=None, safe_message=None), 'parágrafo único')
+E    +    where check = <rag_baseline.conversation_transform.GroundedTransformGuard object at 0x000002960F81A490>.check
+E    +      where <rag_baseline.conversation_transform.GroundedTransformGuard object at 0x000002960F81A490> = <class 'rag_baseline.conversation_transform.GroundedTransformGuard'>()
+_ test_guard_detects_compact_subdivision_and_identifier_year_expansion[\xa7 \xfanico] _
+code\tests\rag_baseline\test_conversation_memory_transport.py:100: in test_guard_detects_compact_subdivision_and_identifier_year_expansion
+    assert GroundedTransformGuard().check(value, candidate)
+E   AssertionError: assert []
+E    +  where [] = check(NormativeToolResult(contract_version='1', core_version='structured_output_v2', status=<ToolStatus.ANSWER: 'ANSWER'>, a...ication_question=None, correlation_id=UUID('8ab5d1af-9708-4555-a442-bf8c8a744c91'), error_code=None, safe_message=None), '§ único')
+E    +    where check = <rag_baseline.conversation_transform.GroundedTransformGuard object at 0x000002960F852F50>.check
+E    +      where <rag_baseline.conversation_transform.GroundedTransformGuard object at 0x000002960F852F50> = <class 'rag_baseline.conversation_transform.GroundedTransformGuard'>()
+_ test_guard_detects_compact_subdivision_and_identifier_year_expansion[incisos VI e VII] _
+code\tests\rag_baseline\test_conversation_memory_transport.py:100: in test_guard_detects_compact_subdivision_and_identifier_year_expansion
+    assert GroundedTransformGuard().check(value, candidate)
+E   AssertionError: assert []
+E    +  where [] = check(NormativeToolResult(contract_version='1', core_version='structured_output_v2', status=<ToolStatus.ANSWER: 'ANSWER'>, a...ication_question=None, correlation_id=UUID('8ab5d1af-9708-4555-a442-bf8c8a744c91'), error_code=None, safe_message=None), 'incisos VI e VII')
+E    +    where check = <rag_baseline.conversation_transform.GroundedTransformGuard object at 0x000002960F76BD50>.check
+E    +      where <rag_baseline.conversation_transform.GroundedTransformGuard object at 0x000002960F76BD50> = <class 'rag_baseline.conversation_transform.GroundedTransformGuard'>()
+_ test_guard_detects_compact_subdivision_and_identifier_year_expansion[al\xedneas a e b] _
+code\tests\rag_baseline\test_conversation_memory_transport.py:100: in test_guard_detects_compact_subdivision_and_identifier_year_expansion
+    assert GroundedTransformGuard().check(value, candidate)
+E   AssertionError: assert []
+E    +  where [] = check(NormativeToolResult(contract_version='1', core_version='structured_output_v2', status=<ToolStatus.ANSWER: 'ANSWER'>, a...ication_question=None, correlation_id=UUID('8ab5d1af-9708-4555-a442-bf8c8a744c91'), error_code=None, safe_message=None), 'alíneas a e b')
+E    +    where check = <rag_baseline.conversation_transform.GroundedTransformGuard object at 0x000002960F803F50>.check
+E    +      where <rag_baseline.conversation_transform.GroundedTransformGuard object at 0x000002960F803F50> = <class 'rag_baseline.conversation_transform.GroundedTransformGuard'>()
+_ test_guard_detects_compact_subdivision_and_identifier_year_expansion[Artigos 68 e 177] _
+code\tests\rag_baseline\test_conversation_memory_transport.py:100: in test_guard_detects_compact_subdivision_and_identifier_year_expansion
+    assert GroundedTransformGuard().check(value, candidate)
+E   AssertionError: assert []
+E    +  where [] = check(NormativeToolResult(contract_version='1', core_version='structured_output_v2', status=<ToolStatus.ANSWER: 'ANSWER'>, a...ication_question=None, correlation_id=UUID('8ab5d1af-9708-4555-a442-bf8c8a744c91'), error_code=None, safe_message=None), 'Artigos 68 e 177')
+E    +    where check = <rag_baseline.conversation_transform.GroundedTransformGuard object at 0x000002960C9E6710>.check
+E    +      where <rag_baseline.conversation_transform.GroundedTransformGuard object at 0x000002960C9E6710> = <class 'rag_baseline.conversation_transform.GroundedTransformGuard'>()
+_ test_guard_detects_compact_subdivision_and_identifier_year_expansion[Em 2012, o prazo mudou.] _
+code\tests\rag_baseline\test_conversation_memory_transport.py:100: in test_guard_detects_compact_subdivision_and_identifier_year_expansion
+    assert GroundedTransformGuard().check(value, candidate)
+E   AssertionError: assert []
+E    +  where [] = check(NormativeToolResult(contract_version='1', core_version='structured_output_v2', status=<ToolStatus.ANSWER: 'ANSWER'>, a...ication_question=None, correlation_id=UUID('8ab5d1af-9708-4555-a442-bf8c8a744c91'), error_code=None, safe_message=None), 'Em 2012, o prazo mudou.')
+E    +    where check = <rag_baseline.conversation_transform.GroundedTransformGuard object at 0x000002960F82AD90>.check
+E    +      where <rag_baseline.conversation_transform.GroundedTransformGuard object at 0x000002960F82AD90> = <class 'rag_baseline.conversation_transform.GroundedTransformGuard'>()
+_ test_guard_detects_compact_subdivision_and_identifier_year_expansion[A regra vale imediatamente.] _
+code\tests\rag_baseline\test_conversation_memory_transport.py:100: in test_guard_detects_compact_subdivision_and_identifier_year_expansion
+    assert GroundedTransformGuard().check(value, candidate)
+E   AssertionError: assert []
+E    +  where [] = check(NormativeToolResult(contract_version='1', core_version='structured_output_v2', status=<ToolStatus.ANSWER: 'ANSWER'>, a...ication_question=None, correlation_id=UUID('8ab5d1af-9708-4555-a442-bf8c8a744c91'), error_code=None, safe_message=None), 'A regra vale imediatamente.')
+E    +    where check = <rag_baseline.conversation_transform.GroundedTransformGuard object at 0x000002960F7E0650>.check
+E    +      where <rag_baseline.conversation_transform.GroundedTransformGuard object at 0x000002960F7E0650> = <class 'rag_baseline.conversation_transform.GroundedTransformGuard'>()
+============================== warnings summary ===============================
+code\.venv\Lib\site-packages\langchain_core\tools\base.py:1314
+code\.venv\Lib\site-packages\langchain_core\tools\base.py:1314
+  D:\faculdade\TCC\RAG\normative-agentic-rag-ufpi\code\.venv\Lib\site-packages\langchain_core\tools\base.py:1314: PydanticDeprecatedSince20: The `__fields__` attribute is deprecated, use `model_fields` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+    fields = getattr(cls, "model_fields", {}) or getattr(cls, "__fields__", {})
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED code\tests\rag_baseline\test_conversation_memory_transport.py::test_service_derives_namespace_from_path_and_declared_identity
+FAILED code\tests\rag_baseline\test_conversation_memory_transport.py::test_http_clarification_and_derived_transport[invoke]
+FAILED code\tests\rag_baseline\test_conversation_memory_transport.py::test_http_clarification_and_derived_transport[stream]
+FAILED code\tests\rag_baseline\test_conversation_memory_transport.py::test_http_other_namespace_does_not_continue_pending[user]
+FAILED code\tests\rag_baseline\test_conversation_memory_transport.py::test_http_other_namespace_does_not_continue_pending[thread]
+FAILED code\tests\rag_baseline\test_conversation_memory_transport.py::test_http_other_namespace_does_not_continue_pending[agent]
+FAILED code\tests\rag_baseline\test_conversation_memory_transport.py::test_request_body_cannot_replace_path_agent
+FAILED code\tests\rag_baseline\test_conversation_memory_transport.py::test_guard_detects_compact_subdivision_and_identifier_year_expansion[Art. 68, VI]
+FAILED code\tests\rag_baseline\test_conversation_memory_transport.py::test_guard_detects_compact_subdivision_and_identifier_year_expansion[par\xe1grafo \xfanico]
+FAILED code\tests\rag_baseline\test_conversation_memory_transport.py::test_guard_detects_compact_subdivision_and_identifier_year_expansion[\xa7 \xfanico]
+FAILED code\tests\rag_baseline\test_conversation_memory_transport.py::test_guard_detects_compact_subdivision_and_identifier_year_expansion[incisos VI e VII]
+FAILED code\tests\rag_baseline\test_conversation_memory_transport.py::test_guard_detects_compact_subdivision_and_identifier_year_expansion[al\xedneas a e b]
+FAILED code\tests\rag_baseline\test_conversation_memory_transport.py::test_guard_detects_compact_subdivision_and_identifier_year_expansion[Artigos 68 e 177]
+FAILED code\tests\rag_baseline\test_conversation_memory_transport.py::test_guard_detects_compact_subdivision_and_identifier_year_expansion[Em 2012, o prazo mudou.]
+FAILED code\tests\rag_baseline\test_conversation_memory_transport.py::test_guard_detects_compact_subdivision_and_identifier_year_expansion[A regra vale imediatamente.]
+15 failed, 2 passed, 2 warnings in 9.12s

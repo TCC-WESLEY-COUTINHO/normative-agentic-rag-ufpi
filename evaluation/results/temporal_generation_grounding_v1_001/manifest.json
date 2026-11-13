@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "initial_head": "365d28a1d5b21ae27bd7220316aa5aa612ca608e",
+  "routing": "manual_scope_fixed_context",
+  "retrieval_calls": 0,
+  "reindexing": false,
+  "settings": {
+    "llm_model": "qwen/qwen3-30b-a3b-instruct-2507",
+    "embedding_model": "openai/text-embedding-3-small",
+    "temperature": 0.0,
+    "max_tokens": 800,
+    "top_k": 5,
+    "base_url": "https://openrouter.ai/api/v1"
+  },
+  "dataset_sha256": "79ef11acf559b5341811c3204b29022d37fbb7845cee8876950f6588efdae6d0",
+  "frozen_contexts_sha256": "e6778f9215a443a2ce258a46258591299f93af671821b567b85e8bf870ca5348",
+  "calls_per_phase": 44,
+  "design": "Same questions, final chunks, model and configuration; only temporal grounding changes."
+}

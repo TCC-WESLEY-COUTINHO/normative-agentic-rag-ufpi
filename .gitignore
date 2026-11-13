@@ -11,10 +11,6 @@ checkpoints.db-*
 .DS_Store
 *.code-workspace
 
-# cursor
-.cursorindexingignore
-.specstory/
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -191,3 +187,6 @@ code/.local/
 # Private Credentials, ignore everything in the folder but the .gitkeep file
 privatecredentials/*
 !privatecredentials/.gitkeep
+
+# Local runtime data of the demo (Chroma index copy)
+.local/

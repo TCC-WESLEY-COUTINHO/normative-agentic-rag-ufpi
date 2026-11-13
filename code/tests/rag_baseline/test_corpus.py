@@ -53,6 +53,12 @@ def test_chunk_id_is_deterministic() -> None:
     assert second.id == first.id
 
 
+def test_chunk_id_accepts_a_corpus_specific_prefix() -> None:
+    chunk = normalize_chunk(sample_chunk(), index=7, id_prefix="ufpi-956-2025")
+
+    assert chunk.id == "ufpi-956-2025-art-42-idx-000007"
+
+
 def test_loader_preserves_original_order(tmp_path) -> None:
     second = sample_chunk()
     second["metadados"] = {**second["metadados"], "artigo_numero": "43", "artigo": "Art. 43"}
@@ -76,6 +82,15 @@ def test_embedding_text_includes_available_structural_context() -> None:
     assert "Seção I: DISPOSICOES GERAIS" in text
     assert "Artigo: Art. 42" in text
     assert "Conteúdo:\nArt. 42. Conteudo normativo." in text
+
+
+def test_embedding_text_accepts_the_selected_norm_name() -> None:
+    chunk = normalize_chunk(sample_chunk(), index=0)
+
+    text = build_embedding_text(chunk, norm_name="Resolução CEPEX/UFPI nº 956/2025")
+
+    assert "Norma: Resolução CEPEX/UFPI nº 956/2025" in text
+    assert "Resolução nº 177/2012" not in text
 
 
 def test_embedding_text_omits_missing_fields_without_rendering_none() -> None:

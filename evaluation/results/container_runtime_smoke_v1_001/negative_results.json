@@ -1,0 +1,61 @@
+{
+  "consolidated_at": "2026-11-01T17:11:50.525240+00:00",
+  "observations": [
+    {
+      "class": "ENVIRONMENT/PERMISSION",
+      "finding": "Sandbox WSL access denied; host-authorized read succeeded. Normal Linux user docker socket denied and sudo -n required password.",
+      "resolution": "WSL root used for Docker; no group/socket permission changes."
+    },
+    {
+      "class": "ENVIRONMENT/PYTHON",
+      "finding": "Windows project .venv targets missing C:/Program Files/Python311/python.exe.",
+      "resolution": "Isolated WSL snapshot dependencies and built image Linux/Python3.12 for regression suites; project venv/lock not changed."
+    },
+    {
+      "class": "ENVIRONMENT/FILESYSTEM",
+      "finding": "First /tmp snapshot dependency workspace was not found on the next call; cause not determined.",
+      "resolution": "Use recorded /var/tmp workspace; original setup log retained."
+    },
+    {
+      "class": "ENVIRONMENT/GIT",
+      "finding": "WSL root Git safe-directory guard rejected the user-owned checkout.",
+      "resolution": "Exact safe.directory passed per Git invocation only; no global config change."
+    },
+    {
+      "class": "HARNESS/PREPARATION",
+      "finding": "Bootstrap script indentation and Git cwd errors occurred during preparation; initial Ruff E402 ordering findings were also observed.",
+      "resolution": "Corrected before applicable final freeze; delayed guarded imports explicitly annotated. No product changes."
+    },
+    {
+      "class": "HARNESS/NETWORK",
+      "finding": "attempt_01: internal bridge did not publish the host port. Service logs showed startup complete; host HTTP startup probe failed. Controlled continuation interrupted with finally cleanup.",
+      "resolution": "Dedicated bridge plus localhost-only binding and test-only HTTP/DNS/socket guard; first protocol/results/logs retained."
+    },
+    {
+      "class": "HARNESS/TEMPORARY_PATH",
+      "finding": "attempt_02: old observation directory caused FileExistsError before service creation.",
+      "resolution": "Unique namespace per run; restart reuses only its own SQLite volume. Attempt retained."
+    },
+    {
+      "class": "PACKAGING/HEALTHCHECK",
+      "finding": "Dev Compose used curl absent from the built image: actual docker exec exit 127; regression RED 1 failed.",
+      "resolution": "Only dev service healthcheck changed to Python urllib /health; regression GREEN 1 passed; real Docker health healthy. RED logs retained in compose_red/."
+    },
+    {
+      "class": "TEST_ENVIRONMENT/DESCRIPTORS",
+      "finding": "Docker test process default RLIMIT_NOFILE soft=1024, hard=1048576. Aggregate rag_baseline/full exhausted descriptors.",
+      "resolution": "Only affected transient test containers use nofile=65536:65536; daemon/product limits unchanged. Initial logs retained in linux_default_limits_red/."
+    },
+    {
+      "class": "TEST_ENVIRONMENT/CONTEXT",
+      "finding": "After descriptor adjustment: rag_baseline 3 failed/907 passed/10 skipped; full 9 failed/967 passed/12 skipped due missing Git, two corpus fixtures, and legacy AppTest relative cwd.",
+      "resolution": "Auxiliary test-tools image adds Git only; fixtures/.git read-only bind; test-only autouse cwd fixture for legacy app tests. Logs retained in linux_incomplete_test_context_red/. Service image, corpus and UI source unchanged."
+    },
+    {
+      "class": "WINDOWS_LINUX/BYTECODE",
+      "finding": "Mounted cached test bytecode produced Windows source filenames in Linux tracebacks.",
+      "resolution": "Final aggregate test containers use a separate PYTHONPYCACHEPREFIX; existing host bytecode is neither normalized nor deleted."
+    }
+  ],
+  "initial_attempts_not_counted_as_final_denominators": true
+}

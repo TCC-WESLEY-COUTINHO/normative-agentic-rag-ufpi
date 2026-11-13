@@ -1,0 +1,16 @@
+.........................................                                [100%]
+============================== warnings summary ===============================
+tests/app/test_tcc_ui.py::test_invalid_multiple_typed_results_rejected_by_existing_schema
+  code\.venv\Lib\site-packages\pydantic\main.py:426: UserWarning: Pydantic serializer warnings:
+    Expected `NormativeToolResult` but got `dict` with value `{'contract_version': '1',...e, 'safe_message': None}` - serialized value may not be as expected
+    Expected `CalculatorToolResult` but got `dict` with value `{'contract_version': '1',...e, 'safe_message': None}` - serialized value may not be as expected
+    return self.__pydantic_serializer__.to_python(
+
+tests/client/test_client.py::test_astream
+  code\src\client\client.py:311: RuntimeWarning: coroutine 'AsyncMockMixin._execute_mock_call' was never awaited
+    response.raise_for_status()
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+41 passed, 2 warnings in 1.87s

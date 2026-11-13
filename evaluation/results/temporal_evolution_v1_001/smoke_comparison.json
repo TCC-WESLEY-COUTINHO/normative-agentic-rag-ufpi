@@ -1,0 +1,94 @@
+{
+  "A": {
+    "n": 4,
+    "failures": 0,
+    "retrieval_answerable_n": 3,
+    "version": {
+      "generated_question_n": 3,
+      "obsolete_context_rate_at_5": 0.4,
+      "compliance_violation_rate": 0.6666666666666666,
+      "removal_count": 0,
+      "removal_reasons": {},
+      "current_norm_hit_at_5": null,
+      "outdated_provision_query_n": 0,
+      "outdated_provision_exposed_query_n": 0,
+      "outdated_provision_exposure_rate": null,
+      "applied_amendment_n": 0
+    },
+    "route_accuracy": null,
+    "clarification_recall": null,
+    "recall_at_5": 0.16666666666666666,
+    "wrong_norm_at_5": 0.4,
+    "rows_sha256": "6ee68f57148f3545887793a0ab07a6e6c117e24fc0777170aafa397ea156ebff",
+    "inputs_dirty": false
+  },
+  "B": {
+    "n": 4,
+    "failures": 0,
+    "retrieval_answerable_n": 3,
+    "version": {
+      "generated_question_n": 4,
+      "obsolete_context_rate_at_5": 0.4,
+      "compliance_violation_rate": 1,
+      "removal_count": 0,
+      "removal_reasons": {},
+      "current_norm_hit_at_5": null,
+      "outdated_provision_query_n": 0,
+      "outdated_provision_exposed_query_n": 0,
+      "outdated_provision_exposure_rate": null,
+      "applied_amendment_n": 0
+    },
+    "route_accuracy": null,
+    "clarification_recall": null,
+    "recall_at_5": 0.16666666666666666,
+    "wrong_norm_at_5": 0.5333333333333333,
+    "rows_sha256": "123baadfc851b08a020d7b3ab540eac9b0163c7934a0cb7761ef44f0735822e8",
+    "inputs_dirty": false
+  },
+  "C": {
+    "n": 4,
+    "failures": 0,
+    "retrieval_answerable_n": 3,
+    "version": {
+      "generated_question_n": 3,
+      "obsolete_context_rate_at_5": 0.4,
+      "compliance_violation_rate": 0.6666666666666666,
+      "removal_count": 0,
+      "removal_reasons": {},
+      "current_norm_hit_at_5": null,
+      "outdated_provision_query_n": 0,
+      "outdated_provision_exposed_query_n": 0,
+      "outdated_provision_exposure_rate": null,
+      "applied_amendment_n": 0
+    },
+    "route_accuracy": 1.0,
+    "clarification_recall": 1.0,
+    "recall_at_5": 0.16666666666666666,
+    "wrong_norm_at_5": 0.4,
+    "rows_sha256": "7d7f37b3239dffdbf58c1985ba3d5790257d8dc726e8fd87ebcc0ec15577f4fb",
+    "inputs_dirty": false
+  },
+  "D": {
+    "n": 4,
+    "failures": 0,
+    "retrieval_answerable_n": 3,
+    "version": {
+      "generated_question_n": 3,
+      "obsolete_context_rate_at_5": 0.0,
+      "compliance_violation_rate": 0,
+      "removal_count": 0,
+      "removal_reasons": {},
+      "current_norm_hit_at_5": null,
+      "outdated_provision_query_n": 0,
+      "outdated_provision_exposed_query_n": 0,
+      "outdated_provision_exposure_rate": null,
+      "applied_amendment_n": 0
+    },
+    "route_accuracy": 1.0,
+    "clarification_recall": 1.0,
+    "recall_at_5": 0.5,
+    "wrong_norm_at_5": 0.0,
+    "rows_sha256": "4243b43e8a51076e5b4c3f65224a17692b5d7f77b16f9247d456c6df428fd397",
+    "inputs_dirty": false
+  }
+}

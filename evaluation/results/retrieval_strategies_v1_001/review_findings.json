@@ -1,0 +1,27 @@
+{
+  "mode": "Independent read-only code review, no providers or edits",
+  "findings": [
+    {
+      "issue": "Partial unsupported article expression selected exact prefix",
+      "status": "fixed RED/GREEN"
+    },
+    {
+      "issue": "Unknown norm masked known router conflict",
+      "status": "fixed RED/GREEN"
+    },
+    {
+      "issue": "New paths changed empty-index error mapping",
+      "status": "fixed RED/GREEN"
+    },
+    {
+      "issue": "Unicode ranges and ampersand still truncated in first fix",
+      "status": "fixed RED/GREEN with general plural fallback"
+    }
+  ],
+  "final": "No remaining Critical or Important findings; public schema identical",
+  "additional_local_regressions": [
+    "Private returned candidates audit",
+    "JSON tuple/list persistence roundtrip",
+    "Routed scope in conflict audit"
+  ]
+}

@@ -1,0 +1,2052 @@
+{
+  "previous_frequency_before": {
+    "question": "Qual é a frequência mínima que eu preciso ter nas aulas para não ser reprovado por falta?",
+    "clarification": "graduação",
+    "routing": [
+      {
+        "input": {
+          "question": "Qual é a frequência mínima que eu preciso ter nas aulas para não ser reprovado por falta?",
+          "clarification": "graduação"
+        },
+        "decision": {
+          "clarification_question": null,
+          "needs_clarification": false,
+          "reason_code": "explicit_graduacao",
+          "scope": "graduacao"
+        }
+      }
+    ],
+    "result": {
+      "persistence_version": "1",
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Para Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nNão foi possível formular a resposta com segurança a partir das evidências disponíveis.",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-art-112-idx-000110",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "112",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 112",
+            "temporal_role": "eligible",
+            "evidence_text": "**Art. 112. Será considerado \"reprovado\" o aluno que se incluir em um dos três itens:**\n1. I - obtiver frequência inferior a 75% (setenta e cinco por cento) da carga horária do componente curricular;\n2. II - obtiver média aritmética inferior a 4 (quatro) nas avaliações parciais;\n3. III - obtiver média aritmética inferior a 6 (seis), resultante da média aritmética das avaliações parciais e da nota do exame final."
+          },
+          {
+            "chunk_id": "ufpi-177-2012-art-115-idx-000113",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "115",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 115",
+            "temporal_role": "eligible",
+            "evidence_text": "**Art. 115. É reprovado no componente curricular o aluno que deixar de comparecer a mais de 25% (vinte e cinco por cento) do total das aulas e atividades no período letivo, ressalvados os casos previstos em lei.**"
+          },
+          {
+            "chunk_id": "ufpi-177-2012-art-113-idx-000111",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "113",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 113",
+            "temporal_role": "eligible",
+            "evidence_text": "**Art. 113. É reprovado no componente curricular o aluno cuja média final for menor que 4 (quatro). Neste caso, o aluno não poderá se submeter ao exame final.**"
+          },
+          {
+            "chunk_id": "ufpi-177-2012-art-114-idx-000112",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "114",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 114",
+            "temporal_role": "eligible",
+            "evidence_text": "**Art. 114. A presença do aluno é registrada por sua frequência em cada 60 (sessenta) minutos de aula.**"
+          },
+          {
+            "chunk_id": "ufpi-177-2012-art-118-idx-000116",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "118",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 118",
+            "temporal_role": "eligible",
+            "evidence_text": "**Art. 118. A média final mínima para aprovação, depois de realizado o cálculo definido no Art. 117, é 6 (seis).**"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "indeterminate",
+          "requested_time_context": {
+            "norm_ids": [],
+            "before_amendment": false,
+            "relation_query": null,
+            "article": null,
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-art-112-idx-000110",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "112",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-115-idx-000113",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "115",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-113-idx-000111",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "113",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-114-idx-000112",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "114",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-118-idx-000116",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "118",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": false,
+            "must_not_claim_current_validity": false,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": false,
+            "must_not_present_successor_as_historical_predecessor": false,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": false,
+            "must_not_duplicate_superseded_wording": false,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Para Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "STATUS_UNKNOWN",
+              "norm_id": "ufpi-177-2012",
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "fallback",
+        "domain": "graduacao",
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "22e4954b-c538-4ce9-87b6-eeccd35631e4",
+        "error_code": null,
+        "safe_message": null
+      },
+      "internal_audit": {
+        "response_kind": "generated",
+        "generation_attempts": 2,
+        "output_audit": {
+          "raw_answer": "A frequência mínima exigida para não ser reprovado por falta, conforme o Regulamento Geral da Graduação da UFPI, é de 75% (setenta e cinco por cento) da carga horária do componente curricular.\n\nEssa exigência está prevista no Art. 112, inciso I, da Resolução 177/2012, que considera \"reprovado\" o aluno que obtiver frequência inferior a 75% da carga horária do componente curricular.",
+          "guard_violations": [
+            {
+              "code": "unvalidated_subdivision",
+              "start": 236,
+              "end": 244,
+              "excerpt": "inciso I"
+            }
+          ],
+          "regenerated_answer": "Para não ser reprovado por falta nas aulas, é necessário ter frequência igual ou superior a 75% da carga horária do componente curricular, conforme estabelecido no Art. 112, inciso I, da Resolução 177/2012.",
+          "regeneration_error": null,
+          "second_guard_violations": [
+            {
+              "code": "unvalidated_subdivision",
+              "start": 174,
+              "end": 182,
+              "excerpt": "inciso I"
+            }
+          ],
+          "final_answer": "Para Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nNão foi possível formular a resposta com segurança a partir das evidências disponíveis.",
+          "guard_action": "fallback",
+          "allowed_content_locators": [
+            {
+              "norm_id": "ufpi-177-2012",
+              "article": "112",
+              "subdivision_type": null,
+              "subdivision_value": null,
+              "source": "validated_evidence",
+              "authorization_reason": "Final grounding validates this norm/article, independently of display ceiling."
+            },
+            {
+              "norm_id": "ufpi-177-2012",
+              "article": "113",
+              "subdivision_type": null,
+              "subdivision_value": null,
+              "source": "validated_evidence",
+              "authorization_reason": "Final grounding validates this norm/article, independently of display ceiling."
+            },
+            {
+              "norm_id": "ufpi-177-2012",
+              "article": "114",
+              "subdivision_type": null,
+              "subdivision_value": null,
+              "source": "validated_evidence",
+              "authorization_reason": "Final grounding validates this norm/article, independently of display ceiling."
+            },
+            {
+              "norm_id": "ufpi-177-2012",
+              "article": "115",
+              "subdivision_type": null,
+              "subdivision_value": null,
+              "source": "validated_evidence",
+              "authorization_reason": "Final grounding validates this norm/article, independently of display ceiling."
+            },
+            {
+              "norm_id": "ufpi-177-2012",
+              "article": "118",
+              "subdivision_type": null,
+              "subdivision_value": null,
+              "source": "validated_evidence",
+              "authorization_reason": "Final grounding validates this norm/article, independently of display ceiling."
+            }
+          ],
+          "guard_version": "2"
+        },
+        "exception_type": null,
+        "retrieval_audit": {
+          "strategy": "dense_vector",
+          "parsed_reference": {
+            "norm_ids": [],
+            "articles": [],
+            "raw_norm_references": [],
+            "raw_article_references": [],
+            "unknown_norm": false,
+            "ambiguous": false,
+            "semantic_query_remains": true
+          },
+          "consistency": "consistent",
+          "routed_scope": "graduacao",
+          "executed": true,
+          "filter_applied": {
+            "sector": "graduacao",
+            "excluded_sources": [
+              "Resolução CEPEX/UFPI nº 658/2024"
+            ]
+          },
+          "candidate_count": null,
+          "returned_count": 5,
+          "identity_resolution_method": {
+            "chunk_id": 5
+          },
+          "returned_candidates": [
+            {
+              "id": "ufpi-177-2012-art-112-idx-000110",
+              "norm_id": "ufpi-177-2012",
+              "article": "112",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "sector": "graduacao",
+              "rank": 1,
+              "distance": 0.43859052658081055,
+              "identity_method": "chunk_id"
+            },
+            {
+              "id": "ufpi-177-2012-art-115-idx-000113",
+              "norm_id": "ufpi-177-2012",
+              "article": "115",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "sector": "graduacao",
+              "rank": 2,
+              "distance": 0.4404897689819336,
+              "identity_method": "chunk_id"
+            },
+            {
+              "id": "ufpi-177-2012-art-113-idx-000111",
+              "norm_id": "ufpi-177-2012",
+              "article": "113",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "sector": "graduacao",
+              "rank": 3,
+              "distance": 0.45679885149002075,
+              "identity_method": "chunk_id"
+            },
+            {
+              "id": "ufpi-177-2012-art-114-idx-000112",
+              "norm_id": "ufpi-177-2012",
+              "article": "114",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "sector": "graduacao",
+              "rank": 4,
+              "distance": 0.4701070189476013,
+              "identity_method": "chunk_id"
+            },
+            {
+              "id": "ufpi-177-2012-art-118-idx-000116",
+              "norm_id": "ufpi-177-2012",
+              "article": "118",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "sector": "graduacao",
+              "rank": 5,
+              "distance": 0.4829167127609253,
+              "identity_method": "chunk_id"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "previous_frequency_after": {
+    "last_normative_question": "Qual é a frequência mínima que eu preciso ter nas aulas para não ser reprovado por falta?",
+    "pending_clarification": null,
+    "last_normative_result_persistence": {
+      "persistence_version": "1",
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Para Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nPara não ser reprovado por falta nas aulas, é necessário ter frequência igual ou superior a 75% da carga horária do componente curricular, conforme estabelecido no Art. 112 da Resolução 177/2012. Esse percentual corresponde ao limite mínimo de presença exigido para a aprovação em disciplinas na graduação da UFPI.",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-art-112-idx-000110",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "112",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 112",
+            "temporal_role": "eligible",
+            "evidence_text": "**Art. 112. Será considerado \"reprovado\" o aluno que se incluir em um dos três itens:**\n1. I - obtiver frequência inferior a 75% (setenta e cinco por cento) da carga horária do componente curricular;\n2. II - obtiver média aritmética inferior a 4 (quatro) nas avaliações parciais;\n3. III - obtiver média aritmética inferior a 6 (seis), resultante da média aritmética das avaliações parciais e da nota do exame final."
+          },
+          {
+            "chunk_id": "ufpi-177-2012-art-115-idx-000113",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "115",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 115",
+            "temporal_role": "eligible",
+            "evidence_text": "**Art. 115. É reprovado no componente curricular o aluno que deixar de comparecer a mais de 25% (vinte e cinco por cento) do total das aulas e atividades no período letivo, ressalvados os casos previstos em lei.**"
+          },
+          {
+            "chunk_id": "ufpi-177-2012-art-113-idx-000111",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "113",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 113",
+            "temporal_role": "eligible",
+            "evidence_text": "**Art. 113. É reprovado no componente curricular o aluno cuja média final for menor que 4 (quatro). Neste caso, o aluno não poderá se submeter ao exame final.**"
+          },
+          {
+            "chunk_id": "ufpi-177-2012-art-114-idx-000112",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "114",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 114",
+            "temporal_role": "eligible",
+            "evidence_text": "**Art. 114. A presença do aluno é registrada por sua frequência em cada 60 (sessenta) minutos de aula.**"
+          },
+          {
+            "chunk_id": "ufpi-177-2012-art-118-idx-000116",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "118",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 118",
+            "temporal_role": "eligible",
+            "evidence_text": "**Art. 118. A média final mínima para aprovação, depois de realizado o cálculo definido no Art. 117, é 6 (seis).**"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "indeterminate",
+          "requested_time_context": {
+            "norm_ids": [],
+            "before_amendment": false,
+            "relation_query": null,
+            "article": null,
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-art-112-idx-000110",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "112",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-115-idx-000113",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "115",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-113-idx-000111",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "113",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-114-idx-000112",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "114",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-118-idx-000116",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "118",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": false,
+            "must_not_claim_current_validity": false,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": false,
+            "must_not_present_successor_as_historical_predecessor": false,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": false,
+            "must_not_duplicate_superseded_wording": false,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Para Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "STATUS_UNKNOWN",
+              "norm_id": "ufpi-177-2012",
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "regenerated",
+        "domain": "graduacao",
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "4fe343bb-44a3-48fa-b88a-f5627553bcc2",
+        "error_code": null,
+        "safe_message": null
+      },
+      "internal_audit": {
+        "response_kind": "generated",
+        "generation_attempts": 2,
+        "output_audit": {
+          "raw_answer": "Para não ser reprovado por falta nas aulas, é necessário ter frequência igual ou superior a 75% da carga horária do componente curricular.\n\nEssa exigência está prevista no Art. 112, inciso I, da Resolução 177/2012, que estabelece como critério de reprovação por frequência a obtenção de frequência inferior a 75%. Portanto, manter frequência igual ou superior a 75% é condição necessária para evitar a reprovação por falta.",
+          "guard_violations": [
+            {
+              "code": "unvalidated_subdivision",
+              "start": 182,
+              "end": 190,
+              "excerpt": "inciso I"
+            }
+          ],
+          "regenerated_answer": "Para não ser reprovado por falta nas aulas, é necessário ter frequência igual ou superior a 75% da carga horária do componente curricular, conforme estabelecido no Art. 112 da Resolução 177/2012. Esse percentual corresponde ao limite mínimo de presença exigido para a aprovação em disciplinas na graduação da UFPI.",
+          "regeneration_error": null,
+          "second_guard_violations": [],
+          "final_answer": "Para Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nPara não ser reprovado por falta nas aulas, é necessário ter frequência igual ou superior a 75% da carga horária do componente curricular, conforme estabelecido no Art. 112 da Resolução 177/2012. Esse percentual corresponde ao limite mínimo de presença exigido para a aprovação em disciplinas na graduação da UFPI.",
+          "guard_action": "regenerated",
+          "allowed_content_locators": [
+            {
+              "norm_id": "ufpi-177-2012",
+              "article": "112",
+              "subdivision_type": null,
+              "subdivision_value": null,
+              "source": "validated_evidence",
+              "authorization_reason": "Final grounding validates this norm/article, independently of display ceiling."
+            },
+            {
+              "norm_id": "ufpi-177-2012",
+              "article": "113",
+              "subdivision_type": null,
+              "subdivision_value": null,
+              "source": "validated_evidence",
+              "authorization_reason": "Final grounding validates this norm/article, independently of display ceiling."
+            },
+            {
+              "norm_id": "ufpi-177-2012",
+              "article": "114",
+              "subdivision_type": null,
+              "subdivision_value": null,
+              "source": "validated_evidence",
+              "authorization_reason": "Final grounding validates this norm/article, independently of display ceiling."
+            },
+            {
+              "norm_id": "ufpi-177-2012",
+              "article": "115",
+              "subdivision_type": null,
+              "subdivision_value": null,
+              "source": "validated_evidence",
+              "authorization_reason": "Final grounding validates this norm/article, independently of display ceiling."
+            },
+            {
+              "norm_id": "ufpi-177-2012",
+              "article": "118",
+              "subdivision_type": null,
+              "subdivision_value": null,
+              "source": "validated_evidence",
+              "authorization_reason": "Final grounding validates this norm/article, independently of display ceiling."
+            }
+          ],
+          "guard_version": "2"
+        },
+        "exception_type": null,
+        "retrieval_audit": {
+          "strategy": "dense_vector",
+          "parsed_reference": {
+            "norm_ids": [],
+            "articles": [],
+            "raw_norm_references": [],
+            "raw_article_references": [],
+            "unknown_norm": false,
+            "ambiguous": false,
+            "semantic_query_remains": true
+          },
+          "consistency": "consistent",
+          "routed_scope": "graduacao",
+          "executed": true,
+          "filter_applied": {
+            "sector": "graduacao",
+            "excluded_sources": [
+              "Resolução CEPEX/UFPI nº 658/2024"
+            ]
+          },
+          "candidate_count": null,
+          "returned_count": 5,
+          "identity_resolution_method": {
+            "chunk_id": 5
+          },
+          "returned_candidates": [
+            {
+              "id": "ufpi-177-2012-art-112-idx-000110",
+              "norm_id": "ufpi-177-2012",
+              "article": "112",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "sector": "graduacao",
+              "rank": 1,
+              "distance": 0.43859052658081055,
+              "identity_method": "chunk_id"
+            },
+            {
+              "id": "ufpi-177-2012-art-115-idx-000113",
+              "norm_id": "ufpi-177-2012",
+              "article": "115",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "sector": "graduacao",
+              "rank": 2,
+              "distance": 0.4404897689819336,
+              "identity_method": "chunk_id"
+            },
+            {
+              "id": "ufpi-177-2012-art-113-idx-000111",
+              "norm_id": "ufpi-177-2012",
+              "article": "113",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "sector": "graduacao",
+              "rank": 3,
+              "distance": 0.45679885149002075,
+              "identity_method": "chunk_id"
+            },
+            {
+              "id": "ufpi-177-2012-art-114-idx-000112",
+              "norm_id": "ufpi-177-2012",
+              "article": "114",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "sector": "graduacao",
+              "rank": 4,
+              "distance": 0.4701070189476013,
+              "identity_method": "chunk_id"
+            },
+            {
+              "id": "ufpi-177-2012-art-118-idx-000116",
+              "norm_id": "ufpi-177-2012",
+              "article": "118",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "sector": "graduacao",
+              "rank": 5,
+              "distance": 0.4829167127609253,
+              "identity_method": "chunk_id"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "previous_phase": "development/regression diagnostic data; never independent TEST",
+  "operational_ui_smokes": [
+    {
+      "timestamp": "2026-11-02T02:56:36.737801+00:00",
+      "case": "post_trancar",
+      "question": "como trancar a pós",
+      "seconds": 26.156,
+      "status": "ANSWER",
+      "domain": "pos_graduacao",
+      "core_status": "regenerated",
+      "thread_id": "b90bb2cc-3b45-4b60-ada2-c63d7ad620a3",
+      "message": {
+        "type": "ai",
+        "content": "Com base nas normas indexadas no sistema:\n\nPara trancar o curso de pós-graduação na UFPI, o discente pode solicitar o trancamento por motivo de doença, desde que comprovado por Perícia Médica da Universidade, por um período máximo de 12 meses, conforme estabelecido no art. 38 da Resolução 956/2025. O período de trancamento não é computado para efeito dos prazos de conclusão previstos na resolução. A matrícula pode ser reativada após o término do período de trancamento, desde que o discente cumpra os requisitos estabelecidos pela instituição. Casos não previstos nesta resolução são resolvidos pelo CEPEX, ouvida a Pró-Reitoria de Pós-Graduação (PRPG) e, quando pertinente, o Colegiado Pleno do PPG envolvido, conforme previsto no art. 61 da mesma resolução.",
+        "normative_result": {
+          "contract_version": "1",
+          "core_version": "structured_output_v2",
+          "status": "ANSWER",
+          "answer": "Com base nas normas indexadas no sistema:\n\nPara trancar o curso de pós-graduação na UFPI, o discente pode solicitar o trancamento por motivo de doença, desde que comprovado por Perícia Médica da Universidade, por um período máximo de 12 meses, conforme estabelecido no art. 38 da Resolução 956/2025. O período de trancamento não é computado para efeito dos prazos de conclusão previstos na resolução. A matrícula pode ser reativada após o término do período de trancamento, desde que o discente cumpra os requisitos estabelecidos pela instituição. Casos não previstos nesta resolução são resolvidos pelo CEPEX, ouvida a Pró-Reitoria de Pós-Graduação (PRPG) e, quando pertinente, o Colegiado Pleno do PPG envolvido, conforme previsto no art. 61 da mesma resolução.",
+          "references": [
+            {
+              "chunk_id": "ufpi-956-2025-art-38-idx-000036",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "38",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 38",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 38. É permitido ao(a) discente o trancamento do curso por motivo de doença, comprovado pela Perícia Médica da Universidade, pelo período de até 12 meses.\n- Parágrafo único. O período de trancamento (caput) não é computado para efeito dos prazos de conclusão previstos nesta Resolução."
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-21-idx-000020",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "21",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 21",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 21. O desligamento do(a) discente do PPG ocorre nas seguintes hipóteses:\n- | -reprovação por duas vezes na mesma disciplina;\n- 11 -reprovação em duas disciplinas distintas;\n- Ill -descumprimento dos prazos máximos para defesa, fixados nesta Resolução;\n- IV -reprovação por duas vezes em Exame de Qualificação; e\n- V -não efetivação da matrícula curricular semestral."
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-35-idx-000033",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "35",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 35",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 35. O candidato que, no ato da matrícula institucional (Art. 33), ainda não possuir o documento de conclusão (diploma ou certidão), terá o prazo improrrogável de sessenta dias, a contar do prazo final da matrícula institucional, para apresentar o documento de integralização curricular (Graduação) ou o comprovante de defesa (Mestrado). O não cumprimento do prazo estipulado implica no cancelamento automático da matrícula."
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-25-idx-000024",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "25",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 25",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 25. O edital deve conter, no mínimo:\n- | -dados de identificação do PPG;\n- 11 -período de duração e nível do curso;\n- Ill -número de vagas ofertadas;\n- IV -procedimentos de inscrição;\n- V -etapas do processo seletivo;\n- VI -critérios de avaliação e de desempate;\n- VII -calendário completo do processo, incluindo divulgação de resultados e prazos para recursos;\n- VIII -indicação de referencial teórico, bibliografia ou tema das provas, quando aplicável; e\n- IX -especificidades das vagas destinadas às ações afirmativas (pessoas com deficiência, pretas, pardas, indígenas, quilombolas e outras), se houver."
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-61-idx-000059",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "61",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 61",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 61. Os casos omissos nesta Resolução são resolvidos pelo CEPEX, ouvida a Pró-Reitoria de Pós-Graduação (PRPG) e, quando pertinente, o Colegiado Pleno do PPG envolvido."
+            }
+          ],
+          "temporal_provenance": {
+            "temporal_intent": "indeterminate",
+            "requested_time_context": {
+              "norm_ids": [],
+              "before_amendment": false,
+              "relation_query": null,
+              "article": null,
+              "paragraph": null,
+              "requested_year": null
+            },
+            "evidence_states": [
+              {
+                "chunk_id": "ufpi-956-2025-art-38-idx-000036",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "38",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-956-2025-art-21-idx-000020",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "21",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-956-2025-art-35-idx-000033",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "35",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-956-2025-art-25-idx-000024",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "25",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-956-2025-art-61-idx-000059",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "61",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              }
+            ],
+            "known_relations": [],
+            "generation_constraints": {
+              "must_frame_as_historical": false,
+              "must_not_claim_current_validity": false,
+              "must_not_claim_unknown_as_current": true,
+              "must_not_present_revoked_rule_as_current": false,
+              "must_not_present_successor_as_historical_predecessor": false,
+              "must_separate_temporal_states": false,
+              "must_follow_evidence_roles": true,
+              "must_not_treat_partial_amendment_as_total_revocation": false,
+              "must_not_duplicate_superseded_wording": false,
+              "must_not_reintroduce_excluded_evidence": true,
+              "must_not_deny_present_evidence": true,
+              "must_not_invent_effective_date": true,
+              "must_not_invent_temporal_scope": true,
+              "citation_granularity_ceiling": "article"
+            }
+          },
+          "temporal_status_text": "Com base nas normas indexadas no sistema:",
+          "allowed_temporal_facts": {
+            "items": [
+              {
+                "kind": "STATUS_UNKNOWN",
+                "norm_id": "ufpi-956-2025",
+                "target_norm": null,
+                "role": null
+              }
+            ]
+          },
+          "core_status": "regenerated",
+          "domain": "pos_graduacao",
+          "retrieval_strategy": "dense_vector",
+          "needs_clarification": false,
+          "clarification_question": null,
+          "correlation_id": "6f1cef49-accd-4a95-9ee8-ad6574ac597d",
+          "error_code": null,
+          "safe_message": null
+        },
+        "grounded_followup_result": null,
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "89e0d665-aea1-4bb4-b0e9-07f7d5de8522",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "errors": [],
+      "article_labels": [
+        "Resolução 956/2025, art. 38",
+        "Resolução 956/2025, art. 21",
+        "Resolução 956/2025, art. 35",
+        "Resolução 956/2025, art. 25",
+        "Resolução 956/2025, art. 61"
+      ],
+      "collapsed": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "typed_references": 5,
+      "rendered_references": 5,
+      "preview_matches_typed_text": true,
+      "full_text_controls": 1,
+      "progressive_renderer_invoked": 1,
+      "progressive_text_intact": true,
+      "progressive_fragments": 59,
+      "reveal_seconds": 3.516,
+      "word_count": 118,
+      "scroll_triggers": 3,
+      "sse_events": [
+        "message",
+        "DONE"
+      ]
+    },
+    {
+      "timestamp": "2026-11-02T02:57:00.133800+00:00",
+      "case": "post_ira_new_question",
+      "question": "precisa de ira pra passar na pós",
+      "seconds": 23.39,
+      "status": "ANSWER",
+      "domain": "pos_graduacao",
+      "core_status": "regenerated",
+      "thread_id": "b90bb2cc-3b45-4b60-ada2-c63d7ad620a3",
+      "message": {
+        "type": "ai",
+        "content": "Com base nas normas indexadas no sistema:\n\nNão é necessário ter IRA (Índice de Rendimento Acadêmico) para se matricular ou passar em um processo seletivo de pós-graduação na UFPI, conforme a Resolução 956/2025. O processo seletivo é baseado em etapas como prova de conhecimento (facultativa e eliminatória), entrevista ou análise de pré-projeto (obrigatória e eliminatória), análise do currículo (obrigatória e classificatória) e outras etapas previstas no edital ou no Regimento Interno do Programa, conforme estabelecido no art. 26. A aprovação em cada disciplina depende da nota mínima de 7,0 e frequência igual ou superior a 75%, conforme o art. 20. Além disso, o Mestrado exige a aprovação em exame de proficiência em língua estrangeira, integralização de pelo menos 30 créditos, realização de Estágio Docência, Exame de Qualificação (se previsto), e defesa de Dissertação, conforme o art. 3. A exigência de IRA não está prevista como critério de aprovação no processo seletivo ou na conclusão do curso.",
+        "normative_result": {
+          "contract_version": "1",
+          "core_version": "structured_output_v2",
+          "status": "ANSWER",
+          "answer": "Com base nas normas indexadas no sistema:\n\nNão é necessário ter IRA (Índice de Rendimento Acadêmico) para se matricular ou passar em um processo seletivo de pós-graduação na UFPI, conforme a Resolução 956/2025. O processo seletivo é baseado em etapas como prova de conhecimento (facultativa e eliminatória), entrevista ou análise de pré-projeto (obrigatória e eliminatória), análise do currículo (obrigatória e classificatória) e outras etapas previstas no edital ou no Regimento Interno do Programa, conforme estabelecido no art. 26. A aprovação em cada disciplina depende da nota mínima de 7,0 e frequência igual ou superior a 75%, conforme o art. 20. Além disso, o Mestrado exige a aprovação em exame de proficiência em língua estrangeira, integralização de pelo menos 30 créditos, realização de Estágio Docência, Exame de Qualificação (se previsto), e defesa de Dissertação, conforme o art. 3. A exigência de IRA não está prevista como critério de aprovação no processo seletivo ou na conclusão do curso.",
+          "references": [
+            {
+              "chunk_id": "ufpi-956-2025-art-33-idx-000031",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "33",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 33",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 33. O(a) candidato(a) selecionado(a) deve, no ato da matrícula institucional, apresentar os seguintes documentos:\n\n- a) Para candidatos (as) brasileiros(as) selecionados(as):\n2. | -Documento de identidade oficial com foto;\n3. IlCPF;\n4. Ill -certificado de quitação com o serviço militar (para candidatos brasileiros do gênero masculino. A partir de 1º de janeiro do ano que completarem 46 anos de idade, os candidatos estarão desobrigados de apresentar o documento militar, nos termos dos artigos 170 a 210 do Decreto nº 57.654, de 20 de janeiro de 1966;\n5. IV -uma foto 3x4 cm recente (no formato JPEG);\n6. V -comprovante de residência atualizado (emitido há no máximo 3 meses);\n7. VI -diploma ou certidão de conclusão de Graduação (para Mestrado);\n8. VII -diploma ou certidão de conclusão do Mestrado (para Doutorado);\n9. VIII -histórico escolar final da Graduação (para Mestrado); e\n10. IX -histórico escolar final do Mestrado (para Doutorado)\n- b) Para candidatos (as) estrangeiros(as) selecionados(as):\n12. | -Cópia do Passaporte ou Documento de Identificação com foto;\n13. Il -Visto Temporário IV -VITEM IV ou Equivalente: Visto de estudante válido ou comprovante de que o processo de regularização migratória foi iniciado junto à Polícia Federal, o que leva à obtenção da Carteira de Registro Nacional Migratório (CRNM, antiga RNE).\n14. Ill -uma foto 3x4 cm recente (no formato JPEG);\n15. IV -comprovante de residência atualizado;\n16. V -Diploma de Graduação para matrícula no mestrado e Diploma de Mestrado para matrícula no Doutorado. As cópias devem ser obtidas em instituições oficiais ou oficialmente reconhecidas em seu país de origem. Para fins de matrícula definitiva, o diploma de graduação (e mestrado, se aplicável) precisará passar pelo processo de reconhecimento/revalidação por uma IES brasileira, conforme as normas do Portal Carolina Bori do MEC. O prazo para revalidação deve ocorrer em até 12 meses após a matrícula institucional.\n17. VI -diploma ou certidão de conclusão de Graduação (para Mestrado);\n18. VII -diploma ou certidão de conclusão do Mestrado (para Doutorado);\n19. VIII -histórico escolar final da Graduação (para Mestrado); e\n20. IX -histórico escolar final do Mestrado (para Doutorado)"
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-26-idx-000025",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "26",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 26",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 26. A seleção dos candidatos é feita por uma Comissão de Seleção, designada pelo Colegiado Simples, com base no Regimento Interno e no edital, mediante as seguintes etapas:\n- | -prova de conhecimento, facultativa e eliminatória;\n- Il -entrevista ou análise de pré-projeto, obrigatória e eliminatória;\n- 111 -análise de curriculum vitae, obrigatória e classificatória; e\n- IV -outras etapas, desde que previstas no Regimento Interno ou no edital.\n- $ 1º Os critérios de pontuação da análise do curriculum vitae (Inciso III) são detalhados no edital, considerando as especificidades da área, as produções e as experiências profissionais.\n- $ 2º Os PPGs podem utilizar Tecnologias Digitais de Comunicação e Informação -TDICs para a realização do processo seletivo.\n- $ 3º Os resultados parciais devem respeitar o anonimato, em observância ao disposto na Lei Geral de Proteção de Dados Pessoais em vigência no Brasil, listando-se os candidatos pelo número de inscrição no SIGAA.\n- $ 4º A lista nominal dos candidatos aprovados é publicada conforme a ordem final de classificação."
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-34-idx-000032",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "34",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 34",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 34. A comprovação da proficiência em língua estrangeira, exigida nos Art. 3º e 4º, obedece às seguintes regras:\n22. | — a(s) língua(s) estrangeira(s) exigida(s) devem respeitar as especificidades estabelecidas pelo Regimento Interno de cada Programa;\n23. I1a análise e o registro acadêmico dos atestados são de responsabilidade da Coordenação do PPG;\n24. Ill — são aceitos atestados emitidos pela UFPI, por outras instituições de ensino superior (IES) brasileiras, e pelos seguintes institutos, desde que atingida a pontuação mínima de 60% nestes últimos:\n\n- a) Instituto Cervantes;\n- b) Instituto de Cultura Italiana;\n- c) Instituto Goethe;\n- d) Universidade de Cambridge (FCE, CAE, IELTS);\n- e) Aliança Francesa (DILF, DELF, DALF); e\n- f) TOEFL.\n7. IV -Os exames de proficiência têm validade de três anos.\nParágrafo único. Excetuam-se os programas em rede, que seguem os critérios estabelecidos por suas instituições-sede."
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-3-idx-000002",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "3",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 3",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 3º O Mestrado, Acadêmico ou Profissional, requer o cumprimento dos seguintes requisitos:\n- | -duração mínima de doze e máxima de vinte e quatro meses, permitida a prorrogação por até seis meses, mediante aprovação do Colegiado Simples.\n- Il -aprovação em exame de proficiência em uma língua estrangeira;\n- Ill -integralização curricular de, no mínimo, trinta créditos, dos quais seis são relativos à dissertação, observada a distribuição entre disciplinas obrigatórias, optativas e atividades complementares, definida no Regimento Interno do PPG;\n- IV -realização do Estágio Docência, nos termos definidos nesta Resolução;\n- V -realização de Exame de Qualificação, quando previsto no Regimento Interno do PPG; e\n- VI -apresentação oral e defesa de Dissertação.\n- $ 1º O Regimento Interno do PPG pode estabelecer durações específicas, desde que respeitados os limites do inciso |.\n- $ 2º Caso o PPG opte pela realização do Exame de Qualificação (inciso V), seu Regimento Interno deverá detalhar os procedimentos, prazos e modalidades de avaliação.\n- S$ 3º A defesa da Dissertação (inciso VI) somente ocorrerá após a integralização total dos créditos em disciplinas e atividades complementares.\n- $ 4º É permitido o aproveitamento de créditos cursados em outros Programas da UFPI ou em outra Instituição de Ensino Superior -IES, desde que em áreas afins e de interesse para a dissertação, mediante aprovação do Colegiado Simples.\n- $ 5º Cada PPG poderá estabelecer requisitos adicionais, em seu Regimento Interno, para a obtenção do título de mestre."
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-20-idx-000019",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "20",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 20",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 20. A verificação do rendimento acadêmico é feita por disciplina e abrange os aspectos de assiduidade e eficiência, ambos eliminatórios.\n- $ 1º Acritério do professor, a avaliação da eficiência é feita por um ou mais dos seguintes meios: provas, exames, trabalhos ou projetos.\n\n- $ 2º O resultado final da verificação é expresso em notas na escala de zero a dez com, no máximo, uma casa decimal.\n- $ 3º É considerado aprovado o(a) discente que obtiver nota mínima sete e frequência igual ou superior a 75% (setenta e cinco por cento).\n- S$ 4º As atividades de qualificação, de dissertação e de tese podem ser desenvolvidas por mais de um período letivo, conforme o Regimento Interno de cada PPG.\n- S 5º Para efeito de registro, o número de notas parciais deve ser proporcional à carga horária da disciplina, respeitado o mínimo de:\n- | -duas, nas disciplinas com carga horária igual ou inferior a quarenta e cinco horas;\n- Il -três, nas disciplinas com carga horária de sessenta a setenta e cinco horas; e\n- Ill -quatro, nas disciplinas com carga horária superior a setenta e cinco horas."
+            }
+          ],
+          "temporal_provenance": {
+            "temporal_intent": "indeterminate",
+            "requested_time_context": {
+              "norm_ids": [],
+              "before_amendment": false,
+              "relation_query": null,
+              "article": null,
+              "paragraph": null,
+              "requested_year": null
+            },
+            "evidence_states": [
+              {
+                "chunk_id": "ufpi-956-2025-art-33-idx-000031",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "33",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-956-2025-art-26-idx-000025",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "26",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-956-2025-art-34-idx-000032",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "34",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-956-2025-art-3-idx-000002",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "3",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-956-2025-art-20-idx-000019",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "20",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              }
+            ],
+            "known_relations": [],
+            "generation_constraints": {
+              "must_frame_as_historical": false,
+              "must_not_claim_current_validity": false,
+              "must_not_claim_unknown_as_current": true,
+              "must_not_present_revoked_rule_as_current": false,
+              "must_not_present_successor_as_historical_predecessor": false,
+              "must_separate_temporal_states": false,
+              "must_follow_evidence_roles": true,
+              "must_not_treat_partial_amendment_as_total_revocation": false,
+              "must_not_duplicate_superseded_wording": false,
+              "must_not_reintroduce_excluded_evidence": true,
+              "must_not_deny_present_evidence": true,
+              "must_not_invent_effective_date": true,
+              "must_not_invent_temporal_scope": true,
+              "citation_granularity_ceiling": "article"
+            }
+          },
+          "temporal_status_text": "Com base nas normas indexadas no sistema:",
+          "allowed_temporal_facts": {
+            "items": [
+              {
+                "kind": "STATUS_UNKNOWN",
+                "norm_id": "ufpi-956-2025",
+                "target_norm": null,
+                "role": null
+              }
+            ]
+          },
+          "core_status": "regenerated",
+          "domain": "pos_graduacao",
+          "retrieval_strategy": "dense_vector",
+          "needs_clarification": false,
+          "clarification_question": null,
+          "correlation_id": "f7e1a2a3-c761-41a9-96e9-28228bd1c9f9",
+          "error_code": null,
+          "safe_message": null
+        },
+        "grounded_followup_result": null,
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "12155e66-f2cd-42b4-b0a2-620cfb3ccace",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "errors": [],
+      "article_labels": [
+        "Resolução 956/2025, art. 33",
+        "Resolução 956/2025, art. 26",
+        "Resolução 956/2025, art. 34",
+        "Resolução 956/2025, art. 3",
+        "Resolução 956/2025, art. 20"
+      ],
+      "collapsed": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "typed_references": 5,
+      "rendered_references": 5,
+      "preview_matches_typed_text": true,
+      "full_text_controls": 5,
+      "progressive_renderer_invoked": 1,
+      "progressive_text_intact": true,
+      "progressive_fragments": 78,
+      "reveal_seconds": 3.937,
+      "word_count": 156,
+      "scroll_triggers": 3,
+      "sse_events": [
+        "message",
+        "DONE"
+      ]
+    },
+    {
+      "timestamp": "2026-11-02T02:57:02.623894+00:00",
+      "case": "frequency_exact",
+      "question": "Qual é a frequência mínima que eu preciso ter nas aulas para não ser reprovado por falta?",
+      "seconds": 2.468,
+      "status": "CLARIFICATION",
+      "domain": null,
+      "core_status": null,
+      "thread_id": "c250ea39-80ea-4426-870f-4755e354b283",
+      "message": {
+        "type": "ai",
+        "content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_result": {
+          "contract_version": "1",
+          "core_version": "structured_output_v2",
+          "status": "CLARIFICATION",
+          "answer": null,
+          "references": [],
+          "temporal_provenance": null,
+          "temporal_status_text": null,
+          "allowed_temporal_facts": null,
+          "core_status": null,
+          "domain": null,
+          "retrieval_strategy": "dense_vector",
+          "needs_clarification": true,
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "23a6a692-c548-4a2b-aaf0-aa3cc88442ee",
+          "error_code": null,
+          "safe_message": null
+        },
+        "grounded_followup_result": null,
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "fbd5effc-c9c0-4fa6-9305-5aca28708d84",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "errors": [],
+      "article_labels": [],
+      "collapsed": [],
+      "typed_references": 0,
+      "rendered_references": 0,
+      "preview_matches_typed_text": true,
+      "full_text_controls": 0,
+      "progressive_renderer_invoked": 1,
+      "progressive_text_intact": true,
+      "progressive_fragments": 6,
+      "reveal_seconds": 0.297,
+      "word_count": 11,
+      "scroll_triggers": 3,
+      "sse_events": [
+        "message",
+        "DONE"
+      ]
+    },
+    {
+      "timestamp": "2026-11-02T02:57:10.834167+00:00",
+      "case": "frequency_scope_clarification",
+      "question": "graduação",
+      "seconds": 8.204,
+      "status": "ANSWER",
+      "domain": "graduacao",
+      "core_status": "accepted",
+      "thread_id": "c250ea39-80ea-4426-870f-4755e354b283",
+      "message": {
+        "type": "ai",
+        "content": "Com base nas normas indexadas no sistema:\n\nPara não ser reprovado por falta nas aulas, é necessário ter frequência igual ou superior a 75% da carga horária do componente curricular, conforme estabelecido no Art. 112 da Resolução 177/2012.",
+        "normative_result": {
+          "contract_version": "1",
+          "core_version": "structured_output_v2",
+          "status": "ANSWER",
+          "answer": "Com base nas normas indexadas no sistema:\n\nPara não ser reprovado por falta nas aulas, é necessário ter frequência igual ou superior a 75% da carga horária do componente curricular, conforme estabelecido no Art. 112 da Resolução 177/2012.",
+          "references": [
+            {
+              "chunk_id": "ufpi-177-2012-art-112-idx-000110",
+              "norm_id": "ufpi-177-2012",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "article": "112",
+              "validated_subdivision": null,
+              "display_text": "Resolução 177/2012, art. 112",
+              "temporal_role": "eligible",
+              "evidence_text": "**Art. 112. Será considerado \"reprovado\" o aluno que se incluir em um dos três itens:**\n1. I - obtiver frequência inferior a 75% (setenta e cinco por cento) da carga horária do componente curricular;\n2. II - obtiver média aritmética inferior a 4 (quatro) nas avaliações parciais;\n3. III - obtiver média aritmética inferior a 6 (seis), resultante da média aritmética das avaliações parciais e da nota do exame final."
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-115-idx-000113",
+              "norm_id": "ufpi-177-2012",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "article": "115",
+              "validated_subdivision": null,
+              "display_text": "Resolução 177/2012, art. 115",
+              "temporal_role": "eligible",
+              "evidence_text": "**Art. 115. É reprovado no componente curricular o aluno que deixar de comparecer a mais de 25% (vinte e cinco por cento) do total das aulas e atividades no período letivo, ressalvados os casos previstos em lei.**"
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-113-idx-000111",
+              "norm_id": "ufpi-177-2012",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "article": "113",
+              "validated_subdivision": null,
+              "display_text": "Resolução 177/2012, art. 113",
+              "temporal_role": "eligible",
+              "evidence_text": "**Art. 113. É reprovado no componente curricular o aluno cuja média final for menor que 4 (quatro). Neste caso, o aluno não poderá se submeter ao exame final.**"
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-114-idx-000112",
+              "norm_id": "ufpi-177-2012",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "article": "114",
+              "validated_subdivision": null,
+              "display_text": "Resolução 177/2012, art. 114",
+              "temporal_role": "eligible",
+              "evidence_text": "**Art. 114. A presença do aluno é registrada por sua frequência em cada 60 (sessenta) minutos de aula.**"
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-118-idx-000116",
+              "norm_id": "ufpi-177-2012",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "article": "118",
+              "validated_subdivision": null,
+              "display_text": "Resolução 177/2012, art. 118",
+              "temporal_role": "eligible",
+              "evidence_text": "**Art. 118. A média final mínima para aprovação, depois de realizado o cálculo definido no Art. 117, é 6 (seis).**"
+            }
+          ],
+          "temporal_provenance": {
+            "temporal_intent": "indeterminate",
+            "requested_time_context": {
+              "norm_ids": [],
+              "before_amendment": false,
+              "relation_query": null,
+              "article": null,
+              "paragraph": null,
+              "requested_year": null
+            },
+            "evidence_states": [
+              {
+                "chunk_id": "ufpi-177-2012-art-112-idx-000110",
+                "source_norm": "ufpi-177-2012",
+                "source_article": "112",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-177-2012-art-115-idx-000113",
+                "source_norm": "ufpi-177-2012",
+                "source_article": "115",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-177-2012-art-113-idx-000111",
+                "source_norm": "ufpi-177-2012",
+                "source_article": "113",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-177-2012-art-114-idx-000112",
+                "source_norm": "ufpi-177-2012",
+                "source_article": "114",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-177-2012-art-118-idx-000116",
+                "source_norm": "ufpi-177-2012",
+                "source_article": "118",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              }
+            ],
+            "known_relations": [],
+            "generation_constraints": {
+              "must_frame_as_historical": false,
+              "must_not_claim_current_validity": false,
+              "must_not_claim_unknown_as_current": true,
+              "must_not_present_revoked_rule_as_current": false,
+              "must_not_present_successor_as_historical_predecessor": false,
+              "must_separate_temporal_states": false,
+              "must_follow_evidence_roles": true,
+              "must_not_treat_partial_amendment_as_total_revocation": false,
+              "must_not_duplicate_superseded_wording": false,
+              "must_not_reintroduce_excluded_evidence": true,
+              "must_not_deny_present_evidence": true,
+              "must_not_invent_effective_date": true,
+              "must_not_invent_temporal_scope": true,
+              "citation_granularity_ceiling": "article"
+            }
+          },
+          "temporal_status_text": "Com base nas normas indexadas no sistema:",
+          "allowed_temporal_facts": {
+            "items": [
+              {
+                "kind": "STATUS_UNKNOWN",
+                "norm_id": "ufpi-177-2012",
+                "target_norm": null,
+                "role": null
+              }
+            ]
+          },
+          "core_status": "accepted",
+          "domain": "graduacao",
+          "retrieval_strategy": "dense_vector",
+          "needs_clarification": false,
+          "clarification_question": null,
+          "correlation_id": "23a6a692-c548-4a2b-aaf0-aa3cc88442ee",
+          "error_code": null,
+          "safe_message": null
+        },
+        "grounded_followup_result": null,
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "1796aee4-f6cc-4a35-bcc6-31c453d866bf",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "errors": [],
+      "article_labels": [
+        "Resolução 177/2012, art. 112",
+        "Resolução 177/2012, art. 115",
+        "Resolução 177/2012, art. 113",
+        "Resolução 177/2012, art. 114",
+        "Resolução 177/2012, art. 118"
+      ],
+      "collapsed": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "typed_references": 5,
+      "rendered_references": 5,
+      "preview_matches_typed_text": true,
+      "full_text_controls": 0,
+      "progressive_renderer_invoked": 1,
+      "progressive_text_intact": true,
+      "progressive_fragments": 19,
+      "reveal_seconds": 0.969,
+      "word_count": 38,
+      "scroll_triggers": 3,
+      "sse_events": [
+        "message",
+        "DONE"
+      ]
+    },
+    {
+      "timestamp": "2026-11-02T02:57:13.808816+00:00",
+      "case": "ordinary_ajuste",
+      "question": "como funciona o ajuste de turmas?",
+      "seconds": 2.937,
+      "status": "CLARIFICATION",
+      "domain": null,
+      "core_status": null,
+      "thread_id": "93ba6742-e4ee-4b03-a581-df359bb6a0b1",
+      "message": {
+        "type": "ai",
+        "content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_result": {
+          "contract_version": "1",
+          "core_version": "structured_output_v2",
+          "status": "CLARIFICATION",
+          "answer": null,
+          "references": [],
+          "temporal_provenance": null,
+          "temporal_status_text": null,
+          "allowed_temporal_facts": null,
+          "core_status": null,
+          "domain": null,
+          "retrieval_strategy": "dense_vector",
+          "needs_clarification": true,
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "5ecdcc34-0df5-4ce1-9011-6ee585edab55",
+          "error_code": null,
+          "safe_message": null
+        },
+        "grounded_followup_result": null,
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "1ab24692-fe5e-40cb-93fa-08e357f3479e",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "errors": [],
+      "article_labels": [],
+      "collapsed": [],
+      "typed_references": 0,
+      "rendered_references": 0,
+      "preview_matches_typed_text": true,
+      "full_text_controls": 0,
+      "progressive_renderer_invoked": 1,
+      "progressive_text_intact": true,
+      "progressive_fragments": 6,
+      "reveal_seconds": 0.297,
+      "word_count": 11,
+      "scroll_triggers": 3,
+      "sse_events": [
+        "message",
+        "DONE"
+      ]
+    },
+    {
+      "timestamp": "2026-11-02T02:57:22.328312+00:00",
+      "case": "ordinary_ajuste_scope_clarification",
+      "question": "graduação",
+      "seconds": 8.516,
+      "status": "ANSWER",
+      "domain": "graduacao",
+      "core_status": "fallback",
+      "thread_id": "93ba6742-e4ee-4b03-a581-df359bb6a0b1",
+      "message": {
+        "type": "ai",
+        "content": "Com base nas normas indexadas no sistema:\n\nNão foi possível formular a resposta com segurança a partir das evidências disponíveis.",
+        "normative_result": {
+          "contract_version": "1",
+          "core_version": "structured_output_v2",
+          "status": "ANSWER",
+          "answer": "Com base nas normas indexadas no sistema:\n\nNão foi possível formular a resposta com segurança a partir das evidências disponíveis.",
+          "references": [
+            {
+              "chunk_id": "ufpi-177-2012-art-225-idx-000223",
+              "norm_id": "ufpi-177-2012",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "article": "225",
+              "validated_subdivision": null,
+              "display_text": "Resolução 177/2012, art. 225",
+              "temporal_role": "eligible",
+              "evidence_text": "**Art. 225. O ajuste de turma é de responsabilidade do departamento ou da unidade acadêmica especializada e deve ser feito após a matrícula e acréscimo, em data definida no Calendário Acadêmico.**"
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-224-idx-000222",
+              "norm_id": "ufpi-177-2012",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "article": "224",
+              "validated_subdivision": null,
+              "display_text": "Resolução 177/2012, art. 224",
+              "temporal_role": "eligible",
+              "evidence_text": "**Art. 224. O ajuste de turmas consiste em aumentar ou diminuir o número de vagas de uma turma, bem como dividir, fundir ou excluir turmas antes do processamento da matrícula.**"
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-234-idx-000232",
+              "norm_id": "ufpi-177-2012",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "article": "234",
+              "validated_subdivision": null,
+              "display_text": "Resolução 177/2012, art. 234",
+              "temporal_role": "eligible",
+              "evidence_text": "**Art. 234. Consolidação de turmas é o ato de inserir, no sistema de registro e controle acadêmico, as notas e frequências obtidas pelos alunos nas turmas de componentes curriculares.**\n> § 1º Para cada turma devem ser feitas duas consolidações, a consolidação parcial e a consolidação final, obedecendo aos prazos estabelecidos para cada uma delas no Calendário Acadêmico.\n> § 2º Excepcionalmente, por solicitação fundamentada do docente responsável pela turma e com a anuência do chefe de departamento, poderá o Conselho Departamental ou o Conselho do Campus autorizar a consolidação antecipada de turma, desde que considere o motivo relevante e que seja comprovado o cumprimento integral da carga horária e da ementa do componente curricular. (Parágrafo Incluído pela Resolução nº 089/2018-CEPEX)\n> § 3º Na consolidação parcial, devem ser inseridos os dados de frequência e das avaliações obrigatórias. (Parágrafo renumerado pela Resolução nº 089/2018-CEPEX)\n> § 4º Na consolidação final, que não se aplica caso na turma não haja alunos que tenham realizado o exame final, devem ser inseridos os dados do exame final. (Parágrafo renumerado pela Resolução nº 089/2018-CEPEX)"
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-235-idx-000233",
+              "norm_id": "ufpi-177-2012",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "article": "235",
+              "validated_subdivision": null,
+              "display_text": "Resolução 177/2012, art. 235",
+              "temporal_role": "eligible",
+              "evidence_text": "**Art. 235. Compete a um dos docentes responsáveis pela turma fazer a consolidação da turma.**\n> § 1º Não é possível a consolidação de turma se não houver registro de qualquer docente como responsável pela mesma. (Parágrafo renumerado pela Resolução nº 089/2018-CEPEX)\n> § 2º As turmas serão consolidadas automaticamente, com os registros acadêmicos salvos, 72 (setenta e duas) horas depois do prazo para consolidação pelo docente, estabelecido no Calendário Acadêmico. A turma sem docente cadastrado será considerada sob a responsabilidade do chefe de departamento. (Parágrafo incluído pela Resolução nº 089/2018-CEPEX)"
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-226-idx-000224",
+              "norm_id": "ufpi-177-2012",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "article": "226",
+              "validated_subdivision": null,
+              "display_text": "Resolução 177/2012, art. 226",
+              "temporal_role": "eligible",
+              "evidence_text": "**Art. 226. (revogado pela Resolução nº 089/2018-CEPEX)**"
+            }
+          ],
+          "temporal_provenance": {
+            "temporal_intent": "indeterminate",
+            "requested_time_context": {
+              "norm_ids": [],
+              "before_amendment": false,
+              "relation_query": null,
+              "article": null,
+              "paragraph": null,
+              "requested_year": null
+            },
+            "evidence_states": [
+              {
+                "chunk_id": "ufpi-177-2012-art-225-idx-000223",
+                "source_norm": "ufpi-177-2012",
+                "source_article": "225",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-177-2012-art-224-idx-000222",
+                "source_norm": "ufpi-177-2012",
+                "source_article": "224",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-177-2012-art-234-idx-000232",
+                "source_norm": "ufpi-177-2012",
+                "source_article": "234",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-177-2012-art-235-idx-000233",
+                "source_norm": "ufpi-177-2012",
+                "source_article": "235",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-177-2012-art-226-idx-000224",
+                "source_norm": "ufpi-177-2012",
+                "source_article": "226",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              }
+            ],
+            "known_relations": [],
+            "generation_constraints": {
+              "must_frame_as_historical": false,
+              "must_not_claim_current_validity": false,
+              "must_not_claim_unknown_as_current": true,
+              "must_not_present_revoked_rule_as_current": false,
+              "must_not_present_successor_as_historical_predecessor": false,
+              "must_separate_temporal_states": false,
+              "must_follow_evidence_roles": true,
+              "must_not_treat_partial_amendment_as_total_revocation": false,
+              "must_not_duplicate_superseded_wording": false,
+              "must_not_reintroduce_excluded_evidence": true,
+              "must_not_deny_present_evidence": true,
+              "must_not_invent_effective_date": true,
+              "must_not_invent_temporal_scope": true,
+              "citation_granularity_ceiling": "article"
+            }
+          },
+          "temporal_status_text": "Com base nas normas indexadas no sistema:",
+          "allowed_temporal_facts": {
+            "items": [
+              {
+                "kind": "STATUS_UNKNOWN",
+                "norm_id": "ufpi-177-2012",
+                "target_norm": null,
+                "role": null
+              }
+            ]
+          },
+          "core_status": "fallback",
+          "domain": "graduacao",
+          "retrieval_strategy": "dense_vector",
+          "needs_clarification": false,
+          "clarification_question": null,
+          "correlation_id": "5ecdcc34-0df5-4ce1-9011-6ee585edab55",
+          "error_code": null,
+          "safe_message": null
+        },
+        "grounded_followup_result": null,
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "08cc0323-e400-46d3-989a-16b15aa63464",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "errors": [],
+      "article_labels": [
+        "Resolução 177/2012, art. 225",
+        "Resolução 177/2012, art. 224",
+        "Resolução 177/2012, art. 234",
+        "Resolução 177/2012, art. 235",
+        "Resolução 177/2012, art. 226"
+      ],
+      "collapsed": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "typed_references": 5,
+      "rendered_references": 5,
+      "preview_matches_typed_text": true,
+      "full_text_controls": 2,
+      "progressive_renderer_invoked": 1,
+      "progressive_text_intact": true,
+      "progressive_fragments": 10,
+      "reveal_seconds": 0.5,
+      "word_count": 20,
+      "scroll_triggers": 3,
+      "sse_events": [
+        "message",
+        "DONE"
+      ]
+    },
+    {
+      "timestamp": "2026-11-02T02:57:23.932253+00:00",
+      "case": "explicit_validity",
+      "question": "Essa Resolução 177/2012 ainda está vigente?",
+      "seconds": 1.578,
+      "status": "CLARIFICATION",
+      "domain": null,
+      "core_status": null,
+      "thread_id": "737dd79b-9df9-4922-81ef-30364b02b762",
+      "message": {
+        "type": "ai",
+        "content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_result": {
+          "contract_version": "1",
+          "core_version": "structured_output_v2",
+          "status": "CLARIFICATION",
+          "answer": null,
+          "references": [],
+          "temporal_provenance": null,
+          "temporal_status_text": null,
+          "allowed_temporal_facts": null,
+          "core_status": null,
+          "domain": null,
+          "retrieval_strategy": "dense_vector",
+          "needs_clarification": true,
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "00e0c281-34ae-4fec-a994-d0c79131ce56",
+          "error_code": null,
+          "safe_message": null
+        },
+        "grounded_followup_result": null,
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "20b8eb36-5dce-46b5-8805-9bf9c19a5e1b",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "errors": [],
+      "article_labels": [],
+      "collapsed": [],
+      "typed_references": 0,
+      "rendered_references": 0,
+      "preview_matches_typed_text": true,
+      "full_text_controls": 0,
+      "progressive_renderer_invoked": 1,
+      "progressive_text_intact": true,
+      "progressive_fragments": 6,
+      "reveal_seconds": 0.297,
+      "word_count": 11,
+      "scroll_triggers": 3,
+      "sse_events": [
+        "message",
+        "DONE"
+      ]
+    },
+    {
+      "timestamp": "2026-11-02T02:57:35.853338+00:00",
+      "case": "explicit_validity_scope_clarification",
+      "question": "graduação",
+      "seconds": 11.906,
+      "status": "ANSWER",
+      "domain": "graduacao",
+      "core_status": "regenerated",
+      "thread_id": "737dd79b-9df9-4922-81ef-30364b02b762",
+      "message": {
+        "type": "ai",
+        "content": "Para Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nA vigência atual da Resolução 177/2012 não pode ser certificada com base no conjunto documental disponível. Os trechos recuperados referem-se a dispositivos da norma, como os arts. 247, 383, 384, 385 e 388, que foram mantidos como válidos no processo de análise temporal, mas o status normativo da resolução como um todo permanece desconhecido. Não há evidência suficiente para afirmar que a norma está em vigor ou revogada. Portanto, não é possível confirmar sua vigência atual com base nas informações fornecidas.",
+        "normative_result": {
+          "contract_version": "1",
+          "core_version": "structured_output_v2",
+          "status": "ANSWER",
+          "answer": "Para Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nA vigência atual da Resolução 177/2012 não pode ser certificada com base no conjunto documental disponível. Os trechos recuperados referem-se a dispositivos da norma, como os arts. 247, 383, 384, 385 e 388, que foram mantidos como válidos no processo de análise temporal, mas o status normativo da resolução como um todo permanece desconhecido. Não há evidência suficiente para afirmar que a norma está em vigor ou revogada. Portanto, não é possível confirmar sua vigência atual com base nas informações fornecidas.",
+          "references": [
+            {
+              "chunk_id": "ufpi-177-2012-art-388-idx-000375",
+              "norm_id": "ufpi-177-2012",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "article": "388",
+              "validated_subdivision": null,
+              "display_text": "Resolução 177/2012, art. 388",
+              "temporal_role": "eligible",
+              "evidence_text": "**Art. 388. Este Regulamento revoga a Resolução nº 22/09, de 4 de março de 2009; a Resolução nº 145/08, de 21 de agosto de 2008; a Resolução nº 83/07, de 13 de março de 2007; a Resolução nº 150/06, de 8 de setembro de 2006; a Resolução nº 98/05, de 9 de junho de 2005; a Resolução nº 97/05, de 9 de junho de 2005; a Resolução nº 109/04, de 2 de julho de 2004; a Resolução nº 80/04, de 4 de junho de 2004; a Resolução nº 82/03, de 29 de abril de 2003; a Resolução nº 93/10, de 22 de junho de 2010; a Resolução nº 136/98, de 22 de outubro de 1998; a Resolução nº 21/96, de 3 de julho de 1996; a Resolução nº 100/95, de 11 de dezembro de 1995; a Resolução nº 43/95, de 17 de maio de 1995; a Resolução nº 16/89, de 20 de novembro de 1989; a Resolução nº 197/10, de 22 de setembro de 2010; a Resolução nº 241/09, de 23 de novembro de 2009; a Resolução nº 307/11, de 14 de outubro de 2011, todas do Conselho de Ensino, Pesquisa e Extensão (CEPEX), e a Portaria nº 279/11, de 7 de dezembro de 2011, e a Portaria nº 280/11, de 7 de dezembro de 2011, ambas da Câmara de Ensino de Graduação (CAMEN).**"
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-384-idx-000371",
+              "norm_id": "ufpi-177-2012",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "article": "384",
+              "validated_subdivision": null,
+              "display_text": "Resolução 177/2012, art. 384",
+              "temporal_role": "eligible",
+              "evidence_text": "**Art. 384. As disposições relativas a projeto pedagógico (PPC) aplicam-se, no que couberem, aos cursos que ainda não possuem proposta curricular estruturada sob esta forma.**"
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-247-idx-000245",
+              "norm_id": "ufpi-177-2012",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "article": "247",
+              "validated_subdivision": null,
+              "display_text": "Resolução 177/2012, art. 247",
+              "temporal_role": "eligible",
+              "evidence_text": "**Art. 247. Decorrido o prazo do regime de exercícios domiciliares, ainda dentro do período letivo, o aluno se reintegrará ao regime normal, submetendo-se à frequência e à avaliação regulares dos componentes curriculares.**"
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-385-idx-000372",
+              "norm_id": "ufpi-177-2012",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "article": "385",
+              "validated_subdivision": null,
+              "display_text": "Resolução 177/2012, art. 385",
+              "temporal_role": "eligible",
+              "evidence_text": "**Art. 385. Este Regulamento deverá ser anualmente revisado por comissão designada pelo Magnífico Reitor, e as possíveis modificações encaminhadas ao Conselho de Ensino, Pesquisa e Extensão (CEPEX), para apreciação.**"
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-383-idx-000370",
+              "norm_id": "ufpi-177-2012",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "article": "383",
+              "validated_subdivision": null,
+              "display_text": "Resolução 177/2012, art. 383",
+              "temporal_role": "eligible",
+              "evidence_text": "**Art. 383. O arquivamento dos documentos referentes às atividades de ensino de graduação é de caráter permanente e deverá ser mantido rigorosamente em dia.**\n> Parágrafo único. As avaliações de aprendizagem de componentes curriculares deverão ser arquivadas de forma obrigatória apenas pelo prazo de 5 (cinco) anos."
+            }
+          ],
+          "temporal_provenance": {
+            "temporal_intent": "validity",
+            "requested_time_context": {
+              "norm_ids": [
+                "ufpi-177-2012"
+              ],
+              "before_amendment": false,
+              "relation_query": null,
+              "article": null,
+              "paragraph": null,
+              "requested_year": null
+            },
+            "evidence_states": [
+              {
+                "chunk_id": "ufpi-177-2012-art-388-idx-000375",
+                "source_norm": "ufpi-177-2012",
+                "source_article": "388",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-177-2012-art-384-idx-000371",
+                "source_norm": "ufpi-177-2012",
+                "source_article": "384",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-177-2012-art-247-idx-000245",
+                "source_norm": "ufpi-177-2012",
+                "source_article": "247",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-177-2012-art-385-idx-000372",
+                "source_norm": "ufpi-177-2012",
+                "source_article": "385",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-177-2012-art-383-idx-000370",
+                "source_norm": "ufpi-177-2012",
+                "source_article": "383",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              }
+            ],
+            "known_relations": [],
+            "generation_constraints": {
+              "must_frame_as_historical": false,
+              "must_not_claim_current_validity": false,
+              "must_not_claim_unknown_as_current": true,
+              "must_not_present_revoked_rule_as_current": false,
+              "must_not_present_successor_as_historical_predecessor": false,
+              "must_separate_temporal_states": false,
+              "must_follow_evidence_roles": true,
+              "must_not_treat_partial_amendment_as_total_revocation": false,
+              "must_not_duplicate_superseded_wording": false,
+              "must_not_reintroduce_excluded_evidence": true,
+              "must_not_deny_present_evidence": true,
+              "must_not_invent_effective_date": true,
+              "must_not_invent_temporal_scope": true,
+              "citation_granularity_ceiling": "article"
+            }
+          },
+          "temporal_status_text": "Para Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.",
+          "allowed_temporal_facts": {
+            "items": [
+              {
+                "kind": "STATUS_UNKNOWN",
+                "norm_id": "ufpi-177-2012",
+                "target_norm": null,
+                "role": null
+              }
+            ]
+          },
+          "core_status": "regenerated",
+          "domain": "graduacao",
+          "retrieval_strategy": "vector_filtered",
+          "needs_clarification": false,
+          "clarification_question": null,
+          "correlation_id": "00e0c281-34ae-4fec-a994-d0c79131ce56",
+          "error_code": null,
+          "safe_message": null
+        },
+        "grounded_followup_result": null,
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "028e135a-75f3-40ba-939a-1d81cb79a0a6",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "errors": [],
+      "article_labels": [
+        "Resolução 177/2012, art. 388",
+        "Resolução 177/2012, art. 384",
+        "Resolução 177/2012, art. 247",
+        "Resolução 177/2012, art. 385",
+        "Resolução 177/2012, art. 383"
+      ],
+      "collapsed": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "typed_references": 5,
+      "rendered_references": 5,
+      "preview_matches_typed_text": true,
+      "full_text_controls": 1,
+      "progressive_renderer_invoked": 1,
+      "progressive_text_intact": true,
+      "progressive_fragments": 47,
+      "reveal_seconds": 2.375,
+      "word_count": 94,
+      "scroll_triggers": 3,
+      "sse_events": [
+        "message",
+        "DONE"
+      ]
+    },
+    {
+      "timestamp": "2026-11-02T02:57:43.043992+00:00",
+      "case": "multiple_articles",
+      "question": "Explique o trancamento por doença no mestrado e os limites previstos na norma indexada.",
+      "seconds": 7.157,
+      "status": "ANSWER",
+      "domain": "pos_graduacao",
+      "core_status": "regenerated",
+      "thread_id": "aa2beb40-775f-4146-8d72-c6c6899e6826",
+      "message": {
+        "type": "ai",
+        "content": "Com base nas normas indexadas no sistema:\n\nO trancamento por doença no mestrado é permitido quando comprovado por Perícia Médica da Universidade, com duração máxima de até 12 meses, conforme estabelecido no art. 38 da Resolução 956/2025. Esse período de trancamento não é computado para efeito dos prazos de conclusão previstos na norma. A resolução não estabelece limites adicionais ao trancamento além do prazo de 12 meses e da necessidade de comprovação médica, sendo que a solicitação deve ser submetida ao Colegiado Simples para análise e aprovação.",
+        "normative_result": {
+          "contract_version": "1",
+          "core_version": "structured_output_v2",
+          "status": "ANSWER",
+          "answer": "Com base nas normas indexadas no sistema:\n\nO trancamento por doença no mestrado é permitido quando comprovado por Perícia Médica da Universidade, com duração máxima de até 12 meses, conforme estabelecido no art. 38 da Resolução 956/2025. Esse período de trancamento não é computado para efeito dos prazos de conclusão previstos na norma. A resolução não estabelece limites adicionais ao trancamento além do prazo de 12 meses e da necessidade de comprovação médica, sendo que a solicitação deve ser submetida ao Colegiado Simples para análise e aprovação.",
+          "references": [
+            {
+              "chunk_id": "ufpi-956-2025-art-38-idx-000036",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "38",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 38",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 38. É permitido ao(a) discente o trancamento do curso por motivo de doença, comprovado pela Perícia Médica da Universidade, pelo período de até 12 meses.\n- Parágrafo único. O período de trancamento (caput) não é computado para efeito dos prazos de conclusão previstos nesta Resolução."
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-28-idx-000027",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "28",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 28",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 28. Fica permitida a promoção direta do Mestrado ao Doutorado, sem a defesa de Dissertação, quando o(a) discente atender, cumulativamente, às seguintes condições de excepcionalidade:\n8. | -estar cursando o terceiro semestre do Mestrado;\n9. Il -ter concluído os créditos de disciplinas do Mestrado com desempenho excepcional;\n10. Ill -ter publicado artigos científicos, bibliográficos, tecnológicos ou artísticos, ou registro de patentes originados de seu projeto de dissertação; e\n11. IV -ser aprovado em exame de defesa do seu projeto de tese.\n12. Parágrafo único. O Regimento Interno do PPG detalha os critérios de excepcionalidade (Inciso ll), os requisitos de produção (Inciso Ill) e os procedimentos do exame de defesa (Inciso IV)."
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-3-idx-000002",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "3",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 3",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 3º O Mestrado, Acadêmico ou Profissional, requer o cumprimento dos seguintes requisitos:\n- | -duração mínima de doze e máxima de vinte e quatro meses, permitida a prorrogação por até seis meses, mediante aprovação do Colegiado Simples.\n- Il -aprovação em exame de proficiência em uma língua estrangeira;\n- Ill -integralização curricular de, no mínimo, trinta créditos, dos quais seis são relativos à dissertação, observada a distribuição entre disciplinas obrigatórias, optativas e atividades complementares, definida no Regimento Interno do PPG;\n- IV -realização do Estágio Docência, nos termos definidos nesta Resolução;\n- V -realização de Exame de Qualificação, quando previsto no Regimento Interno do PPG; e\n- VI -apresentação oral e defesa de Dissertação.\n- $ 1º O Regimento Interno do PPG pode estabelecer durações específicas, desde que respeitados os limites do inciso |.\n- $ 2º Caso o PPG opte pela realização do Exame de Qualificação (inciso V), seu Regimento Interno deverá detalhar os procedimentos, prazos e modalidades de avaliação.\n- S$ 3º A defesa da Dissertação (inciso VI) somente ocorrerá após a integralização total dos créditos em disciplinas e atividades complementares.\n- $ 4º É permitido o aproveitamento de créditos cursados em outros Programas da UFPI ou em outra Instituição de Ensino Superior -IES, desde que em áreas afins e de interesse para a dissertação, mediante aprovação do Colegiado Simples.\n- $ 5º Cada PPG poderá estabelecer requisitos adicionais, em seu Regimento Interno, para a obtenção do título de mestre."
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-35-idx-000033",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "35",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 35",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 35. O candidato que, no ato da matrícula institucional (Art. 33), ainda não possuir o documento de conclusão (diploma ou certidão), terá o prazo improrrogável de sessenta dias, a contar do prazo final da matrícula institucional, para apresentar o documento de integralização curricular (Graduação) ou o comprovante de defesa (Mestrado). O não cumprimento do prazo estipulado implica no cancelamento automático da matrícula."
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-27-idx-000026",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "27",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 27",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 27. Os candidatos a seleção devem formular pedido de inscrição conforme o edital, apresentando os seguintes documentos:\n- | -para o Mestrado:\n- a) diploma, certidão ou declaração de matrícula no último semestre do curso de graduação;\n- b) histórico escolar da graduação;\n\n- c) Curriculum lattes comprovado;\n- d) Curriculo Vitae comprovado para candidatos(as) estrangeiros;\n3. Il -para o Doutorado:\n- a) Diploma de Mestrado ou declaração de que defenderá a dissertação antes da matrícula institucional;\n- b) Curriculum lattes comprovado;\n- c) Curriculo Vitae comprovado para candidatos(as) estrangeiros; e"
+            }
+          ],
+          "temporal_provenance": {
+            "temporal_intent": "indeterminate",
+            "requested_time_context": {
+              "norm_ids": [],
+              "before_amendment": false,
+              "relation_query": null,
+              "article": null,
+              "paragraph": null,
+              "requested_year": null
+            },
+            "evidence_states": [
+              {
+                "chunk_id": "ufpi-956-2025-art-38-idx-000036",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "38",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-956-2025-art-28-idx-000027",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "28",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-956-2025-art-3-idx-000002",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "3",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-956-2025-art-35-idx-000033",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "35",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-956-2025-art-27-idx-000026",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "27",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              }
+            ],
+            "known_relations": [],
+            "generation_constraints": {
+              "must_frame_as_historical": false,
+              "must_not_claim_current_validity": false,
+              "must_not_claim_unknown_as_current": true,
+              "must_not_present_revoked_rule_as_current": false,
+              "must_not_present_successor_as_historical_predecessor": false,
+              "must_separate_temporal_states": false,
+              "must_follow_evidence_roles": true,
+              "must_not_treat_partial_amendment_as_total_revocation": false,
+              "must_not_duplicate_superseded_wording": false,
+              "must_not_reintroduce_excluded_evidence": true,
+              "must_not_deny_present_evidence": true,
+              "must_not_invent_effective_date": true,
+              "must_not_invent_temporal_scope": true,
+              "citation_granularity_ceiling": "article"
+            }
+          },
+          "temporal_status_text": "Com base nas normas indexadas no sistema:",
+          "allowed_temporal_facts": {
+            "items": [
+              {
+                "kind": "STATUS_UNKNOWN",
+                "norm_id": "ufpi-956-2025",
+                "target_norm": null,
+                "role": null
+              }
+            ]
+          },
+          "core_status": "regenerated",
+          "domain": "pos_graduacao",
+          "retrieval_strategy": "dense_vector",
+          "needs_clarification": false,
+          "clarification_question": null,
+          "correlation_id": "0724d316-d270-41d6-96de-e05a656626e7",
+          "error_code": null,
+          "safe_message": null
+        },
+        "grounded_followup_result": null,
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "d6ba0197-0ba2-4d33-aecd-15b50501bb72",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "errors": [],
+      "article_labels": [
+        "Resolução 956/2025, art. 38",
+        "Resolução 956/2025, art. 28",
+        "Resolução 956/2025, art. 3",
+        "Resolução 956/2025, art. 35",
+        "Resolução 956/2025, art. 27"
+      ],
+      "collapsed": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "typed_references": 5,
+      "rendered_references": 5,
+      "preview_matches_typed_text": true,
+      "full_text_controls": 3,
+      "progressive_renderer_invoked": 1,
+      "progressive_text_intact": true,
+      "progressive_fragments": 44,
+      "reveal_seconds": 2.219,
+      "word_count": 87,
+      "scroll_triggers": 3,
+      "sse_events": [
+        "message",
+        "DONE"
+      ]
+    }
+  ],
+  "operational_historical_rerun": {
+    "additional_reveals": 0,
+    "additional_scrolls": 0
+  },
+  "operational_full_reference_toggle": {
+    "additional_reveals": 0,
+    "additional_scrolls": 0,
+    "errors": []
+  },
+  "operational_summary": {
+    "requests": 9,
+    "planned_primary_questions": 6,
+    "planned_domain_followups": 3,
+    "final_typed_message_only": 9,
+    "raw_draft_exposures": 0,
+    "unchanged_full_evidence": true,
+    "references_rendered": 30,
+    "initially_collapsed": true,
+    "historical_rerun_reveals": 0,
+    "historical_rerun_scrolls": 0,
+    "source_toggle_reveals": 0,
+    "source_toggle_scrolls": 0,
+    "common_answer_timings": [
+      {
+        "case": "post_trancar",
+        "words": 118,
+        "fragments": 59,
+        "seconds": 3.516
+      },
+      {
+        "case": "post_ira_new_question",
+        "words": 156,
+        "fragments": 78,
+        "seconds": 3.937
+      }
+    ],
+    "visual_browser_validation": "NOT_EVALUATED: AppTest checks elements/defaults and scroll helper emission, not real browser DOM scrolling.",
+    "ordinary_ajuste": "Neutral temporal prefix verified after scope clarification; substantive answer remains FALLBACK.",
+    "frequency": "Fresh question clarified scope; planned graduation reply produced accepted75% answer from article112. Batch result remains clarification.",
+    "ira": "Second turn concerns IRA/new question; substantive/legal correctness still requires review.",
+    "additional_calls_policy": "Separate predeclared UI smoke, not extra batch retries, metrics or tuning."
+  }
+}

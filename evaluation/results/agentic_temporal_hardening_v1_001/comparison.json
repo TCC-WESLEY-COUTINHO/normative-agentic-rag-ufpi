@@ -1,0 +1,36 @@
+{
+  "pairs": [
+    {
+      "pair": "grad_coordinator",
+      "case_ids": [
+        "G1_current",
+        "G3_historical"
+      ],
+      "different_final_context": true,
+      "final_ids": [
+        [
+          "ufpi-177-2012-art-68-idx-000067"
+        ],
+        [
+          "ufpi-177-2012-art-68-idx-000067"
+        ]
+      ]
+    },
+    {
+      "pair": "post_defense",
+      "case_ids": [
+        "P1_current",
+        "P2_historical"
+      ],
+      "different_final_context": true,
+      "final_ids": [
+        [
+          "ufpi-956-2025-art-53-idx-000051"
+        ],
+        [
+          "ufpi-658-2024-art-43-idx-000042"
+        ]
+      ]
+    }
+  ]
+}

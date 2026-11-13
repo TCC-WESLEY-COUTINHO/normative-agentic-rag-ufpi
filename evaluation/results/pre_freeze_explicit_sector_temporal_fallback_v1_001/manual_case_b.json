@@ -1,0 +1,191 @@
+{
+  "read_only": true,
+  "relevant_cases": [
+    {
+      "thread_id": "d2121dfd14f56106996e905c757a137f1cf6702e26e06475a9d2ca99ae20ed53",
+      "checkpoint_id": "1f1d6c6e-608c-63d5-8042-7252a0f6f610",
+      "question": "Em um curso de graduação da UFPI ofertado por programa institucional, um professor selecionado por edital, sem vínculo efetivo com a universidade, pode ser coordenador de estágio?",
+      "correlation_id": "3d174b4a-570d-4e40-9176-9720bd4b13b0",
+      "status": "ANSWER",
+      "core_status": "fallback",
+      "internal_generation_audit_available": false,
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Com base nas normas indexadas no sistema:\nO dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\n\nNão foi possível formular a resposta com segurança a partir das evidências disponíveis.",
+        "references": [
+          {
+            "chunk_id": "ufpi-1056-2026-art-1-idx-000000",
+            "norm_id": "ufpi-1056-2026",
+            "source": "Resolução CEPEX/UFPI nº 1.056/2026",
+            "article": "1",
+            "validated_subdivision": null,
+            "display_text": "Resolução 1056/2026, art. 1",
+            "temporal_role": "eligible",
+            "evidence_text": "Art. 1º O Anexo à Resolução CEPEX/UFPI nº 177, de 5 de novembro de 2012, passa a vigorar com as seguintes alterações:\nfog 0 o\nRO\n$ 4º O coordenador de estágio do curso será um docente efetivo escolhido entre os professores orientadores do estágio, cuja designação deverá ser efetivada por portaria da unidade acadêmica à qual o estágio está vinculado, quando o colegiado entender necessária a existência de um coordenador para o conjunto das atividades de estágio, ressalvados os cursos ofertados no âmbito de políticas públicas ou programas institucionais de formação superior cuja composição do corpo docente seja realizada mediante processo seletivo disciplinado em edital específico, hipótese em que o coordenador poderá ser designado dentre os docentes selecionados para atuação no respectivo curso, independentemente de seu vínculo com a UFPI, com as atribuições de:\nA,\n”\" (NR)"
+          },
+          {
+            "chunk_id": "ufpi-177-2012-art-87-idx-000086",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "87",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 87",
+            "temporal_role": "eligible",
+            "evidence_text": "**Art. 87. É permitida a matrícula de alunos não vinculados à UFPI em estágios mantidos por esta instituição, desde que exista vaga, após a conclusão do ajuste de matrícula, respeitando o limite máximo de 5 (cinco) alunos por período para o estágio, mediante processo seletivo, divulgado por edital específico para alunos de curso de graduação de outras IES e, quando for o caso, de acordo com as resoluções que regulamentam o Internato do curso de Medicina.**\n> § 1º O peticionário deverá efetivar a solicitação junto ao Setor de Protocolo da UFPI, dirigido à Coordenadoria de Estágio Obrigatório (CEO/PREG), em prazo previsto no Calendário Acadêmico.\n> § 2º Na abertura do processo, deverão constar: autorização da instituição de origem do aluno com o aceite das normas da UFPI, descritas nesse documento, histórico escolar recente autenticado pela IES de origem e currículo Lattes devidamente comprovado.\n> § 3º No processo seletivo, serão pontuados e somados:\n> * a) 5 (cinco) pontos para alunos oriundos de instituições federais, 3 (três) pontos para alunos oriundos de instituições estaduais e 1 (um) ponto para alunos oriundos de instituições privadas;\n> * b) o coeficiente de rendimento acadêmico;\n> * c) 5 (cinco) pontos por programa pela participação em programas de iniciação científica;\n> * d) 5 (cinco) pontos por período pela participação em monitoria com carga horária mínima de 60 (sessenta) horas.\n> § 4º A matrícula no componente curricular de que trata este artigo não vincula o interessado a um curso específico da UFPI, nem confere o direito à matrícula em outro componente, além do estágio expressamente autorizado."
+          },
+          {
+            "chunk_id": "ufpi-177-2012-art-68-idx-000067",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "68",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 68",
+            "temporal_role": "eligible",
+            "evidence_text": "[REDAÇÃO APLICÁVEL: art. 68, § 4, da norma-base ufpi-177-2012; alteração por ufpi-1056-2026, art. 1. Demais dispositivos preservados.]\n**Art. 68. O estágio curricular obrigatório, para a sua regularidade, envolve:**\n1. I - Coordenadoria de Estágio Obrigatório (CEO/PREG);\n2. II - orientador de estágio;\n3. III - supervisor de campo;\n4. IV - coordenador de estágio do curso, quando for o caso.\n> § 1º A Coordenadoria de Estágio Obrigatório (CEO/PREG) tem como atribuições básicas:\n> * a) viabilizar as condições necessárias ao desenvolvimento do estágio obrigatório na UFPI;\n> * b) propor normas e diretrizes gerais para a operacionalização dos estágios obrigatórios;\n> * c) assessorar as coordenações de estágios nos cursos na elaboração e sistematização das programações relativas ao estágio obrigatório, como participar do acompanhamento, controle e avaliação da sua execução;\n> * d) providenciar as assinaturas de convênios entre a UFPI e as instituições de campos de estágio;\n> * e) organizar e manter atualizado, juntamente com as coordenações de estágio dos cursos, um sistema de documentação e cadastramento dos estágios.\n> § 2º O orientador do estágio será um professor do quadro da UFPI responsável pelo acompanhamento didático-pedagógico do aluno durante a realização desta atividade, com as atribuições de:\n> * a) elaborar junto ao coordenador de estágio do curso a programação semestral de estágios obrigatórios;\n> * b) orientar os alunos na elaboração dos seus planos e relatórios de estágio;\n> * c) acompanhar e orientar a execução das atividades dos estagiários;\n> * d) avaliar o desempenho dos estagiários atribuindo-lhes conceitos expressos sob a forma adotada pela UFPI;\n> * e) enviar ao coordenador de estágio do curso, ao final de cada período letivo, o relatório correspondente aos estágios obrigatórios dos alunos sob a sua responsabilidade.\n> § 3º O supervisor de campo será um profissional lotado na unidade de realização do estágio, responsável, nesse local, pelo acompanhamento do aluno durante o desenvolvimento da atividade.\n> § 4º O coordenador de estágio do curso será um docente efetivo escolhido entre os professores orientadores do estágio, cuja designação deverá ser efetivada por portaria da unidade acadêmica à qual o estágio está vinculado, quando o colegiado entender necessária a existência de um coordenador para o conjunto das atividades de estágio, ressalvados os cursos ofertados no âmbito de políticas públicas ou programas institucionais de formação superior cuja composição do corpo docente seja realizada mediante processo seletivo disciplinado em edital específico, hipótese em que o coordenador poderá ser designado dentre os docentes selecionados para atuação no respectivo curso, independentemente de seu vínculo com a UFPI, com as atribuições de:\n> * a) coordenar a elaboração ou adequações de normas ou critérios específicos do estágio do curso, com base neste Regulamento;\n> * b) informar à Coordenadoria de Estágio Obrigatório (CEO/PREG) os campos de estágio, quando for o caso, tendo em vista a celebração de convênios e termos de compromisso;\n> * c) fazer, ao final de cada período, levantamento do número de alunos aptos e pretendentes ao estágio, em função da programação semestral;\n> * d) elaborar, a cada semestre, junto com os orientadores de estágio, as programações de estágio obrigatório que serão enviadas à Coordenadoria de Estágio Obrigatório (CEO/PREG) no prazo estabelecido no Calendário Acadêmico;\n> * e) orientar e encaminhar os alunos ao campo de estágio;\n> * f) acompanhar o desenvolvimento do estágio, tendo em vista a consecução dos objetivos propostos;\n> * g) enviar à Coordenadoria de Estágio Obrigatório (CEO/PREG), ao final de cada período letivo, o relatório correspondente ao estágio obrigatório do curso."
+          },
+          {
+            "chunk_id": "ufpi-177-2012-art-65-idx-000064",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "65",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 65",
+            "temporal_role": "eligible",
+            "evidence_text": "**Art. 65. Para a realização de estágio junto a pessoas jurídicas de direito público ou privado faz-se necessária a formalização de convênio, a ser firmado diretamente com a UFPI, mediante assinatura de termo de compromisso com interveniência obrigatória da Coordenadoria de Estágio Obrigatório (CEO/PREG).**\n> Parágrafo único. O termo de compromisso constituirá parte do convênio a ser celebrado entre a UFPI e a parte concedente."
+          },
+          {
+            "chunk_id": "ufpi-177-2012-art-66-idx-000065",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "66",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 66",
+            "temporal_role": "eligible",
+            "evidence_text": "**Art. 66. O estágio somente pode ocorrer em unidades que tenham condições de:**\n* - proporcionar experiências práticas na área de formação do estagiário;\n* - dispor de profissional da área para assumir a supervisão do estagiário.\n> Parágrafo único. Não é permitido o encaminhamento, para o estágio, de aluno que esteja com o curso trancado."
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "indeterminate",
+          "requested_time_context": {
+            "norm_ids": [],
+            "before_amendment": false,
+            "relation_query": null,
+            "article": null,
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-1056-2026-art-1-idx-000000",
+              "source_norm": "ufpi-1056-2026",
+              "source_article": "1",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-87-idx-000086",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "87",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-68-idx-000067",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "68",
+              "temporal_action": "amendment_applied",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": {
+                "source": "Resolução CEPEX/UFPI nº 1.056/2026",
+                "article": "1"
+              }
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-65-idx-000064",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "65",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-66-idx-000065",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "66",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [
+            {
+              "relation": "AMENDED_BY",
+              "source_norm": "ufpi-177-2012",
+              "target_norm": "ufpi-1056-2026",
+              "target_article": "68",
+              "target_paragraph": "4",
+              "evidence_source": "Resolução CEPEX/UFPI nº 1.056/2026",
+              "evidence_article": "1"
+            }
+          ],
+          "generation_constraints": {
+            "must_frame_as_historical": false,
+            "must_not_claim_current_validity": false,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": false,
+            "must_not_present_successor_as_historical_predecessor": false,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": true,
+            "must_not_duplicate_superseded_wording": true,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Com base nas normas indexadas no sistema:\nO dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "AMENDED_BY",
+              "norm_id": "ufpi-177-2012",
+              "target_norm": "ufpi-1056-2026",
+              "role": null
+            },
+            {
+              "kind": "STATUS_UNKNOWN",
+              "norm_id": "ufpi-1056-2026",
+              "target_norm": null,
+              "role": null
+            },
+            {
+              "kind": "STATUS_UNKNOWN",
+              "norm_id": "ufpi-177-2012",
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "fallback",
+        "domain": "graduacao",
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "3d174b4a-570d-4e40-9176-9720bd4b13b0",
+        "error_code": null,
+        "safe_message": null
+      }
+    }
+  ]
+}

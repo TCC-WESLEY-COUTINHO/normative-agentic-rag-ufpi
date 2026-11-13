@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-10-31T17:08:17.393329+00:00",
+  "initial_branch": "feat/normative-tool-facade-v1",
+  "initial_head": "367e27f9d395aa8de75d17ffa433d718184630b6",
+  "initial_tree_clean": true,
+  "branch": "feat/retrieval-strategies-v1",
+  "implementation_head": "9e285136ef4f4a2a3310dcd58c199e183359d056",
+  "strategies": [
+    "dense_vector",
+    "metadata_exact",
+    "vector_filtered"
+  ],
+  "public_contract_version": "1",
+  "core_version": "structured_output_v2",
+  "public_schema_unchanged": true,
+  "facade_signature_unchanged": true,
+  "working_source_sha256": {
+    "code/src/rag_baseline/retrieval_policy.py": "19423726e29bff0be9fafcba5b2768023d3b7ee5e48d4a7556ad1d817be68d73",
+    "code/src/rag_baseline/retrieval_engines.py": "6afde92d150f7f676e6887c686534d8dfec016ed2db39a0b5bc0bd806245fdd6",
+    "code/src/rag_baseline/retrieval_service.py": "9f86ab184e98e68548e7b38e5a0fee28b3bad84f00db2955ba470c05f8d1470c",
+    "code/src/rag_baseline/tool_facade.py": "625f829dc0c0ad9d535ecb599e6e39c93241d9d37d0e54329e2cfab2a45b3552",
+    "code/src/rag_baseline/tool_contracts.py": "30d89de6ee01db04bfdbf1f012cb033072a81ee46e46d10e41d1c006393f4a4e",
+    "code/src/rag_baseline/models.py": "656d540021e682cba118cf6e7a7de78c790564d3f4fecc6f4898bb198ecf7eca",
+    "code/tests/rag_baseline/test_retrieval_strategies.py": "6fe68a02e1ccdef94488c56ca316ad7a83c6dbc3806e3af4d630abbb3264c41b",
+    "evaluation/datasets/retrieval_strategy_regression_v1.json": "00aca59749e68dc01bf8b17550bd41fb6473a0c1c2ef030f3442561a89450a14",
+    "evaluation/results/retrieval_strategies_v1_001/local_probes.py": "5ee77b970b21d188891abce7ee5ebb03f4440dd43d45d1544add5779090a82d9"
+  },
+  "git_source_blob_sha256": {
+    "code/src/rag_baseline/retrieval_policy.py": "19423726e29bff0be9fafcba5b2768023d3b7ee5e48d4a7556ad1d817be68d73",
+    "code/src/rag_baseline/retrieval_engines.py": "6afde92d150f7f676e6887c686534d8dfec016ed2db39a0b5bc0bd806245fdd6",
+    "code/src/rag_baseline/retrieval_service.py": "9f86ab184e98e68548e7b38e5a0fee28b3bad84f00db2955ba470c05f8d1470c",
+    "code/src/rag_baseline/tool_facade.py": "625f829dc0c0ad9d535ecb599e6e39c93241d9d37d0e54329e2cfab2a45b3552",
+    "code/src/rag_baseline/tool_contracts.py": "30d89de6ee01db04bfdbf1f012cb033072a81ee46e46d10e41d1c006393f4a4e",
+    "code/src/rag_baseline/models.py": "b77de7a26099a596f35fb6f0b710b2c81759c848470175ffd63d16b2facad16d",
+    "code/tests/rag_baseline/test_retrieval_strategies.py": "6fe68a02e1ccdef94488c56ca316ad7a83c6dbc3806e3af4d630abbb3264c41b",
+    "evaluation/datasets/retrieval_strategy_regression_v1.json": "00aca59749e68dc01bf8b17550bd41fb6473a0c1c2ef030f3442561a89450a14"
+  },
+  "source_EOL_note": "models.py keeps existing CRLF working bytes; Git LF blob. Model normalized text changes exactly two annotations. All artifact bytes use local -text rule.",
+  "index_records": 507,
+  "index_sha256": "ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a",
+  "prior_files_checked": 585,
+  "prior_files_identical": 582,
+  "prior_files_authorized_changed": 3,
+  "decision_count": 15,
+  "execution_count": 24,
+  "real_provider_calls": 0,
+  "rerun_44_case_experiment": false,
+  "evidence_commit": "Containing local integration-verification commit",
+  "hash_manifest": "ARTIFACTS.json"
+}

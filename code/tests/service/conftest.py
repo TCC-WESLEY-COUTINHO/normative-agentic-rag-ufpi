@@ -4,6 +4,8 @@ import pytest
 from fastapi.testclient import TestClient
 from langchain_core.messages import AIMessage
 
+from core import settings
+from core.settings import DatabaseType
 from service import app
 
 
@@ -36,7 +38,11 @@ def mock_settings(mock_env):
 def mock_httpx():
     """Patch httpx.stream and httpx.get to use our test client."""
 
-    with TestClient(app) as client:
+    with (
+        patch.object(settings, "DATABASE_TYPE", DatabaseType.SQLITE),
+        patch.object(settings, "SQLITE_DB_PATH", ":memory:"),
+        TestClient(app) as client,
+    ):
 
         def mock_stream(method: str, url: str, **kwargs):
             # Strip the base URL since TestClient expects just the path

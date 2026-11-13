@@ -1,0 +1,30 @@
+{
+  "initial_files": 692,
+  "unchanged": 688,
+  "authorized_changes": [
+    {
+      "path": "code/src/rag_baseline/agent_graph.py",
+      "before": "471c941f35907c404574ace35a3f96f820264bd170ff28da38b0836414dc0968",
+      "after": "c4a679968b233c344436328f6155d586ddea5f24e75b1bc55d54f0ae36ef4902"
+    },
+    {
+      "path": "code/src/schema/schema.py",
+      "before": "0268a560dc12a0df5702ed10d70f60e134a76ebc1f2de50d58021ad604012aa8",
+      "after": "afaf16f9fa3778a056130b28952e2771025abd2ec3de4ba80c85f90c51ad1891"
+    },
+    {
+      "path": "code/src/service/normative_transport.py",
+      "before": "30294198dc01031b3e212f3fedaf1329e56e27e19c743a018fc3c2a18482615e",
+      "after": "24404b8b8293ff8d6d3032fd2610cce14078bed5c78dc1fca48d8feda0c7a266"
+    },
+    {
+      "path": "code/src/service/service.py",
+      "before": "578441324438127ba93eacfdc96594a1e804376d7ffd7ddc9ebab41cbba8e734",
+      "after": "9c3d86d51372b461e229831ca112342bd6347f7a38afa1a5322efb8012445803"
+    }
+  ],
+  "index_identical": true,
+  "index_count": 507,
+  "index_sha256": "ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a",
+  "protected_previous_results_identical": true
+}

@@ -1,0 +1,39 @@
+{
+  "classification": "pre-freeze development regression, candidate without recorded independent validation",
+  "before_artifact": "before_trace.json",
+  "cause": "historical documentary wording and calendar legal validity conflated by deterministic year extraction; graph filter_context clears correctly preserved historical evidence whenever requested_year exists",
+  "year_origin": "classify_temporal_intent regex: em/no ano de + year; first match em 2023",
+  "before_amendment_recognized": true,
+  "before_intent": {
+    "mode": "historical",
+    "requested_year": 2023,
+    "before_amendment": true
+  },
+  "layer_discarding_evidence": "agentic.build_graph.filter_context requested_year gate, after VersionFilter.apply kept the historical article",
+  "historical_evidence_available": true,
+  "retrieval_strategy": "metadata_exact",
+  "evidence": "ufpi-177-2012-art-68-idx-000067",
+  "generation_before": false,
+  "before_terminal": "ERROR (no eligible final context), chronology_unresolved",
+  "hypotheses": {
+    "H1": "year lexically extracted as designed but documentary meaning absent",
+    "H2": "calendar-date policy conservative; no legal chronology certified",
+    "H3": "CONFIRMED: historical wording treated as legal-date certification",
+    "H4": "before_amendment already true; not lost",
+    "H5": "CONFIRMED: graph year gate removes eligible historical evidence"
+  },
+  "fix": "TemporalIntent historical_wording and document_year; requested_year reserved for calendar applicability; documentary subtype requires positive edition/update/year or before-amendment context and excludes validity/applicability predicates",
+  "version_filter_algorithm_changed": false,
+  "guard_changed": true,
+  "root_red": "snapshot_red:10 failed,6 passed",
+  "review_boundary_red": "mixed_validity_red:6 failed,10 passed,6 deselected",
+  "review_boundary_green": "mixed_validity_green:32 passed",
+  "no_hardcoded_year_norm_article_or_answer": true,
+  "guard_change_scope": "strict additional historical validity prohibition only when historical_wording=True; no prior check relaxed",
+  "secondary_runtime_finding": "after chronology fix, model past/nominal validity claims passed original guard; evidenced in immutable initial smoke",
+  "secondary_fix": "scoped guard and regeneration instruction for historical validity; unchanged allowed evidence and retry limit",
+  "primary_chronology_defect": "RESOLVED",
+  "acceptance": "PARTIAL",
+  "remaining_finding": "GEN-01: real model can ignore documentary constraints even after retry; safe fallback retained",
+  "retry_contract_scope": "all historical_wording regenerations, regardless of first violation"
+}

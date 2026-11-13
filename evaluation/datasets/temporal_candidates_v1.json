@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "candidate_gold": true,
+  "purpose": "documentary_relation_only_not_obsolete_context_exposure_test",
+  "items": [
+    {
+      "id": "TEMP1-001",
+      "question": "Na pós-graduação, a Resolução 956/2025 lista a 658/2024 entre as normas revogadas?",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder",
+      "sector": "pos_graduacao",
+      "norm_id": "ufpi-956-2025",
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "62",
+          "text": "Art. 62. Ficam revogadas:\n| -a Resolução CEPEX/UFPI Nº 189, de 14 de setembro de 2007;\nIl -a Resolução CEPEX/UFPI Nº 22, de 21 de fevereiro de 2014;\nIll -a Resolução CEPEX/UFPI Nº 284, de 14 de dezembro de 2018;\nIV -a Resolução CEPEX/UFPI Nº 133, de 30 de agosto de 2021;\nV -a Resolução CEPEX/UFPI Nº 316, de 21 de julho de 2022;\nVI -a Resolução CEPEX/UFPI Nº 658, de 22 de abril de 2024; e\nVII -a Resolução CEPEX/UFPI Nº 693, de 26 de agosto de 2024."
+        }
+      ],
+      "reference_answer": "Sim. O art. 62, VI, da Resolução 956/2025 lista expressamente a Resolução 658, de 22 de abril de 2024, entre as revogadas.",
+      "expected_applicable_norm": "ufpi-956-2025",
+      "obsolete_norm": "ufpi-658-2024",
+      "temporal_relation": "revoga",
+      "textual_evidence": {
+        "norm_id": "ufpi-956-2025",
+        "article_number": "62",
+        "text": "Art. 62. Ficam revogadas:\n| -a Resolução CEPEX/UFPI Nº 189, de 14 de setembro de 2007;\nIl -a Resolução CEPEX/UFPI Nº 22, de 21 de fevereiro de 2014;\nIll -a Resolução CEPEX/UFPI Nº 284, de 14 de dezembro de 2018;\nIV -a Resolução CEPEX/UFPI Nº 133, de 30 de agosto de 2021;\nV -a Resolução CEPEX/UFPI Nº 316, de 21 de julho de 2022;\nVI -a Resolução CEPEX/UFPI Nº 658, de 22 de abril de 2024; e\nVII -a Resolução CEPEX/UFPI Nº 693, de 26 de agosto de 2024."
+      },
+      "legal_basis": {
+        "norm_id": "ufpi-956-2025",
+        "article": "62, VI"
+      },
+      "current_evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "62",
+          "text": "Art. 62. Ficam revogadas:\n| -a Resolução CEPEX/UFPI Nº 189, de 14 de setembro de 2007;\nIl -a Resolução CEPEX/UFPI Nº 22, de 21 de fevereiro de 2014;\nIll -a Resolução CEPEX/UFPI Nº 284, de 14 de dezembro de 2018;\nIV -a Resolução CEPEX/UFPI Nº 133, de 30 de agosto de 2021;\nV -a Resolução CEPEX/UFPI Nº 316, de 21 de julho de 2022;\nVI -a Resolução CEPEX/UFPI Nº 658, de 22 de abril de 2024; e\nVII -a Resolução CEPEX/UFPI Nº 693, de 26 de agosto de 2024."
+        }
+      ],
+      "obsolete_corpus_ingested": false,
+      "exposure_comparison_available": false
+    }
+  ]
+}

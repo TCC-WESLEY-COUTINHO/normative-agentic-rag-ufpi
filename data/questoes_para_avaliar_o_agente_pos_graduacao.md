@@ -1,0 +1,42 @@
+Bancada de Questões
+
+1. Quantas faltas posso ter numa disciplina do doutorado sem reprovar?
+   É preciso frequentar pelo menos 75% da carga horária da disciplina; faltar a mais de 25% reprova por frequência. A aprovação também exige nota mínima sete. [Resolução CEPEX/UFPI nº 956/2025, art. 20].
+2. Tirei 6,5 numa matéria do mestrado e fui a 80% das aulas. Passei?
+   Não: a nota mínima para aprovação é sete. A frequência de 80% atende ao mínimo de 75%, mas não compensa a nota insuficiente. [Resolução CEPEX/UFPI nº 956/2025, art. 20].
+3. Quantos créditos preciso completar no mestrado? A dissertação entra nessa conta?
+   O mínimo é de 30 créditos, dos quais seis são relativos à dissertação. A distribuição entre disciplinas obrigatórias, optativas e atividades complementares segue o Regimento Interno do PPG. [Resolução CEPEX/UFPI nº 956/2025, art. 3].
+4. Quanto tempo tenho para terminar o mestrado? Dá para pedir mais prazo?
+   A duração mínima é 12 meses e a máxima é 24 meses. É permitida prorrogação de até seis meses mediante aprovação do Colegiado Simples. [Resolução CEPEX/UFPI nº 956/2025, art. 3].
+5. Qual é o prazo para terminar o doutorado? Posso prorrogar?
+   A duração mínima é 24 meses e a máxima é 48 meses. É permitida prorrogação de até 12 meses mediante aprovação do Colegiado Simples. [Resolução CEPEX/UFPI nº 956/2025, art. 4].
+6. Meu certificado de inglês tem quatro anos. Ainda vale para comprovar proficiência no mestrado?
+   Em regra, não: os exames de proficiência têm validade de três anos. Programas em rede são exceção e seguem os critérios das instituições-sede. [Resolução CEPEX/UFPI nº 956/2025, art. 34].
+7. Não passei na qualificação do mestrado. Posso tentar de novo? Até quando?
+   Há direito a uma nova oportunidade, no prazo definido pelo Regimento Interno do PPG, que não pode exceder três meses no mestrado. A nova oportunidade ocorre perante a mesma banca; impedimento de membros exige aprovação de nova composição pelo Colegiado Simples. [Resolução CEPEX/UFPI nº 956/2025, art. 49].
+8. Passei na defesa da dissertação, mas a banca pediu ajustes. Quanto tempo tenho para entregar?
+   As modificações devem ser feitas em até 60 dias corridos, sob pena de anulação da defesa. O orientador deve validar as alterações e formalizá-las à Coordenação antes da entrega da versão final, que é obrigatória para solicitar o diploma. [Resolução CEPEX/UFPI nº 956/2025, art. 54].
+9. Vou fazer estágio de docência no mestrado. Quanto tempo dura, quantas horas faço e o que entrego no final?
+   No mestrado, a duração mínima é um semestre; o início exige aprovação do PED pelo Colegiado Simples e ciência da instância responsável pela disciplina, preferencialmente após concluir os créditos obrigatórios. A carga é de quatro a seis horas semanais, limitada a 60 horas por semestre, com no máximo 50% em sala de aula; o estagiário não substitui o professor. O relatório final deve ser elaborado em até 30 dias após as atividades, avaliado pelo orientador e supervisor e submetido à aprovação do Colegiado Simples. [Resolução CEPEX/UFPI nº 956/2025, art. 44, 45, 48].
+10. Já fiz matérias de pós em outra universidade. Como posso aproveitar isso no meu mestrado?
+   É possível aproveitar créditos de outro PPG ou IES em áreas afins e de interesse para a dissertação, mediante aprovação do Colegiado Simples, respeitando o Regimento Interno do PPG. Podem ser aceitas disciplinas aprovadas de conteúdo e duração idênticos, equivalentes ou superiores; estudos complementares entre disciplinas; ou estudos afins à área e de interesse para a dissertação. O aproveitamento é registrado no histórico pelo sistema da Universidade, com nome e carga horária da disciplina. [Resolução CEPEX/UFPI nº 956/2025, art. 3, 36].
+11. Faço mestrado e estou doente. Qual é a diferença entre cancelar uma matéria e trancar o curso?
+   Cancelar ou substituir matrícula em disciplina exige respeito ao Calendário Acadêmico, parecer favorável do orientador e aprovação do Colegiado Simples; a mesma disciplina só pode ser cancelada uma vez, salvo doença comprovada pela Perícia Médica da Universidade. O trancamento do curso por doença comprovada pela Perícia Médica pode durar até 12 meses. O período de trancamento por doença não conta para os prazos de conclusão do curso. [Resolução CEPEX/UFPI nº 956/2025, art. 37, 38].
+12. Estou terminando o mestrado. Além de defender, o que preciso cumprir e entregar para pedir o diploma?
+   É preciso cumprir os requisitos do mestrado: prazo, proficiência em língua estrangeira, mínimo de 30 créditos com seis de dissertação, estágio de docência, qualificação quando prevista e defesa; o PPG pode estabelecer requisitos adicionais. Se a banca solicitar modificações, elas devem ser feitas em até 60 dias corridos e validadas pelo orientador; a versão final corrigida é requisito do diploma. Entregar à Coordenação a versão final digital da dissertação, autorização de depósito no Repositório Institucional, cópia da ata da defesa e Nada Consta das Bibliotecas. [Resolução CEPEX/UFPI nº 956/2025, art. 3, 54, 56].
+13. Reprovei na qualificação do doutorado. Como funciona a segunda tentativa e o que acontece se eu reprovar de novo?
+   Há uma nova oportunidade, dentro do prazo do Regimento Interno, limitado a seis meses no doutorado. A banca é a mesma, salvo impedimento de membros e aprovação de nova composição pelo Colegiado Simples. Duas reprovações no Exame de Qualificação levam ao desligamento do PPG. [Resolução CEPEX/UFPI nº 956/2025, art. 49, 21].
+14. Estou montando a banca da minha tese. Quantas pessoas preciso chamar e quem pode participar?
+   No doutorado são necessários pelo menos cinco titulares e dois suplentes, com pelo menos dois docentes externos ao PPG. A banca é aprovada pelo Colegiado Simples, ouvido o orientador, que a preside. Deve haver imparcialidade, evitando conflitos de interesse e relações de parentesco, filiação ou societárias com o discente; o coorientador pode participar como membro adicional ao mínimo, com voto. [Resolução CEPEX/UFPI nº 956/2025, art. 51].
+15. Quero transferir meu mestrado para outro programa. O que é necessário e meu prazo começa de novo?
+   A transferência é admitida entre programas similares ou afins recomendados pela CAPES, no mesmo nível, com aprovação do Colegiado Simples, existência de vagas e critérios do Regimento Interno. O aluno deve apresentar histórico e planos de ensino; a matrícula segue as regras de aproveitamento de estudos. Os prazos mínimo e máximo de conclusão reiniciam a partir do ingresso no novo programa. [Resolução CEPEX/UFPI nº 956/2025, art. 39, 36].
+16. Sou mestrando e já dei aula. Posso ser dispensado do estágio de docência? Se não, posso fazê-lo fora da UFPI?
+   A dispensa depende de aprovação do Colegiado Simples e comprovação de pelo menos um semestre de docência no ensino superior ou lato sensu; para lato sensu, devem ser cursos presenciais de especialização ou aperfeiçoamento com carga compatível ao PED. Vínculo docente atual em instituição de EBTT é outra hipótese. O estágio pode ocorrer em outra instituição de ensino superior ou na rede pública de ensino médio, com autorização do orientador e aprovação do Colegiado Simples. [Resolução CEPEX/UFPI nº 956/2025, art. 42, 41].
+17. Reprovei duas vezes na mesma matéria. Posso perder minha vaga?
+   Sim. Duas reprovações na mesma disciplina são uma das hipóteses de desligamento do programa de pós-graduação. [Resolução CEPEX/UFPI nº 956/2025, art. 21, I].
+18. Estou doente e preciso parar o curso por um tempo. Quanto tempo posso ficar afastado?
+   É permitido trancar o curso por até 12 meses por motivo de doença, comprovada pela Perícia Médica da Universidade. Esse período não entra na contagem do prazo de conclusão do curso. [Resolução CEPEX/UFPI nº 956/2025, art. 38].
+19. Já cancelei essa mesma matéria uma vez. Posso cancelar de novo?
+   Em regra, não. O cancelamento da mesma disciplina é permitido somente uma vez, exceto por doença comprovada pela Perícia Médica da Universidade. O pedido também deve respeitar o Calendário Acadêmico, ter parecer favorável do orientador e aprovação do Colegiado Simples. [Resolução CEPEX/UFPI nº 956/2025, art. 37].
+20. Minha nota final foi 6,5 e tenho 80% de presença. Já estou aprovado?
+   Não. A aprovação exige nota mínima sete e frequência mínima de 75%. Sua frequência atende ao requisito, mas a nota não. [Resolução CEPEX/UFPI nº 956/2025, art. 20, § 3º].

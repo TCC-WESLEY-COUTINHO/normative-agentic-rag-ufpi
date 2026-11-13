@@ -1,0 +1,604 @@
+{
+  "status": "provisional_technical_annotations_not_legal_gold",
+  "successful_generations": {
+    "before": 44,
+    "after": 44
+  },
+  "metrics": {
+    "before": {
+      "TCR": {
+        "numerator": 14,
+        "denominator": 44,
+        "value": 0.3181818181818182
+      },
+      "HFA": {
+        "numerator": 4,
+        "denominator": 20,
+        "value": 0.2
+      },
+      "CSC": {
+        "numerator": 12,
+        "denominator": 12,
+        "value": 1.0
+      },
+      "UOR": {
+        "numerator": 8,
+        "denominator": 34,
+        "value": 0.23529411764705882
+      },
+      "TRC": {
+        "numerator": 22,
+        "denominator": 32,
+        "value": 0.6875
+      },
+      "CGVR": {
+        "numerator": 18,
+        "denominator": 44,
+        "value": 0.4090909090909091
+      }
+    },
+    "after": {
+      "TCR": {
+        "numerator": 6,
+        "denominator": 44,
+        "value": 0.13636363636363635
+      },
+      "HFA": {
+        "numerator": 20,
+        "denominator": 20,
+        "value": 1.0
+      },
+      "CSC": {
+        "numerator": 11,
+        "denominator": 12,
+        "value": 0.9166666666666666
+      },
+      "UOR": {
+        "numerator": 1,
+        "denominator": 34,
+        "value": 0.029411764705882353
+      },
+      "TRC": {
+        "numerator": 32,
+        "denominator": 32,
+        "value": 1.0
+      },
+      "CGVR": {
+        "numerator": 21,
+        "denominator": 44,
+        "value": 0.4772727272727273
+      }
+    }
+  },
+  "per_case": {
+    "A_grad_historical": {
+      "before": {
+        "TCR": {
+          "numerator": 10,
+          "denominator": 10,
+          "value": 1.0
+        },
+        "HFA": {
+          "numerator": 0,
+          "denominator": 10,
+          "value": 0.0
+        },
+        "CSC": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "UOR": {
+          "numerator": 8,
+          "denominator": 10,
+          "value": 0.8
+        },
+        "TRC": {
+          "numerator": 0,
+          "denominator": 10,
+          "value": 0.0
+        },
+        "CGVR": {
+          "numerator": 9,
+          "denominator": 10,
+          "value": 0.9
+        }
+      },
+      "after": {
+        "TCR": {
+          "numerator": 0,
+          "denominator": 10,
+          "value": 0.0
+        },
+        "HFA": {
+          "numerator": 10,
+          "denominator": 10,
+          "value": 1.0
+        },
+        "CSC": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "UOR": {
+          "numerator": 0,
+          "denominator": 10,
+          "value": 0.0
+        },
+        "TRC": {
+          "numerator": 10,
+          "denominator": 10,
+          "value": 1.0
+        },
+        "CGVR": {
+          "numerator": 9,
+          "denominator": 10,
+          "value": 0.9
+        }
+      }
+    },
+    "B_grad_current": {
+      "before": {
+        "TCR": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0
+        },
+        "HFA": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "CSC": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0
+        },
+        "UOR": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0
+        },
+        "TRC": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0
+        },
+        "CGVR": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0
+        }
+      },
+      "after": {
+        "TCR": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0
+        },
+        "HFA": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "CSC": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0
+        },
+        "UOR": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0
+        },
+        "TRC": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0
+        },
+        "CGVR": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0
+        }
+      }
+    },
+    "C_post_historical": {
+      "before": {
+        "TCR": {
+          "numerator": 0,
+          "denominator": 10,
+          "value": 0.0
+        },
+        "HFA": {
+          "numerator": 4,
+          "denominator": 10,
+          "value": 0.4
+        },
+        "CSC": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "UOR": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "TRC": {
+          "numerator": 10,
+          "denominator": 10,
+          "value": 1.0
+        },
+        "CGVR": {
+          "numerator": 0,
+          "denominator": 10,
+          "value": 0.0
+        }
+      },
+      "after": {
+        "TCR": {
+          "numerator": 1,
+          "denominator": 10,
+          "value": 0.1
+        },
+        "HFA": {
+          "numerator": 10,
+          "denominator": 10,
+          "value": 1.0
+        },
+        "CSC": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "UOR": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "TRC": {
+          "numerator": 10,
+          "denominator": 10,
+          "value": 1.0
+        },
+        "CGVR": {
+          "numerator": 1,
+          "denominator": 10,
+          "value": 0.1
+        }
+      }
+    },
+    "D_post_current": {
+      "before": {
+        "TCR": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0
+        },
+        "HFA": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "CSC": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0
+        },
+        "UOR": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0
+        },
+        "TRC": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "CGVR": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0
+        }
+      },
+      "after": {
+        "TCR": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0
+        },
+        "HFA": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "CSC": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0
+        },
+        "UOR": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0
+        },
+        "TRC": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "CGVR": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0
+        }
+      }
+    },
+    "E_validity": {
+      "before": {
+        "TCR": {
+          "numerator": 4,
+          "denominator": 10,
+          "value": 0.4
+        },
+        "HFA": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "CSC": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "UOR": {
+          "numerator": 0,
+          "denominator": 10,
+          "value": 0.0
+        },
+        "TRC": {
+          "numerator": 10,
+          "denominator": 10,
+          "value": 1.0
+        },
+        "CGVR": {
+          "numerator": 2,
+          "denominator": 10,
+          "value": 0.2
+        }
+      },
+      "after": {
+        "TCR": {
+          "numerator": 4,
+          "denominator": 10,
+          "value": 0.4
+        },
+        "HFA": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "CSC": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "UOR": {
+          "numerator": 0,
+          "denominator": 10,
+          "value": 0.0
+        },
+        "TRC": {
+          "numerator": 10,
+          "denominator": 10,
+          "value": 1.0
+        },
+        "CGVR": {
+          "numerator": 10,
+          "denominator": 10,
+          "value": 1.0
+        }
+      }
+    },
+    "F_comparison": {
+      "before": {
+        "TCR": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0
+        },
+        "HFA": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "CSC": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "UOR": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0
+        },
+        "TRC": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0
+        },
+        "CGVR": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0
+        }
+      },
+      "after": {
+        "TCR": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0
+        },
+        "HFA": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "CSC": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "UOR": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0
+        },
+        "TRC": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0
+        },
+        "CGVR": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0
+        }
+      }
+    },
+    "G_unknown": {
+      "before": {
+        "TCR": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0
+        },
+        "HFA": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "CSC": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "UOR": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0
+        },
+        "TRC": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "CGVR": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0
+        }
+      },
+      "after": {
+        "TCR": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0
+        },
+        "HFA": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "CSC": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "UOR": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0
+        },
+        "TRC": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "CGVR": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0
+        }
+      }
+    },
+    "H_citation": {
+      "before": {
+        "TCR": {
+          "numerator": 0,
+          "denominator": 10,
+          "value": 0.0
+        },
+        "HFA": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "CSC": {
+          "numerator": 10,
+          "denominator": 10,
+          "value": 1.0
+        },
+        "UOR": {
+          "numerator": 0,
+          "denominator": 10,
+          "value": 0.0
+        },
+        "TRC": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "CGVR": {
+          "numerator": 5,
+          "denominator": 10,
+          "value": 0.5
+        }
+      },
+      "after": {
+        "TCR": {
+          "numerator": 0,
+          "denominator": 10,
+          "value": 0.0
+        },
+        "HFA": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "CSC": {
+          "numerator": 10,
+          "denominator": 10,
+          "value": 1.0
+        },
+        "UOR": {
+          "numerator": 0,
+          "denominator": 10,
+          "value": 0.0
+        },
+        "TRC": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "CGVR": {
+          "numerator": 0,
+          "denominator": 10,
+          "value": 0.0
+        }
+      }
+    }
+  },
+  "provider_errors": 0
+}

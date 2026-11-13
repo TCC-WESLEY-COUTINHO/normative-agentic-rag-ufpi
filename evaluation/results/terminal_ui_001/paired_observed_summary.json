@@ -1,0 +1,135 @@
+{
+  "kind": "descriptive_complete_observed_pairs",
+  "groups": {
+    "pos_graduacao": {
+      "planned_answerable_pairs": 16,
+      "observed_complete_pairs": 13,
+      "missing_one_or_both": 3,
+      "filtered_recall_at_5": 1,
+      "unfiltered_recall_at_5": 0.9615384615384616,
+      "delta_recall_at_5": -0.038461538461538464,
+      "pairs": [
+        {
+          "id": "POS2-001",
+          "filtered_recall_at_5": 1,
+          "unfiltered_recall_at_5": 1,
+          "delta_recall_at_5": 0
+        },
+        {
+          "id": "POS2-003",
+          "filtered_recall_at_5": 1,
+          "unfiltered_recall_at_5": 1,
+          "delta_recall_at_5": 0
+        },
+        {
+          "id": "POS2-004",
+          "filtered_recall_at_5": 1,
+          "unfiltered_recall_at_5": 1,
+          "delta_recall_at_5": 0
+        },
+        {
+          "id": "POS2-005",
+          "filtered_recall_at_5": 1,
+          "unfiltered_recall_at_5": 1,
+          "delta_recall_at_5": 0
+        },
+        {
+          "id": "POS2-006",
+          "filtered_recall_at_5": 1,
+          "unfiltered_recall_at_5": 1,
+          "delta_recall_at_5": 0
+        },
+        {
+          "id": "POS2-007",
+          "filtered_recall_at_5": 1,
+          "unfiltered_recall_at_5": 1,
+          "delta_recall_at_5": 0
+        },
+        {
+          "id": "POS2-008",
+          "filtered_recall_at_5": 1,
+          "unfiltered_recall_at_5": 1,
+          "delta_recall_at_5": 0
+        },
+        {
+          "id": "POS2-009",
+          "filtered_recall_at_5": 1,
+          "unfiltered_recall_at_5": 1,
+          "delta_recall_at_5": 0
+        },
+        {
+          "id": "POS2-011",
+          "filtered_recall_at_5": 1,
+          "unfiltered_recall_at_5": 0.5,
+          "delta_recall_at_5": -0.5
+        },
+        {
+          "id": "POS2-012",
+          "filtered_recall_at_5": 1,
+          "unfiltered_recall_at_5": 1,
+          "delta_recall_at_5": 0
+        },
+        {
+          "id": "POS2-013",
+          "filtered_recall_at_5": 1,
+          "unfiltered_recall_at_5": 1,
+          "delta_recall_at_5": 0
+        },
+        {
+          "id": "POS2-014",
+          "filtered_recall_at_5": 1,
+          "unfiltered_recall_at_5": 1,
+          "delta_recall_at_5": 0
+        },
+        {
+          "id": "POS2-016",
+          "filtered_recall_at_5": 1,
+          "unfiltered_recall_at_5": 1,
+          "delta_recall_at_5": 0
+        }
+      ]
+    },
+    "graduacao": {
+      "planned_answerable_pairs": 6,
+      "observed_complete_pairs": 5,
+      "missing_one_or_both": 1,
+      "filtered_recall_at_5": 0.9,
+      "unfiltered_recall_at_5": 0.9,
+      "delta_recall_at_5": 0,
+      "pairs": [
+        {
+          "id": "GRAD2-001",
+          "filtered_recall_at_5": 0.5,
+          "unfiltered_recall_at_5": 0.5,
+          "delta_recall_at_5": 0
+        },
+        {
+          "id": "GRAD2-002",
+          "filtered_recall_at_5": 1,
+          "unfiltered_recall_at_5": 1,
+          "delta_recall_at_5": 0
+        },
+        {
+          "id": "GRAD2-004",
+          "filtered_recall_at_5": 1,
+          "unfiltered_recall_at_5": 1,
+          "delta_recall_at_5": 0
+        },
+        {
+          "id": "GRAD2-011",
+          "filtered_recall_at_5": 1,
+          "unfiltered_recall_at_5": 1,
+          "delta_recall_at_5": 0
+        },
+        {
+          "id": "GRAD2-018",
+          "filtered_recall_at_5": 1,
+          "unfiltered_recall_at_5": 1,
+          "delta_recall_at_5": 0
+        }
+      ]
+    }
+  },
+  "human_scores": null,
+  "interpretation": "Suplemento exploratório nos mesmos itens com referências observadas nas duas seleções; não elimina falhas do total nem assume ausência aleatória. Sem imputação e sem alegação causal ou confirmatória."
+}

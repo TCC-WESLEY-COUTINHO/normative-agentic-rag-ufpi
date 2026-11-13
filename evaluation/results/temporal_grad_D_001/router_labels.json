@@ -1,0 +1,27 @@
+[
+  {
+    "id": "TEMP-GRAD-001",
+    "expected_scope": "graduacao",
+    "expected_action": "responder"
+  },
+  {
+    "id": "TEMP-GRAD-002",
+    "expected_scope": "graduacao",
+    "expected_action": "responder"
+  },
+  {
+    "id": "TEMP-GRAD-003",
+    "expected_scope": "graduacao",
+    "expected_action": "responder"
+  },
+  {
+    "id": "TEMP-GRAD-004",
+    "expected_scope": "graduacao",
+    "expected_action": "responder"
+  },
+  {
+    "id": "TEMP-GRAD-005",
+    "expected_scope": "graduacao",
+    "expected_action": "responder"
+  }
+]

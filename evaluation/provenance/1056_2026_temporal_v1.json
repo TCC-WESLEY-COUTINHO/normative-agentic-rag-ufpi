@@ -1,0 +1,90 @@
+{
+  "norm_id": "ufpi-1056-2026",
+  "source": {
+    "url": "https://ufpi.br/images/Resoluo%20CEPEXUFPI%20N%201.056_%20de%2017%20de%20Agosto%20de%202026%201.pdf",
+    "title": "Resolução CEPEX/UFPI nº 1.056/2026",
+    "number": "1056",
+    "date": "2026-08-17",
+    "file": "resolucao_1056_2026_cepex.pdf",
+    "sha256": "0f9690d60110f71f622814ea914d5de644de5946acaf5cd6ba04395f24922c5b",
+    "preamble": "## Ministério da Educação Universidade Federal do Piauí Gabinete da Reitoria\n\n## RESOLUÇÃO CEPEX/UFPI Nº 1.056, DE 17 DE AGOSTO DE 2026\n\nAltera o $ 4º do art. 68 do Anexo à Resolução CEPEX/UFPI nº 177, de 5 de novembro de 2012, que aprova a atualização das normas de funcionamento dos cursos de graduação da UFPI e dá outras providências.\n\nA REITORA DA UNIVERSIDADE FEDERAL DO PIAUÍ — UFPI e PRESIDENTE DO CONSELHO DE ENSINO, PESQUISA E EXTENSÃO — CEPEX, no uso da atribuição que lhe confere o art. 15, caput, inciso XXI, do Regimento Geral da UFPI, de acordo com o que consta do processo nº 23111.031879/2026-90 da UFPI, e tendo em vista decisão do mesmo Conselho em reunião de 10 de agosto de 2026,\n\n## RESOLVE:"
+  },
+  "pipeline": {
+    "repository": "ingest_documents",
+    "code_commit": "c828e27e901cac738f14bd73e8945dd7eef2bc71",
+    "docling_version": "2.121.0",
+    "code_sha256": {
+      "src/ingest_documents/docling_smoke.py": "4500a53fa839d606e5bbaef1bf6dcf3b9272dec0e0fd49655bac002d1990adb7",
+      "src/ingest_documents/legal_article_chunker.py": "dacc76a21800bb653dfb73ee27681db24eadf9a9447b726255f67277b40981bd",
+      "src/ingest_documents/resolution_956.py": "1005764a4f9239bc18aa6b96d7cedc9b0bd584f1344ae3e84c82714be372a1a0"
+    },
+    "steps": [
+      "docling_smoke.build_converter (Portuguese full-page Tesseract OCR)",
+      "DocumentConverter.convert",
+      "DoclingDocument.export_to_markdown",
+      "legal_article_chunker.build_compatible_chunks",
+      "temporal metadata and stable IDs",
+      "legal_article_chunker.validate_corpus"
+    ],
+    "markdown_sha256": "7e0fe4fedc47c1465770ce85881969c8c8b8025347f8b582f0ccefa156d961a1"
+  },
+  "corpus": {
+    "file": "chunks_v1.json",
+    "sha256": "6c3cf25e3b49769f622b31d301621b3fdc5c88c3400a9931f7e2324efb080958",
+    "chunks": 2
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "preamble_detected"
+    ],
+    "metrics": {
+      "articles_detected": 2,
+      "chunks": 2,
+      "unique_articles": 2,
+      "duplicate_articles": [],
+      "empty_chunks": 0,
+      "missing_article_numbers": 0,
+      "multi_article_chunks": 0,
+      "implausible_order_transitions": 0,
+      "article_number_gaps": [],
+      "raw_article_starts": 2,
+      "article_count_ratio": 1.0,
+      "content_preservation_ratio": 0.991,
+      "articles_per_page": 2.0,
+      "preamble_characters": 713,
+      "without_chapter": 2,
+      "without_section": 2,
+      "without_subsection": 2,
+      "unique_ids": 2,
+      "duplicate_ids": 0,
+      "norm_id": "ufpi-1056-2026",
+      "setor": "graduacao",
+      "incorrect_norm_ids": 0,
+      "incorrect_sectors": 0
+    }
+  },
+  "source_verification": {
+    "method": "Visual inspection of official PDF, page 1; exact OCR text retained in corpus",
+    "amendment": {
+      "base_norm_id": "ufpi-177-2012",
+      "article": "68",
+      "paragraph": "4",
+      "basis_article": "1",
+      "pdf_page": 1,
+      "description": "Altera o § 4º do art. 68 do Anexo à Resolução CEPEX/UFPI nº 177, de 5 de novembro de 2012."
+    },
+    "effectiveness": {
+      "basis_article": "2",
+      "text": "Esta Resolução entra em vigor na data de sua publicação.",
+      "publication_date": null
+    },
+    "ocr_limitations": [
+      "Paragraph symbol recognized as $",
+      "Quoted Art. 68 heading and dotted omission lines are noisy OCR; target verified directly in official PDF",
+      "Signature OCR is noisy; not used as normative evidence"
+    ],
+    "scope": "Only introductory text of paragraph 4 is reprinted; existing subitems are not reprinted in this act"
+  }
+}

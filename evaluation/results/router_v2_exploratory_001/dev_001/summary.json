@@ -1,0 +1,823 @@
+{
+  "policies": {
+    "intent_v1": {
+      "n": 43,
+      "correct_n": 34,
+      "route_accuracy": 0.7906976744186046,
+      "wrong_route_rate": 0.0,
+      "clarification_precision": 0.5714285714285714,
+      "clarification_recall": 1.0,
+      "unnecessary_clarification_rate": 0.2903225806451613,
+      "macro_f1": 0.8368181818181818,
+      "confusion_matrix": {
+        "graduacao": {
+          "graduacao": 9,
+          "pos_graduacao": 0,
+          "ambas": 0,
+          "esclarecer": 2,
+          "error": 0
+        },
+        "pos_graduacao": {
+          "graduacao": 0,
+          "pos_graduacao": 9,
+          "ambas": 0,
+          "esclarecer": 7,
+          "error": 0
+        },
+        "ambas": {
+          "graduacao": 0,
+          "pos_graduacao": 0,
+          "ambas": 4,
+          "esclarecer": 0,
+          "error": 0
+        },
+        "esclarecer": {
+          "graduacao": 0,
+          "pos_graduacao": 0,
+          "ambas": 0,
+          "esclarecer": 12,
+          "error": 0
+        }
+      },
+      "errors": 0,
+      "probe_activation_rate": 0.0,
+      "probe_resolution_rate": null,
+      "probe_assisted_route_accuracy": null,
+      "probe_n": 0,
+      "clarification_output_n": 21,
+      "gold_clarification_n": 12,
+      "answerable_n": 31,
+      "decision_accuracy_on_probe": null,
+      "efficiency": {
+        "latency_mean": 2.509712953487652,
+        "latency_p50": 2.210864299995592,
+        "latency_p95": 5.693955189998086,
+        "llm_calls_per_query": 1,
+        "retrieval_calls_per_query": 0,
+        "embedding_calls_per_query": 0,
+        "reported_tokens_per_query": 687.8139534883721,
+        "reported_cost_per_query": 7.208790697674419e-05,
+        "cost_complete_n": 43,
+        "token_complete_n": 43
+      },
+      "bias_given_activated_probe": {
+        "graduacao": {
+          "n": 0,
+          "dominant_same_n": 0,
+          "dominant_same_rate": null,
+          "crossed_route_n": 0
+        },
+        "pos_graduacao": {
+          "n": 0,
+          "dominant_same_n": 0,
+          "dominant_same_rate": null,
+          "crossed_route_n": 0
+        }
+      },
+      "by_category": {
+        "ambiguous": {
+          "n": 12,
+          "correct_n": 12,
+          "route_accuracy": 1.0,
+          "wrong_route_rate": 0.0,
+          "clarification_precision": 1.0,
+          "clarification_recall": 1.0,
+          "unnecessary_clarification_rate": null,
+          "macro_f1": 0.25,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "esclarecer": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 12,
+              "error": 0
+            }
+          },
+          "errors": 0,
+          "probe_activation_rate": 0.0,
+          "probe_resolution_rate": null,
+          "probe_assisted_route_accuracy": null,
+          "probe_n": 0,
+          "clarification_output_n": 12,
+          "gold_clarification_n": 12,
+          "answerable_n": 0
+        },
+        "cross_domain": {
+          "n": 4,
+          "correct_n": 4,
+          "route_accuracy": 1.0,
+          "wrong_route_rate": 0.0,
+          "clarification_precision": null,
+          "clarification_recall": null,
+          "unnecessary_clarification_rate": 0.0,
+          "macro_f1": 0.25,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 4,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "esclarecer": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            }
+          },
+          "errors": 0,
+          "probe_activation_rate": 0.0,
+          "probe_resolution_rate": null,
+          "probe_assisted_route_accuracy": null,
+          "probe_n": 0,
+          "clarification_output_n": 0,
+          "gold_clarification_n": 0,
+          "answerable_n": 4
+        },
+        "explicit_graduacao": {
+          "n": 11,
+          "correct_n": 9,
+          "route_accuracy": 0.8181818181818182,
+          "wrong_route_rate": 0.0,
+          "clarification_precision": 0.0,
+          "clarification_recall": null,
+          "unnecessary_clarification_rate": 0.18181818181818182,
+          "macro_f1": 0.225,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 9,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 2,
+              "error": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "esclarecer": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            }
+          },
+          "errors": 0,
+          "probe_activation_rate": 0.0,
+          "probe_resolution_rate": null,
+          "probe_assisted_route_accuracy": null,
+          "probe_n": 0,
+          "clarification_output_n": 2,
+          "gold_clarification_n": 0,
+          "answerable_n": 11
+        },
+        "explicit_pos": {
+          "n": 16,
+          "correct_n": 9,
+          "route_accuracy": 0.5625,
+          "wrong_route_rate": 0.0,
+          "clarification_precision": 0.0,
+          "clarification_recall": null,
+          "unnecessary_clarification_rate": 0.4375,
+          "macro_f1": 0.18,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 9,
+              "ambas": 0,
+              "esclarecer": 7,
+              "error": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "esclarecer": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            }
+          },
+          "errors": 0,
+          "probe_activation_rate": 0.0,
+          "probe_resolution_rate": null,
+          "probe_assisted_route_accuracy": null,
+          "probe_n": 0,
+          "clarification_output_n": 7,
+          "gold_clarification_n": 0,
+          "answerable_n": 16
+        }
+      }
+    },
+    "adaptive_distribution_v2": {
+      "n": 43,
+      "correct_n": 33,
+      "route_accuracy": 0.7674418604651163,
+      "wrong_route_rate": 0.20930232558139536,
+      "clarification_precision": 0.75,
+      "clarification_recall": 0.25,
+      "unnecessary_clarification_rate": 0.03225806451612903,
+      "macro_f1": 0.7631048387096775,
+      "confusion_matrix": {
+        "graduacao": {
+          "graduacao": 11,
+          "pos_graduacao": 0,
+          "ambas": 0,
+          "esclarecer": 0,
+          "error": 0
+        },
+        "pos_graduacao": {
+          "graduacao": 0,
+          "pos_graduacao": 15,
+          "ambas": 0,
+          "esclarecer": 1,
+          "error": 0
+        },
+        "ambas": {
+          "graduacao": 0,
+          "pos_graduacao": 0,
+          "ambas": 4,
+          "esclarecer": 0,
+          "error": 0
+        },
+        "esclarecer": {
+          "graduacao": 9,
+          "pos_graduacao": 0,
+          "ambas": 0,
+          "esclarecer": 3,
+          "error": 0
+        }
+      },
+      "errors": 0,
+      "probe_activation_rate": 0.4883720930232558,
+      "probe_resolution_rate": 0.8095238095238095,
+      "probe_assisted_route_accuracy": 0.5238095238095238,
+      "probe_n": 21,
+      "clarification_output_n": 4,
+      "gold_clarification_n": 12,
+      "answerable_n": 31,
+      "decision_accuracy_on_probe": 0.5238095238095238,
+      "efficiency": {
+        "latency_mean": 3.015786379068781,
+        "latency_p50": 2.37664770000265,
+        "latency_p95": 6.4407060299985455,
+        "llm_calls_per_query": 1,
+        "retrieval_calls_per_query": 0.4883720930232558,
+        "embedding_calls_per_query": 0.4883720930232558,
+        "reported_tokens_per_query": 699.953488372093,
+        "reported_cost_per_query": 7.233069767441861e-05,
+        "cost_complete_n": 43,
+        "token_complete_n": 43
+      },
+      "bias_given_activated_probe": {
+        "graduacao": {
+          "n": 2,
+          "dominant_same_n": 2,
+          "dominant_same_rate": 1.0,
+          "crossed_route_n": 0
+        },
+        "pos_graduacao": {
+          "n": 7,
+          "dominant_same_n": 6,
+          "dominant_same_rate": 0.8571428571428571,
+          "crossed_route_n": 0
+        }
+      },
+      "by_category": {
+        "ambiguous": {
+          "n": 12,
+          "correct_n": 3,
+          "route_accuracy": 0.25,
+          "wrong_route_rate": 0.75,
+          "clarification_precision": 1.0,
+          "clarification_recall": 0.25,
+          "unnecessary_clarification_rate": null,
+          "macro_f1": 0.1,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "esclarecer": {
+              "graduacao": 9,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 3,
+              "error": 0
+            }
+          },
+          "errors": 0,
+          "probe_activation_rate": 1.0,
+          "probe_resolution_rate": 0.75,
+          "probe_assisted_route_accuracy": 0.25,
+          "probe_n": 12,
+          "clarification_output_n": 3,
+          "gold_clarification_n": 12,
+          "answerable_n": 0
+        },
+        "cross_domain": {
+          "n": 4,
+          "correct_n": 4,
+          "route_accuracy": 1.0,
+          "wrong_route_rate": 0.0,
+          "clarification_precision": null,
+          "clarification_recall": null,
+          "unnecessary_clarification_rate": 0.0,
+          "macro_f1": 0.25,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 4,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "esclarecer": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            }
+          },
+          "errors": 0,
+          "probe_activation_rate": 0.0,
+          "probe_resolution_rate": null,
+          "probe_assisted_route_accuracy": null,
+          "probe_n": 0,
+          "clarification_output_n": 0,
+          "gold_clarification_n": 0,
+          "answerable_n": 4
+        },
+        "explicit_graduacao": {
+          "n": 11,
+          "correct_n": 11,
+          "route_accuracy": 1.0,
+          "wrong_route_rate": 0.0,
+          "clarification_precision": null,
+          "clarification_recall": null,
+          "unnecessary_clarification_rate": 0.0,
+          "macro_f1": 0.25,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 11,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "esclarecer": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            }
+          },
+          "errors": 0,
+          "probe_activation_rate": 0.18181818181818182,
+          "probe_resolution_rate": 1.0,
+          "probe_assisted_route_accuracy": 1.0,
+          "probe_n": 2,
+          "clarification_output_n": 0,
+          "gold_clarification_n": 0,
+          "answerable_n": 11
+        },
+        "explicit_pos": {
+          "n": 16,
+          "correct_n": 15,
+          "route_accuracy": 0.9375,
+          "wrong_route_rate": 0.0,
+          "clarification_precision": 0.0,
+          "clarification_recall": null,
+          "unnecessary_clarification_rate": 0.0625,
+          "macro_f1": 0.24193548387096775,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 15,
+              "ambas": 0,
+              "esclarecer": 1,
+              "error": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "esclarecer": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            }
+          },
+          "errors": 0,
+          "probe_activation_rate": 0.4375,
+          "probe_resolution_rate": 0.8571428571428571,
+          "probe_assisted_route_accuracy": 0.8571428571428571,
+          "probe_n": 7,
+          "clarification_output_n": 1,
+          "gold_clarification_n": 0,
+          "answerable_n": 16
+        }
+      }
+    },
+    "adaptive_llm_v2": {
+      "n": 43,
+      "correct_n": 32,
+      "route_accuracy": 0.7441860465116279,
+      "wrong_route_rate": 0.20930232558139536,
+      "clarification_precision": 0.3333333333333333,
+      "clarification_recall": 0.08333333333333333,
+      "unnecessary_clarification_rate": 0.0,
+      "macro_f1": 0.7158808933002482,
+      "confusion_matrix": {
+        "graduacao": {
+          "graduacao": 11,
+          "pos_graduacao": 0,
+          "ambas": 0,
+          "esclarecer": 0,
+          "error": 0
+        },
+        "pos_graduacao": {
+          "graduacao": 0,
+          "pos_graduacao": 16,
+          "ambas": 0,
+          "esclarecer": 0,
+          "error": 0
+        },
+        "ambas": {
+          "graduacao": 0,
+          "pos_graduacao": 0,
+          "ambas": 4,
+          "esclarecer": 0,
+          "error": 0
+        },
+        "esclarecer": {
+          "graduacao": 9,
+          "pos_graduacao": 0,
+          "ambas": 0,
+          "esclarecer": 1,
+          "error": 2
+        }
+      },
+      "errors": 2,
+      "probe_activation_rate": 0.4883720930232558,
+      "probe_resolution_rate": 0.8571428571428571,
+      "probe_assisted_route_accuracy": 0.47619047619047616,
+      "probe_n": 21,
+      "clarification_output_n": 3,
+      "gold_clarification_n": 12,
+      "answerable_n": 31,
+      "decision_accuracy_on_probe": 0.47619047619047616,
+      "efficiency": {
+        "latency_mean": 4.153902213952807,
+        "latency_p50": 3.421470400004182,
+        "latency_p95": 10.19631867000862,
+        "llm_calls_per_query": 1.4883720930232558,
+        "retrieval_calls_per_query": 0.4883720930232558,
+        "embedding_calls_per_query": 0.4883720930232558,
+        "reported_tokens_per_query": 1519.2325581395348,
+        "reported_cost_per_query": 0.00015385069767441862,
+        "cost_complete_n": 43,
+        "token_complete_n": 43
+      },
+      "bias_given_activated_probe": {
+        "graduacao": {
+          "n": 2,
+          "dominant_same_n": 2,
+          "dominant_same_rate": 1.0,
+          "crossed_route_n": 0
+        },
+        "pos_graduacao": {
+          "n": 7,
+          "dominant_same_n": 6,
+          "dominant_same_rate": 0.8571428571428571,
+          "crossed_route_n": 0
+        }
+      },
+      "by_category": {
+        "ambiguous": {
+          "n": 12,
+          "correct_n": 1,
+          "route_accuracy": 0.08333333333333333,
+          "wrong_route_rate": 0.75,
+          "clarification_precision": 0.3333333333333333,
+          "clarification_recall": 0.08333333333333333,
+          "unnecessary_clarification_rate": null,
+          "macro_f1": 0.038461538461538464,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "esclarecer": {
+              "graduacao": 9,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 1,
+              "error": 2
+            }
+          },
+          "errors": 2,
+          "probe_activation_rate": 1.0,
+          "probe_resolution_rate": 0.75,
+          "probe_assisted_route_accuracy": 0.08333333333333333,
+          "probe_n": 12,
+          "clarification_output_n": 3,
+          "gold_clarification_n": 12,
+          "answerable_n": 0
+        },
+        "cross_domain": {
+          "n": 4,
+          "correct_n": 4,
+          "route_accuracy": 1.0,
+          "wrong_route_rate": 0.0,
+          "clarification_precision": null,
+          "clarification_recall": null,
+          "unnecessary_clarification_rate": 0.0,
+          "macro_f1": 0.25,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 4,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "esclarecer": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            }
+          },
+          "errors": 0,
+          "probe_activation_rate": 0.0,
+          "probe_resolution_rate": null,
+          "probe_assisted_route_accuracy": null,
+          "probe_n": 0,
+          "clarification_output_n": 0,
+          "gold_clarification_n": 0,
+          "answerable_n": 4
+        },
+        "explicit_graduacao": {
+          "n": 11,
+          "correct_n": 11,
+          "route_accuracy": 1.0,
+          "wrong_route_rate": 0.0,
+          "clarification_precision": null,
+          "clarification_recall": null,
+          "unnecessary_clarification_rate": 0.0,
+          "macro_f1": 0.25,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 11,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "esclarecer": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            }
+          },
+          "errors": 0,
+          "probe_activation_rate": 0.18181818181818182,
+          "probe_resolution_rate": 1.0,
+          "probe_assisted_route_accuracy": 1.0,
+          "probe_n": 2,
+          "clarification_output_n": 0,
+          "gold_clarification_n": 0,
+          "answerable_n": 11
+        },
+        "explicit_pos": {
+          "n": 16,
+          "correct_n": 16,
+          "route_accuracy": 1.0,
+          "wrong_route_rate": 0.0,
+          "clarification_precision": null,
+          "clarification_recall": null,
+          "unnecessary_clarification_rate": 0.0,
+          "macro_f1": 0.25,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 16,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            },
+            "esclarecer": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0,
+              "error": 0
+            }
+          },
+          "errors": 0,
+          "probe_activation_rate": 0.4375,
+          "probe_resolution_rate": 1.0,
+          "probe_assisted_route_accuracy": 1.0,
+          "probe_n": 7,
+          "clarification_output_n": 0,
+          "gold_clarification_n": 0,
+          "answerable_n": 16
+        }
+      }
+    }
+  },
+  "actual_physical_work": {
+    "llm_calls": 64,
+    "embedding_calls": 21,
+    "retrieval_calls": 21,
+    "token_usage": 65327,
+    "reported_tokens": 65327,
+    "token_coverage": 1.0,
+    "cost": 0.00661558,
+    "reported_cost": 0.00661558,
+    "cost_coverage": 1.0
+  },
+  "paired_note": "physical calls shared; per-policy latency/cost are measured phase sums for standalone cascades, not three separately executed deployments"
+}

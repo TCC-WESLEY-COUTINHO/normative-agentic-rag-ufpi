@@ -1,0 +1,81 @@
+{
+  "base": "d827d4e275eba604aba5a84aa564507ce66349fb",
+  "implementation_head": "a5d2f9e9872b10e880f4eaf6166fe709b9338f06",
+  "files": [
+    {
+      "path": "code/src/rag_baseline/calculator.py",
+      "working_sha256": "6cefd3d7291507bffe700919d02c7e96fea29d4fe6c9136e8747ee5d5e53abee",
+      "head_blob_sha256": "6cefd3d7291507bffe700919d02c7e96fea29d4fe6c9136e8747ee5d5e53abee"
+    },
+    {
+      "path": "code/src/rag_baseline/calculator_contracts.py",
+      "working_sha256": "dc6f17c31771302877407f8a0b56e1c327e56fd3f00a2085921815d7238c058a",
+      "head_blob_sha256": "dc6f17c31771302877407f8a0b56e1c327e56fd3f00a2085921815d7238c058a"
+    },
+    {
+      "path": "code/src/rag_baseline/conversation_graph.py",
+      "working_sha256": "1411179e07c2fc4f9f51624863ba8829ea550c5d48055d17629fb9486aefc8ba",
+      "head_blob_sha256": "1411179e07c2fc4f9f51624863ba8829ea550c5d48055d17629fb9486aefc8ba"
+    },
+    {
+      "path": "code/src/rag_baseline/conversation_policy.py",
+      "working_sha256": "e3d1488cafdd7acd9162ebdb051c4ed94340a0262b378803817efc8320312915",
+      "head_blob_sha256": "e3d1488cafdd7acd9162ebdb051c4ed94340a0262b378803817efc8320312915"
+    },
+    {
+      "path": "code/src/schema/schema.py",
+      "working_sha256": "105b742e75829392b6acda46840c1abdf7ca9436f8b75e1ac44828f3affb1720",
+      "head_blob_sha256": "38c20ea024c6ee756937ddbdf0d81d86943c1d678b9b8a863c380fd5032782fb"
+    },
+    {
+      "path": "code/src/service/normative_transport.py",
+      "working_sha256": "31a69c23a98a58674787f29c058213ed5f70df9b4ed01936640fbc6734eeebcf",
+      "head_blob_sha256": "31a69c23a98a58674787f29c058213ed5f70df9b4ed01936640fbc6734eeebcf"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_calculator_tool_routing.py",
+      "working_sha256": "f12b687d367df5ba81d1904432eee1f31e596b1c4f1644c0be3a645261b59cfb",
+      "head_blob_sha256": "f12b687d367df5ba81d1904432eee1f31e596b1c4f1644c0be3a645261b59cfb"
+    },
+    {
+      "path": "code/tests/rag_baseline/test_calculator_transport.py",
+      "working_sha256": "0146ce6f6ee98a9ca62beaf57c6381eae8d44b0e628a7d18909e352013b1e81b",
+      "head_blob_sha256": "0146ce6f6ee98a9ca62beaf57c6381eae8d44b0e628a7d18909e352013b1e81b"
+    },
+    {
+      "path": "evaluation/datasets/tool_routing_calculator_v1.json",
+      "working_sha256": "508a4239e5f1ab4fbb450c679f22e767fa924380d7e8628137760976e5aeb6f9",
+      "head_blob_sha256": null
+    },
+    {
+      "path": "evaluation/results/calculator_tool_routing_v1_001/audit_workspace.py",
+      "working_sha256": "aaa1eacc1e71a13434786fc50a9e6afc328af2455ff04a282f681e5391df47d3",
+      "head_blob_sha256": null
+    },
+    {
+      "path": "evaluation/results/calculator_tool_routing_v1_001/finalize_evidence.py",
+      "working_sha256": "baacbf53ec92b409f87f3d3ac0d5d680e43901a27ee532eabbe347318a4188be",
+      "head_blob_sha256": null
+    },
+    {
+      "path": "evaluation/results/calculator_tool_routing_v1_001/freeze_protocol.py",
+      "working_sha256": "5737848d1563dcb1446dd0b2df2a19ec6133538fdc92ed71251d8cc472f7617e",
+      "head_blob_sha256": null
+    },
+    {
+      "path": "evaluation/results/calculator_tool_routing_v1_001/local_probes.py",
+      "working_sha256": "dd1ea49a02388e1f5d7792b2d78a4633b1042e9f39bc78c59cb1a5782eb4dfa2",
+      "head_blob_sha256": null
+    },
+    {
+      "path": "evaluation/results/calculator_tool_routing_v1_001/prepare_evidence.py",
+      "working_sha256": "3198dd06b0fcff51e9206eb0bcf6d1bbafa47daaaa21b38aad7c96e87e581fd3",
+      "head_blob_sha256": null
+    },
+    {
+      "path": "evaluation/results/calculator_tool_routing_v1_001/verify_local.py",
+      "working_sha256": "6a1d9cecae04f97687ae67c90d1189265068f45647c805412a47e210e91af17d",
+      "head_blob_sha256": null
+    }
+  ]
+}

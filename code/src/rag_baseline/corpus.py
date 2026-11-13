@@ -19,7 +19,12 @@ def _optional_text(value: Any) -> str | None:
     return text or None
 
 
-def normalize_chunk(raw: Any, index: int) -> CorpusChunk:
+def normalize_chunk(
+    raw: Any,
+    index: int,
+    *,
+    id_prefix: str = "ufpi-177-2012",
+) -> CorpusChunk:
     if not isinstance(raw, dict):
         raise CorpusError(f"Chunk na posição {index} deve ser um objeto.")
 
@@ -36,12 +41,15 @@ def normalize_chunk(raw: Any, index: int) -> CorpusChunk:
         raise CorpusError(f"Chunk na posição {index} não possui fonte ou número do artigo.")
 
     article_slug = re.sub(r"[^0-9A-Za-z]+", "-", article_number).strip("-")
-    chunk_id = f"ufpi-177-2012-art-{article_slug}-idx-{index:06d}"
+    chunk_id = f"{id_prefix}-art-{article_slug}-idx-{index:06d}"
 
     return CorpusChunk(
         id=chunk_id,
         content=content,
         source=source,
+        sector=_optional_text(metadata.get("setor")),
+        norm_id=_optional_text(metadata.get("norm_id")),
+        normative_status=_optional_text(metadata.get("normative_status")),
         title_number=_optional_text(metadata.get("titulo_numero")),
         title_name=_optional_text(metadata.get("titulo_nome")),
         chapter_number=_optional_text(metadata.get("capitulo_numero")),
@@ -56,7 +64,11 @@ def normalize_chunk(raw: Any, index: int) -> CorpusChunk:
     )
 
 
-def load_corpus(path: str | Path) -> list[CorpusChunk]:
+def load_corpus(
+    path: str | Path,
+    *,
+    id_prefix: str = "ufpi-177-2012",
+) -> list[CorpusChunk]:
     corpus_path = Path(path)
     if not corpus_path.is_file():
         raise CorpusError(f"Arquivo do corpus não encontrado: {corpus_path}")
@@ -71,7 +83,9 @@ def load_corpus(path: str | Path) -> list[CorpusChunk]:
     if not raw_corpus:
         raise CorpusError("O corpus está vazio.")
 
-    return [normalize_chunk(raw, index) for index, raw in enumerate(raw_corpus)]
+    return [
+        normalize_chunk(raw, index, id_prefix=id_prefix) for index, raw in enumerate(raw_corpus)
+    ]
 
 
 def _hierarchy_line(label: str, number: str | None, name: str | None) -> str | None:
@@ -81,8 +95,10 @@ def _hierarchy_line(label: str, number: str | None, name: str | None) -> str | N
     return f"{prefix}: {name}" if name else prefix
 
 
-def build_embedding_text(chunk: CorpusChunk) -> str:
-    lines = [f"Norma: {NORM_NAME}"]
+def build_embedding_text(chunk: CorpusChunk, *, norm_name: str = NORM_NAME) -> str:
+    lines = [f"Norma: {norm_name}"]
+    if chunk.sector is not None:
+        lines.insert(0, f"Setor: {chunk.sector}")
     for line in (
         _hierarchy_line("Título", chunk.title_number, chunk.title_name),
         _hierarchy_line("Capítulo", chunk.chapter_number, chunk.chapter_name),

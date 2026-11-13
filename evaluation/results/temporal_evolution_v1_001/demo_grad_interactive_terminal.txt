@@ -1,0 +1,195 @@
+┌───────────────────────────┐
+│ Assistente Normativo UFPI │
+│ Graduação e Pós-graduação │
+│ Baseline RAG              │
+└───────────────────────────┘
+API: conectada
+Corpus: 507 chunks
+ Status     ok                               
+ Coleção    ufpi_duas_regulacoes_setor       
+ Embedding  openai/text-embedding-3-small    
+ LLM        qwen/qwen3-30b-a3b-instruct-2507 
+
+Digite sua pergunta. Digite "voltar" para trocar o escopo ou "sair" para encerrar.
+Escopo selecionado: automatico (somente recuperação).
+Entrada de demonstração: Qual é a regra vigente do art. 68, §4º da graduação da UFPI para designar o coordenador de 
+estágio em cursos de programas institucionais com docentes selecionados por edital, sem vínculo com a UFPI?
+┌────────────────────────────────────────────────── ROTA AUTOMÁTICA ───────────────────────────────────────────────────┐
+│ Graduação                                                                                                            │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────── Resposta ──────────────────────────────────────────────────────┐
+│ A regra vigente do art. 68, § 4º, da Resolução nº 177/2012 CEPEX/UFPI, com alteração pela Resolução CEPEX/UFPI nº    │
+│ 1.056/2026, para a designação do coordenador de estágio em cursos de programas institucionais com docentes           │
+│ selecionados por edital, sem vínculo com a UFPI, é a seguinte:                                                       │
+│                                                                                                                      │
+│ O coordenador de estágio do curso poderá ser designado dentre os docentes selecionados para atuação no respectivo    │
+│ curso, independentemente de seu vínculo com a UFPI, hipótese em que o coordenador poderá ser designado dentre os     │
+│ docentes selecionados para atuação no respectivo curso, independentemente de seu vínculo com a UFPI, com as          │
+│ atribuições previstas no inciso § 4º do art. 68.                                                                     │
+│                                                                                                                      │
+│ Fonte: Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus), Art. 68, § 4º.    │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+                                                 REFERÊNCIAS UTILIZADAS                                                 
+┌──────┬────────┬───────────┬───────────────────────────────────────────┬──────────────────────────────────┬───────────┐
+│ Rank │ Artigo │ Setor     │ Fonte                                     │ Localização                      │ Distância │
+├──────┼────────┼───────────┼───────────────────────────────────────────┼──────────────────────────────────┼───────────┤
+│    1 │ 1      │ graduacao │ Resolução CEPEX/UFPI nº 1.056/2026        │ —                                │    0.2509 │
+│    2 │ 68     │ graduacao │ Resolução nº 177/2012 CEPEX/UFPI —        │ Cap. IV · Seção IV · Subseção II │    0.2916 │
+│      │        │           │ Regulamento Geral da Graduação            │                                  │           │
+│      │        │           │ (consolidação do corpus)                  │                                  │           │
+│    3 │ 65     │ graduacao │ Resolução nº 177/2012 CEPEX/UFPI —        │ Cap. IV · Seção IV · Subseção I  │    0.2960 │
+│      │        │           │ Regulamento Geral da Graduação            │                                  │           │
+│      │        │           │ (consolidação do corpus)                  │                                  │           │
+│    4 │ 87     │ graduacao │ Resolução nº 177/2012 CEPEX/UFPI —        │ Cap. IV · Seção IV · Subseção IV │    0.3113 │
+│      │        │           │ Regulamento Geral da Graduação            │                                  │           │
+│      │        │           │ (consolidação do corpus)                  │                                  │           │
+│    5 │ 88     │ graduacao │ Resolução nº 177/2012 CEPEX/UFPI —        │ Cap. IV · Seção IV · Subseção IV │    0.3157 │
+│      │        │           │ Regulamento Geral da Graduação            │                                  │           │
+│      │        │           │ (consolidação do corpus)                  │                                  │           │
+└──────┴────────┴───────────┴───────────────────────────────────────────┴──────────────────────────────────┴───────────┘
+┌────────────────────────────────────────────────────── VIGÊNCIA ──────────────────────────────────────────────────────┐
+│ Candidatos: 5                                                                                                        │
+│ Removidos após retrieval: 0                                                                                          │
+│ Normas excluídas antes do top 5: ['ufpi-658-2024']                                                                   │
+│ Contextos faltantes para top 5: 0                                                                                    │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+Exclusão prévia: ufpi-658-2024 · revogada
+Base: Resolução CEPEX/UFPI nº 956/2025, art. 62, VI
+┌───────────────────────────────────────────────── ALTERAÇÃO PARCIAL ──────────────────────────────────────────────────┐
+│ NORMA BASE: ufpi-177-2012                                                                                            │
+│ DISPOSITIVO: Art. 68, §4                                                                                             │
+│ ALTERAÇÃO: ufpi-1056-2026                                                                                            │
+│ PRECEDÊNCIA: Ato alterador prevalece somente no dispositivo indicado.                                                │
+│ CONTEXTO APLICÁVEL: O coordenador de estágio do curso será um docente efetivo escolhido entre os professores         │
+│ orientadores do estágio, cuja designação deverá ser efetivada por portaria da unidade acadêmica à qual o estágio     │
+│ está vinculado, quando o colegiado entender necessária a existência de um coordenador para o conjunto das atividades │
+│ de estágio, ressalvados os cursos ofertados no âmbito de políticas públicas ou programas institucionais de formação  │
+│ superior cuja composição do corpo docente seja realizada mediante processo seletivo disciplinado em edital           │
+│ específico, hipótese em que o coordenador poderá ser designado dentre os docentes selecionados para atuação no       │
+│ respectivo curso, independentemente de seu vínculo com a UFPI, com as atribuições de:                                │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────── Trecho 1 · Art. 1 ──────────────────────────────────────────────────┐
+│ Setor: graduacao                                                                                                     │
+│ Fonte: Resolução CEPEX/UFPI nº 1.056/2026                                                                            │
+│                                                                                                                      │
+│ Art. 1º O Anexo à Resolução CEPEX/UFPI nº 177, de 5 de novembro de 2012, passa a vigorar com as seguintes            │
+│ alterações:                                                                                                          │
+│ fog 0 o                                                                                                              │
+│ RO                                                                                                                   │
+│ $ 4º O coordenador de estágio do curso será um docente efetivo escolhido entre os professores orientadores do        │
+│ estágio, cuja designação deverá ser efetivada por portaria da unidade acadêmica à qual o estágio está vinculado,     │
+│ quando o colegiado entender necessária a existência de um coordenador para o conjunto das atividades de estágio,     │
+│ ressalvados os cursos ofertados no âmbito de políticas públicas ou programas institucionais de formação superior     │
+│ cuja composição do corpo docente seja realizada mediante processo seletivo disciplinado em edital específico,        │
+│ hipótese em que o coordenador poderá ser designado dentre os docentes selecionados para atuação no respectivo curso, │
+│ independentemente de seu vínculo com a UFPI, com as atribuições de:                                                  │
+│ A,                                                                                                                   │
+│ ”" (NR)                                                                                                              │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────── Trecho 2 · Art. 68 ─────────────────────────────────────────────────┐
+│ Setor: graduacao                                                                                                     │
+│ Fonte: Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)                    │
+│ Capítulo: IV — DAS ATIVIDADES ACADÊMICAS ESPECÍFICAS                                                                 │
+│ Seção: IV — Do Estágio Obrigatório                                                                                   │
+│ Subseção: II — Da Organização Administrativa Dos Estágios Curriculares Obrigatórios Dos Cursos De Bacharelado        │
+│                                                                                                                      │
+│ [REDAÇÃO APLICÁVEL: art. 68, § 4, da norma-base ufpi-177-2012; alteração por ufpi-1056-2026, art. 1. Demais          │
+│ dispositivos preservados.]                                                                                           │
+│ **Art. 68. O estágio curricular obrigatório, para a sua regularidade, envolve:**                                     │
+│ 1. I - Coordenadoria de Estágio Obrigatório (CEO/PREG);                                                              │
+│ 2. II - orientador de estágio;                                                                                       │
+│ 3. III - supervisor de campo;                                                                                        │
+│ 4. IV - coordenador de estágio do curso, quando for o caso.                                                          │
+│ > § 1º A Coordenadoria de Estágio Obrigatório (CEO/PREG) tem como atribuições básicas:                               │
+│ > * a) viabilizar as condições necessárias ao desenvolvimento do estágio obrigatório na UFPI;                        │
+│ > * b) propor normas e diretrizes gerais para a operacionalização dos estágios obrigatórios;                         │
+│ > * c) assessorar as coordenações de estágios nos cursos na elaboração e sistematização das programações relativas   │
+│ ao estágio obrigatório, como participar do acompanhamento, controle e avaliação da sua execução;                     │
+│ > * d) providenciar as assinaturas de convênios entre a UFPI e as instituições de campos de estágio;                 │
+│ > * e) organizar e manter atualizado, juntamente com as coordenações de estágio dos cursos, um sistema de            │
+│ documentação e cadastramento dos estágios.                                                                           │
+│ > § 2º O orientador do estágio será um professor do quadro da UFPI responsável pelo acompanhamento                   │
+│ didático-pedagógico do aluno durante a realização desta atividade, com as atribuições de:                            │
+│ > * a) elaborar junto ao coordenador de estágio do curso a programação semestral de estágios obrigatórios;           │
+│ > * b) orientar os alunos na elaboração dos seus planos e relatórios de estágio;                                     │
+│ > * c) acompanhar e orientar a execução das atividades dos estagiários;                                              │
+│ > * d) avaliar o desempenho dos estagiários atribuindo-lhes conceitos expressos sob a forma adotada pela UFPI;       │
+│ > * e) enviar ao coordenador de estágio do curso, ao final de cada período letivo, o relatório correspondente aos    │
+│ estágios obrigatórios dos alunos sob a sua responsabilidade.                                                         │
+│ > § 3º O supervisor de campo será um profissional lotado na unidade de realização do estágio, responsável, nesse     │
+│ local, pelo acompanhamento do aluno durante o desenvolvimento da atividade.                                          │
+│ > § 4º O coordenador de estágio do curso será um docente efetivo escolhido entre os professores orientadores do      │
+│ estágio, cuja designação deverá ser efetivada por portaria da unidade acadêmica à qual o estágio está vinculado,     │
+│ quando o colegiado entender necessária a existência de um coordenador para o conjunto das atividades de estágio,     │
+│ ressalvados os cursos ofertados no âmbito de políticas públicas ou programas institucionais de formação superior     │
+│ cuja composição do corpo docente seja realizada mediante processo seletivo disciplinado em edital específico,        │
+│ hipótese em que o coordenador poderá ser designado dentre os docentes selecionados para atuação no respectivo curso, │
+│ independentemente de seu vínculo com a UFPI, com as atribuições de:                                                  │
+│ > * a) coordenar a elaboração ou adequações de normas ou critérios específicos do estágio do curso, com base neste   │
+│ Regulamento;                                                                                                         │
+│ > * b) informar à Coordenadoria de Estágio Obrigatório (CEO/PREG) os campos de estágio, quando for o caso, tendo em  │
+│ vista a celebração de convênios e termos de compromisso;                                                             │
+│ > * c) fazer, ao final de cada período, levantamento do número de alunos aptos e pretendentes ao estágio, em função  │
+│ da programação semestral;                                                                                            │
+│ > * d) elaborar, a cada semestre, junto com os orientadores de estágio, as programações de estágio obrigatório que   │
+│ serão enviadas à Coordenadoria de Estágio Obrigatório (CEO/PREG) no prazo estabelecido no Calendário Acadêmico;      │
+│ > * e) orientar e encaminhar os alunos ao campo de estágio;                                                          │
+│ > * f) acompanhar o desenvolvimento do estágio, tendo em vista a consecução dos objetivos propostos;                 │
+│ > * g) enviar à Coordenadoria de Estágio Obrigatório (CEO/PREG), ao final de cada período letivo, o relatório        │
+│ correspondente ao estágio obrigatório do curso.                                                                      │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────── Trecho 3 · Art. 65 ─────────────────────────────────────────────────┐
+│ Setor: graduacao                                                                                                     │
+│ Fonte: Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)                    │
+│ Capítulo: IV — DAS ATIVIDADES ACADÊMICAS ESPECÍFICAS                                                                 │
+│ Seção: IV — Do Estágio Obrigatório                                                                                   │
+│ Subseção: I — Das Condições De Realização Do Estágio                                                                 │
+│                                                                                                                      │
+│ **Art. 65. Para a realização de estágio junto a pessoas jurídicas de direito público ou privado faz-se necessária a  │
+│ formalização de convênio, a ser firmado diretamente com a UFPI, mediante assinatura de termo de compromisso com      │
+│ interveniência obrigatória da Coordenadoria de Estágio Obrigatório (CEO/PREG).**                                     │
+│ > Parágrafo único. O termo de compromisso constituirá parte do convênio a ser celebrado entre a UFPI e a parte       │
+│ concedente.                                                                                                          │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────── Trecho 4 · Art. 87 ─────────────────────────────────────────────────┐
+│ Setor: graduacao                                                                                                     │
+│ Fonte: Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)                    │
+│ Capítulo: IV — DAS ATIVIDADES ACADÊMICAS ESPECÍFICAS                                                                 │
+│ Seção: IV — Do Estágio Obrigatório                                                                                   │
+│ Subseção: IV — Dos Estágios Para Alunos Não Vinculados à UFPI                                                        │
+│                                                                                                                      │
+│ **Art. 87. É permitida a matrícula de alunos não vinculados à UFPI em estágios mantidos por esta instituição, desde  │
+│ que exista vaga, após a conclusão do ajuste de matrícula, respeitando o limite máximo de 5 (cinco) alunos por        │
+│ período para o estágio, mediante processo seletivo, divulgado por edital específico para alunos de curso de          │
+│ graduação de outras IES e, quando for o caso, de acordo com as resoluções que regulamentam o Internato do curso de   │
+│ Medicina.**                                                                                                          │
+│ > § 1º O peticionário deverá efetivar a solicitação junto ao Setor de Protocolo da UFPI, dirigido à Coordenadoria de │
+│ Estágio Obrigatório (CEO/PREG), em prazo previsto no Calendário Acadêmico.                                           │
+│ > § 2º Na abertura do processo, deverão constar: autorização da instituição de origem do aluno com o aceite das      │
+│ normas da UFPI, descritas nesse documento, histórico escolar recente autenticado pela IES de origem e currículo      │
+│ Lattes devidamente comprovado.                                                                                       │
+│ > § 3º No processo seletivo, serão pontuados e somados:                                                              │
+│ > * a) 5 (cinco) pontos para alunos oriundos de instituições federais, 3 (três) pontos para alunos oriundos de       │
+│ instituições estaduais e 1 (um) ponto para alunos oriundos de instituições privadas;                                 │
+│ > * b) o coeficiente de rendimento acadêmico;                                                                        │
+│ > * c) 5 (cinco) pontos por programa pela participação em programas de iniciação científica;                         │
+│ > * d) 5 (cinco) pontos por período pela participação em monitoria com carga horária mínima de 60 (sessenta) horas.  │
+│ > § 4º A matrícula no componente curricular de que trata este artigo não vincula o interessado a um curso específico │
+│ da UFPI, nem confere o direito à matrícula em outro componente, além do estágio expressamente autorizado.            │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────── Trecho 5 · Art. 88 ─────────────────────────────────────────────────┐
+│ Setor: graduacao                                                                                                     │
+│ Fonte: Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)                    │
+│ Capítulo: IV — DAS ATIVIDADES ACADÊMICAS ESPECÍFICAS                                                                 │
+│ Seção: IV — Do Estágio Obrigatório                                                                                   │
+│ Subseção: IV — Dos Estágios Para Alunos Não Vinculados à UFPI                                                        │
+│                                                                                                                      │
+│ **Art. 88. São compromissos da instituição de origem:**                                                              │
+│ 1. I - atestar a regularidade da situação acadêmica dos candidatos aptos ao estágio;                                 │
+│ 2. II - conceder o equivalente a 75% (setenta e cinco por cento) do valor da mensalidade do aluno estagiário para o  │
+│ custeio das despesas necessárias à realização do estágio, exceto alunos advindos de IES públicas.                    │
+│ > Parágrafo único. Este valor deverá ser depositado em favor da UFPI através de Guia de Recolhimento da União (GRU). │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+Tempo: 5.4 s · LLM: qwen/qwen3-30b-a3b-instruct-2507 · Embedding: openai/text-embedding-3-small
+Escopo selecionado: automatico (somente recuperação).
+Entrada de demonstração: sair

@@ -1,0 +1,25 @@
+{
+  "algorithm": "sha256",
+  "excludes": [
+    "ARTIFACTS.json"
+  ],
+  "files": {
+    "annotation_protocol.json": "c870d27c584ab4fcdf7fce846b6b7952a7e80068770379b99712c84b7cdb8992",
+    "annotations.jsonl": "742c6280ec0e873134a4b7bb8ec85f44e82b3370b97a88504a92a47541d2b23b",
+    "comparison.json": "5e6ad2f1d01f2f882c42618df2efccff374cd2688bf22aaf1af3a35eeb7061a0",
+    "execution.json": "d369789bc420656a31c459677bdd3838bab8119ded3ee8b6ff08b68932947ff6",
+    "final_outputs.jsonl": "49aaa507d39ee4ba4dd37c58822dd20c89cc9b70c5dc81c66501ff91bf6c916e",
+    "guard_results.jsonl": "9201eb2b802bd2adfb5fc58c99a90c2b9e7f19ace7520f7f95a3f0b93f00d4c4",
+    "historical_reannotations.jsonl": "193c56965f1f3b9a926839c12419de9854b28eca33325df6a940731832bc1c57",
+    "manifest.json": "8990f73fa9abd66538d7d9f612534ff3459ea2c2f232fa335c8daab26dd6de74",
+    "offline_replays.jsonl": "b2b7ca41656d9743d6f4cd029c62d6051f4cf951ab2edaea771b845c08529538",
+    "preservation.json": "5f0a2f612757fdea67e93d984cf3f7b62bcc69f619935c5986c148077ea84c2a",
+    "preservation_before.json": "165e3ea10f7eec10f3e85def4025ca35834d082f12e701bc61ca394c63434acb",
+    "raw_generations.jsonl": "bc7478b4a425135c81f42dddf5f4fc7e390ec1e6917efd065d4daa2d5769a7d5",
+    "REPORT.md": "16b0f03f8c500214f35532c8a26c7e3dd2af304b5c8c14f3a3684451138b0089",
+    "reproductions.json": "3ee5eec588b0db64cfe53849ca355393803d87366abd9cfe51addae97fed159b",
+    "summary.json": "1e39c20c2713415c976ac4427374b074f7b52b9c4725ad377d096942f0c2423a",
+    "tdd.json": "1f7b46be0d34de674ceac011c7d2284018200b84e51ba9069a140e364da39966",
+    "verification.json": "fd0b8fa2cfe98e462e8e5bdb774f8218efa91596d85211e97e464a837836be9c"
+  }
+}

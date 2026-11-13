@@ -1,0 +1,24 @@
+{"recorded_at": "2026-11-01T22:14:58.716183+00:00", "decision_id": "D01", "decision": "Audit Git first; branch created from exact clean HEAD7299751."}
+{"recorded_at": "2026-11-01T22:14:58.716183+00:00", "decision_id": "D02", "decision": "Hash all1291 original tracked working files and logically snapshot507 records before edits."}
+{"recorded_at": "2026-11-01T22:14:58.716183+00:00", "decision_id": "D03", "decision": "Trace raw body,structured answer,tool result,ChatMessage and AppTest before correction."}
+{"recorded_at": "2026-11-01T22:14:58.716183+00:00", "decision_id": "D04", "decision": "compose_answer introduced textual Fontes deterministically; keep references as typed source of truth."}
+{"recorded_at": "2026-11-01T22:14:58.716183+00:00", "decision_id": "D05", "decision": "Enforce generation boundary with explicit instruction and minimal existing guard; no UI text parsing."}
+{"recorded_at": "2026-11-01T22:14:58.716183+00:00", "decision_id": "D06", "decision": "Preserve one regeneration and existing fallback, including legitimate inline norm mentions."}
+{"recorded_at": "2026-11-01T22:14:58.716183+00:00", "decision_id": "D07", "decision": "References are projected final eligible context before generation; not per-claim support attribution."}
+{"recorded_at": "2026-11-01T22:14:58.716183+00:00", "decision_id": "D08", "decision": "Use label Trechos normativos recuperados and existing public structured fields."}
+{"recorded_at": "2026-11-01T22:14:58.716183+00:00", "decision_id": "D09", "decision": "Add optional strict evidence_text copied exactly from final eligible chunk content; no LLM summary/frontend lookup."}
+{"recorded_at": "2026-11-01T22:14:58.716183+00:00", "decision_id": "D10", "decision": "Keep legacy evidence without text valid and show explicit unavailable-text caption."}
+{"recorded_at": "2026-11-01T22:14:58.716183+00:00", "decision_id": "D11", "decision": "Canonicalize na/da/pela/para a pós only for Router input; preserve original storage/retrieval question."}
+{"recorded_at": "2026-11-01T22:14:58.716183+00:00", "decision_id": "D12", "decision": "Do not expand temporal pós-alteração/pós-2025; keep ambiguous/both behavior and RouterV2 untouched."}
+{"recorded_at": "2026-11-01T22:14:58.716183+00:00", "decision_id": "D13", "decision": "Fix cause of wrong pending; no speculative new policy for subsequent contradictory graduação."}
+{"recorded_at": "2026-11-01T22:14:58.716183+00:00", "decision_id": "D14", "decision": "Update controlled fixture routing keys and obsolete textual-source expectations, without modifying retrieval."}
+{"recorded_at": "2026-11-01T22:14:58.716183+00:00", "decision_id": "D15", "decision": "Extend guard only after review RED for Unicode bullet,qualified heading and wrapped list items."}
+{"recorded_at": "2026-11-01T22:14:58.716183+00:00", "decision_id": "D16", "decision": "Run controlled local HTTP/UI against current507 records; no normative quality claim from fixed embeddings."}
+{"recorded_at": "2026-11-01T22:14:58.716183+00:00", "decision_id": "D17", "decision": "Keep real-provider operational diagnostics separate; preserve baseline success and later errors honestly."}
+{"recorded_at": "2026-11-01T22:14:58.716183+00:00", "decision_id": "D18", "decision": "Inspect actual canonical Router input/output when manual result differs from controlled replay."}
+{"recorded_at": "2026-11-01T22:14:58.716183+00:00", "decision_id": "D19", "decision": "Normalization alone insufficient: real model requests lato/stricto; section51 permits V1 change with specificRED."}
+{"recorded_at": "2026-11-01T22:14:58.716183+00:00", "decision_id": "D20", "decision": "Add prompt-contract RED,then only2policy lines+1example; preserve Router algorithm/schema. No V2 tuning."}
+{"recorded_at": "2026-11-01T22:14:58.716183+00:00", "decision_id": "D21", "decision": "Transfer manual script as UTF8 file rather than native pipe; preserve malformed-attempt evidence."}
+{"recorded_at": "2026-11-01T22:14:58.716183+00:00", "decision_id": "D22", "decision": "Repeat full regression after actual prompt change and four final smokes once; no selective answer-quality tuning."}
+{"recorded_at": "2026-11-01T22:14:58.716183+00:00", "decision_id": "D23", "decision": "Leave two loopback containers running; no freeze/deploy/publication."}
+{"recorded_at": "2026-11-01T22:14:58.716183+00:00", "decision_id": "D24", "decision": "Use scoped evidence attributes to preserve capture bytes; no previous-file normalization."}

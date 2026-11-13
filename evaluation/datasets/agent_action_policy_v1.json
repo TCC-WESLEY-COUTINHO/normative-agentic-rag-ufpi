@@ -1,0 +1,170 @@
+[
+  {
+    "id": "ACTION-001",
+    "message": "Oi",
+    "expected_action": "DIRECT",
+    "purpose": "safe_social",
+    "notes": "Fixture operacional explícita; não é gold jurídico nem benchmark científico."
+  },
+  {
+    "id": "ACTION-002",
+    "message": "Bom dia",
+    "expected_action": "DIRECT",
+    "purpose": "safe_social",
+    "notes": "Fixture operacional explícita; não é gold jurídico nem benchmark científico."
+  },
+  {
+    "id": "ACTION-003",
+    "message": "Obrigado",
+    "expected_action": "DIRECT",
+    "purpose": "safe_social",
+    "notes": "Fixture operacional explícita; não é gold jurídico nem benchmark científico."
+  },
+  {
+    "id": "ACTION-004",
+    "message": "Obrigada.",
+    "expected_action": "DIRECT",
+    "purpose": "safe_social",
+    "notes": "Fixture operacional explícita; não é gold jurídico nem benchmark científico."
+  },
+  {
+    "id": "ACTION-005",
+    "message": "Entendi",
+    "expected_action": "DIRECT",
+    "purpose": "safe_social",
+    "notes": "Fixture operacional explícita; não é gold jurídico nem benchmark científico."
+  },
+  {
+    "id": "ACTION-006",
+    "message": "Até mais",
+    "expected_action": "DIRECT",
+    "purpose": "safe_social",
+    "notes": "Fixture operacional explícita; não é gold jurídico nem benchmark científico."
+  },
+  {
+    "id": "ACTION-007",
+    "message": "Oi, posso cancelar uma disciplina?",
+    "expected_action": "NORMATIVE_RAG",
+    "purpose": "social_plus_normative",
+    "notes": "Fixture operacional explícita; não é gold jurídico nem benchmark científico."
+  },
+  {
+    "id": "ACTION-008",
+    "message": "Obrigado, mas posso cancelar a disciplina?",
+    "expected_action": "NORMATIVE_RAG",
+    "purpose": "social_plus_normative",
+    "notes": "Fixture operacional explícita; não é gold jurídico nem benchmark científico."
+  },
+  {
+    "id": "ACTION-009",
+    "message": "Bom dia, qual é o prazo?",
+    "expected_action": "NORMATIVE_RAG",
+    "purpose": "social_plus_normative",
+    "notes": "Fixture operacional explícita; não é gold jurídico nem benchmark científico."
+  },
+  {
+    "id": "ACTION-010",
+    "message": "Entendi\nPosso trancar a matrícula?",
+    "expected_action": "NORMATIVE_RAG",
+    "purpose": "social_plus_normative",
+    "notes": "Fixture operacional explícita; não é gold jurídico nem benchmark científico."
+  },
+  {
+    "id": "ACTION-011",
+    "message": "Até mais; o que diz o art. 68?",
+    "expected_action": "NORMATIVE_RAG",
+    "purpose": "social_plus_normative",
+    "notes": "Fixture operacional explícita; não é gold jurídico nem benchmark científico."
+  },
+  {
+    "id": "ACTION-012",
+    "message": "Oi​Posso cancelar?",
+    "expected_action": "NORMATIVE_RAG",
+    "purpose": "social_plus_normative",
+    "notes": "Fixture operacional explícita; não é gold jurídico nem benchmark científico."
+  },
+  {
+    "id": "ACTION-013",
+    "message": "Posso cancelar uma disciplina?",
+    "expected_action": "NORMATIVE_RAG",
+    "purpose": "normative_conceptual",
+    "notes": "Fixture operacional explícita; não é gold jurídico nem benchmark científico."
+  },
+  {
+    "id": "ACTION-014",
+    "message": "Como funciona a matrícula na graduação?",
+    "expected_action": "NORMATIVE_RAG",
+    "purpose": "normative_conceptual",
+    "notes": "Fixture operacional explícita; não é gold jurídico nem benchmark científico."
+  },
+  {
+    "id": "ACTION-015",
+    "message": "Quais as regras de trancamento na pós?",
+    "expected_action": "NORMATIVE_RAG",
+    "purpose": "normative_conceptual",
+    "notes": "Fixture operacional explícita; não é gold jurídico nem benchmark científico."
+  },
+  {
+    "id": "ACTION-016",
+    "message": "A norma anterior continua vigente?",
+    "expected_action": "NORMATIVE_RAG",
+    "purpose": "normative_conceptual",
+    "notes": "Fixture operacional explícita; não é gold jurídico nem benchmark científico."
+  },
+  {
+    "id": "ACTION-017",
+    "message": "O que diz o art. 68 da 177/2012?",
+    "expected_action": "NORMATIVE_RAG",
+    "purpose": "explicit_article",
+    "notes": "Fixture operacional explícita; não é gold jurídico nem benchmark científico."
+  },
+  {
+    "id": "ACTION-018",
+    "message": "Artigo 53 da Resolução 956/2025",
+    "expected_action": "NORMATIVE_RAG",
+    "purpose": "explicit_article",
+    "notes": "Fixture operacional explícita; não é gold jurídico nem benchmark científico."
+  },
+  {
+    "id": "ACTION-019",
+    "message": "E na pós?",
+    "expected_action": "NORMATIVE_RAG",
+    "purpose": "follow_up_without_memory",
+    "notes": "Fixture operacional explícita; não é gold jurídico nem benchmark científico."
+  },
+  {
+    "id": "ACTION-020",
+    "message": "Explique melhor",
+    "expected_action": "NORMATIVE_RAG",
+    "purpose": "follow_up_without_memory",
+    "notes": "Fixture operacional explícita; não é gold jurídico nem benchmark científico."
+  },
+  {
+    "id": "ACTION-021",
+    "message": "Explique isso de forma mais simples",
+    "expected_action": "NORMATIVE_RAG",
+    "purpose": "follow_up_without_memory",
+    "notes": "Fixture operacional explícita; não é gold jurídico nem benchmark científico."
+  },
+  {
+    "id": "ACTION-022",
+    "message": "10 dias a partir de amanhã",
+    "expected_action": "NORMATIVE_RAG",
+    "purpose": "calculator_not_supported",
+    "notes": "Fixture operacional explícita; não é gold jurídico nem benchmark científico."
+  },
+  {
+    "id": "ACTION-023",
+    "message": "2+2",
+    "expected_action": "NORMATIVE_RAG",
+    "purpose": "calculator_not_supported",
+    "notes": "Fixture operacional explícita; não é gold jurídico nem benchmark científico."
+  },
+  {
+    "id": "ACTION-024",
+    "message": "Como vai?",
+    "expected_action": "NORMATIVE_RAG",
+    "purpose": "outside_social_allowlist",
+    "notes": "Fixture operacional explícita; não é gold jurídico nem benchmark científico."
+  }
+]

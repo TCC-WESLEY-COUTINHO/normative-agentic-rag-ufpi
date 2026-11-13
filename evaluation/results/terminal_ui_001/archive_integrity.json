@@ -1,0 +1,36 @@
+{
+  "kind": "raw_response_archive_integrity",
+  "git_attributes": "-text whitespace=cr-at-eol; original Windows CRLF bytes retained",
+  "files": [
+    {
+      "file": "grad_ambos.jsonl",
+      "sha256": "267cb8a662772faed0f857bba1a5795a165163aca55551a063fcab253a471809",
+      "git_blob": "8d0c684be5d51f0561c588991ddec5dacbf068f2",
+      "raw_bytes_preserved": true
+    },
+    {
+      "file": "grad_grad.jsonl",
+      "sha256": "f96ead1a6631f9771c8842cfa2d4b88c74c7797790de5280dfd236f4251feb24",
+      "git_blob": "499f052f04fa4dbd19f9439304dad3aa790dbbc9",
+      "raw_bytes_preserved": true
+    },
+    {
+      "file": "interactive.jsonl",
+      "sha256": "d1679cad70e316392d48b5ed37f0829842477a67ebd7b84705f3475ea2b64d06",
+      "git_blob": "0717e0ac5e5359277df39bbcd7e64f7c1ab94d92",
+      "raw_bytes_preserved": true
+    },
+    {
+      "file": "pos_ambos.jsonl",
+      "sha256": "38eb418b5b53991225e70134d60b027f8b4ab1a5cdbfc89e258f31872698bf61",
+      "git_blob": "78e4cc5258355f3c3c569d8b697f8f5daab8c800",
+      "raw_bytes_preserved": true
+    },
+    {
+      "file": "pos_pos.jsonl",
+      "sha256": "70331232b0057f16919943be426ff1c7ed6bb30b96a840f962df4fcfdaa6f42b",
+      "git_blob": "c54e2d214be7b34ff71bc8302bbe6c3f35401fce",
+      "raw_bytes_preserved": true
+    }
+  ]
+}

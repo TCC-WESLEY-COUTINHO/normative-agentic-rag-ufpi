@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-10-31T16:45:46.368215+00:00",
+  "commands": {
+    "status --short": "",
+    "branch --show-current": "feat/normative-tool-facade-v1\n",
+    "rev-parse HEAD": "367e27f9d395aa8de75d17ffa433d718184630b6\n",
+    "log -15 --oneline --decorate": "367e27f (HEAD -> feat/normative-tool-facade-v1) test: verify normative facade integration contracts\nd3c5cc8 feat: add normative rag facade\n986f421 test: define normative tool contract boundaries\n61d2bc0 (audit/agentic-conversational-integration-v1) audit: map legacy agentic infrastructure for v2 integration\n34c42c7 (fix/structured-normative-output-v2) fix: preserve structured v2 artifact bytes\n7736f89 experiment: evaluate structured normative output v2\nea255c8 fix: separate content locators from display references\nf250386 test: capture structured output v2 policy gaps\n98c1c2d (fix/structured-normative-output-v1) experiment: evaluate structured normative output\n5a4cdb4 fix: render normative references and temporal claims structurally\n35398e8 test: capture unsafe normative output exposure\n6aa833d (fix/temporal-generation-grounding-v1) experiment: evaluate temporal generation consistency\nfd3caa6 fix: propagate temporal provenance to generation\na1062a1 test: capture temporal generation grounding failures\n365d28a (fix/agentic-temporal-hardening-v1) experiment: validate agentic temporal pipeline\n",
+    "diff": "",
+    "diff --cached": "",
+    "diff --stat": ""
+  },
+  "work_branch": "feat/retrieval-strategies-v1"
+}

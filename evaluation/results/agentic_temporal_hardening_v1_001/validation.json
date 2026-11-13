@@ -1,0 +1,16 @@
+{
+  "all_json_and_jsonl_parsed": true,
+  "normal_pytest_provider_calls": false,
+  "protected_files": 238,
+  "index_count": 507,
+  "reanalysis_raw_evidence_unchanged": true,
+  "secret_matches": 0,
+  "independent_review_final_blockers": 0,
+  "verification_file": "verification_after_review.json",
+  "official_analysis_directories": {
+    "controlled": "controlled_analysis_002",
+    "automatic": "smoke_analysis_002",
+    "manual": "smoke_manual_analysis_001"
+  },
+  "git_diff_check_exit_code": 0
+}

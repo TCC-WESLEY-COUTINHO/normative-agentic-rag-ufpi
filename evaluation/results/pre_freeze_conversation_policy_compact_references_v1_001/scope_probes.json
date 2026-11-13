@@ -1,0 +1,1655 @@
+{
+  "kind": "Technical pre-freeze smoke; no legal correctness scoring",
+  "started_at": "2026-11-02T04:21:51.314914+00:00",
+  "probes": [
+    {
+      "question": "quem é você?",
+      "expected_action": "ABOUT_ASSISTANT",
+      "observed_action": "ABOUT_ASSISTANT",
+      "router_calls": 0,
+      "retrieval_calls": 0,
+      "provider_calls": 0,
+      "provider_endpoints": [],
+      "router_inputs": [],
+      "pending_before": null,
+      "pending_after": null,
+      "correlation": "",
+      "correlation_changed": null,
+      "final_message": {
+        "type": "ai",
+        "content": "Sou um assistente especializado em normas acadêmicas da UFPI. Posso ajudar com dúvidas sobre matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação com base nas normas indexadas no sistema.",
+        "normative_result": null,
+        "grounded_followup_result": null,
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": null,
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "normative_status": null,
+      "core_status": null,
+      "scope_decision": null,
+      "scope_status": null,
+      "scope_provider_calls": 0,
+      "normative_provider_calls": 0,
+      "scope_gate_latency_ms": 0.0,
+      "router_latency_ms": 0,
+      "total_pre_retrieval_latency_ms": 0.0
+    },
+    {
+      "question": "o que você faz?",
+      "expected_action": "ABOUT_ASSISTANT",
+      "observed_action": "ABOUT_ASSISTANT",
+      "router_calls": 0,
+      "retrieval_calls": 0,
+      "provider_calls": 0,
+      "provider_endpoints": [],
+      "router_inputs": [],
+      "pending_before": null,
+      "pending_after": null,
+      "correlation": "",
+      "correlation_changed": null,
+      "final_message": {
+        "type": "ai",
+        "content": "Sou um assistente especializado em normas acadêmicas da UFPI. Posso ajudar com dúvidas sobre matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação com base nas normas indexadas no sistema.",
+        "normative_result": null,
+        "grounded_followup_result": null,
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": null,
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "normative_status": null,
+      "core_status": null,
+      "scope_decision": null,
+      "scope_status": null,
+      "scope_provider_calls": 0,
+      "normative_provider_calls": 0,
+      "scope_gate_latency_ms": 0.0,
+      "router_latency_ms": 0,
+      "total_pre_retrieval_latency_ms": 0.0
+    },
+    {
+      "question": "quantos anos tem a cidade mais antiga do piauí?",
+      "expected_action": "OUT_OF_SCOPE",
+      "observed_action": "OUT_OF_SCOPE",
+      "router_calls": 0,
+      "retrieval_calls": 0,
+      "provider_calls": 1,
+      "provider_endpoints": [
+        {
+          "endpoint": "/chat/completions",
+          "role": "scope",
+          "finished": 23989.961252094
+        }
+      ],
+      "router_inputs": [],
+      "pending_before": null,
+      "pending_after": null,
+      "correlation": "",
+      "correlation_changed": null,
+      "final_message": {
+        "type": "ai",
+        "content": "Posso ajudar com dúvidas sobre normas acadêmicas da UFPI, como matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação.",
+        "normative_result": null,
+        "grounded_followup_result": null,
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": null,
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "normative_status": null,
+      "core_status": null,
+      "scope_decision": "OUT_OF_SCOPE",
+      "scope_status": "classified",
+      "scope_provider_calls": 1,
+      "normative_provider_calls": 0,
+      "scope_gate_latency_ms": 3460.6066300002567,
+      "router_latency_ms": 0,
+      "total_pre_retrieval_latency_ms": 3462.3130549989583
+    },
+    {
+      "question": "qual o cardápio do RU?",
+      "expected_action": "OUT_OF_SCOPE",
+      "observed_action": "OUT_OF_SCOPE",
+      "router_calls": 0,
+      "retrieval_calls": 0,
+      "provider_calls": 1,
+      "provider_endpoints": [
+        {
+          "endpoint": "/chat/completions",
+          "role": "scope",
+          "finished": 23991.035841402
+        }
+      ],
+      "router_inputs": [],
+      "pending_before": null,
+      "pending_after": null,
+      "correlation": "",
+      "correlation_changed": null,
+      "final_message": {
+        "type": "ai",
+        "content": "Posso ajudar com dúvidas sobre normas acadêmicas da UFPI, como matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação.",
+        "normative_result": null,
+        "grounded_followup_result": null,
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": null,
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "normative_status": null,
+      "core_status": null,
+      "scope_decision": "OUT_OF_SCOPE",
+      "scope_status": "classified",
+      "scope_provider_calls": 1,
+      "normative_provider_calls": 0,
+      "scope_gate_latency_ms": 1072.2600610024529,
+      "router_latency_ms": 0,
+      "total_pre_retrieval_latency_ms": 1073.5381820013572
+    },
+    {
+      "question": "posso trancar uma disciplina?",
+      "expected_action": "NORMATIVE_RAG",
+      "observed_action": "NORMATIVE_RAG",
+      "router_calls": 1,
+      "retrieval_calls": 0,
+      "provider_calls": 2,
+      "provider_endpoints": [
+        {
+          "endpoint": "/chat/completions",
+          "role": "scope",
+          "finished": 23994.980073424
+        },
+        {
+          "endpoint": "/chat/completions",
+          "role": "normative",
+          "finished": 23995.907959589
+        }
+      ],
+      "router_inputs": [
+        {
+          "question": "posso trancar uma disciplina?",
+          "clarification": null,
+          "latency_ms": 921.6770219973114,
+          "finished": 23995.908064495,
+          "decision": {
+            "scope": null,
+            "needs_clarification": true,
+            "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+            "reason_code": "ambiguous_academic_level"
+          }
+        }
+      ],
+      "pending_before": null,
+      "pending_after": {
+        "original_question": "posso trancar uma disciplina?",
+        "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "correlation_id": "3f1d8dbe-3367-420d-a22f-707f599d7eb0",
+        "compatibility_stamp": {
+          "memory_version": "1",
+          "core_version": "structured_output_v2",
+          "contract_version": "1",
+          "corpus_fingerprint": "ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a",
+          "registry_fingerprint": "fbd017d0f080481bb0f89e6809b48a87317d8fc97909e7ec2d40f8240bff25ef"
+        }
+      },
+      "correlation": "3f1d8dbe-3367-420d-a22f-707f599d7eb0",
+      "correlation_changed": null,
+      "final_message": {
+        "type": "ai",
+        "content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_result": {
+          "contract_version": "1",
+          "core_version": "structured_output_v2",
+          "status": "CLARIFICATION",
+          "answer": null,
+          "references": [],
+          "temporal_provenance": null,
+          "temporal_status_text": null,
+          "allowed_temporal_facts": null,
+          "core_status": null,
+          "domain": null,
+          "retrieval_strategy": "dense_vector",
+          "needs_clarification": true,
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "3f1d8dbe-3367-420d-a22f-707f599d7eb0",
+          "error_code": null,
+          "safe_message": null
+        },
+        "grounded_followup_result": null,
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": null,
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "normative_status": "CLARIFICATION",
+      "core_status": null,
+      "scope_decision": "IN_SCOPE_NORMATIVE",
+      "scope_status": "classified",
+      "scope_provider_calls": 1,
+      "normative_provider_calls": 1,
+      "scope_gate_latency_ms": 3941.6362199990544,
+      "router_latency_ms": 921.6770219973114,
+      "total_pre_retrieval_latency_ms": 4871.034391999274
+    },
+    {
+      "question": "Quanto tempo tenho para terminar o mestrado?",
+      "expected_action": "NORMATIVE_RAG",
+      "observed_action": "NORMATIVE_RAG",
+      "router_calls": 1,
+      "retrieval_calls": 1,
+      "provider_calls": 4,
+      "provider_endpoints": [
+        {
+          "endpoint": "/chat/completions",
+          "role": "scope",
+          "finished": 23996.943678829
+        },
+        {
+          "endpoint": "/chat/completions",
+          "role": "normative",
+          "finished": 23998.040628047
+        },
+        {
+          "endpoint": "/embeddings",
+          "role": "normative",
+          "finished": 23999.247710211
+        },
+        {
+          "endpoint": "/chat/completions",
+          "role": "normative",
+          "finished": 24000.345722755
+        }
+      ],
+      "router_inputs": [
+        {
+          "question": "Quanto tempo tenho para terminar o mestrado?",
+          "clarification": null,
+          "latency_ms": 1091.0615859975223,
+          "finished": 23998.04066767,
+          "decision": {
+            "scope": "pos_graduacao",
+            "needs_clarification": false,
+            "clarification_question": null,
+            "reason_code": "explicit_pos"
+          }
+        }
+      ],
+      "pending_before": null,
+      "pending_after": null,
+      "correlation": "4b3eef54-219b-45dc-8486-8aad541648c6",
+      "correlation_changed": null,
+      "final_message": {
+        "type": "ai",
+        "content": "Com base nas normas indexadas no sistema:\n\nO tempo para concluir o mestrado, conforme estabelecido pela Resolução 956/2025, art. 3, é de duração mínima de doze meses e máxima de vinte e quatro meses. É permitida a prorrogação por até seis meses, desde que aprovada pelo Colegiado Simples.",
+        "normative_result": {
+          "contract_version": "1",
+          "core_version": "structured_output_v2",
+          "status": "ANSWER",
+          "answer": "Com base nas normas indexadas no sistema:\n\nO tempo para concluir o mestrado, conforme estabelecido pela Resolução 956/2025, art. 3, é de duração mínima de doze meses e máxima de vinte e quatro meses. É permitida a prorrogação por até seis meses, desde que aprovada pelo Colegiado Simples.",
+          "references": [
+            {
+              "chunk_id": "ufpi-956-2025-art-3-idx-000002",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "3",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 3",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 3º O Mestrado, Acadêmico ou Profissional, requer o cumprimento dos seguintes requisitos:\n- | -duração mínima de doze e máxima de vinte e quatro meses, permitida a prorrogação por até seis meses, mediante aprovação do Colegiado Simples.\n- Il -aprovação em exame de proficiência em uma língua estrangeira;\n- Ill -integralização curricular de, no mínimo, trinta créditos, dos quais seis são relativos à dissertação, observada a distribuição entre disciplinas obrigatórias, optativas e atividades complementares, definida no Regimento Interno do PPG;\n- IV -realização do Estágio Docência, nos termos definidos nesta Resolução;\n- V -realização de Exame de Qualificação, quando previsto no Regimento Interno do PPG; e\n- VI -apresentação oral e defesa de Dissertação.\n- $ 1º O Regimento Interno do PPG pode estabelecer durações específicas, desde que respeitados os limites do inciso |.\n- $ 2º Caso o PPG opte pela realização do Exame de Qualificação (inciso V), seu Regimento Interno deverá detalhar os procedimentos, prazos e modalidades de avaliação.\n- S$ 3º A defesa da Dissertação (inciso VI) somente ocorrerá após a integralização total dos créditos em disciplinas e atividades complementares.\n- $ 4º É permitido o aproveitamento de créditos cursados em outros Programas da UFPI ou em outra Instituição de Ensino Superior -IES, desde que em áreas afins e de interesse para a dissertação, mediante aprovação do Colegiado Simples.\n- $ 5º Cada PPG poderá estabelecer requisitos adicionais, em seu Regimento Interno, para a obtenção do título de mestre."
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-4-idx-000003",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "4",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 4",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 4º O Doutorado, Acadêmico ou Profissional, requer o cumprimento dos seguintes requisitos:\n- | -duração mínima de vinte e quatro e máxima de quarenta e oito meses, permitida a prorrogação por até doze meses, mediante aprovação do Colegiado Simples;\n- Il -aprovação em exame de proficiência em, pelo menos, uma língua estrangeira;\n- Ill -integralização curricular de, no mínimo, quarenta e oito créditos, dos quais doze são relativos à tese, observada a distribuição entre disciplinas obrigatórias, optativas e atividades complementares definida no Regimento Interno do PPG;\n- IV -realização do Estágio Docência, nos termos definidos nesta Resolução;\n- V -realização de, no mínimo, um Exame de Qualificação; e\n- VI -apresentação oral e defesa de Tese.\n- $ 1º O Regimento Interno do PPG pode estabelecer durações específicas, desde que respeitados os limites do inciso |.\n- S$ 2º O Regimento Interno do PPG deverá detalhar os procedimentos, prazos e modalidades do Exame de Qualificação (inciso V), podendo prever a realização de exames adicionais.\n- S$ 3º A defesa da Tese (inciso VI) somente ocorrerá após a integralização total dos créditos em disciplinas e atividades complementares.\n\n- $ 4º O Regimento Interno do PPG pode prever o aproveitamento de créditos obtidos no Mestrado, definindo os critérios e limites.\n- 8 5º É permitido o aproveitamento de créditos cursados em outros Programas da UFPI ou em outras IES reconhecidas, desde que em áreas afins e de interesse para a tese, mediante aprovação do Colegiado Simples.\n- $ 6º Cada PPG poderá estabelecer requisitos adicionais, em seu Regimento Interno, para a obtenção do título de doutor."
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-28-idx-000027",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "28",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 28",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 28. Fica permitida a promoção direta do Mestrado ao Doutorado, sem a defesa de Dissertação, quando o(a) discente atender, cumulativamente, às seguintes condições de excepcionalidade:\n8. | -estar cursando o terceiro semestre do Mestrado;\n9. Il -ter concluído os créditos de disciplinas do Mestrado com desempenho excepcional;\n10. Ill -ter publicado artigos científicos, bibliográficos, tecnológicos ou artísticos, ou registro de patentes originados de seu projeto de dissertação; e\n11. IV -ser aprovado em exame de defesa do seu projeto de tese.\n12. Parágrafo único. O Regimento Interno do PPG detalha os critérios de excepcionalidade (Inciso ll), os requisitos de produção (Inciso Ill) e os procedimentos do exame de defesa (Inciso IV)."
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-35-idx-000033",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "35",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 35",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 35. O candidato que, no ato da matrícula institucional (Art. 33), ainda não possuir o documento de conclusão (diploma ou certidão), terá o prazo improrrogável de sessenta dias, a contar do prazo final da matrícula institucional, para apresentar o documento de integralização curricular (Graduação) ou o comprovante de defesa (Mestrado). O não cumprimento do prazo estipulado implica no cancelamento automático da matrícula."
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-52-idx-000050",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "52",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 52",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 52. Os documentos da Dissertação ou Tese devem ser entregues pelo(a) orientador(a) à Coordenação, no mínimo trinta dias antes da data proposta para a defesa."
+            }
+          ],
+          "temporal_provenance": {
+            "temporal_intent": "indeterminate",
+            "requested_time_context": {
+              "norm_ids": [],
+              "before_amendment": false,
+              "relation_query": null,
+              "article": null,
+              "paragraph": null,
+              "requested_year": null
+            },
+            "evidence_states": [
+              {
+                "chunk_id": "ufpi-956-2025-art-3-idx-000002",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "3",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-956-2025-art-4-idx-000003",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "4",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-956-2025-art-28-idx-000027",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "28",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-956-2025-art-35-idx-000033",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "35",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-956-2025-art-52-idx-000050",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "52",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              }
+            ],
+            "known_relations": [],
+            "generation_constraints": {
+              "must_frame_as_historical": false,
+              "must_not_claim_current_validity": false,
+              "must_not_claim_unknown_as_current": true,
+              "must_not_present_revoked_rule_as_current": false,
+              "must_not_present_successor_as_historical_predecessor": false,
+              "must_separate_temporal_states": false,
+              "must_follow_evidence_roles": true,
+              "must_not_treat_partial_amendment_as_total_revocation": false,
+              "must_not_duplicate_superseded_wording": false,
+              "must_not_reintroduce_excluded_evidence": true,
+              "must_not_deny_present_evidence": true,
+              "must_not_invent_effective_date": true,
+              "must_not_invent_temporal_scope": true,
+              "citation_granularity_ceiling": "article"
+            }
+          },
+          "temporal_status_text": "Com base nas normas indexadas no sistema:",
+          "allowed_temporal_facts": {
+            "items": [
+              {
+                "kind": "STATUS_UNKNOWN",
+                "norm_id": "ufpi-956-2025",
+                "target_norm": null,
+                "role": null
+              }
+            ]
+          },
+          "core_status": "accepted",
+          "domain": "pos_graduacao",
+          "retrieval_strategy": "dense_vector",
+          "needs_clarification": false,
+          "clarification_question": null,
+          "correlation_id": "4b3eef54-219b-45dc-8486-8aad541648c6",
+          "error_code": null,
+          "safe_message": null
+        },
+        "grounded_followup_result": null,
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": null,
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "normative_status": "ANSWER",
+      "core_status": "accepted",
+      "scope_decision": "IN_SCOPE_NORMATIVE",
+      "scope_status": "classified",
+      "scope_provider_calls": 1,
+      "normative_provider_calls": 3,
+      "scope_gate_latency_ms": 1029.162130002078,
+      "router_latency_ms": 1091.0615859975223,
+      "total_pre_retrieval_latency_ms": 2128.4151280015067
+    },
+    {
+      "question": "essa resolução ainda vale?",
+      "expected_action": "NORMATIVE_RAG",
+      "observed_action": "NORMATIVE_RAG",
+      "router_calls": 1,
+      "retrieval_calls": 0,
+      "provider_calls": 2,
+      "provider_endpoints": [
+        {
+          "endpoint": "/chat/completions",
+          "role": "scope",
+          "finished": 24001.730255514
+        },
+        {
+          "endpoint": "/chat/completions",
+          "role": "normative",
+          "finished": 24002.429828844
+        }
+      ],
+      "router_inputs": [
+        {
+          "question": "essa resolução ainda vale?",
+          "clarification": null,
+          "latency_ms": 692.2660359996371,
+          "finished": 24002.429881026,
+          "decision": {
+            "scope": null,
+            "needs_clarification": true,
+            "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+            "reason_code": "insufficient_scope_signal"
+          }
+        }
+      ],
+      "pending_before": null,
+      "pending_after": {
+        "original_question": "essa resolução ainda vale?",
+        "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "correlation_id": "12b2bb15-8d89-4c48-a3c0-f571d5dc0300",
+        "compatibility_stamp": {
+          "memory_version": "1",
+          "core_version": "structured_output_v2",
+          "contract_version": "1",
+          "corpus_fingerprint": "ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a",
+          "registry_fingerprint": "fbd017d0f080481bb0f89e6809b48a87317d8fc97909e7ec2d40f8240bff25ef"
+        }
+      },
+      "correlation": "12b2bb15-8d89-4c48-a3c0-f571d5dc0300",
+      "correlation_changed": null,
+      "final_message": {
+        "type": "ai",
+        "content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_result": {
+          "contract_version": "1",
+          "core_version": "structured_output_v2",
+          "status": "CLARIFICATION",
+          "answer": null,
+          "references": [],
+          "temporal_provenance": null,
+          "temporal_status_text": null,
+          "allowed_temporal_facts": null,
+          "core_status": null,
+          "domain": null,
+          "retrieval_strategy": "dense_vector",
+          "needs_clarification": true,
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "12b2bb15-8d89-4c48-a3c0-f571d5dc0300",
+          "error_code": null,
+          "safe_message": null
+        },
+        "grounded_followup_result": null,
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": null,
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "normative_status": "CLARIFICATION",
+      "core_status": null,
+      "scope_decision": "UNCERTAIN",
+      "scope_status": "classified",
+      "scope_provider_calls": 1,
+      "normative_provider_calls": 1,
+      "scope_gate_latency_ms": 1378.7791779977852,
+      "router_latency_ms": 692.2660359996371,
+      "total_pre_retrieval_latency_ms": 2079.650962001324
+    },
+    {
+      "question": "Posso cancelar uma disciplina?",
+      "expected_action": "NORMATIVE_RAG",
+      "observed_action": "NORMATIVE_RAG",
+      "router_calls": 1,
+      "retrieval_calls": 0,
+      "provider_calls": 2,
+      "provider_endpoints": [
+        {
+          "endpoint": "/chat/completions",
+          "role": "scope",
+          "finished": 24003.458489991
+        },
+        {
+          "endpoint": "/chat/completions",
+          "role": "normative",
+          "finished": 24006.096772898
+        }
+      ],
+      "router_inputs": [
+        {
+          "question": "Posso cancelar uma disciplina?",
+          "clarification": null,
+          "latency_ms": 2631.7225150014565,
+          "finished": 24006.096827184,
+          "decision": {
+            "scope": null,
+            "needs_clarification": true,
+            "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+            "reason_code": "ambiguous_academic_level"
+          }
+        }
+      ],
+      "pending_before": null,
+      "pending_after": {
+        "original_question": "Posso cancelar uma disciplina?",
+        "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "correlation_id": "a2b8aec6-0f2d-416f-919a-e629b931a6a8",
+        "compatibility_stamp": {
+          "memory_version": "1",
+          "core_version": "structured_output_v2",
+          "contract_version": "1",
+          "corpus_fingerprint": "ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a",
+          "registry_fingerprint": "fbd017d0f080481bb0f89e6809b48a87317d8fc97909e7ec2d40f8240bff25ef"
+        }
+      },
+      "correlation": "a2b8aec6-0f2d-416f-919a-e629b931a6a8",
+      "correlation_changed": null,
+      "final_message": {
+        "type": "ai",
+        "content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_result": {
+          "contract_version": "1",
+          "core_version": "structured_output_v2",
+          "status": "CLARIFICATION",
+          "answer": null,
+          "references": [],
+          "temporal_provenance": null,
+          "temporal_status_text": null,
+          "allowed_temporal_facts": null,
+          "core_status": null,
+          "domain": null,
+          "retrieval_strategy": "dense_vector",
+          "needs_clarification": true,
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "a2b8aec6-0f2d-416f-919a-e629b931a6a8",
+          "error_code": null,
+          "safe_message": null
+        },
+        "grounded_followup_result": null,
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": null,
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "normative_status": "CLARIFICATION",
+      "core_status": null,
+      "scope_decision": "IN_SCOPE_NORMATIVE",
+      "scope_status": "classified",
+      "scope_provider_calls": 1,
+      "normative_provider_calls": 1,
+      "scope_gate_latency_ms": 1023.625401998288,
+      "router_latency_ms": 2631.7225150014565,
+      "total_pre_retrieval_latency_ms": 3663.429571999586
+    },
+    {
+      "question": "obrigado",
+      "expected_action": "SAFE_DIRECT",
+      "observed_action": "SAFE_DIRECT",
+      "router_calls": 0,
+      "retrieval_calls": 0,
+      "provider_calls": 0,
+      "provider_endpoints": [],
+      "router_inputs": [],
+      "pending_before": {
+        "original_question": "Posso cancelar uma disciplina?",
+        "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "correlation_id": "a2b8aec6-0f2d-416f-919a-e629b931a6a8",
+        "compatibility_stamp": {
+          "memory_version": "1",
+          "core_version": "structured_output_v2",
+          "contract_version": "1",
+          "corpus_fingerprint": "ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a",
+          "registry_fingerprint": "fbd017d0f080481bb0f89e6809b48a87317d8fc97909e7ec2d40f8240bff25ef"
+        }
+      },
+      "pending_after": {
+        "original_question": "Posso cancelar uma disciplina?",
+        "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "correlation_id": "a2b8aec6-0f2d-416f-919a-e629b931a6a8",
+        "compatibility_stamp": {
+          "memory_version": "1",
+          "core_version": "structured_output_v2",
+          "contract_version": "1",
+          "corpus_fingerprint": "ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a",
+          "registry_fingerprint": "fbd017d0f080481bb0f89e6809b48a87317d8fc97909e7ec2d40f8240bff25ef"
+        }
+      },
+      "correlation": "",
+      "correlation_changed": null,
+      "final_message": {
+        "type": "ai",
+        "content": "De nada!",
+        "normative_result": null,
+        "grounded_followup_result": null,
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": null,
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "normative_status": null,
+      "core_status": null,
+      "scope_decision": null,
+      "scope_status": null,
+      "scope_provider_calls": 0,
+      "normative_provider_calls": 0,
+      "scope_gate_latency_ms": 0.0,
+      "router_latency_ms": 0,
+      "total_pre_retrieval_latency_ms": 0.0
+    },
+    {
+      "question": "quem é você?",
+      "expected_action": "ABOUT_ASSISTANT",
+      "observed_action": "ABOUT_ASSISTANT",
+      "router_calls": 0,
+      "retrieval_calls": 0,
+      "provider_calls": 0,
+      "provider_endpoints": [],
+      "router_inputs": [],
+      "pending_before": {
+        "original_question": "Posso cancelar uma disciplina?",
+        "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "correlation_id": "a2b8aec6-0f2d-416f-919a-e629b931a6a8",
+        "compatibility_stamp": {
+          "memory_version": "1",
+          "core_version": "structured_output_v2",
+          "contract_version": "1",
+          "corpus_fingerprint": "ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a",
+          "registry_fingerprint": "fbd017d0f080481bb0f89e6809b48a87317d8fc97909e7ec2d40f8240bff25ef"
+        }
+      },
+      "pending_after": {
+        "original_question": "Posso cancelar uma disciplina?",
+        "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "correlation_id": "a2b8aec6-0f2d-416f-919a-e629b931a6a8",
+        "compatibility_stamp": {
+          "memory_version": "1",
+          "core_version": "structured_output_v2",
+          "contract_version": "1",
+          "corpus_fingerprint": "ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a",
+          "registry_fingerprint": "fbd017d0f080481bb0f89e6809b48a87317d8fc97909e7ec2d40f8240bff25ef"
+        }
+      },
+      "correlation": "",
+      "correlation_changed": null,
+      "final_message": {
+        "type": "ai",
+        "content": "Sou um assistente especializado em normas acadêmicas da UFPI. Posso ajudar com dúvidas sobre matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação com base nas normas indexadas no sistema.",
+        "normative_result": null,
+        "grounded_followup_result": null,
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": null,
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "normative_status": null,
+      "core_status": null,
+      "scope_decision": null,
+      "scope_status": null,
+      "scope_provider_calls": 0,
+      "normative_provider_calls": 0,
+      "scope_gate_latency_ms": 0.0,
+      "router_latency_ms": 0,
+      "total_pre_retrieval_latency_ms": 0.0
+    },
+    {
+      "question": "quantos anos tem a cidade mais antiga do piauí?",
+      "expected_action": "OUT_OF_SCOPE",
+      "observed_action": "OUT_OF_SCOPE",
+      "router_calls": 0,
+      "retrieval_calls": 0,
+      "provider_calls": 1,
+      "provider_endpoints": [
+        {
+          "endpoint": "/chat/completions",
+          "role": "scope",
+          "finished": 24006.742404783
+        }
+      ],
+      "router_inputs": [],
+      "pending_before": {
+        "original_question": "Posso cancelar uma disciplina?",
+        "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "correlation_id": "a2b8aec6-0f2d-416f-919a-e629b931a6a8",
+        "compatibility_stamp": {
+          "memory_version": "1",
+          "core_version": "structured_output_v2",
+          "contract_version": "1",
+          "corpus_fingerprint": "ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a",
+          "registry_fingerprint": "fbd017d0f080481bb0f89e6809b48a87317d8fc97909e7ec2d40f8240bff25ef"
+        }
+      },
+      "pending_after": {
+        "original_question": "Posso cancelar uma disciplina?",
+        "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "correlation_id": "a2b8aec6-0f2d-416f-919a-e629b931a6a8",
+        "compatibility_stamp": {
+          "memory_version": "1",
+          "core_version": "structured_output_v2",
+          "contract_version": "1",
+          "corpus_fingerprint": "ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a",
+          "registry_fingerprint": "fbd017d0f080481bb0f89e6809b48a87317d8fc97909e7ec2d40f8240bff25ef"
+        }
+      },
+      "correlation": "",
+      "correlation_changed": null,
+      "final_message": {
+        "type": "ai",
+        "content": "Posso ajudar com dúvidas sobre normas acadêmicas da UFPI, como matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação.",
+        "normative_result": null,
+        "grounded_followup_result": null,
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": null,
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "normative_status": null,
+      "core_status": null,
+      "scope_decision": "OUT_OF_SCOPE",
+      "scope_status": "classified",
+      "scope_provider_calls": 1,
+      "normative_provider_calls": 0,
+      "scope_gate_latency_ms": 634.7605519986246,
+      "router_latency_ms": 0,
+      "total_pre_retrieval_latency_ms": 636.9788409974717
+    },
+    {
+      "question": "pós",
+      "expected_action": "CONTINUE_CLARIFICATION",
+      "observed_action": "CONTINUE_CLARIFICATION",
+      "router_calls": 1,
+      "retrieval_calls": 1,
+      "provider_calls": 4,
+      "provider_endpoints": [
+        {
+          "endpoint": "/chat/completions",
+          "role": "scope",
+          "finished": 24008.277895159
+        },
+        {
+          "endpoint": "/chat/completions",
+          "role": "normative",
+          "finished": 24009.410851558
+        },
+        {
+          "endpoint": "/embeddings",
+          "role": "normative",
+          "finished": 24010.300638878
+        },
+        {
+          "endpoint": "/chat/completions",
+          "role": "normative",
+          "finished": 24015.388891931
+        }
+      ],
+      "router_inputs": [
+        {
+          "question": "Posso cancelar uma disciplina?",
+          "clarification": "pós",
+          "latency_ms": 1126.6785810003057,
+          "finished": 24009.410886054,
+          "decision": {
+            "scope": "pos_graduacao",
+            "needs_clarification": false,
+            "clarification_question": null,
+            "reason_code": "explicit_pos"
+          }
+        }
+      ],
+      "pending_before": {
+        "original_question": "Posso cancelar uma disciplina?",
+        "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "correlation_id": "a2b8aec6-0f2d-416f-919a-e629b931a6a8",
+        "compatibility_stamp": {
+          "memory_version": "1",
+          "core_version": "structured_output_v2",
+          "contract_version": "1",
+          "corpus_fingerprint": "ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a",
+          "registry_fingerprint": "fbd017d0f080481bb0f89e6809b48a87317d8fc97909e7ec2d40f8240bff25ef"
+        }
+      },
+      "pending_after": null,
+      "correlation": "a2b8aec6-0f2d-416f-919a-e629b931a6a8",
+      "correlation_changed": false,
+      "final_message": {
+        "type": "ai",
+        "content": "Com base nas normas indexadas no sistema:\n\nSim, é permitido ao discente cancelar a matrícula em disciplina, desde que dentro do prazo do Calendário Acadêmico, com parecer favorável do orientador e aprovação do Colegiado Simples. O cancelamento da mesma disciplina só pode ocorrer uma vez, exceto em caso de doença devidamente comprovada pela Perícia Médica da Universidade. Essa regra está prevista na Resolução 956/2025, art. 37.",
+        "normative_result": {
+          "contract_version": "1",
+          "core_version": "structured_output_v2",
+          "status": "ANSWER",
+          "answer": "Com base nas normas indexadas no sistema:\n\nSim, é permitido ao discente cancelar a matrícula em disciplina, desde que dentro do prazo do Calendário Acadêmico, com parecer favorável do orientador e aprovação do Colegiado Simples. O cancelamento da mesma disciplina só pode ocorrer uma vez, exceto em caso de doença devidamente comprovada pela Perícia Médica da Universidade. Essa regra está prevista na Resolução 956/2025, art. 37.",
+          "references": [
+            {
+              "chunk_id": "ufpi-956-2025-art-37-idx-000035",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "37",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 37",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 37. É permitido ao(a) discente cancelar ou substituir matrícula em disciplina, dentro do prazo do Calendário Acadêmico, mediante parecer favorável do orientador e aprovação do Colegiado Simples.\n- Parágrafo único. O cancelamento da mesma disciplina só é permitido uma vez, exceto por motivo de doença, devidamente comprovado pela Perícia Médica da Universidade."
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-21-idx-000020",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "21",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 21",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 21. O desligamento do(a) discente do PPG ocorre nas seguintes hipóteses:\n- | -reprovação por duas vezes na mesma disciplina;\n- 11 -reprovação em duas disciplinas distintas;\n- Ill -descumprimento dos prazos máximos para defesa, fixados nesta Resolução;\n- IV -reprovação por duas vezes em Exame de Qualificação; e\n- V -não efetivação da matrícula curricular semestral."
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-38-idx-000036",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "38",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 38",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 38. É permitido ao(a) discente o trancamento do curso por motivo de doença, comprovado pela Perícia Médica da Universidade, pelo período de até 12 meses.\n- Parágrafo único. O período de trancamento (caput) não é computado para efeito dos prazos de conclusão previstos nesta Resolução."
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-35-idx-000033",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "35",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 35",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 35. O candidato que, no ato da matrícula institucional (Art. 33), ainda não possuir o documento de conclusão (diploma ou certidão), terá o prazo improrrogável de sessenta dias, a contar do prazo final da matrícula institucional, para apresentar o documento de integralização curricular (Graduação) ou o comprovante de defesa (Mestrado). O não cumprimento do prazo estipulado implica no cancelamento automático da matrícula."
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-20-idx-000019",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "20",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 20",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 20. A verificação do rendimento acadêmico é feita por disciplina e abrange os aspectos de assiduidade e eficiência, ambos eliminatórios.\n- $ 1º Acritério do professor, a avaliação da eficiência é feita por um ou mais dos seguintes meios: provas, exames, trabalhos ou projetos.\n\n- $ 2º O resultado final da verificação é expresso em notas na escala de zero a dez com, no máximo, uma casa decimal.\n- $ 3º É considerado aprovado o(a) discente que obtiver nota mínima sete e frequência igual ou superior a 75% (setenta e cinco por cento).\n- S$ 4º As atividades de qualificação, de dissertação e de tese podem ser desenvolvidas por mais de um período letivo, conforme o Regimento Interno de cada PPG.\n- S 5º Para efeito de registro, o número de notas parciais deve ser proporcional à carga horária da disciplina, respeitado o mínimo de:\n- | -duas, nas disciplinas com carga horária igual ou inferior a quarenta e cinco horas;\n- Il -três, nas disciplinas com carga horária de sessenta a setenta e cinco horas; e\n- Ill -quatro, nas disciplinas com carga horária superior a setenta e cinco horas."
+            }
+          ],
+          "temporal_provenance": {
+            "temporal_intent": "indeterminate",
+            "requested_time_context": {
+              "norm_ids": [],
+              "before_amendment": false,
+              "relation_query": null,
+              "article": null,
+              "paragraph": null,
+              "requested_year": null
+            },
+            "evidence_states": [
+              {
+                "chunk_id": "ufpi-956-2025-art-37-idx-000035",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "37",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-956-2025-art-21-idx-000020",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "21",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-956-2025-art-38-idx-000036",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "38",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-956-2025-art-35-idx-000033",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "35",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-956-2025-art-20-idx-000019",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "20",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              }
+            ],
+            "known_relations": [],
+            "generation_constraints": {
+              "must_frame_as_historical": false,
+              "must_not_claim_current_validity": false,
+              "must_not_claim_unknown_as_current": true,
+              "must_not_present_revoked_rule_as_current": false,
+              "must_not_present_successor_as_historical_predecessor": false,
+              "must_separate_temporal_states": false,
+              "must_follow_evidence_roles": true,
+              "must_not_treat_partial_amendment_as_total_revocation": false,
+              "must_not_duplicate_superseded_wording": false,
+              "must_not_reintroduce_excluded_evidence": true,
+              "must_not_deny_present_evidence": true,
+              "must_not_invent_effective_date": true,
+              "must_not_invent_temporal_scope": true,
+              "citation_granularity_ceiling": "article"
+            }
+          },
+          "temporal_status_text": "Com base nas normas indexadas no sistema:",
+          "allowed_temporal_facts": {
+            "items": [
+              {
+                "kind": "STATUS_UNKNOWN",
+                "norm_id": "ufpi-956-2025",
+                "target_norm": null,
+                "role": null
+              }
+            ]
+          },
+          "core_status": "accepted",
+          "domain": "pos_graduacao",
+          "retrieval_strategy": "dense_vector",
+          "needs_clarification": false,
+          "clarification_question": null,
+          "correlation_id": "a2b8aec6-0f2d-416f-919a-e629b931a6a8",
+          "error_code": null,
+          "safe_message": null
+        },
+        "grounded_followup_result": null,
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": null,
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "normative_status": "ANSWER",
+      "core_status": "accepted",
+      "scope_decision": "IN_SCOPE_NORMATIVE",
+      "scope_status": "classified",
+      "scope_provider_calls": 1,
+      "normative_provider_calls": 3,
+      "scope_gate_latency_ms": 1531.9026750003104,
+      "router_latency_ms": 1126.6785810003057,
+      "total_pre_retrieval_latency_ms": 2667.7178440004354
+    },
+    {
+      "question": "Posso cancelar uma disciplina?",
+      "expected_action": "NORMATIVE_RAG",
+      "observed_action": "NORMATIVE_RAG",
+      "router_calls": 1,
+      "retrieval_calls": 0,
+      "provider_calls": 2,
+      "provider_endpoints": [
+        {
+          "endpoint": "/chat/completions",
+          "role": "scope",
+          "finished": 24015.95992732
+        },
+        {
+          "endpoint": "/chat/completions",
+          "role": "normative",
+          "finished": 24016.970022029
+        }
+      ],
+      "router_inputs": [
+        {
+          "question": "Posso cancelar uma disciplina?",
+          "clarification": null,
+          "latency_ms": 1002.9161840029701,
+          "finished": 24016.970071069,
+          "decision": {
+            "scope": null,
+            "needs_clarification": true,
+            "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+            "reason_code": "ambiguous_academic_level"
+          }
+        }
+      ],
+      "pending_before": null,
+      "pending_after": {
+        "original_question": "Posso cancelar uma disciplina?",
+        "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "correlation_id": "d7c2e191-c227-4704-81b4-3586e77f2777",
+        "compatibility_stamp": {
+          "memory_version": "1",
+          "core_version": "structured_output_v2",
+          "contract_version": "1",
+          "corpus_fingerprint": "ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a",
+          "registry_fingerprint": "fbd017d0f080481bb0f89e6809b48a87317d8fc97909e7ec2d40f8240bff25ef"
+        }
+      },
+      "correlation": "d7c2e191-c227-4704-81b4-3586e77f2777",
+      "correlation_changed": null,
+      "final_message": {
+        "type": "ai",
+        "content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_result": {
+          "contract_version": "1",
+          "core_version": "structured_output_v2",
+          "status": "CLARIFICATION",
+          "answer": null,
+          "references": [],
+          "temporal_provenance": null,
+          "temporal_status_text": null,
+          "allowed_temporal_facts": null,
+          "core_status": null,
+          "domain": null,
+          "retrieval_strategy": "dense_vector",
+          "needs_clarification": true,
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "d7c2e191-c227-4704-81b4-3586e77f2777",
+          "error_code": null,
+          "safe_message": null
+        },
+        "grounded_followup_result": null,
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": null,
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "normative_status": "CLARIFICATION",
+      "core_status": null,
+      "scope_decision": "IN_SCOPE_NORMATIVE",
+      "scope_status": "classified",
+      "scope_provider_calls": 1,
+      "normative_provider_calls": 1,
+      "scope_gate_latency_ms": 566.045450999809,
+      "router_latency_ms": 1002.9161840029701,
+      "total_pre_retrieval_latency_ms": 1577.4167600029614
+    },
+    {
+      "question": "Faço mestrado e estou doente. Qual é a diferença entre cancelar uma matéria e trancar o curso?",
+      "expected_action": "NORMATIVE_RAG",
+      "observed_action": "NORMATIVE_RAG",
+      "router_calls": 1,
+      "retrieval_calls": 1,
+      "provider_calls": 5,
+      "provider_endpoints": [
+        {
+          "endpoint": "/chat/completions",
+          "role": "scope",
+          "finished": 24017.620689278
+        },
+        {
+          "endpoint": "/chat/completions",
+          "role": "normative",
+          "finished": 24018.330892033
+        },
+        {
+          "endpoint": "/embeddings",
+          "role": "normative",
+          "finished": 24019.467269355
+        },
+        {
+          "endpoint": "/chat/completions",
+          "role": "normative",
+          "finished": 24021.601879271
+        },
+        {
+          "endpoint": "/chat/completions",
+          "role": "normative",
+          "finished": 24023.392679788
+        }
+      ],
+      "router_inputs": [
+        {
+          "question": "Faço mestrado e estou doente. Qual é a diferença entre cancelar uma matéria e trancar o curso?",
+          "clarification": null,
+          "latency_ms": 703.902190001827,
+          "finished": 24018.330926155,
+          "decision": {
+            "scope": "pos_graduacao",
+            "needs_clarification": false,
+            "clarification_question": null,
+            "reason_code": "explicit_pos"
+          }
+        }
+      ],
+      "pending_before": {
+        "original_question": "Posso cancelar uma disciplina?",
+        "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "correlation_id": "d7c2e191-c227-4704-81b4-3586e77f2777",
+        "compatibility_stamp": {
+          "memory_version": "1",
+          "core_version": "structured_output_v2",
+          "contract_version": "1",
+          "corpus_fingerprint": "ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a",
+          "registry_fingerprint": "fbd017d0f080481bb0f89e6809b48a87317d8fc97909e7ec2d40f8240bff25ef"
+        }
+      },
+      "pending_after": null,
+      "correlation": "acbb8deb-6c5a-46fb-8dba-d5c3da2bb722",
+      "correlation_changed": true,
+      "final_message": {
+        "type": "ai",
+        "content": "Com base nas normas indexadas no sistema:\n\nO trancamento do curso por motivo de doença, conforme previsto no art. 38 da Resolução 956/2025, permite ao discente suspender sua matrícula por até 12 meses, com comprovação pela Perícia Médica da Universidade. Esse período não é contado para os prazos de conclusão do curso. Já o cancelamento de uma disciplina, previsto no art. 37 da mesma resolução, refere-se à exclusão de uma matéria já matriculada, permitido apenas uma vez, exceto em caso de doença comprovada, e depende de parecer favorável do orientador e aprovação do Colegiado Simples. A principal diferença está no escopo: o trancamento afeta todo o curso por um período determinado, enquanto o cancelamento de disciplina restringe-se à exclusão de uma matéria específica, com limitações de repetição.",
+        "normative_result": {
+          "contract_version": "1",
+          "core_version": "structured_output_v2",
+          "status": "ANSWER",
+          "answer": "Com base nas normas indexadas no sistema:\n\nO trancamento do curso por motivo de doença, conforme previsto no art. 38 da Resolução 956/2025, permite ao discente suspender sua matrícula por até 12 meses, com comprovação pela Perícia Médica da Universidade. Esse período não é contado para os prazos de conclusão do curso. Já o cancelamento de uma disciplina, previsto no art. 37 da mesma resolução, refere-se à exclusão de uma matéria já matriculada, permitido apenas uma vez, exceto em caso de doença comprovada, e depende de parecer favorável do orientador e aprovação do Colegiado Simples. A principal diferença está no escopo: o trancamento afeta todo o curso por um período determinado, enquanto o cancelamento de disciplina restringe-se à exclusão de uma matéria específica, com limitações de repetição.",
+          "references": [
+            {
+              "chunk_id": "ufpi-956-2025-art-38-idx-000036",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "38",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 38",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 38. É permitido ao(a) discente o trancamento do curso por motivo de doença, comprovado pela Perícia Médica da Universidade, pelo período de até 12 meses.\n- Parágrafo único. O período de trancamento (caput) não é computado para efeito dos prazos de conclusão previstos nesta Resolução."
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-37-idx-000035",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "37",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 37",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 37. É permitido ao(a) discente cancelar ou substituir matrícula em disciplina, dentro do prazo do Calendário Acadêmico, mediante parecer favorável do orientador e aprovação do Colegiado Simples.\n- Parágrafo único. O cancelamento da mesma disciplina só é permitido uma vez, exceto por motivo de doença, devidamente comprovado pela Perícia Médica da Universidade."
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-28-idx-000027",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "28",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 28",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 28. Fica permitida a promoção direta do Mestrado ao Doutorado, sem a defesa de Dissertação, quando o(a) discente atender, cumulativamente, às seguintes condições de excepcionalidade:\n8. | -estar cursando o terceiro semestre do Mestrado;\n9. Il -ter concluído os créditos de disciplinas do Mestrado com desempenho excepcional;\n10. Ill -ter publicado artigos científicos, bibliográficos, tecnológicos ou artísticos, ou registro de patentes originados de seu projeto de dissertação; e\n11. IV -ser aprovado em exame de defesa do seu projeto de tese.\n12. Parágrafo único. O Regimento Interno do PPG detalha os critérios de excepcionalidade (Inciso ll), os requisitos de produção (Inciso Ill) e os procedimentos do exame de defesa (Inciso IV)."
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-35-idx-000033",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "35",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 35",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 35. O candidato que, no ato da matrícula institucional (Art. 33), ainda não possuir o documento de conclusão (diploma ou certidão), terá o prazo improrrogável de sessenta dias, a contar do prazo final da matrícula institucional, para apresentar o documento de integralização curricular (Graduação) ou o comprovante de defesa (Mestrado). O não cumprimento do prazo estipulado implica no cancelamento automático da matrícula."
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-27-idx-000026",
+              "norm_id": "ufpi-956-2025",
+              "source": "Resolução CEPEX/UFPI nº 956/2025",
+              "article": "27",
+              "validated_subdivision": null,
+              "display_text": "Resolução 956/2025, art. 27",
+              "temporal_role": "eligible",
+              "evidence_text": "Art. 27. Os candidatos a seleção devem formular pedido de inscrição conforme o edital, apresentando os seguintes documentos:\n- | -para o Mestrado:\n- a) diploma, certidão ou declaração de matrícula no último semestre do curso de graduação;\n- b) histórico escolar da graduação;\n\n- c) Curriculum lattes comprovado;\n- d) Curriculo Vitae comprovado para candidatos(as) estrangeiros;\n3. Il -para o Doutorado:\n- a) Diploma de Mestrado ou declaração de que defenderá a dissertação antes da matrícula institucional;\n- b) Curriculum lattes comprovado;\n- c) Curriculo Vitae comprovado para candidatos(as) estrangeiros; e"
+            }
+          ],
+          "temporal_provenance": {
+            "temporal_intent": "indeterminate",
+            "requested_time_context": {
+              "norm_ids": [],
+              "before_amendment": false,
+              "relation_query": null,
+              "article": null,
+              "paragraph": null,
+              "requested_year": null
+            },
+            "evidence_states": [
+              {
+                "chunk_id": "ufpi-956-2025-art-38-idx-000036",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "38",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-956-2025-art-37-idx-000035",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "37",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-956-2025-art-28-idx-000027",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "28",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-956-2025-art-35-idx-000033",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "35",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              },
+              {
+                "chunk_id": "ufpi-956-2025-art-27-idx-000026",
+                "source_norm": "ufpi-956-2025",
+                "source_article": "27",
+                "temporal_action": "kept_current",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": null
+              }
+            ],
+            "known_relations": [],
+            "generation_constraints": {
+              "must_frame_as_historical": false,
+              "must_not_claim_current_validity": false,
+              "must_not_claim_unknown_as_current": true,
+              "must_not_present_revoked_rule_as_current": false,
+              "must_not_present_successor_as_historical_predecessor": false,
+              "must_separate_temporal_states": false,
+              "must_follow_evidence_roles": true,
+              "must_not_treat_partial_amendment_as_total_revocation": false,
+              "must_not_duplicate_superseded_wording": false,
+              "must_not_reintroduce_excluded_evidence": true,
+              "must_not_deny_present_evidence": true,
+              "must_not_invent_effective_date": true,
+              "must_not_invent_temporal_scope": true,
+              "citation_granularity_ceiling": "article"
+            }
+          },
+          "temporal_status_text": "Com base nas normas indexadas no sistema:",
+          "allowed_temporal_facts": {
+            "items": [
+              {
+                "kind": "STATUS_UNKNOWN",
+                "norm_id": "ufpi-956-2025",
+                "target_norm": null,
+                "role": null
+              }
+            ]
+          },
+          "core_status": "regenerated",
+          "domain": "pos_graduacao",
+          "retrieval_strategy": "dense_vector",
+          "needs_clarification": false,
+          "clarification_question": null,
+          "correlation_id": "acbb8deb-6c5a-46fb-8dba-d5c3da2bb722",
+          "error_code": null,
+          "safe_message": null
+        },
+        "grounded_followup_result": null,
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": null,
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "normative_status": "ANSWER",
+      "core_status": "regenerated",
+      "scope_decision": "IN_SCOPE_NORMATIVE",
+      "scope_status": "classified",
+      "scope_provider_calls": 1,
+      "normative_provider_calls": 4,
+      "scope_gate_latency_ms": 644.8062460003712,
+      "router_latency_ms": 703.902190001827,
+      "total_pre_retrieval_latency_ms": 1357.7580099990882
+    },
+    {
+      "question": "Posso cancelar uma disciplina?",
+      "expected_action": "NORMATIVE_RAG",
+      "observed_action": "NORMATIVE_RAG",
+      "router_calls": 1,
+      "retrieval_calls": 0,
+      "provider_calls": 2,
+      "provider_endpoints": [
+        {
+          "endpoint": "/chat/completions",
+          "role": "scope",
+          "finished": 24023.842734367
+        },
+        {
+          "endpoint": "/chat/completions",
+          "role": "normative",
+          "finished": 24024.879852306
+        }
+      ],
+      "router_inputs": [
+        {
+          "question": "Posso cancelar uma disciplina?",
+          "clarification": null,
+          "latency_ms": 1028.601076999621,
+          "finished": 24024.879900696,
+          "decision": {
+            "scope": null,
+            "needs_clarification": true,
+            "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+            "reason_code": "ambiguous_academic_level"
+          }
+        }
+      ],
+      "pending_before": null,
+      "pending_after": {
+        "original_question": "Posso cancelar uma disciplina?",
+        "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "correlation_id": "8238ffb5-8164-4abb-ae40-9b449fcc3301",
+        "compatibility_stamp": {
+          "memory_version": "1",
+          "core_version": "structured_output_v2",
+          "contract_version": "1",
+          "corpus_fingerprint": "ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a",
+          "registry_fingerprint": "fbd017d0f080481bb0f89e6809b48a87317d8fc97909e7ec2d40f8240bff25ef"
+        }
+      },
+      "correlation": "8238ffb5-8164-4abb-ae40-9b449fcc3301",
+      "correlation_changed": null,
+      "final_message": {
+        "type": "ai",
+        "content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_result": {
+          "contract_version": "1",
+          "core_version": "structured_output_v2",
+          "status": "CLARIFICATION",
+          "answer": null,
+          "references": [],
+          "temporal_provenance": null,
+          "temporal_status_text": null,
+          "allowed_temporal_facts": null,
+          "core_status": null,
+          "domain": null,
+          "retrieval_strategy": "dense_vector",
+          "needs_clarification": true,
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "8238ffb5-8164-4abb-ae40-9b449fcc3301",
+          "error_code": null,
+          "safe_message": null
+        },
+        "grounded_followup_result": null,
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": null,
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "normative_status": "CLARIFICATION",
+      "core_status": null,
+      "scope_decision": "IN_SCOPE_NORMATIVE",
+      "scope_status": "classified",
+      "scope_provider_calls": 1,
+      "normative_provider_calls": 1,
+      "scope_gate_latency_ms": 444.7260439992533,
+      "router_latency_ms": 1028.601076999621,
+      "total_pre_retrieval_latency_ms": 1483.1516699996428
+    },
+    {
+      "question": "cancele",
+      "expected_action": "CLEAR_PENDING",
+      "observed_action": "CLEAR_PENDING",
+      "router_calls": 0,
+      "retrieval_calls": 0,
+      "provider_calls": 0,
+      "provider_endpoints": [],
+      "router_inputs": [],
+      "pending_before": {
+        "original_question": "Posso cancelar uma disciplina?",
+        "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "correlation_id": "8238ffb5-8164-4abb-ae40-9b449fcc3301",
+        "compatibility_stamp": {
+          "memory_version": "1",
+          "core_version": "structured_output_v2",
+          "contract_version": "1",
+          "corpus_fingerprint": "ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a",
+          "registry_fingerprint": "fbd017d0f080481bb0f89e6809b48a87317d8fc97909e7ec2d40f8240bff25ef"
+        }
+      },
+      "pending_after": null,
+      "correlation": "",
+      "correlation_changed": null,
+      "final_message": {
+        "type": "ai",
+        "content": "Pendência de esclarecimento cancelada.",
+        "normative_result": null,
+        "grounded_followup_result": null,
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": null,
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "normative_status": null,
+      "core_status": null,
+      "scope_decision": null,
+      "scope_status": null,
+      "scope_provider_calls": 0,
+      "normative_provider_calls": 0,
+      "scope_gate_latency_ms": 0.0,
+      "router_latency_ms": 0,
+      "total_pre_retrieval_latency_ms": 0.0
+    }
+  ],
+  "config": {
+    "llm_model": "qwen/qwen3-30b-a3b-instruct-2507",
+    "router_model": "qwen/qwen3-30b-a3b-instruct-2507",
+    "scope_gate_model": "qwen/qwen3-30b-a3b-instruct-2507",
+    "scope_prompt_sha256": "af3fb65518533930490a0c9626ab85cd43bbffe2f2a57f780ad1e9cb09fa54ab",
+    "temperature": 0.0,
+    "max_tokens": 800,
+    "embedding_model": "openai/text-embedding-3-small",
+    "top_k": 5,
+    "routing_mode": "intent_v1",
+    "provider_host": "openrouter.ai"
+  },
+  "index_before": {
+    "count": 507,
+    "sha256": "ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a"
+  },
+  "production_hashes": {
+    "code/src/run_service.py": "3ff8adb97c572d29bd78f5b9a850156aa97c6ab7628fa525275884c8fb2cee2f",
+    "code/src/agents/tools.py": "661e906480a9e1d6a095382793e2e822d5ceecc0ac12f035b615d370f36a2072",
+    "code/src/agents/chatbot.py": "cb6ea985d68a610279679444fe8d4a6a245c961a8bbe03c4a67aac8b1a88422d",
+    "code/src/agents/chatbot_ufpi_v2.py": "782a490ea23fd878bfe346e1f43cef6e7a61d49e8a7ececb0ccb0e28c69d837a",
+    "code/src/agents/__init__.py": "6daf4877fadefafeccb6e1210813f43f4bce0cf2d9dd3facdf6b707cc7b90bc5",
+    "code/src/agents/agents.py": "76ad0472cc849cb31ceb6285e1cefb534fad3b23969280d245dfe08046ad66a1",
+    "code/src/agents/chatbot_ufpi.py": "487a7075de3f562d847311038e0cc6c63563156240e33d154b0dbf7a569e8095",
+    "code/src/agents/knowledge_base_agent.py": "f2bbcc9809ca9b0462bcbc2783a10b2fcacb6f0f852fb73771ecacf793c54a31",
+    "code/src/agents/research_assistant.py": "e9336e9aee6a6041ed91d776ee55ba520a3e0d132d07c937c17d252673a1d862",
+    "code/src/agents/rag_assistant.py": "a9574e1b7b5774849f49e16e18cc3217b8affd6ab332a0f693afd8c63f8279a1",
+    "code/src/agents/chatbot_generic.py": "6b45d6b1240052cdc12e1faf19b68a95946df670da2874733051be78384aab23",
+    "code/src/agents/utils.py": "b1f699788fec8db0336ed85d4f639fdcbf038d05f7370a098325e071f95e90cd",
+    "code/src/agents/chatbot_ufpi_agentic.py": "d3a7641f065b7f1fc9640079c8448097c64951c6e83dc4d08201aa94e83e75c4",
+    "code/src/agents/llama_guard.py": "0a24e3cd7c54ec2990cb65426727da0c2997c89267fc154a2e8ecef6f4aa77be",
+    "code/src/agents/tools_v2.py": "44a5c9bf62328bb60613e3cca3b52b22f1af1430ea535900a8039af91611cf6b",
+    "code/src/agents/langgraph_supervisor_agent.py": "fcd0e882e1dd5978566226b5f12e04a3c5a1b32f6493c5b3259b8cdb8d1f3378",
+    "code/src/agents/interrupt_agent.py": "500adc130d6f42cf148f6679d53df74b13a688d9a186bb79733535776444426f",
+    "code/src/agents/command_agent.py": "4fc4b0e3c3f780a9e5313cdb90786990e91b71bfacfafec4765f72ecc267ff81",
+    "code/src/service/service.py": "0df6c5d223620807ee412e201733839a1034b0c905323475ca7cabfe9d26783d",
+    "code/src/service/__init__.py": "3443e3d88baf90dc1430bd1e9123008c4934c8392ec6bc4774101c67ac0e33ca",
+    "code/src/service/normative_transport.py": "31a69c23a98a58674787f29c058213ed5f70df9b4ed01936640fbc6734eeebcf",
+    "code/src/service/utils.py": "746fc671e28a0ae44965cc3b4a77ea7e430d6a0a21d804a25bbe085464643c8f",
+    "code/src/rag_baseline/retrieval_service.py": "9f86ab184e98e68548e7b38e5a0fee28b3bad84f00db2955ba470c05f8d1470c",
+    "code/src/rag_baseline/retrieval_policy.py": "19423726e29bff0be9fafcba5b2768023d3b7ee5e48d4a7556ad1d817be68d73",
+    "code/src/rag_baseline/service.py": "c283ff7a1c6df7added671b82dba73c8ac70be27f83534d28a7df90e5c17fec4",
+    "code/src/rag_baseline/scope.py": "c0286726b404dbfa1640ea0966a7040cfc26e505f1d7619692d416b111d2702d",
+    "code/src/rag_baseline/api.py": "5f416094d4d5a6731e7081927b64a03e909e94110e8101edd0208edfdebaedf0",
+    "code/src/rag_baseline/conversation_transform.py": "0093fae23e7b25176a67f1b25c20bb5c8ca7ba9dba00529140f030db825e5905",
+    "code/src/rag_baseline/index.py": "102174caa4f36d4d9b23d67d6cd536625bcdb4aa8edb5105d904c92378b6e306",
+    "code/src/rag_baseline/integrated_runtime.py": "bfaa8f86ec537d3e418b49df938504d8e3925654cdfd289a889fa916833db4f2",
+    "code/src/rag_baseline/chat.py": "e1c2e1c851c101038f41f3ffd47543108b95a89cdc7f1c16cd2010794ec23813",
+    "code/src/rag_baseline/experiment_v2.py": "ce9481a08444e500bc91bc6559ce8cb0985e07f0db095fa135cdfa1eaec80873",
+    "code/src/rag_baseline/conversation_contracts.py": "baa58a813505baa39486842eceb9d5acdcd4b87b5090d5b9ebd7f697d5b17b3a",
+    "code/src/rag_baseline/generation_evaluation.py": "bf76f1f7005d26230c51a22073363360b7af3188f86ff8ce94c03a3276ae293c",
+    "code/src/rag_baseline/profiles.py": "3054cb4e881847a22fe748286ec48af12e419d18f132b35b5a9343ea75bed860",
+    "code/src/rag_baseline/routing_normalization.py": "884fa8be9b87e055b9358ebd4a94daf3e8282fb5808142714132f54b0e245281",
+    "code/src/rag_baseline/temporal_evaluation.py": "0a0a1f2a1afa72c1ba5db1626e7ac7e784d9fe3e1bd996ae8b7fad84a45d1060",
+    "code/src/rag_baseline/tool_facade.py": "625f829dc0c0ad9d535ecb599e6e39c93241d9d37d0e54329e2cfab2a45b3552",
+    "code/src/rag_baseline/__init__.py": "539056baaeba82639effc582df1b127da66d551b25146d7c41d7e6118b3c3ae3",
+    "code/src/rag_baseline/experiment.py": "a29ae1d0f9c9491c6c5717efd488be3a0d9d4bda1d4d83a93c4f29b30d8f63bc",
+    "code/src/rag_baseline/versioning.py": "8a0946d270ff48c49a2694ba8f5f3fddd1a7c8e56cbd3669bbc3aa3674df758c",
+    "code/src/rag_baseline/prompts.py": "2714efb60a400572aff9d2101bbae659fb28d2e70b97e1723f1d776dfdbfa23a",
+    "code/src/rag_baseline/grounding.py": "2d3ebb2c129cb2c06e844aacb26b7f76fc316225ab86ec14124ea80cf44ef787",
+    "code/src/rag_baseline/routing.py": "e641fa1ede406d317cc39a54fa85371f55ca40cd7022cb882122479b0e20319d",
+    "code/src/rag_baseline/agentic.py": "cb71c692950b2d37f8d6ac851277dfcc2335f54de820b673b75574e2b486d4d4",
+    "code/src/rag_baseline/calculator.py": "6cefd3d7291507bffe700919d02c7e96fea29d4fe6c9136e8747ee5d5e53abee",
+    "code/src/rag_baseline/models.py": "656d540021e682cba118cf6e7a7de78c790564d3f4fecc6f4898bb198ecf7eca",
+    "code/src/rag_baseline/tool_contracts.py": "30d89de6ee01db04bfdbf1f012cb033072a81ee46e46d10e41d1c006393f4a4e",
+    "code/src/rag_baseline/audit_v2.py": "0c1656bccd60833248add9220701b2bec7a1dacc7ab8225a5c534d9a182f217a",
+    "code/src/rag_baseline/incremental_index.py": "c01b2778992b08274c03b4a86b122303b33fd9a3985c9498d8d1200bef829182",
+    "code/src/rag_baseline/retrieval_engines.py": "6afde92d150f7f676e6887c686534d8dfec016ed2db39a0b5bc0bd806245fdd6",
+    "code/src/rag_baseline/config.py": "1e77ca784ecd191d18ac65243f30a574e05149480e97b84487740299cb5b6979",
+    "code/src/rag_baseline/output_contracts.py": "c29b03f8b5a568d678b444f17ee20f34278d92754d9079ed38e3765add6973d3",
+    "code/src/rag_baseline/scope_gate.py": "95b0c4690664574dd80e73bd307df35069778aac59326a95071e28016148194d",
+    "code/src/rag_baseline/openrouter.py": "c2ccf65a67fce12f05c3c6a52a71f1de1fa64203e0dad0c9243af623529ba230",
+    "code/src/rag_baseline/content_locators.py": "62fd12c66b325db742aa6eb8a24d183cc760aaa9ff6b0048358d9ce0f675f5b3",
+    "code/src/rag_baseline/corpus.py": "18919d4b8cb648aa8a01c4f04a492aca3b6bee7cfa77f5e2994830b55b752d76",
+    "code/src/rag_baseline/dataset.py": "ca7dc6a6d9c1169f12f1ce0c813a58fbea0f6e0ea40f5605188ac60a7e94fc1e",
+    "code/src/rag_baseline/structured_evaluation_v2.py": "dbfaecc005cf78ec450868eb17af6a3d37fecda5e4eefff1bd3128c32aceaba6",
+    "code/src/rag_baseline/agentic_evaluation.py": "9bf0fd79de945adbf059aa3fb1394f03c59eb54b10961f026f9dc7fb62074de7",
+    "code/src/rag_baseline/agent_emission.py": "b0a0e23b5e98c808f6a37d556fa73ac65819a166b90915241e56cc459b530bb7",
+    "code/src/rag_baseline/router.py": "27f5fcbf054242d01c86507ef536087e8f81d1505dc2fbde2b4d3c38b6ab8daa",
+    "code/src/rag_baseline/adaptive_router.py": "41b3e56fcc83b33998b614ab13fe37f2e71c42e90a5010d3827aea9a62aff186",
+    "code/src/rag_baseline/calculator_contracts.py": "dc6f17c31771302877407f8a0b56e1c327e56fd3f00a2085921815d7238c058a",
+    "code/src/rag_baseline/vector_store.py": "17ad45b5dc23caeaf7e8a19cb571244a686cc216c39531f22e2897528d78634d",
+    "code/src/rag_baseline/agent_tool.py": "f1a7bd73db821746f0c1143888abacea23a34bec259816e4479564b039808141",
+    "code/src/rag_baseline/agent_policy.py": "cf93a002f9eec025d3b59e754a00eefd3de0a2ce1227f400fdd18cd89a634ede",
+    "code/src/rag_baseline/demo.py": "5b86cc733c0e015a943c7b22df6a252e9daf77230bd111313363ab967b32a3c1",
+    "code/src/rag_baseline/ui_presentation.py": "3cfa0c3989995be4dd1bcda881bc2cd590359d056bd2f16761eb80bf54c8ac03",
+    "code/src/rag_baseline/routing_dataset.py": "be8702f6beb14fa8d3639d1ad1a8773dcd7e7683b334cb29907bd57002094c54",
+    "code/src/rag_baseline/audit_cli.py": "c0f639b9f62adb35fb427074c239fec1fed92c433a89ebe927f9ed8d524f8dbd",
+    "code/src/rag_baseline/conversation_policy.py": "020dd7d5542eb8178a0bf9e31725514b701a0fdadcff7b0342daceee865a96f0",
+    "code/src/rag_baseline/router_probe.py": "6ca1fc61f5241fcbee124bc7ccd5ade872c5b260611ece7220976f765079d0fc",
+    "code/src/rag_baseline/audit_terminal.py": "1ce0d7ec90d0b73f7b4999945249152d8fc734d54662d783efd7af363dbd9882",
+    "code/src/rag_baseline/normative_output.py": "56279c1fa47d44f7def9d04e575dd1ea63c63bc04386c5b143c87d2291e14d7d",
+    "code/src/rag_baseline/conversation_graph.py": "822f80f8051145721a9875128a1f334c6f54c4412c1358015bdcc5a09d33d201",
+    "code/src/rag_baseline/structured_evaluation.py": "1afaa74827bab10fed9de90f7619f0e89373b08da76255391298e673d9c160f4",
+    "code/src/rag_baseline/agent_graph.py": "1ec9a4ef11882658de230092a1767a0b475f19568690c8300f755e8bac84c088",
+    "code/src/rag_baseline/routing_evaluation.py": "528c1fea19b7eadc4a31c667b55eea84b69e3561fb674ae53cc4f96f51c5ec9e",
+    "code/src/rag_baseline/retrieve.py": "b37609b19c1d80298055f76e920226531cb7ddb3516aaaaa1cd096a77cddf0bc",
+    "code/src/rag_baseline/analyze_experiment.py": "3775da46d3415fff60e019d7e4dc1bfd89907a1fa756c27c71f49c39ae69e101",
+    "code/src/memory/postgres.py": "0a2cf181fc1f173b0afcdf0128eea2ac256d7ed1bdfe94ef90aa9cf1e5f15052",
+    "code/src/memory/sqlite.py": "27ff15793d1fa583344d27769fe847adff1bfe9c0d7449d34ba12076d9b7a04b",
+    "code/src/memory/__init__.py": "9e0a84e66afdbc90cfafabbb80936aa84da354f087ae14660e40636a0ea3866c",
+    "code/src/memory/mongodb.py": "10d29cdf1a89dc4e89ffad3ab77b571d22d4d9a247c5becea3486e91512a7d9b",
+    "code/src/schema/__init__.py": "7bf448af1a4adef095d73a40b7edae506982a682cd2e6bb598ab2dc7dc9622e6",
+    "code/src/schema/schema.py": "837516605d47e8145efa516d8195614897c3a8c3f124d6e7d9c6e587dc600dd7",
+    "code/src/schema/task_data.py": "bb75ea87491fb9f0bb563f8349c2318951346481f1c50e0c5cebe048b7a52ee3",
+    "code/src/schema/models.py": "6098e81c32e0704bb0bf3c2cd0a32a0543efa5a267cf4a477e8d7e01186c6273",
+    "code/src/core/__init__.py": "83a763e7241b133d1e1ab7c3b81c8bd6b5ec428cd2cb41869b9069df641b39d6",
+    "code/src/core/settings.py": "86875e018e16df7a1962eb2c0060d2244576575a770b568d879f91558234f7c3",
+    "code/src/core/llm.py": "afc98879f36178e16e1ae143689880a9ec700444610ffc0ae2a667b04454c2a0",
+    "code/src/agents/bg_task_agent/bg_task_agent.py": "e86c1fd69b26e728ee9acc96c1b3a58ba63ea3560aa26afac421c4f249a28699",
+    "code/src/agents/bg_task_agent/task.py": "d7536b1b61be9c8195098dc6a738ebc5b6512644bc1da7bd6199a084344013e5"
+  },
+  "index_after": {
+    "count": 507,
+    "sha256": "ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a"
+  },
+  "completed_at": "2026-11-02T04:22:46.255269+00:00",
+  "success": true,
+  "legal_review": "NOT_PERFORMED; terminal ANSWER is not legal correctness",
+  "raw_draft_exposed": false,
+  "technical_summary": {
+    "classification": "development scope regression; not scientific evaluation",
+    "expectations_met": {
+      "numerator": 16,
+      "denominator": 16
+    },
+    "calls": {
+      "scope_provider_calls": 11,
+      "normative_provider_calls": 15,
+      "provider_calls": 26,
+      "router_calls": 8,
+      "retrieval_calls": 3
+    },
+    "latency_ms": {
+      "scope_gate": {
+        "mean": 1429.8464171816622,
+        "n": 11
+      },
+      "router": {
+        "mean": 1149.8531488750814,
+        "n": 8
+      },
+      "total_pre_retrieval": {
+        "mean": 2478.5717922504773,
+        "n": 8
+      }
+    },
+    "counter_semantics": "provider_calls = Scope POSTs + normative POSTs; normative includes Router, embedding, generation and regeneration. Retrieval calls count service.retrieve, not individual index operations.",
+    "pre_retrieval_definition": "Elapsed turn start to first retrieval start; when none, to last Router finish or Scope POST finish; excludes answer generation.",
+    "api_source_files_verified": 94,
+    "legal_correctness_scored": false
+  }
+}

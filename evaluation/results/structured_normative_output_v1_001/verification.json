@@ -1,0 +1,68 @@
+{
+  "focused": {
+    "command": "pytest tests/rag_baseline/test_normative_output.py -q -p no:cacheprovider --tb=short",
+    "passed": 54,
+    "failed": 0
+  },
+  "temporal": {
+    "command": "pytest tests/rag_baseline/test_temporal_grounding.py tests/rag_baseline/test_temporal_invariants.py tests/rag_baseline/test_temporal_versions.py tests/rag_baseline/test_versioning.py tests/rag_baseline/test_agentic_pipeline.py -q -p no:cacheprovider --tb=short",
+    "passed": 93,
+    "failed": 0
+  },
+  "rag_baseline": {
+    "command": "pytest tests/rag_baseline -q -p no:cacheprovider --tb=short",
+    "passed": 340,
+    "skipped": 10,
+    "failed": 0,
+    "warnings": 2
+  },
+  "full_suite": {
+    "command": "pytest -q -p no:cacheprovider --tb=short",
+    "passed": 403,
+    "skipped": 12,
+    "failed": 0,
+    "warnings": 4
+  },
+  "ruff": {
+    "files": 8,
+    "check_exit": 0,
+    "format_check_exit": 0
+  },
+  "diff_check_exit": 0,
+  "corrected_invocations": [
+    "Temporal selection initially referred to nonexistent test_agentic.py; no tests ran. Corrected existing five-file selection passed 93."
+  ],
+  "compatibility_red": {
+    "failed": 5,
+    "passed": 318,
+    "skipped": 10,
+    "reason": "Old raw-answer equality and dynamic per-scope system prompt expectations; corrected composition tests and common system instructions."
+  },
+  "warnings": [
+    "Two dependency Pydantic deprecation warnings.",
+    "Legacy client AsyncMock coroutine warning.",
+    "Legacy Starlette TestClient timeout deprecation."
+  ],
+  "experiment": {
+    "queries": 44,
+    "provider_calls": 68,
+    "provider_errors": 0,
+    "extra_replay_real_calls": 0
+  },
+  "reviewer_regressions": {
+    "focused_checks": 16,
+    "passed": 16,
+    "read_only": true
+  },
+  "python": "CPython 3.11.15 with existing cp311 dependencies via PYTHONPATH; old venv launcher points to missing interpreter",
+  "local_only": true,
+  "scientific_integrity": {
+    "raw_guard_final_annotation_pairs": 44,
+    "raw_final_hashes_match": true,
+    "provider_calls": 68,
+    "official_reference_entries": 213,
+    "comparison_pairs": 44,
+    "source_code_execution_hashes_match": true,
+    "old_experiment_hashes_match": true
+  }
+}

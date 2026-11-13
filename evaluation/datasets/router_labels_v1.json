@@ -1,0 +1,207 @@
+{
+  "schema_version": "1.0",
+  "candidate_gold": true,
+  "derivation": "V2 expected_action answer/clarify; scope from sector only for answer. No reannotation.",
+  "items": [
+    {
+      "id": "GRAD2-001",
+      "expected_scope": "graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "id": "GRAD2-002",
+      "expected_scope": "graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "id": "GRAD2-003",
+      "expected_scope": "graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "id": "GRAD2-004",
+      "expected_scope": "graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "id": "GRAD2-005",
+      "expected_scope": null,
+      "expected_action": "esclarecer"
+    },
+    {
+      "id": "GRAD2-006",
+      "expected_scope": null,
+      "expected_action": "esclarecer"
+    },
+    {
+      "id": "GRAD2-007",
+      "expected_scope": null,
+      "expected_action": "esclarecer"
+    },
+    {
+      "id": "GRAD2-008",
+      "expected_scope": null,
+      "expected_action": "esclarecer"
+    },
+    {
+      "id": "GRAD2-009",
+      "expected_scope": null,
+      "expected_action": "esclarecer"
+    },
+    {
+      "id": "GRAD2-010",
+      "expected_scope": null,
+      "expected_action": "esclarecer"
+    },
+    {
+      "id": "GRAD2-011",
+      "expected_scope": "graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "id": "GRAD2-012",
+      "expected_scope": null,
+      "expected_action": "esclarecer"
+    },
+    {
+      "id": "GRAD2-013",
+      "expected_scope": null,
+      "expected_action": "esclarecer"
+    },
+    {
+      "id": "GRAD2-014",
+      "expected_scope": null,
+      "expected_action": "esclarecer"
+    },
+    {
+      "id": "GRAD2-015",
+      "expected_scope": null,
+      "expected_action": "esclarecer"
+    },
+    {
+      "id": "GRAD2-016",
+      "expected_scope": null,
+      "expected_action": "esclarecer"
+    },
+    {
+      "id": "GRAD2-017",
+      "expected_scope": null,
+      "expected_action": "esclarecer"
+    },
+    {
+      "id": "GRAD2-018",
+      "expected_scope": "graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "id": "GRAD2-019",
+      "expected_scope": null,
+      "expected_action": "esclarecer"
+    },
+    {
+      "id": "GRAD2-020",
+      "expected_scope": null,
+      "expected_action": "esclarecer"
+    },
+    {
+      "id": "POS2-001",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "id": "POS2-002",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "id": "POS2-003",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "id": "POS2-004",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "id": "POS2-005",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "id": "POS2-006",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "id": "POS2-007",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "id": "POS2-008",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "id": "POS2-009",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "id": "POS2-010",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "id": "POS2-011",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "id": "POS2-012",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "id": "POS2-013",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "id": "POS2-014",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "id": "POS2-015",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "id": "POS2-016",
+      "expected_scope": "pos_graduacao",
+      "expected_action": "responder"
+    },
+    {
+      "id": "POS2-017",
+      "expected_scope": null,
+      "expected_action": "esclarecer"
+    },
+    {
+      "id": "POS2-018",
+      "expected_scope": null,
+      "expected_action": "esclarecer"
+    },
+    {
+      "id": "POS2-019",
+      "expected_scope": null,
+      "expected_action": "esclarecer"
+    },
+    {
+      "id": "POS2-020",
+      "expected_scope": null,
+      "expected_action": "esclarecer"
+    }
+  ]
+}

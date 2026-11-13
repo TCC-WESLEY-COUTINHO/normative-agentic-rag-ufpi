@@ -1,0 +1,701 @@
+{
+  "schema_version": "1.0",
+  "status": "technical_regression_not_legal_gold",
+  "purpose": "Temporal invariants T1-T10; fixed cases derived from documented relations, without tuning previous datasets.",
+  "items": [
+    {
+      "id": "P1_current",
+      "domain": "pos_graduacao",
+      "question": "Qual é atualmente a regra de defesa no mestrado?",
+      "temporal_intent": "current",
+      "expected_norms_allowed": [
+        "ufpi-956-2025"
+      ],
+      "expected_norms_blocked": [
+        "ufpi-658-2024"
+      ],
+      "expected_amendment_action": "none",
+      "expected_answer_action": "answer",
+      "source_case": "P1",
+      "notes": "Regressão técnica com relações documentais conhecidas; não é gold jurídico validado.",
+      "candidates": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article": "53"
+        },
+        {
+          "norm_id": "ufpi-658-2024",
+          "article": "43"
+        }
+      ],
+      "required_norms": [
+        "ufpi-956-2025"
+      ],
+      "pair": "post_defense",
+      "manual_scope": null,
+      "broken_amendment": false,
+      "known_relation": true,
+      "live_smoke": true
+    },
+    {
+      "id": "P2_historical",
+      "domain": "pos_graduacao",
+      "question": "Segundo a Resolução 658/2024, como era a regra de defesa no mestrado?",
+      "temporal_intent": "historical",
+      "expected_norms_allowed": [
+        "ufpi-658-2024"
+      ],
+      "expected_norms_blocked": [
+        "ufpi-956-2025"
+      ],
+      "expected_amendment_action": "none",
+      "expected_answer_action": "answer",
+      "source_case": "P2",
+      "notes": "Regressão técnica com relações documentais conhecidas; não é gold jurídico validado.",
+      "candidates": [
+        {
+          "norm_id": "ufpi-658-2024",
+          "article": "43"
+        },
+        {
+          "norm_id": "ufpi-956-2025",
+          "article": "53"
+        }
+      ],
+      "required_norms": [
+        "ufpi-658-2024"
+      ],
+      "pair": "post_defense",
+      "manual_scope": null,
+      "broken_amendment": false,
+      "known_relation": true,
+      "live_smoke": true
+    },
+    {
+      "id": "P3_validity",
+      "domain": "pos_graduacao",
+      "question": "A Resolução 658/2024 ainda está vigente na pós-graduação?",
+      "temporal_intent": "validity",
+      "expected_norms_allowed": [
+        "ufpi-956-2025"
+      ],
+      "expected_norms_blocked": [
+        "ufpi-658-2024"
+      ],
+      "expected_amendment_action": "none",
+      "expected_answer_action": "answer",
+      "source_case": "P3",
+      "notes": "Regressão técnica com relações documentais conhecidas; não é gold jurídico validado.",
+      "candidates": [
+        {
+          "norm_id": "ufpi-658-2024",
+          "article": "43"
+        }
+      ],
+      "required_norms": [
+        "ufpi-956-2025"
+      ],
+      "pair": null,
+      "manual_scope": null,
+      "broken_amendment": false,
+      "known_relation": true,
+      "live_smoke": true
+    },
+    {
+      "id": "P4_comparison",
+      "domain": "pos_graduacao",
+      "question": "Qual era a regra de defesa na 658/2024 e qual é a regra atual na 956/2025 no mestrado?",
+      "temporal_intent": "comparison",
+      "expected_norms_allowed": [
+        "ufpi-658-2024",
+        "ufpi-956-2025"
+      ],
+      "expected_norms_blocked": [],
+      "expected_amendment_action": "none",
+      "expected_answer_action": "answer",
+      "source_case": "P4",
+      "notes": "Regressão técnica com relações documentais conhecidas; não é gold jurídico validado.",
+      "candidates": [
+        {
+          "norm_id": "ufpi-658-2024",
+          "article": "43"
+        },
+        {
+          "norm_id": "ufpi-956-2025",
+          "article": "53"
+        }
+      ],
+      "required_norms": [
+        "ufpi-658-2024",
+        "ufpi-956-2025"
+      ],
+      "pair": null,
+      "manual_scope": null,
+      "broken_amendment": false,
+      "known_relation": true,
+      "live_smoke": false
+    },
+    {
+      "id": "G1_current",
+      "domain": "graduacao",
+      "question": "Como é atualmente o §4º do art. 68 na graduação sobre a escolha do coordenador de estágio?",
+      "temporal_intent": "current",
+      "expected_norms_allowed": [
+        "ufpi-177-2012",
+        "ufpi-1056-2026"
+      ],
+      "expected_norms_blocked": [],
+      "expected_amendment_action": "applied",
+      "expected_answer_action": "answer",
+      "source_case": "G1",
+      "notes": "Regressão técnica com relações documentais conhecidas; não é gold jurídico validado.",
+      "candidates": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article": "68"
+        }
+      ],
+      "required_norms": [
+        "ufpi-177-2012"
+      ],
+      "pair": "grad_coordinator",
+      "manual_scope": null,
+      "broken_amendment": false,
+      "known_relation": true,
+      "live_smoke": true
+    },
+    {
+      "id": "G2_unaffected",
+      "domain": "graduacao",
+      "question": "Qual é atualmente a regra do art. 69 na graduação?",
+      "temporal_intent": "current",
+      "expected_norms_allowed": [
+        "ufpi-177-2012"
+      ],
+      "expected_norms_blocked": [],
+      "expected_amendment_action": "none",
+      "expected_answer_action": "answer",
+      "source_case": "G2",
+      "notes": "Regressão técnica com relações documentais conhecidas; não é gold jurídico validado.",
+      "candidates": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article": "69"
+        }
+      ],
+      "required_norms": [
+        "ufpi-177-2012"
+      ],
+      "pair": null,
+      "manual_scope": null,
+      "broken_amendment": false,
+      "known_relation": false,
+      "live_smoke": true
+    },
+    {
+      "id": "G3_historical",
+      "domain": "graduacao",
+      "question": "Como era o §4º do art. 68 na graduação sobre a escolha do coordenador de estágio antes da alteração de 2026?",
+      "temporal_intent": "historical",
+      "expected_norms_allowed": [
+        "ufpi-177-2012"
+      ],
+      "expected_norms_blocked": [
+        "ufpi-1056-2026"
+      ],
+      "expected_amendment_action": "historical_preserved",
+      "expected_answer_action": "answer",
+      "source_case": "G3",
+      "notes": "Regressão técnica com relações documentais conhecidas; não é gold jurídico validado.",
+      "candidates": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article": "68"
+        },
+        {
+          "norm_id": "ufpi-1056-2026",
+          "article": "1"
+        }
+      ],
+      "required_norms": [
+        "ufpi-177-2012"
+      ],
+      "pair": "grad_coordinator",
+      "manual_scope": null,
+      "broken_amendment": false,
+      "known_relation": true,
+      "live_smoke": true
+    },
+    {
+      "id": "G4_amendment",
+      "domain": "graduacao",
+      "question": "Qual norma alterou o §4º do art. 68 da graduação?",
+      "temporal_intent": "indeterminate",
+      "expected_norms_allowed": [
+        "ufpi-1056-2026",
+        "ufpi-177-2012"
+      ],
+      "expected_norms_blocked": [],
+      "expected_amendment_action": "none",
+      "expected_answer_action": "answer",
+      "source_case": "G4",
+      "notes": "Regressão técnica com relações documentais conhecidas; não é gold jurídico validado.",
+      "candidates": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article": "69"
+        }
+      ],
+      "required_norms": [
+        "ufpi-1056-2026"
+      ],
+      "pair": null,
+      "manual_scope": null,
+      "broken_amendment": false,
+      "known_relation": true,
+      "live_smoke": true
+    },
+    {
+      "id": "G5_unresolved",
+      "domain": "graduacao",
+      "question": "Como é atualmente o §4º do art. 68 da graduação?",
+      "temporal_intent": "current",
+      "expected_norms_allowed": [],
+      "expected_norms_blocked": [
+        "ufpi-177-2012",
+        "ufpi-1056-2026"
+      ],
+      "expected_amendment_action": "unresolved",
+      "expected_answer_action": "abstain",
+      "source_case": "G5",
+      "notes": "Regressão técnica com relações documentais conhecidas; não é gold jurídico validado.",
+      "candidates": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article": "68"
+        },
+        {
+          "norm_id": "ufpi-177-2012",
+          "article": "69"
+        }
+      ],
+      "required_norms": [],
+      "pair": null,
+      "manual_scope": null,
+      "broken_amendment": true,
+      "known_relation": true,
+      "live_smoke": false
+    },
+    {
+      "id": "U1_unknown",
+      "domain": "pos_graduacao",
+      "question": "Qual é a regra atual de defesa no mestrado?",
+      "temporal_intent": "current",
+      "expected_norms_allowed": [
+        "ufpi-956-2025"
+      ],
+      "expected_norms_blocked": [],
+      "expected_amendment_action": "none",
+      "expected_answer_action": "answer",
+      "source_case": "U1",
+      "notes": "Regressão técnica com relações documentais conhecidas; não é gold jurídico validado.",
+      "candidates": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article": "53"
+        }
+      ],
+      "required_norms": [
+        "ufpi-956-2025"
+      ],
+      "pair": null,
+      "manual_scope": null,
+      "broken_amendment": false,
+      "known_relation": false,
+      "live_smoke": false
+    },
+    {
+      "id": "E1_empty",
+      "domain": "pos_graduacao",
+      "question": "Qual é a regra atual no mestrado?",
+      "temporal_intent": "current",
+      "expected_norms_allowed": [],
+      "expected_norms_blocked": [],
+      "expected_amendment_action": "none",
+      "expected_answer_action": "abstain",
+      "source_case": "E1",
+      "notes": "Regressão técnica com relações documentais conhecidas; não é gold jurídico validado.",
+      "candidates": [],
+      "required_norms": [],
+      "pair": null,
+      "manual_scope": null,
+      "broken_amendment": false,
+      "known_relation": false,
+      "live_smoke": false
+    },
+    {
+      "id": "E2_calendar",
+      "domain": "graduacao",
+      "question": "Em 2025, como era o §4º do art. 68 da graduação?",
+      "temporal_intent": "historical",
+      "expected_norms_allowed": [],
+      "expected_norms_blocked": [
+        "ufpi-177-2012",
+        "ufpi-1056-2026"
+      ],
+      "expected_amendment_action": "none",
+      "expected_answer_action": "abstain",
+      "source_case": "E2",
+      "notes": "Regressão técnica com relações documentais conhecidas; não é gold jurídico validado.",
+      "candidates": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article": "68"
+        },
+        {
+          "norm_id": "ufpi-1056-2026",
+          "article": "1"
+        }
+      ],
+      "required_norms": [],
+      "pair": null,
+      "manual_scope": null,
+      "broken_amendment": false,
+      "known_relation": true,
+      "live_smoke": true
+    },
+    {
+      "id": "R1_both",
+      "domain": "ambas",
+      "question": "Compare atualmente as regras da graduação e da pós-graduação.",
+      "temporal_intent": "current",
+      "expected_norms_allowed": [
+        "ufpi-177-2012",
+        "ufpi-956-2025"
+      ],
+      "expected_norms_blocked": [
+        "ufpi-658-2024"
+      ],
+      "expected_amendment_action": "none",
+      "expected_answer_action": "answer",
+      "source_case": "R1",
+      "notes": "Regressão técnica com relações documentais conhecidas; não é gold jurídico validado.",
+      "candidates": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article": "69"
+        },
+        {
+          "norm_id": "ufpi-956-2025",
+          "article": "53"
+        },
+        {
+          "norm_id": "ufpi-658-2024",
+          "article": "43"
+        }
+      ],
+      "required_norms": [
+        "ufpi-177-2012",
+        "ufpi-956-2025"
+      ],
+      "pair": null,
+      "manual_scope": null,
+      "broken_amendment": false,
+      "known_relation": true,
+      "live_smoke": false
+    },
+    {
+      "id": "R2_ambiguous",
+      "domain": null,
+      "question": "Posso cancelar uma disciplina?",
+      "temporal_intent": "indeterminate",
+      "expected_norms_allowed": [],
+      "expected_norms_blocked": [],
+      "expected_amendment_action": "none",
+      "expected_answer_action": "clarify",
+      "source_case": "R2",
+      "notes": "Regressão técnica com relações documentais conhecidas; não é gold jurídico validado.",
+      "candidates": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article": "69"
+        },
+        {
+          "norm_id": "ufpi-956-2025",
+          "article": "53"
+        }
+      ],
+      "required_norms": [],
+      "pair": null,
+      "manual_scope": null,
+      "broken_amendment": false,
+      "known_relation": false,
+      "live_smoke": true
+    },
+    {
+      "id": "M1_grad_current",
+      "domain": "graduacao",
+      "question": "Como é atualmente o §4º do art. 68?",
+      "temporal_intent": "current",
+      "expected_norms_allowed": [
+        "ufpi-177-2012"
+      ],
+      "expected_norms_blocked": [],
+      "expected_amendment_action": "applied",
+      "expected_answer_action": "answer",
+      "source_case": "M1",
+      "notes": "Regressão técnica com relações documentais conhecidas; não é gold jurídico validado.",
+      "candidates": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article": "68"
+        }
+      ],
+      "required_norms": [
+        "ufpi-177-2012"
+      ],
+      "pair": null,
+      "manual_scope": "graduacao",
+      "broken_amendment": false,
+      "known_relation": true,
+      "live_smoke": false
+    },
+    {
+      "id": "M2_post_current",
+      "domain": "pos_graduacao",
+      "question": "Qual é a regra atual de defesa?",
+      "temporal_intent": "current",
+      "expected_norms_allowed": [
+        "ufpi-956-2025"
+      ],
+      "expected_norms_blocked": [
+        "ufpi-658-2024"
+      ],
+      "expected_amendment_action": "none",
+      "expected_answer_action": "answer",
+      "source_case": "M2",
+      "notes": "Regressão técnica com relações documentais conhecidas; não é gold jurídico validado.",
+      "candidates": [
+        {
+          "norm_id": "ufpi-658-2024",
+          "article": "43"
+        },
+        {
+          "norm_id": "ufpi-956-2025",
+          "article": "53"
+        }
+      ],
+      "required_norms": [
+        "ufpi-956-2025"
+      ],
+      "pair": null,
+      "manual_scope": "pos_graduacao",
+      "broken_amendment": false,
+      "known_relation": true,
+      "live_smoke": false
+    },
+    {
+      "id": "M3_both_current",
+      "domain": "ambas",
+      "question": "Quais são atualmente as regras dos dois níveis?",
+      "temporal_intent": "current",
+      "expected_norms_allowed": [
+        "ufpi-177-2012",
+        "ufpi-956-2025"
+      ],
+      "expected_norms_blocked": [
+        "ufpi-658-2024"
+      ],
+      "expected_amendment_action": "none",
+      "expected_answer_action": "answer",
+      "source_case": "M3",
+      "notes": "Regressão técnica com relações documentais conhecidas; não é gold jurídico validado.",
+      "candidates": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article": "69"
+        },
+        {
+          "norm_id": "ufpi-956-2025",
+          "article": "53"
+        },
+        {
+          "norm_id": "ufpi-658-2024",
+          "article": "43"
+        }
+      ],
+      "required_norms": [
+        "ufpi-177-2012",
+        "ufpi-956-2025"
+      ],
+      "pair": null,
+      "manual_scope": "ambas",
+      "broken_amendment": false,
+      "known_relation": true,
+      "live_smoke": false
+    },
+    {
+      "id": "M4_grad_historical",
+      "domain": "graduacao",
+      "question": "Como era o §4º do art. 68 antes da alteração de 2026?",
+      "temporal_intent": "historical",
+      "expected_norms_allowed": [
+        "ufpi-177-2012"
+      ],
+      "expected_norms_blocked": [
+        "ufpi-1056-2026"
+      ],
+      "expected_amendment_action": "historical_preserved",
+      "expected_answer_action": "answer",
+      "source_case": "M4",
+      "notes": "Regressão técnica com relações documentais conhecidas; não é gold jurídico validado.",
+      "candidates": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article": "68"
+        },
+        {
+          "norm_id": "ufpi-1056-2026",
+          "article": "1"
+        }
+      ],
+      "required_norms": [
+        "ufpi-177-2012"
+      ],
+      "pair": null,
+      "manual_scope": "graduacao",
+      "broken_amendment": false,
+      "known_relation": true,
+      "live_smoke": false
+    },
+    {
+      "id": "M5_post_historical",
+      "domain": "pos_graduacao",
+      "question": "Segundo a 658/2024, como era a regra de defesa?",
+      "temporal_intent": "historical",
+      "expected_norms_allowed": [
+        "ufpi-658-2024"
+      ],
+      "expected_norms_blocked": [
+        "ufpi-956-2025"
+      ],
+      "expected_amendment_action": "none",
+      "expected_answer_action": "answer",
+      "source_case": "M5",
+      "notes": "Regressão técnica com relações documentais conhecidas; não é gold jurídico validado.",
+      "candidates": [
+        {
+          "norm_id": "ufpi-658-2024",
+          "article": "43"
+        },
+        {
+          "norm_id": "ufpi-956-2025",
+          "article": "53"
+        }
+      ],
+      "required_norms": [
+        "ufpi-658-2024"
+      ],
+      "pair": null,
+      "manual_scope": "pos_graduacao",
+      "broken_amendment": false,
+      "known_relation": true,
+      "live_smoke": false
+    },
+    {
+      "id": "S1_safety_only",
+      "domain": "pos_graduacao",
+      "question": "Qual é a regra atual de defesa no mestrado?",
+      "temporal_intent": "current",
+      "expected_norms_allowed": [],
+      "expected_norms_blocked": [
+        "ufpi-658-2024"
+      ],
+      "expected_amendment_action": "none",
+      "expected_answer_action": "abstain",
+      "source_case": "S1",
+      "notes": "Regressão técnica com relações documentais conhecidas; não é gold jurídico validado.",
+      "candidates": [
+        {
+          "norm_id": "ufpi-658-2024",
+          "article": "43"
+        }
+      ],
+      "required_norms": [],
+      "pair": null,
+      "manual_scope": null,
+      "broken_amendment": false,
+      "known_relation": true,
+      "live_smoke": false,
+      "bypass_prefilter": true
+    },
+    {
+      "id": "G6_before_only",
+      "domain": "graduacao",
+      "question": "Antes da alteração de 2026, qual a redação do §4º do art. 68 da graduação?",
+      "temporal_intent": "historical",
+      "expected_norms_allowed": [
+        "ufpi-177-2012"
+      ],
+      "expected_norms_blocked": [
+        "ufpi-1056-2026"
+      ],
+      "expected_amendment_action": "historical_preserved",
+      "expected_answer_action": "answer",
+      "source_case": "G6",
+      "notes": "Regressão técnica com relações documentais conhecidas; não é gold jurídico validado.",
+      "candidates": [
+        {
+          "norm_id": "ufpi-177-2012",
+          "article": "68"
+        },
+        {
+          "norm_id": "ufpi-1056-2026",
+          "article": "1"
+        }
+      ],
+      "required_norms": [
+        "ufpi-177-2012"
+      ],
+      "pair": null,
+      "manual_scope": null,
+      "broken_amendment": false,
+      "known_relation": true,
+      "live_smoke": false
+    },
+    {
+      "id": "I1_unspecified_time",
+      "domain": "pos_graduacao",
+      "question": "Quais os requisitos de defesa no mestrado?",
+      "temporal_intent": "indeterminate",
+      "expected_norms_allowed": [
+        "ufpi-956-2025"
+      ],
+      "expected_norms_blocked": [
+        "ufpi-658-2024"
+      ],
+      "expected_amendment_action": "none",
+      "expected_answer_action": "answer",
+      "source_case": "I1",
+      "notes": "Regressão técnica com relações documentais conhecidas; não é gold jurídico validado.",
+      "candidates": [
+        {
+          "norm_id": "ufpi-658-2024",
+          "article": "43"
+        },
+        {
+          "norm_id": "ufpi-956-2025",
+          "article": "53"
+        }
+      ],
+      "required_norms": [
+        "ufpi-956-2025"
+      ],
+      "pair": null,
+      "manual_scope": null,
+      "broken_amendment": false,
+      "known_relation": true,
+      "live_smoke": false
+    }
+  ]
+}

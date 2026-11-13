@@ -1,0 +1,13 @@
+........................                                                 [100%]
+============================== warnings summary ===============================
+tests/service/test_service_e2e.py::test_agent_stream
+tests/service/test_service_e2e.py::test_agent_stream
+  code\.venv\Lib\site-packages\langchain_core\tools\base.py:1314: PydanticDeprecatedSince20: The `__fields__` attribute is deprecated, use `model_fields` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+    fields = getattr(cls, "model_fields", {}) or getattr(cls, "__fields__", {})
+
+tests/service/test_service_e2e.py::test_agent_stream
+  code\.venv\Lib\site-packages\starlette\testclient.py:431: DeprecationWarning: You should not use the 'timeout' argument with the TestClient. See https://github.com/encode/starlette/issues/1108 for more information.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+24 passed, 3 warnings in 1.22s

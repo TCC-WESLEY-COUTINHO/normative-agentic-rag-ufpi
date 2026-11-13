@@ -1,0 +1,9 @@
+{
+  "staged_evidence_files_including_this_audit": 358,
+  "staged_blob_bytes_verified_before_audit": 357,
+  "ignored_log_files_explicitly_included": 214,
+  "forbidden_runtime_files_staged": 0,
+  "bytecode_staged": 0,
+  "scope": "evaluation/results/container_runtime_smoke_v1_001 only",
+  "all_manifest_hashes_match_working_files": true
+}

@@ -1,0 +1,1382 @@
+{
+  "audit_id": "agentic_integration_audit_v1_001",
+  "scope": "Static audit only: no production changes, graph imports, API/network calls, service/UI startup or tests performed for this artifact.",
+  "evidence_convention": "Repository-relative path:line.",
+  "inspected_paths": [
+    "code/src/service/service.py",
+    "code/src/service/utils.py",
+    "code/src/service/__init__.py",
+    "code/src/client/client.py",
+    "code/src/client/__init__.py",
+    "code/src/schema/schema.py",
+    "code/src/schema/models.py",
+    "code/src/schema/task_data.py",
+    "code/src/schema/__init__.py",
+    "code/src/streamlit_app.py",
+    "code/src/run_service.py",
+    "code/src/run_client.py",
+    "code/src/run_agent.py",
+    "code/src/rag_baseline/api.py",
+    "code/src/rag_baseline/models.py",
+    "code/src/agents/chatbot_ufpi_agentic.py",
+    "code/src/agents/agents.py",
+    "code/src/agents/chatbot_ufpi_v2.py",
+    "code/src/rag_baseline/agentic.py",
+    "code/src/rag_baseline/service.py",
+    "code/src/rag_baseline/output_contracts.py",
+    "code/docker/Dockerfile.service",
+    "code/docker/Dockerfile.app",
+    "code/langgraph.json"
+  ],
+  "entrypoints": [
+    {
+      "entry": "python src/run_service.py",
+      "target": "service:app -> service.service.app",
+      "evidence": [
+        "code/src/run_service.py:22",
+        "code/src/service/__init__.py:1"
+      ]
+    },
+    {
+      "entry": "streamlit run src/streamlit_app.py",
+      "target": "asyncio.run(main()) -> AgentClient",
+      "evidence": [
+        "code/src/streamlit_app.py:484",
+        "code/src/streamlit_app.py:91"
+      ]
+    },
+    {
+      "entry": "python src/run_client.py",
+      "target": "main() then amain(); sample requests do not reuse thread_id",
+      "evidence": [
+        "code/src/run_client.py:52",
+        "code/src/run_client.py:16",
+        "code/src/run_client.py:38"
+      ]
+    },
+    {
+      "entry": "python src/run_agent.py",
+      "target": "DEFAULT_AGENT graph.ainvoke(messages,random thread_id), bypassing service memory lifecycle",
+      "evidence": [
+        "code/src/run_agent.py:16",
+        "code/src/run_agent.py:23",
+        "code/src/run_agent.py:25"
+      ]
+    },
+    {
+      "entry": "uvicorn rag_baseline.api:app",
+      "target": "separate normative app=create_app()",
+      "evidence": [
+        "code/src/rag_baseline/api.py:102",
+        "code/src/rag_baseline/api.py:177",
+        "code/README.md:14"
+      ]
+    },
+    {
+      "entry": "python -m rag_baseline.demo",
+      "target": "HTTP /health and /query; complete-response client",
+      "evidence": [
+        "code/src/rag_baseline/demo.py:21",
+        "code/src/rag_baseline/demo.py:206",
+        "code/src/rag_baseline/demo.py:340"
+      ]
+    },
+    {
+      "entry": "LangGraph server config",
+      "target": "research_assistant only, distinct from service DEFAULT_AGENT and normative graph",
+      "evidence": [
+        "code/langgraph.json:4",
+        "code/langgraph.json:5"
+      ]
+    },
+    {
+      "entry": "service Dockerfile",
+      "target": "python run_service.py; selective COPY omits rag_baseline",
+      "evidence": [
+        "code/docker/Dockerfile.service:13",
+        "code/docker/Dockerfile.service:20"
+      ]
+    },
+    {
+      "entry": "app Dockerfile",
+      "target": "streamlit run streamlit_app.py",
+      "evidence": [
+        "code/docker/Dockerfile.app:17",
+        "code/docker/Dockerfile.app:21"
+      ]
+    }
+  ],
+  "lifecycle": {
+    "behavior": "initialize_database/store, optional setup, assign same checkpointer/store to every registered graph. Registry imports modules eagerly, including disabled agents.",
+    "default_agent": "chatbot_ufpi_v2",
+    "registered_agents": [
+      "chatbot_ufpi_agentic",
+      "chatbot_ufpi",
+      "chatbot_ufpi_v2",
+      "chatbot_generic"
+    ],
+    "evidence": [
+      "code/src/service/service.py:21",
+      "code/src/service/service.py:65",
+      "code/src/service/service.py:74",
+      "code/src/service/service.py:78",
+      "code/src/service/service.py:80",
+      "code/src/agents/agents.py:6",
+      "code/src/agents/agents.py:20",
+      "code/src/agents/agents.py:34",
+      "code/src/agents/agents.py:56"
+    ]
+  },
+  "schema_inventory": [
+    {
+      "name": "UserInput",
+      "fields": {
+        "message": "required str; no length/blank validator",
+        "model": "AllModelEnum|None; omitted default gpt-4o-mini",
+        "thread_id": "str|None",
+        "user_id": "str|None",
+        "agent_config": "dict[str,Any] default {}"
+      },
+      "evidence": [
+        "code/src/schema/schema.py:40",
+        "code/src/schema/schema.py:47",
+        "code/src/schema/schema.py:53",
+        "code/src/schema/schema.py:58",
+        "code/src/schema/schema.py:63"
+      ]
+    },
+    {
+      "name": "StreamInput",
+      "fields": {
+        "base": "UserInput",
+        "stream_tokens": "bool default true"
+      },
+      "evidence": [
+        "code/src/schema/schema.py:70"
+      ]
+    },
+    {
+      "name": "ChatMessage",
+      "fields": {
+        "type": "human|ai|tool|custom",
+        "content": "required str",
+        "tool_calls": "list[ToolCall] default []",
+        "tool_call_id": "str|None",
+        "run_id": "str|None",
+        "response_metadata": "dict[str,Any]",
+        "custom_data": "dict[str,Any]"
+      },
+      "absent_typed_fields": [
+        "references",
+        "normative_output",
+        "temporal_provenance",
+        "status",
+        "domain",
+        "retrieval_strategy",
+        "needs_clarification",
+        "interrupt_id",
+        "namespace",
+        "thread_id",
+        "user_id",
+        "message_id",
+        "artifact"
+      ],
+      "evidence": [
+        "code/src/schema/schema.py:91",
+        "code/src/schema/schema.py:120"
+      ]
+    },
+    {
+      "name": "ToolCall",
+      "fields": {
+        "name": "str",
+        "args": "dict[str,Any]",
+        "id": "str|None",
+        "type": "optional literal tool_call"
+      },
+      "evidence": [
+        "code/src/schema/schema.py:79"
+      ]
+    },
+    {
+      "name": "ServiceMetadata",
+      "fields": {
+        "agents": "list[AgentInfo(key,description)]",
+        "models": "list[AllModelEnum]",
+        "default_agent": "str",
+        "default_model": "AllModelEnum"
+      },
+      "evidence": [
+        "code/src/schema/schema.py:9",
+        "code/src/schema/schema.py:22"
+      ]
+    },
+    {
+      "name": "Feedback",
+      "fields": {
+        "run_id": "required str",
+        "key": "required str",
+        "score": "float without explicit range bound",
+        "kwargs": "dict forwarded to LangSmith"
+      },
+      "response": "FeedbackResponse(status=success)",
+      "evidence": [
+        "code/src/schema/schema.py:139",
+        "code/src/schema/schema.py:161"
+      ]
+    },
+    {
+      "name": "ChatHistoryInput/ChatHistory",
+      "fields": {
+        "request.thread_id": "required str",
+        "response.messages": "list[ChatMessage]"
+      },
+      "evidence": [
+        "code/src/schema/schema.py:165",
+        "code/src/schema/schema.py:174"
+      ]
+    },
+    {
+      "name": "TaskData",
+      "fields": {
+        "name": "optional str",
+        "run_id": "str default empty",
+        "state": "new|running|complete|None",
+        "result": "success|error|None",
+        "data": "dict[str,Any]"
+      },
+      "renderer": "TaskDataStatus groups by task run_id; sets running/complete/error; not normative provenance",
+      "evidence": [
+        "code/src/schema/task_data.py:6",
+        "code/src/schema/task_data.py:44",
+        "code/src/schema/task_data.py:64"
+      ]
+    },
+    {
+      "name": "Provider/AllModelEnum",
+      "providers": [
+        "OPENAI",
+        "OPENAI_COMPATIBLE",
+        "AZURE_OPENAI",
+        "DEEPSEEK",
+        "ANTHROPIC",
+        "GOOGLE",
+        "VERTEXAI",
+        "GROQ",
+        "AWS",
+        "OLLAMA",
+        "OPENROUTER",
+        "FAKE"
+      ],
+      "contract": "Union of model-name StrEnums; /info availability from core.settings; normative runtime model settings independent",
+      "evidence": [
+        "code/src/schema/models.py:5",
+        "code/src/schema/models.py:109",
+        "code/src/service/service.py:93",
+        "code/src/rag_baseline/api.py:61",
+        "code/src/rag_baseline/api.py:87"
+      ]
+    },
+    {
+      "name": "QueryRequest",
+      "fields": {
+        "question": "str length1..4000; stripped, blank rejected",
+        "sector": "graduacao|pos_graduacao|ambos|automatico default ambos",
+        "clarification": "str|None length1..1000",
+        "version_filter": "bool default true"
+      },
+      "evidence": [
+        "code/src/rag_baseline/api.py:15",
+        "code/src/rag_baseline/api.py:21"
+      ]
+    },
+    {
+      "name": "QueryResult",
+      "public_fields": [
+        "answer",
+        "references",
+        "llm_model",
+        "embedding_model",
+        "route",
+        "needs_clarification",
+        "clarification_question",
+        "selected_scope",
+        "version_filter",
+        "routing",
+        "error",
+        "normative_output"
+      ],
+      "excluded_internal_fields": [
+        "response_kind",
+        "generation_attempts",
+        "output_audit"
+      ],
+      "serialization": "normative_output/routing/route omitted when absent; remaining optional fields conditionally omitted if route/version_filter both absent",
+      "evidence": [
+        "code/src/rag_baseline/models.py:77",
+        "code/src/rag_baseline/models.py:89",
+        "code/src/rag_baseline/models.py:94"
+      ]
+    },
+    {
+      "name": "Reference",
+      "fields": [
+        "rank",
+        "article_number",
+        "chapter_number",
+        "chapter_title",
+        "section_number",
+        "section_title",
+        "subsection_number",
+        "subsection_title",
+        "source",
+        "sector",
+        "content",
+        "distance"
+      ],
+      "note": "Retrieval reference omits norm_id/chunk_id/validated locator/temporal role; sector omitted when None",
+      "evidence": [
+        "code/src/rag_baseline/models.py:55",
+        "code/src/rag_baseline/models.py:69"
+      ]
+    },
+    {
+      "name": "NormativeOutput",
+      "fields": {
+        "references": "list[NormativeReference]",
+        "allowed_temporal_facts": "AllowedTemporalFacts",
+        "temporal_status_text": "str",
+        "temporal_provenance": "dict",
+        "status": "accepted|regenerated|fallback"
+      },
+      "reference_fields": [
+        "chunk_id",
+        "norm_id",
+        "source",
+        "article",
+        "validated_subdivision",
+        "display_text",
+        "temporal_role"
+      ],
+      "evidence": [
+        "code/src/rag_baseline/output_contracts.py:12",
+        "code/src/rag_baseline/output_contracts.py:70"
+      ]
+    }
+  ],
+  "endpoint_inventory": [
+    {
+      "path": "/info",
+      "method": "GET",
+      "auth": "shared optional configured Bearer",
+      "request": null,
+      "response": "ServiceMetadata",
+      "streaming": false,
+      "thread_session": null,
+      "selection": "registered agents; sorted AVAILABLE_MODELS; defaults",
+      "interrupt_resume": null,
+      "errors": "401 for missing/wrong configured secret",
+      "evidence": [
+        "code/src/service/service.py:44",
+        "code/src/service/service.py:88",
+        "code/src/service/service.py:91"
+      ]
+    },
+    {
+      "path": [
+        "/invoke",
+        "/{agent_id}/invoke"
+      ],
+      "method": "POST",
+      "auth": "shared optional configured Bearer",
+      "request": "UserInput",
+      "response": "ChatMessage only final message or first interrupt as AI content",
+      "streaming": false,
+      "thread_session": "configurable thread_id/user_id; generate UUIDs if omitted; not returned in envelope",
+      "selection": "path agent_id defaults chatbot_ufpi_v2; configurable.model; agent_config forbids overlap with thread_id/model/user_id",
+      "interrupt_resume": "aget_state tasks with interrupts -> Command(resume=message); otherwise HumanMessage input",
+      "errors": "422 reserved keys; caught invocation/conversion error ->500 Unexpected error; get_agent/_handle_input outside try; no controlled invalid-agent404",
+      "evidence": [
+        "code/src/service/service.py:103",
+        "code/src/service/service.py:109",
+        "code/src/service/service.py:121",
+        "code/src/service/service.py:135",
+        "code/src/service/service.py:156",
+        "code/src/service/service.py:172",
+        "code/src/service/service.py:176",
+        "code/src/service/service.py:194"
+      ]
+    },
+    {
+      "path": [
+        "/stream",
+        "/{agent_id}/stream"
+      ],
+      "method": "POST",
+      "auth": "shared optional configured Bearer",
+      "request": "StreamInput",
+      "response": "text/event-stream data JSON {type:message|token|error,content:...}; terminal data:[DONE]",
+      "streaming": true,
+      "thread_session": "same _handle_input; generated UUIDs unreturned",
+      "selection": "path agent, configurable model; stream_tokens only controls tokens",
+      "interrupt_resume": "implicit string Command resume; __interrupt__ updates become AI messages without id/namespace",
+      "errors": "parse failure ->error Unexpected error and continue; loop failure ->error Internal server error; finally DONE; setup outside try not covered",
+      "evidence": [
+        "code/src/service/service.py:197",
+        "code/src/service/service.py:205",
+        "code/src/service/service.py:210",
+        "code/src/service/service.py:228",
+        "code/src/service/service.py:278",
+        "code/src/service/service.py:303",
+        "code/src/service/service.py:331"
+      ]
+    },
+    {
+      "path": "/feedback",
+      "method": "POST",
+      "auth": "shared optional configured Bearer",
+      "request": "Feedback",
+      "response": "FeedbackResponse(success)",
+      "streaming": false,
+      "thread_session": "run_id only; no ownership",
+      "selection": null,
+      "interrupt_resume": null,
+      "errors": "no explicit external LangSmith exception handling",
+      "backend": "LangSmith, not Supabase",
+      "evidence": [
+        "code/src/service/service.py:354",
+        "code/src/service/service.py:363",
+        "code/src/service/service.py:365"
+      ]
+    },
+    {
+      "path": "/history",
+      "method": "POST",
+      "auth": "shared optional configured Bearer",
+      "request": "ChatHistoryInput(thread_id)",
+      "response": "ChatHistory messages only",
+      "streaming": false,
+      "thread_session": "thread_id only; no user/ownership filter",
+      "selection": "hardcoded DEFAULT_AGENT",
+      "interrupt_resume": "not returned",
+      "errors": "sync get_state/conversion ->500 Unexpected error",
+      "evidence": [
+        "code/src/service/service.py:374",
+        "code/src/service/service.py:380",
+        "code/src/service/service.py:382",
+        "code/src/service/service.py:385"
+      ]
+    },
+    {
+      "path": "/health",
+      "method": "GET",
+      "auth": "none; app route",
+      "request": null,
+      "response": "dict status=ok, optional langfuse connected/disconnected",
+      "streaming": false,
+      "thread_session": null,
+      "selection": null,
+      "interrupt_resume": null,
+      "errors": "Langfuse failures caught; status stays ok; no DB/index/provider readiness check",
+      "evidence": [
+        "code/src/service/service.py:393",
+        "code/src/service/service.py:397",
+        "code/src/service/service.py:399"
+      ]
+    },
+    {
+      "api": "separate normative app",
+      "path": "/query",
+      "method": "POST",
+      "auth": "none in source",
+      "request": "QueryRequest",
+      "response": "QueryResult",
+      "streaming": false,
+      "thread_session": "none; clarification supplied in stateless request",
+      "selection": "sector -> scope/automatic route; models from BaselineSettings, not request.model",
+      "interrupt_resume": "noninteractive service returns structured clarification; resubmit question+clarification",
+      "errors": "CorpusNotIndexedError503; OpenRouterError503 for temporary markers else502; ValueError503; validation422",
+      "evidence": [
+        "code/src/rag_baseline/api.py:132",
+        "code/src/rag_baseline/api.py:135",
+        "code/src/rag_baseline/api.py:157",
+        "code/src/rag_baseline/api.py:167",
+        "code/src/rag_baseline/api.py:96"
+      ]
+    },
+    {
+      "api": "separate normative app",
+      "path": "/health",
+      "method": "GET",
+      "auth": "none in source",
+      "request": null,
+      "response": "HealthResponse(status,indexed_chunks,collection,embedding_model,llm_model,openrouter_configured)",
+      "streaming": false,
+      "thread_session": null,
+      "selection": null,
+      "interrupt_resume": null,
+      "errors": "store.count not explicitly caught; status indexing_required/configuration_required/ok",
+      "evidence": [
+        "code/src/rag_baseline/api.py:30",
+        "code/src/rag_baseline/api.py:113",
+        "code/src/rag_baseline/api.py:116"
+      ]
+    }
+  ],
+  "identity_memory": {
+    "thread_id": "Actual LangGraph configurable checkpoint key; UI keeps across turns; omitted ->fresh unreturned UUID per request",
+    "user_id": "Cross-thread store metadata for consumers, URL/session-controlled; not authenticated identity or history filter",
+    "session_id": "No application session_id field found in inspected code/src invocation/contracts; st.session_state is Streamlit local session state, not checkpoint id",
+    "run_id": "Fresh invocation UUID assigned only to outgoing ChatMessage; not attached to graph messages by service; history converter cannot reconstruct original public feedback run id",
+    "history": "DEFAULT_AGENT messages only; result/provenance and interrupt state omitted",
+    "evidence": [
+      "code/src/service/service.py:108",
+      "code/src/service/service.py:112",
+      "code/src/service/service.py:190",
+      "code/src/service/service.py:277",
+      "code/src/service/service.py:380",
+      "code/src/streamlit_app.py:31",
+      "code/src/streamlit_app.py:98",
+      "code/src/service/utils.py:27"
+    ]
+  },
+  "serializers": [
+    {
+      "type": "HumanMessage",
+      "preserved": [
+        "human",
+        "text content"
+      ],
+      "discarded": [
+        "id",
+        "name",
+        "additional_kwargs",
+        "response_metadata"
+      ],
+      "evidence": [
+        "code/src/service/utils.py:30"
+      ]
+    },
+    {
+      "type": "AIMessage",
+      "preserved": [
+        "ai",
+        "text content",
+        "tool_calls",
+        "response_metadata"
+      ],
+      "discarded": [
+        "id",
+        "name",
+        "additional_kwargs",
+        "usage_metadata",
+        "invalid_tool_calls",
+        "arbitrary references/provenance attributes"
+      ],
+      "evidence": [
+        "code/src/service/utils.py:36"
+      ]
+    },
+    {
+      "type": "ToolMessage",
+      "preserved": [
+        "tool",
+        "text content",
+        "tool_call_id"
+      ],
+      "discarded": [
+        "artifact",
+        "name",
+        "id",
+        "status",
+        "additional_kwargs",
+        "response_metadata"
+      ],
+      "evidence": [
+        "code/src/service/utils.py:46"
+      ]
+    },
+    {
+      "type": "content blocks",
+      "behavior": "str unchanged; list keeps strings and type=text dict text only, concatenates with no separator; nontext dropped; untyped dict may raise",
+      "evidence": [
+        "code/src/service/utils.py:14"
+      ]
+    },
+    {
+      "type": "custom",
+      "behavior": "Only LangChain ChatMessage(role=custom) accepted; custom_data=message.content[0]. Arbitrary custom stream dictionary is not automatically wrapped.",
+      "evidence": [
+        "code/src/service/utils.py:53",
+        "code/src/service/service.py:249"
+      ]
+    },
+    {
+      "type": "tuple fields",
+      "behavior": "Accumulate into dict, then _create_ai_message filters constructor keys; not a QueryResult serializer",
+      "evidence": [
+        "code/src/service/service.py:252",
+        "code/src/service/service.py:310"
+      ]
+    }
+  ],
+  "references_survival": {
+    "structured_normative_graph": "No: full QueryResult remains state.result; emitted AIMessage contains only answer; service consumes messages only",
+    "ToolMessage_artifact": "No: omitted by converter",
+    "AIMessage_additional_kwargs": "No: omitted by converter",
+    "content_JSON_string": "Only opaque text survives; no typed parsing/provenance authority; can be freely rewritten by outer model",
+    "AI_response_metadata": "Dict survives transport, but no existing normative producer uses it here and UI does not render references",
+    "custom_data": "Potential explicit extension carrier, but current producer only custom-role messages; UI treats every custom as TaskData",
+    "rendered_answer": "Textual composed official references survive in answer text; machine-verifiable structured provenance does not",
+    "evidence": [
+      "code/src/rag_baseline/agentic.py:414",
+      "code/src/service/service.py:180",
+      "code/src/service/service.py:234",
+      "code/src/service/service.py:385",
+      "code/src/service/utils.py:36",
+      "code/src/service/utils.py:46",
+      "code/src/streamlit_app.py:368",
+      "code/src/rag_baseline/service.py:174"
+    ]
+  },
+  "stream_contract": {
+    "producer": "agent.astream(stream_mode=[updates,messages,custom],subgraphs=True)",
+    "namespace": "Three-element tuple node_path discarded; outbound envelope no subgraph namespace",
+    "updates": "Extract every node messages; interrupts -> AIMessage(content=value); limited supervisor/research_expert/math_expert suppression only",
+    "tokens": "AIMessageChunk, stream_tokens enabled and no skip_stream tag; Anthropic tool_use stripped; text emitted immediately; no node allowlist/final status or V2 gate",
+    "custom": "Same conversion as messages; arbitrary dict unsupported",
+    "ordering": "Tokens may precede complete AI message; exact matching input HumanMessage echo suppressed",
+    "termination": "finally DONE covers loop, not graph lookup/input initialization before try",
+    "client_parser": "data: prefix; exact DONE ->None; message ->ChatMessage; token ->str; error ->AI Error text; unknown nonempty line/type ->None, callers break",
+    "normative_core": "Current OpenRouter.chat returns complete body via HTTP; guard/regeneration/compose complete before QueryResult. No current raw-token stream; risk arises if future LangChain/subgraph adapter exposes raw chunks.",
+    "evidence": [
+      "code/src/service/service.py:210",
+      "code/src/service/service.py:216",
+      "code/src/service/service.py:223",
+      "code/src/service/service.py:249",
+      "code/src/service/service.py:283",
+      "code/src/service/service.py:287",
+      "code/src/service/service.py:307",
+      "code/src/client/client.py:177",
+      "code/src/client/client.py:252",
+      "code/src/client/client.py:310",
+      "code/src/rag_baseline/openrouter.py:105",
+      "code/src/rag_baseline/service.py:144",
+      "code/src/rag_baseline/service.py:153"
+    ]
+  },
+  "client_contract": {
+    "initialization": "Sync /info retrieval by default, selects metadata default agent; AUTH_SECRET optional Bearer from environment",
+    "send": "UserInput/StreamInput(message), optional model/thread_id/user_id/agent_config assignments, model_dump JSON; selected agent in URL",
+    "defaults": "Omitted model still serializes UserInput default gpt-4o-mini, potentially different from /info DEFAULT_MODEL",
+    "history": "POST /history(thread_id), omits selected agent/user",
+    "feedback": "async POST /feedback(run_id,key,score,kwargs)",
+    "errors": "httpx.HTTPError ->AgentClientError; JSON/Pydantic/generic parsing errors outside wrapper; SSE error event returns ordinary AI message",
+    "evidence": [
+      "code/src/client/client.py:44",
+      "code/src/client/client.py:48",
+      "code/src/client/client.py:60",
+      "code/src/client/client.py:86",
+      "code/src/client/client.py:132",
+      "code/src/client/client.py:202",
+      "code/src/client/client.py:259",
+      "code/src/client/client.py:319",
+      "code/src/client/client.py:343",
+      "code/src/client/client.py:183"
+    ]
+  },
+  "streamlit_contract": {
+    "session": "agent_client,user_id,thread_id,messages,last_message,last_feedback in st.session_state. USER_ID_COOKIE constant uses URL query parameter, not cookie implementation",
+    "initial_history": "Read query thread_id once and call get_history; otherwise UUID+empty messages",
+    "new_chat": "Clear messages and replace thread UUID; preserve user_id; existing thread_id URL parameter not cleared/updated, so reload may restore older URL thread",
+    "selection": "Model/agent selectboxes from /info with default indices; sets agent_client.agent directly; changing agent keeps same thread/messages",
+    "send": "Streaming default true; astream or ainvoke(message,model,thread_id,user_id); no agent_config UI",
+    "render": "human/AI st.write; streamed str displayed immediately then replaced by complete AI content",
+    "tools": "Status by tool_call id, raw args/output; immediately consume one next ChatMessage type=tool per call; cannot robustly handle interleaved token/custom/interrupt or absent results; unpaired top-level tool message unexpected",
+    "references": "No dedicated references/provenance renderer; only textual answer citations/tool output",
+    "custom": "All custom_data parsed as TaskData and rendered by TaskDataStatus; no event subtype discriminator for normative result",
+    "interrupt": "No explicit UI type; ordinary AI clarification text then next message implicitly resumed server-side",
+    "share_resume": "Uses first active Streamlit session protocol/host; URL includes thread_id+user_id but no selected agent/model; user id client-controlled",
+    "feedback": "Latest message.run_id, star index normalized (index+1)/5; duplicate key(run_id,score); historical messages lack reconstructed run_id but Feedback requires str",
+    "errors": "Main request catch only AgentClientError; renderer st.error/st.stop; generic parse/schema/iterator exhaustion outside request wrapper",
+    "evidence": [
+      "code/src/streamlit_app.py:28",
+      "code/src/streamlit_app.py:31",
+      "code/src/streamlit_app.py:82",
+      "code/src/streamlit_app.py:98",
+      "code/src/streamlit_app.py:120",
+      "code/src/streamlit_app.py:125",
+      "code/src/streamlit_app.py:158",
+      "code/src/streamlit_app.py:219",
+      "code/src/streamlit_app.py:283",
+      "code/src/streamlit_app.py:332",
+      "code/src/streamlit_app.py:351",
+      "code/src/streamlit_app.py:368",
+      "code/src/streamlit_app.py:400",
+      "code/src/streamlit_app.py:430"
+    ]
+  },
+  "actual_call_graphs": {
+    "legacy_default": [
+      {
+        "from": "Streamlit.main chat_input",
+        "to": "AgentClient.astream/ainvoke",
+        "evidence": [
+          "code/src/streamlit_app.py:220",
+          "code/src/streamlit_app.py:225",
+          "code/src/streamlit_app.py:233"
+        ]
+      },
+      {
+        "from": "AgentClient",
+        "to": "POST /{agent}/stream or /{agent}/invoke",
+        "evidence": [
+          "code/src/client/client.py:300",
+          "code/src/client/client.py:120"
+        ]
+      },
+      {
+        "from": "service route",
+        "to": "get_agent(agent_id),_handle_input,graph.astream/ainvoke",
+        "evidence": [
+          "code/src/service/service.py:172",
+          "code/src/service/service.py:205",
+          "code/src/service/service.py:210"
+        ]
+      },
+      {
+        "from": "DEFAULT_AGENT",
+        "to": "chatbot_ufpi_v2 graph entry model",
+        "evidence": [
+          "code/src/agents/agents.py:20",
+          "code/src/agents/agents.py:57",
+          "code/src/agents/chatbot_ufpi_v2.py:505"
+        ]
+      },
+      {
+        "from": "model",
+        "to": "get_model ->bind_tools semantic+metadata ->ainvoke(system+messages)",
+        "evidence": [
+          "code/src/agents/chatbot_ufpi_v2.py:15",
+          "code/src/agents/chatbot_ufpi_v2.py:28",
+          "code/src/agents/chatbot_ufpi_v2.py:474",
+          "code/src/agents/chatbot_ufpi_v2.py:483"
+        ]
+      },
+      {
+        "from": "AI response tool_calls",
+        "to": "ToolNode(tools) ->model",
+        "evidence": [
+          "code/src/agents/chatbot_ufpi_v2.py:504",
+          "code/src/agents/chatbot_ufpi_v2.py:509",
+          "code/src/agents/chatbot_ufpi_v2.py:513",
+          "code/src/agents/chatbot_ufpi_v2.py:522"
+        ]
+      },
+      {
+        "from": "AI response without tool_calls",
+        "to": "END ->service converter ->SSE/ChatMessage ->client parser ->Streamlit",
+        "evidence": [
+          "code/src/agents/chatbot_ufpi_v2.py:519",
+          "code/src/agents/chatbot_ufpi_v2.py:522",
+          "code/src/service/service.py:180",
+          "code/src/service/service.py:276",
+          "code/src/client/client.py:188",
+          "code/src/streamlit_app.py:303"
+        ]
+      }
+    ],
+    "currently_registered_normative_option": [
+      {
+        "from": "Selected chatbot_ufpi_agentic",
+        "to": "build_graph(interactive=True); shared service checkpointer/store",
+        "evidence": [
+          "code/src/agents/agents.py:35",
+          "code/src/agents/chatbot_ufpi_agentic.py:7",
+          "code/src/service/service.py:78"
+        ]
+      },
+      {
+        "from": "route_query",
+        "to": "last HumanMessage ->domain decision+TemporalIntent ->clarify or retrieve",
+        "evidence": [
+          "code/src/rag_baseline/agentic.py:209",
+          "code/src/rag_baseline/agentic.py:222",
+          "code/src/rag_baseline/agentic.py:239"
+        ]
+      },
+      {
+        "from": "clarify",
+        "to": "interrupt ->AI text ->next request Command(resume=message) ->reroute",
+        "evidence": [
+          "code/src/rag_baseline/agentic.py:251",
+          "code/src/service/service.py:135",
+          "code/src/service/service.py:144",
+          "code/src/service/service.py:228",
+          "code/src/rag_baseline/agentic.py:257"
+        ]
+      },
+      {
+        "from": "retrieve",
+        "to": "RagService.retrieve ->VersionFilter.apply ->build_temporal_grounding ->generate",
+        "evidence": [
+          "code/src/rag_baseline/agentic.py:297",
+          "code/src/rag_baseline/agentic.py:310",
+          "code/src/rag_baseline/agentic.py:349",
+          "code/src/rag_baseline/agentic.py:434"
+        ]
+      },
+      {
+        "from": "generate",
+        "to": "state.result=QueryResult +AIMessage(answer); service exports messages only",
+        "evidence": [
+          "code/src/rag_baseline/agentic.py:382",
+          "code/src/rag_baseline/agentic.py:414",
+          "code/src/service/service.py:180",
+          "code/src/service/service.py:234"
+        ]
+      }
+    ],
+    "normative_HTTP": [
+      {
+        "from": "POST /query",
+        "to": "QueryRequest ->AgenticRagService.query ->graph.ainvoke(question,clarification,use_version_filter,manual_scope)",
+        "evidence": [
+          "code/src/rag_baseline/api.py:132",
+          "code/src/rag_baseline/api.py:137",
+          "code/src/rag_baseline/api.py:157",
+          "code/src/rag_baseline/agentic.py:463"
+        ]
+      },
+      {
+        "from": "graph route+temporal+retrieve+filter+grounding",
+        "to": "RagService.generate ->OpenRouter.chat complete body ->guard ->optional regeneration ->compose_answer+NormativeOutput",
+        "evidence": [
+          "code/src/rag_baseline/agentic.py:222",
+          "code/src/rag_baseline/agentic.py:297",
+          "code/src/rag_baseline/agentic.py:310",
+          "code/src/rag_baseline/agentic.py:349",
+          "code/src/rag_baseline/service.py:129",
+          "code/src/rag_baseline/service.py:144",
+          "code/src/rag_baseline/service.py:147",
+          "code/src/rag_baseline/service.py:156",
+          "code/src/rag_baseline/service.py:174",
+          "code/src/rag_baseline/service.py:185"
+        ]
+      },
+      {
+        "from": "state.result",
+        "to": "QueryResult serializer ->complete JSON",
+        "evidence": [
+          "code/src/rag_baseline/agentic.py:474",
+          "code/src/rag_baseline/models.py:94",
+          "code/src/rag_baseline/api.py:132"
+        ]
+      }
+    ],
+    "future_integration_point": {
+      "status": "RECOMMENDATION_ONLY_NOT_IMPLEMENTED",
+      "path": [
+        "outer action/tool decision",
+        "single normative_rag adapter",
+        "frozen normative complete QueryResult",
+        "typed public result plus internal audit separation",
+        "outer pending clarification or deterministic final-answer handoff",
+        "typed service envelope",
+        "reference-aware client/UI"
+      ],
+      "constraints": [
+        "vector/metadata internal evidence strategies",
+        "VersionFilter and V2 guard mandatory",
+        "no raw generation/retry tokens",
+        "no free outer-LLM rewriting of final answer/references/temporal facts",
+        "retain structured authoritative result separately from prose history"
+      ]
+    }
+  },
+  "candidate_normative_result_mapping": [
+    {
+      "field": "answer",
+      "exists": "QueryResult.answer",
+      "visibility": "public guarded composed answer",
+      "evidence": [
+        "code/src/rag_baseline/models.py:78",
+        "code/src/rag_baseline/service.py:174"
+      ]
+    },
+    {
+      "field": "references",
+      "exists": "QueryResult.references and normative_output.references; latter carries norm/chunk/locator/role",
+      "visibility": "public authoritative references; retrieved content optionally displayed",
+      "evidence": [
+        "code/src/rag_baseline/models.py:79",
+        "code/src/rag_baseline/output_contracts.py:12",
+        "code/src/rag_baseline/output_contracts.py:71"
+      ]
+    },
+    {
+      "field": "temporal_provenance",
+      "exists": "normative_output.temporal_provenance, state.temporal_grounding, result.version_filter",
+      "visibility": "allowlisted public summary vs full internal evidence/audit",
+      "evidence": [
+        "code/src/rag_baseline/output_contracts.py:74",
+        "code/src/rag_baseline/agentic.py:33",
+        "code/src/rag_baseline/agentic.py:412"
+      ]
+    },
+    {
+      "field": "status",
+      "exists": "normative_output.status accepted/regenerated/fallback; clarify/error/insufficient paths need explicit adapter mapping",
+      "visibility": "public coarse outcome; GenerationAudit internal",
+      "evidence": [
+        "code/src/rag_baseline/output_contracts.py:75",
+        "code/src/rag_baseline/models.py:88",
+        "code/src/rag_baseline/models.py:92",
+        "code/src/rag_baseline/agentic.py:154"
+      ]
+    },
+    {
+      "field": "domain",
+      "exists": "selected_scope and route.scope graduacao|pos_graduacao|ambas; do not assume grad|post|both literal names",
+      "visibility": "public",
+      "evidence": [
+        "code/src/rag_baseline/models.py:85",
+        "code/src/rag_baseline/agentic.py:409",
+        "code/src/rag_baseline/agentic.py:411"
+      ]
+    },
+    {
+      "field": "retrieval_strategy",
+      "exists": "No public selected vector/metadata enum; current retrieve uses dense vector; routing_audit is not retrieval strategy",
+      "visibility": "future explicit coarse public field",
+      "evidence": [
+        "code/src/rag_baseline/models.py:77",
+        "code/src/rag_baseline/service.py:112",
+        "code/src/rag_baseline/service.py:117"
+      ]
+    },
+    {
+      "field": "needs_clarification",
+      "exists": "QueryResult.needs_clarification/clarification_question; current interactive SSE flattens to AI text",
+      "visibility": "public typed branch outcome",
+      "evidence": [
+        "code/src/rag_baseline/models.py:83",
+        "code/src/rag_baseline/agentic.py:169",
+        "code/src/service/service.py:228"
+      ]
+    },
+    {
+      "field": "audit metadata",
+      "exists": "output_audit,response_kind,generation_attempts excluded; GenerationAudit raw/regenerated bodies/violations",
+      "visibility": "internal; exclude from generic metadata/custom_data exposure",
+      "evidence": [
+        "code/src/rag_baseline/models.py:89",
+        "code/src/rag_baseline/output_contracts.py:58"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "SC-01",
+      "severity": "critical",
+      "component": "normative graph ->legacy service",
+      "description": "Structured provenance is lost: full QueryResult remains state.result, but emitted AIMessage and service invoke/SSE/history carry answer text only.",
+      "evidence": [
+        "code/src/rag_baseline/agentic.py:414",
+        "code/src/service/service.py:180",
+        "code/src/service/service.py:234",
+        "code/src/service/service.py:385"
+      ],
+      "recommendation": "Explicit result adapter, typed payload and result persistence outside frozen core.",
+      "blocks_integration": true
+    },
+    {
+      "id": "SC-02",
+      "severity": "critical",
+      "component": "message converter",
+      "description": "ToolMessage.artifact and AIMessage.additional_kwargs cannot carry typed normative result through current converter. JSON content survives only as prose.",
+      "evidence": [
+        "code/src/service/utils.py:36",
+        "code/src/service/utils.py:46",
+        "code/src/schema/schema.py:91"
+      ],
+      "recommendation": "Versioned allowlisted structured carrier, authoritative conversation result separate from ToolMessage text.",
+      "blocks_integration": true
+    },
+    {
+      "id": "SC-03",
+      "severity": "critical",
+      "component": "token streaming",
+      "description": "SSE emits arbitrary AIMessageChunk content before final validation. Current normative OpenRouter is complete-response HTTP: future LangChain/subgraph integration creates this risk, not demonstrated current raw-token leakage.",
+      "evidence": [
+        "code/src/service/service.py:210",
+        "code/src/service/service.py:287",
+        "code/src/rag_baseline/openrouter.py:105",
+        "code/src/rag_baseline/service.py:147"
+      ],
+      "recommendation": "Buffer normative generation/retry tokens; emit only accepted/regenerated/fallback final answer and safe typed progress.",
+      "blocks_integration": true
+    },
+    {
+      "id": "SC-04",
+      "severity": "critical",
+      "component": "outer model after normative tool",
+      "description": "Legacy graph always calls model after tools. Feeding a guarded normative answer back into free final generation can invalidate V2 guarantees; service exports any resulting AI content.",
+      "evidence": [
+        "code/src/agents/chatbot_ufpi_v2.py:477",
+        "code/src/agents/chatbot_ufpi_v2.py:509",
+        "code/src/agents/chatbot_ufpi_v2.py:522",
+        "code/src/service/service.py:180"
+      ],
+      "recommendation": "Deterministic guarded-answer handoff; constrain/validate follow-up reformulation and preserve official references/temporal facts.",
+      "blocks_integration": true
+    },
+    {
+      "id": "SC-05",
+      "severity": "critical",
+      "component": "default registry selection",
+      "description": "Default remains chatbot_ufpi_v2 with legacy Supabase searches; normative graph is an optional registered alternative. Keeping default preserves bypass paths.",
+      "evidence": [
+        "code/src/agents/agents.py:20",
+        "code/src/agents/chatbot_ufpi_v2.py:15",
+        "code/src/agents/chatbot_ufpi_v2.py:28",
+        "code/src/agents/agents.py:35"
+      ],
+      "recommendation": "Future action policy must require normative core for fresh claims, disable legacy normative retrieval outside pipeline.",
+      "blocks_integration": true
+    },
+    {
+      "id": "SC-06",
+      "severity": "high",
+      "component": "interrupt/resume",
+      "description": "Any pending task causes next message string to resume; interrupt ids/subgraph namespaces discarded; invoke returns first interrupt only. Multiple/nested interrupts cannot be reliably addressed publicly.",
+      "evidence": [
+        "code/src/service/service.py:135",
+        "code/src/service/service.py:144",
+        "code/src/service/service.py:181",
+        "code/src/service/service.py:216",
+        "code/src/service/service.py:228"
+      ],
+      "recommendation": "Prefer structured normative clarification returned to one outer pending action; otherwise explicit targeted interrupt+namespace schema/checkpointer boundaries.",
+      "blocks_integration": true
+    },
+    {
+      "id": "SC-07",
+      "severity": "high",
+      "component": "history/graph selection",
+      "description": "History always DEFAULT_AGENT; agent switch retains same thread/messages; all graphs receive same saver. Incompatible restore/shared state collision needs isolation review.",
+      "evidence": [
+        "code/src/service/service.py:74",
+        "code/src/service/service.py:78",
+        "code/src/service/service.py:380",
+        "code/src/streamlit_app.py:130",
+        "code/src/streamlit_app.py:228"
+      ],
+      "recommendation": "Bind history/checkpoints to explicit graph identity and authorized user/thread; verify state compatibility.",
+      "blocks_integration": true
+    },
+    {
+      "id": "SC-08",
+      "severity": "high",
+      "component": "history async backend",
+      "description": "Sync agent.get_state with async saver implementations suggests backend-dependent NotImplementedError. Mocked history tests do not verify this real backend behavior.",
+      "evidence": [
+        "code/src/service/service.py:382",
+        "code/src/memory/sqlite.py:3",
+        "code/src/memory/postgres.py:4",
+        "code/tests/service/test_service.py:173"
+      ],
+      "recommendation": "Isolated async-checkpointer verification; later use aget_state for async backends.",
+      "blocks_integration": false
+    },
+    {
+      "id": "SC-09",
+      "severity": "high",
+      "component": "history feedback ids",
+      "description": "run_id assigned only outgoing ChatMessage, not source graph message. History reserializes without original run_id; UI latest history message run_id feeds required Feedback.run_id.",
+      "evidence": [
+        "code/src/service/service.py:190",
+        "code/src/service/service.py:277",
+        "code/src/service/service.py:386",
+        "code/src/service/utils.py:27",
+        "code/src/streamlit_app.py:407",
+        "code/src/schema/schema.py:142"
+      ],
+      "recommendation": "Persist run/message ids; disable/remap feedback when original valid run unavailable.",
+      "blocks_integration": false
+    },
+    {
+      "id": "SC-10",
+      "severity": "high",
+      "component": "UI tool event ordering",
+      "description": "Renderer consumes exactly next message per tool_call and requires tool type; nested tokens/custom/interrupt or missing results can fail/exhaust iterator. No dedicated references renderer.",
+      "evidence": [
+        "code/src/streamlit_app.py:332",
+        "code/src/streamlit_app.py:351",
+        "code/src/streamlit_app.py:353",
+        "code/src/streamlit_app.py:365",
+        "code/src/streamlit_app.py:430"
+      ],
+      "recommendation": "Correlate events by id without positional assumptions; render typed normative references separately.",
+      "blocks_integration": true
+    },
+    {
+      "id": "SC-11",
+      "severity": "medium",
+      "component": "SSE extensions/errors",
+      "description": "Unknown event returns None and ends client iteration. Error event becomes AI text; generic parse/schema exceptions escape AgentClientError. Adding normative top-level type without coordinated client truncates stream.",
+      "evidence": [
+        "code/src/client/client.py:177",
+        "code/src/client/client.py:197",
+        "code/src/client/client.py:200",
+        "code/src/client/client.py:253",
+        "code/src/streamlit_app.py:242"
+      ],
+      "recommendation": "Version event contract with final/status/error/interrupt distinctions and migration compatibility.",
+      "blocks_integration": true
+    },
+    {
+      "id": "SC-12",
+      "severity": "high",
+      "component": "API/model/version compatibility",
+      "description": "Normative /query request/response differs from legacy invoke/stream; legacy model selector does not control BaselineSettings normative model. Exposed version_filter=false disables grounding/V2 path.",
+      "evidence": [
+        "code/src/schema/schema.py:40",
+        "code/src/rag_baseline/api.py:15",
+        "code/src/rag_baseline/api.py:61",
+        "code/src/rag_baseline/api.py:140",
+        "code/src/rag_baseline/agentic.py:349",
+        "code/src/rag_baseline/service.py:129"
+      ],
+      "recommendation": "Explicit field adapter, pinned normative configuration and mandatory filter on integrated public path; research toggles stay outside it.",
+      "blocks_integration": true
+    },
+    {
+      "id": "SC-13",
+      "severity": "medium",
+      "component": "client default model",
+      "description": "UserInput default gpt-4o-mini serialized when client omits model; may differ from service metadata DEFAULT_MODEL. UI explicitly sends selection.",
+      "evidence": [
+        "code/src/schema/schema.py:47",
+        "code/src/client/client.py:109",
+        "code/src/client/client.py:122",
+        "code/src/service/service.py:99",
+        "code/src/streamlit_app.py:227"
+      ],
+      "recommendation": "Align absent-model semantics, distinguish conversational choice from pinned normative model.",
+      "blocks_integration": false
+    },
+    {
+      "id": "SC-14",
+      "severity": "high",
+      "component": "user/thread access",
+      "description": "Optional shared Bearer only auth; URL user_id client-controlled; history filters only thread; shared URL includes identity+thread. These fields are not user isolation.",
+      "evidence": [
+        "code/src/service/service.py:44",
+        "code/src/service/service.py:383",
+        "code/src/streamlit_app.py:38",
+        "code/src/streamlit_app.py:167"
+      ],
+      "recommendation": "For multi-user deployment derive server-side identity and authorize thread/history/resume; explicit shared-link policy.",
+      "blocks_integration": false
+    },
+    {
+      "id": "SC-15",
+      "severity": "medium",
+      "component": "new chat/share restore",
+      "description": "New Chat replaces local thread but leaves old query parameter; share URL omits agent/model and derives URL from first active Streamlit session. Reload can restore previous/default-agent history.",
+      "evidence": [
+        "code/src/streamlit_app.py:98",
+        "code/src/streamlit_app.py:120",
+        "code/src/streamlit_app.py:160",
+        "code/src/streamlit_app.py:168"
+      ],
+      "recommendation": "Future URL updates and graph-bound sharing contract.",
+      "blocks_integration": false
+    },
+    {
+      "id": "SC-16",
+      "severity": "high",
+      "component": "Docker packaging",
+      "description": "Service Dockerfile omits rag_baseline while active registry unconditionally imports wrapper. Inspected Compose mounts do not supply package; container import should fail absent another installed module. Static finding, not launched.",
+      "evidence": [
+        "code/docker/Dockerfile.service:13",
+        "code/src/agents/agents.py:10",
+        "code/src/agents/chatbot_ufpi_agentic.py:3",
+        "code/compose.yaml:35",
+        "code/compose.prod.yaml:41"
+      ],
+      "recommendation": "Later package normative module plus explicit data/index/settings; do not restore old backend as workaround.",
+      "blocks_integration": false
+    },
+    {
+      "id": "SC-17",
+      "severity": "medium",
+      "component": "controlled errors",
+      "description": "Agent lookup/_handle_input before invoke try; stream initialization before generator try/finally; those failures escape normal error/DONE envelopes. Feedback external errors unwrapped.",
+      "evidence": [
+        "code/src/service/service.py:172",
+        "code/src/service/service.py:175",
+        "code/src/service/service.py:205",
+        "code/src/service/service.py:208",
+        "code/src/service/service.py:363"
+      ],
+      "recommendation": "Typed controlled request/config/agent/provider errors; internal diagnostics private.",
+      "blocks_integration": false
+    }
+  ],
+  "adapter_requirements": [
+    {
+      "boundary": "outer tool ->frozen core",
+      "required": "Explicit effective question/clarification mapping; pin normative VersionFilter/V2 and configuration; do not forward arbitrary agent_config into safety toggles.",
+      "findings": [
+        "SC-05",
+        "SC-12"
+      ]
+    },
+    {
+      "boundary": "core ->conversation",
+      "required": "Typed public result and stable references/provenance separate from text; exclude raw/regenerated GenerationAudit.",
+      "findings": [
+        "SC-01",
+        "SC-02"
+      ]
+    },
+    {
+      "boundary": "final answer",
+      "required": "Deterministic guarded answer; direct greeting/reformulation distinguished from fresh normative evidence need.",
+      "findings": [
+        "SC-04",
+        "SC-05"
+      ]
+    },
+    {
+      "boundary": "clarification",
+      "required": "Single outer pending request or targeted nested id/namespace protocol; current implicit string resume inadequate for general nested graphs.",
+      "findings": [
+        "SC-06"
+      ]
+    },
+    {
+      "boundary": "service/client/UI",
+      "required": "Versioned final references/status/error contract, buffered normative tokens, id-based tool events.",
+      "findings": [
+        "SC-03",
+        "SC-10",
+        "SC-11"
+      ]
+    },
+    {
+      "boundary": "history/feedback",
+      "required": "Graph identity, authorized user/thread, original run/message ids and structured result restore.",
+      "findings": [
+        "SC-07",
+        "SC-08",
+        "SC-09",
+        "SC-14"
+      ]
+    }
+  ],
+  "test_recommendations": {
+    "execution_status": "Test results are recorded separately in audit validation artifacts; no tests executed to produce this static contract inventory.",
+    "existing_files": [
+      {
+        "path": "code/tests/client/test_client.py",
+        "coverage": "Mocked httpx sync/async invoke/stream/info/history/feedback",
+        "evidence": [
+          "code/tests/client/test_client.py:44",
+          "code/tests/client/test_client.py:123",
+          "code/tests/client/test_client.py:175",
+          "code/tests/client/test_client.py:268"
+        ]
+      },
+      {
+        "path": "code/tests/service/test_utils.py",
+        "coverage": "Message conversion/tool_calls/run_id; add explicit artifact/provenance roundtrip checks in later implementation",
+        "evidence": [
+          "code/tests/service/test_utils.py:6",
+          "code/tests/service/test_utils.py:30",
+          "code/tests/service/test_utils.py:38"
+        ]
+      },
+      {
+        "path": "code/tests/service/test_service_streaming.py",
+        "coverage": "AI constructor-key filtering, not normative safe-emission policy",
+        "evidence": [
+          "code/tests/service/test_service_streaming.py:32",
+          "code/tests/service/test_service_streaming.py:44"
+        ]
+      },
+      {
+        "path": "code/tests/service/test_service.py",
+        "coverage": "Mocked invoke/model/config/interrupt/feedback/history/SSE/info; mock get_state cannot verify actual async saver",
+        "evidence": [
+          "code/tests/service/test_service.py:15",
+          "code/tests/service/test_service.py:128",
+          "code/tests/service/test_service.py:168",
+          "code/tests/service/test_service.py:197"
+        ]
+      },
+      {
+        "path": "code/tests/service/test_auth.py",
+        "coverage": "Optional shared-secret auth",
+        "evidence": [
+          "code/tests/service/test_auth.py:4",
+          "code/tests/service/test_auth.py:19",
+          "code/tests/service/test_auth.py:30"
+        ]
+      },
+      {
+        "path": "code/tests/service/test_service_e2e.py",
+        "coverage": "Static-message graph with TestClient lifespan+in-memory SQLite; conftest imports production registry",
+        "evidence": [
+          "code/tests/service/test_service_e2e.py:70",
+          "code/tests/service/test_service_e2e.py:82",
+          "code/tests/service/conftest.py:9",
+          "code/tests/service/conftest.py:41"
+        ]
+      },
+      {
+        "path": "code/tests/rag_baseline/test_api.py",
+        "coverage": "Normative request/response/index/provider errors and secret-safe health",
+        "evidence": [
+          "code/tests/rag_baseline/test_api.py:62",
+          "code/tests/rag_baseline/test_api.py:71",
+          "code/tests/rag_baseline/test_api.py:135"
+        ]
+      },
+      {
+        "path": "code/tests/app/test_streamlit_app.py",
+        "coverage": "AppTest harness (no live deployment); feedback test pass-only; tool test immediate ordered result assumption",
+        "evidence": [
+          "code/tests/app/test_streamlit_app.py:16",
+          "code/tests/app/test_streamlit_app.py:101",
+          "code/tests/app/test_streamlit_app.py:108"
+        ]
+      }
+    ],
+    "future_cases": [
+      "Lossless typed normative invoke/SSE/client/history roundtrip",
+      "No raw/retry token exposure before V2 final",
+      "Guarded answer unchanged after tool return",
+      "Artifact/additional_kwargs explicit handling with audit excluded",
+      "Clarification retains original question/evidence/id and pending action",
+      "Multiple/nested interrupt isolation or deliberate rejection",
+      "Selected-agent history with isolated real async saver",
+      "User/thread authorization",
+      "Agent switch checkpoint isolation",
+      "Run id history and feedback",
+      "Unknown SSE event forward compatibility",
+      "Tool correlation under interleaved progress/custom",
+      "Conversational vs normative model selector semantics",
+      "Blank/overlength/invalid-agent controlled errors",
+      "New Chat URL reload/share graph restore",
+      "Container module/data/index packaging"
+    ]
+  },
+  "limitations": [
+    "Static source evidence is not runtime verification.",
+    "Async saver/history, nested stream ordering and container import risks require isolated verification.",
+    "No credential values or private credential file contents included; configuration described by symbol names only."
+  ]
+}

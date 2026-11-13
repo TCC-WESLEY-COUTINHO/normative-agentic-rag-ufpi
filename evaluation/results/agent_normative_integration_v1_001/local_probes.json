@@ -1,0 +1,1121 @@
+{
+  "groups": 9,
+  "executions": 10,
+  "rows": [
+    {
+      "id": "greeting",
+      "action": "DIRECT",
+      "audit": {
+        "action": "DIRECT",
+        "action_reason_code": "safe_greeting",
+        "correlation_id": "67922738-ac5a-4689-94db-cff071e9a6a4",
+        "nodes_visited": [
+          "action_policy",
+          "direct_response"
+        ],
+        "normative_tool_called": false,
+        "facade_calls": 0,
+        "normative_status": null,
+        "retrieval_strategy": null,
+        "authoritative_emission": false,
+        "final_source": "direct_response",
+        "tool_exception_type": null
+      },
+      "result": null,
+      "final_message": "Olá!",
+      "typed_result": null,
+      "structured_preserved": null,
+      "answer_identical": null,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "provider_calls": {
+        "router": 0,
+        "embedding": 0,
+        "generation": 0
+      }
+    },
+    {
+      "id": "thanks",
+      "action": "DIRECT",
+      "audit": {
+        "action": "DIRECT",
+        "action_reason_code": "safe_thanks",
+        "correlation_id": "b759b01a-5ecc-423d-a40a-a1dde84b020c",
+        "nodes_visited": [
+          "action_policy",
+          "direct_response"
+        ],
+        "normative_tool_called": false,
+        "facade_calls": 0,
+        "normative_status": null,
+        "retrieval_strategy": null,
+        "authoritative_emission": false,
+        "final_source": "direct_response",
+        "tool_exception_type": null
+      },
+      "result": null,
+      "final_message": "De nada!",
+      "typed_result": null,
+      "structured_preserved": null,
+      "answer_identical": null,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "provider_calls": {
+        "router": 0,
+        "embedding": 0,
+        "generation": 0
+      }
+    },
+    {
+      "id": "mixed",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "69730ade-1326-4d6b-af7e-50c1891dccfe",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "ANSWER",
+        "retrieval_strategy": "dense_vector",
+        "authoritative_emission": true,
+        "final_source": "normative_result.answer",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Para Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado para verificar a entrega do resultado.\n\nFontes:\n- Resolução 177/2012, art. 1\n- Resolução 177/2012, art. 5\n- Resolução 177/2012, art. 18\n- Resolução 177/2012, art. 4\n- Resolução 177/2012, art. 14",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-art-1-idx-000000",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "1",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 1",
+            "temporal_role": "eligible"
+          },
+          {
+            "chunk_id": "ufpi-177-2012-art-5-idx-000004",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "5",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 5",
+            "temporal_role": "eligible"
+          },
+          {
+            "chunk_id": "ufpi-177-2012-art-18-idx-000017",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "18",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 18",
+            "temporal_role": "eligible"
+          },
+          {
+            "chunk_id": "ufpi-177-2012-art-4-idx-000003",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "4",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 4",
+            "temporal_role": "eligible"
+          },
+          {
+            "chunk_id": "ufpi-177-2012-art-14-idx-000013",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "14",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 14",
+            "temporal_role": "eligible"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "indeterminate",
+          "requested_time_context": {
+            "norm_ids": [],
+            "before_amendment": false,
+            "relation_query": null,
+            "article": null,
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-art-1-idx-000000",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "1",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-5-idx-000004",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "5",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-18-idx-000017",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "18",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-4-idx-000003",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "4",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-14-idx-000013",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "14",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": false,
+            "must_not_claim_current_validity": false,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": false,
+            "must_not_present_successor_as_historical_predecessor": false,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": false,
+            "must_not_duplicate_superseded_wording": false,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Para Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "STATUS_UNKNOWN",
+              "norm_id": "ufpi-177-2012",
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "graduacao",
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "69730ade-1326-4d6b-af7e-50c1891dccfe",
+        "error_code": null,
+        "safe_message": null
+      },
+      "final_message": "Para Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado para verificar a entrega do resultado.\n\nFontes:\n- Resolução 177/2012, art. 1\n- Resolução 177/2012, art. 5\n- Resolução 177/2012, art. 18\n- Resolução 177/2012, art. 4\n- Resolução 177/2012, art. 14",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": true,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "provider_calls": {
+        "router": 1,
+        "embedding": 1,
+        "generation": 1
+      }
+    },
+    {
+      "id": "dense",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "30bc6593-3052-4b7e-8eac-699d2698835b",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "ANSWER",
+        "retrieval_strategy": "dense_vector",
+        "authoritative_emission": true,
+        "final_source": "normative_result.answer",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Para Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado para verificar a entrega do resultado.\n\nFontes:\n- Resolução 177/2012, art. 1\n- Resolução 177/2012, art. 5\n- Resolução 177/2012, art. 18\n- Resolução 177/2012, art. 4\n- Resolução 177/2012, art. 14",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-art-1-idx-000000",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "1",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 1",
+            "temporal_role": "eligible"
+          },
+          {
+            "chunk_id": "ufpi-177-2012-art-5-idx-000004",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "5",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 5",
+            "temporal_role": "eligible"
+          },
+          {
+            "chunk_id": "ufpi-177-2012-art-18-idx-000017",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "18",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 18",
+            "temporal_role": "eligible"
+          },
+          {
+            "chunk_id": "ufpi-177-2012-art-4-idx-000003",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "4",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 4",
+            "temporal_role": "eligible"
+          },
+          {
+            "chunk_id": "ufpi-177-2012-art-14-idx-000013",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "14",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 14",
+            "temporal_role": "eligible"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "indeterminate",
+          "requested_time_context": {
+            "norm_ids": [],
+            "before_amendment": false,
+            "relation_query": null,
+            "article": null,
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-art-1-idx-000000",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "1",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-5-idx-000004",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "5",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-18-idx-000017",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "18",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-4-idx-000003",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "4",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-14-idx-000013",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "14",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": false,
+            "must_not_claim_current_validity": false,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": false,
+            "must_not_present_successor_as_historical_predecessor": false,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": false,
+            "must_not_duplicate_superseded_wording": false,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Para Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "STATUS_UNKNOWN",
+              "norm_id": "ufpi-177-2012",
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "graduacao",
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "30bc6593-3052-4b7e-8eac-699d2698835b",
+        "error_code": null,
+        "safe_message": null
+      },
+      "final_message": "Para Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado para verificar a entrega do resultado.\n\nFontes:\n- Resolução 177/2012, art. 1\n- Resolução 177/2012, art. 5\n- Resolução 177/2012, art. 18\n- Resolução 177/2012, art. 4\n- Resolução 177/2012, art. 14",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": true,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "provider_calls": {
+        "router": 1,
+        "embedding": 1,
+        "generation": 1
+      }
+    },
+    {
+      "id": "exact",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "eb238cdd-bfa9-44f4-9a08-d90af434fee8",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "ANSWER",
+        "retrieval_strategy": "metadata_exact",
+        "authoritative_emission": true,
+        "final_source": "normative_result.answer",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "O dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado para verificar a entrega do resultado.\n\nFontes:\n- Resolução 177/2012, art. 68",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-art-68-idx-000067",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "68",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 68",
+            "temporal_role": "eligible"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "indeterminate",
+          "requested_time_context": {
+            "norm_ids": [
+              "ufpi-177-2012"
+            ],
+            "before_amendment": false,
+            "relation_query": null,
+            "article": "68",
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-art-68-idx-000067",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "68",
+              "temporal_action": "amendment_applied",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": {
+                "source": "Resolução CEPEX/UFPI nº 1.056/2026",
+                "article": "1"
+              }
+            }
+          ],
+          "known_relations": [
+            {
+              "relation": "AMENDED_BY",
+              "source_norm": "ufpi-177-2012",
+              "target_norm": "ufpi-1056-2026",
+              "target_article": "68",
+              "target_paragraph": "4",
+              "evidence_source": "Resolução CEPEX/UFPI nº 1.056/2026",
+              "evidence_article": "1"
+            }
+          ],
+          "generation_constraints": {
+            "must_frame_as_historical": false,
+            "must_not_claim_current_validity": false,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": false,
+            "must_not_present_successor_as_historical_predecessor": false,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": true,
+            "must_not_duplicate_superseded_wording": true,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "O dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "AMENDED_BY",
+              "norm_id": "ufpi-177-2012",
+              "target_norm": "ufpi-1056-2026",
+              "role": null
+            },
+            {
+              "kind": "STATUS_UNKNOWN",
+              "norm_id": "ufpi-177-2012",
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "graduacao",
+        "retrieval_strategy": "metadata_exact",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "eb238cdd-bfa9-44f4-9a08-d90af434fee8",
+        "error_code": null,
+        "safe_message": null
+      },
+      "final_message": "O dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado para verificar a entrega do resultado.\n\nFontes:\n- Resolução 177/2012, art. 68",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": true,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "provider_calls": {
+        "router": 1,
+        "embedding": 0,
+        "generation": 1
+      }
+    },
+    {
+      "id": "filtered",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "cde8fb8b-6ea6-4266-9672-4e93971e0894",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "ANSWER",
+        "retrieval_strategy": "vector_filtered",
+        "authoritative_emission": true,
+        "final_source": "normative_result.answer",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Para Resolução 956/2025, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado para verificar a entrega do resultado.\n\nFontes:\n- Resolução 956/2025, art. 1\n- Resolução 956/2025, art. 63\n- Resolução 956/2025, art. 61\n- Resolução 956/2025, art. 18\n- Resolução 956/2025, art. 60",
+        "references": [
+          {
+            "chunk_id": "ufpi-956-2025-art-1-idx-000000",
+            "norm_id": "ufpi-956-2025",
+            "source": "Resolução CEPEX/UFPI nº 956/2025",
+            "article": "1",
+            "validated_subdivision": null,
+            "display_text": "Resolução 956/2025, art. 1",
+            "temporal_role": "eligible"
+          },
+          {
+            "chunk_id": "ufpi-956-2025-art-63-idx-000061",
+            "norm_id": "ufpi-956-2025",
+            "source": "Resolução CEPEX/UFPI nº 956/2025",
+            "article": "63",
+            "validated_subdivision": null,
+            "display_text": "Resolução 956/2025, art. 63",
+            "temporal_role": "eligible"
+          },
+          {
+            "chunk_id": "ufpi-956-2025-art-61-idx-000059",
+            "norm_id": "ufpi-956-2025",
+            "source": "Resolução CEPEX/UFPI nº 956/2025",
+            "article": "61",
+            "validated_subdivision": null,
+            "display_text": "Resolução 956/2025, art. 61",
+            "temporal_role": "eligible"
+          },
+          {
+            "chunk_id": "ufpi-956-2025-art-18-idx-000017",
+            "norm_id": "ufpi-956-2025",
+            "source": "Resolução CEPEX/UFPI nº 956/2025",
+            "article": "18",
+            "validated_subdivision": null,
+            "display_text": "Resolução 956/2025, art. 18",
+            "temporal_role": "eligible"
+          },
+          {
+            "chunk_id": "ufpi-956-2025-art-60-idx-000058",
+            "norm_id": "ufpi-956-2025",
+            "source": "Resolução CEPEX/UFPI nº 956/2025",
+            "article": "60",
+            "validated_subdivision": null,
+            "display_text": "Resolução 956/2025, art. 60",
+            "temporal_role": "eligible"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "indeterminate",
+          "requested_time_context": {
+            "norm_ids": [
+              "ufpi-956-2025"
+            ],
+            "before_amendment": false,
+            "relation_query": null,
+            "article": null,
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-956-2025-art-1-idx-000000",
+              "source_norm": "ufpi-956-2025",
+              "source_article": "1",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-63-idx-000061",
+              "source_norm": "ufpi-956-2025",
+              "source_article": "63",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-61-idx-000059",
+              "source_norm": "ufpi-956-2025",
+              "source_article": "61",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-18-idx-000017",
+              "source_norm": "ufpi-956-2025",
+              "source_article": "18",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-60-idx-000058",
+              "source_norm": "ufpi-956-2025",
+              "source_article": "60",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": false,
+            "must_not_claim_current_validity": false,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": false,
+            "must_not_present_successor_as_historical_predecessor": false,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": false,
+            "must_not_duplicate_superseded_wording": false,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Para Resolução 956/2025, o conjunto documental utilizado não permite certificar a vigência atual.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "STATUS_UNKNOWN",
+              "norm_id": "ufpi-956-2025",
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "pos_graduacao",
+        "retrieval_strategy": "vector_filtered",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "cde8fb8b-6ea6-4266-9672-4e93971e0894",
+        "error_code": null,
+        "safe_message": null
+      },
+      "final_message": "Para Resolução 956/2025, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado para verificar a entrega do resultado.\n\nFontes:\n- Resolução 956/2025, art. 1\n- Resolução 956/2025, art. 63\n- Resolução 956/2025, art. 61\n- Resolução 956/2025, art. 18\n- Resolução 956/2025, art. 60",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": true,
+      "clarification_identical": null,
+      "safe_message_identical": null,
+      "provider_calls": {
+        "router": 1,
+        "embedding": 1,
+        "generation": 1
+      }
+    },
+    {
+      "id": "clarification",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "e9229bd8-6155-443d-b2ed-faa682dc93f1",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "CLARIFICATION",
+        "retrieval_strategy": "dense_vector",
+        "authoritative_emission": true,
+        "final_source": "normative_result.clarification_question",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "CLARIFICATION",
+        "answer": null,
+        "references": [],
+        "temporal_provenance": null,
+        "temporal_status_text": null,
+        "allowed_temporal_facts": null,
+        "core_status": null,
+        "domain": null,
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": true,
+        "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "correlation_id": "e9229bd8-6155-443d-b2ed-faa682dc93f1",
+        "error_code": null,
+        "safe_message": null
+      },
+      "final_message": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": null,
+      "clarification_identical": true,
+      "safe_message_identical": null,
+      "provider_calls": {
+        "router": 1,
+        "embedding": 0,
+        "generation": 0
+      }
+    },
+    {
+      "id": "controlled_error",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "e78dafe8-2315-4852-a0e1-45c3e31a8220",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "ERROR",
+        "retrieval_strategy": "dense_vector",
+        "authoritative_emission": true,
+        "final_source": "normative_result.safe_message",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ERROR",
+        "answer": null,
+        "references": [],
+        "temporal_provenance": null,
+        "temporal_status_text": null,
+        "allowed_temporal_facts": null,
+        "core_status": null,
+        "domain": null,
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "e78dafe8-2315-4852-a0e1-45c3e31a8220",
+        "error_code": "invalid_request",
+        "safe_message": "A consulta normativa contém dados inválidos."
+      },
+      "final_message": "A consulta normativa contém dados inválidos.",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": null,
+      "clarification_identical": null,
+      "safe_message_identical": true,
+      "provider_calls": {
+        "router": 1,
+        "embedding": 0,
+        "generation": 0
+      }
+    },
+    {
+      "id": "concurrent_exact",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "cdc7b6b7-af52-4108-b43b-30b2c0d2bbbb",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "ANSWER",
+        "retrieval_strategy": "metadata_exact",
+        "authoritative_emission": true,
+        "final_source": "normative_result.answer",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Para Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado para verificar a entrega do resultado.\n\nFontes:\n- Resolução 177/2012, art. 69",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-art-69-idx-000068",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "69",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 69",
+            "temporal_role": "eligible"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "indeterminate",
+          "requested_time_context": {
+            "norm_ids": [
+              "ufpi-177-2012"
+            ],
+            "before_amendment": false,
+            "relation_query": null,
+            "article": "69",
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-art-69-idx-000068",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "69",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": false,
+            "must_not_claim_current_validity": false,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": false,
+            "must_not_present_successor_as_historical_predecessor": false,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": false,
+            "must_not_duplicate_superseded_wording": false,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Para Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "STATUS_UNKNOWN",
+              "norm_id": "ufpi-177-2012",
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "graduacao",
+        "retrieval_strategy": "metadata_exact",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "cdc7b6b7-af52-4108-b43b-30b2c0d2bbbb",
+        "error_code": null,
+        "safe_message": null
+      },
+      "final_message": "Para Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado para verificar a entrega do resultado.\n\nFontes:\n- Resolução 177/2012, art. 69",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": true,
+      "clarification_identical": null,
+      "safe_message_identical": null
+    },
+    {
+      "id": "concurrent_filtered",
+      "action": "NORMATIVE_RAG",
+      "audit": {
+        "action": "NORMATIVE_RAG",
+        "action_reason_code": "requires_normative_tool",
+        "correlation_id": "55abb757-7d8e-4c29-8277-87cda31a6dc5",
+        "nodes_visited": [
+          "action_policy",
+          "normative_tool",
+          "authoritative_emission"
+        ],
+        "normative_tool_called": true,
+        "facade_calls": 1,
+        "normative_status": "ANSWER",
+        "retrieval_strategy": "vector_filtered",
+        "authoritative_emission": true,
+        "final_source": "normative_result.answer",
+        "tool_exception_type": null
+      },
+      "result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Para Resolução 956/2025, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado para verificar a entrega do resultado.\n\nFontes:\n- Resolução 956/2025, art. 1\n- Resolução 956/2025, art. 63\n- Resolução 956/2025, art. 61\n- Resolução 956/2025, art. 18\n- Resolução 956/2025, art. 60",
+        "references": [
+          {
+            "chunk_id": "ufpi-956-2025-art-1-idx-000000",
+            "norm_id": "ufpi-956-2025",
+            "source": "Resolução CEPEX/UFPI nº 956/2025",
+            "article": "1",
+            "validated_subdivision": null,
+            "display_text": "Resolução 956/2025, art. 1",
+            "temporal_role": "eligible"
+          },
+          {
+            "chunk_id": "ufpi-956-2025-art-63-idx-000061",
+            "norm_id": "ufpi-956-2025",
+            "source": "Resolução CEPEX/UFPI nº 956/2025",
+            "article": "63",
+            "validated_subdivision": null,
+            "display_text": "Resolução 956/2025, art. 63",
+            "temporal_role": "eligible"
+          },
+          {
+            "chunk_id": "ufpi-956-2025-art-61-idx-000059",
+            "norm_id": "ufpi-956-2025",
+            "source": "Resolução CEPEX/UFPI nº 956/2025",
+            "article": "61",
+            "validated_subdivision": null,
+            "display_text": "Resolução 956/2025, art. 61",
+            "temporal_role": "eligible"
+          },
+          {
+            "chunk_id": "ufpi-956-2025-art-18-idx-000017",
+            "norm_id": "ufpi-956-2025",
+            "source": "Resolução CEPEX/UFPI nº 956/2025",
+            "article": "18",
+            "validated_subdivision": null,
+            "display_text": "Resolução 956/2025, art. 18",
+            "temporal_role": "eligible"
+          },
+          {
+            "chunk_id": "ufpi-956-2025-art-60-idx-000058",
+            "norm_id": "ufpi-956-2025",
+            "source": "Resolução CEPEX/UFPI nº 956/2025",
+            "article": "60",
+            "validated_subdivision": null,
+            "display_text": "Resolução 956/2025, art. 60",
+            "temporal_role": "eligible"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "indeterminate",
+          "requested_time_context": {
+            "norm_ids": [
+              "ufpi-956-2025"
+            ],
+            "before_amendment": false,
+            "relation_query": null,
+            "article": null,
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-956-2025-art-1-idx-000000",
+              "source_norm": "ufpi-956-2025",
+              "source_article": "1",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-63-idx-000061",
+              "source_norm": "ufpi-956-2025",
+              "source_article": "63",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-61-idx-000059",
+              "source_norm": "ufpi-956-2025",
+              "source_article": "61",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-18-idx-000017",
+              "source_norm": "ufpi-956-2025",
+              "source_article": "18",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-60-idx-000058",
+              "source_norm": "ufpi-956-2025",
+              "source_article": "60",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": false,
+            "must_not_claim_current_validity": false,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": false,
+            "must_not_present_successor_as_historical_predecessor": false,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": false,
+            "must_not_duplicate_superseded_wording": false,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Para Resolução 956/2025, o conjunto documental utilizado não permite certificar a vigência atual.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "STATUS_UNKNOWN",
+              "norm_id": "ufpi-956-2025",
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "pos_graduacao",
+        "retrieval_strategy": "vector_filtered",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "55abb757-7d8e-4c29-8277-87cda31a6dc5",
+        "error_code": null,
+        "safe_message": null
+      },
+      "final_message": "Para Resolução 956/2025, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado para verificar a entrega do resultado.\n\nFontes:\n- Resolução 956/2025, art. 1\n- Resolução 956/2025, art. 63\n- Resolução 956/2025, art. 61\n- Resolução 956/2025, art. 18\n- Resolução 956/2025, art. 60",
+      "typed_result": true,
+      "structured_preserved": true,
+      "answer_identical": true,
+      "clarification_identical": null,
+      "safe_message_identical": null
+    }
+  ],
+  "index_unchanged": true,
+  "index_sha256": "ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a",
+  "real_api_calls": 0,
+  "vector_relevance_evaluated": false
+}

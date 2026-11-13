@@ -1,0 +1,595 @@
+{
+  "$defs": {
+    "AllowedTemporalFacts": {
+      "additionalProperties": false,
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/$defs/TemporalFact"
+          },
+          "title": "Items",
+          "type": "array"
+        }
+      },
+      "required": [
+        "items"
+      ],
+      "title": "AllowedTemporalFacts",
+      "type": "object"
+    },
+    "EvidenceState": {
+      "additionalProperties": false,
+      "properties": {
+        "chunk_id": {
+          "title": "Chunk Id",
+          "type": "string"
+        },
+        "source_norm": {
+          "title": "Source Norm",
+          "type": "string"
+        },
+        "source_article": {
+          "title": "Source Article",
+          "type": "string"
+        },
+        "temporal_action": {
+          "title": "Temporal Action",
+          "type": "string"
+        },
+        "normative_status": {
+          "enum": [
+            "vigente",
+            "substituida",
+            "revogada",
+            "desconhecida"
+          ],
+          "title": "Normative Status",
+          "type": "string"
+        },
+        "temporal_role": {
+          "enum": [
+            "historical",
+            "posterior",
+            "eligible"
+          ],
+          "title": "Temporal Role",
+          "type": "string"
+        },
+        "relation_source": {
+          "anyOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Relation Source"
+        }
+      },
+      "required": [
+        "chunk_id",
+        "source_norm",
+        "source_article",
+        "temporal_action",
+        "normative_status",
+        "temporal_role"
+      ],
+      "title": "EvidenceState",
+      "type": "object"
+    },
+    "GenerationConstraints": {
+      "additionalProperties": false,
+      "properties": {
+        "must_frame_as_historical": {
+          "title": "Must Frame As Historical",
+          "type": "boolean"
+        },
+        "must_not_claim_current_validity": {
+          "title": "Must Not Claim Current Validity",
+          "type": "boolean"
+        },
+        "must_not_claim_unknown_as_current": {
+          "title": "Must Not Claim Unknown As Current",
+          "type": "boolean"
+        },
+        "must_not_present_revoked_rule_as_current": {
+          "title": "Must Not Present Revoked Rule As Current",
+          "type": "boolean"
+        },
+        "must_not_present_successor_as_historical_predecessor": {
+          "title": "Must Not Present Successor As Historical Predecessor",
+          "type": "boolean"
+        },
+        "must_separate_temporal_states": {
+          "title": "Must Separate Temporal States",
+          "type": "boolean"
+        },
+        "must_follow_evidence_roles": {
+          "default": true,
+          "title": "Must Follow Evidence Roles",
+          "type": "boolean"
+        },
+        "must_not_treat_partial_amendment_as_total_revocation": {
+          "title": "Must Not Treat Partial Amendment As Total Revocation",
+          "type": "boolean"
+        },
+        "must_not_duplicate_superseded_wording": {
+          "title": "Must Not Duplicate Superseded Wording",
+          "type": "boolean"
+        },
+        "must_not_reintroduce_excluded_evidence": {
+          "default": true,
+          "title": "Must Not Reintroduce Excluded Evidence",
+          "type": "boolean"
+        },
+        "must_not_deny_present_evidence": {
+          "default": true,
+          "title": "Must Not Deny Present Evidence",
+          "type": "boolean"
+        },
+        "must_not_invent_effective_date": {
+          "default": true,
+          "title": "Must Not Invent Effective Date",
+          "type": "boolean"
+        },
+        "must_not_invent_temporal_scope": {
+          "default": true,
+          "title": "Must Not Invent Temporal Scope",
+          "type": "boolean"
+        },
+        "citation_granularity_ceiling": {
+          "enum": [
+            "source",
+            "article"
+          ],
+          "title": "Citation Granularity Ceiling",
+          "type": "string"
+        }
+      },
+      "required": [
+        "must_frame_as_historical",
+        "must_not_claim_current_validity",
+        "must_not_claim_unknown_as_current",
+        "must_not_present_revoked_rule_as_current",
+        "must_not_present_successor_as_historical_predecessor",
+        "must_separate_temporal_states",
+        "must_not_treat_partial_amendment_as_total_revocation",
+        "must_not_duplicate_superseded_wording",
+        "citation_granularity_ceiling"
+      ],
+      "title": "GenerationConstraints",
+      "type": "object"
+    },
+    "KnownRelation": {
+      "additionalProperties": false,
+      "properties": {
+        "relation": {
+          "enum": [
+            "REVOKED_BY",
+            "AMENDED_BY"
+          ],
+          "title": "Relation",
+          "type": "string"
+        },
+        "source_norm": {
+          "title": "Source Norm",
+          "type": "string"
+        },
+        "target_norm": {
+          "title": "Target Norm",
+          "type": "string"
+        },
+        "target_article": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target Article"
+        },
+        "target_paragraph": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target Paragraph"
+        },
+        "evidence_source": {
+          "title": "Evidence Source",
+          "type": "string"
+        },
+        "evidence_article": {
+          "title": "Evidence Article",
+          "type": "string"
+        }
+      },
+      "required": [
+        "relation",
+        "source_norm",
+        "target_norm",
+        "evidence_source",
+        "evidence_article"
+      ],
+      "title": "KnownRelation",
+      "type": "object"
+    },
+    "NormativeReference": {
+      "additionalProperties": false,
+      "properties": {
+        "chunk_id": {
+          "title": "Chunk Id",
+          "type": "string"
+        },
+        "norm_id": {
+          "title": "Norm Id",
+          "type": "string"
+        },
+        "source": {
+          "title": "Source",
+          "type": "string"
+        },
+        "article": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Article"
+        },
+        "validated_subdivision": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Validated Subdivision"
+        },
+        "display_text": {
+          "title": "Display Text",
+          "type": "string"
+        },
+        "temporal_role": {
+          "enum": [
+            "historical",
+            "posterior",
+            "eligible"
+          ],
+          "title": "Temporal Role",
+          "type": "string"
+        }
+      },
+      "required": [
+        "chunk_id",
+        "norm_id",
+        "source",
+        "article",
+        "display_text",
+        "temporal_role"
+      ],
+      "title": "NormativeReference",
+      "type": "object"
+    },
+    "RetrievalStrategy": {
+      "enum": [
+        "dense_vector",
+        "metadata_exact",
+        "vector_filtered"
+      ],
+      "title": "RetrievalStrategy",
+      "type": "string"
+    },
+    "TemporalFact": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "HISTORICAL_CONTEXT",
+            "REVOKED_BY",
+            "AMENDED_BY",
+            "STATUS_UNKNOWN",
+            "CURRENT_CONTEXT",
+            "COMPARISON_ROLE"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "norm_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Norm Id"
+        },
+        "target_norm": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target Norm"
+        },
+        "role": {
+          "anyOf": [
+            {
+              "enum": [
+                "historical",
+                "posterior",
+                "eligible"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Role"
+        }
+      },
+      "required": [
+        "kind"
+      ],
+      "title": "TemporalFact",
+      "type": "object"
+    },
+    "TemporalGroundingContext": {
+      "additionalProperties": false,
+      "properties": {
+        "temporal_intent": {
+          "enum": [
+            "current",
+            "historical",
+            "comparison",
+            "validity",
+            "indeterminate"
+          ],
+          "title": "Temporal Intent",
+          "type": "string"
+        },
+        "requested_time_context": {
+          "title": "Requested Time Context",
+          "type": "object"
+        },
+        "evidence_states": {
+          "items": {
+            "$ref": "#/$defs/EvidenceState"
+          },
+          "title": "Evidence States",
+          "type": "array"
+        },
+        "known_relations": {
+          "items": {
+            "$ref": "#/$defs/KnownRelation"
+          },
+          "title": "Known Relations",
+          "type": "array"
+        },
+        "generation_constraints": {
+          "$ref": "#/$defs/GenerationConstraints"
+        }
+      },
+      "required": [
+        "temporal_intent",
+        "requested_time_context",
+        "evidence_states",
+        "known_relations",
+        "generation_constraints"
+      ],
+      "title": "TemporalGroundingContext",
+      "type": "object"
+    },
+    "ToolErrorCode": {
+      "enum": [
+        "invalid_request",
+        "provider_error",
+        "index_unavailable",
+        "router_error",
+        "no_eligible_context",
+        "clarification_unresolved",
+        "invalid_core_result",
+        "internal_error"
+      ],
+      "title": "ToolErrorCode",
+      "type": "string"
+    },
+    "ToolStatus": {
+      "enum": [
+        "ANSWER",
+        "CLARIFICATION",
+        "ERROR"
+      ],
+      "title": "ToolStatus",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "contract_version": {
+      "const": "1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "core_version": {
+      "const": "structured_output_v2",
+      "title": "Core Version",
+      "type": "string"
+    },
+    "status": {
+      "$ref": "#/$defs/ToolStatus"
+    },
+    "answer": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Answer"
+    },
+    "references": {
+      "items": {
+        "$ref": "#/$defs/NormativeReference"
+      },
+      "title": "References",
+      "type": "array"
+    },
+    "temporal_provenance": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/TemporalGroundingContext"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "temporal_status_text": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Temporal Status Text"
+    },
+    "allowed_temporal_facts": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/AllowedTemporalFacts"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "core_status": {
+      "anyOf": [
+        {
+          "enum": [
+            "accepted",
+            "regenerated",
+            "fallback"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Core Status"
+    },
+    "domain": {
+      "anyOf": [
+        {
+          "enum": [
+            "graduacao",
+            "pos_graduacao",
+            "ambas"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Domain"
+    },
+    "retrieval_strategy": {
+      "$ref": "#/$defs/RetrievalStrategy"
+    },
+    "needs_clarification": {
+      "default": false,
+      "title": "Needs Clarification",
+      "type": "boolean"
+    },
+    "clarification_question": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Clarification Question"
+    },
+    "correlation_id": {
+      "format": "uuid",
+      "title": "Correlation Id",
+      "type": "string"
+    },
+    "error_code": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ToolErrorCode"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "safe_message": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Safe Message"
+    }
+  },
+  "required": [
+    "contract_version",
+    "core_version",
+    "status",
+    "retrieval_strategy",
+    "correlation_id"
+  ],
+  "title": "NormativeToolResult",
+  "type": "object"
+}

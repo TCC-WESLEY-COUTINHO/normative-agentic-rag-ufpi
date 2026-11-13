@@ -1,0 +1,17 @@
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+INFO:     172.18.0.1:40734 - "GET /health HTTP/1.1" 200 OK
+INFO:     172.18.0.1:40748 - "GET /info HTTP/1.1" 200 OK
+INFO:     172.18.0.1:40762 - "GET /health HTTP/1.1" 200 OK
+INFO:     172.18.0.1:40764 - "GET /agents/chatbot_ufpi_integrated_v1/readiness HTTP/1.1" 200 OK
+INFO:     172.18.0.1:40780 - "POST /chatbot_ufpi_integrated_v1/invoke HTTP/1.1" 200 OK
+INFO:     172.18.0.1:40796 - "POST /chatbot_ufpi_integrated_v1/invoke HTTP/1.1" 200 OK
+INFO:     172.18.0.1:40800 - "POST /chatbot_ufpi_integrated_v1/invoke HTTP/1.1" 200 OK
+INFO:     172.18.0.1:40806 - "POST /chatbot_ufpi_integrated_v1/stream HTTP/1.1" 200 OK
+INFO:     172.18.0.1:40810 - "POST /chatbot_ufpi_integrated_v1/stream HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1]

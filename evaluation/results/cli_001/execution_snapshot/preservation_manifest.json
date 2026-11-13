@@ -1,0 +1,160 @@
+{
+  "schema": "execution_snapshot_preservation_v2",
+  "source_run": "cli_001",
+  "run_manifest": "evaluation/results/cli_001/manifest.json",
+  "description": "Files in this snapshot, which may be partial. byte_preserved files match the hash in the run manifest. scientific_projection files have their own hash and do not reproduce the historical hash. not_included lists inputs recorded in the run manifest that are absent from this snapshot. Verification uses only repository files.",
+  "files": [
+    {
+      "relative_path": "code/src/rag_baseline/__init__.py",
+      "sha256": "539056baaeba82639effc582df1b127da66d551b25146d7c41d7e6118b3c3ae3",
+      "byte_size": 72,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "cli_001"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/analyze_experiment.py",
+      "sha256": "3775da46d3415fff60e019d7e4dc1bfd89907a1fa756c27c71f49c39ae69e101",
+      "byte_size": 1175,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "cli_001"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/api.py",
+      "sha256": "67458c79f65e5838838960247c4664ad33fe573f0d2c197b2348ab3690f74557",
+      "byte_size": 4424,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "cli_001"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/chat.py",
+      "sha256": "033d3e69812107dce67f38a3f739480281ab674f16339f754f2c392640238eaa",
+      "byte_size": 5748,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "cli_001"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/config.py",
+      "sha256": "122fc5a0c9b4d31d9d2abedfd575a977c64e394624341e18a92cc2981dcfb5cd",
+      "byte_size": 1421,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "cli_001"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/corpus.py",
+      "sha256": "a0894063ca5450aa405ad87cf273ab6a3863ab15dce3972aaac3768b91551ed6",
+      "byte_size": 3986,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "cli_001"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/dataset.py",
+      "sha256": "ca7dc6a6d9c1169f12f1ce0c813a58fbea0f6e0ea40f5605188ac60a7e94fc1e",
+      "byte_size": 1271,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "cli_001"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/experiment_v2.py",
+      "sha256": "0f626aea8b5f1290488ac4bd9beeabd1250094ccbddc62f899d3f2d286abe3cb",
+      "byte_size": 14509,
+      "role": "source module",
+      "preservation_kind": "scientific_projection",
+      "source_run": "cli_001",
+      "normalization": "non-scientific metadata normalized"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/experiment.py",
+      "sha256": "adfb541ee53c91f3018136f04047a247f08619007005ffcc04806b56778c0e30",
+      "byte_size": 14796,
+      "role": "source module",
+      "preservation_kind": "scientific_projection",
+      "source_run": "cli_001",
+      "normalization": "non-scientific metadata normalized"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/index.py",
+      "sha256": "102174caa4f36d4d9b23d67d6cd536625bcdb4aa8edb5105d904c92378b6e306",
+      "byte_size": 4740,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "cli_001"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/models.py",
+      "sha256": "a9b04320642e0bd7a179a33c37672a7cca7c619a66576e43c237ea47f5b8f241",
+      "byte_size": 1970,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "cli_001"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/openrouter.py",
+      "sha256": "feec50ecadab9646c0f2411c229867ebc4bd6f453121c845725a9ff2e2705360",
+      "byte_size": 5036,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "cli_001"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/profiles.py",
+      "sha256": "8344e922b72816c8f0017abe8b52b1767225cfb0c6f13efae67b55225bb6ceef",
+      "byte_size": 2845,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "cli_001"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/retrieve.py",
+      "sha256": "b37609b19c1d80298055f76e920226531cb7ddb3516aaaaa1cd096a77cddf0bc",
+      "byte_size": 3157,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "cli_001"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/routing.py",
+      "sha256": "e368b515b727bb3c71f4251be38a1125d717f1f852f5f2324faeb71b7320a204",
+      "byte_size": 1112,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "cli_001"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/scope.py",
+      "sha256": "c0286726b404dbfa1640ea0966a7040cfc26e505f1d7619692d416b111d2702d",
+      "byte_size": 1078,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "cli_001"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/service.py",
+      "sha256": "f5815f3a26cd83b29ea33f33890e89d667dfb0ba8d6bd86291a3494607ba3f1a",
+      "byte_size": 5365,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "cli_001"
+    },
+    {
+      "relative_path": "code/src/rag_baseline/vector_store.py",
+      "sha256": "ce7c739578fa78d021ededfb1bc333d929f4cb349d77341b3b5a3e7451ba25fb",
+      "byte_size": 3829,
+      "role": "source module",
+      "preservation_kind": "byte_preserved",
+      "source_run": "cli_001"
+    }
+  ],
+  "not_included": [
+    {
+      "relative_path": "code/src/rag_baseline/audit_v2.py",
+      "role": "source module"
+    }
+  ]
+}

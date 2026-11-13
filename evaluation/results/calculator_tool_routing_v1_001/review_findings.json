@@ -1,0 +1,50 @@
+{
+  "mode": "independent_read_only_review_and_author_reproductions",
+  "findings": [
+    {
+      "id": 1,
+      "topic": "decimal_context",
+      "observation": "abs no validator dependia da precisão externa; bound podia aceitar max+1",
+      "correction": "copy_abs sem arredondamento",
+      "verification": "1 failed / 94 passed antes da correção"
+    },
+    {
+      "id": 2,
+      "topic": "bare_date",
+      "observation": "Data isolada virava aritmética e interceptava pending",
+      "correction": "Reserva da data literal para fallback/continuação",
+      "verification": "2 regressões RED→GREEN"
+    },
+    {
+      "id": 3,
+      "topic": "unicode_veto",
+      "observation": "Veto antes de NFC classificava NFD de modo diferente",
+      "correction": "NFC antes do veto",
+      "verification": "Regressão NFC/NFD RED→GREEN"
+    },
+    {
+      "id": 4,
+      "topic": "huge_typed_days",
+      "observation": "Normalização de deslocamento tipado enorme excedia o próprio contrato de erro",
+      "correction": "Bound antes da formatação",
+      "verification": "Regressão de StructuredTool RED→GREEN"
+    },
+    {
+      "id": 5,
+      "topic": "mixed_prose",
+      "observation": "Prefixo Calcule admitia prosa mista ausente da lista de marcadores",
+      "correction": "Admissão por forma matemática fechada; fallback conservador",
+      "verification": "Regressão RED→GREEN"
+    },
+    {
+      "id": 6,
+      "topic": "prefixed_date",
+      "observation": "Calcule antes de data perdia código específico de erro",
+      "correction": "Prefixo externo comum à gramática aritmética/de datas",
+      "verification": "2 regressões RED→GREEN"
+    }
+  ],
+  "verification": "111 focused tests green; full suite green; no second review of fixes",
+  "unresolved_important_or_critical_in_inspected_scope": 0,
+  "scope": "Finite lexical grammar and local controlled integration; no universal language or legal correctness claim"
+}

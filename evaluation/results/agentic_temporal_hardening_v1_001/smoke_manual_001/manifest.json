@@ -1,0 +1,383 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-10-29T03:37:09.987614+00:00",
+  "mode": "live_provider",
+  "scope_condition": "manual_known_domain",
+  "n": 9,
+  "git_head": "7f55bcd927ec2677097d9dfe9eb5c16aeedb0f73",
+  "routing_mode": "intent_v1",
+  "top_k": 5,
+  "temperature": 0.0,
+  "embedding_model": "openai/text-embedding-3-small",
+  "llm_model": "qwen/qwen3-30b-a3b-instruct-2507",
+  "source_hashes": {
+    "evaluation\\datasets\\temporal_invariants_v1.json": "decb949a80ead4137089dedf140096f09a890cfd49fd9249405e30069ad1d18b",
+    "data\\normative_registry.json": "34928be0d8456462804468a339e51394cf15d9ab99370ebdcb5e783d0f36012b",
+    "code\\src\\rag_baseline\\temporal_evaluation.py": "64dc53edc47bef2346263cc843c94a679797e66b22b3b7a031be68941c6c1c93",
+    "code\\src\\rag_baseline\\agentic.py": "d7f403b822fe73779580e4c462c3a3ed85a8776009d59983297e78b71761ce1d",
+    "code\\src\\rag_baseline\\versioning.py": "8a0946d270ff48c49a2694ba8f5f3fddd1a7c8e56cbd3669bbc3aa3674df758c",
+    "code\\src\\rag_baseline\\router.py": "10cc70f95b2197722dee9b5b2f874afa00fa9b72d64b794cdd92b868f0923394",
+    "code\\src\\rag_baseline\\prompts.py": "2714efb60a400572aff9d2101bbae659fb28d2e70b97e1723f1d776dfdbfa23a",
+    "code\\src\\rag_baseline\\config.py": "1e77ca784ecd191d18ac65243f30a574e05149480e97b84487740299cb5b6979"
+  },
+  "provider_receipts": [
+    {
+      "endpoint": "/embeddings",
+      "id": "gen-emb-1793244990-2yfPNEOekrX9SkGEVVCi",
+      "model": "text-embedding-3-small",
+      "usage": {
+        "prompt_tokens": 15,
+        "total_tokens": 15,
+        "cost": 3e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 3e-07,
+          "upstream_inference_prompt_cost": 3e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    {
+      "endpoint": "/chat/completions",
+      "id": "gen-1793244991-i6PEze8rpBCMp5CeqfJF",
+      "model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "usage": {
+        "prompt_tokens": 2041,
+        "completion_tokens": 682,
+        "total_tokens": 2723,
+        "cost": 0.0004087,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0004087,
+          "upstream_inference_prompt_cost": 0.0002041,
+          "upstream_inference_completions_cost": 0.0002046
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    {
+      "endpoint": "/embeddings",
+      "id": "gen-emb-1793244997-GeDRdluaMGLkGD6y84ov",
+      "model": "text-embedding-3-small",
+      "usage": {
+        "prompt_tokens": 25,
+        "total_tokens": 25,
+        "cost": 5e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5e-07,
+          "upstream_inference_prompt_cost": 5e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    {
+      "endpoint": "/chat/completions",
+      "id": "gen-1793244998-1Uesmz8b7r2VgoudFSYD",
+      "model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "usage": {
+        "prompt_tokens": 2223,
+        "completion_tokens": 296,
+        "total_tokens": 2519,
+        "cost": 0.0003111,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0003111,
+          "upstream_inference_prompt_cost": 0.0002223,
+          "upstream_inference_completions_cost": 8.88e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    {
+      "endpoint": "/embeddings",
+      "id": "gen-emb-1793245000-1bxCdfrFZ8g50hWNjo2P",
+      "model": "text-embedding-3-small",
+      "usage": {
+        "prompt_tokens": 20,
+        "total_tokens": 20,
+        "cost": 4e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4e-07,
+          "upstream_inference_prompt_cost": 4e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    {
+      "endpoint": "/chat/completions",
+      "id": "gen-1793245001-zfINvMQJHYwBE75xVLgU",
+      "model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "usage": {
+        "prompt_tokens": 1190,
+        "completion_tokens": 151,
+        "total_tokens": 1341,
+        "cost": 0.0001643,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001643,
+          "upstream_inference_prompt_cost": 0.000119,
+          "upstream_inference_completions_cost": 4.53e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    {
+      "endpoint": "/embeddings",
+      "id": "gen-emb-1793245003-34MqxWr81SObNdah9QGP",
+      "model": "text-embedding-3-small",
+      "usage": {
+        "prompt_tokens": 27,
+        "total_tokens": 27,
+        "cost": 5.4e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 5.4e-07,
+          "upstream_inference_prompt_cost": 5.4e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    {
+      "endpoint": "/chat/completions",
+      "id": "gen-1793245004-Kghnk0RDTwgiwxHnUN45",
+      "model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "usage": {
+        "prompt_tokens": 2636,
+        "completion_tokens": 261,
+        "total_tokens": 2897,
+        "cost": 0.00031554,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 352,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00031554,
+          "upstream_inference_prompt_cost": 0.00023724,
+          "upstream_inference_completions_cost": 7.83e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    {
+      "endpoint": "/embeddings",
+      "id": "gen-emb-1793245016-OElyd4CnpwS4RyTHQC8v",
+      "model": "text-embedding-3-small",
+      "usage": {
+        "prompt_tokens": 16,
+        "total_tokens": 16,
+        "cost": 3.2e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 3.2e-07,
+          "upstream_inference_prompt_cost": 3.2e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    {
+      "endpoint": "/chat/completions",
+      "id": "gen-1793245017-Fl8Im8dm0lGCZGmGr6rr",
+      "model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "usage": {
+        "prompt_tokens": 1912,
+        "completion_tokens": 53,
+        "total_tokens": 1965,
+        "cost": 0.00018798,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00018798,
+          "upstream_inference_prompt_cost": 0.00017208,
+          "upstream_inference_completions_cost": 1.59e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    {
+      "endpoint": "/embeddings",
+      "id": "gen-emb-1793245019-yDSJ6ipB1K6Ot2mDLmNq",
+      "model": "text-embedding-3-small",
+      "usage": {
+        "prompt_tokens": 33,
+        "total_tokens": 33,
+        "cost": 6.6e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 6.6e-07,
+          "upstream_inference_prompt_cost": 6.6e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    {
+      "endpoint": "/chat/completions",
+      "id": "gen-1793245020-WyC5OMDQsv9RjQ0wGkpm",
+      "model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "usage": {
+        "prompt_tokens": 2490,
+        "completion_tokens": 229,
+        "total_tokens": 2719,
+        "cost": 0.0003177,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 352,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0003177,
+          "upstream_inference_prompt_cost": 0.000249,
+          "upstream_inference_completions_cost": 6.87e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    {
+      "endpoint": "/embeddings",
+      "id": "gen-emb-1793245022-okhsv84uaclGwYbHK21u",
+      "model": "text-embedding-3-small",
+      "usage": {
+        "prompt_tokens": 18,
+        "total_tokens": 18,
+        "cost": 3.6e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 3.6e-07,
+          "upstream_inference_prompt_cost": 3.6e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    {
+      "endpoint": "/chat/completions",
+      "id": "gen-1793245023-noG81zhSfHsk9DDA1W7Z",
+      "model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "usage": {
+        "prompt_tokens": 1878,
+        "completion_tokens": 122,
+        "total_tokens": 2000,
+        "cost": 0.00020562,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00020562,
+          "upstream_inference_prompt_cost": 0.00016902,
+          "upstream_inference_completions_cost": 3.66e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    {
+      "endpoint": "/embeddings",
+      "id": "gen-emb-1793245028-pe1BXpl4sx8N4VBRDmsl",
+      "model": "text-embedding-3-small",
+      "usage": {
+        "prompt_tokens": 20,
+        "total_tokens": 20,
+        "cost": 4e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4e-07,
+          "upstream_inference_prompt_cost": 4e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      }
+    },
+    {
+      "endpoint": "/chat/completions",
+      "id": "gen-1793245029-wnDts6e6dCN2XAKDBsdP",
+      "model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "usage": {
+        "prompt_tokens": 631,
+        "completion_tokens": 38,
+        "total_tokens": 669,
+        "cost": 6.819e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 6.819e-05,
+          "upstream_inference_prompt_cost": 5.679e-05,
+          "upstream_inference_completions_cost": 1.14e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Technical regression, not legally validated gold.",
+    "Controlled routing and generation are mocked; semantic answer accuracy is not measured.",
+    "Unknown status does not certify applicability on a calendar date.",
+    "No retrieval tuning or general legal-validity claims."
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "manifests": [
+    {
+      "path": "evaluation/results/failure_analysis_v1/baseline/manifest.json",
+      "status": "failed_before_calls"
+    },
+    {
+      "path": "evaluation/results/failure_analysis_v1/baseline_001/manifest.json",
+      "status": "completed"
+    },
+    {
+      "path": "evaluation/results/failure_analysis_v1/f1_before/manifest.json",
+      "status": "completed"
+    },
+    {
+      "path": "evaluation/results/failure_analysis_v1/f2_retrieval/manifest.json",
+      "status": "completed"
+    },
+    {
+      "path": "evaluation/results/failure_analysis_v1/f3_before/manifest.json",
+      "status": "completed"
+    },
+    {
+      "path": "evaluation/results/failure_analysis_v1/f4_original/manifest.json",
+      "status": "completed"
+    },
+    {
+      "path": "evaluation/results/failure_regression_v1_001/f1_after/manifest.json",
+      "status": "completed"
+    },
+    {
+      "path": "evaluation/results/failure_regression_v1_001/f1_final/manifest.json",
+      "status": "completed"
+    },
+    {
+      "path": "evaluation/results/failure_regression_v1_001/f1_retained/manifest.json",
+      "status": "completed"
+    },
+    {
+      "path": "evaluation/results/failure_regression_v1_001/f1_schema_after/manifest.json",
+      "status": "completed"
+    },
+    {
+      "path": "evaluation/results/failure_regression_v1_001/f3_after/manifest.json",
+      "status": "completed"
+    },
+    {
+      "path": "evaluation/results/failure_regression_v1_001/f3_article_only/manifest.json",
+      "status": "completed"
+    },
+    {
+      "path": "evaluation/results/failure_regression_v1_001/f4_retained/manifest.json",
+      "status": "completed"
+    },
+    {
+      "path": "evaluation/results/failure_regression_v1_001/pipeline_001/manifest.json",
+      "status": "completed"
+    }
+  ],
+  "json_files_checked": 39,
+  "jsonl_rows_checked": 282,
+  "all_declared_artifact_hashes_match": true,
+  "final_run_source_hashes_match": true
+}

@@ -1,0 +1,78 @@
+{
+  "TEMP-POS-003": {
+    "runs": 10,
+    "counts": {
+      "pos_graduacao": 6,
+      "esclarecer": 4
+    },
+    "route_stability_rate": 0.6,
+    "expected_route_rate": 0.6
+  },
+  "TEMP-POS-004": {
+    "runs": 10,
+    "counts": {
+      "pos_graduacao": 4,
+      "esclarecer": 6
+    },
+    "route_stability_rate": 0.6,
+    "expected_route_rate": 0.4
+  },
+  "TEMP-GRAD-005": {
+    "runs": 10,
+    "counts": {
+      "graduacao": 4,
+      "esclarecer": 6
+    },
+    "route_stability_rate": 0.6,
+    "expected_route_rate": 0.4
+  },
+  "TEMP-GRAD-001": {
+    "runs": 10,
+    "counts": {
+      "graduacao": 7,
+      "esclarecer": 3
+    },
+    "route_stability_rate": 0.7,
+    "expected_route_rate": 0.7
+  },
+  "CONTROL-POS": {
+    "runs": 1,
+    "counts": {
+      "pos_graduacao": 1
+    },
+    "route_stability_rate": 1.0,
+    "expected_route_rate": 1.0
+  },
+  "CONTROL-956": {
+    "runs": 1,
+    "counts": {
+      "esclarecer": 1
+    },
+    "route_stability_rate": 1.0,
+    "expected_route_rate": 0.0
+  },
+  "CONTROL-GRAD": {
+    "runs": 1,
+    "counts": {
+      "graduacao": 1
+    },
+    "route_stability_rate": 1.0,
+    "expected_route_rate": 1.0
+  },
+  "CONTROL-RGG": {
+    "runs": 1,
+    "counts": {
+      "graduacao": 1
+    },
+    "route_stability_rate": 1.0,
+    "expected_route_rate": 1.0
+  },
+  "CONTROL-AMBIGUOUS": {
+    "runs": 1,
+    "counts": {
+      "esclarecer": 1
+    },
+    "route_stability_rate": 1.0,
+    "expected_route_rate": 1.0
+  }
+}

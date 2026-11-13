@@ -1,0 +1,24 @@
+{
+  "original": "como entrar na pós?",
+  "routing_input": "como entrar na pós-graduação?",
+  "decision": {
+    "scope": null,
+    "needs_clarification": true,
+    "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+    "reason_code": "ambiguous_academic_level"
+  },
+  "observations": [
+    {
+      "router_payload": {
+        "question": "como entrar na pós-graduação?"
+      },
+      "decision_json": {
+        "clarification_question": "Você está se referindo à pós-graduação stricto sensu (mestrado ou doutorado) ou à pós-graduação lato sensu (especialização)?",
+        "needs_clarification": true,
+        "reason_code": "ambiguous_academic_level",
+        "scope": null
+      }
+    }
+  ],
+  "kind": "separate manual router diagnosis; no prompt logging"
+}

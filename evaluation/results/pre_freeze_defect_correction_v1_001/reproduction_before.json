@@ -1,0 +1,75 @@
+{
+  "source_layers": {
+    "original_question": "como entrar na pós-graduação?",
+    "conversation_action": "NORMATIVE_RAG",
+    "router_input": {
+      "question": "como entrar na pós-graduação?"
+    },
+    "router_output": {
+      "scope": "pos_graduacao",
+      "needs_clarification": false,
+      "clarification_question": null,
+      "reason_code": "explicit_pos"
+    },
+    "prior_memory": false,
+    "contextual_resolver_used": false,
+    "pending_created": false,
+    "status": "ANSWER",
+    "domain": "pos_graduacao",
+    "raw_generated_body": "Conteúdo controlado.",
+    "structured_final_answer": "Para Resolução 956/2025, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado.\n\nFontes:\n- Resolução 956/2025, art. 54\n- Resolução 956/2025, art. 53",
+    "normative_tool_answer": "Para Resolução 956/2025, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado.\n\nFontes:\n- Resolução 956/2025, art. 54\n- Resolução 956/2025, art. 53",
+    "chat_message_content": "Para Resolução 956/2025, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado.\n\nFontes:\n- Resolução 956/2025, art. 54\n- Resolução 956/2025, art. 53",
+    "references": [
+      {
+        "chunk_id": "ufpi-956-2025-art-54-idx-000052",
+        "norm_id": "ufpi-956-2025",
+        "source": "Resolução CEPEX/UFPI nº 956/2025",
+        "article": "54",
+        "validated_subdivision": null,
+        "display_text": "Resolução 956/2025, art. 54",
+        "temporal_role": "eligible"
+      },
+      {
+        "chunk_id": "ufpi-956-2025-art-53-idx-000051",
+        "norm_id": "ufpi-956-2025",
+        "source": "Resolução CEPEX/UFPI nº 956/2025",
+        "article": "53",
+        "validated_subdivision": null,
+        "display_text": "Resolução 956/2025, art. 53",
+        "temporal_role": "eligible"
+      }
+    ],
+    "source_origin": "normative_output.compose_answer",
+    "references_semantics": "final eligible evidence context projected before generation; not per-claim support attribution",
+    "ui_render": {
+      "markdown": [
+        "como entrar na pós-graduação?",
+        "Para Resolução 956/2025, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado.\n\nFontes:\n- Resolução 956/2025, art. 54\n- Resolução 956/2025, art. 53",
+        "Resolução 956/2025, art. 54",
+        "Resolução 956/2025, art. 53"
+      ],
+      "expander_labels": [
+        "Fontes normativas"
+      ]
+    }
+  },
+  "explicit_post": {
+    "original_question": "como entrar na pós?",
+    "conversation_action": "NORMATIVE_RAG",
+    "router_input": {
+      "question": "como entrar na pós?"
+    },
+    "router_output": {
+      "scope": null,
+      "needs_clarification": true,
+      "clarification_question": "Graduação ou pós?",
+      "reason_code": "insufficient_scope_signal"
+    },
+    "prior_memory": false,
+    "contextual_resolver_used": false,
+    "pending_created": true,
+    "status": "CLARIFICATION",
+    "domain": null
+  }
+}

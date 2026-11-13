@@ -1,0 +1,10 @@
+{
+  "stage": "calibrate",
+  "code_commit": "662358837779e36572058b93121dd5037cc344ab",
+  "status": "aborted_before_external_calls",
+  "cause": "Windows backslashes in HEAD:path Git object reference",
+  "llm_calls": 0,
+  "embedding_calls": 0,
+  "output_directory_created": false,
+  "remedy": "Normalize only Git object path separators; no policy, prompt, data or threshold change"
+}

@@ -1,0 +1,30 @@
+{
+  "checkpoint_serialization": {
+    "operation": "Offline JsonPlusSerializer.dumps_typed/loads_typed; no provider, retrieval, graph or service execution",
+    "before": {
+      "response_kind": "clarification",
+      "generation_attempts": 0,
+      "output_audit_present": true
+    },
+    "after": {
+      "response_kind": "generated",
+      "generation_attempts": 1,
+      "output_audit_present": false
+    },
+    "public_model_dump_equal": true,
+    "result": "Internal excluded fields do not survive checkpoint serialization; explicit future persistence policy required",
+    "evidence": [
+      "code/src/rag_baseline/models.py:89",
+      "code/.venv/Lib/site-packages/langgraph/checkpoint/serde/jsonplus.py:258"
+    ]
+  },
+  "sqlite_checkpoint": {
+    "operation": "Isolated synthetic MessagesState graph + temporary SQLite; no production graph/service/API/tool/model invoked",
+    "messages_after_database_reopen": 3,
+    "tool_artifact_survives_checkpoint": true,
+    "other_thread_is_empty": true,
+    "same_thread_different_user_has_same_messages": true,
+    "sync_get_state_with_async_saver_error": "InvalidStateError",
+    "temporary_database_removed": true
+  }
+}

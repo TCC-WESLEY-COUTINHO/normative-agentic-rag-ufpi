@@ -1,0 +1,70 @@
+{
+  "case_id": "TEMP-POS-001",
+  "failure_layer": "generation: localized citation grounding",
+  "reproduction_runs": 10,
+  "wrong_paragraph_one_runs": 10,
+  "raw_equals_service": true,
+  "chunk_id": "ufpi-956-2025-art-53-idx-000051",
+  "metadata_article_label": "Art. 53",
+  "metadata_paragraph": null,
+  "context_source": "f3_before/rows.jsonl: calls.request.messages",
+  "observations": [
+    "The ten-day deadline precedes the first paragraph in the real chunk.",
+    "Paragraph one concerns defense formats; it does not contain the deadline.",
+    "Formatter preserves chunk text without inserting paragraph metadata.",
+    "Every new provider response itself assigns the deadline to paragraph one.",
+    "OCR uses dollar signs for paragraph markers, and paragraph one refers back to caput. This structural noise was not edited."
+  ],
+  "root_cause": "Model adds unsupported paragraph granularity during generation; retrieval and deterministic references identify article 53 correctly. Existing instruction requests source/article but does not restrict finer citation localization.",
+  "causal_limit": "The generation layer is directly observed; OCR contribution is plausible but not isolated because corpus is frozen.",
+  "red": {
+    "failed": 1,
+    "passed": 1,
+    "wrong_runs": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "intervention": "Cite only source/article, matching metadata granularity. Do not append paragraph/item/letter to these citations.",
+  "first_intervention": {
+    "path": "../failure_regression_v1_001/f3_after",
+    "wrong_paragraph_one_runs": 10,
+    "test": "1 failed, 1 passed",
+    "accepted": false
+  },
+  "accepted_intervention": {
+    "path": "../failure_regression_v1_001/f3_article_only",
+    "instruction": "Cite only source/article, matching metadata granularity. Do not append paragraph/item/letter to these citations.",
+    "wrong_paragraph_one_runs": 0,
+    "runs": 10,
+    "unique_answers": 1,
+    "focused_tests_passed": 19,
+    "focused_seconds": 4.16,
+    "prompt_sha256": "ccf0374117c24920648661f4699e7291d59596450ead6b3f69bc59fcb10da3f3",
+    "tradeoff": "Citations are deliberately article-level, even when textual context supports finer subdivisions. No general factual-answer accuracy is inferred."
+  },
+  "status": "measured_mitigation_accepted",
+  "bugfix_commit": "71bff32853e125ba2aed6b25e9117760a84b2eb5",
+  "verification": {
+    "focused_passed": 19,
+    "rag_passed": 196,
+    "rag_skipped": 9,
+    "rag_warnings": 2,
+    "rag_seconds": 28.09,
+    "project_passed": 259,
+    "project_skipped": 11,
+    "project_warnings": 4,
+    "project_seconds": 28.17,
+    "ruff": "passed",
+    "format": "passed",
+    "diff_check": "passed"
+  }
+}

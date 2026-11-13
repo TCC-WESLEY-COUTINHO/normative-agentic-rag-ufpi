@@ -5,9 +5,10 @@ import time
 from dataclasses import dataclass
 from pathlib import Path
 
-from rag_baseline.config import BaselineSettings
+from rag_baseline.config import BaselineSettings, CorpusSource
 from rag_baseline.corpus import CorpusError, build_embedding_text, load_corpus
 from rag_baseline.openrouter import OpenRouterClient, OpenRouterError
+from rag_baseline.profiles import ProfileError, apply_profile, profile_names
 from rag_baseline.vector_store import ChromaVectorStore
 
 
@@ -33,13 +34,27 @@ async def index_corpus(
     rebuild: bool,
 ) -> IndexSummary:
     started_at = time.perf_counter()
-    chunks = load_corpus(settings.CORPUS_PATH)
-    embedding_texts = [build_embedding_text(chunk) for chunk in chunks]
+    sources = settings.CORPUS_SOURCES or (
+        CorpusSource(
+            path=settings.CORPUS_PATH,
+            id_prefix=settings.CORPUS_ID_PREFIX,
+            norm_name=settings.CORPUS_NAME,
+        ),
+    )
+    chunks, embedding_texts = [], []
+    for source in sources:
+        current = load_corpus(source.path, id_prefix=source.id_prefix)
+        chunks.extend(current)
+        embedding_texts.extend(
+            build_embedding_text(chunk, norm_name=source.norm_name) for chunk in current
+        )
+    if len({chunk.id for chunk in chunks}) != len(chunks):
+        raise IndexingError("IDs repetidos entre corpora; use um prefixo distinto por norma.")
     embeddings = await openrouter.embed(embedding_texts)
 
     if rebuild:
         vector_store.reset()
-    vector_store.upsert(chunks, embeddings)
+    vector_store.synchronize(chunks, embeddings)
     indexed_chunks = vector_store.count()
     if indexed_chunks != len(chunks):
         raise IndexingError(
@@ -58,7 +73,14 @@ async def index_corpus(
 
 
 def _parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Indexa a baseline da Resolução nº 177/2012.")
+    parser = argparse.ArgumentParser(
+        description="Indexa os corpora do perfil em uma coleção própria."
+    )
+    parser.add_argument(
+        "--profile",
+        choices=profile_names(),
+        help="Seleciona corpus, prefixo de IDs e coleção predefinidos.",
+    )
     parser.add_argument(
         "--rebuild",
         action="store_true",
@@ -95,13 +117,15 @@ async def _run(settings: BaselineSettings, rebuild: bool) -> IndexSummary:
 def main(argv: list[str] | None = None) -> int:
     args = _parser().parse_args(argv)
     settings = BaselineSettings()
+    if args.profile:
+        settings = apply_profile(settings, args.profile)
     if not settings.OPENROUTER_API_KEY:
         print("OPENROUTER_API_KEY não está configurada.", file=sys.stderr)
         return 1
 
     try:
         summary = asyncio.run(_run(settings, args.rebuild))
-    except (CorpusError, IndexingError, OpenRouterError, ValueError) as exc:
+    except (CorpusError, IndexingError, OpenRouterError, ProfileError, ValueError) as exc:
         print(f"Falha na indexação: {exc}", file=sys.stderr)
         return 1
 

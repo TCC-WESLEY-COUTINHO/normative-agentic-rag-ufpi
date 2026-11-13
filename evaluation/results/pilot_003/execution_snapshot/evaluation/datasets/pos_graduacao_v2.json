@@ -1,0 +1,679 @@
+{
+  "schema_version": "2.0",
+  "status": "candidate_gold",
+  "split": "pilot_development",
+  "question_style": "natural_without_resolution_prefix",
+  "sampling": {
+    "direta": 8,
+    "aberta": 8,
+    "ambigua": 4
+  },
+  "items": [
+    {
+      "id": "POS2-001",
+      "norm_id": "ufpi-956-2025",
+      "sector": "pos_graduacao",
+      "category": "direta",
+      "question": "Quantas faltas posso ter numa disciplina do doutorado sem reprovar?",
+      "expected_action": "answer",
+      "reference_answer": "É preciso frequentar pelo menos 75% da carga horária da disciplina; faltar a mais de 25% reprova por frequência. A aprovação também exige nota mínima sete.",
+      "required_facts": [
+        "É preciso frequentar pelo menos 75% da carga horária da disciplina; faltar a mais de 25% reprova por frequência.",
+        "A aprovação também exige nota mínima sete."
+      ],
+      "conditional_answer": null,
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "20",
+          "text": "Art. 20. A verificação do rendimento acadêmico é feita por disciplina e abrange os aspectos de assiduidade e eficiência, ambos eliminatórios.\n- $ 1º Acritério do professor, a avaliação da eficiência é feita por um ou mais dos seguintes meios: provas, exames, trabalhos ou projetos.\n\n- $ 2º O resultado final da verificação é expresso em notas na escala de zero a dez com, no máximo, uma casa decimal.\n- $ 3º É considerado aprovado o(a) discente que obtiver nota mínima sete e frequência igual ou superior a 75% (setenta e cinco por cento).\n- S$ 4º As atividades de qualificação, de dissertação e de tese podem ser desenvolvidas por mais de um período letivo, conforme o Regimento Interno de cada PPG.\n- S 5º Para efeito de registro, o número de notas parciais deve ser proporcional à carga horária da disciplina, respeitado o mínimo de:\n- | -duas, nas disciplinas com carga horária igual ou inferior a quarenta e cinco horas;\n- Il -três, nas disciplinas com carga horária de sessenta a setenta e cinco horas; e\n- Ill -quatro, nas disciplinas com carga horária superior a setenta e cinco horas."
+        }
+      ],
+      "review": {
+        "pdf_visual_check": {
+          "date": "2026-10-19",
+          "pdf_pages_1based": [
+            8,
+            9
+          ]
+        },
+        "reviewers": []
+      }
+    },
+    {
+      "id": "POS2-002",
+      "norm_id": "ufpi-956-2025",
+      "sector": "pos_graduacao",
+      "category": "direta",
+      "question": "Tirei 6,5 numa matéria do mestrado e fui a 80% das aulas. Passei?",
+      "expected_action": "answer",
+      "reference_answer": "Não: a nota mínima para aprovação é sete. A frequência de 80% atende ao mínimo de 75%, mas não compensa a nota insuficiente.",
+      "required_facts": [
+        "Não: a nota mínima para aprovação é sete.",
+        "A frequência de 80% atende ao mínimo de 75%, mas não compensa a nota insuficiente."
+      ],
+      "conditional_answer": null,
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "20",
+          "text": "Art. 20. A verificação do rendimento acadêmico é feita por disciplina e abrange os aspectos de assiduidade e eficiência, ambos eliminatórios.\n- $ 1º Acritério do professor, a avaliação da eficiência é feita por um ou mais dos seguintes meios: provas, exames, trabalhos ou projetos.\n\n- $ 2º O resultado final da verificação é expresso em notas na escala de zero a dez com, no máximo, uma casa decimal.\n- $ 3º É considerado aprovado o(a) discente que obtiver nota mínima sete e frequência igual ou superior a 75% (setenta e cinco por cento).\n- S$ 4º As atividades de qualificação, de dissertação e de tese podem ser desenvolvidas por mais de um período letivo, conforme o Regimento Interno de cada PPG.\n- S 5º Para efeito de registro, o número de notas parciais deve ser proporcional à carga horária da disciplina, respeitado o mínimo de:\n- | -duas, nas disciplinas com carga horária igual ou inferior a quarenta e cinco horas;\n- Il -três, nas disciplinas com carga horária de sessenta a setenta e cinco horas; e\n- Ill -quatro, nas disciplinas com carga horária superior a setenta e cinco horas."
+        }
+      ],
+      "review": {
+        "pdf_visual_check": {
+          "date": "2026-10-19",
+          "pdf_pages_1based": [
+            8,
+            9
+          ]
+        },
+        "reviewers": []
+      }
+    },
+    {
+      "id": "POS2-003",
+      "norm_id": "ufpi-956-2025",
+      "sector": "pos_graduacao",
+      "category": "direta",
+      "question": "Quantos créditos preciso completar no mestrado? A dissertação entra nessa conta?",
+      "expected_action": "answer",
+      "reference_answer": "O mínimo é de 30 créditos, dos quais seis são relativos à dissertação. A distribuição entre disciplinas obrigatórias, optativas e atividades complementares segue o Regimento Interno do PPG.",
+      "required_facts": [
+        "O mínimo é de 30 créditos, dos quais seis são relativos à dissertação.",
+        "A distribuição entre disciplinas obrigatórias, optativas e atividades complementares segue o Regimento Interno do PPG."
+      ],
+      "conditional_answer": null,
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "3",
+          "text": "Art. 3º O Mestrado, Acadêmico ou Profissional, requer o cumprimento dos seguintes requisitos:\n- | -duração mínima de doze e máxima de vinte e quatro meses, permitida a prorrogação por até seis meses, mediante aprovação do Colegiado Simples.\n- Il -aprovação em exame de proficiência em uma língua estrangeira;\n- Ill -integralização curricular de, no mínimo, trinta créditos, dos quais seis são relativos à dissertação, observada a distribuição entre disciplinas obrigatórias, optativas e atividades complementares, definida no Regimento Interno do PPG;\n- IV -realização do Estágio Docência, nos termos definidos nesta Resolução;\n- V -realização de Exame de Qualificação, quando previsto no Regimento Interno do PPG; e\n- VI -apresentação oral e defesa de Dissertação.\n- $ 1º O Regimento Interno do PPG pode estabelecer durações específicas, desde que respeitados os limites do inciso |.\n- $ 2º Caso o PPG opte pela realização do Exame de Qualificação (inciso V), seu Regimento Interno deverá detalhar os procedimentos, prazos e modalidades de avaliação.\n- S$ 3º A defesa da Dissertação (inciso VI) somente ocorrerá após a integralização total dos créditos em disciplinas e atividades complementares.\n- $ 4º É permitido o aproveitamento de créditos cursados em outros Programas da UFPI ou em outra Instituição de Ensino Superior -IES, desde que em áreas afins e de interesse para a dissertação, mediante aprovação do Colegiado Simples.\n- $ 5º Cada PPG poderá estabelecer requisitos adicionais, em seu Regimento Interno, para a obtenção do título de mestre."
+        }
+      ],
+      "review": {
+        "pdf_visual_check": {
+          "date": "2026-10-19",
+          "pdf_pages_1based": [
+            3
+          ]
+        },
+        "reviewers": []
+      }
+    },
+    {
+      "id": "POS2-004",
+      "norm_id": "ufpi-956-2025",
+      "sector": "pos_graduacao",
+      "category": "direta",
+      "question": "Quanto tempo tenho para terminar o mestrado? Dá para pedir mais prazo?",
+      "expected_action": "answer",
+      "reference_answer": "A duração mínima é 12 meses e a máxima é 24 meses. É permitida prorrogação de até seis meses mediante aprovação do Colegiado Simples.",
+      "required_facts": [
+        "A duração mínima é 12 meses e a máxima é 24 meses.",
+        "É permitida prorrogação de até seis meses mediante aprovação do Colegiado Simples."
+      ],
+      "conditional_answer": null,
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "3",
+          "text": "Art. 3º O Mestrado, Acadêmico ou Profissional, requer o cumprimento dos seguintes requisitos:\n- | -duração mínima de doze e máxima de vinte e quatro meses, permitida a prorrogação por até seis meses, mediante aprovação do Colegiado Simples.\n- Il -aprovação em exame de proficiência em uma língua estrangeira;\n- Ill -integralização curricular de, no mínimo, trinta créditos, dos quais seis são relativos à dissertação, observada a distribuição entre disciplinas obrigatórias, optativas e atividades complementares, definida no Regimento Interno do PPG;\n- IV -realização do Estágio Docência, nos termos definidos nesta Resolução;\n- V -realização de Exame de Qualificação, quando previsto no Regimento Interno do PPG; e\n- VI -apresentação oral e defesa de Dissertação.\n- $ 1º O Regimento Interno do PPG pode estabelecer durações específicas, desde que respeitados os limites do inciso |.\n- $ 2º Caso o PPG opte pela realização do Exame de Qualificação (inciso V), seu Regimento Interno deverá detalhar os procedimentos, prazos e modalidades de avaliação.\n- S$ 3º A defesa da Dissertação (inciso VI) somente ocorrerá após a integralização total dos créditos em disciplinas e atividades complementares.\n- $ 4º É permitido o aproveitamento de créditos cursados em outros Programas da UFPI ou em outra Instituição de Ensino Superior -IES, desde que em áreas afins e de interesse para a dissertação, mediante aprovação do Colegiado Simples.\n- $ 5º Cada PPG poderá estabelecer requisitos adicionais, em seu Regimento Interno, para a obtenção do título de mestre."
+        }
+      ],
+      "review": {
+        "pdf_visual_check": {
+          "date": "2026-10-19",
+          "pdf_pages_1based": [
+            3
+          ]
+        },
+        "reviewers": []
+      }
+    },
+    {
+      "id": "POS2-005",
+      "norm_id": "ufpi-956-2025",
+      "sector": "pos_graduacao",
+      "category": "direta",
+      "question": "Qual é o prazo para terminar o doutorado? Posso prorrogar?",
+      "expected_action": "answer",
+      "reference_answer": "A duração mínima é 24 meses e a máxima é 48 meses. É permitida prorrogação de até 12 meses mediante aprovação do Colegiado Simples.",
+      "required_facts": [
+        "A duração mínima é 24 meses e a máxima é 48 meses.",
+        "É permitida prorrogação de até 12 meses mediante aprovação do Colegiado Simples."
+      ],
+      "conditional_answer": null,
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "4",
+          "text": "Art. 4º O Doutorado, Acadêmico ou Profissional, requer o cumprimento dos seguintes requisitos:\n- | -duração mínima de vinte e quatro e máxima de quarenta e oito meses, permitida a prorrogação por até doze meses, mediante aprovação do Colegiado Simples;\n- Il -aprovação em exame de proficiência em, pelo menos, uma língua estrangeira;\n- Ill -integralização curricular de, no mínimo, quarenta e oito créditos, dos quais doze são relativos à tese, observada a distribuição entre disciplinas obrigatórias, optativas e atividades complementares definida no Regimento Interno do PPG;\n- IV -realização do Estágio Docência, nos termos definidos nesta Resolução;\n- V -realização de, no mínimo, um Exame de Qualificação; e\n- VI -apresentação oral e defesa de Tese.\n- $ 1º O Regimento Interno do PPG pode estabelecer durações específicas, desde que respeitados os limites do inciso |.\n- S$ 2º O Regimento Interno do PPG deverá detalhar os procedimentos, prazos e modalidades do Exame de Qualificação (inciso V), podendo prever a realização de exames adicionais.\n- S$ 3º A defesa da Tese (inciso VI) somente ocorrerá após a integralização total dos créditos em disciplinas e atividades complementares.\n\n- $ 4º O Regimento Interno do PPG pode prever o aproveitamento de créditos obtidos no Mestrado, definindo os critérios e limites.\n- 8 5º É permitido o aproveitamento de créditos cursados em outros Programas da UFPI ou em outras IES reconhecidas, desde que em áreas afins e de interesse para a tese, mediante aprovação do Colegiado Simples.\n- $ 6º Cada PPG poderá estabelecer requisitos adicionais, em seu Regimento Interno, para a obtenção do título de doutor."
+        }
+      ],
+      "review": {
+        "pdf_visual_check": {
+          "date": "2026-10-19",
+          "pdf_pages_1based": [
+            3,
+            4
+          ]
+        },
+        "reviewers": []
+      }
+    },
+    {
+      "id": "POS2-006",
+      "norm_id": "ufpi-956-2025",
+      "sector": "pos_graduacao",
+      "category": "direta",
+      "question": "Meu certificado de inglês tem quatro anos. Ainda vale para comprovar proficiência no mestrado?",
+      "expected_action": "answer",
+      "reference_answer": "Em regra, não: os exames de proficiência têm validade de três anos. Programas em rede são exceção e seguem os critérios das instituições-sede.",
+      "required_facts": [
+        "Em regra, não: os exames de proficiência têm validade de três anos.",
+        "Programas em rede são exceção e seguem os critérios das instituições-sede."
+      ],
+      "conditional_answer": null,
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "34",
+          "text": "Art. 34. A comprovação da proficiência em língua estrangeira, exigida nos Art. 3º e 4º, obedece às seguintes regras:\n22. | — a(s) língua(s) estrangeira(s) exigida(s) devem respeitar as especificidades estabelecidas pelo Regimento Interno de cada Programa;\n23. I1a análise e o registro acadêmico dos atestados são de responsabilidade da Coordenação do PPG;\n24. Ill — são aceitos atestados emitidos pela UFPI, por outras instituições de ensino superior (IES) brasileiras, e pelos seguintes institutos, desde que atingida a pontuação mínima de 60% nestes últimos:\n\n- a) Instituto Cervantes;\n- b) Instituto de Cultura Italiana;\n- c) Instituto Goethe;\n- d) Universidade de Cambridge (FCE, CAE, IELTS);\n- e) Aliança Francesa (DILF, DELF, DALF); e\n- f) TOEFL.\n7. IV -Os exames de proficiência têm validade de três anos.\nParágrafo único. Excetuam-se os programas em rede, que seguem os critérios estabelecidos por suas instituições-sede."
+        }
+      ],
+      "review": {
+        "pdf_visual_check": {
+          "date": "2026-10-19",
+          "pdf_pages_1based": [
+            12,
+            13
+          ]
+        },
+        "reviewers": []
+      }
+    },
+    {
+      "id": "POS2-007",
+      "norm_id": "ufpi-956-2025",
+      "sector": "pos_graduacao",
+      "category": "direta",
+      "question": "Não passei na qualificação do mestrado. Posso tentar de novo? Até quando?",
+      "expected_action": "answer",
+      "reference_answer": "Há direito a uma nova oportunidade, no prazo definido pelo Regimento Interno do PPG, que não pode exceder três meses no mestrado. A nova oportunidade ocorre perante a mesma banca; impedimento de membros exige aprovação de nova composição pelo Colegiado Simples.",
+      "required_facts": [
+        "Há direito a uma nova oportunidade, no prazo definido pelo Regimento Interno do PPG, que não pode exceder três meses no mestrado.",
+        "A nova oportunidade ocorre perante a mesma banca; impedimento de membros exige aprovação de nova composição pelo Colegiado Simples."
+      ],
+      "conditional_answer": null,
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "49",
+          "text": "Art. 49. Os Exames de Qualificação de Mestrado e Doutorado são realizados em consonância com o Regimento Interno de cada PPG, perante banca examinadora aprovada pelo Colegiado Simples\n- $ 1º O conteúdo e a modalidade do exame (oral, escrito, pré-defesa ou outra) são definidos pelo Regimento Interno de cada PPG.\n\n- $ 2º O resultado da avaliação do Exame de Qualificação é expresso pelas menções: Aprovado (Ap) ou Não Aprovado (NAp).\n- $ 3º O(a) discente que não obtiver êxito em qualquer fase do Exame de Qualificação tem direito a uma nova oportunidade, a ser realizada perante a mesma banca examinadora, observados os prazos máximos previstos no Regimento Interno de cada PPG, os quais não poderão exceder três meses (Mestrado) ou seis meses, no caso de Doutorado, com a mesma banca examinadora.\n- $ 4º Em caso de impedimento de membros da banca original, a nova composição deve ser aprovada pelo Colegiado Simples."
+        }
+      ],
+      "review": {
+        "pdf_visual_check": {
+          "date": "2026-10-19",
+          "pdf_pages_1based": [
+            15,
+            16
+          ]
+        },
+        "reviewers": []
+      }
+    },
+    {
+      "id": "POS2-008",
+      "norm_id": "ufpi-956-2025",
+      "sector": "pos_graduacao",
+      "category": "direta",
+      "question": "Passei na defesa da dissertação, mas a banca pediu ajustes. Quanto tempo tenho para entregar?",
+      "expected_action": "answer",
+      "reference_answer": "As modificações devem ser feitas em até 60 dias corridos, sob pena de anulação da defesa. O orientador deve validar as alterações e formalizá-las à Coordenação antes da entrega da versão final, que é obrigatória para solicitar o diploma.",
+      "required_facts": [
+        "As modificações devem ser feitas em até 60 dias corridos, sob pena de anulação da defesa.",
+        "O orientador deve validar as alterações e formalizá-las à Coordenação antes da entrega da versão final, que é obrigatória para solicitar o diploma."
+      ],
+      "conditional_answer": null,
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "54",
+          "text": "Art. 54. O resultado da defesa de Dissertação e Tese é expresso pelas menções: Aprovado (Ap) ou Não Aprovado (NAp).\n- $ 1º Em caso de aprovação com modificações sugeridas pela banca, o(a) discente deve efetuar as mudanças no prazo máximo de sessenta dias corridos, sob pena de anulação da defesa.\n\n- $ 2º A entrega da versão final corrigida (do 8 1º) é requisito obrigatório para a solicitação do diploma.\n- $ 3º A validação das modificações (8 1º) é de responsabilidade do(a) orientador(a) e deve ser formalizada à Coordenação do Programa antes da entrega da versão final (8 1º)."
+        }
+      ],
+      "review": {
+        "pdf_visual_check": {
+          "date": "2026-10-19",
+          "pdf_pages_1based": [
+            16,
+            17
+          ]
+        },
+        "reviewers": []
+      }
+    },
+    {
+      "id": "POS2-009",
+      "norm_id": "ufpi-956-2025",
+      "sector": "pos_graduacao",
+      "category": "aberta",
+      "question": "Vou fazer estágio de docência no mestrado. Quanto tempo dura, quantas horas faço e o que entrego no final?",
+      "expected_action": "answer",
+      "reference_answer": "No mestrado, a duração mínima é um semestre; o início exige aprovação do PED pelo Colegiado Simples e ciência da instância responsável pela disciplina, preferencialmente após concluir os créditos obrigatórios. A carga é de quatro a seis horas semanais, limitada a 60 horas por semestre, com no máximo 50% em sala de aula; o estagiário não substitui o professor. O relatório final deve ser elaborado em até 30 dias após as atividades, avaliado pelo orientador e supervisor e submetido à aprovação do Colegiado Simples.",
+      "required_facts": [
+        "No mestrado, a duração mínima é um semestre; o início exige aprovação do PED pelo Colegiado Simples e ciência da instância responsável pela disciplina, preferencialmente após concluir os créditos obrigatórios.",
+        "A carga é de quatro a seis horas semanais, limitada a 60 horas por semestre, com no máximo 50% em sala de aula; o estagiário não substitui o professor.",
+        "O relatório final deve ser elaborado em até 30 dias após as atividades, avaliado pelo orientador e supervisor e submetido à aprovação do Colegiado Simples."
+      ],
+      "conditional_answer": null,
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "44",
+          "text": "Art. 44. O Estágio Docência na graduação ou no ensino médio tem duração mínima de um semestre (Mestrado) e dois semestres (Doutorado).\n- S$ 1º O(a) discente de Pós-graduação está habilitado a iniciar o Estágio Docência, preferencialmente, após a conclusão dos créditos em disciplinas obrigatórias do PPG.\n- $ 2º É vedado o início do Estágio Docência sem que o PED esteja aprovado pelo Colegiado Simples e tenha a ciência da instância acadêmica responsável pela oferta do componente curricular."
+        },
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "45",
+          "text": "Art. 45. A carga horária do Estágio Docência é de quatro a seis horas semanais, limitadas a sessenta horas por semestre letivo.\n- $ 1º O(a) discente não substitui o professor, que permanece responsável pela disciplina e pelo acompanhamento síncrono do estagiário.\n\n- S$ 2º A carga horária (caput) é dividida em, no máximo, 50% (cinquenta por cento) em atividades de sala de aula, conforme detalhado no Regimento Interno do PPG, e o restante em outras atividades inerentes à docência."
+        },
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "48",
+          "text": "Art. 48. O(a) discente deve elaborar o Relatório Final do Estágio Docência em até 30 dias após o término das atividades.\n- 81º O relatório (caput), após o aval do(a) orientador(a) e do(a) professor(a) supervisor(a), deve ser submetido à aprovação do Colegiado Simples.\n- 8 2º O Relatório Final deve conter, no mínimo:\n- | -dados do(a) discente, da disciplina e do(a) professor(a) supervisor(a);\n- 11 -descrição das atividades desenvolvidas (tópicos abordados, ementas e referências);\n- Ill -autoavaliação do(a) discente; e\n- IV -parecer do professor supervisor.\n- $ 3º A Coordenação do PPG emite a declaração das atividades realizadas pelo(a) discente bolsista em seu Estágio Docência."
+        }
+      ],
+      "review": {
+        "pdf_visual_check": {
+          "date": "2026-10-19",
+          "pdf_pages_1based": [
+            14,
+            15
+          ]
+        },
+        "reviewers": []
+      }
+    },
+    {
+      "id": "POS2-010",
+      "norm_id": "ufpi-956-2025",
+      "sector": "pos_graduacao",
+      "category": "aberta",
+      "question": "Já fiz matérias de pós em outra universidade. Como posso aproveitar isso no meu mestrado?",
+      "expected_action": "answer",
+      "reference_answer": "É possível aproveitar créditos de outro PPG ou IES em áreas afins e de interesse para a dissertação, mediante aprovação do Colegiado Simples, respeitando o Regimento Interno do PPG. Podem ser aceitas disciplinas aprovadas de conteúdo e duração idênticos, equivalentes ou superiores; estudos complementares entre disciplinas; ou estudos afins à área e de interesse para a dissertação. O aproveitamento é registrado no histórico pelo sistema da Universidade, com nome e carga horária da disciplina.",
+      "required_facts": [
+        "É possível aproveitar créditos de outro PPG ou IES em áreas afins e de interesse para a dissertação, mediante aprovação do Colegiado Simples, respeitando o Regimento Interno do PPG.",
+        "Podem ser aceitas disciplinas aprovadas de conteúdo e duração idênticos, equivalentes ou superiores; estudos complementares entre disciplinas; ou estudos afins à área e de interesse para a dissertação.",
+        "O aproveitamento é registrado no histórico pelo sistema da Universidade, com nome e carga horária da disciplina."
+      ],
+      "conditional_answer": null,
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "3",
+          "text": "Art. 3º O Mestrado, Acadêmico ou Profissional, requer o cumprimento dos seguintes requisitos:\n- | -duração mínima de doze e máxima de vinte e quatro meses, permitida a prorrogação por até seis meses, mediante aprovação do Colegiado Simples.\n- Il -aprovação em exame de proficiência em uma língua estrangeira;\n- Ill -integralização curricular de, no mínimo, trinta créditos, dos quais seis são relativos à dissertação, observada a distribuição entre disciplinas obrigatórias, optativas e atividades complementares, definida no Regimento Interno do PPG;\n- IV -realização do Estágio Docência, nos termos definidos nesta Resolução;\n- V -realização de Exame de Qualificação, quando previsto no Regimento Interno do PPG; e\n- VI -apresentação oral e defesa de Dissertação.\n- $ 1º O Regimento Interno do PPG pode estabelecer durações específicas, desde que respeitados os limites do inciso |.\n- $ 2º Caso o PPG opte pela realização do Exame de Qualificação (inciso V), seu Regimento Interno deverá detalhar os procedimentos, prazos e modalidades de avaliação.\n- S$ 3º A defesa da Dissertação (inciso VI) somente ocorrerá após a integralização total dos créditos em disciplinas e atividades complementares.\n- $ 4º É permitido o aproveitamento de créditos cursados em outros Programas da UFPI ou em outra Instituição de Ensino Superior -IES, desde que em áreas afins e de interesse para a dissertação, mediante aprovação do Colegiado Simples.\n- $ 5º Cada PPG poderá estabelecer requisitos adicionais, em seu Regimento Interno, para a obtenção do título de mestre."
+        },
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "36",
+          "text": "Art. 36. O aproveitamento de estudos para integralização curricular, incluindo créditos cursados no Mestrado para o Doutorado, é autorizado pelo Colegiado Simples, observados os limites estabelecidos no Regimento Interno de cada PPG.\n- $ 1º O aproveitamento (caput) é autorizado quando:\n- | -a disciplina cursada com aprovação tiver conteúdo e duração idênticos, equivalentes ou superiores à do curso pretendido;\n- 11 -os estudos realizados em duas ou mais disciplinas se complementarem em uma ou mais disciplinas do curso pretendido; ou\n- Ill -os estudos, embora não atendendo aos incisos | e Il, guardarem afinidade com a área de concentração e forem de interesse para o desenvolvimento da dissertação ou tese.\n- $ 2º Os aproveitamentos são registrados no histórico escolar pelo sistema da Universidade, com o nome e a carga horária da disciplina."
+        }
+      ],
+      "review": {
+        "pdf_visual_check": {
+          "date": "2026-10-19",
+          "pdf_pages_1based": [
+            3,
+            13
+          ]
+        },
+        "reviewers": []
+      }
+    },
+    {
+      "id": "POS2-011",
+      "norm_id": "ufpi-956-2025",
+      "sector": "pos_graduacao",
+      "category": "aberta",
+      "question": "Faço mestrado e estou doente. Qual é a diferença entre cancelar uma matéria e trancar o curso?",
+      "expected_action": "answer",
+      "reference_answer": "Cancelar ou substituir matrícula em disciplina exige respeito ao Calendário Acadêmico, parecer favorável do orientador e aprovação do Colegiado Simples; a mesma disciplina só pode ser cancelada uma vez, salvo doença comprovada pela Perícia Médica da Universidade. O trancamento do curso por doença comprovada pela Perícia Médica pode durar até 12 meses. O período de trancamento por doença não conta para os prazos de conclusão do curso.",
+      "required_facts": [
+        "Cancelar ou substituir matrícula em disciplina exige respeito ao Calendário Acadêmico, parecer favorável do orientador e aprovação do Colegiado Simples; a mesma disciplina só pode ser cancelada uma vez, salvo doença comprovada pela Perícia Médica da Universidade.",
+        "O trancamento do curso por doença comprovada pela Perícia Médica pode durar até 12 meses.",
+        "O período de trancamento por doença não conta para os prazos de conclusão do curso."
+      ],
+      "conditional_answer": null,
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "37",
+          "text": "Art. 37. É permitido ao(a) discente cancelar ou substituir matrícula em disciplina, dentro do prazo do Calendário Acadêmico, mediante parecer favorável do orientador e aprovação do Colegiado Simples.\n- Parágrafo único. O cancelamento da mesma disciplina só é permitido uma vez, exceto por motivo de doença, devidamente comprovado pela Perícia Médica da Universidade."
+        },
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "38",
+          "text": "Art. 38. É permitido ao(a) discente o trancamento do curso por motivo de doença, comprovado pela Perícia Médica da Universidade, pelo período de até 12 meses.\n- Parágrafo único. O período de trancamento (caput) não é computado para efeito dos prazos de conclusão previstos nesta Resolução."
+        }
+      ],
+      "review": {
+        "pdf_visual_check": {
+          "date": "2026-10-19",
+          "pdf_pages_1based": [
+            13
+          ]
+        },
+        "reviewers": []
+      }
+    },
+    {
+      "id": "POS2-012",
+      "norm_id": "ufpi-956-2025",
+      "sector": "pos_graduacao",
+      "category": "aberta",
+      "question": "Estou terminando o mestrado. Além de defender, o que preciso cumprir e entregar para pedir o diploma?",
+      "expected_action": "answer",
+      "reference_answer": "É preciso cumprir os requisitos do mestrado: prazo, proficiência em língua estrangeira, mínimo de 30 créditos com seis de dissertação, estágio de docência, qualificação quando prevista e defesa; o PPG pode estabelecer requisitos adicionais. Se a banca solicitar modificações, elas devem ser feitas em até 60 dias corridos e validadas pelo orientador; a versão final corrigida é requisito do diploma. Entregar à Coordenação a versão final digital da dissertação, autorização de depósito no Repositório Institucional, cópia da ata da defesa e Nada Consta das Bibliotecas.",
+      "required_facts": [
+        "É preciso cumprir os requisitos do mestrado: prazo, proficiência em língua estrangeira, mínimo de 30 créditos com seis de dissertação, estágio de docência, qualificação quando prevista e defesa; o PPG pode estabelecer requisitos adicionais.",
+        "Se a banca solicitar modificações, elas devem ser feitas em até 60 dias corridos e validadas pelo orientador; a versão final corrigida é requisito do diploma.",
+        "Entregar à Coordenação a versão final digital da dissertação, autorização de depósito no Repositório Institucional, cópia da ata da defesa e Nada Consta das Bibliotecas."
+      ],
+      "conditional_answer": null,
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "3",
+          "text": "Art. 3º O Mestrado, Acadêmico ou Profissional, requer o cumprimento dos seguintes requisitos:\n- | -duração mínima de doze e máxima de vinte e quatro meses, permitida a prorrogação por até seis meses, mediante aprovação do Colegiado Simples.\n- Il -aprovação em exame de proficiência em uma língua estrangeira;\n- Ill -integralização curricular de, no mínimo, trinta créditos, dos quais seis são relativos à dissertação, observada a distribuição entre disciplinas obrigatórias, optativas e atividades complementares, definida no Regimento Interno do PPG;\n- IV -realização do Estágio Docência, nos termos definidos nesta Resolução;\n- V -realização de Exame de Qualificação, quando previsto no Regimento Interno do PPG; e\n- VI -apresentação oral e defesa de Dissertação.\n- $ 1º O Regimento Interno do PPG pode estabelecer durações específicas, desde que respeitados os limites do inciso |.\n- $ 2º Caso o PPG opte pela realização do Exame de Qualificação (inciso V), seu Regimento Interno deverá detalhar os procedimentos, prazos e modalidades de avaliação.\n- S$ 3º A defesa da Dissertação (inciso VI) somente ocorrerá após a integralização total dos créditos em disciplinas e atividades complementares.\n- $ 4º É permitido o aproveitamento de créditos cursados em outros Programas da UFPI ou em outra Instituição de Ensino Superior -IES, desde que em áreas afins e de interesse para a dissertação, mediante aprovação do Colegiado Simples.\n- $ 5º Cada PPG poderá estabelecer requisitos adicionais, em seu Regimento Interno, para a obtenção do título de mestre."
+        },
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "54",
+          "text": "Art. 54. O resultado da defesa de Dissertação e Tese é expresso pelas menções: Aprovado (Ap) ou Não Aprovado (NAp).\n- $ 1º Em caso de aprovação com modificações sugeridas pela banca, o(a) discente deve efetuar as mudanças no prazo máximo de sessenta dias corridos, sob pena de anulação da defesa.\n\n- $ 2º A entrega da versão final corrigida (do 8 1º) é requisito obrigatório para a solicitação do diploma.\n- $ 3º A validação das modificações (8 1º) é de responsabilidade do(a) orientador(a) e deve ser formalizada à Coordenação do Programa antes da entrega da versão final (8 1º)."
+        },
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "56",
+          "text": "Art. 56. A solicitação do diploma de Mestre ou Doutor, após o cumprimento dos requisitos acadêmicos (art. 3º e art. 4º), exige a entrega dos seguintes documentos à Coordenação:\n- | -versão final da Dissertação ou Tese, em arquivo digital;\n- Il -termo de autorização para depósito no Repositório Institucional da UFPI;\n- Ill -cópia da ata da defesa; e\n- IV -comprovante de regularidade (Nada Consta) junto às Bibliotecas da UFPI."
+        }
+      ],
+      "review": {
+        "pdf_visual_check": {
+          "date": "2026-10-19",
+          "pdf_pages_1based": [
+            3,
+            16,
+            17
+          ]
+        },
+        "reviewers": []
+      }
+    },
+    {
+      "id": "POS2-013",
+      "norm_id": "ufpi-956-2025",
+      "sector": "pos_graduacao",
+      "category": "aberta",
+      "question": "Reprovei na qualificação do doutorado. Como funciona a segunda tentativa e o que acontece se eu reprovar de novo?",
+      "expected_action": "answer",
+      "reference_answer": "Há uma nova oportunidade, dentro do prazo do Regimento Interno, limitado a seis meses no doutorado. A banca é a mesma, salvo impedimento de membros e aprovação de nova composição pelo Colegiado Simples. Duas reprovações no Exame de Qualificação levam ao desligamento do PPG.",
+      "required_facts": [
+        "Há uma nova oportunidade, dentro do prazo do Regimento Interno, limitado a seis meses no doutorado.",
+        "A banca é a mesma, salvo impedimento de membros e aprovação de nova composição pelo Colegiado Simples.",
+        "Duas reprovações no Exame de Qualificação levam ao desligamento do PPG."
+      ],
+      "conditional_answer": null,
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "49",
+          "text": "Art. 49. Os Exames de Qualificação de Mestrado e Doutorado são realizados em consonância com o Regimento Interno de cada PPG, perante banca examinadora aprovada pelo Colegiado Simples\n- $ 1º O conteúdo e a modalidade do exame (oral, escrito, pré-defesa ou outra) são definidos pelo Regimento Interno de cada PPG.\n\n- $ 2º O resultado da avaliação do Exame de Qualificação é expresso pelas menções: Aprovado (Ap) ou Não Aprovado (NAp).\n- $ 3º O(a) discente que não obtiver êxito em qualquer fase do Exame de Qualificação tem direito a uma nova oportunidade, a ser realizada perante a mesma banca examinadora, observados os prazos máximos previstos no Regimento Interno de cada PPG, os quais não poderão exceder três meses (Mestrado) ou seis meses, no caso de Doutorado, com a mesma banca examinadora.\n- $ 4º Em caso de impedimento de membros da banca original, a nova composição deve ser aprovada pelo Colegiado Simples."
+        },
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "21",
+          "text": "Art. 21. O desligamento do(a) discente do PPG ocorre nas seguintes hipóteses:\n- | -reprovação por duas vezes na mesma disciplina;\n- 11 -reprovação em duas disciplinas distintas;\n- Ill -descumprimento dos prazos máximos para defesa, fixados nesta Resolução;\n- IV -reprovação por duas vezes em Exame de Qualificação; e\n- V -não efetivação da matrícula curricular semestral."
+        }
+      ],
+      "review": {
+        "pdf_visual_check": {
+          "date": "2026-10-19",
+          "pdf_pages_1based": [
+            9,
+            15,
+            16
+          ]
+        },
+        "reviewers": []
+      }
+    },
+    {
+      "id": "POS2-014",
+      "norm_id": "ufpi-956-2025",
+      "sector": "pos_graduacao",
+      "category": "aberta",
+      "question": "Estou montando a banca da minha tese. Quantas pessoas preciso chamar e quem pode participar?",
+      "expected_action": "answer",
+      "reference_answer": "No doutorado são necessários pelo menos cinco titulares e dois suplentes, com pelo menos dois docentes externos ao PPG. A banca é aprovada pelo Colegiado Simples, ouvido o orientador, que a preside. Deve haver imparcialidade, evitando conflitos de interesse e relações de parentesco, filiação ou societárias com o discente; o coorientador pode participar como membro adicional ao mínimo, com voto.",
+      "required_facts": [
+        "No doutorado são necessários pelo menos cinco titulares e dois suplentes, com pelo menos dois docentes externos ao PPG.",
+        "A banca é aprovada pelo Colegiado Simples, ouvido o orientador, que a preside.",
+        "Deve haver imparcialidade, evitando conflitos de interesse e relações de parentesco, filiação ou societárias com o discente; o coorientador pode participar como membro adicional ao mínimo, com voto."
+      ],
+      "conditional_answer": null,
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "51",
+          "text": "Art. 51. As bancas examinadoras de Dissertação e Tese são aprovadas pelo Colegiado Simples, ouvido o(a) orientador(a), e formadas por, no mínimo:\n- | -Mestrado: três membros titulares e um suplente;\n- Il -Doutorado: cinco membros titulares e dois suplentes.\n- $ 1º A presidência da banca (comissão julgadora) cabe ao(à) orientador(a).\n- $ 2º A composição deve incluir membros externos, sendo, no mínimo:\n- | -Mestrado: um docente externo ao PPG;\n- 11 -Doutorado: dois docentes externos ao PPG.\n- $ 3º A composição deve garantir a imparcialidade, evitando conflitos de interesse, relações de parentesco, filiação ou societárias entre membros ou com o(a) discente.\n- 8 4º O(a) coorientador(a) pode integrar a banca como membro adicional (além do mínimo do caput), com direito a voto."
+        }
+      ],
+      "review": {
+        "pdf_visual_check": {
+          "date": "2026-10-19",
+          "pdf_pages_1based": [
+            16
+          ]
+        },
+        "reviewers": []
+      }
+    },
+    {
+      "id": "POS2-015",
+      "norm_id": "ufpi-956-2025",
+      "sector": "pos_graduacao",
+      "category": "aberta",
+      "question": "Quero transferir meu mestrado para outro programa. O que é necessário e meu prazo começa de novo?",
+      "expected_action": "answer",
+      "reference_answer": "A transferência é admitida entre programas similares ou afins recomendados pela CAPES, no mesmo nível, com aprovação do Colegiado Simples, existência de vagas e critérios do Regimento Interno. O aluno deve apresentar histórico e planos de ensino; a matrícula segue as regras de aproveitamento de estudos. Os prazos mínimo e máximo de conclusão reiniciam a partir do ingresso no novo programa.",
+      "required_facts": [
+        "A transferência é admitida entre programas similares ou afins recomendados pela CAPES, no mesmo nível, com aprovação do Colegiado Simples, existência de vagas e critérios do Regimento Interno.",
+        "O aluno deve apresentar histórico e planos de ensino; a matrícula segue as regras de aproveitamento de estudos.",
+        "Os prazos mínimo e máximo de conclusão reiniciam a partir do ingresso no novo programa."
+      ],
+      "conditional_answer": null,
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "39",
+          "text": "Art. 39. É permitida a transferência de discentes de programas similares ou afins (recomendados pela CAPES), para o mesmo nível de formação, mediante aprovação do Colegiado Simples.\n- $ 1º A aprovação (caput) depende da existência de vagas e da observância dos critérios definidos no Regimento Interno.\n- S$ 2º O discente transferido deve apresentar histórico escolar e os respectivos planos de ensino das disciplinas cursadas.\n\n- $ 3º A matrícula do discente transferido obedece às normas de aproveitamento de estudos (Art. 36).\n- $ 4º Os prazos máximo e mínimo de conclusão do curso são reiniciados a partir da data de ingresso no novo Programa."
+        },
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "36",
+          "text": "Art. 36. O aproveitamento de estudos para integralização curricular, incluindo créditos cursados no Mestrado para o Doutorado, é autorizado pelo Colegiado Simples, observados os limites estabelecidos no Regimento Interno de cada PPG.\n- $ 1º O aproveitamento (caput) é autorizado quando:\n- | -a disciplina cursada com aprovação tiver conteúdo e duração idênticos, equivalentes ou superiores à do curso pretendido;\n- 11 -os estudos realizados em duas ou mais disciplinas se complementarem em uma ou mais disciplinas do curso pretendido; ou\n- Ill -os estudos, embora não atendendo aos incisos | e Il, guardarem afinidade com a área de concentração e forem de interesse para o desenvolvimento da dissertação ou tese.\n- $ 2º Os aproveitamentos são registrados no histórico escolar pelo sistema da Universidade, com o nome e a carga horária da disciplina."
+        }
+      ],
+      "review": {
+        "pdf_visual_check": {
+          "date": "2026-10-19",
+          "pdf_pages_1based": [
+            13,
+            14
+          ]
+        },
+        "reviewers": []
+      }
+    },
+    {
+      "id": "POS2-016",
+      "norm_id": "ufpi-956-2025",
+      "sector": "pos_graduacao",
+      "category": "aberta",
+      "question": "Sou mestrando e já dei aula. Posso ser dispensado do estágio de docência? Se não, posso fazê-lo fora da UFPI?",
+      "expected_action": "answer",
+      "reference_answer": "A dispensa depende de aprovação do Colegiado Simples e comprovação de pelo menos um semestre de docência no ensino superior ou lato sensu; para lato sensu, devem ser cursos presenciais de especialização ou aperfeiçoamento com carga compatível ao PED. Vínculo docente atual em instituição de EBTT é outra hipótese. O estágio pode ocorrer em outra instituição de ensino superior ou na rede pública de ensino médio, com autorização do orientador e aprovação do Colegiado Simples.",
+      "required_facts": [
+        "A dispensa depende de aprovação do Colegiado Simples e comprovação de pelo menos um semestre de docência no ensino superior ou lato sensu; para lato sensu, devem ser cursos presenciais de especialização ou aperfeiçoamento com carga compatível ao PED. Vínculo docente atual em instituição de EBTT é outra hipótese.",
+        "O estágio pode ocorrer em outra instituição de ensino superior ou na rede pública de ensino médio, com autorização do orientador e aprovação do Colegiado Simples."
+      ],
+      "conditional_answer": null,
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "42",
+          "text": "Art. 42. Fica dispensado do Estágio Docência, mediante aprovação do Colegiado Simples, o(a) discente que comprovar:\n- | -experiência prévia como docente do ensino superior ou lato sensu, pelo período mínimo de um semestre (Mestrado) ou dois semestres (Doutorado); ou\n- 11 -vínculo docente atual com instituições de Ensino Básico, Técnico e Tecnológico -EBTT.\nParágrafo único. Para fins do inciso |, as atividades em Pós-graduação lato sensu são aquelas desenvolvidas em cursos presenciais (Especialização ou Aperfeiçoamento) com carga horária compatível ao PED."
+        },
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "41",
+          "text": "Art. 41. O Estágio Docência é a atuação do(a) discente de Pós-Graduação em atividades acadêmicas na UFPI (graduação ou ensino médio), sob a supervisão direta de um professor do quadro efetivo.\n- Parágrafo único. O Estágio Docência pode ser realizado em outras instituições de ensino superior ou na rede pública de ensino médio, mediante autorização do(a) orientador(a) e aprovação do Colegiado Simples."
+        }
+      ],
+      "review": {
+        "pdf_visual_check": {
+          "date": "2026-10-19",
+          "pdf_pages_1based": [
+            14
+          ]
+        },
+        "reviewers": []
+      }
+    },
+    {
+      "id": "POS2-017",
+      "norm_id": "ufpi-956-2025",
+      "sector": "pos_graduacao",
+      "category": "ambigua",
+      "question": "Reprovei duas vezes na mesma matéria. Posso perder minha vaga?",
+      "expected_action": "clarify",
+      "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+      "required_facts": [
+        "Solicitar o nível do curso antes de aplicar uma regra.",
+        "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+      ],
+      "conditional_answer": "Após esclarecer que se trata de pós-graduação: duas reprovações na mesma disciplina levam ao desligamento do PPG.",
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "21",
+          "text": "Art. 21. O desligamento do(a) discente do PPG ocorre nas seguintes hipóteses:\n- | -reprovação por duas vezes na mesma disciplina;\n- 11 -reprovação em duas disciplinas distintas;\n- Ill -descumprimento dos prazos máximos para defesa, fixados nesta Resolução;\n- IV -reprovação por duas vezes em Exame de Qualificação; e\n- V -não efetivação da matrícula curricular semestral."
+        }
+      ],
+      "review": {
+        "pdf_visual_check": {
+          "date": "2026-10-19",
+          "pdf_pages_1based": [
+            9
+          ]
+        },
+        "reviewers": []
+      }
+    },
+    {
+      "id": "POS2-018",
+      "norm_id": "ufpi-956-2025",
+      "sector": "pos_graduacao",
+      "category": "ambigua",
+      "question": "Estou doente e preciso parar o curso por um tempo. Quanto tempo posso ficar afastado?",
+      "expected_action": "clarify",
+      "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+      "required_facts": [
+        "Solicitar o nível do curso antes de aplicar uma regra.",
+        "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+      ],
+      "conditional_answer": "Após esclarecer que se trata de pós-graduação: doença comprovada pela Perícia Médica da Universidade permite trancamento de até 12 meses, sem contar esse período nos prazos de conclusão.",
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "38",
+          "text": "Art. 38. É permitido ao(a) discente o trancamento do curso por motivo de doença, comprovado pela Perícia Médica da Universidade, pelo período de até 12 meses.\n- Parágrafo único. O período de trancamento (caput) não é computado para efeito dos prazos de conclusão previstos nesta Resolução."
+        }
+      ],
+      "review": {
+        "pdf_visual_check": {
+          "date": "2026-10-19",
+          "pdf_pages_1based": [
+            13
+          ]
+        },
+        "reviewers": []
+      }
+    },
+    {
+      "id": "POS2-019",
+      "norm_id": "ufpi-956-2025",
+      "sector": "pos_graduacao",
+      "category": "ambigua",
+      "question": "Já cancelei uma matéria uma vez. Posso cancelar de novo?",
+      "expected_action": "clarify",
+      "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+      "required_facts": [
+        "Solicitar o nível do curso antes de aplicar uma regra.",
+        "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+      ],
+      "conditional_answer": "Após esclarecer que se trata de pós-graduação: a mesma disciplina só pode ser cancelada uma vez, salvo doença comprovada pela Perícia Médica; o cancelamento exige prazo do calendário, parecer favorável do orientador e aprovação do Colegiado Simples.",
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "37",
+          "text": "Art. 37. É permitido ao(a) discente cancelar ou substituir matrícula em disciplina, dentro do prazo do Calendário Acadêmico, mediante parecer favorável do orientador e aprovação do Colegiado Simples.\n- Parágrafo único. O cancelamento da mesma disciplina só é permitido uma vez, exceto por motivo de doença, devidamente comprovado pela Perícia Médica da Universidade."
+        }
+      ],
+      "review": {
+        "pdf_visual_check": {
+          "date": "2026-10-19",
+          "pdf_pages_1based": [
+            13
+          ]
+        },
+        "reviewers": []
+      }
+    },
+    {
+      "id": "POS2-020",
+      "norm_id": "ufpi-956-2025",
+      "sector": "pos_graduacao",
+      "category": "ambigua",
+      "question": "Minha nota foi 6,5 e tenho 80% de presença. Já estou aprovado?",
+      "expected_action": "clarify",
+      "reference_answer": "Você está falando de um curso de graduação, mestrado ou doutorado?",
+      "required_facts": [
+        "Solicitar o nível do curso antes de aplicar uma regra.",
+        "Não assumir um nível nem dar uma conclusão normativa categórica sem esse esclarecimento."
+      ],
+      "conditional_answer": "Após esclarecer que se trata de pós-graduação: não, pois a nota mínima é sete; a frequência mínima é 75%.",
+      "evidence": [
+        {
+          "norm_id": "ufpi-956-2025",
+          "article_number": "20",
+          "text": "Art. 20. A verificação do rendimento acadêmico é feita por disciplina e abrange os aspectos de assiduidade e eficiência, ambos eliminatórios.\n- $ 1º Acritério do professor, a avaliação da eficiência é feita por um ou mais dos seguintes meios: provas, exames, trabalhos ou projetos.\n\n- $ 2º O resultado final da verificação é expresso em notas na escala de zero a dez com, no máximo, uma casa decimal.\n- $ 3º É considerado aprovado o(a) discente que obtiver nota mínima sete e frequência igual ou superior a 75% (setenta e cinco por cento).\n- S$ 4º As atividades de qualificação, de dissertação e de tese podem ser desenvolvidas por mais de um período letivo, conforme o Regimento Interno de cada PPG.\n- S 5º Para efeito de registro, o número de notas parciais deve ser proporcional à carga horária da disciplina, respeitado o mínimo de:\n- | -duas, nas disciplinas com carga horária igual ou inferior a quarenta e cinco horas;\n- Il -três, nas disciplinas com carga horária de sessenta a setenta e cinco horas; e\n- Ill -quatro, nas disciplinas com carga horária superior a setenta e cinco horas."
+        }
+      ],
+      "review": {
+        "pdf_visual_check": {
+          "date": "2026-10-19",
+          "pdf_pages_1based": [
+            8,
+            9
+          ]
+        },
+        "reviewers": []
+      }
+    }
+  ]
+}

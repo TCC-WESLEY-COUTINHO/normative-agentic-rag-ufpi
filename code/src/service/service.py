@@ -13,12 +13,12 @@ from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from langchain_core._api import LangChainBetaWarning
 from langchain_core.messages import AIMessage, AIMessageChunk, AnyMessage, HumanMessage, ToolMessage
 from langchain_core.runnables import RunnableConfig
-from langfuse import Langfuse  # type: ignore[import-untyped]
 from langfuse.callback import CallbackHandler  # type: ignore[import-untyped]
 from langgraph.types import Command, Interrupt
 from langsmith import Client as LangsmithClient
 
 from agents import DEFAULT_AGENT, AgentGraph, get_agent, get_all_agent_info
+from agents.agents import AgentUnavailableError, get_agent_readiness, initialize_agents
 from core import settings
 from memory import initialize_database, initialize_store
 from schema import (
@@ -30,6 +30,12 @@ from schema import (
     ServiceMetadata,
     StreamInput,
     UserInput,
+)
+from service.normative_transport import (
+    conversation_identity,
+    is_conversation_agent,
+    is_integrated_agent,
+    project_integrated_state,
 )
 from service.utils import (
     convert_message_content_to_string,
@@ -70,15 +76,10 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
             if hasattr(store, "setup"):  # ignore: union-attr
                 await store.setup()
 
-            # Configure agents with both memory components
-            agents = get_all_agent_info()
-            for a in agents:
-                agent = get_agent(a.key)
-                # Set checkpointer for thread-scoped memory (conversation history)
-                agent.checkpointer = saver
-                # Set store for long-term memory (cross-conversation knowledge)
-                agent.store = store
-            yield
+            async with initialize_agents(
+                saver, store, runtime_options=getattr(app.state, "agent_runtime_options", None)
+            ):
+                yield
     except Exception as e:
         logger.error(f"Error during database/store initialization: {e}")
         raise
@@ -100,7 +101,28 @@ async def info() -> ServiceMetadata:
     )
 
 
-async def _handle_input(user_input: UserInput, agent: AgentGraph) -> tuple[dict[str, Any], UUID]:
+def _requested_agent(agent_id):
+    try:
+        return get_agent(agent_id)
+    except KeyError:
+        raise HTTPException(status_code=404, detail="Unknown agent.") from None
+    except AgentUnavailableError as exc:
+        raise HTTPException(status_code=503, detail=f"Agent unavailable: {exc}") from None
+
+
+@router.get("/agents/{agent_id}/readiness")
+async def agent_readiness(agent_id: str):
+    try:
+        return get_agent_readiness(agent_id)
+    except KeyError:
+        raise HTTPException(status_code=404, detail="Unknown agent.") from None
+
+
+async def _handle_input(
+    user_input: UserInput,
+    agent: AgentGraph,
+    agent_id: str | None = None,
+) -> tuple[dict[str, Any], UUID]:
     """
     Parse user input and handle any required interrupt resumption.
     Returns kwargs for agent invocation and the run_id.
@@ -110,6 +132,20 @@ async def _handle_input(user_input: UserInput, agent: AgentGraph) -> tuple[dict[
     user_id = user_input.user_id or str(uuid4())
 
     configurable = {"thread_id": thread_id, "model": user_input.model, "user_id": user_id}
+    identity = None
+    if is_conversation_agent(agent):
+        private_keys = {
+            "checkpoint_id",
+            "checkpoint_ns",
+            "checkpoint_map",
+            "storage_key",
+            "conversation_identity",
+        }
+        if private_keys.intersection(user_input.agent_config or {}):
+            raise HTTPException(status_code=422, detail="Reserved conversation configuration.")
+        identity = conversation_identity(user_id, agent_id, thread_id)
+        configurable["thread_id"] = identity.storage_key()
+        configurable["agent_id"] = agent_id
 
     callbacks = []
     if settings.LANGFUSE_TRACING:
@@ -133,10 +169,12 @@ async def _handle_input(user_input: UserInput, agent: AgentGraph) -> tuple[dict[
     )
 
     # Check for interrupts that need to be resumed
-    state = await agent.aget_state(config=config)
-    interrupted_tasks = [
-        task for task in state.tasks if hasattr(task, "interrupts") and task.interrupts
-    ]
+    interrupted_tasks = []
+    if not is_integrated_agent(agent):
+        state = await agent.aget_state(config=config)
+        interrupted_tasks = [
+            task for task in state.tasks if hasattr(task, "interrupts") and task.interrupts
+        ]
 
     input: Command | dict[str, Any]
     if interrupted_tasks:
@@ -144,6 +182,8 @@ async def _handle_input(user_input: UserInput, agent: AgentGraph) -> tuple[dict[
         input = Command(resume=user_input.message)
     else:
         input = {"messages": [HumanMessage(content=user_input.message)]}
+        if identity is not None:
+            input["conversation_identity"] = identity
 
     kwargs = {
         "input": input,
@@ -169,10 +209,14 @@ async def invoke(user_input: UserInput, agent_id: str = DEFAULT_AGENT) -> ChatMe
     # in interrupt-agent, or a tool step in research-assistant), it's omitted. Arguably,
     # you'd want to include it. You could update the API to return a list of ChatMessages
     # in that case.
-    agent: AgentGraph = get_agent(agent_id)
-    kwargs, run_id = await _handle_input(user_input, agent)
+    agent: AgentGraph = _requested_agent(agent_id)
+    kwargs, run_id = await _handle_input(user_input, agent, agent_id=agent_id)
 
     try:
+        if is_integrated_agent(agent):
+            output = project_integrated_state(await agent.ainvoke(**kwargs))
+            output.run_id = str(run_id)
+            return output
         response_events: list[tuple[str, Any]] = await agent.ainvoke(**kwargs, stream_mode=["updates", "values"])  # type: ignore # fmt: skip
         response_type, response = response_events[-1]
         if response_type == "values":
@@ -202,10 +246,22 @@ async def message_generator(
 
     This is the workhorse method for the /stream endpoint.
     """
-    agent: AgentGraph = get_agent(agent_id)
-    kwargs, run_id = await _handle_input(user_input, agent)
+    agent: AgentGraph = _requested_agent(agent_id)
+    kwargs, run_id = await _handle_input(user_input, agent, agent_id=agent_id)
 
     try:
+        if is_integrated_agent(agent):
+            # Accumulate only request-local top-level values. No draft, ToolMessage,
+            # custom event or model token is projected before terminal validation.
+            final_state = None
+            async for values in agent.astream(**kwargs, stream_mode="values"):
+                final_state = values
+            if final_state is None:
+                raise ValueError("No final integration state.")
+            output = project_integrated_state(final_state)
+            output.run_id = str(run_id)
+            yield f"data: {json.dumps({'type': 'message', 'content': output.model_dump(mode='json')})}\n\n"
+            return
         # Process streamed events from the graph and yield messages over the SSE stream.
         async for stream_event in agent.astream(
             **kwargs, stream_mode=["updates", "messages", "custom"], subgraphs=True
@@ -345,6 +401,7 @@ async def stream(user_input: StreamInput, agent_id: str = DEFAULT_AGENT) -> Stre
 
     Set `stream_tokens=false` to return intermediate messages but not token-by-token.
     """
+    _requested_agent(agent_id)  # Resolve availability before SSE response headers.
     return StreamingResponse(
         message_generator(user_input, agent_id),
         media_type="text/event-stream",
@@ -396,13 +453,17 @@ async def health_check():
 
     health_status = {"status": "ok"}
 
+    try:
+        health_status["integrated_agent"] = get_agent_readiness("chatbot_ufpi_integrated_v1")
+    except KeyError:
+        health_status["integrated_agent"] = {"registered": False, "ready": False}
+
     if settings.LANGFUSE_TRACING:
-        try:
-            langfuse = Langfuse()
-            health_status["langfuse"] = "connected" if langfuse.auth_check() else "disconnected"
-        except Exception as e:
-            logger.error(f"Langfuse connection error: {e}")
-            health_status["langfuse"] = "disconnected"
+        health_status["langfuse"] = (
+            "configured"
+            if (settings.LANGFUSE_PUBLIC_KEY and settings.LANGFUSE_SECRET_KEY)
+            else "missing_configuration"
+        )
 
     return health_status
 

@@ -1,0 +1,516 @@
+[
+  {
+    "type": "ai",
+    "content": "Olá!",
+    "normative_result": null,
+    "grounded_followup_result": null,
+    "calculator_result": null,
+    "tool_calls": [],
+    "tool_call_id": null,
+    "run_id": "98047d8b-a540-442b-a4e8-b2ca72b79ee8",
+    "response_metadata": {},
+    "custom_data": {}
+  },
+  {
+    "type": "ai",
+    "content": "4",
+    "normative_result": null,
+    "grounded_followup_result": null,
+    "calculator_result": {
+      "contract_version": "1",
+      "status": "ANSWER",
+      "operation_kind": "ARITHMETIC",
+      "content": "4",
+      "normalized_input": "2+2",
+      "numeric_result": "4",
+      "date_result": null,
+      "days_result": null,
+      "error_code": null,
+      "safe_message": null
+    },
+    "tool_calls": [],
+    "tool_call_id": null,
+    "run_id": "23210437-a4b8-4eca-800d-bb1be23208b9",
+    "response_metadata": {},
+    "custom_data": {}
+  },
+  {
+    "type": "ai",
+    "content": "15/11/2026",
+    "normative_result": null,
+    "grounded_followup_result": null,
+    "calculator_result": {
+      "contract_version": "1",
+      "status": "ANSWER",
+      "operation_kind": "DATE_OFFSET",
+      "content": "15/11/2026",
+      "normalized_input": "2026-11-05 +10 days",
+      "numeric_result": null,
+      "date_result": "2026-11-15",
+      "days_result": null,
+      "error_code": null,
+      "safe_message": null
+    },
+    "tool_calls": [],
+    "tool_call_id": null,
+    "run_id": "67910a17-f34e-4859-9568-75c13536dd60",
+    "response_metadata": {},
+    "custom_data": {}
+  },
+  {
+    "type": "ai",
+    "content": "Olá!",
+    "normative_result": null,
+    "grounded_followup_result": null,
+    "calculator_result": null,
+    "tool_calls": [],
+    "tool_call_id": null,
+    "run_id": "04e58784-285b-4cc5-8884-93b289b21ab7",
+    "response_metadata": {},
+    "custom_data": {}
+  },
+  {
+    "type": "ai",
+    "content": "4",
+    "normative_result": null,
+    "grounded_followup_result": null,
+    "calculator_result": {
+      "contract_version": "1",
+      "status": "ANSWER",
+      "operation_kind": "ARITHMETIC",
+      "content": "4",
+      "normalized_input": "2+2",
+      "numeric_result": "4",
+      "date_result": null,
+      "days_result": null,
+      "error_code": null,
+      "safe_message": null
+    },
+    "tool_calls": [],
+    "tool_call_id": null,
+    "run_id": "beee65d0-a9fb-4295-9338-88dd4cb2a74c",
+    "response_metadata": {},
+    "custom_data": {}
+  },
+  {
+    "type": "ai",
+    "content": "O dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado.\n\nFontes:\n- Resolução 177/2012, art. 68",
+    "normative_result": {
+      "contract_version": "1",
+      "core_version": "structured_output_v2",
+      "status": "ANSWER",
+      "answer": "O dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado.\n\nFontes:\n- Resolução 177/2012, art. 68",
+      "references": [
+        {
+          "chunk_id": "ufpi-177-2012-art-68-idx-000067",
+          "norm_id": "ufpi-177-2012",
+          "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+          "article": "68",
+          "validated_subdivision": null,
+          "display_text": "Resolução 177/2012, art. 68",
+          "temporal_role": "eligible"
+        }
+      ],
+      "temporal_provenance": {
+        "temporal_intent": "indeterminate",
+        "requested_time_context": {
+          "norm_ids": [
+            "ufpi-177-2012"
+          ],
+          "before_amendment": false,
+          "relation_query": null,
+          "article": "68",
+          "paragraph": null,
+          "requested_year": null
+        },
+        "evidence_states": [
+          {
+            "chunk_id": "ufpi-177-2012-art-68-idx-000067",
+            "source_norm": "ufpi-177-2012",
+            "source_article": "68",
+            "temporal_action": "amendment_applied",
+            "normative_status": "desconhecida",
+            "temporal_role": "eligible",
+            "relation_source": {
+              "source": "Resolução CEPEX/UFPI nº 1.056/2026",
+              "article": "1"
+            }
+          }
+        ],
+        "known_relations": [
+          {
+            "relation": "AMENDED_BY",
+            "source_norm": "ufpi-177-2012",
+            "target_norm": "ufpi-1056-2026",
+            "target_article": "68",
+            "target_paragraph": "4",
+            "evidence_source": "Resolução CEPEX/UFPI nº 1.056/2026",
+            "evidence_article": "1"
+          }
+        ],
+        "generation_constraints": {
+          "must_frame_as_historical": false,
+          "must_not_claim_current_validity": false,
+          "must_not_claim_unknown_as_current": true,
+          "must_not_present_revoked_rule_as_current": false,
+          "must_not_present_successor_as_historical_predecessor": false,
+          "must_separate_temporal_states": false,
+          "must_follow_evidence_roles": true,
+          "must_not_treat_partial_amendment_as_total_revocation": true,
+          "must_not_duplicate_superseded_wording": true,
+          "must_not_reintroduce_excluded_evidence": true,
+          "must_not_deny_present_evidence": true,
+          "must_not_invent_effective_date": true,
+          "must_not_invent_temporal_scope": true,
+          "citation_granularity_ceiling": "article"
+        }
+      },
+      "temporal_status_text": "O dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.",
+      "allowed_temporal_facts": {
+        "items": [
+          {
+            "kind": "AMENDED_BY",
+            "norm_id": "ufpi-177-2012",
+            "target_norm": "ufpi-1056-2026",
+            "role": null
+          },
+          {
+            "kind": "STATUS_UNKNOWN",
+            "norm_id": "ufpi-177-2012",
+            "target_norm": null,
+            "role": null
+          }
+        ]
+      },
+      "core_status": "accepted",
+      "domain": "graduacao",
+      "retrieval_strategy": "metadata_exact",
+      "needs_clarification": false,
+      "clarification_question": null,
+      "correlation_id": "a2157d60-ecce-4f13-86b0-b428a5b95ece",
+      "error_code": null,
+      "safe_message": null
+    },
+    "grounded_followup_result": null,
+    "calculator_result": null,
+    "tool_calls": [],
+    "tool_call_id": null,
+    "run_id": "0eab679f-85fd-4d76-9575-126ac438654b",
+    "response_metadata": {},
+    "custom_data": {}
+  },
+  {
+    "type": "ai",
+    "content": "4",
+    "normative_result": null,
+    "grounded_followup_result": null,
+    "calculator_result": {
+      "contract_version": "1",
+      "status": "ANSWER",
+      "operation_kind": "ARITHMETIC",
+      "content": "4",
+      "normalized_input": "2+2",
+      "numeric_result": "4",
+      "date_result": null,
+      "days_result": null,
+      "error_code": null,
+      "safe_message": null
+    },
+    "tool_calls": [],
+    "tool_call_id": null,
+    "run_id": "0fb27872-45ca-4eb6-87c0-b444a6ad2c96",
+    "response_metadata": {},
+    "custom_data": {}
+  },
+  {
+    "type": "ai",
+    "content": "O dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado.\n\nFontes:\n- Resolução 177/2012, art. 68",
+    "normative_result": null,
+    "grounded_followup_result": {
+      "contract_version": "1",
+      "kind": "REPEAT",
+      "content": "O dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado.\n\nFontes:\n- Resolução 177/2012, art. 68",
+      "source_correlation_id": "a2157d60-ecce-4f13-86b0-b428a5b95ece",
+      "source_core_version": "structured_output_v2",
+      "source_contract_version": "1",
+      "references": [
+        {
+          "chunk_id": "ufpi-177-2012-art-68-idx-000067",
+          "norm_id": "ufpi-177-2012",
+          "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+          "article": "68",
+          "validated_subdivision": null,
+          "display_text": "Resolução 177/2012, art. 68",
+          "temporal_role": "eligible"
+        }
+      ],
+      "temporal_provenance": {
+        "temporal_intent": "indeterminate",
+        "requested_time_context": {
+          "norm_ids": [
+            "ufpi-177-2012"
+          ],
+          "before_amendment": false,
+          "relation_query": null,
+          "article": "68",
+          "paragraph": null,
+          "requested_year": null
+        },
+        "evidence_states": [
+          {
+            "chunk_id": "ufpi-177-2012-art-68-idx-000067",
+            "source_norm": "ufpi-177-2012",
+            "source_article": "68",
+            "temporal_action": "amendment_applied",
+            "normative_status": "desconhecida",
+            "temporal_role": "eligible",
+            "relation_source": {
+              "source": "Resolução CEPEX/UFPI nº 1.056/2026",
+              "article": "1"
+            }
+          }
+        ],
+        "known_relations": [
+          {
+            "relation": "AMENDED_BY",
+            "source_norm": "ufpi-177-2012",
+            "target_norm": "ufpi-1056-2026",
+            "target_article": "68",
+            "target_paragraph": "4",
+            "evidence_source": "Resolução CEPEX/UFPI nº 1.056/2026",
+            "evidence_article": "1"
+          }
+        ],
+        "generation_constraints": {
+          "must_frame_as_historical": false,
+          "must_not_claim_current_validity": false,
+          "must_not_claim_unknown_as_current": true,
+          "must_not_present_revoked_rule_as_current": false,
+          "must_not_present_successor_as_historical_predecessor": false,
+          "must_separate_temporal_states": false,
+          "must_follow_evidence_roles": true,
+          "must_not_treat_partial_amendment_as_total_revocation": true,
+          "must_not_duplicate_superseded_wording": true,
+          "must_not_reintroduce_excluded_evidence": true,
+          "must_not_deny_present_evidence": true,
+          "must_not_invent_effective_date": true,
+          "must_not_invent_temporal_scope": true,
+          "citation_granularity_ceiling": "article"
+        }
+      },
+      "domain": "graduacao",
+      "guard_status": "ACCEPTED"
+    },
+    "calculator_result": null,
+    "tool_calls": [],
+    "tool_call_id": null,
+    "run_id": "7ac539cc-0fd0-4d28-9a2c-01061b0ad367",
+    "response_metadata": {},
+    "custom_data": {}
+  },
+  {
+    "type": "ai",
+    "content": "O contexto normativo anterior não pode ser reutilizado nesta versão. Repita a pergunta original.",
+    "normative_result": null,
+    "grounded_followup_result": null,
+    "calculator_result": null,
+    "tool_calls": [],
+    "tool_call_id": null,
+    "run_id": "a085df62-800b-4d0c-bc81-69e6d2154122",
+    "response_metadata": {},
+    "custom_data": {}
+  },
+  {
+    "type": "ai",
+    "content": "O dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado.\n\nFontes:\n- Resolução 177/2012, art. 68",
+    "normative_result": {
+      "contract_version": "1",
+      "core_version": "structured_output_v2",
+      "status": "ANSWER",
+      "answer": "O dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado.\n\nFontes:\n- Resolução 177/2012, art. 68",
+      "references": [
+        {
+          "chunk_id": "ufpi-177-2012-art-68-idx-000067",
+          "norm_id": "ufpi-177-2012",
+          "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+          "article": "68",
+          "validated_subdivision": null,
+          "display_text": "Resolução 177/2012, art. 68",
+          "temporal_role": "eligible"
+        }
+      ],
+      "temporal_provenance": {
+        "temporal_intent": "indeterminate",
+        "requested_time_context": {
+          "norm_ids": [
+            "ufpi-177-2012"
+          ],
+          "before_amendment": false,
+          "relation_query": null,
+          "article": "68",
+          "paragraph": null,
+          "requested_year": null
+        },
+        "evidence_states": [
+          {
+            "chunk_id": "ufpi-177-2012-art-68-idx-000067",
+            "source_norm": "ufpi-177-2012",
+            "source_article": "68",
+            "temporal_action": "amendment_applied",
+            "normative_status": "desconhecida",
+            "temporal_role": "eligible",
+            "relation_source": {
+              "source": "Resolução CEPEX/UFPI nº 1.056/2026",
+              "article": "1"
+            }
+          }
+        ],
+        "known_relations": [
+          {
+            "relation": "AMENDED_BY",
+            "source_norm": "ufpi-177-2012",
+            "target_norm": "ufpi-1056-2026",
+            "target_article": "68",
+            "target_paragraph": "4",
+            "evidence_source": "Resolução CEPEX/UFPI nº 1.056/2026",
+            "evidence_article": "1"
+          }
+        ],
+        "generation_constraints": {
+          "must_frame_as_historical": false,
+          "must_not_claim_current_validity": false,
+          "must_not_claim_unknown_as_current": true,
+          "must_not_present_revoked_rule_as_current": false,
+          "must_not_present_successor_as_historical_predecessor": false,
+          "must_separate_temporal_states": false,
+          "must_follow_evidence_roles": true,
+          "must_not_treat_partial_amendment_as_total_revocation": true,
+          "must_not_duplicate_superseded_wording": true,
+          "must_not_reintroduce_excluded_evidence": true,
+          "must_not_deny_present_evidence": true,
+          "must_not_invent_effective_date": true,
+          "must_not_invent_temporal_scope": true,
+          "citation_granularity_ceiling": "article"
+        }
+      },
+      "temporal_status_text": "O dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.",
+      "allowed_temporal_facts": {
+        "items": [
+          {
+            "kind": "AMENDED_BY",
+            "norm_id": "ufpi-177-2012",
+            "target_norm": "ufpi-1056-2026",
+            "role": null
+          },
+          {
+            "kind": "STATUS_UNKNOWN",
+            "norm_id": "ufpi-177-2012",
+            "target_norm": null,
+            "role": null
+          }
+        ]
+      },
+      "core_status": "accepted",
+      "domain": "graduacao",
+      "retrieval_strategy": "metadata_exact",
+      "needs_clarification": false,
+      "clarification_question": null,
+      "correlation_id": "234a4ccb-c688-455b-9060-6854451cfbd7",
+      "error_code": null,
+      "safe_message": null
+    },
+    "grounded_followup_result": null,
+    "calculator_result": null,
+    "tool_calls": [],
+    "tool_call_id": null,
+    "run_id": "b8a509f0-1a75-47a3-ad15-5ec824f4a6b5",
+    "response_metadata": {},
+    "custom_data": {}
+  },
+  {
+    "type": "ai",
+    "content": "O dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado.\n\nFontes:\n- Resolução 177/2012, art. 68",
+    "normative_result": null,
+    "grounded_followup_result": {
+      "contract_version": "1",
+      "kind": "REPEAT",
+      "content": "O dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado.\n\nFontes:\n- Resolução 177/2012, art. 68",
+      "source_correlation_id": "a2157d60-ecce-4f13-86b0-b428a5b95ece",
+      "source_core_version": "structured_output_v2",
+      "source_contract_version": "1",
+      "references": [
+        {
+          "chunk_id": "ufpi-177-2012-art-68-idx-000067",
+          "norm_id": "ufpi-177-2012",
+          "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+          "article": "68",
+          "validated_subdivision": null,
+          "display_text": "Resolução 177/2012, art. 68",
+          "temporal_role": "eligible"
+        }
+      ],
+      "temporal_provenance": {
+        "temporal_intent": "indeterminate",
+        "requested_time_context": {
+          "norm_ids": [
+            "ufpi-177-2012"
+          ],
+          "before_amendment": false,
+          "relation_query": null,
+          "article": "68",
+          "paragraph": null,
+          "requested_year": null
+        },
+        "evidence_states": [
+          {
+            "chunk_id": "ufpi-177-2012-art-68-idx-000067",
+            "source_norm": "ufpi-177-2012",
+            "source_article": "68",
+            "temporal_action": "amendment_applied",
+            "normative_status": "desconhecida",
+            "temporal_role": "eligible",
+            "relation_source": {
+              "source": "Resolução CEPEX/UFPI nº 1.056/2026",
+              "article": "1"
+            }
+          }
+        ],
+        "known_relations": [
+          {
+            "relation": "AMENDED_BY",
+            "source_norm": "ufpi-177-2012",
+            "target_norm": "ufpi-1056-2026",
+            "target_article": "68",
+            "target_paragraph": "4",
+            "evidence_source": "Resolução CEPEX/UFPI nº 1.056/2026",
+            "evidence_article": "1"
+          }
+        ],
+        "generation_constraints": {
+          "must_frame_as_historical": false,
+          "must_not_claim_current_validity": false,
+          "must_not_claim_unknown_as_current": true,
+          "must_not_present_revoked_rule_as_current": false,
+          "must_not_present_successor_as_historical_predecessor": false,
+          "must_separate_temporal_states": false,
+          "must_follow_evidence_roles": true,
+          "must_not_treat_partial_amendment_as_total_revocation": true,
+          "must_not_duplicate_superseded_wording": true,
+          "must_not_reintroduce_excluded_evidence": true,
+          "must_not_deny_present_evidence": true,
+          "must_not_invent_effective_date": true,
+          "must_not_invent_temporal_scope": true,
+          "citation_granularity_ceiling": "article"
+        }
+      },
+      "domain": "graduacao",
+      "guard_status": "ACCEPTED"
+    },
+    "calculator_result": null,
+    "tool_calls": [],
+    "tool_call_id": null,
+    "run_id": "0a18c666-4ffe-43fe-8b20-a131ecc93a6d",
+    "response_metadata": {},
+    "custom_data": {}
+  }
+]

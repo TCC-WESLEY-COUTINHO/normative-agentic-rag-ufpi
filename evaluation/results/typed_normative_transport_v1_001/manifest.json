@@ -1,0 +1,50 @@
+{
+  "initial_head": "459dab7c9bcf4a9470f2855d31ceabbe008c8998",
+  "branch": "feat/typed-normative-transport-v1",
+  "red_commit": "8bfedc7105db4f5b0ee55db56da97338054a8cff",
+  "implementation_commit": "beb638df8f59a06d9459d7eca1d6f0afb50f496d",
+  "source_checks": [
+    {
+      "path": "code/src/schema/schema.py",
+      "working_sha256": "0268a560dc12a0df5702ed10d70f60e134a76ebc1f2de50d58021ad604012aa8",
+      "git_blob_sha256": "a99cadaad9e930669e32e6bf98465085a455fda21b1d40b8680ada71734904e2",
+      "normalized_equal": true
+    },
+    {
+      "path": "code/src/service/service.py",
+      "working_sha256": "578441324438127ba93eacfdc96594a1e804376d7ffd7ddc9ebab41cbba8e734",
+      "git_blob_sha256": "7ec8534a28c5fece5c372198dcbc11f989a14ef02e6c62131f3b37c4042274c9",
+      "normalized_equal": true
+    },
+    {
+      "path": "code/src/service/normative_transport.py",
+      "working_sha256": "30294198dc01031b3e212f3fedaf1329e56e27e19c743a018fc3c2a18482615e",
+      "git_blob_sha256": "30294198dc01031b3e212f3fedaf1329e56e27e19c743a018fc3c2a18482615e",
+      "normalized_equal": true
+    },
+    {
+      "path": "code/src/client/client.py",
+      "working_sha256": "b85d992f85770d2c1206e2566d3f0c916815288df7c4c31dcde5c1f8e37ea491",
+      "git_blob_sha256": "1cd53d2256af33838162b3812403fbd989cf6dcfd8f3396912891d7fbfe3a845",
+      "normalized_equal": true
+    },
+    {
+      "path": "code/tests/rag_baseline/test_typed_normative_transport.py",
+      "working_sha256": "986b46ecf95c7dc78a27eca34b4d0918870d17509b08ba5acb342c22b61b5f4d",
+      "git_blob_sha256": "986b46ecf95c7dc78a27eca34b4d0918870d17509b08ba5acb342c22b61b5f4d",
+      "normalized_equal": true
+    }
+  ],
+  "protected_initial_files": 654,
+  "authorized_old_changes": [
+    "code/src/client/client.py",
+    "code/src/schema/schema.py",
+    "code/src/service/service.py"
+  ],
+  "artifact_policy": "Local -text; result working bytes equal committed blob bytes.",
+  "protocol_revision": 2,
+  "initial_protocol_sha256": "21a90a0e27c1934442152e228c28b35d44e0e0c86cb6721b440449ed0ee30b7b",
+  "final_protocol_sha256": "62b2d0f9b515d1a526809f290148513cd8007b03d63206c6fbac5cc03725c9fa",
+  "index_sha256": "ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a",
+  "external_api_calls": 0
+}

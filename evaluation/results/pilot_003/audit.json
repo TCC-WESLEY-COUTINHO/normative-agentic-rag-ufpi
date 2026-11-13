@@ -1,0 +1,50 @@
+{
+  "execution_file_hashes_verified": {
+    "evaluation\\datasets\\graduacao_v2.json": "local_execution_snapshot",
+    "evaluation\\datasets\\pos_graduacao_v2.json": "local_execution_snapshot",
+    "evaluation\\corpora\\graduacao_setor_v2.json": "working_tree",
+    "evaluation\\corpora\\pos_graduacao_setor_v2.json": "working_tree",
+    "evaluation\\protocol_v2.md": "local_execution_snapshot",
+    "code\\uv.lock": "working_tree",
+    "code\\src\\rag_baseline\\__init__.py": "working_tree",
+    "code\\src\\rag_baseline\\analyze_experiment.py": "working_tree",
+    "code\\src\\rag_baseline\\api.py": "working_tree",
+    "code\\src\\rag_baseline\\config.py": "working_tree",
+    "code\\src\\rag_baseline\\corpus.py": "working_tree",
+    "code\\src\\rag_baseline\\experiment.py": "working_tree",
+    "code\\src\\rag_baseline\\experiment_v2.py": "working_tree",
+    "code\\src\\rag_baseline\\index.py": "working_tree",
+    "code\\src\\rag_baseline\\models.py": "working_tree",
+    "code\\src\\rag_baseline\\openrouter.py": "working_tree",
+    "code\\src\\rag_baseline\\profiles.py": "working_tree",
+    "code\\src\\rag_baseline\\retrieve.py": "working_tree",
+    "code\\src\\rag_baseline\\scope.py": "working_tree",
+    "code\\src\\rag_baseline\\service.py": "working_tree",
+    "code\\src\\rag_baseline\\vector_store.py": "working_tree",
+    "code\\src\\agents\\tools_v2.py": "working_tree"
+  },
+  "rows": 80,
+  "unique_pairs": 80,
+  "questions": 40,
+  "metrics_recomputed_equal": true,
+  "summary_recomputed_equal": true,
+  "primary_summary_recomputed_equal": true,
+  "system_prompt_sha256_verified": "dbe2b931d08dfa564bab82e8528b3dbaf5e15c1a737b09087fc61a40496fde4d",
+  "row_sha256_at_audit": "842ac69fa0542bdf628f75797c002a76249c65f5f4b16fabbbe7bf3dbd276ecc",
+  "execution_row_sha256": "157803596dc1477b20da2378474f94b270102fbf1a3aacea4731acb24a48dbb4",
+  "editorial_projection_present": true,
+  "generation_errors": [
+    {
+      "id": "POS2-016",
+      "condition": "isolated",
+      "error": "OpenRouter retornou HTTP 504."
+    }
+  ],
+  "generation_receipts": 79,
+  "generation_tokens": 181818,
+  "generation_cost_as_reported": 0.021831490000000002,
+  "embedding_receipts": 8,
+  "review_scores_filled": 0,
+  "review_forms": 80,
+  "blinding_limit": "Condition is hidden in the form, but answer content can reveal scope. Evidence review requires separate access after first-pass scoring."
+}

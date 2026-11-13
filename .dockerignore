@@ -1,0 +1,15 @@
+**
+!code/
+!code/pyproject.toml
+!code/uv.lock
+!code/src/
+!code/src/**
+code/src/**/__pycache__/
+code/src/**/*.pyc
+!data/
+!data/normative_registry.json
+!evaluation/
+!evaluation/corpora/
+!evaluation/corpora/graduacao_setor_v2.json
+!evaluation/corpora/pos_graduacao_setor_v2.json
+!evaluation/corpora/1056_2026_temporal_v1.json

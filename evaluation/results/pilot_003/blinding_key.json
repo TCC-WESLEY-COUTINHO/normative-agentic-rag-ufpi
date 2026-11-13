@@ -1,0 +1,402 @@
+[
+  {
+    "annotation_id": "V2-A001",
+    "id": "GRAD2-016",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A002",
+    "id": "POS2-006",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A003",
+    "id": "POS2-009",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A004",
+    "id": "GRAD2-004",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A005",
+    "id": "GRAD2-007",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A006",
+    "id": "POS2-007",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A007",
+    "id": "POS2-019",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A008",
+    "id": "POS2-015",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A009",
+    "id": "POS2-016",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A010",
+    "id": "GRAD2-012",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A011",
+    "id": "POS2-011",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A012",
+    "id": "GRAD2-004",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A013",
+    "id": "GRAD2-008",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A014",
+    "id": "POS2-010",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A015",
+    "id": "POS2-014",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A016",
+    "id": "GRAD2-005",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A017",
+    "id": "POS2-008",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A018",
+    "id": "POS2-020",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A019",
+    "id": "GRAD2-010",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A020",
+    "id": "POS2-020",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A021",
+    "id": "POS2-005",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A022",
+    "id": "GRAD2-011",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A023",
+    "id": "POS2-012",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A024",
+    "id": "POS2-003",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A025",
+    "id": "POS2-007",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A026",
+    "id": "POS2-009",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A027",
+    "id": "POS2-012",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A028",
+    "id": "GRAD2-011",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A029",
+    "id": "GRAD2-007",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A030",
+    "id": "GRAD2-005",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A031",
+    "id": "GRAD2-015",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A032",
+    "id": "POS2-002",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A033",
+    "id": "POS2-004",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A034",
+    "id": "GRAD2-016",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A035",
+    "id": "POS2-013",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A036",
+    "id": "POS2-005",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A037",
+    "id": "POS2-014",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A038",
+    "id": "GRAD2-019",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A039",
+    "id": "GRAD2-019",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A040",
+    "id": "GRAD2-017",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A041",
+    "id": "POS2-002",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A042",
+    "id": "GRAD2-014",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A043",
+    "id": "POS2-016",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A044",
+    "id": "GRAD2-001",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A045",
+    "id": "POS2-011",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A046",
+    "id": "POS2-003",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A047",
+    "id": "GRAD2-002",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A048",
+    "id": "GRAD2-006",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A049",
+    "id": "GRAD2-009",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A050",
+    "id": "GRAD2-013",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A051",
+    "id": "GRAD2-018",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A052",
+    "id": "POS2-013",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A053",
+    "id": "POS2-001",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A054",
+    "id": "POS2-015",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A055",
+    "id": "GRAD2-013",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A056",
+    "id": "POS2-018",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A057",
+    "id": "GRAD2-003",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A058",
+    "id": "GRAD2-012",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A059",
+    "id": "GRAD2-003",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A060",
+    "id": "GRAD2-020",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A061",
+    "id": "GRAD2-020",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A062",
+    "id": "GRAD2-009",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A063",
+    "id": "GRAD2-001",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A064",
+    "id": "POS2-018",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A065",
+    "id": "GRAD2-015",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A066",
+    "id": "GRAD2-002",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A067",
+    "id": "GRAD2-014",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A068",
+    "id": "GRAD2-008",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A069",
+    "id": "POS2-017",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A070",
+    "id": "POS2-004",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A071",
+    "id": "POS2-001",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A072",
+    "id": "POS2-019",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A073",
+    "id": "POS2-017",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A074",
+    "id": "GRAD2-017",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A075",
+    "id": "GRAD2-018",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A076",
+    "id": "GRAD2-006",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A077",
+    "id": "POS2-010",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A078",
+    "id": "POS2-008",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "V2-A079",
+    "id": "GRAD2-010",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "V2-A080",
+    "id": "POS2-006",
+    "condition": "combined"
+  }
+]

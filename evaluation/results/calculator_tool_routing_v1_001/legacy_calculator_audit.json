@@ -1,0 +1,22 @@
+{
+  "path": "code/src/agents/tools.py",
+  "type": "LangChain BaseTool via tool decorator",
+  "name": "Calculator",
+  "input_schema": {
+    "expression": "str"
+  },
+  "parser": "numexpr.evaluate",
+  "eval_exec": false,
+  "llm_in_function": false,
+  "operations": "numexpr expression language, pi/e locals; no explicit application allowlist",
+  "errors": "ValueError embeds input and underlying exception",
+  "limits": "No application complexity/length limits",
+  "side_effects": "Function evaluates locally; module imports integrations and creates tool bindings, includes lazy network helpers",
+  "bindings": [
+    "agents/chatbot_generic.py",
+    "agents/research_assistant.py"
+  ],
+  "dedicated_tests_found": false,
+  "decision": "DO_NOT_USE",
+  "legacy_preserved": true
+}

@@ -1,0 +1,83 @@
+code\src\schema\schema.py:1:1: I001 [*] Import block is un-sorted or un-formatted
+  |
+1 | / from typing import Any, Literal, NotRequired
+2 | |
+3 | | from pydantic import BaseModel, Field, SerializeAsAny, field_validator, model_validator
+4 | | from typing_extensions import TypedDict
+5 | |
+6 | | from rag_baseline.calculator_contracts import CalculatorToolResult
+7 | | from rag_baseline.conversation_contracts import GroundedFollowUpResult
+8 | | from rag_baseline.tool_contracts import NormativeToolResult, ToolStatus
+9 | | from schema.models import AllModelEnum, AnthropicModelName, OpenAIModelName
+  | |___________________________________________________________________________^ I001
+  |
+  = help: Organize imports
+
+code\src\service\normative_transport.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+   |
+ 1 |   """Current-turn transport adapter for the frozen internal integration graph."""
+ 2 |
+ 3 | / from typing import Any
+ 4 | |
+ 5 | | from langchain_core.messages import AIMessage
+ 6 | | from langgraph.graph.state import CompiledStateGraph
+ 7 | |
+ 8 | | from rag_baseline.calculator_contracts import CalculatorToolResult
+ 9 | | from rag_baseline.conversation_contracts import ConversationIdentity, GroundedFollowUpResult
+10 | | from rag_baseline.tool_contracts import NormativeToolResult, ToolStatus
+11 | | from schema import ChatMessage
+   | |______________________________^ I001
+12 |
+13 |   INTEGRATED_AGENT_NAME = "chatbot_ufpi_integrated_v1"
+   |
+   = help: Organize imports
+
+code\tests\rag_baseline\test_calculator_tool_routing.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+   |
+ 1 |   """Deterministic math, routing and checkpoint boundaries; no remote providers."""
+ 2 |
+ 3 | / import asyncio
+ 4 | | import importlib
+ 5 | | from decimal import Decimal, localcontext
+ 6 | |
+ 7 | | import pytest
+ 8 | | import test_conversation_memory_followups as memory
+ 9 | | from langgraph.checkpoint.sqlite.aio import AsyncSqliteSaver
+10 | | from pydantic import ValidationError
+11 | |
+12 | | from rag_baseline.conversation_policy import ConversationFollowUpPolicy
+13 | | from schema import ChatMessage
+14 | | from service.normative_transport import project_integrated_state
+   | |________________________________________________________________^ I001
+15 |
+16 |   conversation = memory.conversation
+   |
+   = help: Organize imports
+
+code\tests\rag_baseline\test_calculator_tool_routing.py:334:5: I001 [*] Import block is un-sorted or un-formatted
+    |
+333 |   def test_projection_rejects_forged_calculator_emission(calc):
+334 | /     from dataclasses import replace
+335 | |
+336 | |     from langchain_core.messages import AIMessage
+337 | |
+338 | |     from rag_baseline.conversation_graph import ConversationTurnAudit
+    | |_____________________________________________________________________^ I001
+339 |
+340 |       result = execute(calc, "2+2")
+    |
+    = help: Organize imports
+
+evaluation\results\calculator_tool_routing_v1_001\freeze_protocol.py:27:32: UP017 [*] Use `datetime.UTC` alias
+   |
+25 |     value = dict(
+26 |         version="1",
+27 |         frozen_at=datetime.now(timezone.utc).isoformat(),
+   |                                ^^^^^^^^^^^^ UP017
+28 |         kind="finite_engineering_protocol_no_legal_gold",
+29 |         external_io="Blocked socket connections and HTTP sends; exact in-process ASGI exception only",
+   |
+   = help: Convert to `datetime.UTC` alias
+
+Found 5 errors.
+[*] 5 fixable with the `--fix` option.

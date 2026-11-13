@@ -1,0 +1,14 @@
+{
+  "ready": true,
+  "reason_code": null,
+  "provider_configured": true,
+  "registry_valid": true,
+  "index_available": true,
+  "index_records": 507,
+  "memory_ready": true,
+  "memory_stamp_created": true,
+  "calculator_available": true,
+  "facade_ready": true,
+  "registered": true,
+  "experimental": true
+}

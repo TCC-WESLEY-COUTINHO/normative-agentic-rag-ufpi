@@ -1,0 +1,68 @@
+{
+  "status": "RESOLVED_TECHNICAL_REGRESSION",
+  "user_confirmation": {
+    "question": "Em um curso de graduação da UFPI ofertado por programa institucional, um professor selecionado por edital, sem vínculo efetivo com a universidade, pode ser coordenador de estágio?",
+    "fallback_response_confirmed": true,
+    "visible_base_articles": [
+      "87",
+      "68",
+      "65",
+      "66"
+    ]
+  },
+  "manual_fallback_confirmed": true,
+  "manual_raw_generation_available": true,
+  "manual_guard_codes_available": true,
+  "correlation_id": "3d174b4a-570d-4e40-9176-9720bd4b13b0",
+  "private_envelope_source": "manual_case_b_private_audit.json",
+  "initial_extraction": "manual_case_b.json is incomplete public projection; private memory envelope stores internal_audit via to_persistence/restore_result",
+  "superseded_phase": {
+    "status": "OPEN_EXACT_CAUSE_NOT_REPRODUCED",
+    "incorrect_assumption": "manual raw generations and guard codes unavailable",
+    "corrected_after_code_review": true
+  },
+  "manual_guard_1": [
+    {
+      "code": "unsupported_current_validity",
+      "start": 933,
+      "end": 951,
+      "excerpt": "permanece em vigor"
+    }
+  ],
+  "manual_guard_2": [
+    {
+      "code": "unsupported_current_validity",
+      "start": 673,
+      "end": 688,
+      "excerpt": "redação vigente"
+    }
+  ],
+  "regeneration_error": null,
+  "manual_and_accepted_references_identical": true,
+  "manual_and_accepted_temporal_provenance_identical": true,
+  "root_cause": "unsupported current validity claim in otherwise substantive amendment answer; existing retry repeated unsupported validity claim",
+  "production_fix": "conditional retry constraints for unsupported_current_validity; preserve substance and conditions; ask omission of redundant body citations; no guard or first-generation change",
+  "production_generation_guard_retry_change": true,
+  "guard_changed": false,
+  "retry_limit_changed": false,
+  "red_b_obtained": true,
+  "red_labels": [
+    "case_b_manual_retry_red",
+    "case_b_retry_locator_red"
+  ],
+  "hypotheses": {
+    "H1": "excluded: amendment evidence present",
+    "H2": "excluded: amendment retained with structured target",
+    "H3": "substantive amendment not ignored; extra unsupported validity claim generated",
+    "H4": "not the original manual cause; observed in first repair replay and preserved",
+    "H5": "not the manual cause; no subdivision violation in original guards",
+    "H6": "excluded: structured target and locator permissions present; guard rejection correct",
+    "H7": "confirmed: retry repeated unsupported current validity",
+    "H8": "specific rejection unsupported_current_validity; regeneration_error null"
+  },
+  "first_repair_real_retry": "live_retry_trace.json: unsupported validity repaired but locator violations remained; retained, led to second RED",
+  "final_replay": "live_retry_final_trace.json: recorded first generation, actual provider retry, regenerated with empty second guard",
+  "final_normal_probe": "final_complete_traces.json: natural unsupported validity rejected, actual retry regenerated with empty second guard; no injection",
+  "candidate_temp_grad_002": "preexisting chronology_unresolved preserved; candidate without recorded independent validation",
+  "acceptance": "A_AND_B_TECHNICAL_FIXES_VERIFIED; legal/scientific validation not claimed"
+}

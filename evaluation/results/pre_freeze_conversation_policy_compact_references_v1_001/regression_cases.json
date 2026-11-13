@@ -1,0 +1,1885 @@
+{
+  "before": {
+    "kind": "Real integrated graph, facade, RouterV1, retrieval and guard; controlled external provider I/O, no live provider calls",
+    "streamlit_version": "1.40.2",
+    "action_probes": [
+      {
+        "question": "quem é você?",
+        "expected_action": "ABOUT_ASSISTANT",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "retrieval_calls": 0,
+        "provider_calls": 1,
+        "pending_before": null,
+        "pending_after": {
+          "original_question": "quem é você?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "ea1a38a5-052b-4e25-9b36-cf9eb2e334a9",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "ea1a38a5-052b-4e25-9b36-cf9eb2e334a9",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "quem é você?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_status": "CLARIFICATION"
+      },
+      {
+        "question": "quem é voce?",
+        "expected_action": "ABOUT_ASSISTANT",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "retrieval_calls": 0,
+        "provider_calls": 1,
+        "pending_before": null,
+        "pending_after": {
+          "original_question": "quem é voce?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "893894c1-422b-4170-baa0-51610d772d05",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "893894c1-422b-4170-baa0-51610d772d05",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "quem é voce?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_status": "CLARIFICATION"
+      },
+      {
+        "question": "o que você faz?",
+        "expected_action": "ABOUT_ASSISTANT",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "retrieval_calls": 0,
+        "provider_calls": 1,
+        "pending_before": null,
+        "pending_after": {
+          "original_question": "o que você faz?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "0c410df0-443f-4680-bc5f-7ef6a5a92440",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "0c410df0-443f-4680-bc5f-7ef6a5a92440",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "o que você faz?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_status": "CLARIFICATION"
+      },
+      {
+        "question": "o que voce faz?",
+        "expected_action": "ABOUT_ASSISTANT",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "retrieval_calls": 0,
+        "provider_calls": 1,
+        "pending_before": null,
+        "pending_after": {
+          "original_question": "o que voce faz?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "47067acf-6439-4bb5-b7cd-197421f9939b",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "47067acf-6439-4bb5-b7cd-197421f9939b",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "o que voce faz?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_status": "CLARIFICATION"
+      },
+      {
+        "question": "como você pode me ajudar?",
+        "expected_action": "ABOUT_ASSISTANT",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "retrieval_calls": 0,
+        "provider_calls": 1,
+        "pending_before": null,
+        "pending_after": {
+          "original_question": "como você pode me ajudar?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "d64aeadb-9a44-4644-9560-0b7173eb28b3",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "d64aeadb-9a44-4644-9560-0b7173eb28b3",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "como você pode me ajudar?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_status": "CLARIFICATION"
+      },
+      {
+        "question": "para que você serve?",
+        "expected_action": "ABOUT_ASSISTANT",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "retrieval_calls": 0,
+        "provider_calls": 1,
+        "pending_before": null,
+        "pending_after": {
+          "original_question": "para que você serve?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "690643bf-18f5-481d-829c-e0d14e96a61c",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "690643bf-18f5-481d-829c-e0d14e96a61c",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "para que você serve?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_status": "CLARIFICATION"
+      },
+      {
+        "question": "quantos anos tem a cidade mais antiga do piauí?",
+        "expected_action": "OUT_OF_SCOPE",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "retrieval_calls": 0,
+        "provider_calls": 1,
+        "pending_before": null,
+        "pending_after": {
+          "original_question": "quantos anos tem a cidade mais antiga do piauí?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "0bcc4852-a7f4-405d-8c3b-5a465e5c05d9",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "0bcc4852-a7f4-405d-8c3b-5a465e5c05d9",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "quantos anos tem a cidade mais antiga do piauí?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_status": "CLARIFICATION"
+      },
+      {
+        "question": "quantos anos tem a cidade mais antiga do piauí?",
+        "expected_action": "OUT_OF_SCOPE",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "retrieval_calls": 0,
+        "provider_calls": 1,
+        "pending_before": null,
+        "pending_after": {
+          "original_question": "quantos anos tem a cidade mais antiga do piauí?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "37701bd0-a781-49ca-bf9c-a080c0055539",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "37701bd0-a781-49ca-bf9c-a080c0055539",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "quantos anos tem a cidade mais antiga do piauí?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_status": "CLARIFICATION"
+      },
+      {
+        "question": "Faço mestrado e estou doente. Qual é a diferença entre cancelar uma matéria e trancar o curso?",
+        "expected_action": "NORMATIVE_RAG",
+        "observed_action": "CONTINUE_CLARIFICATION",
+        "router_calls": 1,
+        "retrieval_calls": 1,
+        "provider_calls": 3,
+        "pending_before": {
+          "original_question": "quantos anos tem a cidade mais antiga do piauí?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "37701bd0-a781-49ca-bf9c-a080c0055539",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "pending_after": null,
+        "correlation": "37701bd0-a781-49ca-bf9c-a080c0055539",
+        "correlation_changed": false,
+        "router_inputs": [
+          {
+            "question": "quantos anos tem a cidade mais antiga do piauí?",
+            "clarification": "Faço mestrado e estou doente. Qual é a diferença entre cancelar uma matéria e trancar o curso?"
+          }
+        ],
+        "final_content": "Com base nas normas indexadas no sistema:\n\nConteúdo controlado.",
+        "normative_status": "ANSWER"
+      },
+      {
+        "question": "Posso cancelar uma disciplina?",
+        "expected_action": "NORMATIVE_RAG",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "retrieval_calls": 0,
+        "provider_calls": 1,
+        "pending_before": null,
+        "pending_after": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "45005cf2-ffed-47ef-9926-f14688232b48",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "45005cf2-ffed-47ef-9926-f14688232b48",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "Posso cancelar uma disciplina?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_status": "CLARIFICATION"
+      },
+      {
+        "question": "obrigado",
+        "expected_action": "SAFE_DIRECT",
+        "observed_action": "SAFE_DIRECT",
+        "router_calls": 0,
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "45005cf2-ffed-47ef-9926-f14688232b48",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "pending_after": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "45005cf2-ffed-47ef-9926-f14688232b48",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "De nada!",
+        "normative_status": null
+      },
+      {
+        "question": "pós",
+        "expected_action": "CONTINUE_CLARIFICATION",
+        "observed_action": "CONTINUE_CLARIFICATION",
+        "router_calls": 1,
+        "retrieval_calls": 1,
+        "provider_calls": 3,
+        "pending_before": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "45005cf2-ffed-47ef-9926-f14688232b48",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "pending_after": null,
+        "correlation": "45005cf2-ffed-47ef-9926-f14688232b48",
+        "correlation_changed": false,
+        "router_inputs": [
+          {
+            "question": "Posso cancelar uma disciplina?",
+            "clarification": "pós"
+          }
+        ],
+        "final_content": "Com base nas normas indexadas no sistema:\n\nConteúdo controlado.",
+        "normative_status": "ANSWER"
+      },
+      {
+        "question": "Posso cancelar uma disciplina?",
+        "expected_action": "NORMATIVE_RAG",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "retrieval_calls": 0,
+        "provider_calls": 1,
+        "pending_before": null,
+        "pending_after": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "3ee3d011-4acf-435f-a776-e455126ada36",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "3ee3d011-4acf-435f-a776-e455126ada36",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "Posso cancelar uma disciplina?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_status": "CLARIFICATION"
+      },
+      {
+        "question": "quem é você?",
+        "expected_action": "ABOUT_ASSISTANT",
+        "observed_action": "CONTINUE_CLARIFICATION",
+        "router_calls": 1,
+        "retrieval_calls": 0,
+        "provider_calls": 1,
+        "pending_before": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "3ee3d011-4acf-435f-a776-e455126ada36",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "pending_after": null,
+        "correlation": "3ee3d011-4acf-435f-a776-e455126ada36",
+        "correlation_changed": false,
+        "router_inputs": [
+          {
+            "question": "Posso cancelar uma disciplina?",
+            "clarification": "quem é você?"
+          }
+        ],
+        "final_content": "O esclarecimento não resolveu o domínio da consulta.",
+        "normative_status": "ERROR"
+      },
+      {
+        "question": "pós",
+        "expected_action": "CONTINUE_CLARIFICATION",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "retrieval_calls": 1,
+        "provider_calls": 3,
+        "pending_before": null,
+        "pending_after": null,
+        "correlation": "56c6d010-1180-4f3f-ae3c-ad9a9305e1c3",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "pós",
+            "clarification": null
+          }
+        ],
+        "final_content": "Com base nas normas indexadas no sistema:\n\nConteúdo controlado.",
+        "normative_status": "ANSWER"
+      },
+      {
+        "question": "Posso cancelar uma disciplina?",
+        "expected_action": "NORMATIVE_RAG",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "retrieval_calls": 0,
+        "provider_calls": 1,
+        "pending_before": null,
+        "pending_after": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "3e254c4b-3d30-4aa8-80f6-026e29218964",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "3e254c4b-3d30-4aa8-80f6-026e29218964",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "Posso cancelar uma disciplina?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_status": "CLARIFICATION"
+      },
+      {
+        "question": "quantos anos tem a cidade mais antiga do piauí?",
+        "expected_action": "OUT_OF_SCOPE",
+        "observed_action": "CONTINUE_CLARIFICATION",
+        "router_calls": 1,
+        "retrieval_calls": 0,
+        "provider_calls": 1,
+        "pending_before": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "3e254c4b-3d30-4aa8-80f6-026e29218964",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "pending_after": null,
+        "correlation": "3e254c4b-3d30-4aa8-80f6-026e29218964",
+        "correlation_changed": false,
+        "router_inputs": [
+          {
+            "question": "Posso cancelar uma disciplina?",
+            "clarification": "quantos anos tem a cidade mais antiga do piauí?"
+          }
+        ],
+        "final_content": "O esclarecimento não resolveu o domínio da consulta.",
+        "normative_status": "ERROR"
+      },
+      {
+        "question": "pós",
+        "expected_action": "CONTINUE_CLARIFICATION",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "retrieval_calls": 1,
+        "provider_calls": 3,
+        "pending_before": null,
+        "pending_after": null,
+        "correlation": "394135f8-9a82-4754-9b9e-e39665dc0ecf",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "pós",
+            "clarification": null
+          }
+        ],
+        "final_content": "Com base nas normas indexadas no sistema:\n\nConteúdo controlado.",
+        "normative_status": "ANSWER"
+      },
+      {
+        "question": "Posso cancelar uma disciplina?",
+        "expected_action": "NORMATIVE_RAG",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "retrieval_calls": 0,
+        "provider_calls": 1,
+        "pending_before": null,
+        "pending_after": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "3afbdc70-a362-4415-8c39-21481c191e80",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "3afbdc70-a362-4415-8c39-21481c191e80",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "Posso cancelar uma disciplina?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_status": "CLARIFICATION"
+      },
+      {
+        "question": "cancele",
+        "expected_action": "CLEAR_PENDING",
+        "observed_action": "CLEAR_PENDING",
+        "router_calls": 0,
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "3afbdc70-a362-4415-8c39-21481c191e80",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "pending_after": null,
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "Pendência de esclarecimento cancelada.",
+        "normative_status": null
+      },
+      {
+        "question": "Posso cancelar uma disciplina?",
+        "expected_action": "NORMATIVE_RAG",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "retrieval_calls": 0,
+        "provider_calls": 1,
+        "pending_before": null,
+        "pending_after": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "8a8eca7d-30c5-4817-96c3-7f90554552e8",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "8a8eca7d-30c5-4817-96c3-7f90554552e8",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "Posso cancelar uma disciplina?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_status": "CLARIFICATION"
+      },
+      {
+        "question": "Faço mestrado e estou doente. Qual é a diferença entre cancelar uma matéria e trancar o curso?",
+        "expected_action": "NORMATIVE_RAG",
+        "observed_action": "CONTINUE_CLARIFICATION",
+        "router_calls": 1,
+        "retrieval_calls": 1,
+        "provider_calls": 3,
+        "pending_before": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "8a8eca7d-30c5-4817-96c3-7f90554552e8",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "pending_after": null,
+        "correlation": "8a8eca7d-30c5-4817-96c3-7f90554552e8",
+        "correlation_changed": false,
+        "router_inputs": [
+          {
+            "question": "Posso cancelar uma disciplina?",
+            "clarification": "Faço mestrado e estou doente. Qual é a diferença entre cancelar uma matéria e trancar o curso?"
+          }
+        ],
+        "final_content": "Com base nas normas indexadas no sistema:\n\nConteúdo controlado.",
+        "normative_status": "ANSWER"
+      }
+    ],
+    "request_phase": "interrupted request baseline; historical evidence"
+  },
+  "after": {
+    "kind": "Real integrated graph, facade, RouterV1, retrieval and guard; controlled external provider I/O, no live provider calls",
+    "streamlit_version": "1.40.2",
+    "action_probes": [
+      {
+        "question": "quem é você?",
+        "expected_action": "ABOUT_ASSISTANT",
+        "observed_action": "ABOUT_ASSISTANT",
+        "router_calls": 0,
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": null,
+        "pending_after": null,
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "Sou um assistente especializado em normas acadêmicas da UFPI. Posso ajudar com dúvidas sobre matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação com base nas normas indexadas no sistema.",
+        "normative_status": null
+      },
+      {
+        "question": "quem é voce?",
+        "expected_action": "ABOUT_ASSISTANT",
+        "observed_action": "ABOUT_ASSISTANT",
+        "router_calls": 0,
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": null,
+        "pending_after": null,
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "Sou um assistente especializado em normas acadêmicas da UFPI. Posso ajudar com dúvidas sobre matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação com base nas normas indexadas no sistema.",
+        "normative_status": null
+      },
+      {
+        "question": "o que você faz?",
+        "expected_action": "ABOUT_ASSISTANT",
+        "observed_action": "ABOUT_ASSISTANT",
+        "router_calls": 0,
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": null,
+        "pending_after": null,
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "Sou um assistente especializado em normas acadêmicas da UFPI. Posso ajudar com dúvidas sobre matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação com base nas normas indexadas no sistema.",
+        "normative_status": null
+      },
+      {
+        "question": "o que voce faz?",
+        "expected_action": "ABOUT_ASSISTANT",
+        "observed_action": "ABOUT_ASSISTANT",
+        "router_calls": 0,
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": null,
+        "pending_after": null,
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "Sou um assistente especializado em normas acadêmicas da UFPI. Posso ajudar com dúvidas sobre matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação com base nas normas indexadas no sistema.",
+        "normative_status": null
+      },
+      {
+        "question": "como você pode me ajudar?",
+        "expected_action": "ABOUT_ASSISTANT",
+        "observed_action": "ABOUT_ASSISTANT",
+        "router_calls": 0,
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": null,
+        "pending_after": null,
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "Sou um assistente especializado em normas acadêmicas da UFPI. Posso ajudar com dúvidas sobre matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação com base nas normas indexadas no sistema.",
+        "normative_status": null
+      },
+      {
+        "question": "para que você serve?",
+        "expected_action": "ABOUT_ASSISTANT",
+        "observed_action": "ABOUT_ASSISTANT",
+        "router_calls": 0,
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": null,
+        "pending_after": null,
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "Sou um assistente especializado em normas acadêmicas da UFPI. Posso ajudar com dúvidas sobre matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação com base nas normas indexadas no sistema.",
+        "normative_status": null
+      },
+      {
+        "question": "quantos anos tem a cidade mais antiga do piauí?",
+        "expected_action": "OUT_OF_SCOPE",
+        "observed_action": "OUT_OF_SCOPE",
+        "router_calls": 0,
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": null,
+        "pending_after": null,
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "Posso ajudar com dúvidas sobre normas acadêmicas da UFPI, como matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação.",
+        "normative_status": null
+      },
+      {
+        "question": "quantos anos tem a cidade mais antiga do piauí?",
+        "expected_action": "OUT_OF_SCOPE",
+        "observed_action": "OUT_OF_SCOPE",
+        "router_calls": 0,
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": null,
+        "pending_after": null,
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "Posso ajudar com dúvidas sobre normas acadêmicas da UFPI, como matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação.",
+        "normative_status": null
+      },
+      {
+        "question": "Faço mestrado e estou doente. Qual é a diferença entre cancelar uma matéria e trancar o curso?",
+        "expected_action": "NORMATIVE_RAG",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "retrieval_calls": 1,
+        "provider_calls": 3,
+        "pending_before": null,
+        "pending_after": null,
+        "correlation": "ac78f4c4-80a8-44b9-8cd7-35753bd30417",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "Faço mestrado e estou doente. Qual é a diferença entre cancelar uma matéria e trancar o curso?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Com base nas normas indexadas no sistema:\n\nConteúdo controlado.",
+        "normative_status": "ANSWER"
+      },
+      {
+        "question": "Posso cancelar uma disciplina?",
+        "expected_action": "NORMATIVE_RAG",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "retrieval_calls": 0,
+        "provider_calls": 1,
+        "pending_before": null,
+        "pending_after": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "76ab2413-b1ef-468c-9d1b-2dd477ec5a43",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "76ab2413-b1ef-468c-9d1b-2dd477ec5a43",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "Posso cancelar uma disciplina?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_status": "CLARIFICATION"
+      },
+      {
+        "question": "obrigado",
+        "expected_action": "SAFE_DIRECT",
+        "observed_action": "SAFE_DIRECT",
+        "router_calls": 0,
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "76ab2413-b1ef-468c-9d1b-2dd477ec5a43",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "pending_after": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "76ab2413-b1ef-468c-9d1b-2dd477ec5a43",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "De nada!",
+        "normative_status": null
+      },
+      {
+        "question": "pós",
+        "expected_action": "CONTINUE_CLARIFICATION",
+        "observed_action": "CONTINUE_CLARIFICATION",
+        "router_calls": 1,
+        "retrieval_calls": 1,
+        "provider_calls": 3,
+        "pending_before": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "76ab2413-b1ef-468c-9d1b-2dd477ec5a43",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "pending_after": null,
+        "correlation": "76ab2413-b1ef-468c-9d1b-2dd477ec5a43",
+        "correlation_changed": false,
+        "router_inputs": [
+          {
+            "question": "Posso cancelar uma disciplina?",
+            "clarification": "pós"
+          }
+        ],
+        "final_content": "Com base nas normas indexadas no sistema:\n\nConteúdo controlado.",
+        "normative_status": "ANSWER"
+      },
+      {
+        "question": "Posso cancelar uma disciplina?",
+        "expected_action": "NORMATIVE_RAG",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "retrieval_calls": 0,
+        "provider_calls": 1,
+        "pending_before": null,
+        "pending_after": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "3ef1c92c-e4fc-4765-9f03-ecd2354df7ff",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "3ef1c92c-e4fc-4765-9f03-ecd2354df7ff",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "Posso cancelar uma disciplina?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_status": "CLARIFICATION"
+      },
+      {
+        "question": "quem é você?",
+        "expected_action": "ABOUT_ASSISTANT",
+        "observed_action": "ABOUT_ASSISTANT",
+        "router_calls": 0,
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "3ef1c92c-e4fc-4765-9f03-ecd2354df7ff",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "pending_after": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "3ef1c92c-e4fc-4765-9f03-ecd2354df7ff",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "Sou um assistente especializado em normas acadêmicas da UFPI. Posso ajudar com dúvidas sobre matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação com base nas normas indexadas no sistema.",
+        "normative_status": null
+      },
+      {
+        "question": "pós",
+        "expected_action": "CONTINUE_CLARIFICATION",
+        "observed_action": "CONTINUE_CLARIFICATION",
+        "router_calls": 1,
+        "retrieval_calls": 1,
+        "provider_calls": 3,
+        "pending_before": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "3ef1c92c-e4fc-4765-9f03-ecd2354df7ff",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "pending_after": null,
+        "correlation": "3ef1c92c-e4fc-4765-9f03-ecd2354df7ff",
+        "correlation_changed": false,
+        "router_inputs": [
+          {
+            "question": "Posso cancelar uma disciplina?",
+            "clarification": "pós"
+          }
+        ],
+        "final_content": "Com base nas normas indexadas no sistema:\n\nConteúdo controlado.",
+        "normative_status": "ANSWER"
+      },
+      {
+        "question": "Posso cancelar uma disciplina?",
+        "expected_action": "NORMATIVE_RAG",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "retrieval_calls": 0,
+        "provider_calls": 1,
+        "pending_before": null,
+        "pending_after": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "8679a0b6-99ba-41bb-9160-85752672a21a",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "8679a0b6-99ba-41bb-9160-85752672a21a",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "Posso cancelar uma disciplina?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_status": "CLARIFICATION"
+      },
+      {
+        "question": "quantos anos tem a cidade mais antiga do piauí?",
+        "expected_action": "OUT_OF_SCOPE",
+        "observed_action": "OUT_OF_SCOPE",
+        "router_calls": 0,
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "8679a0b6-99ba-41bb-9160-85752672a21a",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "pending_after": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "8679a0b6-99ba-41bb-9160-85752672a21a",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "Posso ajudar com dúvidas sobre normas acadêmicas da UFPI, como matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação.",
+        "normative_status": null
+      },
+      {
+        "question": "pós",
+        "expected_action": "CONTINUE_CLARIFICATION",
+        "observed_action": "CONTINUE_CLARIFICATION",
+        "router_calls": 1,
+        "retrieval_calls": 1,
+        "provider_calls": 3,
+        "pending_before": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "8679a0b6-99ba-41bb-9160-85752672a21a",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "pending_after": null,
+        "correlation": "8679a0b6-99ba-41bb-9160-85752672a21a",
+        "correlation_changed": false,
+        "router_inputs": [
+          {
+            "question": "Posso cancelar uma disciplina?",
+            "clarification": "pós"
+          }
+        ],
+        "final_content": "Com base nas normas indexadas no sistema:\n\nConteúdo controlado.",
+        "normative_status": "ANSWER"
+      },
+      {
+        "question": "Posso cancelar uma disciplina?",
+        "expected_action": "NORMATIVE_RAG",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "retrieval_calls": 0,
+        "provider_calls": 1,
+        "pending_before": null,
+        "pending_after": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "e847e41d-61ef-4d62-b99f-3f3d32d9d3cb",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "e847e41d-61ef-4d62-b99f-3f3d32d9d3cb",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "Posso cancelar uma disciplina?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_status": "CLARIFICATION"
+      },
+      {
+        "question": "cancele",
+        "expected_action": "CLEAR_PENDING",
+        "observed_action": "CLEAR_PENDING",
+        "router_calls": 0,
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "e847e41d-61ef-4d62-b99f-3f3d32d9d3cb",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "pending_after": null,
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "Pendência de esclarecimento cancelada.",
+        "normative_status": null
+      },
+      {
+        "question": "Posso cancelar uma disciplina?",
+        "expected_action": "NORMATIVE_RAG",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "retrieval_calls": 0,
+        "provider_calls": 1,
+        "pending_before": null,
+        "pending_after": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "a3ed47ec-30ed-41c7-9d26-e9fc07ac4efa",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "a3ed47ec-30ed-41c7-9d26-e9fc07ac4efa",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "Posso cancelar uma disciplina?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_status": "CLARIFICATION"
+      },
+      {
+        "question": "Faço mestrado e estou doente. Qual é a diferença entre cancelar uma matéria e trancar o curso?",
+        "expected_action": "NORMATIVE_RAG",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "retrieval_calls": 1,
+        "provider_calls": 3,
+        "pending_before": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "a3ed47ec-30ed-41c7-9d26-e9fc07ac4efa",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "pending_after": null,
+        "correlation": "8704b70f-3f1d-4e1c-a071-4a64912e1e93",
+        "correlation_changed": true,
+        "router_inputs": [
+          {
+            "question": "Faço mestrado e estou doente. Qual é a diferença entre cancelar uma matéria e trancar o curso?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Com base nas normas indexadas no sistema:\n\nConteúdo controlado.",
+        "normative_status": "ANSWER"
+      }
+    ],
+    "request_phase": "superseded deterministic OOS implementation; not final architecture"
+  },
+  "after_scope_gate": {
+    "kind": "Real integrated graph, facade, RouterV1, retrieval and guard; controlled external provider I/O, no live provider calls",
+    "streamlit_version": "1.40.2",
+    "action_probes": [
+      {
+        "question": "quem é você?",
+        "expected_action": "ABOUT_ASSISTANT",
+        "observed_action": "ABOUT_ASSISTANT",
+        "router_calls": 0,
+        "scope_gate_decision": null,
+        "scope_gate_provider_calls": 0,
+        "scope_gate_latency_ms": 0.0,
+        "scope_gate_status": null,
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": null,
+        "pending_after": null,
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "Sou um assistente especializado em normas acadêmicas da UFPI. Posso ajudar com dúvidas sobre matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação com base nas normas indexadas no sistema.",
+        "normative_status": null
+      },
+      {
+        "question": "quem é voce?",
+        "expected_action": "ABOUT_ASSISTANT",
+        "observed_action": "ABOUT_ASSISTANT",
+        "router_calls": 0,
+        "scope_gate_decision": null,
+        "scope_gate_provider_calls": 0,
+        "scope_gate_latency_ms": 0.0,
+        "scope_gate_status": null,
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": null,
+        "pending_after": null,
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "Sou um assistente especializado em normas acadêmicas da UFPI. Posso ajudar com dúvidas sobre matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação com base nas normas indexadas no sistema.",
+        "normative_status": null
+      },
+      {
+        "question": "o que você faz?",
+        "expected_action": "ABOUT_ASSISTANT",
+        "observed_action": "ABOUT_ASSISTANT",
+        "router_calls": 0,
+        "scope_gate_decision": null,
+        "scope_gate_provider_calls": 0,
+        "scope_gate_latency_ms": 0.0,
+        "scope_gate_status": null,
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": null,
+        "pending_after": null,
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "Sou um assistente especializado em normas acadêmicas da UFPI. Posso ajudar com dúvidas sobre matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação com base nas normas indexadas no sistema.",
+        "normative_status": null
+      },
+      {
+        "question": "o que voce faz?",
+        "expected_action": "ABOUT_ASSISTANT",
+        "observed_action": "ABOUT_ASSISTANT",
+        "router_calls": 0,
+        "scope_gate_decision": null,
+        "scope_gate_provider_calls": 0,
+        "scope_gate_latency_ms": 0.0,
+        "scope_gate_status": null,
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": null,
+        "pending_after": null,
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "Sou um assistente especializado em normas acadêmicas da UFPI. Posso ajudar com dúvidas sobre matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação com base nas normas indexadas no sistema.",
+        "normative_status": null
+      },
+      {
+        "question": "como você pode me ajudar?",
+        "expected_action": "ABOUT_ASSISTANT",
+        "observed_action": "ABOUT_ASSISTANT",
+        "router_calls": 0,
+        "scope_gate_decision": null,
+        "scope_gate_provider_calls": 0,
+        "scope_gate_latency_ms": 0.0,
+        "scope_gate_status": null,
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": null,
+        "pending_after": null,
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "Sou um assistente especializado em normas acadêmicas da UFPI. Posso ajudar com dúvidas sobre matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação com base nas normas indexadas no sistema.",
+        "normative_status": null
+      },
+      {
+        "question": "para que você serve?",
+        "expected_action": "ABOUT_ASSISTANT",
+        "observed_action": "ABOUT_ASSISTANT",
+        "router_calls": 0,
+        "scope_gate_decision": null,
+        "scope_gate_provider_calls": 0,
+        "scope_gate_latency_ms": 0.0,
+        "scope_gate_status": null,
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": null,
+        "pending_after": null,
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "Sou um assistente especializado em normas acadêmicas da UFPI. Posso ajudar com dúvidas sobre matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação com base nas normas indexadas no sistema.",
+        "normative_status": null
+      },
+      {
+        "question": "quantos anos tem a cidade mais antiga do piauí?",
+        "expected_action": "OUT_OF_SCOPE",
+        "observed_action": "OUT_OF_SCOPE",
+        "router_calls": 0,
+        "scope_gate_decision": "OUT_OF_SCOPE",
+        "scope_gate_provider_calls": 1,
+        "scope_gate_latency_ms": 0.4195000001345761,
+        "scope_gate_status": "classified",
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": null,
+        "pending_after": null,
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "Posso ajudar com dúvidas sobre normas acadêmicas da UFPI, como matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação.",
+        "normative_status": null
+      },
+      {
+        "question": "quantos anos tem a cidade mais antiga do piauí?",
+        "expected_action": "OUT_OF_SCOPE",
+        "observed_action": "OUT_OF_SCOPE",
+        "router_calls": 0,
+        "scope_gate_decision": "OUT_OF_SCOPE",
+        "scope_gate_provider_calls": 1,
+        "scope_gate_latency_ms": 0.21389999892562628,
+        "scope_gate_status": "classified",
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": null,
+        "pending_after": null,
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "Posso ajudar com dúvidas sobre normas acadêmicas da UFPI, como matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação.",
+        "normative_status": null
+      },
+      {
+        "question": "Faço mestrado e estou doente. Qual é a diferença entre cancelar uma matéria e trancar o curso?",
+        "expected_action": "NORMATIVE_RAG",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "scope_gate_decision": "IN_SCOPE_NORMATIVE",
+        "scope_gate_provider_calls": 1,
+        "scope_gate_latency_ms": 0.22639999951934442,
+        "scope_gate_status": "classified",
+        "retrieval_calls": 1,
+        "provider_calls": 3,
+        "pending_before": null,
+        "pending_after": null,
+        "correlation": "66b3fc60-3934-46d2-9b5d-4e85f50532c0",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "Faço mestrado e estou doente. Qual é a diferença entre cancelar uma matéria e trancar o curso?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Com base nas normas indexadas no sistema:\n\nConteúdo controlado.",
+        "normative_status": "ANSWER"
+      },
+      {
+        "question": "Posso cancelar uma disciplina?",
+        "expected_action": "NORMATIVE_RAG",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "scope_gate_decision": "IN_SCOPE_NORMATIVE",
+        "scope_gate_provider_calls": 1,
+        "scope_gate_latency_ms": 0.21549999655690044,
+        "scope_gate_status": "classified",
+        "retrieval_calls": 0,
+        "provider_calls": 1,
+        "pending_before": null,
+        "pending_after": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "9c8e4ed9-9221-4609-9fe8-16d75685df6e",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "9c8e4ed9-9221-4609-9fe8-16d75685df6e",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "Posso cancelar uma disciplina?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_status": "CLARIFICATION"
+      },
+      {
+        "question": "obrigado",
+        "expected_action": "SAFE_DIRECT",
+        "observed_action": "SAFE_DIRECT",
+        "router_calls": 0,
+        "scope_gate_decision": null,
+        "scope_gate_provider_calls": 0,
+        "scope_gate_latency_ms": 0.0,
+        "scope_gate_status": null,
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "9c8e4ed9-9221-4609-9fe8-16d75685df6e",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "pending_after": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "9c8e4ed9-9221-4609-9fe8-16d75685df6e",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "De nada!",
+        "normative_status": null
+      },
+      {
+        "question": "pós",
+        "expected_action": "CONTINUE_CLARIFICATION",
+        "observed_action": "CONTINUE_CLARIFICATION",
+        "router_calls": 1,
+        "scope_gate_decision": "IN_SCOPE_NORMATIVE",
+        "scope_gate_provider_calls": 1,
+        "scope_gate_latency_ms": 0.22909999825060368,
+        "scope_gate_status": "classified",
+        "retrieval_calls": 1,
+        "provider_calls": 3,
+        "pending_before": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "9c8e4ed9-9221-4609-9fe8-16d75685df6e",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "pending_after": null,
+        "correlation": "9c8e4ed9-9221-4609-9fe8-16d75685df6e",
+        "correlation_changed": false,
+        "router_inputs": [
+          {
+            "question": "Posso cancelar uma disciplina?",
+            "clarification": "pós"
+          }
+        ],
+        "final_content": "Com base nas normas indexadas no sistema:\n\nConteúdo controlado.",
+        "normative_status": "ANSWER"
+      },
+      {
+        "question": "Posso cancelar uma disciplina?",
+        "expected_action": "NORMATIVE_RAG",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "scope_gate_decision": "IN_SCOPE_NORMATIVE",
+        "scope_gate_provider_calls": 1,
+        "scope_gate_latency_ms": 0.21800000104121864,
+        "scope_gate_status": "classified",
+        "retrieval_calls": 0,
+        "provider_calls": 1,
+        "pending_before": null,
+        "pending_after": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "9bd39e4b-9a2d-46ad-a48f-7f091c5a4394",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "9bd39e4b-9a2d-46ad-a48f-7f091c5a4394",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "Posso cancelar uma disciplina?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_status": "CLARIFICATION"
+      },
+      {
+        "question": "quem é você?",
+        "expected_action": "ABOUT_ASSISTANT",
+        "observed_action": "ABOUT_ASSISTANT",
+        "router_calls": 0,
+        "scope_gate_decision": null,
+        "scope_gate_provider_calls": 0,
+        "scope_gate_latency_ms": 0.0,
+        "scope_gate_status": null,
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "9bd39e4b-9a2d-46ad-a48f-7f091c5a4394",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "pending_after": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "9bd39e4b-9a2d-46ad-a48f-7f091c5a4394",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "Sou um assistente especializado em normas acadêmicas da UFPI. Posso ajudar com dúvidas sobre matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação com base nas normas indexadas no sistema.",
+        "normative_status": null
+      },
+      {
+        "question": "pós",
+        "expected_action": "CONTINUE_CLARIFICATION",
+        "observed_action": "CONTINUE_CLARIFICATION",
+        "router_calls": 1,
+        "scope_gate_decision": "IN_SCOPE_NORMATIVE",
+        "scope_gate_provider_calls": 1,
+        "scope_gate_latency_ms": 0.23700000019744039,
+        "scope_gate_status": "classified",
+        "retrieval_calls": 1,
+        "provider_calls": 3,
+        "pending_before": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "9bd39e4b-9a2d-46ad-a48f-7f091c5a4394",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "pending_after": null,
+        "correlation": "9bd39e4b-9a2d-46ad-a48f-7f091c5a4394",
+        "correlation_changed": false,
+        "router_inputs": [
+          {
+            "question": "Posso cancelar uma disciplina?",
+            "clarification": "pós"
+          }
+        ],
+        "final_content": "Com base nas normas indexadas no sistema:\n\nConteúdo controlado.",
+        "normative_status": "ANSWER"
+      },
+      {
+        "question": "Posso cancelar uma disciplina?",
+        "expected_action": "NORMATIVE_RAG",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "scope_gate_decision": "IN_SCOPE_NORMATIVE",
+        "scope_gate_provider_calls": 1,
+        "scope_gate_latency_ms": 0.17919999663718045,
+        "scope_gate_status": "classified",
+        "retrieval_calls": 0,
+        "provider_calls": 1,
+        "pending_before": null,
+        "pending_after": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "07ca9935-cff7-4135-a80a-9c101bde3039",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "07ca9935-cff7-4135-a80a-9c101bde3039",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "Posso cancelar uma disciplina?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_status": "CLARIFICATION"
+      },
+      {
+        "question": "quantos anos tem a cidade mais antiga do piauí?",
+        "expected_action": "OUT_OF_SCOPE",
+        "observed_action": "OUT_OF_SCOPE",
+        "router_calls": 0,
+        "scope_gate_decision": "OUT_OF_SCOPE",
+        "scope_gate_provider_calls": 1,
+        "scope_gate_latency_ms": 0.2106000029016286,
+        "scope_gate_status": "classified",
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "07ca9935-cff7-4135-a80a-9c101bde3039",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "pending_after": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "07ca9935-cff7-4135-a80a-9c101bde3039",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "Posso ajudar com dúvidas sobre normas acadêmicas da UFPI, como matrícula, cancelamento, trancamento, prazos, graduação e pós-graduação.",
+        "normative_status": null
+      },
+      {
+        "question": "pós",
+        "expected_action": "CONTINUE_CLARIFICATION",
+        "observed_action": "CONTINUE_CLARIFICATION",
+        "router_calls": 1,
+        "scope_gate_decision": "IN_SCOPE_NORMATIVE",
+        "scope_gate_provider_calls": 1,
+        "scope_gate_latency_ms": 0.17050000315066427,
+        "scope_gate_status": "classified",
+        "retrieval_calls": 1,
+        "provider_calls": 3,
+        "pending_before": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "07ca9935-cff7-4135-a80a-9c101bde3039",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "pending_after": null,
+        "correlation": "07ca9935-cff7-4135-a80a-9c101bde3039",
+        "correlation_changed": false,
+        "router_inputs": [
+          {
+            "question": "Posso cancelar uma disciplina?",
+            "clarification": "pós"
+          }
+        ],
+        "final_content": "Com base nas normas indexadas no sistema:\n\nConteúdo controlado.",
+        "normative_status": "ANSWER"
+      },
+      {
+        "question": "Posso cancelar uma disciplina?",
+        "expected_action": "NORMATIVE_RAG",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "scope_gate_decision": "IN_SCOPE_NORMATIVE",
+        "scope_gate_provider_calls": 1,
+        "scope_gate_latency_ms": 0.21320000087143853,
+        "scope_gate_status": "classified",
+        "retrieval_calls": 0,
+        "provider_calls": 1,
+        "pending_before": null,
+        "pending_after": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "937089c9-b44d-4fa4-8766-9600c975bd5c",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "937089c9-b44d-4fa4-8766-9600c975bd5c",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "Posso cancelar uma disciplina?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_status": "CLARIFICATION"
+      },
+      {
+        "question": "cancele",
+        "expected_action": "CLEAR_PENDING",
+        "observed_action": "CLEAR_PENDING",
+        "router_calls": 0,
+        "scope_gate_decision": null,
+        "scope_gate_provider_calls": 0,
+        "scope_gate_latency_ms": 0.0,
+        "scope_gate_status": null,
+        "retrieval_calls": 0,
+        "provider_calls": 0,
+        "pending_before": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "937089c9-b44d-4fa4-8766-9600c975bd5c",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "pending_after": null,
+        "correlation": "",
+        "correlation_changed": null,
+        "router_inputs": [],
+        "final_content": "Pendência de esclarecimento cancelada.",
+        "normative_status": null
+      },
+      {
+        "question": "Posso cancelar uma disciplina?",
+        "expected_action": "NORMATIVE_RAG",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "scope_gate_decision": "IN_SCOPE_NORMATIVE",
+        "scope_gate_provider_calls": 1,
+        "scope_gate_latency_ms": 0.18590000399854034,
+        "scope_gate_status": "classified",
+        "retrieval_calls": 0,
+        "provider_calls": 1,
+        "pending_before": null,
+        "pending_after": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "4f594452-3673-4b51-afe0-39cda5f95c3d",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "correlation": "4f594452-3673-4b51-afe0-39cda5f95c3d",
+        "correlation_changed": null,
+        "router_inputs": [
+          {
+            "question": "Posso cancelar uma disciplina?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+        "normative_status": "CLARIFICATION"
+      },
+      {
+        "question": "Faço mestrado e estou doente. Qual é a diferença entre cancelar uma matéria e trancar o curso?",
+        "expected_action": "NORMATIVE_RAG",
+        "observed_action": "NORMATIVE_RAG",
+        "router_calls": 1,
+        "scope_gate_decision": "IN_SCOPE_NORMATIVE",
+        "scope_gate_provider_calls": 1,
+        "scope_gate_latency_ms": 0.2082999999402091,
+        "scope_gate_status": "classified",
+        "retrieval_calls": 1,
+        "provider_calls": 3,
+        "pending_before": {
+          "original_question": "Posso cancelar uma disciplina?",
+          "clarification_question": "Sua dúvida é sobre graduação, pós-graduação ou uma comparação entre ambas?",
+          "correlation_id": "4f594452-3673-4b51-afe0-39cda5f95c3d",
+          "compatibility_stamp": {
+            "memory_version": "1",
+            "core_version": "structured_output_v2",
+            "contract_version": "1",
+            "corpus_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "registry_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "pending_after": null,
+        "correlation": "9ebc7c21-c2cd-40a3-839f-b951d083bf43",
+        "correlation_changed": true,
+        "router_inputs": [
+          {
+            "question": "Faço mestrado e estou doente. Qual é a diferença entre cancelar uma matéria e trancar o curso?",
+            "clarification": null
+          }
+        ],
+        "final_content": "Com base nas normas indexadas no sistema:\n\nConteúdo controlado.",
+        "normative_status": "ANSWER"
+      }
+    ],
+    "request_phase": "replacement request final architecture",
+    "counter_semantics": "provider_calls counts normative provider I/O only; scope_gate_provider_calls is separate. Controlled provider, not live model classification."
+  }
+}

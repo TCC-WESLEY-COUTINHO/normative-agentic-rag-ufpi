@@ -1,0 +1,34 @@
+{
+  "status": "completed_with_recorded_failures",
+  "main_rows": 80,
+  "main_answers_received": 73,
+  "main_errors": 7,
+  "filtered_batch_exit_codes": {
+    "pos_pos": 1,
+    "grad_grad": 1
+  },
+  "unfiltered_batch_exit_codes": {
+    "pos_ambos": 1,
+    "grad_ambos": 1
+  },
+  "code_and_input_hashes_verified": 33,
+  "primary_summary_preserved": true,
+  "primary_analysis_before_combined": true,
+  "phase_timestamps_utc": {
+    "filtered_last_record": "2026-10-20T05:14:45.0346928Z",
+    "unfiltered_first_file_created": "2026-10-20T05:15:37.4998617Z",
+    "primary_analysis_saved": "2026-10-20T05:15:26.8363263Z"
+  },
+  "interactive_rows": 3,
+  "interactive_errors": 0,
+  "interactive_exit_code": 0,
+  "interactive_question_unchanged": true,
+  "interactive_scopes": [
+    "graduacao",
+    "pos_graduacao",
+    "ambos"
+  ],
+  "interactive_sha256": "d1679cad70e316392d48b5ed37f0829842477a67ebd7b84705f3475ea2b64d06",
+  "human_scores_filled": 0,
+  "verification": "audit_terminal recomputed qrels metrics; numeric primary metrics compared by value; all manifest inputs checked; source commit unchanged during execution"
+}

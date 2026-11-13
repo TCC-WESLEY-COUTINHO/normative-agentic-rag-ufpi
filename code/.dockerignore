@@ -9,5 +9,10 @@ __pycache__
 env
 venv
 .venv
+.local/
+.uv-cache/
+.ruff_cache/
+.pytest_cache/
+tests/
 *.db
 privatecredentials/*

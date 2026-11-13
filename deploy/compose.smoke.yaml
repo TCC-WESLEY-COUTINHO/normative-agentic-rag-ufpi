@@ -1,0 +1,6 @@
+# Offline smoke test only: the backend loses its route to the internet, so no provider call can
+# leave the machine. Use with a placeholder key: docker compose -f compose.demo.yaml -f deploy/compose.smoke.yaml up
+services:
+  backend:
+    networks: !override
+      - internal

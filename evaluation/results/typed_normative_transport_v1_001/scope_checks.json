@@ -1,0 +1,19 @@
+{
+  "report_sections": 31,
+  "decisions": 16,
+  "execution_events": 30,
+  "probe_attempts": 3,
+  "primary_executions": 12,
+  "agreement_requests": 6,
+  "total_payloads": 18,
+  "journal_reconciled": true,
+  "all_test_counts_reconciled": true,
+  "post_freeze_production_changes": 0,
+  "credential_pattern_hits": [],
+  "scan_limit": "Heuristic scan of new/changed files, not a proof of absence of every possible secret.",
+  "old_changes_authorized": [
+    "code/src/client/client.py",
+    "code/src/schema/schema.py",
+    "code/src/service/service.py"
+  ]
+}

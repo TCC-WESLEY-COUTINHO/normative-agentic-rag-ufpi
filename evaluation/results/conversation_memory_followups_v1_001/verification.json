@@ -1,0 +1,112 @@
+{
+  "timestamp": "2026-11-01T01:23:24.468911+00:00",
+  "test_selections": 14,
+  "full_suite": {
+    "selection": "full",
+    "command": [
+      "C:/Users/wesley/.local/bin/python3.11.exe",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--tb=short"
+    ],
+    "cwd": "code",
+    "timestamp": "2026-11-01T01:18:30.234107+00:00",
+    "seconds": 56.36,
+    "exit_code": 0,
+    "summary": "827 passed, 12 skipped, 4 warnings in 47.79s",
+    "passed": 827,
+    "failed": 0,
+    "skipped": 12,
+    "warnings": 4,
+    "errors": 0
+  },
+  "focused_new": 89,
+  "probe_groups": 18,
+  "probe_rows": 22,
+  "probe_metrics": {
+    "Memory Restore Rate": [
+      2,
+      2
+    ],
+    "Grounded Transform Retrieval Avoidance": [
+      5,
+      5
+    ],
+    "Grounded Transform Source Preservation": [
+      5,
+      5
+    ],
+    "Public Memory Field Exclusion": [
+      22,
+      22
+    ],
+    "Cross-User Isolation Rate": [
+      1,
+      1
+    ],
+    "Memory Leakage Absence": [
+      6,
+      6
+    ],
+    "Cross-Agent Isolation Rate": [
+      1,
+      1
+    ],
+    "Clarification Continuity Rate": [
+      1,
+      1
+    ],
+    "Clarification Correlation Preservation": [
+      1,
+      1
+    ],
+    "Cross-Thread Isolation Rate": [
+      1,
+      1
+    ],
+    "Stale Memory Rejection Rate": [
+      1,
+      1
+    ],
+    "Transform Expansion Block Rate": [
+      1,
+      1
+    ],
+    "Contextual RAG Re-entry Rate": [
+      1,
+      1
+    ],
+    "Typed Follow-up Transport Preservation": [
+      2,
+      2
+    ]
+  },
+  "frozen_hashes_identical": true,
+  "production_change_after_freeze": false,
+  "probe_restarts": 0,
+  "previous_file_count": 692,
+  "unchanged_old_files": 688,
+  "authorized_old_changes": 4,
+  "index_identical": true,
+  "index_records": 507,
+  "secret_heuristic_matches": [],
+  "default_unchanged": true,
+  "registry_unchanged": true,
+  "history_unchanged": true,
+  "core_unchanged": true,
+  "client_unchanged": true,
+  "code_review_pending_critical": 0,
+  "code_review_pending_important": 0,
+  "lint": "12 Python files check and format-check passed",
+  "git_diff_check": 0,
+  "limitations": [
+    "Declared identity is not authentication",
+    "Finite lexical guard is not semantic equivalence proof",
+    "Same-identity concurrent turn ordering not implemented",
+    "No public registry/runtime/history integration",
+    "No real APIs or legal validation"
+  ]
+}

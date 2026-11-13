@@ -1,0 +1,175 @@
+{
+  "intent_v1": {
+    "TEMP-POS-003": {
+      "n": 10,
+      "decisions": {
+        "esclarecer": 3,
+        "pos_graduacao": 7
+      },
+      "expected_route_rate": 0.7,
+      "route_stability_rate": 0.7,
+      "decision_entropy": 0.8812908992306927
+    },
+    "TEMP-POS-004": {
+      "n": 10,
+      "decisions": {
+        "pos_graduacao": 6,
+        "esclarecer": 4
+      },
+      "expected_route_rate": 0.6,
+      "route_stability_rate": 0.6,
+      "decision_entropy": 0.9709505944546686
+    },
+    "TEMP-GRAD-005": {
+      "n": 10,
+      "decisions": {
+        "graduacao": 7,
+        "esclarecer": 3
+      },
+      "expected_route_rate": 0.7,
+      "route_stability_rate": 0.7,
+      "decision_entropy": 0.8812908992306927
+    },
+    "TEMP-GRAD-001": {
+      "n": 10,
+      "decisions": {
+        "esclarecer": 5,
+        "graduacao": 5
+      },
+      "expected_route_rate": 0.5,
+      "route_stability_rate": 0.5,
+      "decision_entropy": 1.0
+    },
+    "CONTROL-POS": {
+      "n": 10,
+      "decisions": {
+        "pos_graduacao": 10
+      },
+      "expected_route_rate": 1.0,
+      "route_stability_rate": 1.0,
+      "decision_entropy": -0.0
+    },
+    "SMOKE-004": {
+      "n": 10,
+      "decisions": {
+        "esclarecer": 10
+      },
+      "expected_route_rate": 1.0,
+      "route_stability_rate": 1.0,
+      "decision_entropy": -0.0
+    }
+  },
+  "adaptive_distribution_v2": {
+    "TEMP-POS-003": {
+      "n": 10,
+      "decisions": {
+        "pos_graduacao": 10
+      },
+      "expected_route_rate": 1.0,
+      "route_stability_rate": 1.0,
+      "decision_entropy": -0.0
+    },
+    "TEMP-POS-004": {
+      "n": 10,
+      "decisions": {
+        "pos_graduacao": 10
+      },
+      "expected_route_rate": 1.0,
+      "route_stability_rate": 1.0,
+      "decision_entropy": -0.0
+    },
+    "TEMP-GRAD-005": {
+      "n": 10,
+      "decisions": {
+        "graduacao": 10
+      },
+      "expected_route_rate": 1.0,
+      "route_stability_rate": 1.0,
+      "decision_entropy": -0.0
+    },
+    "TEMP-GRAD-001": {
+      "n": 10,
+      "decisions": {
+        "graduacao": 10
+      },
+      "expected_route_rate": 1.0,
+      "route_stability_rate": 1.0,
+      "decision_entropy": -0.0
+    },
+    "CONTROL-POS": {
+      "n": 10,
+      "decisions": {
+        "pos_graduacao": 10
+      },
+      "expected_route_rate": 1.0,
+      "route_stability_rate": 1.0,
+      "decision_entropy": -0.0
+    },
+    "SMOKE-004": {
+      "n": 10,
+      "decisions": {
+        "esclarecer": 10
+      },
+      "expected_route_rate": 1.0,
+      "route_stability_rate": 1.0,
+      "decision_entropy": -0.0
+    }
+  },
+  "adaptive_llm_v2": {
+    "TEMP-POS-003": {
+      "n": 10,
+      "decisions": {
+        "pos_graduacao": 10
+      },
+      "expected_route_rate": 1.0,
+      "route_stability_rate": 1.0,
+      "decision_entropy": -0.0
+    },
+    "TEMP-POS-004": {
+      "n": 10,
+      "decisions": {
+        "pos_graduacao": 10
+      },
+      "expected_route_rate": 1.0,
+      "route_stability_rate": 1.0,
+      "decision_entropy": -0.0
+    },
+    "TEMP-GRAD-005": {
+      "n": 10,
+      "decisions": {
+        "graduacao": 10
+      },
+      "expected_route_rate": 1.0,
+      "route_stability_rate": 1.0,
+      "decision_entropy": -0.0
+    },
+    "TEMP-GRAD-001": {
+      "n": 10,
+      "decisions": {
+        "graduacao": 10
+      },
+      "expected_route_rate": 1.0,
+      "route_stability_rate": 1.0,
+      "decision_entropy": -0.0
+    },
+    "CONTROL-POS": {
+      "n": 10,
+      "decisions": {
+        "pos_graduacao": 10
+      },
+      "expected_route_rate": 1.0,
+      "route_stability_rate": 1.0,
+      "decision_entropy": -0.0
+    },
+    "SMOKE-004": {
+      "n": 10,
+      "decisions": {
+        "error": 3,
+        "pos_graduacao": 7
+      },
+      "expected_route_rate": 0.0,
+      "route_stability_rate": 0.7,
+      "decision_entropy": 0.8812908992306927
+    }
+  }
+}

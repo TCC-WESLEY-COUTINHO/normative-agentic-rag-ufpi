@@ -1,0 +1,86 @@
+[
+  {
+    "variant": "original",
+    "sector": null,
+    "target_rank": 363,
+    "target_distance": 0.49078720808029175,
+    "target_eligible": true
+  },
+  {
+    "variant": "original",
+    "sector": "graduacao",
+    "target_rank": 300,
+    "target_distance": 0.49078720808029175,
+    "target_eligible": true
+  },
+  {
+    "variant": "plus_graduation",
+    "sector": null,
+    "target_rank": 397,
+    "target_distance": 0.48133188486099243,
+    "target_eligible": true
+  },
+  {
+    "variant": "plus_graduation",
+    "sector": "graduacao",
+    "target_rank": 329,
+    "target_distance": 0.48133188486099243,
+    "target_eligible": true
+  },
+  {
+    "variant": "plus_norm",
+    "sector": null,
+    "target_rank": 372,
+    "target_distance": 0.48494142293930054,
+    "target_eligible": true
+  },
+  {
+    "variant": "plus_norm",
+    "sector": "graduacao",
+    "target_rank": 309,
+    "target_distance": 0.48494142293930054,
+    "target_eligible": true
+  },
+  {
+    "variant": "plus_article",
+    "sector": null,
+    "target_rank": 343,
+    "target_distance": 0.47789716720581055,
+    "target_eligible": true
+  },
+  {
+    "variant": "plus_article",
+    "sector": "graduacao",
+    "target_rank": 281,
+    "target_distance": 0.47789716720581055,
+    "target_eligible": true
+  },
+  {
+    "variant": "normative_wording",
+    "sector": null,
+    "target_rank": 5,
+    "target_distance": 0.38070666790008545,
+    "target_eligible": true
+  },
+  {
+    "variant": "normative_wording",
+    "sector": "graduacao",
+    "target_rank": 2,
+    "target_distance": 0.38070666790008545,
+    "target_eligible": true
+  },
+  {
+    "variant": "without_temporal_wording",
+    "sector": null,
+    "target_rank": 350,
+    "target_distance": 0.4455180764198303,
+    "target_eligible": true
+  },
+  {
+    "variant": "without_temporal_wording",
+    "sector": "graduacao",
+    "target_rank": 292,
+    "target_distance": 0.4455180764198303,
+    "target_eligible": true
+  }
+]

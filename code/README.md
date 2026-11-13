@@ -1,47 +1,69 @@
-# Chatbot RAG da UFPI
+# Código do assistente normativo (`code/`)
 
-Aplicação de consulta ao Regulamento Geral da Graduação da UFPI. O projeto combina agentes LangGraph, uma API FastAPI, uma interface Streamlit e recuperação vetorial hospedada no Supabase.
+Código Python do protótipo do TCC II: pipeline normativo, camada conversacional (A″-J v2), API FastAPI e interface Streamlit (Bisco). Para executar, use o [README da raiz](../README.md) (Docker em um comando) ou o [guia de Linux](../docs/DEPLOY_LINUX.md). A arquitetura está em [`docs/tcc2/ARQUITETURA_A2J_V2.md`](../docs/tcc2/ARQUITETURA_A2J_V2.md); a API, em [`docs/API.md`](../docs/API.md).
 
-Este diretório contém o código executável. O agente padrão é `chatbot_ufpi_v2`, que usa embeddings OpenAI e duas RPCs do Supabase para busca semântica e por metadados.
+## Organização
 
-## Início rápido para desenvolvimento
+| Caminho | Conteúdo |
+|---|---|
+| `src/rag_baseline/` | Pipeline normativo e camada conversacional |
+| `src/rag_baseline/conversation_interpretation/` | Intérpretes (Jev, LLM estruturado, regras) e políticas de transição v1 e v2 |
+| `src/rag_baseline/integrated_runtime.py` | Montagem do agente `chatbot_ufpi_integrated_v1` ([detalhes](docs/integrated-runtime.md)) |
+| `src/service/`, `src/core/`, `src/memory/`, `src/schema/`, `src/agents/` | API FastAPI, configuração, checkpointer, contratos de transporte e registro de agentes |
+| `src/streamlit_app.py`, `src/chat_ui/`, `src/static/`, `src/client/` | Interface web e cliente HTTP |
+| `tests/` | Testes offline: não chamam provedores; usam intérpretes e provedores roteirizados |
+| `legacy/ufpinho/` | Interface anterior, arquivada |
 
-Pré-requisitos: Python 3.11 ou superior, `uv` e acesso às APIs externas configuradas.
+Os principais módulos do pipeline normativo em `src/rag_baseline/`:
 
-```bash
-cp .env.example .env
-# Preencha, no mínimo, OPENAI_API_KEY, SUPABASE_URL e SUPABASE_KEY.
-# Para execução nativa sem PostgreSQL, altere DATABASE_TYPE=sqlite.
-uv sync --frozen
-uv run python src/run_service.py
-```
+| Módulo | Função |
+|---|---|
+| `conversation_graph.py` | Grafo conversacional |
+| `scope_gate.py` | Scope Gate |
+| `router.py` | Router V1 |
+| `agentic.py` | Grafo normativo |
+| `retrieval_policy.py`, `retrieval_service.py`, `lexical_retrieval.py` | Recuperação |
+| `versioning.py`, `grounding.py` | VersionFilter e contexto temporal |
+| `service.py`, `normative_output.py`, `evidence_support.py` | Geração e validador v5 |
+| `output_contracts.py`, `tool_contracts.py` | Contratos |
 
-Em outro terminal:
-
-```bash
-cd code
-uv run streamlit run src/streamlit_app.py
-```
-
-O backend estará em `http://localhost:8080` e o frontend normalmente em `http://localhost:8501`.
-
-## Docker
-
-- `compose.yaml`: fluxo de desenvolvimento existente, com Compose Watch.
-- `compose.prod.yaml`: implantação em servidor, sem publicar PostgreSQL e com persistência e healthchecks.
-
-O procedimento completo, incluindo Supabase, build, backup, restauração e troubleshooting, está em [docs/DEPLOY_LINUX.md](../docs/DEPLOY_LINUX.md).
-
-## Observação sobre a base RAG
-
-Os chunks e scripts de ingestão estão em `scripts/`, mas as definições SQL das tabelas e RPCs do Supabase não estão versionadas. Uma instância nova não pode ser reconstruída integralmente sem recuperar esses objetos do projeto Supabase original; consulte o guia de implantação antes de operar a ingestão.
-
-## Testes
+## Ambiente
 
 ```bash
-uv run ruff check .
-uv run mypy src/
-uv run pytest
+uv sync --frozen          # dependências fixadas em uv.lock (Python 3.12)
 ```
 
-Alguns testes Docker herdados ainda referenciam um agente desativado. Essa limitação está registrada no guia de implantação.
+As variáveis do pipeline estão em `src/rag_baseline/config.py`: `OPENROUTER_*`, modelos, `RETRIEVAL_TOP_K`, `CHROMA_PERSIST_DIR`. As da camada conversacional, `CONVERSATION_INTERPRETER` e `CONVERSATION_INTERPRETER_CONFIG`, estão em `integrated_runtime.py`. Sem as duas últimas, o código executa a camada de A′. Com `jev` e sem `{"transition_policy":"v2"}`, executa a política v1.
+
+## Testes e qualidade
+
+A partir de `code/`:
+
+```bash
+PYTHONPATH="src:.." uv run pytest tests -p no:cacheprovider -q
+uv run ruff check src tests
+```
+
+A raiz do repositório entra no `PYTHONPATH` porque um teste importa `evaluation/`. Resultado da versão atual: 2925 aprovados, 12 ignorados (Docker e regressões opcionais) e 13 `xfail` estritos (defeitos da política v1, mantidos de propósito).
+
+## Ferramentas de terminal (desenvolvimento)
+
+| Comando (com `uv run`, a partir de `code/`) | Função |
+|---|---|
+| `python -m rag_baseline.index --profile duas-regulacoes [--rebuild]` | Indexa os quatro corpora na coleção `ufpi_duas_regulacoes_setor`. Gera embeddings pelo endpoint configurado, com custo |
+| `uvicorn rag_baseline.api:app --port 8080` e `python -m rag_baseline.demo [--setor graduacao\|pos_graduacao\|ambos\|automatico] [--verbose]` | API mínima de consulta (`/query`) e terminal Rich, anteriores à camada conversacional. Úteis para inspecionar recuperação, rota e filtro de versões numa pergunta isolada |
+
+`rag_baseline.chat` é alias de `demo`. As ferramentas de terminal não passam pelo intérprete Jev nem pela memória de conversa.
+
+## Componentes legados
+
+Estes arquivos pertencem ao serviço anterior ao TCC II (agente `chatbot_ufpi_v2`) e são mantidos porque testes do código congelado os verificam:
+
+- `compose.yaml`, `compose.prod.yaml`, `docker/`, `.env.example`;
+- `compose.operational.yaml` e `scripts/*_local.*`;
+- `scripts/chunks*.py`, que geram os chunks da Resolução 177/2012 usados no trabalho anterior;
+- `scripts/create_chroma_db.py`, exemplo do template.
+
+Os agentes `chatbot_ufpi` e `chatbot_ufpi_v2` (e suas ferramentas em `src/agents/tools*.py`) permanecem no código congelado da v2, mas não fazem parte do protótipo: dependiam de um banco vetorial externo que não é versionado nem suportado, então não podem ser executados a partir do repositório.
+
+O registro de agentes (`src/agents/agents.py`) também mantém agentes de exemplo do template original (*agent-service-toolkit*, Joshua Carroll, MIT), que não fazem parte do protótipo. `langgraph.json` aponta para um desses exemplos.

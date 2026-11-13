@@ -9,6 +9,9 @@ from langchain_core.tools import BaseTool, tool
 from dotenv import load_dotenv
 import os
 import logging
+from itertools import zip_longest
+
+from rag_baseline.scope import source_scopes
 
 logger = logging.getLogger(__name__)
 
@@ -54,6 +57,8 @@ def _validate_hierarchical_filters(
     secao_numero: Optional[str] = None,
     subsecao_numero: Optional[str] = None,
     artigo_numero: Optional[str] = None,
+    setor: Optional[str] = None,
+    fontes: Optional[List[str]] = None,
 ) -> tuple[bool, str]:
     """
     Valida a hierarquia dos filtros de metadados.
@@ -69,6 +74,13 @@ def _validate_hierarchical_filters(
         tuple[bool, str]: (válido, mensagem_erro)
     """
     
+    # Only known title-based corpora require a title. Unknown scope must not
+    # silently assume the graduation hierarchy. Exact source IDs, not keywords.
+    known_graduation_sources = {
+        "Regulamento Geral da Graduação da UFPI",
+        "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+    }
+    requires_title = setor == "graduacao" or bool(fontes and any(s in known_graduation_sources for s in fontes))
     # Artigo pode ser buscado sozinho
     if artigo_numero and not any([titulo_numero, capitulo_numero, secao_numero, subsecao_numero]):
         return True, ""
@@ -78,19 +90,19 @@ def _validate_hierarchical_filters(
         return True, ""
     
     # Capítulo requer Título
-    if capitulo_numero and not titulo_numero:
+    if capitulo_numero and not titulo_numero and requires_title:
         return False, "CAPÍTULO requer TÍTULO pai. Forneça 'titulo_numero'."
     
     # Seção requer Título e Capítulo
     if secao_numero:
-        if not titulo_numero:
+        if not titulo_numero and requires_title:
             return False, "SEÇÃO requer TÍTULO pai. Forneça 'titulo_numero'."
         if not capitulo_numero:
             return False, "SEÇÃO requer CAPÍTULO pai. Forneça 'capitulo_numero'."
     
     # Subseção requer Título, Capítulo e Seção
     if subsecao_numero:
-        if not titulo_numero:
+        if not titulo_numero and requires_title:
             return False, "SUBSEÇÃO requer TÍTULO pai. Forneça 'titulo_numero'."
         if not capitulo_numero:
             return False, "SUBSEÇÃO requer CAPÍTULO pai. Forneça 'capitulo_numero'."
@@ -200,6 +212,7 @@ def _format_results(rows: list[Dict[str, Any]], mode: str = "semantic") -> str:
         
         # Extrai metadados
         fonte = metadados.get("fonte", "")
+        setor = metadados.get("setor")
         titulo_num = metadados.get("titulo_numero", "")
         titulo_nome = metadados.get("titulo_nome", "")
         capitulo_num = metadados.get("capitulo_numero", "")
@@ -226,7 +239,7 @@ def _format_results(rows: list[Dict[str, Any]], mode: str = "semantic") -> str:
             header_lines.append(f"Fonte: {fonte}")
         
         # Hierarquia completa
-        hierarchy = []
+        hierarchy = [f"Setor: {setor}"] if setor else []
         if titulo_num:
             titulo_desc = f"TÍTULO {titulo_num}"
             if titulo_nome:
@@ -269,7 +282,10 @@ def _format_results(rows: list[Dict[str, Any]], mode: str = "semantic") -> str:
 # FUNÇÃO 1: BUSCA SEMÂNTICA PURA (QUERY ONLY)
 # ============================================
 
-def supabase_semantic_search_func(query: str) -> str:
+def supabase_semantic_search_func(
+    query: str, setor: Optional[str] = None, fonte: Optional[str] = None,
+    fontes: Optional[List[str]] = None,
+) -> str:
     """
     Busca semântica pura no Supabase usando apenas a query.
     
@@ -302,23 +318,23 @@ def supabase_semantic_search_func(query: str) -> str:
     logger.info("[SEMANTIC] ===== Início da busca semântica pura =====")
     logger.info(f"[SEMANTIC] Query | len={len(query)}")
     
+    scopes = source_scopes(setor, fonte, fontes)
     # Inicializa clientes
     openai_client, supabase_client = _init_clients()
     
     # Gera embedding da query
     query_emb = _create_embedding(openai_client, query, model=_RAG_MODEL)
     
-    # Executa busca SEM filtros de metadados
-    result = _call_rag_function(
-        supabase_client,
-        _RAG_FUNCTION,
-        query_embedding=query_emb,
-        match_threshold=_RAG_THRESHOLD,
-        match_count=_RAG_K_SEMANTIC,
-        filtros_metadados={},  # SEM FILTROS
-    )
-    
-    rows = getattr(result, "data", []) or []
+    rows = []
+    for scope in scopes:
+        result = _call_rag_function(
+            supabase_client, _RAG_FUNCTION, query_embedding=query_emb,
+            match_threshold=_RAG_THRESHOLD, match_count=_RAG_K_SEMANTIC,
+            filtros_metadados=scope,
+        )
+        rows.extend(getattr(result, "data", []) or [])
+    rows.sort(key=lambda r: float(r.get("similarity") or 0), reverse=True)
+    rows = rows[:_RAG_K_SEMANTIC]
     out = _format_results(rows, mode="semantic")
     
     logger.info(f"[SEMANTIC] Tamanho do texto formatado: {len(out)}")
@@ -332,12 +348,14 @@ def supabase_semantic_search_func(query: str) -> str:
 # ================================================
 
 def supabase_metadata_search_func(
-    fonte = "Regulamento Geral da Graduação da UFPI",
+    fonte: Optional[str] = None,
     titulo_numero: Optional[str] = None,
     capitulo_numero: Optional[str] = None,
     secao_numero: Optional[str] = None,
     subsecao_numero: Optional[str] = None,
     artigo_numero: Optional[str] = None,
+    setor: Optional[str] = None,
+    fontes: Optional[List[str]] = None,
 ) -> str:
     """
     Busca documentos no Supabase filtrando por metadados hierárquicos.
@@ -401,8 +419,11 @@ def supabase_metadata_search_func(
         f"subsec={subsecao_numero} | art={artigo_numero}"
     )
     
+    scopes = source_scopes(setor, fonte, fontes)
     # Valida hierarquia
     valido, erro = _validate_hierarchical_filters(
+        setor=setor,
+        fontes=[s["fonte"] for s in scopes if "fonte" in s],
         titulo_numero=titulo_numero,
         capitulo_numero=capitulo_numero,
         secao_numero=secao_numero,
@@ -427,21 +448,23 @@ def supabase_metadata_search_func(
         artigo_numero=artigo_numero,
     )
     
-    if not filtros:
+    if not filtros and not any(scopes):
         logger.warning("[METADATA] Nenhum filtro de metadado fornecido!")
         return "ERRO: Forneça ao menos um filtro de metadado (fonte, titulo_numero, artigo_numero, etc.)"
     
     logger.info(f"[METADATA] Filtros construídos: {filtros}")
     
-    # Executa busca APENAS por metadados (sem query/embedding)
-    result = _call_metadata_only_function(
-        supabase_client,
-        _RAG_FUNCTION_METADATA,
-        match_count=_RAG_K_METADATA,
-        filtros_metadados=filtros,
-    )
-    
-    rows = getattr(result, "data", []) or []
+    # Each RPC uses the existing equality-filter contract. Interleave sources
+    # to retain a total cap of 10, without treating equal article numbers as IDs.
+    batches = []
+    for scope in scopes:
+        result = _call_metadata_only_function(
+            supabase_client, _RAG_FUNCTION_METADATA, match_count=_RAG_K_METADATA,
+            filtros_metadados={**filtros, **scope},
+        )
+        batches.append(getattr(result, "data", []) or [])
+    rows = [row for group in zip_longest(*batches) for row in group if row is not None]
+    rows = rows[:_RAG_K_METADATA]
     out = _format_results(rows, mode="metadata")
     
     logger.info(f"[METADATA] Tamanho do texto formatado: {len(out)}")
@@ -458,7 +481,7 @@ def supabase_metadata_search_func(
 supabase_semantic_search: BaseTool = tool(supabase_semantic_search_func)
 supabase_semantic_search.name = "Supabase_Semantic_Search"
 supabase_semantic_search.description = """
-Busca semântica PURA no Supabase (APENAS query, SEM filtros).
+Busca semântica no Supabase, com escopo opcional explícito.
 
 Use quando:
 - NÃO souber a localização exata no documento
@@ -467,6 +490,8 @@ Use quando:
 
 Parâmetro:
 - query (obrigatório): texto para busca semântica
+- setor: graduacao ou pos_graduacao; omitir quando desconhecido, sem presumir graduação.
+- fonte: uma fonte; ou fontes: lista de fontes permitidas (não combinar os dois).
 
 Retorna os 4 trechos mais relevantes semanticamente.
 """
@@ -482,13 +507,14 @@ Use quando:
 - Quiser restringir busca a parte específica do documento
 
 HIERARQUIA OBRIGATÓRIA:
-- TÍTULO ou ARTIGO: podem ser buscados sozinhos
+- TÍTULO ou ARTIGO: podem ser buscados sem outros níveis, mas a numeração não é única entre normas; preserve fonte/setor nos resultados.
 - CAPÍTULO: exige titulo_numero
 - SEÇÃO: exige titulo_numero + capitulo_numero
 - SUBSEÇÃO: exige titulo_numero + capitulo_numero + secao_numero
 
 Parâmetros:
-- fonte: nome do documento fonte (padrão: "Regulamento Geral da Graduação da UFPI")
+- fonte: nome de uma fonte (sem padrão); ou fontes: lista de fontes permitidas.
+- setor: graduacao ou pos_graduacao (sem padrão). No corpus da pós não há títulos: capítulo é o nível superior.
 - titulo_numero: número romano do título (ex: "XVI")
 - capitulo_numero: número romano do capítulo (ex: "I")
 - secao_numero: número romano da seção (ex: "I")

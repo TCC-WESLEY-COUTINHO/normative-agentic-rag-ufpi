@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "status": "technical_generation_regression_not_legal_gold",
+  "items": [
+    {
+      "id": "A_grad_historical",
+      "question": "Como era o §4º do art. 68 na graduação sobre a escolha do coordenador de estágio antes da alteração de 2026?",
+      "scope": "graduacao",
+      "repetitions": 10,
+      "source_trace": "evaluation\\results\\agentic_temporal_hardening_v1_001\\smoke_manual_001\\cases.jsonl",
+      "source_case": "G3_historical"
+    },
+    {
+      "id": "B_grad_current",
+      "question": "Como é atualmente o §4º do art. 68 na graduação sobre a escolha do coordenador de estágio?",
+      "scope": "graduacao",
+      "repetitions": 1,
+      "source_trace": "evaluation\\results\\agentic_temporal_hardening_v1_001\\smoke_manual_001\\cases.jsonl",
+      "source_case": "G1_current"
+    },
+    {
+      "id": "C_post_historical",
+      "question": "Segundo a Resolução 658/2024, como era a regra de defesa no mestrado?",
+      "scope": "pos_graduacao",
+      "repetitions": 10,
+      "source_trace": "evaluation\\results\\agentic_temporal_hardening_v1_001\\smoke_manual_001\\cases.jsonl",
+      "source_case": "P2_historical"
+    },
+    {
+      "id": "D_post_current",
+      "question": "Qual é atualmente a regra de defesa no mestrado?",
+      "scope": "pos_graduacao",
+      "repetitions": 1,
+      "source_trace": "evaluation\\results\\agentic_temporal_hardening_v1_001\\smoke_manual_001\\cases.jsonl",
+      "source_case": "P1_current"
+    },
+    {
+      "id": "E_validity",
+      "question": "A Resolução 658/2024 ainda está vigente na pós-graduação?",
+      "scope": "pos_graduacao",
+      "repetitions": 10,
+      "source_trace": "evaluation\\results\\agentic_temporal_hardening_v1_001\\smoke_manual_001\\cases.jsonl",
+      "source_case": "P3_validity"
+    },
+    {
+      "id": "F_comparison",
+      "question": "Qual era a regra de defesa na 658/2024 e qual é a regra atual na 956/2025 no mestrado?",
+      "scope": "pos_graduacao",
+      "repetitions": 1,
+      "source_trace": "evaluation\\results\\agentic_temporal_hardening_v1_001\\controlled_001\\cases.jsonl",
+      "source_case": "P4_comparison"
+    },
+    {
+      "id": "G_unknown",
+      "question": "A Resolução 956/2025 ainda está vigente na pós-graduação?",
+      "scope": "pos_graduacao",
+      "repetitions": 1,
+      "source_trace": "evaluation\\results\\agentic_temporal_hardening_v1_001\\controlled_001\\cases.jsonl",
+      "source_case": "U1_unknown"
+    },
+    {
+      "id": "H_citation",
+      "question": "Na pós-graduação da UFPI, com qual antecedência mínima a defesa de dissertação ou tese deve ser divulgada atualmente?",
+      "scope": "pos_graduacao",
+      "repetitions": 10,
+      "source_trace": "evaluation\\results\\agentic_temporal_hardening_v1_001\\smoke_manual_001\\cases.jsonl",
+      "source_case": "P1_current"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "recorded_at": "2026-11-01T17:11:50.521345+00:00",
+  "metrics": {
+    "Docker Engine Availability": [
+      1,
+      1
+    ],
+    "Docker Build Success": [
+      1,
+      1
+    ],
+    "Image Runtime Import Success": [
+      4,
+      4
+    ],
+    "Image Asset Completeness": [
+      11,
+      11
+    ],
+    "Container Startup Success": [
+      6,
+      6
+    ],
+    "Process Health Success": [
+      6,
+      6
+    ],
+    "Integrated Readiness Success": [
+      6,
+      6
+    ],
+    "Registered Agent Visibility": [
+      6,
+      6
+    ],
+    "Default Preservation": [
+      6,
+      6
+    ],
+    "Direct Container Smoke": [
+      1,
+      1
+    ],
+    "Calculator Container Smoke": [
+      1,
+      1
+    ],
+    "Date Calculator Container Smoke": [
+      1,
+      1
+    ],
+    "Normative Container Smoke": [
+      1,
+      1
+    ],
+    "Container Memory Restart Continuity": [
+      1,
+      1
+    ],
+    "Cross-user Isolation": [
+      1,
+      1
+    ],
+    "Stream Contract Preservation": [
+      3,
+      3
+    ],
+    "Negative Readiness Behavior": [
+      3,
+      3
+    ],
+    "Runtime External Call Avoidance": [
+      6,
+      6
+    ],
+    "Process Graceful Shutdown": [
+      6,
+      6
+    ],
+    "Resource Shutdown Success": [
+      6,
+      6
+    ],
+    "Index Logical Preservation": [
+      507,
+      507
+    ],
+    "Container Path Portability": [
+      11,
+      11
+    ],
+    "Typed Message Roundtrip": [
+      11,
+      11
+    ],
+    "Secret/Image Exclusion": {
+      "forbidden_secret_bearing_files_found": 0,
+      "scan_scope": "/app application tree and explicit forbidden paths; not a universal cryptographic scan"
+    }
+  },
+  "final_probe_observations": {
+    "passed": 65,
+    "failed": 0
+  },
+  "units": "Each denominator is finite and local to its own metric; overlapping metrics are not additive. Native+controlled+restart+three negative startups = six."
+}

@@ -1,0 +1,789 @@
+{
+  "n": 4,
+  "failures": 0,
+  "router": {
+    "n": 0,
+    "errors": 0,
+    "route_accuracy": null,
+    "wrong_route_rate": null,
+    "clarification_recall": null,
+    "clarification_precision": null,
+    "expected_clarification_n": 0,
+    "predicted_clarification_n": 0,
+    "confusion_matrix": {
+      "graduacao": {
+        "graduacao": 0,
+        "pos_graduacao": 0,
+        "ambas": 0,
+        "esclarecer": 0
+      },
+      "pos_graduacao": {
+        "graduacao": 0,
+        "pos_graduacao": 0,
+        "ambas": 0,
+        "esclarecer": 0
+      },
+      "ambas": {
+        "graduacao": 0,
+        "pos_graduacao": 0,
+        "ambas": 0,
+        "esclarecer": 0
+      },
+      "esclarecer": {
+        "graduacao": 0,
+        "pos_graduacao": 0,
+        "ambas": 0,
+        "esclarecer": 0
+      }
+    }
+  },
+  "retrieval": {
+    "evidence_complete_at_5": 0.3333333333333333,
+    "hit_at_1": 0.3333333333333333,
+    "hit_at_3": 0.3333333333333333,
+    "hit_at_5": 0.6666666666666666,
+    "mrr_at_5": 0.4166666666666667,
+    "ndcg_at_5": 0.34794125027961714,
+    "recall_at_1": 0.16666666666666666,
+    "recall_at_3": 0.16666666666666666,
+    "recall_at_5": 0.5,
+    "wrong_norm_at_5": 0.06666666666666667
+  },
+  "retrieval_answerable_n": 3,
+  "version": {
+    "generated_question_n": 4,
+    "obsolete_context_rate_at_5": 0.0,
+    "compliance_violation_rate": 0,
+    "removal_count": 0,
+    "removal_reasons": {},
+    "current_norm_hit_at_5": null
+  },
+  "human_scores": null,
+  "by_sector": {
+    "ambas": {
+      "n": 1,
+      "failures": 0,
+      "router": {
+        "n": 0,
+        "errors": 0,
+        "route_accuracy": null,
+        "wrong_route_rate": null,
+        "clarification_recall": null,
+        "clarification_precision": null,
+        "expected_clarification_n": 0,
+        "predicted_clarification_n": 0,
+        "confusion_matrix": {
+          "graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "pos_graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "ambas": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "esclarecer": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          }
+        }
+      },
+      "retrieval": {
+        "evidence_complete_at_5": 0,
+        "hit_at_1": 1,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 0.6131471927654584,
+        "recall_at_1": 0.5,
+        "recall_at_3": 0.5,
+        "recall_at_5": 0.5,
+        "wrong_norm_at_5": 0.0
+      },
+      "retrieval_answerable_n": 1,
+      "version": {
+        "generated_question_n": 1,
+        "obsolete_context_rate_at_5": 0.0,
+        "compliance_violation_rate": 0,
+        "removal_count": 0,
+        "removal_reasons": {},
+        "current_norm_hit_at_5": null
+      },
+      "human_scores": null
+    },
+    "graduacao": {
+      "n": 1,
+      "failures": 0,
+      "router": {
+        "n": 0,
+        "errors": 0,
+        "route_accuracy": null,
+        "wrong_route_rate": null,
+        "clarification_recall": null,
+        "clarification_precision": null,
+        "expected_clarification_n": 0,
+        "predicted_clarification_n": 0,
+        "confusion_matrix": {
+          "graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "pos_graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "ambas": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "esclarecer": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          }
+        }
+      },
+      "retrieval": {
+        "evidence_complete_at_5": 0,
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 0,
+        "mrr_at_5": 0,
+        "ndcg_at_5": 0.0,
+        "recall_at_1": 0.0,
+        "recall_at_3": 0.0,
+        "recall_at_5": 0.0,
+        "wrong_norm_at_5": 0.2
+      },
+      "retrieval_answerable_n": 1,
+      "version": {
+        "generated_question_n": 1,
+        "obsolete_context_rate_at_5": 0.0,
+        "compliance_violation_rate": 0,
+        "removal_count": 0,
+        "removal_reasons": {},
+        "current_norm_hit_at_5": null
+      },
+      "human_scores": null
+    },
+    "pos_graduacao": {
+      "n": 1,
+      "failures": 0,
+      "router": {
+        "n": 0,
+        "errors": 0,
+        "route_accuracy": null,
+        "wrong_route_rate": null,
+        "clarification_recall": null,
+        "clarification_precision": null,
+        "expected_clarification_n": 0,
+        "predicted_clarification_n": 0,
+        "confusion_matrix": {
+          "graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "pos_graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "ambas": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "esclarecer": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          }
+        }
+      },
+      "retrieval": {
+        "evidence_complete_at_5": 1,
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 1,
+        "mrr_at_5": 0.25,
+        "ndcg_at_5": 0.43067655807339306,
+        "recall_at_1": 0.0,
+        "recall_at_3": 0.0,
+        "recall_at_5": 1.0,
+        "wrong_norm_at_5": 0.0
+      },
+      "retrieval_answerable_n": 1,
+      "version": {
+        "generated_question_n": 1,
+        "obsolete_context_rate_at_5": 0.0,
+        "compliance_violation_rate": 0,
+        "removal_count": 0,
+        "removal_reasons": {},
+        "current_norm_hit_at_5": null
+      },
+      "human_scores": null
+    },
+    "unspecified": {
+      "n": 1,
+      "failures": 0,
+      "router": {
+        "n": 0,
+        "errors": 0,
+        "route_accuracy": null,
+        "wrong_route_rate": null,
+        "clarification_recall": null,
+        "clarification_precision": null,
+        "expected_clarification_n": 0,
+        "predicted_clarification_n": 0,
+        "confusion_matrix": {
+          "graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "pos_graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "ambas": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "esclarecer": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          }
+        }
+      },
+      "retrieval": {},
+      "retrieval_answerable_n": 0,
+      "version": {
+        "generated_question_n": 1,
+        "obsolete_context_rate_at_5": 0.0,
+        "compliance_violation_rate": 0,
+        "removal_count": 0,
+        "removal_reasons": {},
+        "current_norm_hit_at_5": null
+      },
+      "human_scores": null
+    }
+  },
+  "by_norm": {
+    "ufpi-177-2012": {
+      "n": 2,
+      "failures": 0,
+      "router": {
+        "n": 0,
+        "errors": 0,
+        "route_accuracy": null,
+        "wrong_route_rate": null,
+        "clarification_recall": null,
+        "clarification_precision": null,
+        "expected_clarification_n": 0,
+        "predicted_clarification_n": 0,
+        "confusion_matrix": {
+          "graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "pos_graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "ambas": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "esclarecer": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          }
+        }
+      },
+      "retrieval": {
+        "evidence_complete_at_5": 0,
+        "hit_at_1": 0.5,
+        "hit_at_3": 0.5,
+        "hit_at_5": 0.5,
+        "mrr_at_5": 0.5,
+        "ndcg_at_5": 0.3065735963827292,
+        "recall_at_1": 0.25,
+        "recall_at_3": 0.25,
+        "recall_at_5": 0.25,
+        "wrong_norm_at_5": 0.1
+      },
+      "retrieval_answerable_n": 2,
+      "version": {
+        "generated_question_n": 2,
+        "obsolete_context_rate_at_5": 0.0,
+        "compliance_violation_rate": 0,
+        "removal_count": 0,
+        "removal_reasons": {},
+        "current_norm_hit_at_5": null
+      },
+      "human_scores": null
+    },
+    "ufpi-956-2025": {
+      "n": 1,
+      "failures": 0,
+      "router": {
+        "n": 0,
+        "errors": 0,
+        "route_accuracy": null,
+        "wrong_route_rate": null,
+        "clarification_recall": null,
+        "clarification_precision": null,
+        "expected_clarification_n": 0,
+        "predicted_clarification_n": 0,
+        "confusion_matrix": {
+          "graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "pos_graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "ambas": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "esclarecer": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          }
+        }
+      },
+      "retrieval": {
+        "evidence_complete_at_5": 1,
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 1,
+        "mrr_at_5": 0.25,
+        "ndcg_at_5": 0.43067655807339306,
+        "recall_at_1": 0.0,
+        "recall_at_3": 0.0,
+        "recall_at_5": 1.0,
+        "wrong_norm_at_5": 0.0
+      },
+      "retrieval_answerable_n": 1,
+      "version": {
+        "generated_question_n": 1,
+        "obsolete_context_rate_at_5": 0.0,
+        "compliance_violation_rate": 0,
+        "removal_count": 0,
+        "removal_reasons": {},
+        "current_norm_hit_at_5": null
+      },
+      "human_scores": null
+    },
+    "unspecified": {
+      "n": 1,
+      "failures": 0,
+      "router": {
+        "n": 0,
+        "errors": 0,
+        "route_accuracy": null,
+        "wrong_route_rate": null,
+        "clarification_recall": null,
+        "clarification_precision": null,
+        "expected_clarification_n": 0,
+        "predicted_clarification_n": 0,
+        "confusion_matrix": {
+          "graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "pos_graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "ambas": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "esclarecer": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          }
+        }
+      },
+      "retrieval": {},
+      "retrieval_answerable_n": 0,
+      "version": {
+        "generated_question_n": 1,
+        "obsolete_context_rate_at_5": 0.0,
+        "compliance_violation_rate": 0,
+        "removal_count": 0,
+        "removal_reasons": {},
+        "current_norm_hit_at_5": null
+      },
+      "human_scores": null
+    }
+  },
+  "by_category": {
+    "unspecified": {
+      "n": 4,
+      "failures": 0,
+      "router": {
+        "n": 0,
+        "errors": 0,
+        "route_accuracy": null,
+        "wrong_route_rate": null,
+        "clarification_recall": null,
+        "clarification_precision": null,
+        "expected_clarification_n": 0,
+        "predicted_clarification_n": 0,
+        "confusion_matrix": {
+          "graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "pos_graduacao": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "ambas": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          },
+          "esclarecer": {
+            "graduacao": 0,
+            "pos_graduacao": 0,
+            "ambas": 0,
+            "esclarecer": 0
+          }
+        }
+      },
+      "retrieval": {
+        "evidence_complete_at_5": 0.3333333333333333,
+        "hit_at_1": 0.3333333333333333,
+        "hit_at_3": 0.3333333333333333,
+        "hit_at_5": 0.6666666666666666,
+        "mrr_at_5": 0.4166666666666667,
+        "ndcg_at_5": 0.34794125027961714,
+        "recall_at_1": 0.16666666666666666,
+        "recall_at_3": 0.16666666666666666,
+        "recall_at_5": 0.5,
+        "wrong_norm_at_5": 0.06666666666666667
+      },
+      "retrieval_answerable_n": 3,
+      "version": {
+        "generated_question_n": 4,
+        "obsolete_context_rate_at_5": 0.0,
+        "compliance_violation_rate": 0,
+        "removal_count": 0,
+        "removal_reasons": {},
+        "current_norm_hit_at_5": null
+      },
+      "human_scores": null
+    }
+  },
+  "by_sector_category": {
+    "ambas": {
+      "unspecified": {
+        "n": 1,
+        "failures": 0,
+        "router": {
+          "n": 0,
+          "errors": 0,
+          "route_accuracy": null,
+          "wrong_route_rate": null,
+          "clarification_recall": null,
+          "clarification_precision": null,
+          "expected_clarification_n": 0,
+          "predicted_clarification_n": 0,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            },
+            "esclarecer": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            }
+          }
+        },
+        "retrieval": {
+          "evidence_complete_at_5": 0,
+          "hit_at_1": 1,
+          "hit_at_3": 1,
+          "hit_at_5": 1,
+          "mrr_at_5": 1.0,
+          "ndcg_at_5": 0.6131471927654584,
+          "recall_at_1": 0.5,
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "wrong_norm_at_5": 0.0
+        },
+        "retrieval_answerable_n": 1,
+        "version": {
+          "generated_question_n": 1,
+          "obsolete_context_rate_at_5": 0.0,
+          "compliance_violation_rate": 0,
+          "removal_count": 0,
+          "removal_reasons": {},
+          "current_norm_hit_at_5": null
+        },
+        "human_scores": null
+      }
+    },
+    "graduacao": {
+      "unspecified": {
+        "n": 1,
+        "failures": 0,
+        "router": {
+          "n": 0,
+          "errors": 0,
+          "route_accuracy": null,
+          "wrong_route_rate": null,
+          "clarification_recall": null,
+          "clarification_precision": null,
+          "expected_clarification_n": 0,
+          "predicted_clarification_n": 0,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            },
+            "esclarecer": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            }
+          }
+        },
+        "retrieval": {
+          "evidence_complete_at_5": 0,
+          "hit_at_1": 0,
+          "hit_at_3": 0,
+          "hit_at_5": 0,
+          "mrr_at_5": 0,
+          "ndcg_at_5": 0.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "wrong_norm_at_5": 0.2
+        },
+        "retrieval_answerable_n": 1,
+        "version": {
+          "generated_question_n": 1,
+          "obsolete_context_rate_at_5": 0.0,
+          "compliance_violation_rate": 0,
+          "removal_count": 0,
+          "removal_reasons": {},
+          "current_norm_hit_at_5": null
+        },
+        "human_scores": null
+      }
+    },
+    "pos_graduacao": {
+      "unspecified": {
+        "n": 1,
+        "failures": 0,
+        "router": {
+          "n": 0,
+          "errors": 0,
+          "route_accuracy": null,
+          "wrong_route_rate": null,
+          "clarification_recall": null,
+          "clarification_precision": null,
+          "expected_clarification_n": 0,
+          "predicted_clarification_n": 0,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            },
+            "esclarecer": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            }
+          }
+        },
+        "retrieval": {
+          "evidence_complete_at_5": 1,
+          "hit_at_1": 0,
+          "hit_at_3": 0,
+          "hit_at_5": 1,
+          "mrr_at_5": 0.25,
+          "ndcg_at_5": 0.43067655807339306,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 1.0,
+          "wrong_norm_at_5": 0.0
+        },
+        "retrieval_answerable_n": 1,
+        "version": {
+          "generated_question_n": 1,
+          "obsolete_context_rate_at_5": 0.0,
+          "compliance_violation_rate": 0,
+          "removal_count": 0,
+          "removal_reasons": {},
+          "current_norm_hit_at_5": null
+        },
+        "human_scores": null
+      }
+    },
+    "unspecified": {
+      "unspecified": {
+        "n": 1,
+        "failures": 0,
+        "router": {
+          "n": 0,
+          "errors": 0,
+          "route_accuracy": null,
+          "wrong_route_rate": null,
+          "clarification_recall": null,
+          "clarification_precision": null,
+          "expected_clarification_n": 0,
+          "predicted_clarification_n": 0,
+          "confusion_matrix": {
+            "graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            },
+            "pos_graduacao": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            },
+            "ambas": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            },
+            "esclarecer": {
+              "graduacao": 0,
+              "pos_graduacao": 0,
+              "ambas": 0,
+              "esclarecer": 0
+            }
+          }
+        },
+        "retrieval": {},
+        "retrieval_answerable_n": 0,
+        "version": {
+          "generated_question_n": 1,
+          "obsolete_context_rate_at_5": 0.0,
+          "compliance_violation_rate": 0,
+          "removal_count": 0,
+          "removal_reasons": {},
+          "current_norm_hit_at_5": null
+        },
+        "human_scores": null
+      }
+    }
+  }
+}

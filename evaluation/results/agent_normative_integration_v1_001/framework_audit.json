@@ -1,0 +1,23 @@
+{
+  "versions": {
+    "langgraph": "0.5.2",
+    "langchain-core": "0.3.68",
+    "pydantic": "2.10.6"
+  },
+  "probe": {
+    "tool_call_returns": "ToolMessage",
+    "artifact_type_preserved": true,
+    "ordinary_dict_returns_content_only": true
+  },
+  "source_evidence": [
+    "langchain_core/tools/base.py:949-998,1090-1158",
+    "langchain_core/tools/structured.py:40-111",
+    "langgraph/prebuilt/tool_node.py:362-415",
+    "langchain_core/messages/tool.py:70",
+    "code/src/agents/chatbot_generic.py",
+    "code/src/agents/chatbot_ufpi_v2.py",
+    "code/src/agents/agents.py",
+    "code/src/agents/__init__.py"
+  ],
+  "decision": "Specific node invokes actual StructuredTool with ToolCall; typed artifact consumed directly; no ToolNode loop or public registry import."
+}

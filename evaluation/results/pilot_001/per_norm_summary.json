@@ -1,0 +1,16 @@
+{
+  "ufpi-177-2012": {
+    "n_pairs": 20,
+    "delta_recall_at_5": 0.0,
+    "bootstrap_95_ci": [0.0, 0.0],
+    "bootstrap_samples": 5000,
+    "bootstrap_seed": 956
+  },
+  "ufpi-956-2025": {
+    "n_pairs": 20,
+    "delta_recall_at_5": -0.05,
+    "bootstrap_95_ci": [-0.15, 0.0],
+    "bootstrap_samples": 5000,
+    "bootstrap_seed": 956
+  }
+}

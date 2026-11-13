@@ -1,0 +1,402 @@
+[
+  {
+    "annotation_id": "BLIND-001",
+    "id": "GRAD-002",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-002",
+    "id": "POS-018",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-003",
+    "id": "GRAD-017",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-004",
+    "id": "GRAD-009",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-005",
+    "id": "GRAD-002",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-006",
+    "id": "POS-019",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-007",
+    "id": "POS-001",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-008",
+    "id": "POS-002",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-009",
+    "id": "POS-015",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-010",
+    "id": "GRAD-016",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-011",
+    "id": "GRAD-009",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-012",
+    "id": "POS-017",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-013",
+    "id": "GRAD-004",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-014",
+    "id": "POS-001",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-015",
+    "id": "GRAD-005",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-016",
+    "id": "POS-019",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-017",
+    "id": "POS-015",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-018",
+    "id": "POS-012",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-019",
+    "id": "GRAD-011",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-020",
+    "id": "POS-003",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-021",
+    "id": "POS-014",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-022",
+    "id": "GRAD-001",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-023",
+    "id": "GRAD-016",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-024",
+    "id": "POS-016",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-025",
+    "id": "GRAD-020",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-026",
+    "id": "POS-013",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-027",
+    "id": "GRAD-015",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-028",
+    "id": "POS-008",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-029",
+    "id": "POS-011",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-030",
+    "id": "GRAD-010",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-031",
+    "id": "POS-011",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-032",
+    "id": "GRAD-015",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-033",
+    "id": "GRAD-017",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-034",
+    "id": "GRAD-018",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-035",
+    "id": "GRAD-001",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-036",
+    "id": "GRAD-011",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-037",
+    "id": "GRAD-019",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-038",
+    "id": "POS-016",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-039",
+    "id": "GRAD-012",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-040",
+    "id": "GRAD-014",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-041",
+    "id": "POS-002",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-042",
+    "id": "GRAD-012",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-043",
+    "id": "GRAD-005",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-044",
+    "id": "GRAD-007",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-045",
+    "id": "POS-009",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-046",
+    "id": "POS-020",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-047",
+    "id": "POS-014",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-048",
+    "id": "GRAD-006",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-049",
+    "id": "GRAD-010",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-050",
+    "id": "POS-020",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-051",
+    "id": "POS-005",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-052",
+    "id": "GRAD-008",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-053",
+    "id": "POS-005",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-054",
+    "id": "GRAD-019",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-055",
+    "id": "GRAD-004",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-056",
+    "id": "POS-017",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-057",
+    "id": "GRAD-003",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-058",
+    "id": "POS-004",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-059",
+    "id": "POS-009",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-060",
+    "id": "GRAD-013",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-061",
+    "id": "POS-006",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-062",
+    "id": "POS-013",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-063",
+    "id": "POS-010",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-064",
+    "id": "POS-010",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-065",
+    "id": "POS-004",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-066",
+    "id": "POS-007",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-067",
+    "id": "POS-003",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-068",
+    "id": "GRAD-007",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-069",
+    "id": "GRAD-008",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-070",
+    "id": "GRAD-006",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-071",
+    "id": "GRAD-018",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-072",
+    "id": "GRAD-020",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-073",
+    "id": "POS-008",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-074",
+    "id": "GRAD-003",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-075",
+    "id": "POS-006",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-076",
+    "id": "GRAD-013",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-077",
+    "id": "POS-018",
+    "condition": "combined"
+  },
+  {
+    "annotation_id": "BLIND-078",
+    "id": "POS-007",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-079",
+    "id": "POS-012",
+    "condition": "isolated"
+  },
+  {
+    "annotation_id": "BLIND-080",
+    "id": "GRAD-014",
+    "condition": "isolated"
+  }
+]

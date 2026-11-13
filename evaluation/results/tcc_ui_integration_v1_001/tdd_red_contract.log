@@ -1,0 +1,38 @@
+FFFFF..FFF..FFFFFFFFF.                                                   [100%]
+================================== FAILURES ===================================
+code\tests\app\test_tcc_ui.py:104: AssertionError: assert 'chatbot_ufpi_v2' == 'chatbot_ufpi_integrated_v1'
+code\tests\app\test_tcc_ui.py:114: AssertionError: assert 2 == 1
+code\tests\app\test_tcc_ui.py:126: AssertionError: assert 'Resposta com...exto intacto!' == '  Resposta c...to intacto!  '
+code\tests\app\test_tcc_ui.py:126: AssertionError: assert 'Resposta com...exto intacto!' == '  Resposta c...to intacto!  '
+code\tests\app\test_tcc_ui.py:126: AssertionError: assert 'Resposta com...exto intacto!' == '  Resposta c...to intacto!  '
+code\tests\app\test_tcc_ui.py:158: AssertionError: assert 'resposta normativa anterior' in 'Pergunta\nReformulação controlada.\nReformulação controlada.\n\nFull toolkit for running an AI agent service built wi...-service-toolkit)\nMade with :material/favorite: by [Joshua](https://www.linkedin.com/in/joshua-k-carroll/) in Oakland'
+code\tests\app\test_tcc_ui.py:158: AssertionError: assert 'resposta normativa anterior' in 'Pergunta\nReformulação controlada.\nReformulação controlada.\n\nFull toolkit for running an AI agent service built wi...-service-toolkit)\nMade with :material/favorite: by [Joshua](https://www.linkedin.com/in/joshua-k-carroll/) in Oakland'
+code\tests\app\test_tcc_ui.py:158: AssertionError: assert 'resposta normativa anterior' in 'Pergunta\nReformulação controlada.\nReformulação controlada.\n\nFull toolkit for running an AI agent service built wi...-service-toolkit)\nMade with :material/favorite: by [Joshua](https://www.linkedin.com/in/joshua-k-carroll/) in Oakland'
+code\.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:736: TypeError: 'NoneType' object is not iterable
+PYTHON_RUNTIME\cpython-3.11-windows-x86_64-none\Lib\uuid.py:178: ValueError: badly formed hexadecimal UUID string
+code\\tests\\app\\test_tcc_ui.py:221: AssertionError: assert 'temporariamente indispon\xedvel' in 'Ol\xe1! Sou o **Assistente Acad\xeamico Virtual da UFPI** \U0001f393\\n\\nSou especialista no **Regulamento Geral da Gradua\xe7\xe3o (RGG)**...te: by [Joshua](https://www.linkedin.com/in/joshua-k-carroll/) in Oakland\\nError generating response: UNSAFE exception'
+code\\tests\\app\\test_tcc_ui.py:221: AssertionError: assert 'N\xe3o foi poss\xedvel obter' in 'Ol\xe1! Sou o **Assistente Acad\xeamico Virtual da UFPI** \U0001f393\\n\\nSou especialista no **Regulamento Geral da Gradua\xe7\xe3o (RGG)**...te: by [Joshua](https://www.linkedin.com/in/joshua-k-carroll/) in Oakland\\nError generating response: UNSAFE exception'
+code\tests\app\test_tcc_ui.py:234: AssertionError: assert 'Não foi possível obter' in 'Pergunta\nPergunta\nlegacy token\n\nFull toolkit for running an AI agent service built with LangGraph, FastAPI and St...-service-toolkit)\nMade with :material/favorite: by [Joshua](https://www.linkedin.com/in/joshua-k-carroll/) in Oakland'
+code\\tests\\app\\test_tcc_ui.py:234: AssertionError: assert 'N\xe3o foi poss\xedvel obter' in 'Ol\xe1! Sou o **Assistente Acad\xeamico Virtual da UFPI** \U0001f393\\n\\nSou especialista no **Regulamento Geral da Gradua\xe7\xe3o (RGG)**...ial/favorite: by [Joshua](https://www.linkedin.com/in/joshua-k-carroll/) in Oakland\\nUnexpected ChatMessage type: tool'
+code\\tests\\app\\test_tcc_ui.py:234: assert 'N\xe3o foi poss\xedvel obter' in "Ol\xe1! Sou o **Assistente Acad\xeamico Virtual da UFPI** \U0001f393\\n\\nSou especialista no **Regulamento Geral da Gradua\xe7\xe3o (RGG)**...vorite: by [Joshua](https://www.linkedin.com/in/joshua-k-carroll/) in Oakland\\nUnexpected message type: <class 'dict'>"
+code\tests\app\test_tcc_ui.py:245: AssertionError: assert 'Não foi possível obter' in 'Pergunta\nResposta com art. 999.\nTexto intacto!\nResposta com art. 999.\nTexto intacto!\n\nFull toolkit for running ...-service-toolkit)\nMade with :material/favorite: by [Joshua](https://www.linkedin.com/in/joshua-k-carroll/) in Oakland'
+code\tests\app\test_tcc_ui.py:253: AssertionError: assert 'Não foi possível obter' in 'Pergunta\nOlá!\nOlá!\nOlá!\nOlá!\n\nFull toolkit for running an AI agent service built with LangGraph, FastAPI and St...-service-toolkit)\nMade with :material/favorite: by [Joshua](https://www.linkedin.com/in/joshua-k-carroll/) in Oakland'
+=========================== short test summary info ===========================
+FAILED tests/app/test_tcc_ui.py::test_fixed_agent_and_no_selector - Assertion...
+FAILED tests/app/test_tcc_ui.py::test_direct_and_complete_message_once - Asse...
+FAILED tests/app/test_tcc_ui.py::test_normative_exact_content_typed_sources_and_rerun[accepted]
+FAILED tests/app/test_tcc_ui.py::test_normative_exact_content_typed_sources_and_rerun[regenerated]
+FAILED tests/app/test_tcc_ui.py::test_normative_exact_content_typed_sources_and_rerun[fallback]
+FAILED tests/app/test_tcc_ui.py::test_grounded_inherits_typed_sources[REPEAT]
+FAILED tests/app/test_tcc_ui.py::test_grounded_inherits_typed_sources[REPHRASE]
+FAILED tests/app/test_tcc_ui.py::test_grounded_inherits_typed_sources[SUMMARY]
+FAILED tests/app/test_tcc_ui.py::test_thread_continuity_new_conversation_and_transient_reset
+FAILED tests/app/test_tcc_ui.py::test_legacy_state_migrated_once_ignores_query_identity
+FAILED tests/app/test_tcc_ui.py::test_http_failure_safe_without_fallback[503]
+FAILED tests/app/test_tcc_ui.py::test_http_failure_safe_without_fallback[500]
+FAILED tests/app/test_tcc_ui.py::test_unexpected_stream_payload_is_controlled[legacy token]
+FAILED tests/app/test_tcc_ui.py::test_unexpected_stream_payload_is_controlled[event1]
+FAILED tests/app/test_tcc_ui.py::test_unexpected_stream_payload_is_controlled[event2]
+FAILED tests/app/test_tcc_ui.py::test_invalid_multiple_typed_results_rejected_by_existing_schema
+FAILED tests/app/test_tcc_ui.py::test_duplicate_final_events_rejected_before_rendering
+17 failed, 5 passed in 4.74s

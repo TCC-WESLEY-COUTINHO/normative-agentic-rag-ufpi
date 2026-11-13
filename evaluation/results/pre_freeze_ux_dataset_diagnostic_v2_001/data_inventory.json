@@ -1,0 +1,641 @@
+{
+  "schema_version": "1.0",
+  "kind": "recursive data inventory",
+  "created_at_utc": "2026-11-01T23:41:32.223784+00:00",
+  "head_at_inventory": "d80fe528fa51e051a353852d92de075af6201067",
+  "root": "data",
+  "file_count": 7,
+  "total_source_questions": 40,
+  "structured_gold_in_data": false,
+  "classification_counts": {
+    "UNKNOWN": 1,
+    "NORMATIVE_REGISTRY": 1,
+    "LEGACY_DATA": 1,
+    "EVALUATION_DATASET": 2,
+    "CORPUS": 2
+  },
+  "files": [
+    {
+      "path": "data/backend_doc.md",
+      "extension": ".md",
+      "size_bytes": 7952,
+      "sha256": "e93b2c0a78b9da1a34bee0f0c71ce3ce696b7b8bbed1b9e26d734e5f4f31057d",
+      "classification": "UNKNOWN",
+      "record_count": 1,
+      "schema": {
+        "format": "Markdown text",
+        "native_columns": null,
+        "records_unit": "document",
+        "line_count": 258,
+        "headings": [
+          "# 📘 Documentação da API",
+          "## 1. Configuração e Autenticação",
+          "### Como Habilitar/Desabilitar",
+          "### Realizando Requisições (Quando habilitado)",
+          "## 2. Endpoints de Conversação (Chat)",
+          "### 2.1. Streaming de Resposta (Recomendado)",
+          "### 2.2. Invocação Síncrona (Invoke)",
+          "## 3. Gestão de Histórico e Feedback",
+          "### 3.1. Recuperar Histórico",
+          "### 3.2. Enviar Feedback",
+          "## 4. Utilitários e Sistema",
+          "### 4.1. Metadados do Serviço (`/info`)",
+          "### 4.2. Health Check (`/health`)",
+          "## 5. Resumo dos Modelos de Dados (Schemas)",
+          "### `UserInput` / `StreamInput`",
+          "### `ChatMessage`"
+        ]
+      },
+      "apparent_purpose": "API documentation: authentication, chat endpoints, history, feedback and data schemas. Embedded requests are examples, not an evaluation question bank.",
+      "contains_questions": false,
+      "contains_gold": false,
+      "used_before": "historical_documentation",
+      "eligible_as_future_independent_test": false,
+      "notes": [],
+      "reference_paths": [],
+      "history": [
+        {
+          "commit": "cf126b7",
+          "date": "2025-12-02T22:51:58-03:00",
+          "subject": "Remove outdated strategy document for RAG implementation based on the UFPI General Regulation of Graduation (RGG). The file contained detailed analysis and chunking strategies that are no longer relevant to the current project direction."
+        }
+      ],
+      "classification_evidence": [
+        {
+          "path": "data/backend_doc.md",
+          "description": "File content/schema and documented purpose inspected directly."
+        }
+      ]
+    },
+    {
+      "path": "data/normative_registry.json",
+      "extension": ".json",
+      "size_bytes": 5457,
+      "sha256": "34928be0d8456462804468a339e51394cf15d9ab99370ebdcb5e783d0f36012b",
+      "classification": "NORMATIVE_REGISTRY",
+      "record_count": 4,
+      "schema": {
+        "top_level_keys": [
+          "schema_version",
+          "norms"
+        ],
+        "schema_version": "1.1",
+        "record_container": "norms",
+        "norm_fields": [
+          "amendments",
+          "corpus_path",
+          "legal_basis",
+          "norm_id",
+          "notes",
+          "sector",
+          "sources",
+          "status",
+          "superseded_by"
+        ],
+        "nested_fields": {
+          "amendments": [
+            "target",
+            "amended_by",
+            "status",
+            "effective_text_source",
+            "previous_text",
+            "effective_text",
+            "legal_basis"
+          ],
+          "legal_basis": [
+            "source",
+            "article",
+            "text",
+            "source_path"
+          ]
+        }
+      },
+      "apparent_purpose": "Runtime normative identity, sector, temporal status and documented revocation/amendment registry.",
+      "contains_questions": false,
+      "contains_gold": false,
+      "used_before": true,
+      "eligible_as_future_independent_test": false,
+      "notes": [
+        "4 norms; unknown temporal status is not evidence of current validity.",
+        "Registry is metadata, not question-answer gold."
+      ],
+      "reference_paths": [
+        {
+          "path": "code/README.md",
+          "line": 45,
+          "excerpt": "O filtro de vigência usa [registro explícito](../data/normative_registry.json), preserva"
+        },
+        {
+          "path": "code/docs/integrated-runtime.md",
+          "line": 21,
+          "excerpt": "`data/normative_registry.json` beside the checkout's `code/` directory. Its"
+        },
+        {
+          "path": "code/src/rag_baseline/integrated_runtime.py",
+          "line": 16,
+          "excerpt": "    NORMATIVE_REGISTRY_PATH: Path = CODE_DIR.parent / \"data/normative_registry.json\""
+        },
+        {
+          "path": "code/src/rag_baseline/integrated_runtime.py",
+          "line": 200,
+          "excerpt": "            settings, \"NORMATIVE_REGISTRY_PATH\", CODE_DIR.parent / \"data/normative_registry.json\""
+        },
+        {
+          "path": "code/src/rag_baseline/routing_evaluation.py",
+          "line": 344,
+          "excerpt": "            ROOT / \"data/normative_registry.json\","
+        },
+        {
+          "path": "code/src/rag_baseline/structured_evaluation_v2.py",
+          "line": 217,
+          "excerpt": "        ROOT / \"data/normative_registry.json\","
+        },
+        {
+          "path": "code/src/rag_baseline/temporal_evaluation.py",
+          "line": 401,
+          "excerpt": "        ROOT / \"data/normative_registry.json\","
+        },
+        {
+          "path": "code/src/rag_baseline/versioning.py",
+          "line": 14,
+          "excerpt": "REGISTRY_PATH = Path(__file__).resolve().parents[3] / \"data/normative_registry.json\""
+        },
+        {
+          "path": "code/tests/rag_baseline/test_integrated_runtime.py",
+          "line": 164,
+          "excerpt": "        registry_path = tmp_path / \"assets/data/normative_registry.json\""
+        },
+        {
+          "path": "code/tests/rag_baseline/test_runtime_packaging.py",
+          "line": 14,
+          "excerpt": "    \"data/normative_registry.json\","
+        },
+        {
+          "path": "evaluation/protocol_agentic_v1.md",
+          "line": 46,
+          "excerpt": "`data/normative_registry.json` exige identificação estável, fontes exatas, setor,"
+        }
+      ],
+      "history": [
+        {
+          "commit": "82b83ae",
+          "date": "2026-10-28T00:08:14-03:00",
+          "subject": "feat: support documented revocation and provision amendments with real corpora"
+        },
+        {
+          "commit": "a39c354",
+          "date": "2026-10-27T22:11:47-03:00",
+          "subject": "feat: integrate normative router and version-aware RAG graph"
+        }
+      ],
+      "classification_evidence": [
+        {
+          "path": "data/normative_registry.json",
+          "description": "File content/schema and documented purpose inspected directly."
+        }
+      ]
+    },
+    {
+      "path": "data/prompt_v2.md",
+      "extension": ".md",
+      "size_bytes": 20862,
+      "sha256": "733ebb2369be82fc8832d15629bc20dc1e709d9e7d4174000744270b2ebb00f4",
+      "classification": "LEGACY_DATA",
+      "record_count": 1,
+      "schema": {
+        "format": "Markdown text",
+        "native_columns": null,
+        "records_unit": "document",
+        "line_count": 438,
+        "headings": [
+          "# Sistema: Assistente Acadêmico Virtual da UFPI (v2)",
+          "## 1. Identidade e Missão",
+          "## 2. Princípios Fundamentais (Guardrails)",
+          "### 2.1 Regras Invioláveis",
+          "### 2.2 Template de Recusa (Escopo Estrito)",
+          "## 3. Contexto Primário: Mapa Estrutural do RGG",
+          "### 3.1 Mapa de Domínios (Query Planning)",
+          "## 4. Arquitetura da Base de Conhecimento e Ferramentas",
+          "### 4.1 Estrutura dos Chunks",
+          "### 4.2 Ferramentas de Busca",
+          "#### **Ferramenta 1: `Supabase_Semantic_Search`**",
+          "# Busca exploratória inicial",
+          "# Busca por conceito",
+          "#### **Ferramenta 2: `Supabase_Metadata_Search`**",
+          "# Buscar um artigo específico",
+          "# Buscar um título completo (todos os artigos do título)",
+          "# Buscar um capítulo específico",
+          "# Buscar uma seção específica",
+          "### 4.3 Estratégia de Uso Combinado das Ferramentas",
+          "## PROTOCOLO DE RESPOSTA (Processo Mental Obrigatório)",
+          "## FASE 0: Triagem da Pergunta (Classificação de Intenção)",
+          "### Categoria 1: 🚫 Fora de Escopo",
+          "### Categoria 2: 📖 Consulta Direta (Definição/Informação Pontual)",
+          "### Categoria 3: 🔍 Investigação Complexa (Procedural/Condicional)",
+          "## FASE 1: Planejamento de Buscas",
+          "## FASE 2: Investigação Iterativa com as Ferramentas",
+          "### 🔍 Estratégia de Buscas Múltiplas (Progressivamente Mais Simples)",
+          "## FASE 3: Formulação da Resposta Fundamentada",
+          "### 3.1 Estrutura de Resposta Padrão (Completa)",
+          "## CHECKLIST DE QUALIDADE PRÉ-RESPOSTA",
+          "### Processo de Investigação",
+          "### Fundamentação da Resposta",
+          "### Qualidade e Precisão",
+          "## PRINCÍPIOS OPERACIONAIS FINAIS",
+          "### 🎯 Uso Estratégico das Ferramentas",
+          "### 📚 Estratégia de Queries Progressivamente Mais Simples",
+          "### ✅ Transparência e Honestidade",
+          "### ⚡ Qualidade > Velocidade"
+        ]
+      },
+      "apparent_purpose": "Historical UFPI graduation assistant system-prompt specification with tool/search examples. This is an instruction document, not corpus, structured gold, or an executable question dataset.",
+      "contains_questions": false,
+      "contains_gold": false,
+      "used_before": "historical_documentation",
+      "eligible_as_future_independent_test": false,
+      "notes": [],
+      "reference_paths": [],
+      "history": [
+        {
+          "commit": "7477ef9",
+          "date": "2025-12-08T15:49:31-03:00",
+          "subject": "Implement new user feedback mechanism for chatbot_ufpi and chatbot_ufpi_v2. This update introduces a system for collecting and analyzing user interactions, allowing for continuous improvement of chatbot responses and user experience. Enhanced logging features have also been added to track feedback effectively."
+        },
+        {
+          "commit": "4d36736",
+          "date": "2025-11-18T14:00:39-03:00",
+          "subject": "Add chatbot_ufpi_v2 agent for enhanced academic assistance. This version incorporates semantic and metadata search capabilities, allowing for more accurate responses based on the UFPI General Regulation of Graduation (RGG). Updated agent configuration to include the new chatbot and refined search tools for improved functionality."
+        }
+      ],
+      "classification_evidence": [
+        {
+          "path": "data/prompt_v2.md",
+          "description": "File content/schema and documented purpose inspected directly."
+        }
+      ]
+    },
+    {
+      "path": "data/questoes_para_avaliar_o_agente.md",
+      "extension": ".md",
+      "size_bytes": 9679,
+      "sha256": "cb44b601a734c8506a635679868b7974a2da8c72806a822ff2699dd7c0720752",
+      "classification": "EVALUATION_DATASET",
+      "record_count": 20,
+      "schema": {
+        "format": "numbered Markdown Q&A",
+        "native_columns": null,
+        "extracted_fields": [
+          "item_number",
+          "question",
+          "indented_reference_answer_text"
+        ],
+        "available_structured_expected_fields": [],
+        "source_heading": "Bancada de Questões",
+        "heading_declares_domain": false
+      },
+      "apparent_purpose": "Numbered question bank with prose candidate reference answers; development/regression diagnostic material.",
+      "contains_questions": true,
+      "contains_gold": "PROSE_CANDIDATE_REFERENCE_ONLY",
+      "used_before": true,
+      "eligible_as_future_independent_test": false,
+      "notes": [
+        "20 numbered source questions; no native expected_domain, expected_norm, expected_article, expected_facts or review fields.",
+        "Prose references are candidate answers, not independently validated gold.",
+        "Domain context from filename/evaluation protocol is separated from question-specific diagnostic labels."
+      ],
+      "reference_paths": [
+        {
+          "path": "evaluation/protocol.md",
+          "line": 13,
+          "excerpt": "Origem: `data/questoes_para_avaliar_o_agente.md`, 20 perguntas e respostas. Padrão: linguagem cotidiana de aluno; perguntas diretas e condicionais; prazos, limites, listas e procedimentos; respostas curtas com condições; citações inconsistentes. Não há registro de amostragem, anotadores ou adjudicação no arquivo original. Sua mera existência não comprova revisão."
+        },
+        {
+          "path": "evaluation/README.md",
+          "line": 3,
+          "excerpt": "Os dois conjuntos são **candidatos a gold**, sem revisão independente registrada. O gabarito original da graduação permanece preservado em `data/questoes_para_avaliar_o_agente.md`."
+        }
+      ],
+      "history": [
+        {
+          "commit": "1ca52e1",
+          "date": "2025-11-20T18:22:22-03:00",
+          "subject": "Refactor questions in the academic evaluation Markdown file for improved formatting and clarity. Adjusted indentation and spacing for consistency across all entries, ensuring a uniform presentation of information regarding UFPI's academic regulations."
+        },
+        {
+          "commit": "7f3e0d6",
+          "date": "2025-11-17T12:10:41-03:00",
+          "subject": "questoes de avaliação refeitas"
+        },
+        {
+          "commit": "ac24f18",
+          "date": "2025-11-12T22:42:55-03:00",
+          "subject": "Add a new Markdown file with a comprehensive list of questions and answers for evaluating students at UFPI. This resource aims to clarify academic regulations and procedures, enhancing the knowledge base for the chatbot_ufpi agent."
+        }
+      ],
+      "classification_evidence": [
+        {
+          "path": "data/questoes_para_avaliar_o_agente.md",
+          "description": "File content/schema and documented purpose inspected directly."
+        },
+        {
+          "path": "evaluation/protocol.md",
+          "line": 13,
+          "excerpt": "Origem: `data/questoes_para_avaliar_o_agente.md`, 20 perguntas e respostas. Padrão: linguagem cotidiana de aluno; perguntas diretas e condicionais; prazos, limites, listas e procedimentos; respostas curtas com condições; citações inconsistentes. Não há registro de amostragem, anotadores ou adjudicação no arquivo original. Sua mera existência não comprova revisão."
+        }
+      ]
+    },
+    {
+      "path": "data/questoes_para_avaliar_o_agente_pos_graduacao.md",
+      "extension": ".md",
+      "size_bytes": 8777,
+      "sha256": "4f4df1461581f2919d5dce44289a3abc44bd88c429b263cfcc1ddd9a5da52381",
+      "classification": "EVALUATION_DATASET",
+      "record_count": 20,
+      "schema": {
+        "format": "numbered Markdown Q&A",
+        "native_columns": null,
+        "extracted_fields": [
+          "item_number",
+          "question",
+          "indented_reference_answer_text"
+        ],
+        "available_structured_expected_fields": [],
+        "source_heading": "Bancada de Questões",
+        "heading_declares_domain": false
+      },
+      "apparent_purpose": "Numbered question bank with prose candidate reference answers; development/regression diagnostic material.",
+      "contains_questions": true,
+      "contains_gold": "PROSE_CANDIDATE_REFERENCE_ONLY",
+      "used_before": true,
+      "eligible_as_future_independent_test": false,
+      "notes": [
+        "20 numbered source questions; no native expected_domain, expected_norm, expected_article, expected_facts or review fields.",
+        "Prose references are candidate answers, not independently validated gold.",
+        "Domain context from filename/evaluation protocol is separated from question-specific diagnostic labels."
+      ],
+      "reference_paths": [
+        {
+          "path": "README.md",
+          "line": 74,
+          "excerpt": "uv run python -m rag_baseline.demo --setor ambos --questions-file ../data/questoes_para_avaliar_o_agente_pos_graduacao.md --output respostas_novas.jsonl"
+        },
+        {
+          "path": "README.md",
+          "line": 80,
+          "excerpt": "O gabarito da pós no [formato original](data/questoes_para_avaliar_o_agente_pos_graduacao.md)"
+        },
+        {
+          "path": "code/README.md",
+          "line": 34,
+          "excerpt": "uv run python -m rag_baseline.demo --setor pos_graduacao --questions-file ../data/questoes_para_avaliar_o_agente_pos_graduacao.md --output nova_pos.jsonl"
+        },
+        {
+          "path": "code/tests/rag_baseline/test_terminal_scope.py",
+          "line": 288,
+          "excerpt": "    target = Path(\"../data/questoes_para_avaliar_o_agente_pos_graduacao.md\")"
+        },
+        {
+          "path": "evaluation/CLI_VALIDATION.md",
+          "line": 82,
+          "excerpt": "uv run python -m rag_baseline.demo --setor ambos --questions-file ../data/questoes_para_avaliar_o_agente_pos_graduacao.md --output respostas_novas.jsonl"
+        },
+        {
+          "path": "evaluation/decisions.md",
+          "line": 47,
+          "excerpt": "Identificador desta revisão: `pos_escopo_conhecido_r1`. Arquivo: [questoes_para_avaliar_o_agente_pos_graduacao.md](../data/questoes_para_avaliar_o_agente_pos_graduacao.md). O escopo de pós-graduação é uma premissa declarada da avaliação, como ocorre com o escopo de graduação no gabarito original; não é uma inferência obtida do setor dos trechos recuperados."
+        }
+      ],
+      "history": [
+        {
+          "commit": "d40998a",
+          "date": "2026-10-20T10:06:26-03:00",
+          "subject": "docs(dataset): answer postgrad gold within known scope"
+        },
+        {
+          "commit": "97327fa",
+          "date": "2026-10-20T01:07:10-03:00",
+          "subject": "feat: joint normative RAG CLI and original-style postgraduate gold"
+        }
+      ],
+      "classification_evidence": [
+        {
+          "path": "data/questoes_para_avaliar_o_agente_pos_graduacao.md",
+          "description": "File content/schema and documented purpose inspected directly."
+        },
+        {
+          "path": "evaluation/decisions.md",
+          "line": 47,
+          "excerpt": "Identificador desta revisão: `pos_escopo_conhecido_r1`. Arquivo: [questoes_para_avaliar_o_agente_pos_graduacao.md](../data/questoes_para_avaliar_o_agente_pos_graduacao.md). O escopo de pós-graduação é uma premissa declarada da avaliação, como ocorre com o escopo de graduação no gabarito original; não é uma inferência obtida do setor dos trechos recuperados."
+        }
+      ]
+    },
+    {
+      "path": "data/REGULAMENTO_GERAL_DA_GRADUAÇÃO_-_177.2012_atualizada_2023_para_site_1_.pdf",
+      "extension": ".pdf",
+      "size_bytes": 1103165,
+      "sha256": "b5cf8085c758b4e5f07e37db404900926737235e2d315ccd88761353d1484fe0",
+      "classification": "CORPUS",
+      "record_count": 1,
+      "schema": {
+        "format": "PDF",
+        "pages": 93,
+        "native_columns": null,
+        "records_unit": "document"
+      },
+      "apparent_purpose": "Source PDF of UFPI General Graduation Regulation consolidated through 2023.",
+      "contains_questions": false,
+      "contains_gold": false,
+      "used_before": true,
+      "eligible_as_future_independent_test": false,
+      "notes": [
+        "93 pages; document is normative source, not an evaluation dataset."
+      ],
+      "reference_paths": [
+        {
+          "path": "evaluation/provenance/temporal_sources_v1.json",
+          "line": 11,
+          "excerpt": "      \"url\": \"https://ufpi.br/arquivos_download/arquivos/Parfor/REGULAMENTO_GERAL_DA_GRADUAÇÃO_-_177.2012_atualizada_2023_para_site_1_.pdf\","
+        }
+      ],
+      "history": [
+        {
+          "commit": "999a077",
+          "date": "2025-08-26T22:11:49-03:00",
+          "subject": "Adiciona o regulamento geral da graduação atualizado para 2023 em formato PDF, pois será o objeto para ser utilizado como base de pesquisa e RAG"
+        }
+      ],
+      "classification_evidence": [
+        {
+          "path": "data/REGULAMENTO_GERAL_DA_GRADUAÇÃO_-_177.2012_atualizada_2023_para_site_1_.pdf",
+          "description": "File content/schema and documented purpose inspected directly."
+        }
+      ]
+    },
+    {
+      "path": "data/RGG_markdown.txt",
+      "extension": ".txt",
+      "size_bytes": 213033,
+      "sha256": "731aa121b7b81dfb619f973e1f6f84a695a7660357b1f5a155f2fcf49a55b315",
+      "classification": "CORPUS",
+      "record_count": 1,
+      "schema": {
+        "format": "Markdown text",
+        "native_columns": null,
+        "records_unit": "document",
+        "line_count": 1667,
+        "headings": [
+          "# REGULAMENTO GERAL DA GRADUAÇÃO",
+          "## Sumário",
+          "# TÍTULO I - DAS DISPOSIÇÕES PRELIMINARES",
+          "# TÍTULO II - DA EXECUÇÃO, REGISTRO E CONTROLE ACADÊMICOS",
+          "# TÍTULO III - DOS CURSOS DE GRADUAÇÃO",
+          "## CAPÍTULO I - DAS UNIDADES DE VINCULAÇÃO E DO MUNICÍPIO SEDE",
+          "## CAPÍTULO II - DA CRIAÇÃO",
+          "## CAPÍTULO III - DA ESTRUTURA CURRICULAR",
+          "## CAPÍTULO IV - DO TÍTULO ACADÊMICO",
+          "## CAPÍTULO V - DA ÊNFASE",
+          "## CAPÍTULO VI - DA INTEGRALIZAÇÃO CURRICULAR",
+          "## CAPÍTULO VII - DO TURNO DE FUNCIONAMENTO",
+          "## CAPÍTULO VIII - DO PROJETO PEDAGÓGICO DO CURSO",
+          "# TÍTULO IV - DOS PERÍODOS LETIVOS",
+          "# TÍTULO V - DA OFERTA DE VAGAS PARA OS CURSOS",
+          "# TÍTULO VI - DOS COMPONENTES CURRICULARES",
+          "## CAPÍTULO I - DAS DISCIPLINAS",
+          "## CAPÍTULO II - DOS MÓDULOS",
+          "## CAPÍTULO III - DOS AGRUPAMENTOS",
+          "## CAPÍTULO IV - DAS ATIVIDADES ACADÊMICAS ESPECÍFICAS",
+          "### Seção I - Das Atividades Acadêmicas Individuais",
+          "### Seção II - Das Atividades De Orientação Individual",
+          "### Seção III - Das Atividades Especiais Coletivas",
+          "### Seção IV - Do Estágio Obrigatório",
+          "#### Subseção I - Das Condições De Realização Do Estágio",
+          "#### Subseção II - Da Organização Administrativa Dos Estágios Curriculares Obrigatórios Dos Cursos De Bacharelado",
+          "#### Subseção III - Dos Estágios Curriculares Obrigatórios Dos Cursos De Licenciaturas",
+          "#### Subseção IV - Dos Estágios Para Alunos Não Vinculados à UFPI",
+          "### Seção V - Do Trabalho De Conclusão De Curso",
+          "### Seção VI - Das Atividades Complementares",
+          "# TÍTULO VII - DO HORÁRIO DE AULAS",
+          "# TÍTULO VIII - DA AVALIAÇÃO DA APRENDIZAGEM E DA ASSIDUIDADE",
+          "## CAPÍTULO I - DA AVALIAÇÃO DA APRENDIZAGEM E DA ASSIDUIDADE EM DISCIPLINAS",
+          "## CAPÍTULO II - DA AVALIAÇÃO DA APRENDIZAGEM E DA ASSIDUIDADE EM OUTRAS UNIDADES DE ESTRUTURAÇÃO DIDÁTICO-PEDAGÓGICA",
+          "# TÍTULO IX - DAS FORMAS DE MENSURAÇÃO DO RENDIMENTO ACADÊMICO ACUMULADO",
+          "# TÍTULO X - DA ORIENTAÇÃO ACADÊMICA",
+          "# TÍTULO XI - DO FUNCIONAMENTO, PARALISAÇÃO E EXTINÇÃO DE CURSO DE GRADUAÇÃO",
+          "# TÍTULO XII - DAS FORMAS DE INGRESSO",
+          "## CAPÍTULO I - DAS FORMAS REGULARES DE INGRESSO",
+          "### Seção I - Vestibular E SISU",
+          "### Seção II - Da Transferência *ex officio*",
+          "### Seção III - Da Transferência Voluntária",
+          "### Seção IV - Do Ingresso De Portador De Curso Superior",
+          "### Seção V - Da Remoção",
+          "### Seção VI - Da Reintegração",
+          "### Seção VII - Das Formas Regulares De Ingresso Definidas Por Meio De Convênios Ou Determinadas Por Lei",
+          "## CAPÍTULO II - DAS FORMAS ESPECIAIS DE INGRESSO",
+          "### Seção I - Do Aluno Especial",
+          "### Seção II - Do Aluno Em Mobilidade Nacional Ou Internacional",
+          "### Seção III - Das Formas Especiais De Ingresso Determinadas Por Normas Federais",
+          "# TÍTULO XIII - DO CADASTRO OU MATRÍCULA INSTITUCIONAL DE ALUNO",
+          "# TÍTULO XIV - DO CURSO",
+          "# TÍTULO XV - DO AMBIENTE ACADÊMICO",
+          "## CAPÍTULO I - DA MATRÍCULA CURRICULAR",
+          "### Seção I - Dos Procedimentos De Matrícula Em Componentes Curriculares Dos Alunos Regulares Em Períodos Letivos Regulares",
+          "#### Subseção I - Da Solicitação De Vagas",
+          "#### Subseção II - Da Concessão Das Vagas",
+          "#### Subseção III - Do Cadastramento De Turmas",
+          "#### Subseção IV - Dos Procedimentos De Matrícula Curricular",
+          "#### Subseção V - Da Oferta De Componente Curricular Em Caráter Especial",
+          "### Subseção VI - Da Matrícula Curricular Nos Períodos Letivos Regulares",
+          "### Subseção VII - Do Preenchimento De Vagas Nas Turmas",
+          "### Subseção VIII - Do Ajuste De Turmas",
+          "### Subseção IX - Do Processamento",
+          "### Subseção X - Do Cancelamento De Matrícula Em Componente Curricular",
+          "### Subseção XI - Do Acréscimo",
+          "### Subseção XII - Da Matrícula Extraordinária Em Componente Curricular Após Processamento Do Acréscimo",
+          "### Subseção XIII - Da Exclusão De Turmas Após O Processamento Da Matrícula E Acréscimo",
+          "### Subseção XIV - Da Consolidação De Turmas",
+          "### Seção II - Dos Procedimentos De Formação, Consolidação E Exclusão De Turmas E De Matrícula Em Módulos E Agrupamentos Dos Alunos Regulares Em Períodos Letivos Regulares",
+          "### Seção III - Da Matrícula Curricular E Da Consolidação Dos Resultados Nas Atividades Acadêmicas Específicas",
+          "### SEÇÃO IV - DAS RESPONSABILIDADES DOS ÓRGÃOS ENVOLVIDOS",
+          "## CAPÍTULO II - DAS SITUAÇÕES ESPECIAIS",
+          "### Seção I - Do Regime De Exercícios Domiciliares",
+          "### Seção II - Do Aproveitamento De Estudos",
+          "### Seção III - Da Dispensa Extraordinária De Componentes Curriculares",
+          "### Seção IV - Da Oferta De Componente Curricular Em Períodos Letivos Especiais De Férias",
+          "### Seção V - Da Realização De Atividades Acadêmicas Específicas Em Períodos Letivos Especiais De Férias",
+          "### Seção VI - Do Ensino Individual Em Componentes Curriculares",
+          "### Seção VII - Do Trancamento De Matrícula Em Componente Curricular",
+          "### Seção VIII - Do Trancamento De Curso",
+          "### Seção IX - Da Permuta De Turno",
+          "### Seção X - Da Mudança De Ênfase Dentro Da Mesma Modalidade Do Curso",
+          "### Seção XI - Da Mudança De Estrutura Curricular",
+          "### Seção XII - Da Retificação De Notas, Digitação De Notas E Outras Matérias Relacionadas À Verificação Do Rendimento Acadêmico",
+          "### Seção XIII - Da Permissão Para Cursar Componentes Curriculares Em Outra Instituição De Ensino Superior - Mobilidade Acadêmica",
+          "### Seção XIV - Da Mobilidade Interna E Matrícula Intercampi (Redação alterada pela Resolução nº 089/2018-CEPEX)",
+          "# TÍTULO XVI - DA DESVINCULAÇÃO",
+          "## CAPÍTULO I - DA CONCLUSÃO DE CURSO",
+          "### Seção I - Da Outorga De Grau",
+          "#### Subseção I - Das Sessões Solenes De Outorga De Grau",
+          "#### Subseção II - Das Sessões Simples De Outorga De Grau",
+          "#### Subseção III - Da Láurea Universitária",
+          "## CAPÍTULO II - DO CANCELAMENTO DE CURSO",
+          "# TÍTULO XVII - DOS DOCUMENTOS OFICIAIS",
+          "## CAPÍTULO I - DOS DOCUMENTOS EXPEDIDOS",
+          "## CAPÍTULO II - DOS DOCUMENTOS DE REGISTRO",
+          "# TÍTULO XVIII - DA REVALIDAÇÃO DE DIPLOMAS DE CURSOS DE GRADUAÇÃO EXPEDIDOS NO EXTERIOR",
+          "# TÍTULO XIX - DA GUARDA DE DOCUMENTOS",
+          "# TÍTULO XX - DAS DISPOSIÇÕES FINAIS E TRANSITÓRIAS"
+        ],
+        "article_markers_count": 376,
+        "unique_article_marker_numbers": 376,
+        "article_count_method": "Count bold line-start Art. markers only, not validated legal subdivisions."
+      },
+      "apparent_purpose": "Textual/Markdown graduation regulation source for chunking; current runtime uses derived JSON corpora rather than reading this raw file directly.",
+      "contains_questions": false,
+      "contains_gold": false,
+      "used_before": true,
+      "eligible_as_future_independent_test": false,
+      "notes": [],
+      "reference_paths": [
+        {
+          "path": "code/scripts/chunks.py",
+          "line": 122,
+          "excerpt": "    caminho_entrada = 'RGG_markdown.txt'"
+        },
+        {
+          "path": "code/scripts/chunks_v2.py",
+          "line": 262,
+          "excerpt": "    caminho_entrada = 'RGG_markdown.txt'"
+        },
+        {
+          "path": "docs/DEPLOY_LINUX.md",
+          "line": 193,
+          "excerpt": "- `scripts/RGG_markdown.txt`: fonte textual usada pelos chunkers;"
+        }
+      ],
+      "history": [
+        {
+          "commit": "dbcaeff",
+          "date": "2025-10-28T09:10:19-03:00",
+          "subject": "fix/ajuste no arquivo do regulamento em markdonw, pois havia alguns artigos duplicados e outros faltando. Foi corrigido o arquivo base e refeito os chunks e o embeding novamente com os dados corretos"
+        },
+        {
+          "commit": "212b056",
+          "date": "2025-10-24T20:53:45-03:00",
+          "subject": "Atualiza a organização da pasta de artigos e remove duplicatas, além de finalizar o resumo do artigo Lewis-2020-Retrieval-Augmented-Generation."
+        }
+      ],
+      "classification_evidence": [
+        {
+          "path": "data/RGG_markdown.txt",
+          "description": "File content/schema and documented purpose inspected directly."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Documentation contains illustrative messages/search examples; these are not promoted to question datasets.",
+    "Text article markers are a syntactic inventory, not legal subdivision validation.",
+    "File hashes identify raw bytes; all data/ files remained read-only.",
+    "No independent validated final-test dataset was identified."
+  ]
+}

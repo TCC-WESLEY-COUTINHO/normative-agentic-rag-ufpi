@@ -1,0 +1,203 @@
+{
+  "timestamp": "2026-11-01T01:17:01.173744+00:00",
+  "version": 1,
+  "inputs_expectations": [
+    {
+      "id": "01_reopen_repeat",
+      "turns": [
+        "Qual o prazo na graduação?",
+        "repita"
+      ],
+      "expected_action": "GROUNDED_TRANSFORM",
+      "expected_facade_calls": 1,
+      "purpose": "real SQLite close/reopen"
+    },
+    {
+      "id": "02_rephrase",
+      "turns": [
+        "ANSWER",
+        "Explique mais simples"
+      ],
+      "expected_action": "GROUNDED_TRANSFORM",
+      "expected_facade_calls": 0,
+      "purpose": "public source only"
+    },
+    {
+      "id": "03_summary",
+      "turns": [
+        "ANSWER",
+        "Resuma"
+      ],
+      "expected_action": "GROUNDED_TRANSFORM",
+      "expected_facade_calls": 0,
+      "purpose": "summary without retrieval"
+    },
+    {
+      "id": "04_domain_shift_core",
+      "turns": [
+        "Posso cancelar uma disciplina na graduação?",
+        "E na pós?"
+      ],
+      "expected_action": "CONTEXTUAL_NORMATIVE_RAG",
+      "expected_facade_calls": 1,
+      "purpose": "real Router and new post evidence"
+    },
+    {
+      "id": "05_continue_pending",
+      "turns": [
+        "Posso cancelar uma disciplina?",
+        "graduação"
+      ],
+      "expected_action": "CONTINUE_CLARIFICATION",
+      "expected_facade_calls": 1,
+      "purpose": "same original question and UUID"
+    },
+    {
+      "id": "06_other_thread_reply",
+      "turns": [
+        "CLARIFICATION thread X",
+        "pós-graduação thread Y"
+      ],
+      "expected_action": "NORMATIVE_RAG",
+      "expected_facade_calls": 1,
+      "purpose": "foreign pending not consumed"
+    },
+    {
+      "id": "07_social_pending",
+      "turns": [
+        "CLARIFICATION",
+        "Obrigado"
+      ],
+      "expected_action": "SAFE_DIRECT",
+      "expected_facade_calls": 0,
+      "purpose": "pending preserved across reopen"
+    },
+    {
+      "id": "08_cancel_pending",
+      "turns": [
+        "CLARIFICATION",
+        "Cancelar"
+      ],
+      "expected_action": "CLEAR_PENDING",
+      "expected_facade_calls": 0,
+      "purpose": "pending cleared, last valid result retained"
+    },
+    {
+      "id": "09_stale_transform",
+      "turns": [
+        "registry stamp mismatch",
+        "Explique melhor"
+      ],
+      "expected_action": "GROUNDED_TRANSFORM",
+      "expected_facade_calls": 0,
+      "purpose": "safe deterministic repeat request"
+    },
+    {
+      "id": "10_stale_fresh_query",
+      "turns": [
+        "STALE",
+        "Nova pergunta completa na graduação"
+      ],
+      "expected_action": "NORMATIVE_RAG",
+      "expected_facade_calls": 1,
+      "purpose": "replace with newly authorized result"
+    },
+    {
+      "id": "11_other_user",
+      "turns": [
+        "ANSWER A/X",
+        "Repita B/X"
+      ],
+      "expected_action": "GROUNDED_TRANSFORM",
+      "expected_facade_calls": 0,
+      "purpose": "no foreign authority"
+    },
+    {
+      "id": "12_other_agent",
+      "turns": [
+        "ANSWER agent1",
+        "Repita agent2"
+      ],
+      "expected_action": "GROUNDED_TRANSFORM",
+      "expected_facade_calls": 0,
+      "purpose": "agent namespace"
+    },
+    {
+      "id": "13_core_fallback",
+      "turns": [
+        "core fallback",
+        "Explique melhor"
+      ],
+      "expected_action": "GROUNDED_TRANSFORM",
+      "expected_facade_calls": 0,
+      "purpose": "zero transformer calls"
+    },
+    {
+      "id": "14_new_date",
+      "turns": [
+        "ANSWER",
+        "Explique melhor"
+      ],
+      "expected_action": "GROUNDED_TRANSFORM",
+      "expected_facade_calls": 0,
+      "purpose": "fake transformer adds 20 de maio de 2099; guard falls back"
+    },
+    {
+      "id": "15_concurrent_users_threads",
+      "turns": [
+        "A/X and B/X",
+        "A/X and A/Y"
+      ],
+      "expected_action": "NORMATIVE_RAG",
+      "expected_facade_calls": 1,
+      "purpose": "separate memory/correlation in each concurrent invocation"
+    },
+    {
+      "id": "16_pending_concurrent",
+      "turns": [
+        "pending A/X reply",
+        "fresh B/X question"
+      ],
+      "expected_action": "CONTINUE_CLARIFICATION + NORMATIVE_RAG",
+      "expected_facade_calls": 1,
+      "purpose": "original correlation only on A"
+    },
+    {
+      "id": "17_http_summary",
+      "turns": [
+        "Pergunta completa",
+        "Resuma"
+      ],
+      "expected_action": "GROUNDED_TRANSFORM",
+      "expected_facade_calls": 0,
+      "purpose": "ASGI invoke and AgentClient typed result"
+    },
+    {
+      "id": "18_http_repeat",
+      "turns": [
+        "HTTP ANSWER",
+        "Repita"
+      ],
+      "expected_action": "GROUNDED_TRANSFORM",
+      "expected_facade_calls": 0,
+      "purpose": "SSE stream_tokens true only terminal typed result"
+    }
+  ],
+  "hashes": {
+    "code/src/rag_baseline/conversation_contracts.py": "baa58a813505baa39486842eceb9d5acdcd4b87b5090d5b9ebd7f697d5b17b3a",
+    "code/src/rag_baseline/conversation_graph.py": "59410cad6865058da96616db0c98940cf7ffecf1ab3aa889efdcb7cf2fb03910",
+    "code/src/rag_baseline/conversation_policy.py": "7bb9c215e76a204e2a501af7230d0096d4f6f34fea9247e73bb3c586f4fd6f4a",
+    "code/src/rag_baseline/conversation_transform.py": "0093fae23e7b25176a67f1b25c20bb5c8ca7ba9dba00529140f030db825e5905",
+    "code/src/rag_baseline/agent_graph.py": "c4a679968b233c344436328f6155d586ddea5f24e75b1bc55d54f0ae36ef4902",
+    "code/src/schema/schema.py": "afaf16f9fa3778a056130b28952e2771025abd2ec3de4ba80c85f90c51ad1891",
+    "code/src/service/service.py": "9c3d86d51372b461e229831ca112342bd6347f7a38afa1a5322efb8012445803",
+    "code/src/service/normative_transport.py": "24404b8b8293ff8d6d3032fd2610cce14078bed5c78dc1fca48d8feda0c7a266",
+    "code/tests/rag_baseline/test_conversation_memory_followups.py": "f1f4fad9bc5155eb2e395050c71b61e3ebc3e9b2a4fb77b28e3607c2bbee2d57",
+    "code/tests/rag_baseline/test_conversation_memory_transport.py": "998438a6c89e885b7450c909a6745e013b551610e9ebbe179ed0e61bb4c567b9",
+    "code/tests/memory/test_normative_checkpoint_serialization.py": "5ada8ec3d01f3cfebdddb4e43892e79e60d521984172564903e76ddd531c89e9",
+    "evaluation/results/conversation_memory_followups_v1_001/local_probes.py": "2080c2d0329e29b9cc26177ac2ed539b934356938bed196797dfe7f51ba6c56b",
+    "evaluation/datasets/conversation_followups_v1.json": "8f4ae3c19dcd1bd6f50b160ebbed8ce89732185eadd3f6b7dc2a44ad293256aa"
+  },
+  "criteria": "All cases, no selective restart; numeric metrics are engineering checks only. No remote HTTP. No production changes after freeze.",
+  "providers": "fake facade; actual core with controlled provider for domain-shift; presentation fake; actual SQLite file and ASGI transport"
+}

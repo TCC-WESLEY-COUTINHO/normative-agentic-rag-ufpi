@@ -1,0 +1,9 @@
+{
+  "status --short": "",
+  "branch --show-current": "feat/retrieval-strategies-v1\n",
+  "rev-parse HEAD": "19a0aed5d17dfedec470881796d2e10f3edbb3e6\n",
+  "log -15 --oneline --decorate": "19a0aed (HEAD -> feat/retrieval-strategies-v1) test: verify retrieval strategy integration\n9e28513 feat: add metadata and filtered retrieval strategies\nc97f177 test: define retrieval strategy boundaries\n367e27f (feat/normative-tool-facade-v1) test: verify normative facade integration contracts\nd3c5cc8 feat: add normative rag facade\n986f421 test: define normative tool contract boundaries\n61d2bc0 (audit/agentic-conversational-integration-v1) audit: map legacy agentic infrastructure for v2 integration\n34c42c7 (fix/structured-normative-output-v2) fix: preserve structured v2 artifact bytes\n7736f89 experiment: evaluate structured normative output v2\nea255c8 fix: separate content locators from display references\nf250386 test: capture structured output v2 policy gaps\n98c1c2d (fix/structured-normative-output-v1) experiment: evaluate structured normative output\n5a4cdb4 fix: render normative references and temporal claims structurally\n35398e8 test: capture unsafe normative output exposure\n6aa833d (fix/temporal-generation-grounding-v1) experiment: evaluate temporal generation consistency\n",
+  "diff": "",
+  "diff --cached": "",
+  "diff --stat": ""
+}

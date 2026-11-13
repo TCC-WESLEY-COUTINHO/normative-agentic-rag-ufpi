@@ -1,0 +1,1329 @@
+[
+  {
+    "case": "image_import_assets",
+    "status": "PASS",
+    "payload": {
+      "packaged_source_files_identical_to_build_baseline": 95
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:54:47.276687+00:00"
+  },
+  {
+    "case": "startup_native",
+    "status": "PASS",
+    "payload": null,
+    "reason": null,
+    "recorded_at": "2026-11-01T16:55:20.020623+00:00"
+  },
+  {
+    "case": "health_native",
+    "status": "PASS",
+    "payload": {
+      "status": "ok",
+      "integrated_agent": {
+        "ready": true,
+        "reason_code": null,
+        "provider_configured": true,
+        "registry_valid": true,
+        "index_available": true,
+        "index_records": 507,
+        "memory_ready": true,
+        "memory_stamp_created": true,
+        "calculator_available": true,
+        "facade_ready": true,
+        "registered": true,
+        "experimental": true
+      }
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:55:20.042694+00:00"
+  },
+  {
+    "case": "readiness_native",
+    "status": "PASS",
+    "payload": {
+      "ready": true,
+      "reason_code": null,
+      "provider_configured": true,
+      "registry_valid": true,
+      "index_available": true,
+      "index_records": 507,
+      "memory_ready": true,
+      "memory_stamp_created": true,
+      "calculator_available": true,
+      "facade_ready": true,
+      "registered": true,
+      "experimental": true
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:55:20.046147+00:00"
+  },
+  {
+    "case": "info_native",
+    "status": "PASS",
+    "payload": {
+      "experimental": true,
+      "available": true,
+      "unavailable_reason": null,
+      "key": "chatbot_ufpi_integrated_v1",
+      "description": "Experimental, non-default: consulta normativa integrada, memória e calculator determinística."
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:55:20.052635+00:00"
+  },
+  {
+    "case": "default_native",
+    "status": "PASS",
+    "payload": {
+      "default_agent": "chatbot_ufpi_v2"
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:55:20.241763+00:00"
+  },
+  {
+    "case": "direct_native",
+    "status": "PASS",
+    "payload": {
+      "type": "ai",
+      "content": "Olá!",
+      "normative_result": null,
+      "grounded_followup_result": null,
+      "calculator_result": null,
+      "tool_calls": [],
+      "tool_call_id": null,
+      "run_id": "cc68d6b9-9619-4544-8525-28174de2b7ae",
+      "response_metadata": {},
+      "custom_data": {}
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:55:20.585399+00:00"
+  },
+  {
+    "case": "calculator_native",
+    "status": "PASS",
+    "payload": {
+      "type": "ai",
+      "content": "4",
+      "normative_result": null,
+      "grounded_followup_result": null,
+      "calculator_result": {
+        "contract_version": "1",
+        "status": "ANSWER",
+        "operation_kind": "ARITHMETIC",
+        "content": "4",
+        "normalized_input": "2+2",
+        "numeric_result": "4",
+        "date_result": null,
+        "days_result": null,
+        "error_code": null,
+        "safe_message": null
+      },
+      "tool_calls": [],
+      "tool_call_id": null,
+      "run_id": "a1edc578-c0c4-40f2-a9f9-2705556e21b5",
+      "response_metadata": {},
+      "custom_data": {}
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:55:20.768956+00:00"
+  },
+  {
+    "case": "date_native",
+    "status": "PASS",
+    "payload": {
+      "type": "ai",
+      "content": "15/11/2026",
+      "normative_result": null,
+      "grounded_followup_result": null,
+      "calculator_result": {
+        "contract_version": "1",
+        "status": "ANSWER",
+        "operation_kind": "DATE_OFFSET",
+        "content": "15/11/2026",
+        "normalized_input": "2026-11-05 +10 days",
+        "numeric_result": null,
+        "date_result": "2026-11-15",
+        "days_result": null,
+        "error_code": null,
+        "safe_message": null
+      },
+      "tool_calls": [],
+      "tool_call_id": null,
+      "run_id": "5cf1146a-00e1-4c9d-aa91-3144aabd446c",
+      "response_metadata": {},
+      "custom_data": {}
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:55:20.947469+00:00"
+  },
+  {
+    "case": "stream_direct",
+    "status": "PASS",
+    "payload": {
+      "type": "ai",
+      "content": "Olá!",
+      "normative_result": null,
+      "grounded_followup_result": null,
+      "calculator_result": null,
+      "tool_calls": [],
+      "tool_call_id": null,
+      "run_id": "0ad0e49e-16ba-4b71-b331-9f697033c1b5",
+      "response_metadata": {},
+      "custom_data": {}
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:55:21.125486+00:00"
+  },
+  {
+    "case": "stream_calculator",
+    "status": "PASS",
+    "payload": {
+      "type": "ai",
+      "content": "4",
+      "normative_result": null,
+      "grounded_followup_result": null,
+      "calculator_result": {
+        "contract_version": "1",
+        "status": "ANSWER",
+        "operation_kind": "ARITHMETIC",
+        "content": "4",
+        "normalized_input": "2+2",
+        "numeric_result": "4",
+        "date_result": null,
+        "days_result": null,
+        "error_code": null,
+        "safe_message": null
+      },
+      "tool_calls": [],
+      "tool_call_id": null,
+      "run_id": "8432905f-defb-40e9-b60a-3e741567e42a",
+      "response_metadata": {},
+      "custom_data": {}
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:55:21.369928+00:00"
+  },
+  {
+    "case": "shutdown_native",
+    "status": "PASS",
+    "payload": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-11-01T16:54:49.061243364Z",
+      "FinishedAt": "2026-11-01T16:55:22.840421297Z"
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:55:23.618590+00:00"
+  },
+  {
+    "case": "external_call_avoidance_native",
+    "status": "PASS",
+    "payload": {
+      "guard_loaded": true,
+      "blocked_attempts": 0,
+      "network_internal": false
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:55:23.625604+00:00"
+  },
+  {
+    "case": "startup_controlled",
+    "status": "PASS",
+    "payload": null,
+    "reason": null,
+    "recorded_at": "2026-11-01T16:55:41.547925+00:00"
+  },
+  {
+    "case": "health_controlled",
+    "status": "PASS",
+    "payload": {
+      "status": "ok",
+      "integrated_agent": {
+        "ready": true,
+        "reason_code": null,
+        "provider_configured": true,
+        "registry_valid": true,
+        "index_available": true,
+        "index_records": 507,
+        "memory_ready": true,
+        "memory_stamp_created": true,
+        "calculator_available": true,
+        "facade_ready": true,
+        "registered": true,
+        "experimental": true
+      }
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:55:41.565108+00:00"
+  },
+  {
+    "case": "readiness_controlled",
+    "status": "PASS",
+    "payload": {
+      "ready": true,
+      "reason_code": null,
+      "provider_configured": true,
+      "registry_valid": true,
+      "index_available": true,
+      "index_records": 507,
+      "memory_ready": true,
+      "memory_stamp_created": true,
+      "calculator_available": true,
+      "facade_ready": true,
+      "registered": true,
+      "experimental": true
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:55:41.568428+00:00"
+  },
+  {
+    "case": "info_controlled",
+    "status": "PASS",
+    "payload": {
+      "experimental": true,
+      "available": true,
+      "unavailable_reason": null,
+      "key": "chatbot_ufpi_integrated_v1",
+      "description": "Experimental, non-default: consulta normativa integrada, memória e calculator determinística."
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:55:41.574908+00:00"
+  },
+  {
+    "case": "default_controlled",
+    "status": "PASS",
+    "payload": {
+      "default_agent": "chatbot_ufpi_v2"
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:55:41.582050+00:00"
+  },
+  {
+    "case": "normative_controlled",
+    "status": "PASS",
+    "payload": {
+      "type": "ai",
+      "content": "O dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado.\n\nFontes:\n- Resolução 177/2012, art. 68",
+      "normative_result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "O dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado.\n\nFontes:\n- Resolução 177/2012, art. 68",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-art-68-idx-000067",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "68",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 68",
+            "temporal_role": "eligible"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "indeterminate",
+          "requested_time_context": {
+            "norm_ids": [
+              "ufpi-177-2012"
+            ],
+            "before_amendment": false,
+            "relation_query": null,
+            "article": "68",
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-art-68-idx-000067",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "68",
+              "temporal_action": "amendment_applied",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": {
+                "source": "Resolução CEPEX/UFPI nº 1.056/2026",
+                "article": "1"
+              }
+            }
+          ],
+          "known_relations": [
+            {
+              "relation": "AMENDED_BY",
+              "source_norm": "ufpi-177-2012",
+              "target_norm": "ufpi-1056-2026",
+              "target_article": "68",
+              "target_paragraph": "4",
+              "evidence_source": "Resolução CEPEX/UFPI nº 1.056/2026",
+              "evidence_article": "1"
+            }
+          ],
+          "generation_constraints": {
+            "must_frame_as_historical": false,
+            "must_not_claim_current_validity": false,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": false,
+            "must_not_present_successor_as_historical_predecessor": false,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": true,
+            "must_not_duplicate_superseded_wording": true,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "O dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "AMENDED_BY",
+              "norm_id": "ufpi-177-2012",
+              "target_norm": "ufpi-1056-2026",
+              "role": null
+            },
+            {
+              "kind": "STATUS_UNKNOWN",
+              "norm_id": "ufpi-177-2012",
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "graduacao",
+        "retrieval_strategy": "metadata_exact",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "5e028ddf-90b5-4aa8-89ee-fcf70f6c4a6f",
+        "error_code": null,
+        "safe_message": null
+      },
+      "grounded_followup_result": null,
+      "calculator_result": null,
+      "tool_calls": [],
+      "tool_call_id": null,
+      "run_id": "6a0a2ec8-f6d5-45c6-99ba-5d04272de9df",
+      "response_metadata": {},
+      "custom_data": {}
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:55:42.049610+00:00"
+  },
+  {
+    "case": "calculator_preserves_authority",
+    "status": "PASS",
+    "payload": {
+      "type": "ai",
+      "content": "4",
+      "normative_result": null,
+      "grounded_followup_result": null,
+      "calculator_result": {
+        "contract_version": "1",
+        "status": "ANSWER",
+        "operation_kind": "ARITHMETIC",
+        "content": "4",
+        "normalized_input": "2+2",
+        "numeric_result": "4",
+        "date_result": null,
+        "days_result": null,
+        "error_code": null,
+        "safe_message": null
+      },
+      "tool_calls": [],
+      "tool_call_id": null,
+      "run_id": "c840a68d-f74c-41d3-9674-a9a02300b61a",
+      "response_metadata": {},
+      "custom_data": {}
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:55:42.149609+00:00"
+  },
+  {
+    "case": "memory_same_lifespan",
+    "status": "PASS",
+    "payload": {
+      "type": "ai",
+      "content": "O dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado.\n\nFontes:\n- Resolução 177/2012, art. 68",
+      "normative_result": null,
+      "grounded_followup_result": {
+        "contract_version": "1",
+        "kind": "REPEAT",
+        "content": "O dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado.\n\nFontes:\n- Resolução 177/2012, art. 68",
+        "source_correlation_id": "5e028ddf-90b5-4aa8-89ee-fcf70f6c4a6f",
+        "source_core_version": "structured_output_v2",
+        "source_contract_version": "1",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-art-68-idx-000067",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "68",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 68",
+            "temporal_role": "eligible"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "indeterminate",
+          "requested_time_context": {
+            "norm_ids": [
+              "ufpi-177-2012"
+            ],
+            "before_amendment": false,
+            "relation_query": null,
+            "article": "68",
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-art-68-idx-000067",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "68",
+              "temporal_action": "amendment_applied",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": {
+                "source": "Resolução CEPEX/UFPI nº 1.056/2026",
+                "article": "1"
+              }
+            }
+          ],
+          "known_relations": [
+            {
+              "relation": "AMENDED_BY",
+              "source_norm": "ufpi-177-2012",
+              "target_norm": "ufpi-1056-2026",
+              "target_article": "68",
+              "target_paragraph": "4",
+              "evidence_source": "Resolução CEPEX/UFPI nº 1.056/2026",
+              "evidence_article": "1"
+            }
+          ],
+          "generation_constraints": {
+            "must_frame_as_historical": false,
+            "must_not_claim_current_validity": false,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": false,
+            "must_not_present_successor_as_historical_predecessor": false,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": true,
+            "must_not_duplicate_superseded_wording": true,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "domain": "graduacao",
+        "guard_status": "ACCEPTED"
+      },
+      "calculator_result": null,
+      "tool_calls": [],
+      "tool_call_id": null,
+      "run_id": "4fa01811-d364-4e0f-96a4-a4f1916ebdf5",
+      "response_metadata": {},
+      "custom_data": {}
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:55:42.314289+00:00"
+  },
+  {
+    "case": "cross_user_isolation",
+    "status": "PASS",
+    "payload": {
+      "type": "ai",
+      "content": "O contexto normativo anterior não pode ser reutilizado nesta versão. Repita a pergunta original.",
+      "normative_result": null,
+      "grounded_followup_result": null,
+      "calculator_result": null,
+      "tool_calls": [],
+      "tool_call_id": null,
+      "run_id": "30be6b56-26cc-41b0-af67-62a85fed140f",
+      "response_metadata": {},
+      "custom_data": {}
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:55:42.418215+00:00"
+  },
+  {
+    "case": "stream_normative",
+    "status": "PASS",
+    "payload": {
+      "type": "ai",
+      "content": "O dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado.\n\nFontes:\n- Resolução 177/2012, art. 68",
+      "normative_result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "O dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado.\n\nFontes:\n- Resolução 177/2012, art. 68",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-art-68-idx-000067",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "68",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 68",
+            "temporal_role": "eligible"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "indeterminate",
+          "requested_time_context": {
+            "norm_ids": [
+              "ufpi-177-2012"
+            ],
+            "before_amendment": false,
+            "relation_query": null,
+            "article": "68",
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-art-68-idx-000067",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "68",
+              "temporal_action": "amendment_applied",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": {
+                "source": "Resolução CEPEX/UFPI nº 1.056/2026",
+                "article": "1"
+              }
+            }
+          ],
+          "known_relations": [
+            {
+              "relation": "AMENDED_BY",
+              "source_norm": "ufpi-177-2012",
+              "target_norm": "ufpi-1056-2026",
+              "target_article": "68",
+              "target_paragraph": "4",
+              "evidence_source": "Resolução CEPEX/UFPI nº 1.056/2026",
+              "evidence_article": "1"
+            }
+          ],
+          "generation_constraints": {
+            "must_frame_as_historical": false,
+            "must_not_claim_current_validity": false,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": false,
+            "must_not_present_successor_as_historical_predecessor": false,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": true,
+            "must_not_duplicate_superseded_wording": true,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "O dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "AMENDED_BY",
+              "norm_id": "ufpi-177-2012",
+              "target_norm": "ufpi-1056-2026",
+              "role": null
+            },
+            {
+              "kind": "STATUS_UNKNOWN",
+              "norm_id": "ufpi-177-2012",
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "accepted",
+        "domain": "graduacao",
+        "retrieval_strategy": "metadata_exact",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "4cf9fa8a-f2f7-4ede-8e5a-a0063f51cec5",
+        "error_code": null,
+        "safe_message": null
+      },
+      "grounded_followup_result": null,
+      "calculator_result": null,
+      "tool_calls": [],
+      "tool_call_id": null,
+      "run_id": "8de66b0f-1b3e-4164-ab16-bd9f59d4d1bf",
+      "response_metadata": {},
+      "custom_data": {}
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:55:42.672593+00:00"
+  },
+  {
+    "case": "shutdown_controlled_first",
+    "status": "PASS",
+    "payload": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-11-01T16:55:24.265979412Z",
+      "FinishedAt": "2026-11-01T16:55:44.118649105Z"
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:55:44.654143+00:00"
+  },
+  {
+    "case": "external_call_avoidance_controlled_first",
+    "status": "PASS",
+    "payload": {
+      "guard_loaded": true,
+      "blocked_attempts": 0,
+      "network_internal": false
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:55:44.661155+00:00"
+  },
+  {
+    "case": "resource_close_controlled_first",
+    "status": "PASS",
+    "payload": {
+      "runtime_closed": true,
+      "index_closed": true,
+      "index_cache_removed": true,
+      "provider_closed": true,
+      "sqlite_connection_closed": true
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:55:44.686689+00:00"
+  },
+  {
+    "case": "startup_controlled_restart",
+    "status": "PASS",
+    "payload": null,
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:02.183967+00:00"
+  },
+  {
+    "case": "health_controlled_restart",
+    "status": "PASS",
+    "payload": {
+      "status": "ok",
+      "integrated_agent": {
+        "ready": true,
+        "reason_code": null,
+        "provider_configured": true,
+        "registry_valid": true,
+        "index_available": true,
+        "index_records": 507,
+        "memory_ready": true,
+        "memory_stamp_created": true,
+        "calculator_available": true,
+        "facade_ready": true,
+        "registered": true,
+        "experimental": true
+      }
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:02.203307+00:00"
+  },
+  {
+    "case": "readiness_controlled_restart",
+    "status": "PASS",
+    "payload": {
+      "ready": true,
+      "reason_code": null,
+      "provider_configured": true,
+      "registry_valid": true,
+      "index_available": true,
+      "index_records": 507,
+      "memory_ready": true,
+      "memory_stamp_created": true,
+      "calculator_available": true,
+      "facade_ready": true,
+      "registered": true,
+      "experimental": true
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:02.207030+00:00"
+  },
+  {
+    "case": "info_controlled_restart",
+    "status": "PASS",
+    "payload": {
+      "experimental": true,
+      "available": true,
+      "unavailable_reason": null,
+      "key": "chatbot_ufpi_integrated_v1",
+      "description": "Experimental, non-default: consulta normativa integrada, memória e calculator determinística."
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:02.214554+00:00"
+  },
+  {
+    "case": "default_controlled_restart",
+    "status": "PASS",
+    "payload": {
+      "default_agent": "chatbot_ufpi_v2"
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:02.220908+00:00"
+  },
+  {
+    "case": "memory_restart",
+    "status": "PASS",
+    "payload": {
+      "message": {
+        "type": "ai",
+        "content": "O dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado.\n\nFontes:\n- Resolução 177/2012, art. 68",
+        "normative_result": null,
+        "grounded_followup_result": {
+          "contract_version": "1",
+          "kind": "REPEAT",
+          "content": "O dispositivo consultado de Resolução 177/2012 possui alteração parcial registrada por Resolução 1056/2026; isso não representa revogação total da norma-base.\nPara Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nConteúdo controlado.\n\nFontes:\n- Resolução 177/2012, art. 68",
+          "source_correlation_id": "5e028ddf-90b5-4aa8-89ee-fcf70f6c4a6f",
+          "source_core_version": "structured_output_v2",
+          "source_contract_version": "1",
+          "references": [
+            {
+              "chunk_id": "ufpi-177-2012-art-68-idx-000067",
+              "norm_id": "ufpi-177-2012",
+              "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+              "article": "68",
+              "validated_subdivision": null,
+              "display_text": "Resolução 177/2012, art. 68",
+              "temporal_role": "eligible"
+            }
+          ],
+          "temporal_provenance": {
+            "temporal_intent": "indeterminate",
+            "requested_time_context": {
+              "norm_ids": [
+                "ufpi-177-2012"
+              ],
+              "before_amendment": false,
+              "relation_query": null,
+              "article": "68",
+              "paragraph": null,
+              "requested_year": null
+            },
+            "evidence_states": [
+              {
+                "chunk_id": "ufpi-177-2012-art-68-idx-000067",
+                "source_norm": "ufpi-177-2012",
+                "source_article": "68",
+                "temporal_action": "amendment_applied",
+                "normative_status": "desconhecida",
+                "temporal_role": "eligible",
+                "relation_source": {
+                  "source": "Resolução CEPEX/UFPI nº 1.056/2026",
+                  "article": "1"
+                }
+              }
+            ],
+            "known_relations": [
+              {
+                "relation": "AMENDED_BY",
+                "source_norm": "ufpi-177-2012",
+                "target_norm": "ufpi-1056-2026",
+                "target_article": "68",
+                "target_paragraph": "4",
+                "evidence_source": "Resolução CEPEX/UFPI nº 1.056/2026",
+                "evidence_article": "1"
+              }
+            ],
+            "generation_constraints": {
+              "must_frame_as_historical": false,
+              "must_not_claim_current_validity": false,
+              "must_not_claim_unknown_as_current": true,
+              "must_not_present_revoked_rule_as_current": false,
+              "must_not_present_successor_as_historical_predecessor": false,
+              "must_separate_temporal_states": false,
+              "must_follow_evidence_roles": true,
+              "must_not_treat_partial_amendment_as_total_revocation": true,
+              "must_not_duplicate_superseded_wording": true,
+              "must_not_reintroduce_excluded_evidence": true,
+              "must_not_deny_present_evidence": true,
+              "must_not_invent_effective_date": true,
+              "must_not_invent_temporal_scope": true,
+              "citation_granularity_ceiling": "article"
+            }
+          },
+          "domain": "graduacao",
+          "guard_status": "ACCEPTED"
+        },
+        "calculator_result": null,
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "5b844c3e-cd63-4565-9e25-0b5e469b7259",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "provider_calls": {
+        "routes": 0,
+        "generations": 0,
+        "embeddings": 0,
+        "closed": false
+      }
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:02.539634+00:00"
+  },
+  {
+    "case": "shutdown_controlled_restart",
+    "status": "PASS",
+    "payload": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-11-01T16:55:44.827351102Z",
+      "FinishedAt": "2026-11-01T16:56:04.784300047Z"
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:05.317958+00:00"
+  },
+  {
+    "case": "external_call_avoidance_controlled_restart",
+    "status": "PASS",
+    "payload": {
+      "guard_loaded": true,
+      "blocked_attempts": 0,
+      "network_internal": false
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:05.324942+00:00"
+  },
+  {
+    "case": "resource_close_controlled_restart",
+    "status": "PASS",
+    "payload": {
+      "runtime_closed": true,
+      "index_closed": true,
+      "index_cache_removed": true,
+      "provider_closed": true,
+      "sqlite_connection_closed": true
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:05.349611+00:00"
+  },
+  {
+    "case": "startup_missing_index",
+    "status": "PASS",
+    "payload": null,
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:11.466273+00:00"
+  },
+  {
+    "case": "health_missing_index",
+    "status": "PASS",
+    "payload": {
+      "status": "ok",
+      "integrated_agent": {
+        "ready": false,
+        "reason_code": "index_unavailable",
+        "provider_configured": true,
+        "registry_valid": true,
+        "index_available": false,
+        "index_records": null,
+        "memory_ready": true,
+        "memory_stamp_created": false,
+        "calculator_available": false,
+        "facade_ready": false,
+        "registered": true,
+        "experimental": true
+      }
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:11.478673+00:00"
+  },
+  {
+    "case": "readiness_missing_index",
+    "status": "PASS",
+    "payload": {
+      "ready": false,
+      "reason_code": "index_unavailable",
+      "provider_configured": true,
+      "registry_valid": true,
+      "index_available": false,
+      "index_records": null,
+      "memory_ready": true,
+      "memory_stamp_created": false,
+      "calculator_available": false,
+      "facade_ready": false,
+      "registered": true,
+      "experimental": true
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:11.482419+00:00"
+  },
+  {
+    "case": "info_missing_index",
+    "status": "PASS",
+    "payload": {
+      "experimental": true,
+      "available": false,
+      "unavailable_reason": "index_unavailable",
+      "key": "chatbot_ufpi_integrated_v1",
+      "description": "Experimental, non-default: consulta normativa integrada, memória e calculator determinística."
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:11.489970+00:00"
+  },
+  {
+    "case": "default_missing_index",
+    "status": "PASS",
+    "payload": {
+      "default_agent": "chatbot_ufpi_v2"
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:11.495864+00:00"
+  },
+  {
+    "case": "missing_index_invoke",
+    "status": "PASS",
+    "payload": {
+      "status": 503,
+      "content_type": "application/json",
+      "body": "{\"detail\":\"Agent unavailable: index_unavailable\"}"
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:11.520594+00:00"
+  },
+  {
+    "case": "missing_index_stream",
+    "status": "PASS",
+    "payload": {
+      "status": 503,
+      "content_type": "application/json",
+      "body": "{\"detail\":\"Agent unavailable: index_unavailable\"}"
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:11.528929+00:00"
+  },
+  {
+    "case": "missing_index_not_created",
+    "status": "PASS",
+    "payload": null,
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:11.877910+00:00"
+  },
+  {
+    "case": "shutdown_missing_index",
+    "status": "PASS",
+    "payload": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-11-01T16:56:05.898395238Z",
+      "FinishedAt": "2026-11-01T16:56:12.923821348Z"
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:13.560191+00:00"
+  },
+  {
+    "case": "external_call_avoidance_missing_index",
+    "status": "PASS",
+    "payload": {
+      "guard_loaded": true,
+      "blocked_attempts": 0,
+      "network_internal": false
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:13.567370+00:00"
+  },
+  {
+    "case": "startup_invalid_registry",
+    "status": "PASS",
+    "payload": null,
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:19.564273+00:00"
+  },
+  {
+    "case": "health_invalid_registry",
+    "status": "PASS",
+    "payload": {
+      "status": "ok",
+      "integrated_agent": {
+        "ready": false,
+        "reason_code": "registry_invalid",
+        "provider_configured": true,
+        "registry_valid": false,
+        "index_available": false,
+        "index_records": null,
+        "memory_ready": true,
+        "memory_stamp_created": false,
+        "calculator_available": false,
+        "facade_ready": false,
+        "registered": true,
+        "experimental": true
+      }
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:19.575238+00:00"
+  },
+  {
+    "case": "readiness_invalid_registry",
+    "status": "PASS",
+    "payload": {
+      "ready": false,
+      "reason_code": "registry_invalid",
+      "provider_configured": true,
+      "registry_valid": false,
+      "index_available": false,
+      "index_records": null,
+      "memory_ready": true,
+      "memory_stamp_created": false,
+      "calculator_available": false,
+      "facade_ready": false,
+      "registered": true,
+      "experimental": true
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:19.579482+00:00"
+  },
+  {
+    "case": "info_invalid_registry",
+    "status": "PASS",
+    "payload": {
+      "experimental": true,
+      "available": false,
+      "unavailable_reason": "registry_invalid",
+      "key": "chatbot_ufpi_integrated_v1",
+      "description": "Experimental, non-default: consulta normativa integrada, memória e calculator determinística."
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:19.586373+00:00"
+  },
+  {
+    "case": "default_invalid_registry",
+    "status": "PASS",
+    "payload": {
+      "default_agent": "chatbot_ufpi_v2"
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:19.592977+00:00"
+  },
+  {
+    "case": "invalid_registry_invoke",
+    "status": "PASS",
+    "payload": {
+      "status": 503,
+      "content_type": "application/json",
+      "body": "{\"detail\":\"Agent unavailable: registry_invalid\"}"
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:19.616660+00:00"
+  },
+  {
+    "case": "invalid_registry_stream",
+    "status": "PASS",
+    "payload": {
+      "status": 503,
+      "content_type": "application/json",
+      "body": "{\"detail\":\"Agent unavailable: registry_invalid\"}"
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:19.624694+00:00"
+  },
+  {
+    "case": "shutdown_invalid_registry",
+    "status": "PASS",
+    "payload": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-11-01T16:56:14.011773509Z",
+      "FinishedAt": "2026-11-01T16:56:20.702751118Z"
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:21.445028+00:00"
+  },
+  {
+    "case": "external_call_avoidance_invalid_registry",
+    "status": "PASS",
+    "payload": {
+      "guard_loaded": true,
+      "blocked_attempts": 0,
+      "network_internal": false
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:21.452822+00:00"
+  },
+  {
+    "case": "startup_missing_provider",
+    "status": "PASS",
+    "payload": null,
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:27.865232+00:00"
+  },
+  {
+    "case": "health_missing_provider",
+    "status": "PASS",
+    "payload": {
+      "status": "ok",
+      "integrated_agent": {
+        "ready": false,
+        "reason_code": "provider_not_configured",
+        "provider_configured": false,
+        "registry_valid": false,
+        "index_available": false,
+        "index_records": null,
+        "memory_ready": true,
+        "memory_stamp_created": false,
+        "calculator_available": false,
+        "facade_ready": false,
+        "registered": true,
+        "experimental": true
+      }
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:27.875872+00:00"
+  },
+  {
+    "case": "readiness_missing_provider",
+    "status": "PASS",
+    "payload": {
+      "ready": false,
+      "reason_code": "provider_not_configured",
+      "provider_configured": false,
+      "registry_valid": false,
+      "index_available": false,
+      "index_records": null,
+      "memory_ready": true,
+      "memory_stamp_created": false,
+      "calculator_available": false,
+      "facade_ready": false,
+      "registered": true,
+      "experimental": true
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:27.879821+00:00"
+  },
+  {
+    "case": "info_missing_provider",
+    "status": "PASS",
+    "payload": {
+      "experimental": true,
+      "available": false,
+      "unavailable_reason": "provider_not_configured",
+      "key": "chatbot_ufpi_integrated_v1",
+      "description": "Experimental, non-default: consulta normativa integrada, memória e calculator determinística."
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:27.886654+00:00"
+  },
+  {
+    "case": "default_missing_provider",
+    "status": "PASS",
+    "payload": {
+      "default_agent": "chatbot_ufpi_v2"
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:27.893992+00:00"
+  },
+  {
+    "case": "missing_provider_invoke",
+    "status": "PASS",
+    "payload": {
+      "status": 503,
+      "content_type": "application/json",
+      "body": "{\"detail\":\"Agent unavailable: provider_not_configured\"}"
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:27.919939+00:00"
+  },
+  {
+    "case": "missing_provider_stream",
+    "status": "PASS",
+    "payload": {
+      "status": 503,
+      "content_type": "application/json",
+      "body": "{\"detail\":\"Agent unavailable: provider_not_configured\"}"
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:27.927739+00:00"
+  },
+  {
+    "case": "shutdown_missing_provider",
+    "status": "PASS",
+    "payload": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-11-01T16:56:22.053766641Z",
+      "FinishedAt": "2026-11-01T16:56:29.002014082Z"
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:29.646511+00:00"
+  },
+  {
+    "case": "external_call_avoidance_missing_provider",
+    "status": "PASS",
+    "payload": {
+      "guard_loaded": true,
+      "blocked_attempts": 0,
+      "network_internal": false
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:29.655532+00:00"
+  },
+  {
+    "case": "typed_transport",
+    "status": "PASS",
+    "payload": {
+      "typed_roundtrips": [
+        11,
+        11
+      ]
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:31.387195+00:00"
+  },
+  {
+    "case": "frozen_hashes_preserved",
+    "status": "PASS",
+    "payload": null,
+    "reason": null,
+    "recorded_at": "2026-11-01T16:56:33.335636+00:00"
+  }
+]

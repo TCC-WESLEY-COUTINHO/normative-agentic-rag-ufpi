@@ -1,0 +1,9 @@
+{
+  "mode": "offline_reanalysis",
+  "source": "evaluation\\results\\agentic_temporal_hardening_v1_001\\controlled_001",
+  "source_cases_sha256": "335e36adbdae44fb2ba0015323bcbafde105a5fa4994b2b72aa1778b6fc0c4e8",
+  "evaluator_sha256": "64dc53edc47bef2346263cc843c94a679797e66b22b3b7a031be68941c6c1c93",
+  "provider_calls": 0,
+  "n": 22,
+  "interpretation": "Attribution/denominator correction only; answers and contexts unchanged."
+}

@@ -1,0 +1,605 @@
+{
+  "status": "provisional_technical_not_legal_gold",
+  "queries": 44,
+  "provider_calls": 68,
+  "provider_errors": 0,
+  "metrics": {
+    "raw_CGVR": {
+      "numerator": 25,
+      "denominator": 44,
+      "value": 0.5681818181818182
+    },
+    "raw_UCER": {
+      "numerator": 6,
+      "denominator": 44,
+      "value": 0.13636363636363635
+    },
+    "raw_TCR": {
+      "numerator": 7,
+      "denominator": 44,
+      "value": 0.1590909090909091
+    },
+    "final_CGVR": {
+      "numerator": 2,
+      "denominator": 44,
+      "value": 0.045454545454545456
+    },
+    "final_UCER": {
+      "numerator": 0,
+      "denominator": 44,
+      "value": 0.0
+    },
+    "final_TCR": {
+      "numerator": 0,
+      "denominator": 44,
+      "value": 0.0
+    },
+    "official_reference_CGVR": {
+      "numerator": 0,
+      "denominator": 44,
+      "value": 0.0
+    },
+    "guard_activation": {
+      "numerator": 24,
+      "denominator": 44,
+      "value": 0.5454545454545454
+    },
+    "regeneration_success": {
+      "numerator": 1,
+      "denominator": 24,
+      "value": 0.041666666666666664
+    },
+    "fallback": {
+      "numerator": 23,
+      "denominator": 44,
+      "value": 0.5227272727272727
+    },
+    "answer_completion": {
+      "numerator": 21,
+      "denominator": 44,
+      "value": 0.4772727272727273
+    }
+  },
+  "per_case": {
+    "A_grad_historical": {
+      "raw_CGVR": {
+        "numerator": 10,
+        "denominator": 10,
+        "value": 1.0
+      },
+      "raw_UCER": {
+        "numerator": 1,
+        "denominator": 10,
+        "value": 0.1
+      },
+      "raw_TCR": {
+        "numerator": 1,
+        "denominator": 10,
+        "value": 0.1
+      },
+      "final_CGVR": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "final_UCER": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "final_TCR": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "official_reference_CGVR": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "guard_activation": {
+        "numerator": 10,
+        "denominator": 10,
+        "value": 1.0
+      },
+      "regeneration_success": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "fallback": {
+        "numerator": 10,
+        "denominator": 10,
+        "value": 1.0
+      },
+      "answer_completion": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      }
+    },
+    "B_grad_current": {
+      "raw_CGVR": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "raw_UCER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "raw_TCR": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "final_CGVR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "final_UCER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "final_TCR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "official_reference_CGVR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "guard_activation": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "regeneration_success": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "fallback": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "answer_completion": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      }
+    },
+    "C_post_historical": {
+      "raw_CGVR": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "raw_UCER": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "raw_TCR": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "final_CGVR": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "final_UCER": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "final_TCR": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "official_reference_CGVR": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "guard_activation": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "regeneration_success": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "fallback": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "answer_completion": {
+        "numerator": 10,
+        "denominator": 10,
+        "value": 1.0
+      }
+    },
+    "D_post_current": {
+      "raw_CGVR": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "raw_UCER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "raw_TCR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "final_CGVR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "final_UCER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "final_TCR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "official_reference_CGVR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "guard_activation": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "regeneration_success": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "fallback": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "answer_completion": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      }
+    },
+    "E_validity": {
+      "raw_CGVR": {
+        "numerator": 10,
+        "denominator": 10,
+        "value": 1.0
+      },
+      "raw_UCER": {
+        "numerator": 5,
+        "denominator": 10,
+        "value": 0.5
+      },
+      "raw_TCR": {
+        "numerator": 5,
+        "denominator": 10,
+        "value": 0.5
+      },
+      "final_CGVR": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "final_UCER": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "final_TCR": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "official_reference_CGVR": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "guard_activation": {
+        "numerator": 10,
+        "denominator": 10,
+        "value": 1.0
+      },
+      "regeneration_success": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "fallback": {
+        "numerator": 10,
+        "denominator": 10,
+        "value": 1.0
+      },
+      "answer_completion": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      }
+    },
+    "F_comparison": {
+      "raw_CGVR": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "raw_UCER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "raw_TCR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "final_CGVR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "final_UCER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "final_TCR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "official_reference_CGVR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "guard_activation": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "regeneration_success": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "fallback": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "answer_completion": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      }
+    },
+    "G_unknown": {
+      "raw_CGVR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "raw_UCER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "raw_TCR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "final_CGVR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "final_UCER": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "final_TCR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "official_reference_CGVR": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "guard_activation": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "regeneration_success": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "fallback": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "answer_completion": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      }
+    },
+    "H_citation": {
+      "raw_CGVR": {
+        "numerator": 2,
+        "denominator": 10,
+        "value": 0.2
+      },
+      "raw_UCER": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "raw_TCR": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "final_CGVR": {
+        "numerator": 2,
+        "denominator": 10,
+        "value": 0.2
+      },
+      "final_UCER": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "final_TCR": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "official_reference_CGVR": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "guard_activation": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "regeneration_success": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "fallback": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "answer_completion": {
+        "numerator": 10,
+        "denominator": 10,
+        "value": 1.0
+      }
+    }
+  },
+  "official_reference_entries": {
+    "violations": 0,
+    "total": 213
+  },
+  "semantic_checks": {
+    "historical_framing": {
+      "numerator": 20,
+      "denominator": 20,
+      "value": 1.0
+    },
+    "historical_body_completion": {
+      "numerator": 10,
+      "denominator": 20,
+      "value": 0.5
+    },
+    "current_state_consistency": {
+      "numerator": 12,
+      "denominator": 12,
+      "value": 1.0
+    },
+    "current_body_completion": {
+      "numerator": 10,
+      "denominator": 12,
+      "value": 0.8333333333333334
+    },
+    "unknown_overclaim_raw": {
+      "numerator": 1,
+      "denominator": 34,
+      "value": 0.029411764705882353
+    },
+    "unknown_overclaim_final": {
+      "numerator": 0,
+      "denominator": 34,
+      "value": 0.0
+    },
+    "relation_consistency_final": {
+      "numerator": 32,
+      "denominator": 32,
+      "value": 1.0
+    }
+  },
+  "chronology_categories": {
+    "other_chronology": 2,
+    "effectivity": 4
+  },
+  "diagnostic": {
+    "raw_chronology_guard_detected": {
+      "numerator": 0,
+      "denominator": 6,
+      "value": 0.0
+    },
+    "raw_chronology_cases_blocked_due_to_citation": {
+      "numerator": 6,
+      "denominator": 6,
+      "value": 1.0
+    },
+    "raw_locator_detected": {
+      "numerator": 23,
+      "denominator": 25,
+      "value": 0.92
+    },
+    "epistemic_unknown_false_positive": {
+      "numerator": 1,
+      "denominator": 1,
+      "value": 1.0
+    },
+    "strict_normative_content_completion": {
+      "numerator": 20,
+      "denominator": 44,
+      "value": 0.45454545454545453
+    },
+    "query_answers_including_deterministic_validity_status": {
+      "numerator": 31,
+      "denominator": 44,
+      "value": 0.7045454545454546
+    }
+  },
+  "limitations": [
+    "CGVR uses broader locator policy than old bibliography-only CGVR; compare the historical reannotations, not the old label directly.",
+    "All fallback bodies count incomplete under the frozen protocol, even when deterministic revocation status answers a validity query.",
+    "caput is an uncovered locator form: exposed in H repetitions 2 and 10.",
+    "Chronology paraphrases on immediate effect and validity bounds were not detected; independent citation violations blocked these six raw bodies.",
+    "No post-experiment prompt, model, guard or retry tuning."
+  ]
+}

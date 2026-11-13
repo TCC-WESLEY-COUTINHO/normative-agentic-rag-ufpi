@@ -1,0 +1,726 @@
+/* Layout and states. All values come from tokens in theme.py. Streamlit is reached only through
+   data-testid hooks and st-key-* classes; everything else below uses this file's own classes.
+   Google Sans comes from the official release (OFL-1.1), subset to Latin and served from
+   src/static; without static serving the stack falls back to the system font. */
+@font-face {
+  font-family: "Google Sans";
+  src: url("app/static/fonts/google-sans.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Google Sans";
+  src: url("app/static/fonts/google-sans-italic.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Shell */
+.stApp,
+.stApp p, .stApp li, .stApp td, .stApp th, .stApp label, .stApp summary,
+.stApp h1, .stApp h2, .stApp h3, .stApp h4,
+.stApp button, .stApp input, .stApp textarea,
+[data-testid="stPopoverBody"] p, [data-testid="stPopoverBody"] label,
+[data-testid="stPopoverBody"] input, [data-testid="stPopoverBody"] button,
+.stApp [data-testid="stMarkdownContainer"], .stApp [data-testid="stCaptionContainer"],
+.stApp [data-testid="stText"], .stApp [data-testid="stText"] * {
+  font-family: var(--font-ui) !important;
+}
+/* The page is neutral; the sidebar sits directly on it and the conversation lives in one raised
+   panel: Streamlit's own scrolling section, so messages and composer stay inside it. */
+.stApp,
+[data-testid="stAppViewContainer"] { background: var(--c-app); color: var(--c-text); }
+section.stMain {
+  height: calc(100dvh - 2 * var(--gap-panel));
+  margin: var(--gap-panel) var(--gap-panel) var(--gap-panel) var(--s-2);
+  background: var(--c-bg);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-panel);
+  box-shadow: var(--panel-shadow);
+}
+.stApp:has([data-testid="stSidebar"][aria-expanded="false"]) section.stMain { margin-left: var(--gap-panel); }
+[data-testid="stBottom"],
+[data-testid="stBottom"] > div { background: var(--c-bg); color: var(--c-text); }
+[data-testid="stHeader"] { background: transparent; }
+[data-testid="stDecoration"],
+[data-testid="stStatusWidget"] { display: none; }
+#last-turn { scroll-margin-top: var(--s-7); }
+[data-testid="stMainBlockContainer"] {
+  max-width: var(--w-read);
+  padding: var(--s-7) var(--s-5) var(--s-6);
+}
+[data-testid="stMainBlockContainer"],
+[data-testid="stMainBlockContainer"] p,
+[data-testid="stMainBlockContainer"] li { font-size: var(--fs-md); }
+[data-testid="stBottomBlockContainer"] {
+  max-width: var(--w-read);
+  padding: var(--s-2) var(--s-5) var(--s-2);
+}
+/* Invisible helpers; their wrappers leave the flow too, so they add no gap between blocks. */
+[data-testid="stVerticalBlockBorderWrapper"]:has(> div > .st-key-ufpi_scripts),
+.st-key-ufpi_style,
+.st-key-ufpi_scripts {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+[data-testid="stMarkdownContainer"] { margin-bottom: 0 !important; }
+
+
+/* Sidebar */
+[data-testid="stSidebar"] { background: var(--c-surface); border-right: 0; }
+[data-testid="stSidebar"][aria-expanded="true"] {
+  width: var(--w-sidebar) !important;
+  min-width: var(--w-sidebar) !important;
+}
+[data-testid="stSidebarHeader"] { padding: var(--s-3) var(--s-3) 0; }
+[data-testid="stSidebarCollapseButton"] { display: block !important; visibility: visible !important; }
+[data-testid="stSidebarCollapseButton"] button,
+[data-testid="stSidebarCollapsedControl"] button { color: var(--c-muted); }
+[data-testid="stSidebarUserContent"] { padding: 0 var(--s-3) var(--s-5); }
+[data-testid="stSidebarUserContent"] [data-testid="stVerticalBlock"] { gap: var(--s-1); }
+
+.ufpi-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  margin: var(--s-2) 0 var(--s-4);
+  padding: var(--s-3) var(--s-4) var(--s-3) var(--s-3);
+  background: var(--c-raised);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+}
+.ufpi-brand .ufpinho { --ufpinho-size: 3.25rem; }
+.ufpi-brand-text { display: flex; flex-direction: column; min-width: 0; }
+.ufpi-brand-name {
+  font-family: var(--font-title);
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--c-brand-deep);
+}
+.ufpi-brand-role { font-size: var(--fs-sm); line-height: 1.3; color: var(--c-muted); }
+.ufpi-section-label {
+  margin: var(--s-4) 0 var(--s-1);
+  padding: 0 var(--s-2);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--c-muted);
+}
+.ufpi-sidebar-note {
+  margin: var(--s-3) 0 0;
+  padding: 0 var(--s-2);
+  font-size: var(--fs-xs);
+  line-height: 1.45;
+  color: var(--c-muted);
+}
+
+.stButton button,
+[data-testid="stPopover"] button {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--r-sm);
+  color: var(--c-text);
+  min-height: 2.25rem;
+  box-shadow: none;
+}
+.stButton button p, [data-testid="stPopover"] button p { font-size: var(--fs-sm); }
+.stButton button:active:not(:disabled),
+.stButton button:focus:not(:active) { color: var(--c-text); border-color: transparent; }
+.stButton button:disabled,
+[data-testid="stPopover"] button:disabled {
+  color: var(--c-muted);
+  opacity: 0.65;
+  background: transparent;
+  border-color: transparent;
+}
+.stApp :focus-visible,
+[data-testid="stPopoverBody"] :focus-visible {
+  outline: 2px solid var(--c-accent) !important;
+  outline-offset: 1px;
+  box-shadow: none !important;
+}
+
+.st-key-new_conversation button,
+.st-key-new_conversation button:focus:not(:active),
+.st-key-new_conversation button:active:not(:disabled) {
+  min-height: var(--h-touch);
+  border-radius: var(--r-md);
+  background: var(--c-brand);
+  border-color: var(--c-brand);
+  color: var(--c-on-brand);
+  font-weight: 600;
+  box-shadow: var(--brand-shadow);
+}
+.st-key-new_conversation button p { font-size: var(--fs-md); font-weight: 600; }
+.st-key-new_conversation button:disabled { background: var(--c-brand); color: var(--c-on-brand); }
+[class*="st-key-conv_row_"] [data-testid="stHorizontalBlock"] {
+  flex-wrap: nowrap;
+  gap: 0;
+  align-items: center;
+  border-radius: var(--r-sm);
+}
+[class*="st-key-conv_row_"] [data-testid="stColumn"] { min-width: 0 !important; width: auto !important; }
+[class*="st-key-conv_row_"] [data-testid="stColumn"]:first-child { flex: 1 1 auto !important; }
+[class*="st-key-conv_row_"] [data-testid="stColumn"]:last-child { flex: 0 0 2.25rem !important; }
+[class*="st-key-conv_open_"] button { justify-content: flex-start; text-align: left; padding: 0 var(--s-2); }
+[class*="st-key-conv_open_"] button > div { min-width: 0; justify-content: flex-start; }
+[class*="st-key-conv_open_"] button p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: var(--fs-sm);
+}
+[class*="st-key-conv_open_active_"] button { background: var(--c-selected); }
+[class*="st-key-conv_open_active_"] button p { font-weight: 600; color: var(--c-brand-deep); }
+[class*="st-key-conv_menu_"] button {
+  padding: 0;
+  width: 2.25rem;
+  min-width: 2.25rem;
+  color: var(--c-muted);
+}
+[class*="st-key-conv_menu_"] button [data-testid="stIconMaterial"]:last-child:not(:first-child),
+[class*="st-key-conv_menu_"] button > div + div { display: none; }
+
+[data-testid="stPopoverBody"],
+[data-baseweb="popover"] > div {
+  background: var(--c-raised) !important;
+  color: var(--c-text);
+  border-radius: var(--r-md);
+}
+[data-testid="stPopoverBody"] { border: 1px solid var(--c-border); box-shadow: 0 4px 16px rgb(0 0 0 / 10%); }
+[data-testid="stPopoverBody"] label,
+[data-testid="stPopoverBody"] p { color: var(--c-text); font-size: var(--fs-sm); }
+[data-testid="stTextInput"] [data-baseweb="input"],
+[data-testid="stTextInput"] [data-baseweb="base-input"] {
+  background: var(--c-bg) !important;
+  border-color: var(--c-border-strong) !important;
+}
+[data-testid="stTextInput"] [data-baseweb="input"]:focus-within { border-color: var(--c-accent) !important; }
+[data-testid="stTextInput"] input { color: var(--c-text) !important; caret-color: var(--c-text); }
+[data-testid="InputInstructions"] { color: var(--c-muted); }
+[class*="st-key-conv_delete_confirm_"] button { color: var(--c-danger); border-color: var(--c-danger); }
+
+/* Theme toggle: icon only, on the sidebar's top row beside the collapse control */
+[data-testid="stSidebarUserContent"] { position: relative; }
+.st-key-theme_control { position: absolute; top: -2.125rem; right: 2.5rem; width: 2.25rem !important; z-index: 1; }
+.st-key-theme_control [data-testid="stElementContainer"],
+.st-key-theme_control .stButton { width: 100% !important; }
+.st-key-theme_control button {
+  width: 2.25rem;
+  min-width: 2.25rem;
+  padding: 0;
+  color: var(--c-muted);
+}
+.st-key-theme_control button p {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+/* Home: figure, greeting, lead and composer, one column centred in the panel. */
+.stApp:has(.st-key-empty_state) [data-testid="stMainBlockContainer"] { max-width: 52rem; padding-top: var(--s-5); }
+.st-key-empty_state {
+  /* The panel minus its padding and the notice below: the home fits without scrolling. */
+  min-height: calc(100dvh - 2 * var(--gap-panel) - 10.5rem);
+  justify-content: center;
+  align-items: center;
+  gap: var(--s-2);
+  text-align: center;
+}
+.st-key-empty_state > * { width: 100%; }
+.st-key-empty_state .ufpinho-home { margin-bottom: var(--s-1); }
+[data-testid="stMarkdownContainer"] h1.ufpi-greeting {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-title) !important;
+  font-size: var(--fs-title);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--c-text);
+}
+/* Only the name carries the gradient. */
+.ufpi-name-gradient {
+  background: linear-gradient(105deg, var(--grad-from) 0%, var(--grad-mid) 55%, var(--grad-to) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@media (forced-colors: active) {
+  .ufpi-name-gradient { background: none; color: CanvasText; }
+}
+[data-testid="stMarkdownContainer"] p.ufpi-empty-lead {
+  max-width: 32rem;
+  margin: 0 auto;
+  font-size: var(--fs-lg);
+  line-height: 1.5;
+  color: var(--c-muted);
+}
+.st-key-empty_state > :has(> div > .st-key-home_composer) { max-width: 46rem; margin: var(--s-5) auto 0; }
+.st-key-home_composer [data-testid="stElementContainer"],
+.st-key-home_composer [data-testid="stChatInput"] { width: 100% !important; }
+/* Medium heights: a smaller figure and tighter spacing keep the whole home inside the panel. */
+@media (max-height: 820px) {
+  .st-key-empty_state { gap: var(--s-1); }
+  .st-key-empty_state .ufpinho-home { --ufpinho-size: 8.5rem; }
+  .st-key-empty_state > :has(> div > .st-key-home_composer) { margin-top: var(--s-3); }
+}
+/* Too short to stack everything: the figure leaves. */
+@media (max-height: 620px) {
+  .st-key-empty_state { min-height: 0; }
+  .ufpinho-home { display: none; }
+}
+
+/* Messages */
+[class*="st-key-msg_"] { margin-bottom: var(--s-5); }
+[data-testid="stChatMessage"] { background: transparent; padding: 0; gap: var(--s-3); color: var(--c-text); }
+[data-testid="stChatMessageAvatarUser"],
+[data-testid="stChatMessageAvatarAssistant"],
+[data-testid="stChatMessageAvatarCustom"] { display: none; }
+/* The assistant's face sits in a gutter beside its message; it takes no height in the column. */
+[class*="st-key-msg_ai"] [data-testid="stChatMessage"] { padding-left: 3.5rem; }
+[class*="st-key-msg_ai"] [data-testid="stElementContainer"]:has(.ufpinho-chat) {
+  position: static;
+  height: 0;
+  margin-top: calc(var(--s-3) * -1);
+}
+[class*="st-key-msg_ai"] .ufpinho-chat { position: absolute; left: -3.5rem; top: -0.375rem; }
+[data-testid="stChatMessageContent"] { min-width: 0; width: 100%; }
+[data-testid="stChatMessageContent"] [data-testid="stVerticalBlock"] { gap: var(--s-3); }
+[class*="st-key-msg_human"] [data-testid="stChatMessage"] {
+  width: fit-content;
+  max-width: min(85%, 36rem);
+  margin-left: auto;
+  padding: var(--s-2) var(--s-3);
+  border-radius: var(--r-lg);
+  background: var(--c-bubble);
+}
+/* Streamlit pins an inline width on elements; inside a fit-content bubble it would go stale. */
+[class*="st-key-msg_human"] [data-testid="stChatMessageContent"],
+[class*="st-key-msg_human"] [data-testid="stChatMessageContent"] [data-testid="stVerticalBlock"],
+[class*="st-key-msg_human"] [data-testid="stElementContainer"],
+[class*="st-key-msg_human"] [data-testid="stText"] { width: auto !important; }
+[class*="st-key-msg_human"] [data-testid="stText"] {
+  font-family: var(--font-ui);
+  font-size: var(--fs-md);
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: var(--c-text);
+}
+
+[data-testid="stChatMessageContent"] [data-testid="stMarkdownContainer"] {
+  color: var(--c-text);
+  line-height: 1.65;
+  overflow-wrap: break-word;
+}
+[data-testid="stChatMessageContent"] [data-testid="stMarkdownContainer"] > :last-child { margin-bottom: 0; }
+[data-testid="stChatMessageContent"] [data-testid="stMarkdownContainer"] p,
+[data-testid="stChatMessageContent"] [data-testid="stMarkdownContainer"] li { font-size: var(--fs-md); }
+[data-testid="stChatMessageContent"] h1,
+[data-testid="stChatMessageContent"] h2,
+[data-testid="stChatMessageContent"] h3,
+[data-testid="stChatMessageContent"] h4 {
+  color: var(--c-text);
+  font-weight: 600;
+  letter-spacing: 0;
+  padding: var(--s-3) 0 var(--s-1);
+}
+[data-testid="stChatMessageContent"] h1 { font-size: 1.3125rem; }
+[data-testid="stChatMessageContent"] h2 { font-size: 1.125rem; }
+[data-testid="stChatMessageContent"] h3,
+[data-testid="stChatMessageContent"] h4 { font-size: var(--fs-md); }
+[data-testid="stHeaderActionElements"] { display: none; }
+[data-testid="stChatMessageContent"] a { color: var(--c-link); }
+[data-testid="stChatMessageContent"] code {
+  background: var(--c-surface);
+  color: var(--c-text);
+  border-radius: 0.25rem;
+  padding: 0.1em 0.3em;
+  font-size: 0.875em;
+}
+[data-testid="stChatMessageContent"] table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: var(--s-3) 0;
+  font-size: var(--fs-sm);
+  color: var(--c-text);
+}
+[data-testid="stChatMessageContent"] th,
+[data-testid="stChatMessageContent"] td {
+  border: 0;
+  border-bottom: 1px solid var(--c-border);
+  padding: var(--s-2) var(--s-3);
+  text-align: left;
+  vertical-align: top;
+  min-width: 7rem;
+  color: var(--c-text);
+}
+[data-testid="stChatMessageContent"] th { font-weight: 600; border-bottom-color: var(--c-border-strong); }
+
+/* Actions: shown only once the page script can make them work */
+.ufpi-actions { display: none; margin-top: calc(var(--s-2) * -1); }
+.ufpi-enhanced .ufpi-actions { display: flex; }
+.ufpi-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-1);
+  min-height: 2rem;
+  padding: 0 var(--s-2);
+  margin-left: calc(var(--s-2) * -1);
+  border: 0;
+  border-radius: var(--r-sm);
+  background: transparent;
+  color: var(--c-muted);
+  font-size: var(--fs-xs);
+  cursor: pointer;
+}
+.ufpi-icon { flex: none; width: 1rem; height: 1rem; fill: none; stroke: currentcolor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
+/* States */
+[data-testid="stCaptionContainer"] { color: var(--c-muted); }
+.ufpi-note { display: block; font-size: var(--fs-sm); line-height: 1.5; color: var(--c-muted); }
+.ufpi-note strong { font-weight: 600; color: var(--c-text); }
+.ufpi-note-caution {
+  padding-left: var(--s-3);
+  border-left: 3px solid var(--c-highlight);
+}
+
+[data-testid="stAlert"] [data-testid="stAlertContainer"] {
+  border-radius: var(--r-md);
+  padding: var(--s-3) var(--s-4);
+  border-left: 2px solid currentcolor;
+}
+[data-testid="stAlertContentWarning"],
+[data-testid="stAlertContentWarning"] p { color: var(--c-warn); }
+[data-testid="stAlertContentError"],
+[data-testid="stAlertContentError"] p { color: var(--c-danger); }
+[data-testid="stAlertContainer"]:has([data-testid="stAlertContentWarning"]) { background: var(--c-warn-soft); color: var(--c-warn); }
+[data-testid="stAlertContainer"]:has([data-testid="stAlertContentError"]) { background: var(--c-danger-soft); color: var(--c-danger); }
+.st-key-retry_turn button { border-color: var(--c-border-strong); }
+
+.ufpi-progress {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  font-size: var(--fs-sm);
+  color: var(--c-muted);
+}
+/* Shimmer: a soft band of light crosses the label while the question is being processed. The base
+   colour alone already reads at 4.5:1; only the narrow band is lighter. It lives and ends with the
+   progress element itself (removed when any answer, clarification or error is shown), so it needs
+   no timer of its own. */
+.ufpi-progress-label {
+  background: linear-gradient(100deg, var(--shimmer-base) 38%, var(--shimmer-light) 50%, var(--shimmer-base) 62%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: ufpi-shimmer 2.2s linear infinite;
+}
+@keyframes ufpi-shimmer {
+  from { background-position: 100% 0; }
+  to { background-position: 0% 0; }
+}
+/* Presentation of a freshly received answer (presentation.js). Attributes, not classes: Streamlit
+   rewrites its blocks' classes when it renders again. A part not presented yet takes no space; the
+   original text, while its visual copy is being built, is kept for assistive technology only. */
+[data-ufpi-wait] { display: none !important; }
+[data-ufpi-held] {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+}
+[data-ufpi-enter] { animation: ufpi-enter 200ms ease-out both; }
+@keyframes ufpi-enter {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce), (forced-colors: active) {
+  .ufpi-progress-label {
+    animation: none;
+    background: none;
+    color: var(--shimmer-base);
+    -webkit-text-fill-color: currentcolor;
+  }
+  [data-ufpi-enter] { animation: none; }
+}
+
+/* Normative sources */
+.ufpi-sources { font-size: var(--fs-sm); }
+.ufpi-sources summary { cursor: pointer; border-radius: var(--r-sm); }
+.ufpi-sources > summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 var(--s-2);
+  width: fit-content;
+  max-width: 100%;
+  padding: var(--s-1) var(--s-2);
+  margin-left: calc(var(--s-2) * -1);
+  color: var(--c-muted);
+}
+.ufpi-sources > summary::before,
+.ufpi-ref > summary::before {
+  content: "";
+  flex: none;
+  align-self: center;
+  width: 0.4em;
+  height: 0.4em;
+  margin: 0 var(--s-1) 0 0.1em;
+  border-right: 1.5px solid var(--c-muted);
+  border-bottom: 1.5px solid var(--c-muted);
+  transform: rotate(-45deg);
+}
+.ufpi-sources[open] > summary::before,
+.ufpi-ref[open] > summary::before { transform: rotate(45deg); }
+.ufpi-sources > summary::-webkit-details-marker,
+.ufpi-ref > summary::-webkit-details-marker { display: none; }
+.ufpi-sources-title { font-weight: 600; color: var(--c-text); }
+.ufpi-sources-count { font-size: var(--fs-xs); }
+.ufpi-sources-hint { margin: var(--s-1) 0 var(--s-3); font-size: var(--fs-xs) !important; line-height: 1.45; color: var(--c-muted); }
+.ufpi-norm {
+  margin-bottom: var(--s-2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+.ufpi-norm-head {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  padding: var(--s-2) var(--s-3);
+  background: var(--c-tint);
+  color: var(--c-link);
+}
+.ufpi-norm-title { margin: 0; font-size: var(--fs-sm) !important; font-weight: 600; color: var(--c-text); }
+.ufpi-ref + .ufpi-ref { border-top: 1px solid var(--c-border); }
+.ufpi-ref > summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 var(--s-2);
+  padding: var(--s-2) var(--s-3);
+  min-height: var(--h-touch);
+  box-sizing: border-box;
+  border-radius: 0;
+}
+.ufpi-ref-title { color: var(--c-text); font-weight: 500; }
+.ufpi-ref-tag { font-size: var(--fs-xs); color: var(--c-warn); }
+.ufpi-ref-label { margin: 0 var(--s-3) var(--s-1); font-size: var(--fs-xs) !important; font-weight: 600; color: var(--c-muted); }
+.ufpi-ref-text {
+  max-height: 20rem;
+  overflow-y: auto;
+  margin: 0 var(--s-3) var(--s-3);
+  padding: var(--s-1) var(--s-3);
+  border-left: 2px solid var(--c-border-strong);
+  font-size: var(--fs-sm);
+  line-height: 1.55;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: var(--c-text);
+}
+.ufpi-ref-missing { margin: 0 var(--s-3) var(--s-3); font-size: var(--fs-xs) !important; color: var(--c-muted); }
+@media (hover: hover) {
+  .stButton button:hover:not(:disabled),
+  [data-testid="stPopover"] button:hover:not(:disabled) {
+    background: var(--c-hover);
+    border-color: transparent;
+    color: var(--c-text);
+  }
+  .st-key-new_conversation button:hover:not(:disabled) {
+    background: var(--c-brand);
+    border-color: var(--c-interact);
+    color: var(--c-on-brand);
+  }
+  .ufpi-sources > summary:hover,
+  .ufpi-ref > summary:hover,
+  .ufpi-copy:hover { background: var(--c-hover); }
+}
+
+/* Composer: the text grows upward from a compact start; send stays in the bottom-right corner on
+   its own row, so text never runs under it. Past the maximum the text scrolls inside. */
+[data-testid="stChatInput"] {
+  position: relative;
+  box-sizing: border-box;
+  padding: var(--s-2) var(--s-2) 3.25rem var(--s-2);
+  background: var(--c-raised);
+  border: 1px solid var(--c-composer-border);
+  border-radius: var(--r-xl);
+  box-shadow: var(--composer-shadow);
+}
+[data-testid="stChatInput"]:focus-within { border-color: var(--c-brand) !important; }
+[data-testid="stBottom"] [data-testid="stChatInput"] { margin-bottom: var(--s-2); }
+[data-testid="stChatInput"] [data-baseweb="textarea"],
+[data-testid="stChatInput"] [data-baseweb="base-input"] {
+  background: transparent !important;
+  border: 0 !important;
+}
+/* The text area must fit inside the composer: wider, its right edge (where the scrollbar lives)
+   was clipped by Streamlit's wrapper. */
+[data-testid="stChatInput"] [data-baseweb="textarea"],
+[data-testid="stChatInput"] [data-baseweb="base-input"] { width: 100%; min-width: 0; }
+[data-testid="stChatInputTextArea"] {
+  box-sizing: border-box;
+  width: 100% !important;
+  /* Two lines: on a phone the placeholder wraps and must not be cut. */
+  min-height: 3rem;
+  max-height: 13.75rem;
+  resize: none;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  /* A real, native scrollbar once the text passes the maximum height. Streamlit's page-wide
+     WebKit rule paints the thumb only on hover; the standard properties take precedence. */
+  scrollbar-width: thin;
+  scrollbar-color: var(--c-border-strong) transparent;
+  overscroll-behavior: contain;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+  color: var(--c-text);
+  background: transparent;
+  caret-color: var(--c-text);
+  font-size: 1rem;
+}
+[data-testid="stChatInputTextArea"]::placeholder { color: var(--c-muted); opacity: 1; }
+[data-testid="stChatInputTextArea"]:focus-visible { outline: none !important; }
+/* Streamlit anchors the button to the text row; anchoring it to the composer puts it below the
+   text, in the corner, whatever the text's height. */
+[data-testid="stChatInput"] > div { position: static; }
+[data-testid="stChatInput"] > div > div:has(> [data-testid="stChatInputSubmitButton"]) {
+  top: auto;
+  right: var(--s-3);
+  bottom: var(--s-2);
+  height: auto;
+}
+[data-testid="stChatInputSubmitButton"] {
+  position: static;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0;
+  border-radius: 50%;
+  background: var(--c-interact) !important;
+  color: var(--c-on-interact) !important;
+}
+[data-testid="stChatInputSubmitButton"] svg { fill: currentcolor; }
+[data-testid="stChatInputSubmitButton"]:disabled { background: var(--c-border) !important; color: var(--c-muted) !important; }
+[data-testid="stChatInputSubmitButton"]:focus-visible { outline-offset: 2px; }
+.ufpi-research-notice { margin: var(--s-1) 0 0; text-align: center; font-size: var(--fs-xs); line-height: 1.4; color: var(--c-muted); }
+[data-testid="stBottomBlockContainer"] [data-testid="stVerticalBlock"] { gap: 0; }
+
+/* Go to the latest message: a page-script button above the composer, centred on the panel. */
+.ufpi-jump {
+  position: fixed;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: -1.25rem;
+  padding: 0;
+  border: 1px solid var(--c-border);
+  border-radius: 50%;
+  background: var(--c-raised);
+  color: var(--c-text);
+  box-shadow: var(--control-shadow);
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 160ms ease, transform 160ms ease, visibility 0s linear 160ms;
+}
+.ufpi-jump.is-visible { visibility: visible; opacity: 1; transform: none; transition: opacity 160ms ease, transform 160ms ease; }
+.ufpi-jump svg { width: 1.25rem; height: 1.25rem; fill: none; stroke: currentcolor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.ufpi-jump:focus-visible { outline: 2px solid var(--c-accent); outline-offset: 2px; }
+@media (hover: hover) { .ufpi-jump:hover { background: var(--c-hover); } }
+
+/* Responsive */
+@media (max-width: 768px) {
+  /* On a phone the panel is the whole screen: no outer margin, corners or frame. */
+  section.stMain,
+  .stApp:has([data-testid="stSidebar"][aria-expanded="false"]) section.stMain {
+    height: 100dvh;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  [data-testid="stMarkdownContainer"] h1.ufpi-greeting { font-size: 1.75rem; }
+  [data-testid="stMarkdownContainer"] p.ufpi-empty-lead { font-size: var(--fs-md); }
+  /* Centred in the screen as on the desktop, between the top bar and the notice. */
+  .st-key-empty_state { min-height: calc(100dvh - 11rem); padding-top: 0; }
+  .st-key-home_composer { margin-top: var(--s-4); }
+  [data-testid="stHeader"] { background: var(--c-bg); height: var(--s-7); }
+  [data-testid="stSidebarCollapsedControl"] { top: var(--s-1); left: var(--s-1); }
+  [data-testid="stMainBlockContainer"] { padding: var(--s-7) var(--s-4) var(--s-4); }
+  [data-testid="stBottomBlockContainer"] { padding: var(--s-2) var(--s-3) var(--s-2); }
+  .stButton button,
+  [data-testid="stPopover"] button { min-height: var(--h-touch); }
+  [class*="st-key-conv_row_"] [data-testid="stColumn"]:last-child { flex-basis: var(--h-touch) !important; }
+  [class*="st-key-conv_menu_"] button { width: var(--h-touch); min-width: var(--h-touch); }
+  .st-key-theme_control { top: -2.375rem; width: var(--h-touch) !important; }
+  .st-key-theme_control button { width: var(--h-touch); min-width: var(--h-touch); }
+  [class*="st-key-msg_human"] [data-testid="stChatMessage"] { max-width: 90%; }
+  [class*="st-key-msg_ai"] [data-testid="stChatMessage"] { padding-left: 3rem; }
+  [class*="st-key-msg_ai"] .ufpinho-chat { left: -3rem; }
+  .ufpi-copy { min-height: var(--h-touch); }
+
+  /* Drawer: Streamlit lays the open sidebar beside the page, which squeezed the chat to a few
+     dozen pixels. Here it floats over the page instead, so the chat keeps its full width. */
+  [data-testid="stSidebar"][aria-expanded="true"] {
+    position: fixed !important;
+    inset: 0 auto 0 0;
+    height: 100dvh;
+    width: min(300px, 85vw) !important;
+    min-width: min(300px, 85vw) !important;
+    max-width: min(300px, 85vw) !important;
+    z-index: 1000001;
+    box-shadow: 0 0 2rem rgb(0 0 0 / 0.28);
+    animation: ufpi-drawer-in 240ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  [data-testid="stSidebarContent"] { overscroll-behavior: contain; }
+  /* Backdrop: dims the page; a tap on it closes the drawer (page script). */
+  .stApp:has([data-testid="stSidebar"][aria-expanded="true"]) [data-testid="stAppViewContainer"]::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 1000000;
+    background: rgb(4 12 32 / 0.42);
+    animation: ufpi-backdrop-in 240ms ease;
+  }
+  /* The page behind does not scroll while the drawer is open; the drawer scrolls on its own. */
+  .stApp:has([data-testid="stSidebar"][aria-expanded="true"]) section.stMain { overflow: hidden !important; }
+  /* The conversation menu (the app's only popover) is placed beside its button and is 320 px
+     wide, which ran past a phone's edge and widened the page. On phones it becomes a sheet at the
+     bottom of the screen, above the drawer, within the screen's width. */
+  [data-baseweb="popover"] {
+    position: fixed !important;
+    inset: auto auto var(--s-3) var(--s-3) !important;
+    transform: none !important;
+    z-index: 1000002 !important;
+  }
+  [data-testid="stPopoverBody"] {
+    width: calc(100vw - 2 * var(--s-3)) !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+}
+@keyframes ufpi-drawer-in { from { transform: translateX(-100%); } to { transform: none; } }
+@keyframes ufpi-backdrop-in { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .stApp * { scroll-behavior: auto !important; transition: none !important; }
+  [data-testid="stSidebar"],
+  [data-testid="stAppViewContainer"]::after { animation: none !important; }
+}

@@ -1,0 +1,36 @@
+{
+  "initial": {
+    "first_run": "70 setup errors, absent modules",
+    "corrected_run": "70 expected failures, absent modules",
+    "artifact": "tdd_red_verified.txt",
+    "red_commit": "986f421"
+  },
+  "cycles": [
+    {
+      "red": "70 failed",
+      "green": "70 passed",
+      "scope": "Initial public/persistence contract and facade"
+    },
+    {
+      "red": "2 failed,1 passed",
+      "green": "73 passed",
+      "scope": "Provider subclass category, inconsistent clarification, cancellation characterization"
+    },
+    {
+      "red": "3 failed,73 deselected",
+      "green": "76 passed",
+      "scope": "Malformed private audit and forbidden nested provenance keys"
+    }
+  ],
+  "checkpoint_characterization": {
+    "added_after_existing_public_private_behavior_green": true,
+    "tests": 3,
+    "final_focused": 79
+  },
+  "fixture_corrections": [
+    "Initial setup errors changed to failures on missing modules before production",
+    "normative_status uses actual enum desconhecida",
+    "requested_time_context fixture aligned to actual TemporalIntent projection"
+  ],
+  "real_provider_calls": 0
+}

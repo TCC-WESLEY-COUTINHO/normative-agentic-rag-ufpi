@@ -1,0 +1,399 @@
+[
+  {
+    "kind": "separate manual operational smoke; real provider; not scientific evaluation",
+    "case": "explicit_post",
+    "question": "como entrar na pós?",
+    "status": "ANSWER",
+    "domain": "pos_graduacao",
+    "agent_id": "chatbot_ufpi_integrated_v1",
+    "source_regions": 1,
+    "source_labels": [
+      "Trechos normativos recuperados"
+    ],
+    "message": {
+      "type": "ai",
+      "content": "Para Resolução 956/2025, o conjunto documental utilizado não permite certificar a vigência atual.\n\nPara ingressar em um programa de pós-graduação na UFPI, o candidato deve participar de um processo seletivo conduzido por uma Comissão de Seleção, designada pelo Colegiado Simples, com base no edital e no Regimento Interno do Programa de Pós-Graduação (PPG). O processo seletivo compreende, no mínimo, as seguintes etapas: prova de conhecimento (facultativa e eliminatória), entrevista ou análise de pré-projeto (obrigatória e eliminatória), análise do currículo vitae (obrigatória e classificatória), e outras etapas previstas no edital ou no Regimento Interno. Os critérios de pontuação para a análise do currículo são detalhados no edital, considerando as especificidades da área, as produções e as experiências profissionais. O edital deve conter, no mínimo, dados de identificação do PPG, período de duração e nível do curso, número de vagas ofertadas, procedimentos de inscrição, etapas do processo seletivo, critérios de avaliação e de desempate, calendário completo do processo, indicação de referencial teórico ou bibliografia, quando aplicável, e especificidades das vagas destinadas às ações afirmativas, se houver. Os candidatos devem formalizar a inscrição conforme o edital, apresentando os documentos exigidos: para o Mestrado, diploma, certidão ou declaração de matrícula no último semestre do curso de graduação, histórico escolar da graduação e currículo Lattes comprovado; para o Doutorado, diploma de Mestrado ou declaração de que defenderá a dissertação antes da matrícula institucional, currículo Lattes comprovado e currículo vitae comprovado para candidatos estrangeiros. Após a seleção, os candidatos aprovados são classificados conforme a ordem final de classificação, e a lista nominal é publicada com respeito ao anonimato, utilizando apenas o número de inscrição no SIGAA. Após a aprovação, o discente realiza a matrícula institucional no ingresso, realizada na Coordenação do PPG, conforme o Calendário Acadêmico da Pós-Graduação, e a matrícula curricular, obrigatória e realizada semestralmente, observando os prazos do Calendário Acadêmico.",
+      "normative_result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Para Resolução 956/2025, o conjunto documental utilizado não permite certificar a vigência atual.\n\nPara ingressar em um programa de pós-graduação na UFPI, o candidato deve participar de um processo seletivo conduzido por uma Comissão de Seleção, designada pelo Colegiado Simples, com base no edital e no Regimento Interno do Programa de Pós-Graduação (PPG). O processo seletivo compreende, no mínimo, as seguintes etapas: prova de conhecimento (facultativa e eliminatória), entrevista ou análise de pré-projeto (obrigatória e eliminatória), análise do currículo vitae (obrigatória e classificatória), e outras etapas previstas no edital ou no Regimento Interno. Os critérios de pontuação para a análise do currículo são detalhados no edital, considerando as especificidades da área, as produções e as experiências profissionais. O edital deve conter, no mínimo, dados de identificação do PPG, período de duração e nível do curso, número de vagas ofertadas, procedimentos de inscrição, etapas do processo seletivo, critérios de avaliação e de desempate, calendário completo do processo, indicação de referencial teórico ou bibliografia, quando aplicável, e especificidades das vagas destinadas às ações afirmativas, se houver. Os candidatos devem formalizar a inscrição conforme o edital, apresentando os documentos exigidos: para o Mestrado, diploma, certidão ou declaração de matrícula no último semestre do curso de graduação, histórico escolar da graduação e currículo Lattes comprovado; para o Doutorado, diploma de Mestrado ou declaração de que defenderá a dissertação antes da matrícula institucional, currículo Lattes comprovado e currículo vitae comprovado para candidatos estrangeiros. Após a seleção, os candidatos aprovados são classificados conforme a ordem final de classificação, e a lista nominal é publicada com respeito ao anonimato, utilizando apenas o número de inscrição no SIGAA. Após a aprovação, o discente realiza a matrícula institucional no ingresso, realizada na Coordenação do PPG, conforme o Calendário Acadêmico da Pós-Graduação, e a matrícula curricular, obrigatória e realizada semestralmente, observando os prazos do Calendário Acadêmico.",
+        "references": [
+          {
+            "chunk_id": "ufpi-956-2025-art-31-idx-000029",
+            "norm_id": "ufpi-956-2025",
+            "source": "Resolução CEPEX/UFPI nº 956/2025",
+            "article": "31",
+            "validated_subdivision": null,
+            "display_text": "Resolução 956/2025, art. 31",
+            "temporal_role": "eligible",
+            "evidence_text": "Art. 31. A matrícula classifica-se em:\n- | -institucional: a que assegura ao candidato aprovado a condição de membro do corpo discente da UFPI; e\n- Il -curricular: a que assegura ao discente regular o direito de cursar o currículo para obtenção do diploma de Mestrado ou de Doutorado.\n- $ 1º A matrícula institucional é feita no ingresso do discente, realizada na Coordenação do PPG, conforme o Calendário Acadêmico da Pós-Graduação.\n- 8 2º A matrícula curricular é obrigatória e deve ser realizada semestralmente, observados os prazos do Calendário Acadêmico."
+          },
+          {
+            "chunk_id": "ufpi-956-2025-art-26-idx-000025",
+            "norm_id": "ufpi-956-2025",
+            "source": "Resolução CEPEX/UFPI nº 956/2025",
+            "article": "26",
+            "validated_subdivision": null,
+            "display_text": "Resolução 956/2025, art. 26",
+            "temporal_role": "eligible",
+            "evidence_text": "Art. 26. A seleção dos candidatos é feita por uma Comissão de Seleção, designada pelo Colegiado Simples, com base no Regimento Interno e no edital, mediante as seguintes etapas:\n- | -prova de conhecimento, facultativa e eliminatória;\n- Il -entrevista ou análise de pré-projeto, obrigatória e eliminatória;\n- 111 -análise de curriculum vitae, obrigatória e classificatória; e\n- IV -outras etapas, desde que previstas no Regimento Interno ou no edital.\n- $ 1º Os critérios de pontuação da análise do curriculum vitae (Inciso III) são detalhados no edital, considerando as especificidades da área, as produções e as experiências profissionais.\n- $ 2º Os PPGs podem utilizar Tecnologias Digitais de Comunicação e Informação -TDICs para a realização do processo seletivo.\n- $ 3º Os resultados parciais devem respeitar o anonimato, em observância ao disposto na Lei Geral de Proteção de Dados Pessoais em vigência no Brasil, listando-se os candidatos pelo número de inscrição no SIGAA.\n- $ 4º A lista nominal dos candidatos aprovados é publicada conforme a ordem final de classificação."
+          },
+          {
+            "chunk_id": "ufpi-956-2025-art-25-idx-000024",
+            "norm_id": "ufpi-956-2025",
+            "source": "Resolução CEPEX/UFPI nº 956/2025",
+            "article": "25",
+            "validated_subdivision": null,
+            "display_text": "Resolução 956/2025, art. 25",
+            "temporal_role": "eligible",
+            "evidence_text": "Art. 25. O edital deve conter, no mínimo:\n- | -dados de identificação do PPG;\n- 11 -período de duração e nível do curso;\n- Ill -número de vagas ofertadas;\n- IV -procedimentos de inscrição;\n- V -etapas do processo seletivo;\n- VI -critérios de avaliação e de desempate;\n- VII -calendário completo do processo, incluindo divulgação de resultados e prazos para recursos;\n- VIII -indicação de referencial teórico, bibliografia ou tema das provas, quando aplicável; e\n- IX -especificidades das vagas destinadas às ações afirmativas (pessoas com deficiência, pretas, pardas, indígenas, quilombolas e outras), se houver."
+          },
+          {
+            "chunk_id": "ufpi-956-2025-art-29-idx-000028",
+            "norm_id": "ufpi-956-2025",
+            "source": "Resolução CEPEX/UFPI nº 956/2025",
+            "article": "29",
+            "validated_subdivision": null,
+            "display_text": "Resolução 956/2025, art. 29",
+            "temporal_role": "eligible",
+            "evidence_text": "Art. 29. Os(as) discentes de cada PPG são classificados em uma das seguintes categorias:\n14. | -regulares: os aprovados em processo seletivo e matriculados nas atividades regulares do curso;\n15. Il -especiais: os que cursam apenas disciplinas isoladas, mediante aprovação da Coordenação."
+          },
+          {
+            "chunk_id": "ufpi-956-2025-art-27-idx-000026",
+            "norm_id": "ufpi-956-2025",
+            "source": "Resolução CEPEX/UFPI nº 956/2025",
+            "article": "27",
+            "validated_subdivision": null,
+            "display_text": "Resolução 956/2025, art. 27",
+            "temporal_role": "eligible",
+            "evidence_text": "Art. 27. Os candidatos a seleção devem formular pedido de inscrição conforme o edital, apresentando os seguintes documentos:\n- | -para o Mestrado:\n- a) diploma, certidão ou declaração de matrícula no último semestre do curso de graduação;\n- b) histórico escolar da graduação;\n\n- c) Curriculum lattes comprovado;\n- d) Curriculo Vitae comprovado para candidatos(as) estrangeiros;\n3. Il -para o Doutorado:\n- a) Diploma de Mestrado ou declaração de que defenderá a dissertação antes da matrícula institucional;\n- b) Curriculum lattes comprovado;\n- c) Curriculo Vitae comprovado para candidatos(as) estrangeiros; e"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "indeterminate",
+          "requested_time_context": {
+            "norm_ids": [],
+            "before_amendment": false,
+            "relation_query": null,
+            "article": null,
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-956-2025-art-31-idx-000029",
+              "source_norm": "ufpi-956-2025",
+              "source_article": "31",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-26-idx-000025",
+              "source_norm": "ufpi-956-2025",
+              "source_article": "26",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-25-idx-000024",
+              "source_norm": "ufpi-956-2025",
+              "source_article": "25",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-29-idx-000028",
+              "source_norm": "ufpi-956-2025",
+              "source_article": "29",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-956-2025-art-27-idx-000026",
+              "source_norm": "ufpi-956-2025",
+              "source_article": "27",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": false,
+            "must_not_claim_current_validity": false,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": false,
+            "must_not_present_successor_as_historical_predecessor": false,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": false,
+            "must_not_duplicate_superseded_wording": false,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Para Resolução 956/2025, o conjunto documental utilizado não permite certificar a vigência atual.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "STATUS_UNKNOWN",
+              "norm_id": "ufpi-956-2025",
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "regenerated",
+        "domain": "pos_graduacao",
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "c7acab29-7c8a-4b7b-89ac-29220560836c",
+        "error_code": null,
+        "safe_message": null
+      },
+      "grounded_followup_result": null,
+      "calculator_result": null,
+      "tool_calls": [],
+      "tool_call_id": null,
+      "run_id": "f5cebba7-0777-4a8a-85a2-5665a18ea91f",
+      "response_metadata": {},
+      "custom_data": {}
+    },
+    "passed": true,
+    "references": 5,
+    "evidence_details": 5,
+    "duplicate_source_sections": 0
+  },
+  {
+    "kind": "separate manual operational smoke; real provider; not scientific evaluation",
+    "case": "explicit_grad",
+    "question": "qual a média para passar na graduação?",
+    "status": "ANSWER",
+    "domain": "graduacao",
+    "agent_id": "chatbot_ufpi_integrated_v1",
+    "source_regions": 1,
+    "source_labels": [
+      "Trechos normativos recuperados"
+    ],
+    "message": {
+      "type": "ai",
+      "content": "Para Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nNão foi possível formular a resposta com segurança a partir das evidências disponíveis.",
+      "normative_result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ANSWER",
+        "answer": "Para Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.\n\nNão foi possível formular a resposta com segurança a partir das evidências disponíveis.",
+        "references": [
+          {
+            "chunk_id": "ufpi-177-2012-art-122-idx-000120",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "122",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 122",
+            "temporal_role": "eligible",
+            "evidence_text": "**Art. 122. A Média de Conclusão - MC é a média do rendimento escolar final obtido pelo aluno nos componentes curriculares em que obteve êxito, ponderadas pela carga horária discente dos componentes, conforme fórmula matemática definida no Anexo II deste Regulamento.**\n> Parágrafo único. No cálculo da MC, são levados em consideração os componentes curriculares aproveitados ou cursados pelo aluno com aprovação durante o curso de graduação, excetuando-se os trancamentos, reprovações e cancelamentos de matrícula, os componentes curriculares dispensados, as atividades complementares e os componentes curriculares cujo rendimento escolar não é expresso de forma numérica."
+          },
+          {
+            "chunk_id": "ufpi-177-2012-art-118-idx-000116",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "118",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 118",
+            "temporal_role": "eligible",
+            "evidence_text": "**Art. 118. A média final mínima para aprovação, depois de realizado o cálculo definido no Art. 117, é 6 (seis).**"
+          },
+          {
+            "chunk_id": "ufpi-177-2012-art-50-idx-000049",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "50",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 50",
+            "temporal_role": "eligible",
+            "evidence_text": "**Art. 50. A média de aprovação no agrupamento será a média das aprovações nas subunidades.**"
+          },
+          {
+            "chunk_id": "ufpi-177-2012-art-123-idx-000121",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "123",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 123",
+            "temporal_role": "eligible",
+            "evidence_text": "**Art. 123. O cálculo da Média de Conclusão Normalizada MCN corresponde à padronização da MC do aluno, considerando-se a média e o desvio-padrão das MC de todos os alunos que concluíram o mesmo curso/modalidade na UFPI nos últimos 5 (cinco) anos, conforme fórmula matemática definida no Anexo II deste Regulamento.**\n> Parágrafo único. A padronização de que trata o subitem anterior será calculada pelo número de desvios-padrão em relação ao qual o valor da MC do aluno se encontra afastado da média, multiplicado por 100 (cem) e somado a 500 (quinhentos)."
+          },
+          {
+            "chunk_id": "ufpi-177-2012-art-160-idx-000158",
+            "norm_id": "ufpi-177-2012",
+            "source": "Resolução nº 177/2012 CEPEX/UFPI — Regulamento Geral da Graduação (consolidação do corpus)",
+            "article": "160",
+            "validated_subdivision": null,
+            "display_text": "Resolução 177/2012, art. 160",
+            "temporal_role": "eligible",
+            "evidence_text": "**Art. 160. O processo seletivo de portador de cursos superior será regido por edital publicado pela Pró-Reitoria de Ensino de Graduação (PREG), adotando como critério, preferencialmente, a nota do exame nacional do ensino médio (ENEM) dos 5 (cinco) anos anteriores. (Redação alterada pela Resolução nº 089/2018-CEPEX)**"
+          }
+        ],
+        "temporal_provenance": {
+          "temporal_intent": "indeterminate",
+          "requested_time_context": {
+            "norm_ids": [],
+            "before_amendment": false,
+            "relation_query": null,
+            "article": null,
+            "paragraph": null,
+            "requested_year": null
+          },
+          "evidence_states": [
+            {
+              "chunk_id": "ufpi-177-2012-art-122-idx-000120",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "122",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-118-idx-000116",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "118",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-50-idx-000049",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "50",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-123-idx-000121",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "123",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            },
+            {
+              "chunk_id": "ufpi-177-2012-art-160-idx-000158",
+              "source_norm": "ufpi-177-2012",
+              "source_article": "160",
+              "temporal_action": "kept_current",
+              "normative_status": "desconhecida",
+              "temporal_role": "eligible",
+              "relation_source": null
+            }
+          ],
+          "known_relations": [],
+          "generation_constraints": {
+            "must_frame_as_historical": false,
+            "must_not_claim_current_validity": false,
+            "must_not_claim_unknown_as_current": true,
+            "must_not_present_revoked_rule_as_current": false,
+            "must_not_present_successor_as_historical_predecessor": false,
+            "must_separate_temporal_states": false,
+            "must_follow_evidence_roles": true,
+            "must_not_treat_partial_amendment_as_total_revocation": false,
+            "must_not_duplicate_superseded_wording": false,
+            "must_not_reintroduce_excluded_evidence": true,
+            "must_not_deny_present_evidence": true,
+            "must_not_invent_effective_date": true,
+            "must_not_invent_temporal_scope": true,
+            "citation_granularity_ceiling": "article"
+          }
+        },
+        "temporal_status_text": "Para Resolução 177/2012, o conjunto documental utilizado não permite certificar a vigência atual.",
+        "allowed_temporal_facts": {
+          "items": [
+            {
+              "kind": "STATUS_UNKNOWN",
+              "norm_id": "ufpi-177-2012",
+              "target_norm": null,
+              "role": null
+            }
+          ]
+        },
+        "core_status": "fallback",
+        "domain": "graduacao",
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "a5e7bcd1-9af4-4872-a6b2-4c21967edb15",
+        "error_code": null,
+        "safe_message": null
+      },
+      "grounded_followup_result": null,
+      "calculator_result": null,
+      "tool_calls": [],
+      "tool_call_id": null,
+      "run_id": "acde37cc-efaf-4d60-82f0-089328cb43a9",
+      "response_metadata": {},
+      "custom_data": {}
+    },
+    "passed": true,
+    "references": 5,
+    "evidence_details": 5,
+    "duplicate_source_sections": 0
+  },
+  {
+    "kind": "separate manual operational smoke; real provider; not scientific evaluation",
+    "case": "post_after_grad",
+    "question": "como entrar na pós?",
+    "status": "ERROR",
+    "domain": null,
+    "agent_id": "chatbot_ufpi_integrated_v1",
+    "source_regions": 0,
+    "source_labels": [],
+    "message": {
+      "type": "ai",
+      "content": "Não foi possível determinar o domínio da consulta.",
+      "normative_result": {
+        "contract_version": "1",
+        "core_version": "structured_output_v2",
+        "status": "ERROR",
+        "answer": null,
+        "references": [],
+        "temporal_provenance": null,
+        "temporal_status_text": null,
+        "allowed_temporal_facts": null,
+        "core_status": null,
+        "domain": null,
+        "retrieval_strategy": "dense_vector",
+        "needs_clarification": false,
+        "clarification_question": null,
+        "correlation_id": "32bafbab-9f24-4d40-8bda-f14c9fe33ebf",
+        "error_code": "router_error",
+        "safe_message": "Não foi possível determinar o domínio da consulta."
+      },
+      "grounded_followup_result": null,
+      "calculator_result": null,
+      "tool_calls": [],
+      "tool_call_id": null,
+      "run_id": "64329c86-5492-4659-a2a2-6c3754436367",
+      "response_metadata": {},
+      "custom_data": {}
+    }
+  }
+]

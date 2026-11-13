@@ -1,0 +1,157 @@
+F.FFFFF..........FFFFFFFF......FFFFF                                     [100%]
+================================== FAILURES ===================================
+_ test_explicit_post_reaches_terminal_post_without_domain_pending[como entrar na p\xf3s?-como entrar na p\xf3s-gradua\xe7\xe3o?] _
+tests\rag_baseline\test_pre_freeze_defects.py:119: in test_explicit_post_reaches_terminal_post_without_domain_pending
+    assert result.status == "ANSWER"
+E   AssertionError: assert <ToolStatus.C...LARIFICATION'> == 'ANSWER'
+E     
+E     - ANSWER
+E     + CLARIFICATION
+_ test_explicit_post_reaches_terminal_post_without_domain_pending[como fa\xe7o para entrar na p\xf3s?-como fa\xe7o para entrar na p\xf3s-gradua\xe7\xe3o?] _
+tests\rag_baseline\test_pre_freeze_defects.py:119: in test_explicit_post_reaches_terminal_post_without_domain_pending
+    assert result.status == "ANSWER"
+E   AssertionError: assert <ToolStatus.C...LARIFICATION'> == 'ANSWER'
+E     
+E     - ANSWER
+E     + CLARIFICATION
+_ test_explicit_post_reaches_terminal_post_without_domain_pending[como funciona o ingresso na p\xf3s?-como funciona o ingresso na p\xf3s-gradua\xe7\xe3o?] _
+tests\rag_baseline\test_pre_freeze_defects.py:119: in test_explicit_post_reaches_terminal_post_without_domain_pending
+    assert result.status == "ANSWER"
+E   AssertionError: assert <ToolStatus.C...LARIFICATION'> == 'ANSWER'
+E     
+E     - ANSWER
+E     + CLARIFICATION
+_ test_explicit_post_reaches_terminal_post_without_domain_pending[quais os requisitos da p\xf3s?-quais os requisitos da p\xf3s-gradua\xe7\xe3o?] _
+tests\rag_baseline\test_pre_freeze_defects.py:119: in test_explicit_post_reaches_terminal_post_without_domain_pending
+    assert result.status == "ANSWER"
+E   AssertionError: assert <ToolStatus.C...LARIFICATION'> == 'ANSWER'
+E     
+E     - ANSWER
+E     + CLARIFICATION
+_ test_explicit_post_reaches_terminal_post_without_domain_pending[como concorrer para a p\xf3s?-como concorrer para a p\xf3s-gradua\xe7\xe3o?] _
+tests\rag_baseline\test_pre_freeze_defects.py:119: in test_explicit_post_reaches_terminal_post_without_domain_pending
+    assert result.status == "ANSWER"
+E   AssertionError: assert <ToolStatus.C...LARIFICATION'> == 'ANSWER'
+E     
+E     - ANSWER
+E     + CLARIFICATION
+_ test_explicit_post_reaches_terminal_post_without_domain_pending[como entrar pela p\xf3s?-como entrar pela p\xf3s-gradua\xe7\xe3o?] _
+tests\rag_baseline\test_pre_freeze_defects.py:119: in test_explicit_post_reaches_terminal_post_without_domain_pending
+    assert result.status == "ANSWER"
+E   AssertionError: assert <ToolStatus.C...LARIFICATION'> == 'ANSWER'
+E     
+E     - ANSWER
+E     + CLARIFICATION
+________________ test_conflicting_explicit_domains_retain_both ________________
+tests\rag_baseline\test_pre_freeze_defects.py:164: in test_conflicting_explicit_domains_retain_both
+    assert provider.routes[-1]["question"] == "na graduação e na pós-graduação"
+E   AssertionError: assert 'na graduação e na pós' == 'na graduação...pós-graduação'
+E     
+E     - na graduação e na pós-graduação
+E     ?                      ----------
+E     + na graduação e na pós
+_____ test_explicit_post_after_grad_does_not_reuse_grad_or_create_pending _____
+tests\rag_baseline\test_pre_freeze_defects.py:174: in test_explicit_post_after_grad_does_not_reuse_grad_or_create_pending
+    assert second["normative_result"].status == "ANSWER"
+E   AssertionError: assert <ToolStatus.C...LARIFICATION'> == 'ANSWER'
+E     
+E     - ANSWER
+E     + CLARIFICATION
+_____________ test_composer_does_not_append_a_second_bibliography _____________
+tests\rag_baseline\test_pre_freeze_defects.py:186: in test_composer_does_not_append_a_second_bibliography
+    assert answer == "Contexto selecionado.\n\n" + body
+E   AssertionError: assert 'Contexto sel...2025, art. 59' == 'Contexto sel...e essa regra.'
+E     
+E     Skipping 89 identical leading characters in diff, use -v to show
+E     - essa regra.
+E     + essa regra.
+E     ?            +
+E     + 
+E     + Fontes:...
+E     
+E     ...Full output truncated (5 lines hidden), use '-vv' to show
+_ test_guard_rejects_only_an_unambiguous_terminal_bibliography[Fontes:\n- Resolu\xe7\xe3o 956/2025, art. 62] _
+tests\rag_baseline\test_pre_freeze_defects.py:193: in test_guard_rejects_only_an_unambiguous_terminal_bibliography
+    assert "terminal_bibliography" in output_cases.codes(raw)
+E   AssertionError: assert 'terminal_bibliography' in set()
+E    +  where set() = <function codes at 0x000001CFEA1000E0>('Conteúdo substantivo.\n\nFontes:\n- Resolução 956/2025, art. 62')
+E    +    where <function codes at 0x000001CFEA1000E0> = output_cases.codes
+_ test_guard_rejects_only_an_unambiguous_terminal_bibliography[Refer\xeancias:\n1. Resolu\xe7\xe3o 956/2025, art. 62] _
+tests\rag_baseline\test_pre_freeze_defects.py:193: in test_guard_rejects_only_an_unambiguous_terminal_bibliography
+    assert "terminal_bibliography" in output_cases.codes(raw)
+E   AssertionError: assert 'terminal_bibliography' in set()
+E    +  where set() = <function codes at 0x000001CFEA1000E0>('Conteúdo substantivo.\n\nReferências:\n1. Resolução 956/2025, art. 62')
+E    +    where <function codes at 0x000001CFEA1000E0> = output_cases.codes
+_ test_guard_rejects_only_an_unambiguous_terminal_bibliography[Sources:\n- Resolu\xe7\xe3o 956/2025, art. 62] _
+tests\rag_baseline\test_pre_freeze_defects.py:193: in test_guard_rejects_only_an_unambiguous_terminal_bibliography
+    assert "terminal_bibliography" in output_cases.codes(raw)
+E   AssertionError: assert 'terminal_bibliography' in set()
+E    +  where set() = <function codes at 0x000001CFEA1000E0>('Conteúdo substantivo.\n\nSources:\n- Resolução 956/2025, art. 62')
+E    +    where <function codes at 0x000001CFEA1000E0> = output_cases.codes
+_ test_guard_rejects_only_an_unambiguous_terminal_bibliography[## Fontes normativas\n- Resolu\xe7\xe3o 956/2025, art. 62] _
+tests\rag_baseline\test_pre_freeze_defects.py:193: in test_guard_rejects_only_an_unambiguous_terminal_bibliography
+    assert "terminal_bibliography" in output_cases.codes(raw)
+E   AssertionError: assert 'terminal_bibliography' in set()
+E    +  where set() = <function codes at 0x000001CFEA1000E0>('Conteúdo substantivo.\n\n## Fontes normativas\n- Resolução 956/2025, art. 62')
+E    +    where <function codes at 0x000001CFEA1000E0> = output_cases.codes
+_ test_guard_rejects_only_an_unambiguous_terminal_bibliography[**Refer\xeancias:**\n1) Resolu\xe7\xe3o 956/2025, art. 62] _
+tests\rag_baseline\test_pre_freeze_defects.py:193: in test_guard_rejects_only_an_unambiguous_terminal_bibliography
+    assert "terminal_bibliography" in output_cases.codes(raw)
+E   AssertionError: assert 'terminal_bibliography' in set()
+E    +  where set() = <function codes at 0x000001CFEA1000E0>('Conteúdo substantivo.\n\n**Referências:**\n1) Resolução 956/2025, art. 62')
+E    +    where <function codes at 0x000001CFEA1000E0> = output_cases.codes
+_ test_bibliography_retries_once_then_preserves_existing_fallback[Conte\xfado substantivo.-regenerated] _
+tests\rag_baseline\test_pre_freeze_defects.py:229: in test_bibliography_retries_once_then_preserves_existing_fallback
+    assert result.generation_attempts == 2
+E   AssertionError: assert 1 == 2
+E    +  where 1 = QueryResult(answer='Esta resposta considera o contexto selecionado para a consulta atual; essa seleção não certifica v...rization_reason='Final grounding validates this norm/article, independently of display ceiling.')], guard_version='2')).generation_attempts
+_ test_bibliography_retries_once_then_preserves_existing_fallback[Conte\xfado substantivo.\n\nFontes:\n- Resolu\xe7\xe3o 956/2025, art. 53-fallback] _
+tests\rag_baseline\test_pre_freeze_defects.py:229: in test_bibliography_retries_once_then_preserves_existing_fallback
+    assert result.generation_attempts == 2
+E   AssertionError: assert 1 == 2
+E    +  where 1 = QueryResult(answer='Esta resposta considera o contexto selecionado para a consulta atual; essa seleção não certifica v...rization_reason='Final grounding validates this norm/article, independently of display ceiling.')], guard_version='2')).generation_attempts
+_ test_references_are_final_context_not_model_attribution_and_include_exact_text _
+tests\rag_baseline\test_pre_freeze_defects.py:250: in test_references_are_final_context_not_model_attribution_and_include_exact_text
+    assert getattr(reference, "evidence_text", None) == chunk.content
+E   AssertionError: assert None == 'Art. 54. O resultado da defesa de Dissertação e Tese é expresso pelas menções: Aprovado (Ap) ou Não Aprovado (NAp).\n...bilidade do(a) orientador(a) e deve ser formalizada à Coordenação do Programa antes da entrega da versão final (8 1º).'
+E    +  where None = getattr(NormativeReference(chunk_id='ufpi-956-2025-art-54-idx-000052', norm_id='ufpi-956-2025', source='Resolução CEPEX/UFPI n.../2025', article='54', validated_subdivision=None, display_text='Resolução 956/2025, art. 54', temporal_role='eligible'), 'evidence_text', None)
+E    +  and   'Art. 54. O resultado da defesa de Dissertação e Tese é expresso pelas menções: Aprovado (Ap) ou Não Aprovado (NAp).\n...bilidade do(a) orientador(a) e deve ser formalizada à Coordenação do Programa antes da entrega da versão final (8 1º).' = CorpusChunk(id='ufpi-956-2025-art-54-idx-000052', content='Art. 54. O resultado da defesa de Dissertação e Tese é expr...me=None, subsection_number=None, subsection_name=None, article_number='54', article_label='Art. 54', original_index=52).content
+__ test_one_source_region_and_exact_evidence_details_without_content_parsing __
+code\tests\app\test_pre_freeze_sources.py:28: in test_one_source_region_and_exact_evidence_details_without_content_parsing
+    assert at.expander[0].label == "Trechos normativos recuperados"
+E   AssertionError: assert 'Fontes normativas' == 'Trechos norm...s recuperados'
+E     
+E     - Trechos normativos recuperados
+E     + Fontes normativas
+---------------------------- Captured stderr call -----------------------------
+2026-11-01 18:42:26.855 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+_ test_legacy_reference_without_text_is_explicit_and_does_not_claim_attribution _
+code\tests\app\test_pre_freeze_sources.py:44: in test_legacy_reference_without_text_is_explicit_and_does_not_claim_attribution
+    assert at.expander[0].label == "Trechos normativos recuperados"
+E   AssertionError: assert 'Fontes normativas' == 'Trechos norm...s recuperados'
+E     
+E     - Trechos normativos recuperados
+E     + Fontes normativas
+---------------------------- Captured stderr call -----------------------------
+2026-11-01 18:42:26.961 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+=========================== short test summary info ===========================
+FAILED tests/rag_baseline/test_pre_freeze_defects.py::test_explicit_post_reaches_terminal_post_without_domain_pending[como entrar na p\xf3s?-como entrar na p\xf3s-gradua\xe7\xe3o?]
+FAILED tests/rag_baseline/test_pre_freeze_defects.py::test_explicit_post_reaches_terminal_post_without_domain_pending[como fa\xe7o para entrar na p\xf3s?-como fa\xe7o para entrar na p\xf3s-gradua\xe7\xe3o?]
+FAILED tests/rag_baseline/test_pre_freeze_defects.py::test_explicit_post_reaches_terminal_post_without_domain_pending[como funciona o ingresso na p\xf3s?-como funciona o ingresso na p\xf3s-gradua\xe7\xe3o?]
+FAILED tests/rag_baseline/test_pre_freeze_defects.py::test_explicit_post_reaches_terminal_post_without_domain_pending[quais os requisitos da p\xf3s?-quais os requisitos da p\xf3s-gradua\xe7\xe3o?]
+FAILED tests/rag_baseline/test_pre_freeze_defects.py::test_explicit_post_reaches_terminal_post_without_domain_pending[como concorrer para a p\xf3s?-como concorrer para a p\xf3s-gradua\xe7\xe3o?]
+FAILED tests/rag_baseline/test_pre_freeze_defects.py::test_explicit_post_reaches_terminal_post_without_domain_pending[como entrar pela p\xf3s?-como entrar pela p\xf3s-gradua\xe7\xe3o?]
+FAILED tests/rag_baseline/test_pre_freeze_defects.py::test_conflicting_explicit_domains_retain_both
+FAILED tests/rag_baseline/test_pre_freeze_defects.py::test_explicit_post_after_grad_does_not_reuse_grad_or_create_pending
+FAILED tests/rag_baseline/test_pre_freeze_defects.py::test_composer_does_not_append_a_second_bibliography
+FAILED tests/rag_baseline/test_pre_freeze_defects.py::test_guard_rejects_only_an_unambiguous_terminal_bibliography[Fontes:\n- Resolu\xe7\xe3o 956/2025, art. 62]
+FAILED tests/rag_baseline/test_pre_freeze_defects.py::test_guard_rejects_only_an_unambiguous_terminal_bibliography[Refer\xeancias:\n1. Resolu\xe7\xe3o 956/2025, art. 62]
+FAILED tests/rag_baseline/test_pre_freeze_defects.py::test_guard_rejects_only_an_unambiguous_terminal_bibliography[Sources:\n- Resolu\xe7\xe3o 956/2025, art. 62]
+FAILED tests/rag_baseline/test_pre_freeze_defects.py::test_guard_rejects_only_an_unambiguous_terminal_bibliography[## Fontes normativas\n- Resolu\xe7\xe3o 956/2025, art. 62]
+FAILED tests/rag_baseline/test_pre_freeze_defects.py::test_guard_rejects_only_an_unambiguous_terminal_bibliography[**Refer\xeancias:**\n1) Resolu\xe7\xe3o 956/2025, art. 62]
+FAILED tests/rag_baseline/test_pre_freeze_defects.py::test_bibliography_retries_once_then_preserves_existing_fallback[Conte\xfado substantivo.-regenerated]
+FAILED tests/rag_baseline/test_pre_freeze_defects.py::test_bibliography_retries_once_then_preserves_existing_fallback[Conte\xfado substantivo.\n\nFontes:\n- Resolu\xe7\xe3o 956/2025, art. 53-fallback]
+FAILED tests/rag_baseline/test_pre_freeze_defects.py::test_references_are_final_context_not_model_attribution_and_include_exact_text
+FAILED tests/app/test_pre_freeze_sources.py::test_one_source_region_and_exact_evidence_details_without_content_parsing
+FAILED tests/app/test_pre_freeze_sources.py::test_legacy_reference_without_text_is_explicit_and_does_not_claim_attribution
+19 failed, 17 passed in 25.43s

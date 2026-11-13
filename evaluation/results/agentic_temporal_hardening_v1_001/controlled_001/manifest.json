@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-10-29T03:32:40.554763+00:00",
+  "mode": "controlled_mock",
+  "n": 22,
+  "git_head": "7f55bcd927ec2677097d9dfe9eb5c16aeedb0f73",
+  "routing_mode": "intent_v1",
+  "top_k": 5,
+  "temperature": 0.0,
+  "embedding_model": "openai/text-embedding-3-small",
+  "llm_model": "qwen/qwen3-30b-a3b-instruct-2507",
+  "source_hashes": {
+    "evaluation\\datasets\\temporal_invariants_v1.json": "decb949a80ead4137089dedf140096f09a890cfd49fd9249405e30069ad1d18b",
+    "data\\normative_registry.json": "34928be0d8456462804468a339e51394cf15d9ab99370ebdcb5e783d0f36012b",
+    "code\\src\\rag_baseline\\temporal_evaluation.py": "ee77386f3630255cee10e129e56a4901f4ceefb57203f0c5b2e46767d430fb5e",
+    "code\\src\\rag_baseline\\agentic.py": "d7f403b822fe73779580e4c462c3a3ed85a8776009d59983297e78b71761ce1d",
+    "code\\src\\rag_baseline\\versioning.py": "8a0946d270ff48c49a2694ba8f5f3fddd1a7c8e56cbd3669bbc3aa3674df758c",
+    "code\\src\\rag_baseline\\router.py": "10cc70f95b2197722dee9b5b2f874afa00fa9b72d64b794cdd92b868f0923394",
+    "code\\src\\rag_baseline\\prompts.py": "2714efb60a400572aff9d2101bbae659fb28d2e70b97e1723f1d776dfdbfa23a",
+    "code\\src\\rag_baseline\\config.py": "1e77ca784ecd191d18ac65243f30a574e05149480e97b84487740299cb5b6979"
+  },
+  "provider_receipts": [],
+  "limitations": [
+    "Technical regression, not legally validated gold.",
+    "Controlled routing and generation are mocked; semantic answer accuracy is not measured.",
+    "Unknown status does not certify applicability on a calendar date.",
+    "No retrieval tuning or general legal-validity claims."
+  ]
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "case": "image_import_assets",
+    "status": "PASS",
+    "payload": {
+      "python": "3.12.3 (main, May 14 2024, 07:34:56) [GCC 12.2.0]",
+      "cwd": "/app/code",
+      "imports": [
+        "rag_baseline",
+        "service",
+        "agents.agents",
+        "schema"
+      ],
+      "import_resource_construction": 0,
+      "asset_completeness": [
+        11,
+        11
+      ],
+      "assets": [
+        "/app/code/src/agents",
+        "/app/code/src/core",
+        "/app/code/src/memory",
+        "/app/code/src/schema",
+        "/app/code/src/service",
+        "/app/code/src/rag_baseline",
+        "/app/code/src/run_service.py",
+        "/app/data/normative_registry.json",
+        "/app/evaluation/corpora/graduacao_setor_v2.json",
+        "/app/evaluation/corpora/pos_graduacao_setor_v2.json",
+        "/app/evaluation/corpora/1056_2026_temporal_v1.json"
+      ],
+      "forbidden_paths_present": [],
+      "secret_bearing_files_found": [],
+      "registry_valid": true,
+      "default_agent": "chatbot_ufpi_v2",
+      "integrated_experimental": true,
+      "client_expected_in_service_image": false
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:37:28.879894+00:00"
+  },
+  {
+    "case": "startup_native",
+    "status": "FAIL",
+    "payload": null,
+    "reason": null,
+    "recorded_at": "2026-11-01T16:39:33.613319+00:00"
+  },
+  {
+    "case": "shutdown_native",
+    "status": "PASS",
+    "payload": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-11-01T16:37:29.698984632Z",
+      "FinishedAt": "2026-11-01T16:39:34.935093953Z"
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:39:35.328545+00:00"
+  },
+  {
+    "case": "external_call_avoidance_native",
+    "status": "PASS",
+    "payload": {
+      "guard_loaded": true,
+      "blocked_attempts": 0,
+      "network_internal": true
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:39:35.336882+00:00"
+  },
+  {
+    "case": "shutdown_cleanup_normative-rag-runtime-smoke-v1-controlled",
+    "status": "PASS",
+    "payload": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-11-01T16:39:36.620602931Z",
+      "FinishedAt": "2026-11-01T16:40:08.017088767Z"
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:40:08.502703+00:00"
+  },
+  {
+    "case": "external_call_avoidance_cleanup_normative-rag-runtime-smoke-v1-controlled",
+    "status": "PASS",
+    "payload": {
+      "guard_loaded": true,
+      "blocked_attempts": 0,
+      "network_internal": true
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:40:08.510824+00:00"
+  },
+  {
+    "case": "resource_close_cleanup_normative-rag-runtime-smoke-v1-controlled",
+    "status": "PASS",
+    "payload": {
+      "runtime_closed": true,
+      "index_closed": true,
+      "index_cache_removed": true,
+      "provider_closed": true,
+      "sqlite_connection_closed": true
+    },
+    "reason": null,
+    "recorded_at": "2026-11-01T16:40:08.560235+00:00"
+  }
+]

@@ -1,0 +1,148 @@
+{
+  "core_signature": "(self, question, *, clarification=None, use_version_filter=True, scope=None)",
+  "facade_signature": "(self, question: str, clarification: str | None = None, correlation_id: str | uuid.UUID | None = None) -> rag_baseline.tool_contracts.NormativeToolResult",
+  "facade_constructor": "(service: rag_baseline.service.RagService, router: rag_baseline.router.NormativeRouter, version_filter: rag_baseline.versioning.VersionFilter)",
+  "core_output": "QueryResult",
+  "query_result_fields": [
+    {
+      "name": "answer",
+      "type": "<class 'str'>",
+      "excluded": false
+    },
+    {
+      "name": "references",
+      "type": "list[rag_baseline.models.Reference]",
+      "excluded": false
+    },
+    {
+      "name": "llm_model",
+      "type": "<class 'str'>",
+      "excluded": false
+    },
+    {
+      "name": "embedding_model",
+      "type": "<class 'str'>",
+      "excluded": false
+    },
+    {
+      "name": "route",
+      "type": "dict | None",
+      "excluded": false
+    },
+    {
+      "name": "needs_clarification",
+      "type": "bool | None",
+      "excluded": false
+    },
+    {
+      "name": "clarification_question",
+      "type": "str | None",
+      "excluded": false
+    },
+    {
+      "name": "selected_scope",
+      "type": "str | None",
+      "excluded": false
+    },
+    {
+      "name": "version_filter",
+      "type": "dict | None",
+      "excluded": false
+    },
+    {
+      "name": "routing",
+      "type": "dict | None",
+      "excluded": false
+    },
+    {
+      "name": "error",
+      "type": "str | None",
+      "excluded": false
+    },
+    {
+      "name": "response_kind",
+      "type": "typing.Literal['generated', 'clarification']",
+      "excluded": true
+    },
+    {
+      "name": "generation_attempts",
+      "type": "<class 'int'>",
+      "excluded": true
+    },
+    {
+      "name": "normative_output",
+      "type": "rag_baseline.output_contracts.NormativeOutput | None",
+      "excluded": false
+    },
+    {
+      "name": "output_audit",
+      "type": "rag_baseline.output_contracts.GenerationAudit | None",
+      "excluded": true
+    }
+  ],
+  "evidence_reference_fields": [
+    "rank",
+    "article_number",
+    "chapter_number",
+    "chapter_title",
+    "section_number",
+    "section_title",
+    "subsection_number",
+    "subsection_title",
+    "source",
+    "sector",
+    "content",
+    "distance"
+  ],
+  "official_reference_fields": [
+    "chunk_id",
+    "norm_id",
+    "source",
+    "article",
+    "validated_subdivision",
+    "display_text",
+    "temporal_role"
+  ],
+  "normative_output_fields": [
+    "references",
+    "allowed_temporal_facts",
+    "temporal_status_text",
+    "temporal_provenance",
+    "status"
+  ],
+  "public_facade_fields": [
+    "contract_version",
+    "core_version",
+    "status",
+    "answer",
+    "references",
+    "temporal_provenance",
+    "temporal_status_text",
+    "allowed_temporal_facts",
+    "core_status",
+    "domain",
+    "retrieval_strategy",
+    "needs_clarification",
+    "clarification_question",
+    "correlation_id",
+    "error_code",
+    "safe_message"
+  ],
+  "mapping": {
+    "answer": "QueryResult.answer unchanged",
+    "references": "normative_output.references",
+    "temporal_provenance": "normative_output.temporal_provenance typed and validated",
+    "domain": "selected_scope checked against route.scope",
+    "core_status": "normative_output.status",
+    "private_audit": "response_kind,generation_attempts,output_audit",
+    "clarification": "needs_clarification and clarification_question",
+    "errors": "Known exception classes/categorical core error; safe fixed messages"
+  },
+  "implementation_hashes": {
+    "code/src/rag_baseline/tool_contracts.py": "8a958049f6ab1b4a9c22578c9fb049541a6e34cd1ebe695844c7d1cbf8fccdf3",
+    "code/src/rag_baseline/tool_facade.py": "962bb6ab8408bf6d03a98a23479b935d4f4cc6dcf3d90320edd7a656b00ba179",
+    "code/tests/rag_baseline/normative_facade_fixtures.py": "f0a925b2c4e1b518ac0e1837e88f96d4e89b2883a70fef2a184fdd14d0b2050a",
+    "code/tests/rag_baseline/test_normative_tool_contracts.py": "cf59b60ea18045e12ea79528a263e0ffa895c3195087db257490299baa75e3d1",
+    "code/tests/rag_baseline/test_normative_tool_facade.py": "d04c95faaccca255aa0f36cd5cc34a483df39326ec8156630e731e46853227fc"
+  }
+}

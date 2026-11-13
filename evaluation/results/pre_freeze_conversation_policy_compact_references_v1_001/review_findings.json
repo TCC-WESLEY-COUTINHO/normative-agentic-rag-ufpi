@@ -1,0 +1,245 @@
+{
+  "method": "Independent read-only technical review of implementation, regression tests and final live artifacts; no legal correctness scoring",
+  "findings": [
+    {
+      "id": "REVIEW-UI-STATE",
+      "severity": "P2",
+      "problem": "Full evidence checkbox choice was lost after hiding and reopening a parent disclosure because Streamlit removes hidden widget state.",
+      "resolution": "Persist full-text choices separately from widget keys and restore before widget creation.",
+      "status": "RESOLVED",
+      "red": "review_full_evidence_red: 2 failed",
+      "green": "review_full_evidence_green: 6 passed"
+    },
+    {
+      "id": "REVIEW-UNICODE",
+      "severity": "P2",
+      "problem": "Unicode ellipsis normalized to terminal dots after the original punctuation trim and prevented closed ABOUT/domain matches.",
+      "resolution": "Trim closed phrase punctuation again after compatibility normalization.",
+      "status": "RESOLVED",
+      "red": "review_unicode_red: 3 failed",
+      "green": "review_unicode_green: 3 passed"
+    }
+  ],
+  "independent_checks": [
+    "Initial UI/policy follow-up: 5 targeted tests passed after the two fixes.",
+    "Replacement Scope Gate review: 40 tests passed independently.",
+    "Actual OpenRouterClient with httpx.MockTransport: one classification POST, configured model, schema containing only decision, no tools.",
+    "Legacy pending complete question retriaged as OUT_OF_SCOPE preserves pending without Router or retrieval.",
+    "Normal runtime injects configured provider/model; provider failure and invalid response use auditable UNCERTAIN.",
+    "Live artifacts: 16 requests, separate Scope/normative counts, pending/correlation behavior and unchanged 507 index snapshot confirmed.",
+    "All 94 API production source hashes in the live probe match the checkout."
+  ],
+  "final_in_scope_open_findings": [],
+  "remaining": [
+    {
+      "id": "UI-VISUAL",
+      "status": "NOT_RECORDED",
+      "scope": "Visual layout, timing and effective browser DOM scrolling; AppTest verifies controls/state/helper calls only."
+    },
+    {
+      "id": "HISTORICAL-DIAGNOSTIC",
+      "status": "OUT_OF_SCOPE_UNCHANGED",
+      "scope": "Prior 40-case diagnostic routing/fallback and substantive factual/legal findings were not corrected or rerun as a final evaluation."
+    },
+    {
+      "id": "LLM-SCOPE-GENERALIZATION",
+      "status": "LIMITATION",
+      "scope": "Small development probes do not establish universal precision/recall or legal correctness; additional Scope LLM cost is measured, not optimized."
+    }
+  ],
+  "scope_gate_is_not_router": true,
+  "acceptance_criteria_review": [
+    {
+      "criterion": 1,
+      "requirement": "ABOUT avoids Scope/Router/retrieval/normative provider",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "scope_probes 1,2,10"
+    },
+    {
+      "criterion": 2,
+      "requirement": "Historical adapted scope policy",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "scope_gate.py; REPORT Historical Fork Analysis"
+    },
+    {
+      "criterion": 3,
+      "requirement": "No broad external keyword classifier",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "conversation_policy.py removal; scope_gate.py"
+    },
+    {
+      "criterion": 4,
+      "requirement": "OUT_OF_SCOPE avoids Router",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "scope_probes 3,4,11"
+    },
+    {
+      "criterion": 5,
+      "requirement": "OUT_OF_SCOPE avoids retrieval",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "scope_probes 3,4,11"
+    },
+    {
+      "criterion": 6,
+      "requirement": "OUT_OF_SCOPE does not answer general knowledge",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "scope_probes final_message of 3,4,11"
+    },
+    {
+      "criterion": 7,
+      "requirement": "Unusual normative queries reach Router",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "scope_gate_green negatives; live 5,6,7,14"
+    },
+    {
+      "criterion": 8,
+      "requirement": "Gate cannot choose academic domain",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "ScopeClassification strict Literal schema"
+    },
+    {
+      "criterion": 9,
+      "requirement": "Router V1 owns normative domain",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "unchanged router.py; live router_inputs"
+    },
+    {
+      "criterion": 10,
+      "requirement": "Router V2 intact",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "preservation files_before/files_after adaptive_router and router_probe"
+    },
+    {
+      "criterion": 11,
+      "requirement": "Short pending reply resumes",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "tests; live 12"
+    },
+    {
+      "criterion": 12,
+      "requirement": "Long new question does not consume pending",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "live 14"
+    },
+    {
+      "criterion": 13,
+      "requirement": "New question and correlation isolated",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "live 13,14 router_inputs/correlation"
+    },
+    {
+      "criterion": 14,
+      "requirement": "Social preserves pending",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "live 9"
+    },
+    {
+      "criterion": 15,
+      "requirement": "ABOUT preserves pending",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "live 10"
+    },
+    {
+      "criterion": 16,
+      "requirement": "OUT_OF_SCOPE preserves pending",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "live 11"
+    },
+    {
+      "criterion": 17,
+      "requirement": "Explicit cancel clears pending",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "live 16"
+    },
+    {
+      "criterion": 18,
+      "requirement": "Typed reference input",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "group_references and AppTest"
+    },
+    {
+      "criterion": 19,
+      "requirement": "No answer/content reference parsing",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "AppTest poisoned answer Art.999; code review"
+    },
+    {
+      "criterion": 20,
+      "requirement": "One closed outer block",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "compact_reference_groups AppTest"
+    },
+    {
+      "criterion": 21,
+      "requirement": "Every reference accessible including duplicate evidence",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "grouping test and five-reference AppTest"
+    },
+    {
+      "criterion": 22,
+      "requirement": "No unsupported nested expander",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "installed Streamlit characterization and native composition"
+    },
+    {
+      "criterion": 23,
+      "requirement": "Progressive rendering only final result",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "unchanged transport/guard; final full regression"
+    },
+    {
+      "criterion": 24,
+      "requirement": "507 records preserved",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "preservation and live index before/after"
+    },
+    {
+      "criterion": 25,
+      "requirement": "Retrieval preserved",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "protected source/config hashes"
+    },
+    {
+      "criterion": 26,
+      "requirement": "VersionFilter preserved",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "versioning.py hashes"
+    },
+    {
+      "criterion": 27,
+      "requirement": "Guard preserved",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "normative_output.py and content_locators.py hashes"
+    },
+    {
+      "criterion": 28,
+      "requirement": "Full suite green",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "scope_full_final 1194 passed; exit 0"
+    },
+    {
+      "criterion": 29,
+      "requirement": "Ruff/format/diff green",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "latest green entries and final staged diff check"
+    },
+    {
+      "criterion": 30,
+      "requirement": "No external deployment",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "local loopback container reconstruction only"
+    },
+    {
+      "criterion": 31,
+      "requirement": "No push",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "local commits only"
+    },
+    {
+      "criterion": 32,
+      "requirement": "No scientific freeze",
+      "status": "VERIFIED_WITHIN_RECORDED_TECHNICAL_SCOPE",
+      "evidence": "REPORT limitations; no final evaluation or final test set"
+    }
+  ]
+}
