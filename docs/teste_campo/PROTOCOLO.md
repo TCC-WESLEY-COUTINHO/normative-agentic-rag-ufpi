@@ -79,7 +79,7 @@ Texto do TCLE:
 >
 > **Riscos e desconfortos:** mínimos, como cansaço ou desconforto por não saber uma resposta. Você pode pular perguntas, fazer pausas ou desistir a qualquer momento, sem precisar justificar e sem nenhum prejuízo.
 >
-> **Privacidade:** não coletamos seu nome, matrícula ou e-mail. Você será identificado(a) apenas por um código. As perguntas que você digitar na ferramenta serão registradas (com data e hora) junto a esse código; **não digite dados pessoais na ferramenta**. Os dados serão usados somente para fins acadêmicos, apresentados de forma agregada e guardados em local de acesso restrito ao pesquisador e ao orientador. Como são anônimos e não permitem identificar você, esses dados serão mantidos por prazo indeterminado, sempre para fins acadêmicos.
+> **Privacidade:** não coletamos seu nome, matrícula ou e-mail nas respostas. O acesso ao site exige login com o e-mail institucional (@ufpi.edu.br), usado apenas para liberar a entrada e não registrado junto às respostas. Você será identificado(a) apenas por um código. As perguntas que você digitar na ferramenta serão registradas (com data e hora) junto a esse código; **não digite dados pessoais na ferramenta**. Os dados serão usados somente para fins acadêmicos, apresentados de forma agregada e guardados em local de acesso restrito ao pesquisador e ao orientador. Como são anônimos e não permitem identificar você, esses dados serão mantidos por prazo indeterminado, sempre para fins acadêmicos.
 >
 > **Discussão em grupo:** as falas serão anotadas sem identificação de quem falou. Não há gravação de áudio nem de vídeo.
 >
