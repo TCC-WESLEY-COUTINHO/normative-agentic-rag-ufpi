@@ -1,6 +1,6 @@
 {
-  "status": "provisional_technical_annotations_not_legal_gold",
-  "method": "Explicit output inspection by the assistant against frozen pipeline decisions; no additional LLM-as-judge calls and no independent human legal validation.",
+  "status": "automated_preliminary",
+  "method": "Automated preliminary annotation against frozen pipeline decisions; no independent legal validation.",
   "frozen_before_after": true,
   "unit": "one generated response",
   "criteria": {

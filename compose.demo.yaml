@@ -1,6 +1,6 @@
 # TCC II prototype, local demonstration (the same file runs on a server):
 #   postgres  - conversation checkpoints (LangGraph); internal network only, no host port
-#   backend   - frozen A''-J v2 (Jev + transition policy v2); no host port
+#   backend   - v3.4 (citation-anchored generation, A''-J v2 conversation); no host port
 #   interface - Streamlit (Bisco); the only port published, on 127.0.0.1
 # Start/stop: scripts/start-local.cmd and scripts/stop-local.cmd (stop keeps the volumes).
 # External PostgreSQL (managed service) instead of the container: deploy/compose.external-postgres.yaml.
@@ -30,9 +30,9 @@ services:
       context: .
       dockerfile: deploy/backend/Dockerfile
       args:
-        PROTOTYPE_GIT_TAG: ${PROTOTYPE_GIT_TAG:-tcc2-cond-v2}
+        PROTOTYPE_GIT_TAG: ${PROTOTYPE_GIT_TAG:-tcc2-cond-v3.4}
         PROTOTYPE_GIT_COMMIT: ${PROTOTYPE_GIT_COMMIT:-unknown}
-    image: tcc2-prototype-backend:${PROTOTYPE_IMAGE_TAG:-v2-local}
+    image: tcc2-prototype-backend:${PROTOTYPE_IMAGE_TAG:-v3.4-local}
     restart: unless-stopped
     env_file:
       - path: .env
@@ -44,6 +44,8 @@ services:
       CONVERSATION_INTERPRETER_CONFIG: '{"transition_policy": "v2"}'
       RETRIEVAL_TOP_K: "5"
       ROUTING_MODE: intent_v1
+      GENERATION_MODE: cited_v3
+      CORPUS_PROFILE: duas-regulacoes-v4
       DATABASE_TYPE: postgres
       POSTGRES_HOST: ${POSTGRES_HOST:-postgres}
       POSTGRES_PORT: ${POSTGRES_PORT:-5432}
@@ -54,6 +56,7 @@ services:
       PORT: "8080"
       MODE: prod
     volumes:
+      # Must contain ufpi_duas_regulacoes_setor_v4; see README for indexing.
       - ${INDEX_DIR:-./.local/index}:/app/index
     depends_on:
       postgres:
@@ -68,7 +71,7 @@ services:
     build:
       context: .
       dockerfile: deploy/interface/Dockerfile
-    image: tcc2-prototype-interface:${PROTOTYPE_IMAGE_TAG:-v2-local}
+    image: tcc2-prototype-interface:${PROTOTYPE_IMAGE_TAG:-v3.4-local}
     restart: unless-stopped
     environment:
       AGENT_URL: http://backend:8080

@@ -11,7 +11,7 @@
 #
 # 1. Index with the provider's embedding model (once per embedding model):
 #    docker compose -f compose.demo.yaml -f deploy/compose.openai-compatible.yaml run --rm --no-deps \
-#      backend python -m rag_baseline.index --profile duas-regulacoes --rebuild
+#      backend python -m rag_baseline.index --profile duas-regulacoes-v4 --rebuild
 # 2. Start (add -f deploy/compose.api.yaml to publish the API):
 #    docker compose -f compose.demo.yaml -f deploy/compose.openai-compatible.yaml up -d --build --wait
 services:
@@ -26,7 +26,7 @@ services:
       CONVERSATION_INTERPRETER_CONFIG: ${COMPAT_CONVERSATION_INTERPRETER_CONFIG:-{}}
       PROTOTYPE_ALLOW_UNEVALUATED_CONFIG: "true"
     volumes:
-      # Vectors depend on the embedding model: each model needs its own index.
+      # Each embedding model needs its own index with ufpi_duas_regulacoes_setor_v4.
       - ${COMPAT_INDEX_DIR:-./.local/index-compat}:/app/index
     extra_hosts:
       - "host.docker.internal:host-gateway"

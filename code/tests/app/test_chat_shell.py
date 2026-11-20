@@ -1,7 +1,6 @@
 """Sidebar, conversations, composer states and visual tokens, through the real script runner."""
 
 import asyncio
-import hashlib
 import re
 import time
 from html.parser import HTMLParser
@@ -23,8 +22,6 @@ from client import AgentClientError
 from schema import ChatMessage
 
 controlled = ui.controlled
-# The previous character, kept for rollback outside the image (code/legacy/ufpinho).
-PREVIOUS_HEAD_SHA256 = "6e613c81e0d591406c57c07f17151667a99469f7b852c16f4c1eb98496483819"
 NOTICE = "Protótipo de pesquisa. Consulte os documentos oficiais para confirmar as informações."
 STYLES = Path(ui.APP).with_name("chat_ui") / "styles.css"
 PAIRS_BODY = (("c-text", "c-bg"), ("c-muted", "c-bg"), ("c-text", "c-surface"))
@@ -101,9 +98,9 @@ def test_research_notice_has_the_exact_wording_and_is_always_present(controlled)
     assert NOTICE in ui.visible(at)
 
 
-def test_session_only_history_is_disclosed_once_there_is_a_list(controlled):
+def test_session_only_history_is_disclosed_before_first_question_and_during_chat(controlled):
     at, _ = ui.start(controlled)
-    assert "ficam apenas nesta aba" not in ui.visible(at)
+    assert "ficam apenas nesta aba" in ui.visible(at)
     ui.send(at)
     assert "ficam apenas nesta aba" in ui.visible(at)
 
@@ -124,37 +121,27 @@ def test_the_question_reaches_the_service_exactly_as_typed(controlled, question)
     assert at.chat_message[0].text[0].value == question.strip(), "User text is not Markdown"
 
 
-def test_every_control_is_disabled_and_progress_is_shown_while_the_request_runs(
-    controlled, monkeypatch
-):
+def test_controls_release_after_wait_and_cancel_is_available(controlled):
     at, fake = ui.start(controlled)
     ui.send(at, "Primeira")
-    seen = {}
-    composer = Mock(wraps=st.chat_input)
-    markdown = Mock(wraps=st.markdown)
-    monkeypatch.setattr(st, "chat_input", composer)
-    monkeypatch.setattr(st, "markdown", markdown)
     original = fake.astream
 
     async def observing(**kwargs):
-        seen["composer"] = composer.call_args.kwargs["disabled"]
-        seen["progress"] = any(
-            "Analisando sua pergunta" in str(c.args) for c in markdown.call_args_list
-        )
-        seen["in_flight"] = st.session_state.get("in_flight")
+        await asyncio.sleep(0.1)
         async for event in original(**kwargs):
             yield event
 
     fake.astream = observing
-    ui.send(at, "Segunda")
-    assert seen["composer"] is True
-    assert seen["progress"] is True
-    assert seen["in_flight"]["question"] == "Segunda"
+    at.chat_input[0].set_value("Segunda").run(timeout=15)
+    assert at.chat_input[0].proto.disabled
+    assert "Analisando sua pergunta" in ui.visible(at)
+    assert at.session_state.in_flight["question"] == "Segunda"
+    assert not by_key(at, "cancel_turn").proto.disabled
+    ui.settle(at)
     # After the answer: everything is back, with nothing left in flight.
-    assert composer.call_args.kwargs["disabled"] is False
     assert "Analisando sua pergunta" not in ui.visible(at)
     assert not at.chat_input[0].proto.disabled
-    assert not any(b.proto.disabled for b in at.sidebar.button)
+    assert not any(b.proto.disabled for b in at.sidebar.button if b.key != "theme_system")
     assert "in_flight" not in at.session_state and "pending_turn" not in at.session_state
     assert len(fake.calls) == 2, "Each question is sent exactly once"
 
@@ -279,6 +266,7 @@ def test_retry_resends_the_same_question_without_duplicating_it(controlled):
     assert contents(at) == ["Pergunta exata  "]
     fake.error = None
     by_key(at, "retry_turn").click().run(timeout=15)
+    ui.settle(at)
     assert [c["message"] for c in fake.calls] == ["Pergunta exata  ", "Pergunta exata  "]
     assert contents(at) == ["Pergunta exata  ", "Olá!"]
     assert not at.error
@@ -337,6 +325,7 @@ def test_a_turn_stopped_mid_request_is_reported_and_not_silently_resent(controll
     assert "interrompida" in at.error[0].value
     assert len(fake.calls) == 1
     by_key(at, "retry_turn").click().run(timeout=15)
+    ui.settle(at)
     assert fake.calls[-1]["message"] == "Interrompida"
 
 
@@ -805,16 +794,6 @@ def test_only_bisco_ships_and_every_rig_layer_exists():
     }
 
 
-def test_previous_character_is_kept_for_rollback_outside_the_image():
-    code = Path(ui.APP).parents[1]
-    legacy = code / "legacy" / "ufpinho"
-    head = legacy / "static" / "head_front.png"
-    assert hashlib.sha256(head.read_bytes()).hexdigest() == PREVIOUS_HEAD_SHA256
-    assert (legacy / "chat_ui" / "character.py").exists()
-    dockerfile = (code / "docker" / "Dockerfile.app").read_text(encoding="utf-8")
-    assert "legacy" not in dockerfile and "COPY src/static/ ./src/static/" in dockerfile
-
-
 def test_favicon_is_bisco_on_a_transparent_background():
     from PIL import Image
 
@@ -1161,35 +1140,9 @@ def test_fonts_ship_with_their_licenses_and_reach_the_image():
     css = STYLES.read_text(encoding="utf-8")
     assert css.count('font-family: "Google Sans";') == 2 and css.count("font-display: swap") == 2
     assert SHARED["font-ui"].startswith('"Google Sans"') and "Inter" not in SHARED["font-ui"]
-    assert "COPY src/static/" in (code / "docker/Dockerfile.app").read_text(encoding="utf-8")
-    compose = (code / "compose.operational.yaml").read_text(encoding="utf-8")
-    assert "STREAMLIT_SERVER_ENABLE_STATIC_SERVING=true" in compose
-    dockerfile = (code / "docker/Dockerfile.app").read_text(encoding="utf-8")
-    assert "ENV STREAMLIT_SERVER_ENABLE_STATIC_SERVING=true" in dockerfile, (
-        "Every compose serves it"
-    )
-    start = (code / "scripts/start_local.sh").read_text(encoding="utf-8")
-    assert "image inspect" not in start and "$COMPOSE build ui" in start, (
-        "An old tag never hides changes"
-    )
-
-
-def test_scripts_run_by_bash_keep_lf_line_endings():
-    """bash in WSL fails on CR. A Windows checkout converts line endings, so the repository pins
-    LF for these scripts in .gitattributes."""
-    code = Path(ui.APP).parents[1]
-    for name in ("scripts/start_local.sh", "scripts/stop_local.sh"):
-        assert b"\r" not in (code / name).read_bytes(), f"{name}: a CR breaks bash"
-    attributes = (code.parent / ".gitattributes").read_text(encoding="utf-8")
-    assert "code/scripts/*_local.sh text eol=lf" in attributes
-
-
-def test_windows_launchers_find_their_own_checkout():
-    scripts = Path(ui.APP).parents[1] / "scripts"
-    for name in ("start_local", "stop_local"):
-        launcher = (scripts / f"{name}.cmd").read_text(encoding="utf-8")
-        assert "/mnt/" not in launcher and "worktrees" not in launcher, "No absolute path"
-        assert f'wslpath -a "%~dp0{name}.sh"' in launcher
+    dockerfile = (code.parent / "deploy/interface/Dockerfile").read_text(encoding="utf-8")
+    assert "COPY code/src/static/ ./src/static/" in dockerfile
+    assert "STREAMLIT_SERVER_ENABLE_STATIC_SERVING=true" in dockerfile
 
 
 def test_no_font_or_image_is_requested_from_the_network():
@@ -1273,6 +1226,7 @@ def test_two_controls_in_one_rerun_send_one_question_and_record_only_it(controll
     at.chat_input[0].set_value("Pergunta digitada")
     retry.click()
     at.run(timeout=15)
+    ui.settle(at)
     assert not at.exception
     sent = [c["message"] for c in fake.calls][1:]
     asked = [m.content for m in at.session_state.messages if m.type == "human"]

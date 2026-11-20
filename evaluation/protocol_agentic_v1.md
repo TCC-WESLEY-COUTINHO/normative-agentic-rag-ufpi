@@ -1,6 +1,8 @@
 # Protocolo agentic V1 — roteamento e elegibilidade normativa
 
-Snapshot candidato, pendente de revisão. Este protocolo deve ser congelado
+> **Protocolo histórico.** As condições e comandos abaixo registram o experimento anterior à v3.4. Não descrevem a configuração atual; novas execuções exigem diretório de saída novo e os insumos da condição histórica. Veja [reprodução e limites](../docs/REPRODUCAO.md).
+
+Snapshot candidato de desenvolvimento, sem caráter de avaliação confirmatória independente. Este protocolo deve ser congelado
 antes de qualquer nova chamada experimental. Não altera datasets, qrels ou resultados V1/V2.
 
 ## Hipóteses e condições
@@ -102,6 +104,8 @@ os smoke tests e os V2 de desenvolvimento não comprovam hipóteses gerais.
 Na pasta `code/`, com a API key já configurada e o índice conjunto existente:
 
 ```powershell
+# Geração histórica; o runner seleciona o perfil duas-regulacoes e exige seu índice.
+$env:GENERATION_MODE="free_text_v2"
 uv run python -m rag_baseline.experiment_v2 --validate-only
 uv run python -m rag_baseline.experiment_v2 --condition oracle --output ../evaluation/results/agentic_A_001
 uv run python -m rag_baseline.experiment_v2 --condition both --output ../evaluation/results/agentic_B_001
@@ -117,7 +121,7 @@ contra os corpora e falha sem alterá-lo se divergir. O manifesto registra commi
 estado sujo, hashes de código/dados/registry/prompts/lockfile, modelo principal/Router,
 embedding, top_k, temperatura, condição, tempo e falhas. Preservar JSONL bruto,
 recibos de uso disponíveis, referências pré/pós, exclusões e métricas. Nenhuma chave,
-raciocínio interno ou nota humana automática é salva. SHA do manifesto/protocolo
+raciocínio interno ou nota de avaliação automática é salva. SHA do manifesto/protocolo
 permite identificar o snapshot exato mesmo antes de um commit dos resultados.
 `inputs_dirty` distingue alterações nos insumos congelados de resultados novos ainda
 não commitados. O indexador herdado não registra o modelo de origem de cada vetor;
@@ -135,13 +139,13 @@ O Router segue a arquitetura multiagente já proposta no TCC I; não é atribuí
 Sonapuram. A inspiração compliance-aware temporal não implica reprodução de resultados
 ou afirmações bibliográficas adicionais.
 
-## Avaliação e futuro estudo com alunos
+## Avaliação por avaliadores e futuro estudo com alunos
 
 Dois revisores independentes devem primeiro conferir corpus, rótulos candidatos,
 respostas de referência, fatos e bases normativas. Para respostas geradas, preservar:
 correção 0/1/2; cobertura 0/1 por fato obrigatório; suporte 0/1 por afirmação;
 mistura indevida 0/1; precisão/cobertura de citações. Campos ficam nulos até revisão.
-LLM judge não substitui anotador humano.
+Métricas automáticas não substituem avaliadores independentes.
 
 Somente depois da revisão e execução confirmatória comparar grupos de graduação/pós:
 controle consulta normas; experimental usa protótipo. Preparar medidas de correção,

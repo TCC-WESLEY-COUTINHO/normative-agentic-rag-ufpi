@@ -1,6 +1,8 @@
 # Exploração — terminal original e seleção explícita de escopo
 
-Foram executadas **80 consultas pelo terminal Rich/API**, com as mesmas duas listas de 20 perguntas, e três consultas interativas adicionais. Nos lotes, houve **73 respostas recebidas e sete falhas operacionais**, preservadas. Não há notas humanas de correção normativa preenchidas.
+> **Registro histórico.** Configuração, resultados, contagens de testes e estados descritos referem-se à execução documentada, anterior à v3.4. Para a versão atual, consulte o [guia de evidências e reprodução](../../README.md).
+
+Foram executadas **80 consultas pelo terminal Rich/API**, com as mesmas duas listas de 20 perguntas, e três consultas interativas adicionais. Nos lotes, houve **73 respostas recebidas e sete falhas operacionais**, preservadas. Não há notas de avaliação de correção normativa preenchidas.
 
 Este relatório substitui a interpretação operacional das rodadas `cli_001/002/003`, não seus dados históricos. `pilot_003` permanece intacto: usou outro runner e índices físicos isolados/conjunto. Não reatribuir seus resultados à nova interface.
 

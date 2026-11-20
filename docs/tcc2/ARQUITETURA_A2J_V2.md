@@ -1,8 +1,14 @@
 # Arquitetura A″-J v2
 
-O diagrama e as tabelas descrevem o código da tag `tcc2-cond-v2`. Os nomes entre crases são nós, módulos ou funções reais.
+O diagrama e a comparação de componentes registram a arquitetura conversacional da tag histórica `tcc2-cond-v2`. A condição implantada v3.4 mantém Jev + política v2 e muda a geração para `cited_v3` (ancorada em citação) e o corpus para `duas-regulacoes-v4`. Os nomes entre crases são nós, módulos ou funções reais.
 
-## Fluxo de uma mensagem
+## Fluxo atual da v3.4
+
+Conversa (Jev + transição v2, com identidade do assistente opcional em `conversation_entry`) → Scope Gate → nível de ensino → recuperação vetorial e lexical → filtro de versão e contexto temporal → **geração ancorada em citação** (`cited_generation.py`) → **verificação determinística** (`citation_verifier.py`, `content_locators.py`) → guard de saída → resposta com referências, ressalvas ou abstenção.
+
+O verificador confere literalidade, números, prazos, dispositivo, nível, norma e negações acrescentadas; não garante implicação semântica. A configuração atual usa a coleção `ufpi_duas_regulacoes_setor_v4`. Veja os [componentes da v3.4](../../code/README.md#organização).
+
+## Fluxo histórico de uma mensagem na v2
 
 ```mermaid
 flowchart TD
@@ -32,7 +38,9 @@ flowchart TD
 
 O `agent_graph.build_integrated_graph` devolve este grafo conversacional sempre que há memória persistente, que é o caso do serviço. O grafo alternativo do mesmo módulo (`action_policy` → `direct_response` / `normative_tool` → `authoritative_emission`) só é montado sem checkpointer e não é usado no protótipo. Sem `CONVERSATION_INTERPRETER`, o nó `conversation_interpretation` não é criado e o fluxo é o de A′.
 
-## Componentes
+Fora da condição avaliada, o protótipo acrescenta em `conversation_entry` um detector determinístico de perguntas sobre o próprio assistente (`assistant_identity.py`, variável `ASSISTANT_IDENTITY`, `on` por padrão). Quando a mensagem inteira é uma dessas perguntas, o turno vai direto para `conversation_turn` com um texto fixo (`ASSISTANT_IDENTITY`), sem Jev, Scope Gate nem recuperação; qualquer outra mensagem, inclusive mista, segue o fluxo acima. Com `ASSISTANT_IDENTITY=off` o grafo é exatamente o da v3.4.
+
+## Componentes históricos: A a v2
 
 | Camada | Componente | Arquivos | Muda entre A e v2? |
 |---|---|---|---|
@@ -46,16 +54,16 @@ O `agent_graph.build_integrated_graph` devolve este grafo conversacional sempre 
 | Geração e validação | `RagService.generate`, `NormativeOutputGuard` v5, uma regeneração | `service.py`, `normative_output.py`, `evidence_support.py` | Idêntico |
 | Referências | `NormativeReference` tipadas, do transporte à interface | `output_contracts.py` | Idêntico |
 
-### Ativação da v2
+### Ativação da política de transição v2
 
-O código, por padrão, executa a política v1. A v2 exige as duas variáveis abaixo, que o `compose.demo.yaml` fixa:
+Sem configuração explícita, o runtime usa a camada A′; ao selecionar Jev sem indicar a política, usa a v1. A política v2 exige as duas variáveis abaixo, que o `compose.demo.yaml` fixa também na v3.4:
 
 ```
 CONVERSATION_INTERPRETER=jev
 CONVERSATION_INTERPRETER_CONFIG={"transition_policy":"v2"}
 ```
 
-O launcher `deploy/backend/prototype_launcher.py` resolve a configuração com o carregador congelado (`interpreter_config`) e recusa o início com qualquer outra combinação.
+O launcher `deploy/backend/prototype_launcher.py` resolve a configuração com `interpreter_config` e recusa o início com qualquer outra combinação, salvo a opção explícita de configuração não avaliada descrita abaixo.
 
 ## Evolução A → A′ → A″-J v1 → A″-J v2
 
@@ -73,13 +81,17 @@ Também foram implementadas, avaliadas e **não promovidas**:
 - Router V2 (sondagem do acervo);
 - intérprete LLM estruturado (A2L).
 
-## Infraestrutura de demonstração (fora do código congelado)
+## Infraestrutura de demonstração da v3.4
+
+O `compose.demo.yaml` fixa `GENERATION_MODE=cited_v3` e `CORPUS_PROFILE=duas-regulacoes-v4`. A coleção montada em `/app/index` deve ser `ufpi_duas_regulacoes_setor_v4`, construída com `python -m rag_baseline.index --profile duas-regulacoes-v4 --rebuild` (a partir de `code/`, com `CHROMA_PERSIST_DIR` apontando para o diretório montado).
+
+A imagem inclui `graduacao_setor_v3.json`, `pos_graduacao_setor_v4.json`, `658_2024_temporal_v3.json` e `1056_2026_temporal_v3.json`. Preserva também `graduacao_setor_v2.json`, `pos_graduacao_setor_v2.json` e `1056_2026_temporal_v1.json`, exigidos como evidência pelo registro normativo inalterado; a indexação usa somente o perfil v4. A trava do manifesto congelado da v2 foi removida do build; a identidade conserva a tag e o commit do protótipo. O diagrama e os resultados históricos acima não constituem novos resultados da v3.4.
 
 | Arquivo | Função |
 |---|---|
 | `compose.demo.yaml` | Três serviços: `postgres` (checkpoints, só rede interna), `backend` e `interface` |
 | `deploy/compose.external-postgres.yaml` | Checkpoints num PostgreSQL externo (serviço gerenciado) em vez do container |
-| `deploy/backend/Dockerfile` | Imagem do backend; o build falha se um arquivo do backend diferir do manifesto congelado (`frozen_sources.py`) |
+| `deploy/backend/Dockerfile` | Imagem v3.4: fontes do backend, geração ancorada em citação e quatro corpora canônicos v4 |
 | `deploy/backend/prototype_launcher.py` | Exige a configuração avaliada (Jev + v2, modelos, K, endpoint), salvo `PROTOTYPE_ALLOW_UNEVALUATED_CONFIG=true`; publica `GET /prototype/identity` |
 | `deploy/backend/healthcheck.py` | Saudável só com o agente pronto (índice carregado) e a identidade jev/v2, ou com uma configuração não avaliada explicitamente permitida (`PROTOTYPE_ALLOW_UNEVALUATED_CONFIG=true`) |
 | `deploy/interface/Dockerfile` | Imagem da interface; sem credenciais e sem pipeline RAG |

@@ -9,7 +9,7 @@ from schema import ChatMessage
 UNTITLED = "Nova conversa"
 TITLE_MAX_CHARACTERS = 60
 RENAME_MAX_CHARACTERS = 80
-# The client waits without limit and controls stay disabled meanwhile, so the page gives up itself.
+# The local wait is cancellable and also bounded if the service never finishes.
 RESPONSE_TIMEOUT_SECONDS = 300
 
 
@@ -20,6 +20,8 @@ class Conversation:
     messages: list[ChatMessage] = field(default_factory=list)
     error: str | None = None
     failed_question: str | None = None
+    recovery_action: str = "retry"
+    cancelled_questions: set[int] = field(default_factory=set)
 
 
 def title_from_question(question: str) -> str:

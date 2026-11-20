@@ -2,6 +2,8 @@
 
 **Nenhum recurso AWS foi criado.**
 
+O roteiro acompanha a configuração local v3.4: geração ancorada em citação, verificador determinístico, corpus canônico v4 e Jev com transição v2. Os detalhes e pré-requisitos estão em [Instalação](../INSTALACAO.md).
+
 - **Finalidade:** demonstração ou avaliação experimental controlada.
 - **O que não é:** serviço normativo. O defeito G4-014 continua aberto, e o protótipo não é fonte para decisões acadêmicas reais.
 - **O que a implantação não é:** pesquisa de campo realizada.
@@ -37,7 +39,7 @@ O navegador só fala com o proxy e com a interface. Quem chama o backend é o pr
 
 - **Proxy:** Caddy ou Nginx, com certificado TLS (Let's Encrypt em domínio próprio, ou ACM com ALB, se houver balanceador).
 - **Autenticação:** HTTP Basic com usuários individuais e senhas fortes, ou OAuth (por exemplo, oauth2-proxy). A interface Streamlit não tem login próprio.
-- **Opcional:** `AUTH_SECRET` no backend protege as rotas da API. A interface precisaria da mesma variável.
+- **API:** `AUTH_SECRET` no backend protege suas rotas. O `compose.demo.yaml` já repassa a mesma variável à interface.
 
 ## 5. Segredos
 
@@ -49,7 +51,7 @@ O navegador só fala com o proxy e com a interface. Quem chama o backend é o pr
 - **AWS:** Budgets com alerta (por exemplo, US$ 10/mês) e ação de parada da instância.
 - **OpenRouter:** limite de crédito na chave dedicada.
 - **Proxy:** limite de requisições por IP (por exemplo, 30 por minuto) e tamanho máximo do corpo.
-- Cada turno consome geração, Scope Gate, roteamento, embeddings e Jev. Referência: cerca de US$ 0,0005 por pergunta isolada nas medições exploratórias. Os custos variam com o provedor.
+- O consumo depende da rota: respostas fixas de identidade não chamam provedores; turnos normativos podem chamar Jev, Scope Gate, roteador, embeddings e geração, incluindo nova tentativa. A referência histórica de cerca de US$ 0,0005 por pergunta isolada vem de medições exploratórias anteriores e não estima o custo da v3.4. Os custos variam com o provedor.
 
 ## 7. Persistência, logs e backup
 

@@ -36,7 +36,7 @@
     {
       "path": "evaluation/protocol.md",
       "line": 19,
-      "excerpt": "Cada item registra ID, norma, categoria, pergunta original e com escopo, resposta de referência, fatos obrigatórios, artigos e texto da evidência, nota de auditoria e revisão. Todas as referências são **candidatas**, associadas ao corpus extraído, sem revisão independente registrada; não são gold independente validado. Datas de vigência, remissões conflitantes, omissões e artefatos OCR exigem comparação humana com o PDF. A resolução 956 informa aplicação aos ingressantes a partir de sua publicação (art. 60); o piloto assume o público ao qual a versão fornecida se aplica, sem certificar legislação vigente em 2026."
+      "excerpt": "Cada item registra ID, norma, categoria, pergunta original e com escopo, resposta de referência, fatos obrigatórios, artigos e texto da evidência, nota de auditoria e revisão. Todas as referências são **candidatas**, associadas ao corpus extraído, sem revisão independente registrada; não são gold independente validado. Datas de vigência, remissões conflitantes, omissões e artefatos OCR exigem comparação por avaliadores com o PDF. A resolução 956 informa aplicação aos ingressantes a partir de sua publicação (art. 60); o piloto assume o público ao qual a versão fornecida se aplica, sem certificar legislação vigente em 2026."
     },
     {
       "path": "evaluation/protocol.md",
@@ -66,7 +66,7 @@
     {
       "path": "evaluation/results/terminal_ui_001/REPORT.md",
       "line": 3,
-      "excerpt": "Foram executadas **80 consultas pelo terminal Rich/API**, com as mesmas duas listas de 20 perguntas, e três consultas interativas adicionais. Nos lotes, houve **73 respostas recebidas e sete falhas operacionais**, preservadas. Não há notas humanas de correção normativa preenchidas."
+      "excerpt": "Foram executadas **80 consultas pelo terminal Rich/API**, com as mesmas duas listas de 20 perguntas, e três consultas interativas adicionais. Nos lotes, houve **73 respostas recebidas e sete falhas operacionais**, preservadas. Não há notas de avaliação de correção normativa preenchidas."
     },
     {
       "path": "code/tests/rag_baseline/test_terminal_scope.py",

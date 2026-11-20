@@ -181,7 +181,7 @@ def sources_markup(
     )
     norms = "".join(
         f'<div class="ufpi-norm"><div class="ufpi-norm-head">{_DOCUMENT_ICON}'
-        f'<p class="ufpi-norm-title">{_text(group.label)}</p></div>'
+        f'<h3 class="ufpi-norm-title">{_text(group.label)}</h3></div>'
         + "".join(
             _reference(reference, reference.chunk_id in uncertified_chunks)
             for reference in group.references
@@ -194,7 +194,7 @@ def sources_markup(
     # shows how many norms and excerpts it holds, and a click opens it.
     return (
         f'<details class="ufpi-sources"><summary>'
-        f'<span class="ufpi-sources-title">{title}</span>'
+        f'<h2 class="ufpi-sources-title">{title}</h2>'
         f'<span class="ufpi-sources-count">{counts}</span></summary>'
         f'<p class="ufpi-sources-hint">{escape(hint)}</p>{norms}</details>'
     )

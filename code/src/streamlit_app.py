@@ -1,4 +1,7 @@
-"""Single-agent TCC chat. Authority and conversation memory remain in the service."""
+"""Bisco chat UI for the integrated normative agent used by the v3.4 prototype.
+
+Normative verification and conversation memory remain in the backend service.
+"""
 
 import asyncio
 import os
@@ -23,6 +26,7 @@ from chat_ui.conversations import (
     title_from_question,
 )
 from chat_ui.rendering import copy_markup, literal_markdown, note_markup, sources_markup
+from chat_ui.requests import ResponseWait
 from chat_ui.theme import stylesheet
 from client import AgentClient
 from schema import ChatMessage
@@ -61,6 +65,10 @@ HISTORICAL_NOTICE = "O texto localizado não certifica a vigência da norma naqu
 UNANSWERED_LABEL = "Sem resposta"
 UNANSWERED_NOTICE = "Esta pergunta não foi concluída."
 PROGRESS = "Analisando sua pergunta…"
+CANCELLED = (
+    "A espera foi cancelada. Sua pergunta continua nesta conversa. "
+    "O serviço pode continuar processando a consulta."
+)
 PLACEHOLDER = "Faça sua pergunta sobre os regulamentos da UFPI..."
 UNAVAILABLE_STATUSES = frozenset({502, 503, 504})
 UNREACHABLE_ERRORS = (httpx.ConnectError, httpx.TimeoutException)
@@ -91,6 +99,7 @@ BRIDGE_SCRIPT = "\n".join(
         *((CHAT_UI / name).read_text(encoding="utf-8") for name in PAGE_SCRIPTS[:3]),
         character_runtime(),
         (CHAT_UI / PAGE_SCRIPTS[3]).read_text(encoding="utf-8"),
+        (CHAT_UI / "wait.js").read_text(encoding="utf-8"),
     ]
 )
 # Bisco's neutral face, rendered from the same rig layers the page draws, on a transparent
@@ -107,6 +116,8 @@ def activate(conversation: Conversation) -> None:
     st.session_state.thread_id = conversation.thread_id
     st.session_state.messages = conversation.messages
     st.session_state.pop("confirm_delete", None)
+    st.session_state.pop("editing_question", None)
+    st.session_state.pop("response_ready", None)
 
 
 def new_conversation() -> None:
@@ -129,10 +140,18 @@ def rename_conversation(thread_id: str, key: str) -> None:
     title = clean_title(st.session_state.get(key, ""))
     if title:
         st.session_state.conversations[thread_id].title = title
+        st.session_state[key] = title
+        st.session_state[f"rename_feedback_{thread_id}"] = "Nome da conversa atualizado."
+    else:
+        st.session_state[f"rename_feedback_{thread_id}"] = "Digite um nome para a conversa."
 
 
 def ask_delete(thread_id: str) -> None:
     st.session_state.confirm_delete = thread_id
+
+
+def keep_conversation() -> None:
+    st.session_state.pop("confirm_delete", None)
 
 
 def delete_conversation(thread_id: str) -> None:
@@ -168,6 +187,8 @@ def initialize_session() -> None:
 
 def recover_interrupted_turn() -> None:
     """A run stopped mid-request cannot be resumed: say so instead of showing silence."""
+    if "response_wait" in st.session_state:
+        return
     if (turn := st.session_state.pop("in_flight", None)) is None:
         return
     conversation = st.session_state.conversations.get(turn["thread_id"])
@@ -175,19 +196,22 @@ def recover_interrupted_turn() -> None:
     if conversation is not None and not answered:
         conversation.error = INTERRUPTED
         conversation.failed_question = turn["question"]
+        conversation.recovery_action = "retry"
 
 
 def start_turn(question: str) -> None:
     # Several controls can fire before the same rerun (composer and "Tentar novamente"): the first
     # question in flight wins and the others are not recorded, so nothing appears as asked
     # without having been sent.
-    if "pending_turn" in st.session_state:
+    if "pending_turn" in st.session_state or "in_flight" in st.session_state:
         return
     conversation = active_conversation()
     if not conversation.messages:
         conversation.title = title_from_question(question)
     conversation.messages.append(ChatMessage(type="human", content=question))
     conversation.error = conversation.failed_question = None
+    conversation.recovery_action = "retry"
+    st.session_state.pop("response_ready", None)
     st.session_state.pending_turn = {"thread_id": conversation.thread_id, "question": question}
 
 
@@ -197,12 +221,43 @@ def submit_composer() -> None:
 
 
 def retry_turn(thread_id: str) -> None:
-    if "pending_turn" in st.session_state:
+    if "pending_turn" in st.session_state or "in_flight" in st.session_state:
         return
     conversation = st.session_state.conversations[thread_id]
     question, conversation.failed_question = conversation.failed_question, None
     conversation.error = None
     st.session_state.pending_turn = {"thread_id": thread_id, "question": question}
+    st.session_state.pop("response_ready", None)
+
+
+def edit_question(thread_id: str) -> None:
+    conversation = st.session_state.conversations[thread_id]
+    st.session_state.editing_question = conversation.failed_question
+    st.session_state.question_draft = conversation.failed_question
+
+
+def submit_edit() -> None:
+    question = st.session_state.get("question_draft", "")
+    if question.strip():
+        st.session_state.pop("editing_question", None)
+        start_turn(question)
+
+
+def cancel_edit() -> None:
+    st.session_state.pop("editing_question", None)
+
+
+def cancel_turn() -> None:
+    wait = st.session_state.pop("response_wait", None)
+    if wait is not None:
+        wait.cancel()
+    turn = st.session_state.pop("in_flight", None) or st.session_state.pop("pending_turn", None)
+    if turn is not None:
+        conversation = st.session_state.conversations[turn["thread_id"]]
+        index = max(i for i, m in enumerate(conversation.messages) if m.type == "human")
+        conversation.cancelled_questions.add(index)
+        conversation.error = conversation.failed_question = None
+    st.session_state.pop("response_ready", None)
 
 
 def current_theme() -> str:
@@ -274,13 +329,10 @@ def render_sidebar(busy: bool) -> None:
         )
         listed = [c for c in st.session_state.conversations.values() if c.messages]
         if listed:
-            st.markdown('<p class="ufpi-section-label">Conversas</p>', unsafe_allow_html=True)
+            st.markdown('<h2 class="ufpi-section-label">Conversas</h2>', unsafe_allow_html=True)
         for conversation in reversed(listed):
             render_conversation_row(conversation, busy)
-        if listed:
-            st.markdown(
-                f'<p class="ufpi-sidebar-note">{SESSION_NOTICE}</p>', unsafe_allow_html=True
-            )
+        # The temporary-history notice lives next to the composer only (one occurrence).
         render_theme_control(busy)
 
 
@@ -328,10 +380,26 @@ def render_conversation_row(conversation: Conversation, busy: bool) -> None:
                     max_chars=RENAME_MAX_CHARACTERS,
                     on_change=rename_conversation,
                     args=(thread_id, rename_key),
+                    help="Pressione Enter para salvar o nome.",
                 )
+                if feedback := st.session_state.get(f"rename_feedback_{thread_id}"):
+                    if not clean_title(st.session_state.get(rename_key, "")):
+                        st.error(feedback)
+                    else:
+                        st.caption(feedback)
                 if st.session_state.get("confirm_delete") == thread_id:
+                    st.caption(
+                        "Esta conversa deixará de aparecer nesta aba. "
+                        "Esta ação não apaga os registros mantidos pelo serviço."
+                    )
                     st.button(
-                        "Confirmar exclusão",
+                        "Manter conversa",
+                        key=f"conv_delete_keep_{thread_id}",
+                        use_container_width=True,
+                        on_click=keep_conversation,
+                    )
+                    st.button(
+                        "Remover da lista",
                         key=f"conv_delete_confirm_{thread_id}",
                         use_container_width=True,
                         on_click=delete_conversation,
@@ -339,7 +407,7 @@ def render_conversation_row(conversation: Conversation, busy: bool) -> None:
                     )
                 else:
                     st.button(
-                        "Excluir conversa",
+                        "Remover da lista",
                         key=f"conv_delete_{thread_id}",
                         use_container_width=True,
                         on_click=ask_delete,
@@ -348,7 +416,31 @@ def render_conversation_row(conversation: Conversation, busy: bool) -> None:
 
 
 def render_composer(busy: bool) -> None:
-    st.chat_input(PLACEHOLDER, key="composer", disabled=busy, on_submit=submit_composer)
+    if "editing_question" in st.session_state:
+        # This Streamlit version forbids setting chat_input through session_state. A native
+        # editor in the composer restores the original text without submitting it again.
+        editor = st._bottom if active_conversation().messages else st
+        with editor.container(key="question_editor"):
+            st.text_area("Edite sua pergunta", key="question_draft", disabled=busy)
+            st.button("Enviar pergunta", key="submit_edit", on_click=submit_edit, disabled=busy)
+            st.button("Cancelar edição", key="cancel_edit", on_click=cancel_edit, disabled=busy)
+            if not st.session_state.get("question_draft", "").strip():
+                st.caption("Digite uma pergunta antes de enviar.")
+    else:
+        st.chat_input(PLACEHOLDER, key="composer", disabled=busy, on_submit=submit_composer)
+    # Streamlit 1.40 cannot replace chat_input's submit action. Keep a native
+    # callback button in an always-present, absolutely positioned overlay host.
+    # wait.js aligns it with the submit button without moving React-owned nodes.
+    with st._bottom.container(key="composer_action"):
+        st.button(
+            "Parar", key="cancel_turn", icon=":material/stop:",
+            help="Parar", on_click=cancel_turn, disabled=not busy,
+        )
+    notice = f'<p class="ufpi-session-notice">{SESSION_NOTICE}</p>'
+    if active_conversation().messages:
+        st._bottom.markdown(notice, unsafe_allow_html=True)
+    else:
+        st.markdown(notice, unsafe_allow_html=True)
 
 
 def render_empty_state(busy: bool) -> None:
@@ -504,13 +596,19 @@ def render_conversation(conversation: Conversation, busy: bool) -> None:
         lead = f"{conversation.thread_id}-{index}" if newest else None
         render_message(message, index, conversation.messages, lead=lead)
         following = conversation.messages[index + 1 : index + 2]
-        if message.type == "human" and following and following[0].type == "human":
+        if index in conversation.cancelled_questions:
+            state_note("Consulta cancelada", CANCELLED)
+        elif message.type == "human" and following and following[0].type == "human":
             state_note(UNANSWERED_LABEL, UNANSWERED_NOTICE)
     if busy:
+        wait = st.session_state.get("response_wait")
+        elapsed = int(wait.elapsed) if wait is not None else 0
         st.markdown(
             '<div class="ufpi-progress" role="status" aria-live="polite">'
             f"{character_markup('thinking', variant='loading', uid='loading', lead='loading')}"
-            f'<span class="ufpi-progress-label">{PROGRESS}</span></div>',
+            f'<span class="ufpi-progress-label">{PROGRESS}</span>'
+            f'<span class="ufpi-progress-elapsed" data-elapsed="{elapsed}" '
+            f'aria-live="off">{elapsed} s</span></div>',
             unsafe_allow_html=True,
         )
     elif conversation.error:
@@ -525,7 +623,15 @@ def render_conversation(conversation: Conversation, busy: bool) -> None:
                 unsafe_allow_html=True,
             )
             st.error(conversation.error)
-        if conversation.failed_question:
+    if not busy and conversation.failed_question:
+        if conversation.recovery_action == "edit":
+            st.button(
+                "Editar pergunta",
+                key="edit_question",
+                on_click=edit_question,
+                args=(conversation.thread_id,),
+            )
+        else:
             st.button(
                 "Tentar novamente",
                 key="retry_turn",
@@ -570,27 +676,60 @@ def safe_service_error(error: Exception) -> str:
     return REQUEST_ERROR
 
 
-async def process_pending_turn(client: AgentClient) -> None:
+def process_pending_turn(client: AgentClient) -> None:
     turn = st.session_state.pop("pending_turn")
     st.session_state.in_flight = turn
-    conversation = st.session_state.conversations[turn["thread_id"]]
+    user_id = st.session_state.user_id
+    st.session_state.response_wait = ResponseWait(
+        lambda: receive_message(
+            client.astream(message=turn["question"], thread_id=turn["thread_id"], user_id=user_id)
+        ),
+        RESPONSE_TIMEOUT_SECONDS,
+    )
     scroll_page("bottom")
+
+
+def set_recovery(conversation: Conversation, response: ChatMessage, question: str) -> None:
+    normative, calculator = response.normative_result, response.calculator_result
+    if calculator is not None and calculator.status == "ERROR":
+        conversation.failed_question = question
+        conversation.recovery_action = "edit"
+    elif normative is not None and normative.status == "ERROR":
+        conversation.failed_question = question
+        conversation.recovery_action = (
+            "edit"
+            if normative.error_code
+            in {"invalid_request", "no_eligible_context", "clarification_unresolved"}
+            else "retry"
+        )
+
+
+@st.fragment(run_every=1)
+def poll_response() -> None:
+    wait = st.session_state.get("response_wait")
+    if wait is None:
+        st.rerun()
+    turn = st.session_state.in_flight
+    if not wait.result.done() and wait.elapsed < wait.timeout:
+        return
+    conversation = st.session_state.conversations[turn["thread_id"]]
+    ready = False
     try:
-        async with asyncio.timeout(RESPONSE_TIMEOUT_SECONDS):
-            response = await receive_message(
-                client.astream(
-                    message=turn["question"],
-                    thread_id=conversation.thread_id,
-                    user_id=st.session_state.user_id,
-                )
-            )
+        if not wait.result.done():
+            wait.cancel()
+            raise TimeoutError
+        response = wait.result.result()
         conversation.messages.append(response)
+        set_recovery(conversation, response, turn["question"])
+        ready = conversation.failed_question is None
     except Exception as error:
         # The public UI boundary also handles malformed transport payloads safely.
         conversation.error = safe_service_error(error)
         conversation.failed_question = turn["question"]
+        conversation.recovery_action = "retry"
     st.session_state.pop("in_flight", None)
-    st.session_state.scroll_target = "focus"
+    st.session_state.pop("response_wait", None)
+    st.session_state.response_ready = ready
     st.rerun()
 
 
@@ -607,7 +746,7 @@ async def main() -> None:
     with scripts:
         components.html(f"<script>{BRIDGE_SCRIPT}</script>", height=0, scrolling=False)
 
-    busy = "pending_turn" in st.session_state
+    busy = "pending_turn" in st.session_state or "in_flight" in st.session_state
     render_sidebar(busy)
 
     if "agent_client" not in st.session_state:
@@ -618,6 +757,11 @@ async def main() -> None:
     client.update_agent(TCC_AGENT_ID, verify=False)
 
     render_conversation(active_conversation(), busy)
+    if st.session_state.get("response_ready"):
+        st.markdown(
+            '<div class="ufpi-ready" role="status" aria-live="polite">Resposta pronta.</div>',
+            unsafe_allow_html=True,
+        )
     if active_conversation().messages:
         # In a conversation the composer is pinned under the messages.
         render_composer(busy)
@@ -626,10 +770,12 @@ async def main() -> None:
     )
 
     with scripts:
-        if busy:
-            await process_pending_turn(client)
-        elif target := st.session_state.pop("scroll_target", None):
+        if "pending_turn" in st.session_state:
+            process_pending_turn(client)
+        elif not busy and (target := st.session_state.pop("scroll_target", None)):
             scroll_page(target)
+        if busy:
+            poll_response()
 
 
 if __name__ == "__main__":

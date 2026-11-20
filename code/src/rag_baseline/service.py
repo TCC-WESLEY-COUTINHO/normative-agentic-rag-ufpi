@@ -1,5 +1,6 @@
 import json
-from typing import Any
+import logging
+from typing import Any, Literal
 
 from rag_baseline.content_locators import ContentLocatorPolicy
 from rag_baseline.evidence_support import (
@@ -22,6 +23,8 @@ from rag_baseline.normative_output import (
 from rag_baseline.openrouter import OpenRouterError
 from rag_baseline.output_contracts import GenerationAudit, GuardViolation, NormativeOutput
 from rag_baseline.scope import validate_sector
+
+logger = logging.getLogger(__name__)
 
 # Historical library default. The terminal/API explicitly injects V2_SYSTEM_PROMPT.
 SYSTEM_PROMPT = """Você é um assistente para consulta ao Regulamento Geral da Graduação da UFPI.
@@ -101,6 +104,7 @@ class RagService:
         embedding_model: str,
         llm_model: str,
         system_prompt: str = SYSTEM_PROMPT,
+        generation_mode: Literal["free_text_v2", "cited_v3"] = "free_text_v2",
     ) -> None:
         self.openrouter = openrouter
         self.vector_store = vector_store
@@ -108,6 +112,8 @@ class RagService:
         self.embedding_model = embedding_model
         self.llm_model = llm_model
         self.system_prompt = system_prompt
+        self.generation_mode = generation_mode
+        self._missing_grounding_warned = False
         if top_k < 1:
             raise ValueError("top_k deve ser positivo.")
 
@@ -142,7 +148,23 @@ class RagService:
         *,
         context_notice: str | None = None,
         temporal_grounding: TemporalGroundingContext | None = None,
+        expected_sides: list[str] | None = None,
     ) -> QueryResult:
+        if self.generation_mode == "cited_v3" and temporal_grounding is not None:
+            from rag_baseline.cited_generation import generate_cited
+
+            return await generate_cited(
+                self,
+                question,
+                chunks,
+                context_notice=context_notice,
+                grounding=temporal_grounding,
+                expected_sides=expected_sides,
+            )
+        mode_fallback = self.generation_mode == "cited_v3"
+        if mode_fallback and not self._missing_grounding_warned:
+            logger.warning("cited_v3 uses free_text_v2 because temporal grounding is unavailable.")
+            self._missing_grounding_warned = True
         structured = None
         instructions = ""
         if temporal_grounding is not None:
@@ -309,6 +331,8 @@ class RagService:
             normative_output=structured,
             output_audit=audit,
             generation_attempts=attempts,
+            effective_generation_mode="free_text_v2" if mode_fallback else None,
+            generation_fallback_reason="missing_temporal_grounding" if mode_fallback else None,
         )
 
     async def query(self, question: str, *, sector: str | None = None) -> QueryResult:

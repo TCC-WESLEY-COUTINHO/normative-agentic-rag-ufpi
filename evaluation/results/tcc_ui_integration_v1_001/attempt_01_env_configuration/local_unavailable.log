@@ -1,7 +1,0 @@
-INFO:     Started server process [14204]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-INFO:     Uvicorn running on http://127.0.0.1:18082 (Press CTRL+C to quit)
-INFO:     127.0.0.1:61099 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:61100 - "GET /agents/chatbot_ufpi_integrated_v1/readiness HTTP/1.1" 200 OK
-INFO:     127.0.0.1:61105 - "POST /chatbot_ufpi_integrated_v1/stream HTTP/1.1" 200 OK

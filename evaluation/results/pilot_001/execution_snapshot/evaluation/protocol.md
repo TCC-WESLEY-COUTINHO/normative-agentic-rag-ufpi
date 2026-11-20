@@ -47,7 +47,7 @@ Qrels incompletos podem subestimar relevância. Não relatar precisão global co
 
 ## Respostas e revisão
 
-Salvar resposta integral, contexto ordenado, prompt, modelo informado pelo provedor, tempos, uso de tokens quando disponível, falhas e IDs das evidências. Token F1 com a referência é diagnóstico lexical secundário: ignora semântica, condições e negações, portanto **não mede correção normativa**. Não executar juiz LLM como se fosse anotador. RAGAs/ALCE fundamentam dimensões de avaliação, mas não se afirma execução das suas implementações.
+Salvar resposta integral, contexto ordenado, prompt, modelo informado pelo provedor, tempos, uso de tokens quando disponível, falhas e IDs das evidências. Token F1 com a referência é diagnóstico lexical secundário: ignora semântica, condições e negações, portanto **não mede correção normativa**. Métricas automáticas não substituem a anotação por avaliadores independentes. RAGAs/ALCE fundamentam dimensões de avaliação, mas não se afirma execução das suas implementações.
 
 Para consolidar gold: dois avaliadores, independentemente, confrontam cada pergunta/resposta com o PDF, indicam a menor evidência suficiente, verificam ambiguidades e corrigem OCR; registram identidade, data e divergências, adjudicadas por terceiro ou consenso documentado. Congelar nova versão antes de avaliação confirmatória. Não preencher esses campos automaticamente.
 

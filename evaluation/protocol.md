@@ -1,5 +1,7 @@
 # Protocolo do piloto: graduação e pós-graduação UFPI
 
+> **Protocolo histórico.** As condições e comandos abaixo registram o experimento anterior à v3.4. Não descrevem a configuração atual; novas execuções exigem diretório de saída novo e os insumos da condição histórica. Veja [reprodução e limites](../docs/REPRODUCAO.md).
+
 ## Pergunta e hipótese
 
 Pergunta: a inclusão de uma segunda resolução reduz a recuperação de evidências e a qualidade de respostas de uma baseline RAG densa, sem roteamento?
@@ -16,7 +18,7 @@ Origem: `data/questoes_para_avaliar_o_agente.md`, 20 perguntas e respostas. Padr
 
 `datasets/pos_graduacao_v1.json` contém 20 perguntas inéditas no mesmo estilo: rendimento/frequência, créditos, aproveitamento, cancelamento/trancamento, desligamento, proficiência, qualificação, defesa, estágio e diploma. O tamanho igual facilita a comparação e o custo inicial; não é cálculo de poder estatístico nem amostra representativa de todas as normas. O conjunto é intencional e de desenvolvimento, sem split artificial em apenas 40 itens.
 
-Cada item registra ID, norma, categoria, pergunta original e com escopo, resposta de referência, fatos obrigatórios, artigos e texto da evidência, nota de auditoria e revisão. Todas as referências são **candidatas**, associadas ao corpus extraído e pendentes de revisão independente; não são gold independente validado. Datas de vigência, remissões conflitantes, omissões e artefatos OCR exigem comparação humana com o PDF. A resolução 956 informa aplicação aos ingressantes a partir de sua publicação (art. 60); o piloto assume o público ao qual a versão fornecida se aplica, sem certificar legislação vigente em 2026.
+Cada item registra ID, norma, categoria, pergunta original e com escopo, resposta de referência, fatos obrigatórios, artigos e texto da evidência, nota de auditoria e revisão. Todas as referências são **candidatas**, associadas ao corpus extraído; não constituem gold independente validado. Datas de vigência, remissões conflitantes, omissões e artefatos OCR exigem comparação por avaliadores com o PDF. A resolução 956 informa aplicação aos ingressantes a partir de sua publicação (art. 60); o piloto assume o público ao qual a versão fornecida se aplica, sem certificar legislação vigente em 2026.
 
 Há 376 chunks da graduação e 62 da pós no snapshot esperado. O corpus da pós salta o art. 30; isso é limitação do snapshot e não licença para inventar texto. Nenhuma pergunta selecionada exige esse artigo. Referências distintas podem bastar para responder; os qrels são evidências conhecidas, não julgamento exaustivo de todos os trechos recuperáveis.
 
@@ -47,13 +49,13 @@ Qrels incompletos podem subestimar relevância. Não relatar precisão global co
 
 ## Respostas e revisão
 
-Salvar resposta integral, contexto ordenado, prompt, modelo informado pelo provedor, tempos, uso de tokens quando disponível, falhas e IDs das evidências. Token F1 com a referência é diagnóstico lexical secundário: ignora semântica, condições e negações, portanto **não mede correção normativa**. Não executar juiz LLM como se fosse anotador humano. RAGAs/ALCE fundamentam dimensões de avaliação, mas não se afirma execução das suas implementações.
+Salvar resposta integral, contexto ordenado, prompt, modelo informado pelo provedor, tempos, uso de tokens quando disponível, falhas e IDs das evidências. Token F1 com a referência é diagnóstico lexical secundário: ignora semântica, condições e negações, portanto **não mede correção normativa**. Métricas automáticas não substituem a anotação por avaliadores independentes. RAGAs/ALCE fundamentam dimensões de avaliação, mas não se afirma execução das suas implementações.
 
 Para consolidar gold: dois avaliadores, independentemente, confrontam cada pergunta/resposta com o PDF, indicam a menor evidência suficiente, verificam ambiguidades e corrigem OCR; registram identidade, data e divergências, adjudicadas por terceiro ou consenso documentado. Congelar nova versão antes de avaliação confirmatória. Não preencher esses campos automaticamente.
 
 Para avaliar geração, embaralhar pares anonimizados e ocultar condição/modelo até o fim. Rubrica por resposta: correção (0 incorreta, 1 parcial, 2 correta), cobertura de cada fato obrigatório (0/1), afirmação sem suporte (0/1 por afirmação) e mistura indevida de norma (0/1). Avaliar precisão das citações (citações que sustentam a afirmação / citações verificadas) e cobertura de citação (afirmações verificáveis com suporte citado / afirmações verificáveis). Coleção de referências retornada pelo retriever não equivale a citação emitida pelo LLM. Ausência de citação deve ser registrada separadamente; denominador zero não vira 100%.
 
-Reportar concordância bruta e Cohen kappa para categorias nominais entre dois avaliadores; usar kappa ponderado explicitado se tratar correção 0–2 como ordinal. A rubrica e os anotadores devem ser descritos no TCC. Escores humanos e métricas de citação permanecem nulos até anotação. As perguntas desta V1 são respondíveis: não calcular taxa de abstenção correta ou segurança fora de escopo sem conjunto próprio.
+Reportar concordância bruta e Cohen kappa para categorias nominais entre dois avaliadores; usar kappa ponderado explicitado se tratar correção 0–2 como ordinal. A rubrica e os anotadores devem ser descritos no TCC. Escores dos avaliadores e métricas de citação permanecem nulos até anotação. As perguntas desta V1 são respondíveis: não calcular taxa de abstenção correta ou segurança fora de escopo sem conjunto próprio.
 
 ## Fundamentação e limites da transferência
 

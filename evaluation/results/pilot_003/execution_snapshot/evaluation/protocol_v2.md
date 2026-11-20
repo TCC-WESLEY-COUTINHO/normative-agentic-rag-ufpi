@@ -26,7 +26,7 @@ Uma pergunta ambígua continua ambígua mesmo no índice isolado: corpus dispon�
 
 Ordem fixa isolados → conjunto é exigência do fluxo aprovado e pode introduzir confundimento temporal do provedor; uma repetição não mede variabilidade. Não comparar V1 versus V2 como efeito isolado de setor: perguntas, prompt e apresentação de fonte também mudaram.
 
-## Avaliação 0/1/2 aprovada pelo usuário
+## Avaliação 0/1/2 definida pelo pesquisador
 
 | Nota | Pergunta respondível |
 |---|---|
@@ -50,7 +50,7 @@ Supabase semântico: `setor`, `fonte` OU `fontes` opcionais; sem escopo não adi
 
 ## Fundamentação
 
-As dimensões recuperação/geração/citações seguem a motivação de RAGAs e ALCE, e as métricas de ranking seguem Manning et al.; referências e limites em [protocolo V1](protocol.md) e [decisões](decisions.md).
+As dimensões recuperação/geração/citações seguem a motivação de RAGAs e ALCE, e as métricas de ranking seguem Manning et al.; referências e limites em [protocolo V1](../../../../protocol.md) e [decisões](../../../../decisions.md) (projeções publicadas fora deste snapshot de execução).
 
 - Min et al. (2020), [AmbigQA](https://aclanthology.org/2020.emnlp-main.466/), trata múltiplas interpretações plausíveis e desambiguação de perguntas. Motiva anotar ambiguidade, sem transferir seus resultados numéricos para a UFPI.
 - Lee et al. (2023), [Asking Clarification Questions to Handle Ambiguity in Open-Domain QA](https://aclanthology.org/2023.findings-emnlp.772/), investiga perguntas de esclarecimento. Motiva a ação `clarify`; nossa rubrica 0/1/2 e divisão 8/8/4 são decisões locais, não reproduções de métricas desses papers.

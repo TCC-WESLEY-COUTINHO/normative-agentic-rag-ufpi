@@ -1,4 +1,4 @@
-"""Offline retrieval and execution audit for CLI outputs; no answer-quality judge."""
+"""Offline retrieval and execution audit for CLI outputs; no answer-quality scoring."""
 
 import argparse
 import json

@@ -104,10 +104,11 @@ section.stMain {
   color: var(--c-brand-deep);
 }
 .ufpi-brand-role { font-size: var(--fs-sm); line-height: 1.3; color: var(--c-muted); }
-.ufpi-section-label {
+[data-testid="stMarkdownContainer"] h2.ufpi-section-label {
   margin: var(--s-4) 0 var(--s-1);
   padding: 0 var(--s-2);
   font-size: var(--fs-xs);
+  line-height: 1.45;
   font-weight: 600;
   color: var(--c-muted);
 }
@@ -125,7 +126,8 @@ section.stMain {
   border: 1px solid transparent;
   border-radius: var(--r-sm);
   color: var(--c-text);
-  min-height: 2.25rem;
+  min-height: var(--h-touch);
+  min-width: var(--h-touch);
   box-shadow: none;
 }
 .stButton button p, [data-testid="stPopover"] button p { font-size: var(--fs-sm); }
@@ -166,7 +168,7 @@ section.stMain {
 }
 [class*="st-key-conv_row_"] [data-testid="stColumn"] { min-width: 0 !important; width: auto !important; }
 [class*="st-key-conv_row_"] [data-testid="stColumn"]:first-child { flex: 1 1 auto !important; }
-[class*="st-key-conv_row_"] [data-testid="stColumn"]:last-child { flex: 0 0 2.25rem !important; }
+[class*="st-key-conv_row_"] [data-testid="stColumn"]:last-child { flex: 0 0 var(--h-touch) !important; }
 [class*="st-key-conv_open_"] button { justify-content: flex-start; text-align: left; padding: 0 var(--s-2); }
 [class*="st-key-conv_open_"] button > div { min-width: 0; justify-content: flex-start; }
 [class*="st-key-conv_open_"] button p {
@@ -179,8 +181,8 @@ section.stMain {
 [class*="st-key-conv_open_active_"] button p { font-weight: 600; color: var(--c-brand-deep); }
 [class*="st-key-conv_menu_"] button {
   padding: 0;
-  width: 2.25rem;
-  min-width: 2.25rem;
+  width: var(--h-touch);
+  min-width: var(--h-touch);
   color: var(--c-muted);
 }
 [class*="st-key-conv_menu_"] button [data-testid="stIconMaterial"]:last-child:not(:first-child),
@@ -207,12 +209,12 @@ section.stMain {
 
 /* Theme toggle: icon only, on the sidebar's top row beside the collapse control */
 [data-testid="stSidebarUserContent"] { position: relative; }
-.st-key-theme_control { position: absolute; top: -2.125rem; right: 2.5rem; width: 2.25rem !important; z-index: 1; }
+.st-key-theme_control { position: absolute; top: -2.375rem; right: 2.5rem; width: var(--h-touch) !important; z-index: 1; }
 .st-key-theme_control [data-testid="stElementContainer"],
 .st-key-theme_control .stButton { width: 100% !important; }
 .st-key-theme_control button {
-  width: 2.25rem;
-  min-width: 2.25rem;
+  width: var(--h-touch);
+  min-width: var(--h-touch);
   padding: 0;
   color: var(--c-muted);
 }
@@ -344,7 +346,7 @@ section.stMain {
   color: var(--c-text);
   border-radius: 0.25rem;
   padding: 0.1em 0.3em;
-  font-size: 0.875em;
+  font-size: var(--fs-md);
 }
 [data-testid="stChatMessageContent"] table {
   display: block;
@@ -352,11 +354,12 @@ section.stMain {
   overflow-x: auto;
   border-collapse: collapse;
   margin: var(--s-3) 0;
-  font-size: var(--fs-sm);
+  font-size: var(--fs-md);
   color: var(--c-text);
 }
 [data-testid="stChatMessageContent"] th,
 [data-testid="stChatMessageContent"] td {
+  font-size: var(--fs-md);
   border: 0;
   border-bottom: 1px solid var(--c-border);
   padding: var(--s-2) var(--s-3);
@@ -374,7 +377,8 @@ section.stMain {
   display: inline-flex;
   align-items: center;
   gap: var(--s-1);
-  min-height: 2rem;
+  min-height: var(--h-touch);
+  min-width: var(--h-touch);
   padding: 0 var(--s-2);
   margin-left: calc(var(--s-2) * -1);
   border: 0;
@@ -469,6 +473,10 @@ section.stMain {
   gap: 0 var(--s-2);
   width: fit-content;
   max-width: 100%;
+  min-height: var(--h-touch);
+  min-width: var(--h-touch);
+  box-sizing: border-box;
+  align-content: center;
   padding: var(--s-1) var(--s-2);
   margin-left: calc(var(--s-2) * -1);
   color: var(--c-muted);
@@ -489,7 +497,7 @@ section.stMain {
 .ufpi-ref[open] > summary::before { transform: rotate(45deg); }
 .ufpi-sources > summary::-webkit-details-marker,
 .ufpi-ref > summary::-webkit-details-marker { display: none; }
-.ufpi-sources-title { font-weight: 600; color: var(--c-text); }
+[data-testid="stChatMessageContent"] h2.ufpi-sources-title { margin: 0; padding: 0; font-size: var(--fs-sm); line-height: 1.5; font-weight: 600; color: var(--c-text); }
 .ufpi-sources-count { font-size: var(--fs-xs); }
 .ufpi-sources-hint { margin: var(--s-1) 0 var(--s-3); font-size: var(--fs-xs) !important; line-height: 1.45; color: var(--c-muted); }
 .ufpi-norm {
@@ -506,7 +514,7 @@ section.stMain {
   background: var(--c-tint);
   color: var(--c-link);
 }
-.ufpi-norm-title { margin: 0; font-size: var(--fs-sm) !important; font-weight: 600; color: var(--c-text); }
+[data-testid="stChatMessageContent"] h3.ufpi-norm-title { margin: 0; padding: 0; font-size: var(--fs-sm) !important; font-weight: 600; color: var(--c-text); }
 .ufpi-ref + .ufpi-ref { border-top: 1px solid var(--c-border); }
 .ufpi-ref > summary {
   display: flex;
@@ -527,7 +535,7 @@ section.stMain {
   margin: 0 var(--s-3) var(--s-3);
   padding: var(--s-1) var(--s-3);
   border-left: 2px solid var(--c-border-strong);
-  font-size: var(--fs-sm);
+  font-size: var(--fs-md);
   line-height: 1.55;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
@@ -556,13 +564,17 @@ section.stMain {
 [data-testid="stChatInput"] {
   position: relative;
   box-sizing: border-box;
-  padding: var(--s-2) var(--s-2) 3.25rem var(--s-2);
+  padding: var(--s-2) var(--s-2) calc(var(--h-touch) + var(--s-3)) var(--s-2);
   background: var(--c-raised);
   border: 1px solid var(--c-composer-border);
   border-radius: var(--r-xl);
   box-shadow: var(--composer-shadow);
 }
-[data-testid="stChatInput"]:focus-within { border-color: var(--c-brand) !important; }
+[data-testid="stChatInput"]:focus-within {
+  border-color: var(--c-accent) !important;
+  outline: 2px solid var(--c-accent);
+  outline-offset: 2px;
+}
 [data-testid="stBottom"] [data-testid="stChatInput"] { margin-bottom: var(--s-2); }
 [data-testid="stChatInput"] [data-baseweb="textarea"],
 [data-testid="stChatInput"] [data-baseweb="base-input"] {
@@ -607,8 +619,8 @@ section.stMain {
 }
 [data-testid="stChatInputSubmitButton"] {
   position: static;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: var(--h-touch);
+  height: var(--h-touch);
   margin: 0;
   border-radius: 50%;
   background: var(--c-interact) !important;
@@ -618,6 +630,61 @@ section.stMain {
 [data-testid="stChatInputSubmitButton"]:disabled { background: var(--c-border) !important; color: var(--c-muted) !important; }
 [data-testid="stChatInputSubmitButton"]:focus-visible { outline-offset: 2px; }
 .ufpi-research-notice { margin: var(--s-1) 0 0; text-align: center; font-size: var(--fs-xs); line-height: 1.4; color: var(--c-muted); }
+/* Stop occupies exactly the native send target. The host is never in flow. */
+.st-key-composer_action {
+  position: absolute !important;
+  width: var(--h-touch) !important;
+  height: var(--h-touch);
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 5;
+  visibility: hidden;
+  overflow: visible;
+}
+/* Streamlit gives the button wrappers the column width (720px); pinned at the
+   composer's right edge they overflowed the page and caused horizontal scroll. */
+.st-key-composer_action > div,
+.st-key-composer_action [data-testid="stButton"],
+.st-key-composer_action [data-testid="stTooltipIcon"],
+.st-key-composer_action [data-testid="stTooltipIcon"] > div {
+  width: var(--h-touch) !important;
+  max-width: var(--h-touch) !important;
+  min-width: 0 !important;
+}
+.st-key-composer_action button {
+  width: var(--h-touch);
+  height: var(--h-touch);
+  min-height: var(--h-touch);
+  padding: 0;
+  border-radius: 50%;
+  background: var(--c-interact);
+  color: var(--c-on-interact);
+}
+/* Icon only; the native button retains its text and an explicit accessible name. */
+.st-key-composer_action button [data-testid="stMarkdownContainer"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.ufpi-waiting [data-testid="stChatInputSubmitButton"] { visibility: hidden; }
+.ufpi-progress-elapsed {
+  display: inline-block;
+  flex: none;
+  width: 6ch;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  font-size: var(--fs-sm);
+  color: var(--c-muted);
+}
+.ufpi-session-notice { margin: var(--s-1) 0; text-align: left; font-size: var(--fs-xs) !important; line-height: 1.45; color: var(--c-muted); }
+/* Screen-reader announcement only: visually hidden, takes no space. */
+.ufpi-ready {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0;
+}
+.st-key-question_editor textarea { font-size: var(--fs-md); }
 [data-testid="stBottomBlockContainer"] [data-testid="stVerticalBlock"] { gap: 0; }
 
 /* Go to the latest message: a page-script button above the composer, centred on the panel. */
@@ -626,9 +693,9 @@ section.stMain {
   z-index: 60;
   display: grid;
   place-items: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  margin-left: -1.25rem;
+  width: var(--h-touch);
+  height: var(--h-touch);
+  margin-left: calc(var(--h-touch) / -2);
   padding: 0;
   border: 1px solid var(--c-border);
   border-radius: 50%;

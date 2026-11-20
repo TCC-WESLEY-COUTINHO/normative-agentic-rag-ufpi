@@ -102,7 +102,7 @@ def test_invalid_or_incomplete_stream_never_reaches_progressive_renderer(
 
 
 def test_page_is_never_moved_against_streamlits_own_scroll(controlled, monkeypatch):
-    """Submit places the page at the bottom; on the answer only focus is restored. Streamlit's
+    """Submit places the page at the bottom; the answer never moves focus. Streamlit's
     container then follows the new content itself: a second mover would make the page shake."""
     html = Mock(wraps=components.html)
     monkeypatch.setattr(components, "html", html)
@@ -114,15 +114,15 @@ def test_page_is_never_moved_against_streamlits_own_scroll(controlled, monkeypat
     fake.events = [ui.normative()]
     ui.send(at)
     scripts = scroll_scripts(html)[1:]
-    assert len(scripts) == 2
+    assert len(scripts) == 1
     assert "getElementById('chat-bottom-anchor')" in scripts[0]
     # The conversation's own scroll container goes to its end, so the new turn is not left under
     # the pinned composer; aligning the anchor with the visible end did exactly that.
     assert "closest('section.stMain')" in scripts[0] and "scrollIntoView" not in scripts[0]
-    assert "getElementById('')" in scripts[1] and "focus(" in scripts[1]
+    assert "Resposta pronta." in ui.visible(at)
     assert any('id="chat-bottom-anchor"' in m.value for m in at.markdown)
     at.run(timeout=15)
-    assert len(scroll_scripts(html)) == 3, "An ordinary rerun must not move the page"
+    assert len(scroll_scripts(html)) == 2, "An ordinary rerun must not move the page"
     assert len(at.session_state.messages) == 2
 
 
@@ -154,8 +154,8 @@ def test_new_turns_emit_fresh_scroll_srcdoc_even_at_reused_component_slots(contr
     ui.send(at)
     first = scroll_scripts(html)[opening:]
     ui.send(at, "Nova pergunta")
-    second = scroll_scripts(html)[opening + 2 :]
-    assert len(first) == len(second) == 2
+    second = scroll_scripts(html)[opening + 1 :]
+    assert len(first) == len(second) == 1
     assert all(old != new for old, new in zip(first, second)), (
         "same iframe srcdoc may not execute again"
     )

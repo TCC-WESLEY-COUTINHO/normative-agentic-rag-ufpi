@@ -1,5 +1,7 @@
 # Protocolo pré-experimental de roteamento V2
 
+> **Protocolo histórico.** As condições e comandos abaixo registram o experimento anterior à v3.4. Não descrevem a configuração atual; novas execuções exigem diretório de saída novo e os insumos da condição histórica. Veja [reprodução e limites](../docs/REPRODUCAO.md).
+
 28/10/2026. Registro anterior às chamadas deste experimento. Estudo exploratório,
 sem validação dos rótulos, inferência confirmatória ou avaliação jurídica.
 O objeto é F1; F2, Version Filter, geração F3 e repetição F4 permanecem congelados.

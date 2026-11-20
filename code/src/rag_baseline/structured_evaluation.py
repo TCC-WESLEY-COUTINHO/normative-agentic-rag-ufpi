@@ -1,6 +1,6 @@
 """Fixed-context structured-output experiment. Real API calls require --stage run.
 
-Previous runs are read-only. No retrieval, embeddings, indexing or judge API calls.
+Previous runs are read-only. No retrieval, embeddings, indexing or extra API calls.
 Semantic annotations remain explicit provisional technical labels, not legal gold.
 """
 
@@ -125,7 +125,7 @@ def prepare():
             official_reference_rule="Displayed NormativeReference entries only, checked against final evidence and ceiling. Legacy reference.content is a full evidence excerpt, not a bibliographic locator.",
             limitations=[
                 "Bounded Portuguese guard patterns are not a semantic oracle.",
-                "Manual technical inspection, no additional judge LLM or independent legal gold.",
+                "Preliminary technical annotation; no independent legal gold.",
                 "Repeated generation at temperature zero is not an independent population sample.",
                 "Fixed final contexts isolate generation; no retrieval/router quality inference.",
             ],

@@ -1,6 +1,6 @@
 # Execução local em Linux
 
-Este guia mostra como rodar o protótipo do TCC II (A″-J v2) numa máquina Linux ou no WSL 2. Os componentes podem ser usados separadamente, de três formas:
+Este guia mostra como rodar o protótipo do TCC II na condição v3.4, com geração ancorada em citação, corpus canônico v4 e arquitetura conversacional A″-J v2, numa máquina Linux ou no WSL 2. Os componentes podem ser usados separadamente, de três formas:
 
 | Modo | Serviços | Para quê |
 |---|---|---|
@@ -30,25 +30,27 @@ chmod 600 .env
 #   POSTGRES_PASSWORD=$(openssl rand -hex 24)
 ```
 
-O `.env` só é lido pelo backend e nunca é copiado para as imagens. A configuração avaliada é fixada em `compose.demo.yaml`:
+O `.env` só é lido pelo backend e nunca é copiado para as imagens. A condição v3.4 e a configuração conversacional são fixadas em `compose.demo.yaml`:
 
 ```
 CONVERSATION_INTERPRETER=jev
 CONVERSATION_INTERPRETER_CONFIG={"transition_policy":"v2"}
 RETRIEVAL_TOP_K=5
 ROUTING_MODE=intent_v1
+GENERATION_MODE=cited_v3
+CORPUS_PROFILE=duas-regulacoes-v4
 ```
 
 Valores com os mesmos nomes no `.env` não a alteram.
 
-**Índice.** Coloque em `.local/index/` a cópia do índice usada nos experimentos (`chroma.sqlite3` e os diretórios de segmentos; 507 registros na coleção `ufpi_duas_regulacoes_setor`), ou aponte `INDEX_DIR` para ela. Se for reconstruir a partir do corpus versionado, com custo de embeddings:
+**Índice.** Coloque em `.local/index/` um índice com a coleção `ufpi_duas_regulacoes_setor_v4` (`chroma.sqlite3` e os diretórios de segmentos), ou aponte `INDEX_DIR` para ele. Para construir a partir dos quatro corpora canônicos versionados, com custo de embeddings:
 
 ```bash
 docker compose -f compose.demo.yaml run --rm --no-deps backend \
-  python -m rag_baseline.index --profile duas-regulacoes --rebuild
+  python -m rag_baseline.index --profile duas-regulacoes-v4 --rebuild
 ```
 
-Uma reindexação gera um índice novo: a impressão digital pode diferir da cópia dos experimentos (`a38c9aba…`).
+O índice histórico da v2 tinha 507 registros na coleção `ufpi_duas_regulacoes_setor` e impressão digital `a38c9aba…`; essa coleção não atende ao perfil v4.
 
 ## 3. Protótipo completo (backend + interface)
 
@@ -64,7 +66,7 @@ Interface: <http://127.0.0.1:8501>.
 
 - O backend não publica porta no host.
 - Os checkpoints das conversas ficam no container `postgres` (volume `postgres_data`), que só está na rede interna do compose, sem porta no host e sem saída para a internet. O backend espera o PostgreSQL ficar saudável e cria as tabelas na primeira subida.
-- O build falha se alguma fonte do backend diferir do manifesto congelado da v2.
+- A imagem inclui as fontes da v3.4 e os corpora canônicos v4; a trava do manifesto congelado da v2 foi removida do build.
 - O launcher recusa iniciar com qualquer configuração diferente da avaliada: Jev + v2, os modelos, `RETRIEVAL_TOP_K`, temperatura, limite de tokens e o endpoint da OpenRouter. O log informa os campos que diferem.
 
 **No WSL**, a distro encerra o Docker quando a última sessão termina. Mantenha um terminal do WSL aberto, ou use `scripts\start-local.cmd` no Windows, que abre uma janela de keepalive.
@@ -79,7 +81,7 @@ curl -s http://127.0.0.1:8080/health
 curl -s http://127.0.0.1:8080/prototype/identity
 ```
 
-Para subir também a interface, omita o nome do serviço. Exemplos de chamada em [`API.md`](API.md). Ao publicar em outra interface de rede, defina `AUTH_SECRET` no `.env` (a API passa a exigir `Authorization: Bearer`). A interface web envia esse cabeçalho quando recebe a mesma variável `AUTH_SECRET` no ambiente. O `compose.demo.yaml` não a repassa à interface: para usar a interface com `AUTH_SECRET` definido, acrescente-a ao `environment` do serviço `interface`.
+Para subir também a interface, omita o nome do serviço. Exemplos de chamada em [`API.md`](API.md). Ao publicar em outra interface de rede, defina `AUTH_SECRET` no `.env` (a API passa a exigir `Authorization: Bearer`). O `compose.demo.yaml` já repassa a mesma variável à interface, que envia o cabeçalho nas chamadas ao backend.
 
 Para parar:
 
@@ -160,7 +162,7 @@ EOF
 
 ```bash
 docker compose -f compose.demo.yaml -f deploy/compose.openai-compatible.yaml run --rm --no-deps \
-  backend python -m rag_baseline.index --profile duas-regulacoes --rebuild
+  backend python -m rag_baseline.index --profile duas-regulacoes-v4 --rebuild
 docker compose -f compose.demo.yaml -f deploy/compose.openai-compatible.yaml up -d --build --wait
 # acrescente -f deploy/compose.api.yaml para publicar a API
 ```
@@ -184,6 +186,8 @@ uv sync --frozen
 export PYTHONPATH=src
 export CONVERSATION_INTERPRETER=jev
 export CONVERSATION_INTERPRETER_CONFIG='{"transition_policy":"v2"}'
+export GENERATION_MODE=cited_v3
+export CORPUS_PROFILE=duas-regulacoes-v4
 export CHROMA_PERSIST_DIR="$(pwd)/../.local/index"
 export SQLITE_DB_PATH="$(pwd)/../.local/checkpoints.db"   # padrão sem Docker: checkpoints em SQLite
 # Para usar PostgreSQL: DATABASE_TYPE=postgres e POSTGRES_HOST/PORT/DB/USER/PASSWORD
@@ -223,7 +227,3 @@ Este caminho não foi reexecutado na versão atual; o caminho testado é o Docke
 | Backend reinicia logo após "PostgreSQL" ou `password authentication failed` | Senha do `.env` diferente da usada na criação do volume `postgres_data` |
 | Container reinicia com "configuração recusada" | O `.env` alterou modelos, URL ou outro parâmetro da configuração avaliada (o log lista as diferenças). Para outro provedor, use `deploy/compose.openai-compatible.yaml` |
 | Interface responde, mas toda pergunta falha | O backend não alcança o provedor (rede, chave ou servidor local) |
-
-## 8. Serviço legado
-
-`code/compose.yaml`, `code/compose.prod.yaml`, `code/docker/` e `code/.env.example` pertencem ao serviço anterior ao TCC II (agente `chatbot_ufpi_v2`). Esse agente dependia de um banco vetorial externo que não é versionado nem suportado, então o serviço legado não pode ser executado a partir do repositório. Os arquivos permanecem porque testes do código congelado os verificam.

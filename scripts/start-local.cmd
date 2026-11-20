@@ -1,5 +1,5 @@
 @echo off
-rem Starts the TCC II prototype (backend A''-J v2 + web interface) with Docker Compose.
+rem Starts v3.4 (citation-anchored generation, A''-J v2 conversation) with Docker Compose.
 rem Uses Docker Desktop when "docker" is on PATH; otherwise Docker Engine inside WSL.
 rem Usage (from any directory): .\scripts\start-local.cmd
 setlocal EnableExtensions
@@ -14,7 +14,7 @@ if not exist ".env" (echo [erro] Arquivo .env ausente. Copie .env.example para .
 findstr /r /c:"^OPENROUTER_API_KEY=..*" ".env" >nul || (echo [erro] OPENROUTER_API_KEY vazio em .env. & exit /b 1)
 findstr /r /c:"^POSTGRES_PASSWORD=..*" ".env" >nul || (echo [erro] POSTGRES_PASSWORD vazio em .env. Defina uma senha para o PostgreSQL dos checkpoints. & exit /b 1)
 if not defined INDEX_DIR set "INDEX_DIR=.local\index"
-if not exist "%INDEX_DIR%\chroma.sqlite3" (echo [erro] Indice Chroma ausente: %INDEX_DIR%\chroma.sqlite3. Veja README, secao Indice. & exit /b 1)
+if not exist "%INDEX_DIR%\chroma.sqlite3" (echo [erro] Indice Chroma ausente: %INDEX_DIR%\chroma.sqlite3. Em code/, com CHROMA_PERSIST_DIR apontando para INDEX_DIR, execute: uv run --frozen python -m rag_baseline.index --profile duas-regulacoes-v4 --rebuild. Veja docs/INSTALACAO.md. & exit /b 1)
 
 where docker >nul 2>&1
 if %errorlevel%==0 (
@@ -35,7 +35,7 @@ if errorlevel 1 goto :failed
 
 :ready
 echo.
-echo Prototipo pronto (A''-J v2, Jev, politica v2).
+echo Prototipo v3.4 pronto (geracao ancorada em citacao, corpus v4; A''-J v2, Jev, politica v2).
 echo Interface: http://127.0.0.1:%INTERFACE_PORT%
 echo Para parar: .\scripts\stop-local.cmd
 exit /b 0

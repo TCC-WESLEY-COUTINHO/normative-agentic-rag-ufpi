@@ -526,7 +526,7 @@ def test_truly_invalid_router_output_stays_invalid(raw):
     assert route(raw).reason_code == "invalid_model_decision"
 
 
-# ---- Defects found by the independent review of this round.
+# ---- Regressions for defects found in this round.
 
 
 @pytest.mark.parametrize(

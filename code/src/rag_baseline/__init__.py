@@ -1,1 +1,1 @@
-"""Baseline operacional para consultas à Resolução nº 177/2012."""
+"""Pipeline normativo v3.4: acervo multinormativo, geração citada e verificação."""

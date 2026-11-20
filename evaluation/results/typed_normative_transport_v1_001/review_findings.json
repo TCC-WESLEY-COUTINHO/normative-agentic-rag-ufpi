@@ -1,9 +1,0 @@
-{
-  "critical": 0,
-  "important": 0,
-  "scope": "Code/contracts only; no legal judge.",
-  "independent_run": "45 passed,2 dependency warnings",
-  "suggestion": "Negative terminal emission/correlation tests.",
-  "action": "Added6 rejection tests; final focused51 passed.",
-  "related_test": "test_incomplete_or_mismatched_terminal_state_is_not_published"
-}

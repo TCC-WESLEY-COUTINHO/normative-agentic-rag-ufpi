@@ -32,23 +32,6 @@ agents: dict[str, Agent] = {
         description="Consulta UFPI com roteamento de nível e filtro explícito de vigência.",
         import_path="agents.chatbot_ufpi_agentic:chatbot_ufpi_agentic",
     ),
-    # "chatbot": Agent(description="A simple chatbot.", graph=chatbot),
-    # "research-assistant": Agent(
-    #     description="A research assistant with web search and calculator.", graph=research_assistant
-    # ),
-    # "rag-assistant": Agent(
-    #     description="A RAG assistant with access to information in a database.", graph=rag_assistant
-    # ),
-    # "command-agent": Agent(description="A command agent.", graph=command_agent),
-    # "bg-task-agent": Agent(description="A background task agent.", graph=bg_task_agent),
-    # "langgraph-supervisor-agent": Agent(
-    #     description="A langgraph supervisor agent", graph=langgraph_supervisor_agent
-    # ),
-    # "interrupt-agent": Agent(description="An agent the uses interrupts.", graph=interrupt_agent),
-    # "knowledge-base-agent": Agent(
-    #     description="A retrieval-augmented generation agent using Amazon Bedrock Knowledge Base",
-    #     graph=kb_agent,
-    # ),
     "chatbot_ufpi": Agent(
         description="Assistente acadêmico especializado no RGG da UFPI.",
         import_path="agents.chatbot_ufpi:chatbot_ufpi",
@@ -62,7 +45,7 @@ agents: dict[str, Agent] = {
         import_path="agents.chatbot_generic:chatbot_generic",
     ),
     "chatbot_ufpi_integrated_v1": Agent(
-        description="Experimental, non-default: consulta normativa integrada, memória e calculator determinística.",
+        description="Protótipo v3.4: consulta normativa com geração citada, verificação, memória e calculadora determinística.",
         runtime_factory="rag_baseline.integrated_runtime:build_integrated_agent_runtime",
         experimental=True,
     ),

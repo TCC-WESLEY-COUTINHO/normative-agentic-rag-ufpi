@@ -1,4 +1,4 @@
-"""Controlled V2 generation on the exact 44 V1 inputs; no retrieval or judge API.
+"""Controlled V2 generation on the exact 44 V1 inputs; no retrieval or extra API.
 
 Prepare freezes inputs, code, configuration and annotation rules. Run refuses
 overwrite or drift. An invalid run must be retained and fully restarted with a
@@ -206,7 +206,7 @@ def prepare(output):
         no_tuning="After the first real call, do not change prompt, guard, parser, policy, retry, fallback, criteria, cases or contexts. A genuine invalidating infrastructure bug requires retained invalid run and full restart with a new run ID.",
         limitations=[
             "bounded parser and Portuguese patterns",
-            "technical annotation by implementer",
+            "preliminary technical annotation",
             "eight questions with concentrated repetitions",
             "temperature zero does not imply determinism or independent samples",
             "no general legal correctness or global validity certification",

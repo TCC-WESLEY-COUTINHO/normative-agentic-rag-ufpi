@@ -1,9 +1,0 @@
-{
-  "status --short": "",
-  "branch --show-current": "feat/agent-normative-integration-v1\n",
-  "rev-parse HEAD": "459dab7c9bcf4a9470f2855d31ceabbe008c8998\n",
-  "log -15 --oneline --decorate": "459dab7 (HEAD -> feat/agent-normative-integration-v1) test: verify normative agent emission and bypass protection\n9c8fd2f feat: integrate normative rag capability into agent graph\n205948d test: define authoritative normative agent boundary\n19a0aed (feat/retrieval-strategies-v1) test: verify retrieval strategy integration\n9e28513 feat: add metadata and filtered retrieval strategies\nc97f177 test: define retrieval strategy boundaries\n367e27f (feat/normative-tool-facade-v1) test: verify normative facade integration contracts\nd3c5cc8 feat: add normative rag facade\n986f421 test: define normative tool contract boundaries\n61d2bc0 (audit/agentic-conversational-integration-v1) audit: map legacy agentic infrastructure for v2 integration\n34c42c7 (fix/structured-normative-output-v2) fix: preserve structured v2 artifact bytes\n7736f89 experiment: evaluate structured normative output v2\nea255c8 fix: separate content locators from display references\nf250386 test: capture structured output v2 policy gaps\n98c1c2d (fix/structured-normative-output-v1) experiment: evaluate structured normative output\n",
-  "diff": "",
-  "diff --cached": "",
-  "diff --stat": ""
-}

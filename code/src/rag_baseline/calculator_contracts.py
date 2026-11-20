@@ -22,14 +22,14 @@ ErrorCode = Literal[
 SAFE_MESSAGES = {
     "invalid_expression": "Expressão inválida. Use números com ponto decimal, +, -, *, / e parênteses.",
     "division_by_zero": "Não é possível dividir por zero.",
-    "expression_too_complex": "A expressão excede os limites de complexidade da calculator.",
+    "expression_too_complex": "O cálculo é muito complexo. Divida-o em partes menores.",
     "unsupported_operation": "Operação não suportada. Use somente +, -, *, / e parênteses.",
     "invalid_date": "Data inválida ou resultado fora do intervalo de datas suportado.",
-    "unsupported_relative_date": "Use uma data absoluta no formato DD/MM/YYYY ou YYYY-MM-DD.",
-    "ambiguous_date_offset": "Contagem ambígua. Formule como: adicione N dias corridos a DD/MM/YYYY.",
+    "unsupported_relative_date": "Informe a data completa, por exemplo: 25/12/2026.",
+    "ambiguous_date_offset": "Escreva, por exemplo: adicione 10 dias corridos a 25/12/2026.",
     "unsupported_business_days": "Cálculo de dias úteis não é suportado nesta versão.",
-    "input_too_large": "A entrada excede o tamanho máximo da calculator.",
-    "numeric_limit": "Um número ou resultado excede os limites numéricos da calculator.",
+    "input_too_large": "A pergunta ficou muito longa. Envie um cálculo por vez.",
+    "numeric_limit": "Um número ou resultado ultrapassa o limite da calculadora.",
 }
 
 

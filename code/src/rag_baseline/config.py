@@ -35,6 +35,9 @@ class BaselineSettings(BaseSettings):
     ROUTER_DISTRIBUTION_THRESHOLD: float | None = Field(default=None, gt=0.5, le=1)
     LLM_TEMPERATURE: float = 0
     LLM_MAX_TOKENS: int = 800
+    # Release v3.4 uses citation-anchored generation and the canonical corpus.
+    GENERATION_MODE: Literal["free_text_v2", "cited_v3"] = "cited_v3"
+    CORPUS_PROFILE: str = "duas-regulacoes-v4"
 
     RETRIEVAL_TOP_K: int = 5
     CHROMA_COLLECTION: str = "ufpi_graduacao_177_2012"

@@ -6,7 +6,9 @@ API HTTP (FastAPI) servida pelo backend do protótipo. Para expô-la no host, ve
 
 O agente do protótipo é **`chatbot_ufpi_integrated_v1`**, que a interface web usa.
 
-O registro de agentes também contém agentes legados e de exemplo, herdados do serviço anterior e do template. O agente padrão das rotas sem ID (`/invoke`, `/stream`) é o legado `chatbot_ufpi_v2`, que depende de um banco vetorial externo não suportado nesta versão. **Sempre informe o ID na rota.**
+O registro também mantém `chatbot_generic` e os agentes históricos `chatbot_ufpi`, `chatbot_ufpi_v2` e `chatbot_ufpi_agentic`. O agente padrão das rotas sem ID (`/invoke`, `/stream`) é o legado `chatbot_ufpi_v2`, que depende de um banco vetorial externo não suportado nesta versão. **Sempre informe o ID na rota.**
+
+Na configuração v3.4, o agente integrado usa geração ancorada em citação (`cited_v3`), corpus `duas-regulacoes-v4` e verificação determinística em `citation_verifier.py` / `content_locators.py`. `ASSISTANT_IDENTITY=on` habilita respostas fixas sobre o próprio assistente antes do Scope Gate; com `off`, reproduz a camada conversacional congelada da v3.4.
 
 ## Autenticação
 
@@ -21,7 +23,7 @@ Authorization: Bearer <AUTH_SECRET>
 | Método e rota | Função |
 |---|---|
 | `GET /health` | Estado do processo e prontidão do agente integrado (`integrated_agent.ready`, `index_records`, `reason_code`). Não chama provedores |
-| `GET /prototype/identity` | Configuração em execução: arquitetura, modo do intérprete, política de transição, modelos, host do endpoint de LLM, `evaluated_configuration`, tag/commit da imagem. Publicada pelo launcher de `deploy/backend/` |
+| `GET /prototype/identity` | Configuração em execução: arquitetura, `generation_mode`, `corpus_profile`, `chroma_collection`, intérprete, política de transição, modelos, host do endpoint de LLM, `assistant_identity` (`on`/`off`), `evaluated_configuration`, tag/commit da imagem. Publicada pelo launcher de `deploy/backend/` |
 | `GET /info` | Agentes registrados e modelos disponíveis |
 | `GET /agents/{agent_id}/readiness` | Prontidão de um agente |
 | `POST /{agent_id}/invoke` | Executa um turno e devolve a mensagem final |

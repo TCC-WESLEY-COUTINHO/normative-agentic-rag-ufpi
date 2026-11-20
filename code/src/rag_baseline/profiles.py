@@ -46,6 +46,66 @@ PROFILES = {
             ),
         ),
     ),
+    # Same sources with OCR-damaged provision markers repaired (rag_baseline.ocr_markers).
+    # The graduation corpus has a digital text layer and needs no repair.
+    "duas-regulacoes-v3": CorpusProfile(
+        corpus_path=Path("../evaluation/corpora/graduacao_setor_v2.json"),
+        collection="ufpi_duas_regulacoes_setor_v3",
+        id_prefix="ufpi",
+        norm_name="Normas de graduação e pós-graduação da UFPI",
+        sources=(
+            CorpusSource(
+                path=Path("../evaluation/corpora/graduacao_setor_v2.json"),
+                id_prefix="ufpi-177-2012",
+                norm_name="Resolução nº 177/2012 CEPEX/UFPI",
+            ),
+            CorpusSource(
+                path=Path("../evaluation/corpora/pos_graduacao_setor_v3.json"),
+                id_prefix="ufpi-956-2025",
+                norm_name="Resolução CEPEX/UFPI nº 956/2025",
+            ),
+            CorpusSource(
+                path=Path("../evaluation/corpora/658_2024_temporal_v2.json"),
+                id_prefix="ufpi-658-2024",
+                norm_name="Resolução CEPEX/UFPI nº 658/2024",
+            ),
+            CorpusSource(
+                path=Path("../evaluation/corpora/1056_2026_temporal_v2.json"),
+                id_prefix="ufpi-1056-2026",
+                norm_name="Resolução CEPEX/UFPI nº 1.056/2026",
+            ),
+        ),
+    ),
+    # Canonical plain legal text: conversion syntax removed, every word kept
+    # (rag_baseline.corpus_canonical), over the OCR-repaired markers of v3.
+    "duas-regulacoes-v4": CorpusProfile(
+        corpus_path=Path("../evaluation/corpora/graduacao_setor_v3.json"),
+        collection="ufpi_duas_regulacoes_setor_v4",
+        id_prefix="ufpi",
+        norm_name="Normas de graduação e pós-graduação da UFPI",
+        sources=(
+            CorpusSource(
+                path=Path("../evaluation/corpora/graduacao_setor_v3.json"),
+                id_prefix="ufpi-177-2012",
+                norm_name="Resolução nº 177/2012 CEPEX/UFPI",
+            ),
+            CorpusSource(
+                path=Path("../evaluation/corpora/pos_graduacao_setor_v4.json"),
+                id_prefix="ufpi-956-2025",
+                norm_name="Resolução CEPEX/UFPI nº 956/2025",
+            ),
+            CorpusSource(
+                path=Path("../evaluation/corpora/658_2024_temporal_v3.json"),
+                id_prefix="ufpi-658-2024",
+                norm_name="Resolução CEPEX/UFPI nº 658/2024",
+            ),
+            CorpusSource(
+                path=Path("../evaluation/corpora/1056_2026_temporal_v3.json"),
+                id_prefix="ufpi-1056-2026",
+                norm_name="Resolução CEPEX/UFPI nº 1.056/2026",
+            ),
+        ),
+    ),
     "graduacao-setor-v2": CorpusProfile(
         corpus_path=Path("../evaluation/corpora/graduacao_setor_v2.json"),
         collection="ufpi_graduacao_setor_v2",

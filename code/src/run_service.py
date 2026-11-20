@@ -1,3 +1,8 @@
+"""Start the general service; the v3.4 demo uses prototype_launcher.py.
+
+The demo launcher additionally checks its configuration and publishes version identity.
+"""
+
 import asyncio
 import sys
 

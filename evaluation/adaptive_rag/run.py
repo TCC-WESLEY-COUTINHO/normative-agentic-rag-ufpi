@@ -5,6 +5,10 @@ scoring keys are read after execution. Requests are reserved against a budget be
 are sent and nothing is retried. Output directories must live outside the repository.
 
 Usage: python -m evaluation.adaptive_rag.run --output DIR --split DEV --usd 0.20
+
+ADAPTIVE_RAG_ENV_FILE selects the credentials file (default: code/.env).
+ADAPTIVE_RAG_INDEX_DIR selects the copied index directory
+(default: .local/adaptive-rag-env/chroma_copy). Defaults are relative to the repository.
 """
 
 import argparse
@@ -22,9 +26,10 @@ from .dataset import load
 from .split import split
 
 REPO = Path(__file__).resolve().parents[2]
-ENV_DIR = Path(r"D:\faculdade\TCC\worktrees\retrieval-reranking-experiment-env")
-INDEX_COPY = ENV_DIR / "chroma_copy"
-CREDENTIALS_ENV = Path(r"D:\faculdade\TCC\RAG\normative-agentic-rag-ufpi\code\.env")
+INDEX_COPY = Path(
+    os.environ.get("ADAPTIVE_RAG_INDEX_DIR", REPO / ".local/adaptive-rag-env/chroma_copy")
+)
+CREDENTIALS_ENV = Path(os.environ.get("ADAPTIVE_RAG_ENV_FILE", REPO / "code/.env"))
 DATA_DIR = REPO / "data"
 AGENT_ID = "chatbot_ufpi_integrated_v1"
 # Chat completions are pinned to one provider, without fallback, so that every condition is
@@ -52,7 +57,14 @@ def settings_for(top_k):
 
     settings = apply_profile(
         IntegratedRuntimeSettings(_env_file=str(CREDENTIALS_ENV)), "duas-regulacoes"
-    ).model_copy(update=dict(CHROMA_PERSIST_DIR=INDEX_COPY, RETRIEVAL_TOP_K=top_k))
+    ).model_copy(
+        update=dict(
+            CHROMA_PERSIST_DIR=INDEX_COPY,
+            RETRIEVAL_TOP_K=top_k,
+            # The prototype identity replies are not part of the evaluated conversation graph.
+            ASSISTANT_IDENTITY="off",
+        )
+    )
     for name, expected in FROZEN.items():
         if getattr(settings, name) != expected:
             raise RuntimeError(f"frozen parameter differs: {name}")

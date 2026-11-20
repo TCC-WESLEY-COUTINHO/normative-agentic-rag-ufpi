@@ -3,6 +3,7 @@
 from pathlib import Path
 from unittest.mock import Mock
 
+import test_tcc_ui as ui
 from streamlit.testing.v1 import AppTest
 
 from client import AgentClient, AgentClientError
@@ -27,7 +28,7 @@ def respond(mock, messages):
 def test_app_complete_stream_message(mock_agent_client):
     respond(mock_agent_client, [ChatMessage(type="ai", content="Resposta completa.")])
     at = app()
-    at.chat_input[0].set_value("Olá").run(timeout=15)
+    ui.send(at, "Olá")
     assert not at.exception
     assert [m.content for m in at.session_state.messages] == ["Olá", "Resposta completa."]
     mock_agent_client.update_agent.assert_called_with(AGENT, verify=False)
@@ -57,7 +58,7 @@ def test_app_does_not_restore_legacy_history(mock_agent_client):
 def test_app_no_remote_feedback_or_share(mock_agent_client):
     respond(mock_agent_client, [ChatMessage(type="ai", content="Olá!")])
     at = app()
-    at.chat_input[0].set_value("Oi").run(timeout=15)
+    ui.send(at, "Oi")
     labels = " ".join(button.label for button in at.button).lower()
     assert "feedback" not in labels and "compartilhar" not in labels
     assert not at.chat_message[-1].button
@@ -71,7 +72,7 @@ def test_app_network_failure_safe(mock_agent_client):
 
     mock_agent_client.astream = Mock(side_effect=fail)
     at = app()
-    at.chat_input[0].set_value("Oi").run(timeout=15)
+    ui.send(at, "Oi")
     assert not at.exception
     assert "Não foi possível obter" in at.error[0].value
     assert "UNSAFE" not in at.error[0].value
@@ -90,7 +91,7 @@ def test_app_done_is_consumed_by_real_client_parser(mock_agent_client):
     events = [event for line in lines if (event := parser._parse_stream_line(line)) is not None]
     respond(mock_agent_client, events)
     at = app()
-    at.chat_input[0].set_value("Oi").run(timeout=15)
+    ui.send(at, "Oi")
     assert not at.exception
     assert len(at.session_state.messages) == 2
     assert at.chat_message[-1].markdown[0].value == "Final único."
@@ -104,7 +105,7 @@ def test_app_new_chat_clears_transient_state(mock_agent_client):
 
     mock_agent_client.astream = Mock(side_effect=fail)
     at = app()
-    at.chat_input[0].set_value("Oi").run(timeout=15)
+    ui.send(at, "Oi")
     assert at.error
     user, thread = at.session_state.user_id, at.session_state.thread_id
     at.sidebar.button[0].click().run(timeout=15)
@@ -127,7 +128,7 @@ def test_app_sse_error_uses_safe_ux_and_is_not_an_assistant_answer(mock_agent_cl
 
     mock_agent_client.astream = Mock(side_effect=events)
     at = app()
-    at.chat_input[0].set_value("Oi").run(timeout=15)
+    ui.send(at, "Oi")
     assert not at.exception
     assert len(at.session_state.messages) == 1
     assert "Não foi possível obter" in at.error[0].value

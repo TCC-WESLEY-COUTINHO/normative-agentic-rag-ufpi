@@ -1,5 +1,7 @@
 # Piloto 003 — perguntas naturais e metadados de setor
 
+> **Registro histórico.** Configuração, resultados, contagens de testes e estados descritos referem-se à execução documentada, anterior à v3.4. Para a versão atual, consulte o [guia de evidências e reprodução](../../README.md).
+
 Foram concluídos 40 pares de execução: 80 registros, 79 respostas e uma falha HTTP 504 preservada. Os índices contêm 62 artigos da pós, 376 da graduação e 438 no conjunto. A fase isolada começou em 19/10/2026 e a fase conjunta terminou em 20/10/2026, no fuso America/Sao_Paulo.
 
 O Recall@5 da pós caiu de 1,0000 para 0,9375, diferença de −6,25 pontos percentuais, com intervalo bootstrap 95% [−15,625; 0,000] p.p. A graduação permaneceu em 0,9167. O intervalo da pós inclui zero. Estes são resultados de recuperação de uma amostra intencional de desenvolvimento; não demonstram insuficiência geral de RAG ou superioridade de agentes.
@@ -12,7 +14,7 @@ A pós contém 8 perguntas diretas, 8 abertas e 4 ambíguas. A graduação mant�
 
 Os índices isolados recebem a norma correta por construção. O conjunto consulta os dois corpora sem filtro do rótulo gold. O setor aparece nos metadados, embeddings e contextos. O método executado é a baseline densa Chroma. Os filtros das ferramentas Supabase foram verificados em testes locais; este piloto não executa o loop agêntico nem mede o efeito causal de incluir setor.
 
-A [análise primária](PRIMARY_ANALYSIS.md) foi registrada antes da fase conjunta. A opção 2 foi aplicada: nenhum item foi eliminado por desempenho e não houve corte mínimo de aprovação. A tentativa anterior [pilot_002](../pilot_002/FAILURE.md) falhou na conexão antes das respostas e foi preservada.
+A [análise primária](PRIMARY_ANALYSIS.md) foi registrada antes da fase conjunta. A opção 2 foi aplicada: nenhum item foi eliminado por desempenho e não houve corte mínimo de aprovação. A tentativa anterior `pilot_002` falhou na conexão antes das respostas; seu registro histórico `../pilot_002/FAILURE.md` não integra este snapshot.
 
 ## Recuperação
 
@@ -47,7 +49,7 @@ Nos outros 20 pares respondíveis, Recall@5 permaneceu igual. Nenhum melhorou ne
 
 `POS2-016 / isolated` retornou `OpenRouter retornou HTTP 504`, apesar da recuperação completa. O item está nos dados e no denominador original. Na condição conjunta foi produzida resposta; não houve repetição seletiva da chamada isolada. Uma comparação de qualidade precisa separar indisponibilidade operacional, recuperação e julgamento do conteúdo.
 
-Os escores 0/1/2 e as taxas de esclarecimento adequado não têm anotação independente registrada. Não é válido deduzir nota 2 de Recall@5=1. A rubrica aprovada exige: 0 para erro ou ausência de resposta; 1 para incompletude sem erro material ou falta de evidência necessária; 2 para resposta correta, completa e sustentada. Nas ambíguas, avaliar a solicitação de nível antes de aplicar regra. As 36 saídas das 18 perguntas de esclarecimento estão preservadas, sem misturá-las ao acerto normativo.
+Os escores 0/1/2 e as taxas de esclarecimento adequado permanecem nulos; as métricas de recuperação não estabelecem correção normativa. Não é válido deduzir nota 2 de Recall@5=1. A rubrica aprovada exige: 0 para erro ou ausência de resposta; 1 para incompletude sem erro material ou falta de evidência necessária; 2 para resposta correta, completa e sustentada. Nas ambíguas, avaliar a solicitação de nível antes de aplicar regra. As 36 saídas das 18 perguntas de esclarecimento estão preservadas, sem misturá-las ao acerto normativo.
 
 Há [80 formulários](review_template.json) com campos de revisão nulos. Usar cópias independentes para dois avaliadores e adjudicar divergências. Não entregar a [chave](blinding_key.json), os registros identificados por condição ou este relatório durante a primeira anotação. O texto pode revelar a condição; a revisão posterior das evidências reduz o cegamento. O gold candidato, fatos obrigatórios e classificação de ambiguidades também precisam ser revisados.
 

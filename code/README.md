@@ -1,6 +1,17 @@
 # Código do assistente normativo (`code/`)
 
-Código Python do protótipo do TCC II: pipeline normativo, camada conversacional (A″-J v2), API FastAPI e interface Streamlit (Bisco). Para executar, use o [README da raiz](../README.md) (Docker em um comando) ou o [guia de Linux](../docs/DEPLOY_LINUX.md). A arquitetura está em [`docs/tcc2/ARQUITETURA_A2J_V2.md`](../docs/tcc2/ARQUITETURA_A2J_V2.md); a API, em [`docs/API.md`](../docs/API.md).
+Código Python do protótipo do TCC II na versão **v3.4**. Ele reúne:
+
+- a camada conversacional (intérprete Jev com política de transição v2);
+- o pipeline normativo, com **geração ancorada em citação** e **verificação determinística** da resposta;
+- a API FastAPI;
+- a interface Streamlit (Bisco).
+
+Para executar, use o [README da raiz](../README.md) (Docker em um comando) ou o [guia de Linux](../docs/DEPLOY_LINUX.md). A arquitetura está em [`docs/tcc2/ARQUITETURA_A2J_V2.md`](../docs/tcc2/ARQUITETURA_A2J_V2.md), e a API em [`docs/API.md`](../docs/API.md).
+
+## Fluxo de uma pergunta
+
+Interpretação da conversa (Jev + transição v2) → identidade do assistente → **Scope Gate** → nível de ensino (atalho ou Router V1) → recuperação vetorial (Chroma, K=5) + lexical (BM25) → **VersionFilter** e contexto temporal → **geração com citações literais** → **verificador** → resposta com referências, ressalvas ou abstenção.
 
 ## Organização
 
@@ -8,32 +19,60 @@ Código Python do protótipo do TCC II: pipeline normativo, camada conversaciona
 |---|---|
 | `src/rag_baseline/` | Pipeline normativo e camada conversacional |
 | `src/rag_baseline/conversation_interpretation/` | Intérpretes (Jev, LLM estruturado, regras) e políticas de transição v1 e v2 |
-| `src/rag_baseline/integrated_runtime.py` | Montagem do agente `chatbot_ufpi_integrated_v1` ([detalhes](docs/integrated-runtime.md)) |
+| `src/rag_baseline/integrated_runtime.py` | Montagem do agente `chatbot_ufpi_integrated_v1`, usado pelo protótipo ([detalhes](docs/integrated-runtime.md)) |
 | `src/service/`, `src/core/`, `src/memory/`, `src/schema/`, `src/agents/` | API FastAPI, configuração, checkpointer, contratos de transporte e registro de agentes |
-| `src/streamlit_app.py`, `src/chat_ui/`, `src/static/`, `src/client/` | Interface web e cliente HTTP |
+| `src/streamlit_app.py`, `src/chat_ui/`, `src/static/`, `src/client/` | Interface web (Bisco) e cliente HTTP |
+| `scripts/` | Corpora dos perfis históricos e utilitário que regenera a referência congelada da identidade |
 | `tests/` | Testes offline: não chamam provedores; usam intérpretes e provedores roteirizados |
-| `legacy/ufpinho/` | Interface anterior, arquivada |
 
-Os principais módulos do pipeline normativo em `src/rag_baseline/`:
+Principais módulos de `src/rag_baseline/`:
 
 | Módulo | Função |
 |---|---|
-| `conversation_graph.py` | Grafo conversacional |
-| `scope_gate.py` | Scope Gate |
-| `router.py` | Router V1 |
-| `agentic.py` | Grafo normativo |
-| `retrieval_policy.py`, `retrieval_service.py`, `lexical_retrieval.py` | Recuperação |
-| `versioning.py`, `grounding.py` | VersionFilter e contexto temporal |
-| `service.py`, `normative_output.py`, `evidence_support.py` | Geração e validador v5 |
-| `output_contracts.py`, `tool_contracts.py` | Contratos |
+| `conversation_graph.py`, `conversation_policy.py` | Grafo conversacional e política de turnos (pendências, nível declarado, memória) |
+| `assistant_identity.py` | Respostas fixas sobre o próprio assistente ("qual é o seu nome?", "como você funciona?"), antes do Scope Gate |
+| `scope_gate.py` | Scope Gate: decide se a pergunta é normativa |
+| `router.py`, `agentic.py` | Router V1 de nível de ensino e grafo normativo |
+| `retrieval_policy.py`, `retrieval_service.py`, `lexical_retrieval.py` | Recuperação vetorial e lexical |
+| `versioning.py`, `grounding.py` | VersionFilter e contexto temporal (redação vigente e alterações) |
+| `cited_generation.py`, `citation_contracts.py` | Geração v3.4: afirmações com citação literal do trecho recuperado |
+| `citation_verifier.py`, `content_locators.py` | Verificador determinístico: citação literal, números e prazos, dispositivo, nível, norma da evidência, negação acrescentada e ato alterador |
+| `service.py`, `normative_output.py`, `evidence_support.py` | Montagem da resposta por unidade de regra, ressalvas e guard de saída |
+| `output_contracts.py`, `tool_contracts.py`, `calculator_contracts.py` | Contratos de saída, de ferramentas e da calculadora de datas |
+| `profiles.py`, `config.py` | Perfis de corpus e configuração do pipeline |
 
-## Ambiente
+## Configuração
 
 ```bash
 uv sync --frozen          # dependências fixadas em uv.lock (Python 3.12)
 ```
 
-As variáveis do pipeline estão em `src/rag_baseline/config.py`: `OPENROUTER_*`, modelos, `RETRIEVAL_TOP_K`, `CHROMA_PERSIST_DIR`. As da camada conversacional, `CONVERSATION_INTERPRETER` e `CONVERSATION_INTERPRETER_CONFIG`, estão em `integrated_runtime.py`. Sem as duas últimas, o código executa a camada de A′. Com `jev` e sem `{"transition_policy":"v2"}`, executa a política v1.
+Os padrões já correspondem à v3.4. Em `src/rag_baseline/config.py`:
+
+| Variável | Padrão | Efeito |
+|---|---|---|
+| `GENERATION_MODE` | `cited_v3` | Geração ancorada em citação (v3.4). `free_text_v2` reproduz a geração v2 |
+| `CORPUS_PROFILE` | `duas-regulacoes-v4` | Corpus canônico v4, coleção `ufpi_duas_regulacoes_setor_v4` |
+| `RETRIEVAL_TOP_K` | `5` | Trechos recuperados por consulta |
+| `CHROMA_PERSIST_DIR`, `OPENROUTER_*` | — | Índice local e provedor do modelo de linguagem |
+
+Em `src/rag_baseline/integrated_runtime.py`:
+
+| Variável | Valor da v3.4 | Efeito |
+|---|---|---|
+| `CONVERSATION_INTERPRETER` | `jev` | Sem ela, executa a camada conversacional de A′ |
+| `CONVERSATION_INTERPRETER_CONFIG` | `{"transition_policy":"v2"}` | Sem a política v2, executa a v1 |
+| `ASSISTANT_IDENTITY` | `on` | Respostas sobre o próprio assistente. `off` reproduz exatamente a v3.4 congelada ([detalhes](docs/integrated-runtime.md)) |
+
+## Índice
+
+A partir de `code/`, com `CHROMA_PERSIST_DIR` apontando para o diretório do índice:
+
+```bash
+uv run python -m rag_baseline.index --profile duas-regulacoes-v4 --rebuild
+```
+
+A indexação gera embeddings pelo endpoint configurado e tem custo. O modelo de embeddings deve ser o mesmo usado pelo backend.
 
 ## Testes e qualidade
 
@@ -44,26 +83,23 @@ PYTHONPATH="src:.." uv run pytest tests -p no:cacheprovider -q
 uv run ruff check src tests
 ```
 
-A raiz do repositório entra no `PYTHONPATH` porque um teste importa `evaluation/`. Resultado da versão atual: 2925 aprovados, 12 ignorados (Docker e regressões opcionais) e 13 `xfail` estritos (defeitos da política v1, mantidos de propósito).
+A raiz do repositório entra no `PYTHONPATH` porque alguns testes importam `evaluation/`. Os `xfail` estritos documentam, de propósito, defeitos conhecidos da política v1.
+
+A equivalência com a v3.4 congelada, com `ASSISTANT_IDENTITY=off`, é verificada contra uma referência gravada a partir da tag `tcc2-cond-v3.4`. Para regenerá-la: `uv run --frozen python scripts/regenerate_identity_off_frozen.py`.
 
 ## Ferramentas de terminal (desenvolvimento)
 
 | Comando (com `uv run`, a partir de `code/`) | Função |
 |---|---|
-| `python -m rag_baseline.index --profile duas-regulacoes [--rebuild]` | Indexa os quatro corpora na coleção `ufpi_duas_regulacoes_setor`. Gera embeddings pelo endpoint configurado, com custo |
-| `uvicorn rag_baseline.api:app --port 8080` e `python -m rag_baseline.demo [--setor graduacao\|pos_graduacao\|ambos\|automatico] [--verbose]` | API mínima de consulta (`/query`) e terminal Rich, anteriores à camada conversacional. Úteis para inspecionar recuperação, rota e filtro de versões numa pergunta isolada |
+| `uvicorn rag_baseline.api:app --port 8080` | API mínima de consulta (`/query`), anterior à camada conversacional |
+| `python -m rag_baseline.demo [--setor graduacao\|pos_graduacao\|ambos\|automatico] [--verbose]` | Terminal Rich para inspecionar recuperação, rota e filtro de versões numa pergunta isolada |
 
 `rag_baseline.chat` é alias de `demo`. As ferramentas de terminal não passam pelo intérprete Jev nem pela memória de conversa.
 
-## Componentes legados
+## Componentes históricos
 
-Estes arquivos pertencem ao serviço anterior ao TCC II (agente `chatbot_ufpi_v2`) e são mantidos porque testes do código congelado os verificam:
+Os agentes `chatbot_ufpi`, `chatbot_ufpi_v2` e `chatbot_ufpi_agentic`, com suas ferramentas em `src/agents/tools*.py`, continuam registrados para compatibilidade com as condições anteriores. O protótipo usa `chatbot_ufpi_integrated_v1`.
 
-- `compose.yaml`, `compose.prod.yaml`, `docker/`, `.env.example`;
-- `compose.operational.yaml` e `scripts/*_local.*`;
-- `scripts/chunks*.py`, que geram os chunks da Resolução 177/2012 usados no trabalho anterior;
-- `scripts/create_chroma_db.py`, exemplo do template.
+Os corpora `scripts/chunks_v2.json` e `scripts/chunks_resolucao_956_2025_v1.json` atendem aos perfis históricos e aos testes. O texto de origem do trabalho anterior está em [`data/RGG_markdown.txt`](../data/RGG_markdown.txt).
 
-Os agentes `chatbot_ufpi` e `chatbot_ufpi_v2` (e suas ferramentas em `src/agents/tools*.py`) permanecem no código congelado da v2, mas não fazem parte do protótipo: dependiam de um banco vetorial externo que não é versionado nem suportado, então não podem ser executados a partir do repositório.
-
-O registro de agentes (`src/agents/agents.py`) também mantém agentes de exemplo do template original (*agent-service-toolkit*, Joshua Carroll, MIT), que não fazem parte do protótipo. `langgraph.json` aponta para um desses exemplos.
+A base de engenharia deriva do *agent-service-toolkit*, de Joshua Carroll, sob a [licença MIT preservada](LICENSE). As contribuições do TCC II estão sob a [licença MIT da raiz](../LICENSE).

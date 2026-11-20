@@ -1,5 +1,7 @@
 # Terminal original — escopo explícito e validação
 
+> **Registro histórico do terminal e de suas condições de outubro de 2026.** Coleção, geração, contagens de testes e estados abaixo pertencem àquela execução. O protótipo atual é a v3.4, com geração citada e verificador determinístico; veja [código e ferramentas de terminal](../code/README.md) e [verificações atuais](../docs/REPRODUCAO.md). Os comandos históricos exigem a configuração e o índice daquela condição, não os padrões da v3.4.
+
 ## Contrato aprovado
 
 Reutilizar `rag_baseline.demo` da branch `demo/terminal-ui` (commit de referência `3932f45`), preservando interface Rich e comunicação HTTP com a API. Selecionar graduação, pós-graduação ou ambas uma vez ao iniciar, antes da primeira pergunta. Manter a seleção até o usuário digitar `voltar` no campo da pergunta e escolher outro escopo no menu. O roteamento automático pertence à futura implementação de agentes; não faz parte desta baseline.
@@ -51,7 +53,7 @@ O relatório da nova exploração fica em `results/terminal_ui_001/REPORT.md`, c
 
 `terminal_ui_001` foi executado com o código `5f281a15eab549d15cea429498bd1a4322c15a3f`, que reapresentava o menu a cada pergunta interativa. A correção posterior para manter o escopo na sessão altera somente a navegação interativa; não altera o contrato de recuperação, o prompt ou o escopo fixo dos lotes. Os registros e métricas daquela execução permanecem históricos, sem reexecução ou atribuição retroativa desta navegação.
 
-Notas editoriais/autoria e exploração de desenvolvimento não fazem parte dos artefatos técnicos. Dados, configuração, decisões técnicas, auditoria e resultados verificáveis são artefatos versionáveis. Novos testes seguem locais/ignorados por orientação do projeto.
+ Dados, configuração, decisões técnicas, auditoria e resultados verificáveis são artefatos versionáveis.
 
 ## Verificação da navegação persistente — 2026-10-20
 
@@ -66,12 +68,14 @@ Executado em `code/`, via `uv run --no-sync`:
 
 Esses testes verificam o software, não atribuem qualidade normativa às respostas. Os novos testes permanecem locais/ignorados; nenhum resultado experimental foi reescrito ou produzido nesta correção.
 
-## Uso a partir de code/
+## Uso histórico a partir de code/
 
 Terminal 1:
 
 ```powershell
 uv sync --frozen
+$env:GENERATION_MODE="free_text_v2"
+$env:CORPUS_PROFILE="duas-regulacoes"
 uv run python -m rag_baseline.index --profile duas-regulacoes
 uv run uvicorn rag_baseline.api:app --host 127.0.0.1 --port 8080
 ```

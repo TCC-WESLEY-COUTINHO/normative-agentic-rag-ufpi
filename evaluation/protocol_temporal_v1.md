@@ -1,6 +1,8 @@
 # Protocolo temporal V1 — dois casos documentais reais
 
-Dataset candidato, sem validação, com uma execução exploratória por condição.
+> **Protocolo histórico.** As condições e comandos abaixo registram o experimento anterior à v3.4. Não descrevem a configuração atual; novas execuções exigem diretório de saída novo e os insumos da condição histórica. Veja [reprodução e limites](../docs/REPRODUCAO.md).
+
+Dataset candidato de desenvolvimento, com uma execução exploratória por condição.
 Este protocolo acrescenta dois corpora ao snapshot conjunto; os dados, IDs, vetores
 e resultados anteriores permanecem congelados. Não constitui certificação jurídica
 integral de vigência nem estudo confirmatório.
@@ -72,7 +74,7 @@ para um aluno específico. A heurística permanece limitada e independente do Ro
 Congelar os itens e qrels antes das chamadas. Cinco perguntas da pós e cinco da
 graduação, separadas por `domain` e `temporal_relation` (`revocation`, `amendment`).
 As referências contêm texto exato dos corpora, localização nos PDFs e fatos
-candidatos. Não renomear o conjunto como gold validado; julgamentos humanos nulos.
+candidatos. Não renomear o conjunto como gold validado; julgamentos dos avaliadores nulos.
 
 | Condição | Setor | Version Filter |
 |---|---|---|
@@ -115,13 +117,15 @@ atualizada; não concede um hit de retrieval ao ato que não foi recuperado.
 Registrar numeradores/denominadores, falhas e alterações aplicadas. Reportar por
 domínio e relação, sem inferência populacional. Taxa zero com baixo Recall não
 demonstra qualidade. A validade material e qualidade das respostas exigem revisão
-humana independente; não usar LLM judge, GraphRAG ou RAGAS nesta etapa.
+por avaliadores independentes; não usar GraphRAG ou RAGAS nesta etapa.
 
 ## Reprodução
 
 Na pasta `code/`, com ambiente configurado e coleção incrementada:
 
 ```powershell
+# Geração histórica; o runner seleciona o perfil duas-regulacoes e exige seu índice.
+$env:GENERATION_MODE="free_text_v2"
 python -m rag_baseline.experiment_v2 --condition both --dataset ../evaluation/datasets/temporal_pos_v1.json --output ../evaluation/results/temporal_pos_B_001
 python -m rag_baseline.experiment_v2 --condition router-version --dataset ../evaluation/datasets/temporal_pos_v1.json --output ../evaluation/results/temporal_pos_D_001
 python -m rag_baseline.experiment_v2 --condition both --dataset ../evaluation/datasets/temporal_graduacao_v1.json --output ../evaluation/results/temporal_grad_B_001
@@ -130,5 +134,5 @@ python -m rag_baseline.experiment_v2 --condition router-version --dataset ../eva
 
 O runner valida todos os corpora e o índice sem modificá-los, salva configuração,
 hashes, textos/contextos pré/pós, redações aplicadas e recibos disponíveis. Não salva
-segredos, raciocínio interno ou notas humanas fabricadas. Saídas antigas nunca são
+segredos, raciocínio interno ou notas de avaliação fabricadas. Saídas antigas nunca são
 sobrescritas. Nenhum push ou merge faz parte desta tarefa.

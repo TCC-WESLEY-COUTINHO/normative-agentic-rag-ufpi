@@ -6,12 +6,13 @@
 code/src/**/__pycache__/
 code/src/**/*.pyc
 !data/normative_registry.json
+!evaluation/corpora/graduacao_setor_v3.json
+!evaluation/corpora/pos_graduacao_setor_v4.json
+!evaluation/corpora/1056_2026_temporal_v3.json
+!evaluation/corpora/658_2024_temporal_v3.json
 !evaluation/corpora/graduacao_setor_v2.json
 !evaluation/corpora/pos_graduacao_setor_v2.json
 !evaluation/corpora/1056_2026_temporal_v1.json
-!evaluation/corpora/658_2024_temporal_v1.json
-!deploy/backend/frozen_sources.py
-!deploy/backend/backend_sources.lfnorm.json
 !deploy/backend/prototype_launcher.py
 !deploy/backend/healthcheck.py
 code/src/**/*.egg-info/

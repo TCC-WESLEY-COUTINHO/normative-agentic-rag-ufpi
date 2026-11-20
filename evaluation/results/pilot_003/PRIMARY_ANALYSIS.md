@@ -1,5 +1,7 @@
 # Análise primária — índices isolados
 
+> **Registro histórico.** Configuração, resultados, contagens de testes e estados descritos referem-se à execução documentada, anterior à v3.4. Para a versão atual, consulte o [guia de evidências e reprodução](../../README.md).
+
 Registro elaborado após a conclusão da fase isolada e antes da execução conjunta. Snapshot experimental: commit `c6af890`; parâmetros e hashes no manifesto. A primeira fase terminou em `2026-10-19T22:39:16.323033+00:00`.
 
 | Conjunto | Itens | Respondíveis | Esclarecimento esperado | Recall@5 | Cobertura completa@5 | Erros de geração |
@@ -11,4 +13,4 @@ Registro elaborado após a conclusão da fase isolada e antes da execução conj
 
 `POS2-016` recuperou todas as evidências gold, mas não produziu resposta: `OpenRouter retornou HTTP 504`. Trata-se de falha operacional de geração; não excluir o item nem repetir seletivamente a chamada neste piloto. Os escores de revisão permanecem nulos. Recuperar todos os artigos não equivale a responder corretamente ou de forma completa.
 
-Decisão de continuidade: aplicar a opção 2 aprovada, sem percentual mínimo de aprovação, mantendo as 40 perguntas, incluindo a falha operacional e as ambiguidades. Executar o índice conjunto com o mesmo prompt, configurações e vetores, conforme protocolo congelado. A avaliação de conteúdo e adequação de esclarecimento permanece pendente de revisão independente.
+Decisão de continuidade: aplicar a opção 2 aprovada, sem percentual mínimo de aprovação, mantendo as 40 perguntas, incluindo a falha operacional e as ambiguidades. Executar o índice conjunto com o mesmo prompt, configurações e vetores, conforme protocolo congelado. As métricas desta análise não estabelecem correção do conteúdo nem adequação dos esclarecimentos.

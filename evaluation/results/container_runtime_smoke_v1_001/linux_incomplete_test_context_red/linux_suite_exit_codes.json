@@ -1,9 +1,0 @@
-{
-  "runtime": 0,
-  "calculator": 0,
-  "conversation": 0,
-  "transport": 0,
-  "rag_baseline": 1,
-  "service_client": 0,
-  "full": 1
-}

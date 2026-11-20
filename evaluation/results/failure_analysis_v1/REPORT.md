@@ -1,7 +1,9 @@
 # Diagnóstico das falhas agentic — versão 1
 
+> **Registro histórico.** Configuração, resultados, contagens de testes e estados descritos referem-se à execução documentada, anterior à v3.4. Para a versão atual, consulte o [guia de evidências e reprodução](../../README.md).
+
 28/10/2026. Depuração dos casos conhecidos, sem avaliação confirmatória, ajuste de
-dataset ou avaliação jurídica humana. A única intervenção de produção aceita foi
+dataset ou avaliação jurídica especializada. A única intervenção de produção aceita foi
 a mitigação de citação em F3. F1 e F2 permanecem abertas; F4 foi localizada na
 geração e continua sem correção específica. Resultados negativos foram preservados.
 
@@ -37,9 +39,9 @@ embedding `openai/text-embedding-3-small`, temperatura 0, máximo de 800 tokens,
 maiores foram consultas diagnósticas F2. Perguntas de ablação não foram usadas
 como perguntas de produção nem incorporadas aos datasets.
 
-Os três manifestos finais de [F1](../failure_regression_v1_001/f1_retained/manifest.json),
-[F4](../failure_regression_v1_001/f4_retained/manifest.json) e
-[pipeline](../failure_regression_v1_001/pipeline_001/manifest.json) identificam
+Os três manifestos finais de F1 (`../failure_regression_v1_001/f1_retained/manifest.json`, não incluído neste snapshot),
+F4 (`../failure_regression_v1_001/f4_retained/manifest.json`, não incluído neste snapshot) e
+pipeline (`../failure_regression_v1_001/pipeline_001/manifest.json`, não incluído neste snapshot) identificam
 `71bff32`, fontes por SHA-256 e `production_inputs_dirty=false`. O roteiro e
 resultados ainda não estavam commitados nessas chamadas; isso aparece no status
 Git, sem alegação de árvore inteira limpa durante a coleta.
@@ -68,11 +70,11 @@ a frase por sua pergunta fixa. Não havia histórico anterior na requisição.
 `route_stability_rate` é a frequência da decisão modal; `expected_route_rate`
 é a frequência da rota esperada. Uma decisão modal pode estar errada.
 Fontes: [antes](f1_before/summary.json) e
-[versão entregue](../failure_regression_v1_001/f1_retained/summary.json).
+versão entregue (`../failure_regression_v1_001/f1_retained/summary.json`, não incluído neste snapshot).
 Há variação mesmo com temperatura zero.
 
 Uma alteração localizada de instrução continuou falhando em 5/40 chamadas dos
-casos problemáticos ([tentativa](../failure_regression_v1_001/f1_after/rows.jsonl)).
+casos problemáticos (tentativa (`../failure_regression_v1_001/f1_after/rows.jsonl`, não incluído neste snapshot)).
 Restringir o schema com o detector lexical existente chegou a 40/40 nesses
 casos, mas quebrou esclarecimentos legítimos como “Não sei se meu curso é
 graduação ou pós-graduação” e a menção incidental ao curso anterior. O
@@ -173,7 +175,7 @@ não de falta de retrieval. Requisição completa e contexto em
 RED: o teste com o corpus real passou na localização do prazo, mas falhou na
 atribuição ao parágrafo nas dez respostas: 1 aprovado, 1 falhou. Uma instrução
 genérica para só citar subdivisões com suporte continuou errando 10/10 e ficou
-preservada em [f3_after](../failure_regression_v1_001/f3_after/rows.jsonl).
+preservada em f3_after (`../failure_regression_v1_001/f3_after/rows.jsonl`, não incluído neste snapshot).
 
 A intervenção aceita acrescenta somente duas linhas: as citações de localização
 devem usar fonte e artigo, granularidade dos metadados, sem acrescentar parágrafo,
@@ -192,7 +194,7 @@ Commit local `71bff32`. A revisão aceitou a mudança como **mitigação medida*
 Ela sacrifica localização mais fina e não garante adesão universal do modelo:
 as novas respostas da graduação ainda citam §4º, que tem suporte textual, apesar
 da instrução conservadora. Não se conclui melhora geral da qualidade jurídica.
-[Análise](f3_analysis.json), [capturas finais](../failure_regression_v1_001/f3_article_only/rows.jsonl).
+[Análise](f3_analysis.json), capturas finais (`../failure_regression_v1_001/f3_article_only/rows.jsonl`, não incluído neste snapshot).
 
 ## F4 — repetição textual
 
@@ -222,14 +224,14 @@ Após apenas a mitigação F3, houve **0/10 repetições da cláusula rastreada*
 série, com nove respostas distintas. Esse resultado não prova ausência de toda
 repetição semântica nem um efeito causal confirmado sobre F4. **Não há fix ou
 commit específico F4, nem deduplicador de respostas.**
-[Antes](f4_original/rows.jsonl), [depois](../failure_regression_v1_001/f4_retained/rows.jsonl),
+[Antes](f4_original/rows.jsonl), depois (`../failure_regression_v1_001/f4_retained/rows.jsonl`, não incluído neste snapshot),
 [análise e limites](f4_analysis.json).
 
 ## Reexecução controlada final
 
 Somente seis perguntas conhecidas, uma chamada completa por caso em D, e o
 par B da pergunta histórica. Não foi rodado o dataset inteiro para escolher uma
-versão. [comparison.json](../failure_regression_v1_001/comparison.json) contém
+versão. comparison.json (`../failure_regression_v1_001/comparison.json`, não incluído neste snapshot) contém
 pergunta, contexto, decisão e resposta antes/depois para cada linha.
 
 | Caso/condição | Antes congelado | Depois observado | Estado |
@@ -243,7 +245,7 @@ pergunta, contexto, decisão e resposta antes/depois para cada linha.
 
 A resposta histórica D continua fazendo afirmações auxiliares indevidas sobre
 ausência de alteração a partir de contexto insuficiente. Essa limitação não foi
-corrigida nem ocultada. Não há notas humanas ou novo resultado final do TCC.
+corrigida nem ocultada. Não há notas de avaliação ou novo resultado final do TCC.
 
 ## Testes, lint e integridade
 
@@ -264,7 +266,6 @@ verificações de captura F1 são opt-in, não chamadas escondidas ao provedor; 
 dois outros skips já existiam. Não se apresenta a suíte determinística verde
 como resolução de F1. Novos testes são versionados por exceções seletivas de
 `.gitignore`; caches e testes locais não relacionados continuam excluídos.
-[verification.json](verification.json) registra comandos e saídas resumidas.
 As duas novas pastas de resultados têm regras seletivas `-text` em
 `.gitattributes`, preservando os bytes coletados e seus hashes durante o commit.
 
@@ -273,7 +274,6 @@ iguais ao snapshot inicial. Os **176 arquivos protegidos** permanecem idênticos
 por SHA-256, incluindo corpora, datasets, registry e todos os resultados anteriores
 protegidos. Hash do índice antes/depois:
 `ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a`.
-[Antes](baseline_001/preservation.json), [depois](preservation_after.json).
 Uma captura local inicial abortou por citação de nomes Unicode pelo Git, sem
 chamadas externas; `baseline_001` é a captura válida.
 

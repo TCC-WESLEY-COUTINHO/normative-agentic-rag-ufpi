@@ -482,7 +482,7 @@ async def test_p0_malformed_jev_payload_is_an_invalid_response(answers, usage):
 # ------------------------------------------------------------------ P1 refinement
 # Found in the offline replay of Stage 6 logs (regression of the first v2 draft): a reply
 # that only protests and states the level is read by the interpreter as carrying a "new
-# question". The independent review (stage7/review_v2) showed that resuming on a word-list
+# question". Resuming on a word-list
 # judgement can consume real questions. v2 therefore never resumes on such a reading: it
 # asks which request to answer (no retrieval, no persistence, pending preserved).
 

@@ -1,12 +1,13 @@
 # TEMP-GRAD-002: redação documental histórica e runtime local
 
-A interpretação temporal de TEMP-GRAD-002 foi corrigida e o runtime local foi reconstruído. **A aceitação funcional é parcial: GEN-01 permanece aberto**, pois o lote instrumentado final terminou em fallback, embora o HTTP/SSE separado tenha respondido com segurança. Há distinção entre redação de snapshot e certificação de vigência histórica. Focused final: **765 passed, 2 warnings, 56.92 s, exit 0**. Full suite final: **1259 passed, 12 skipped, 6 warnings, 117.53 s, exit 0**. Índice **507/507 idêntico**. API e UI locais reconstruídas com o código final; sem verificação funcional em navegador, revisão visual ou validação de conteúdo registradas.
+> **Registro histórico.** Configuração, resultados, contagens de testes e estados descritos referem-se à execução documentada, anterior à v3.4. Para a versão atual, consulte o [guia de evidências e reprodução](../../README.md).
+
+A interpretação temporal de TEMP-GRAD-002 foi corrigida e o runtime local foi reconstruído. **A aceitação funcional é parcial: GEN-01 permanece aberto**, pois o lote instrumentado final terminou em fallback, embora o HTTP/SSE separado tenha respondido com segurança. Há distinção entre redação de snapshot e certificação de vigência histórica. Focused final: **765 passed, 2 warnings, 56.92 s, exit 0**. Full suite final: **1259 passed, 12 skipped, 6 warnings, 117.53 s, exit 0**. Índice **507/507 idêntico**. API e UI locais reconstruídas com o código final; as verificações descritas não atestam a experiência visual em navegador nem a correção normativa do conteúdo.
 
 ## Git
 
 Estado inicial observado: branch `fix/pre-freeze-explicit-sector-temporal-fallback`, HEAD **`2483c82fd45b3fff8a2e8a74f0ee193c533e72d9`**, árvore limpa. Foram executados status, branch, HEAD, log de 15 commits, diff e diff staged antes das alterações. A branch de trabalho foi criada depois: **`fix/pre-freeze-historical-snapshot-wording`**.
 
-A fotografia automatizada de `preservation.json` foi feita na branch nova, com os runners recém-criados. O campo initial_branch_observed_before_new_branch distingue a branch original. Não existiam alterações de usuário a descartar.
 
 | Commit local | Conteúdo |
 |---|---|
@@ -51,7 +52,6 @@ document_year é o rótulo solicitado pelo usuário; não prova sozinho a exist�
 
 ## RED
 
-Comandos completos, cwd, exits, duração e falhas estão em `test_results.json`; `execution_log.jsonl` registra a execução.
 
 | Etapa | Falha demonstrada |
 |---|---|
@@ -60,7 +60,7 @@ Comandos completos, cwd, exits, duração e falhas estão em `test_results.json`
 | historical_claim_red | 5 failed, 1 passed, 22 deselected: afirmações de vigência histórica do modelo eram aceitas |
 | locator_then_validity_red | 1 failed, 31 deselected: retry de erro de citação introduzia certificação histórica |
 
-O primeiro comando RED foi `python -m pytest -q tests/rag_baseline/test_historical_snapshot_wording.py --tb=short`, executado antes da alteração produtiva. A revisão independente encontrou o limite das perguntas mistas; as seis negativas foram registradas antes da correção desse limite.
+O primeiro comando RED foi `python -m pytest -q tests/rag_baseline/test_historical_snapshot_wording.py --tb=short`, executado antes da alteração produtiva. A verificação técnica encontrou o limite das perguntas mistas; as seis negativas foram registradas antes da correção desse limite.
 
 Depois do primeiro rebuild, TEMP-GRAD-002 respondeu operacionalmente, mas o retry real afirmou “estava em vigor” e “permaneceu vigente em parte”. O HTTP/SSE inicial também trouxe “vigente antes da alteração”. Essas capturas foram preservadas; não são apresentadas como conteúdo aprovado.
 
@@ -86,7 +86,7 @@ Duas capturas fazem parte das regressões e permanecem imutáveis/versionadas: `
 | Verificação | Resultado |
 |---|---|
 | Novo snapshot, negativas, guard e retry + módulo de amendment + guard geral | 96 passed antes da última full |
-| Revisão independente do último reparo | 96 passed, sem novo finding no diff |
+| Verificação técnica do último reparo | 96 passed, sem novo finding no diff |
 | Focused final | **765 passed, 2 warnings, 56.92 s, exit 0** |
 | Full final | **1259 passed, 12 skipped, 6 warnings, 117.53 s, exit 0** |
 | Ruff check final | All checks passed, exit 0 |
@@ -109,7 +109,6 @@ Skips: dois Docker dependem de --run-docker; um exige CITATION_REGRESSION_RUN; n
 
 Registry canônico: **`fbd017d0f080481bb0f89e6809b48a87317d8fc97909e7ec2d40f8240bff25ef`**. Router V2: **`41b3e56fcc83b33998b614ab13fe37f2e71c42e90a5010d3827aea9a62aff186`**, inalterado.
 
-`preservation.json` contém hashes dos arquivos, inclusive os sete de data/, PDF e corpora, e **108 arquivos protegidos idênticos**. Scope Gate/prompt, Router V1/V2, helper de setor explícito, retrieval/config e UI permanecem byte a byte iguais.
 
 A classe VersionFilter e as funções decide, route_query, reroute, retrieve e filter_context têm AST idêntica ao início. As verificações prévias do guard também permanecem idênticas por AST, além da nova restrição documentada.
 
@@ -152,7 +151,7 @@ O fluxo final de TEMP-GRAD-002 mantém o art. 68 histórico, com historical_word
 
 ## Limitations
 
-TEMP-GRAD-001–005 continuam candidatos, sem validação independente registrada, usados como DEVELOPMENT/REGRESSION CANDIDATES. Nenhum dataset foi modificado ou promovido a gold. Não é avaliação científica final nem validação jurídica.
+TEMP-GRAD-001–005 continuam candidatos de desenvolvimento e regressão, usados como DEVELOPMENT/REGRESSION CANDIDATES. Nenhum dataset foi modificado ou promovido a gold. Não é avaliação científica final nem validação jurídica.
 
 A identificação de redação documental é conservadora e delimitada linguisticamente. Pedidos sem contexto positivo ou com linguagem de aplicabilidade mantêm a política anterior. O corpus não permite certificar arbitrariamente qualquer edição ou ano citado pelo usuário.
 
@@ -166,23 +165,23 @@ Redesign não foi implementado. A instalação foi apenas local; aparência e co
 
 **GEN-01 — OPEN / Important:** confiabilidade de geração documental ainda intermitente. No lote principal final, o retry manteve “redação vigente” apesar de receber o contrato completo; os guards bloquearam e emitiram fallback. O HTTP/SSE separado entregou uma resposta histórica segura. Esses resultados não permitem declarar TEMP-GRAD-002 integralmente aprovado ou a etapa aceita em todos os critérios.
 
-A revisão independente confirmou que o bloqueio é correto para a pergunta documental e não encontrou novo bug concreto no último diff. O defeito original de interpretação/chronology_unresolved está corrigido; a confiabilidade do modelo permanece pendente. Os 32 novos testes cobrem os limites e os replays observados, sem garantir conformidade de toda geração real.
+A verificação técnica confirmou que o bloqueio é correto para a pergunta documental e não encontrou novo bug concreto no último diff. O defeito original de interpretação/chronology_unresolved está corrigido; a confiabilidade do modelo permanece pendente. Os 32 novos testes cobrem os limites e os replays observados, sem garantir conformidade de toda geração real.
 
-Também não há validação jurídica ou científica do conteúdo nem revisão visual da interface registradas. Nenhum outro finding de implementação identificado na revisão está aberto.
+As verificações técnicas não constituem validação jurídica ou científica do conteúdo nem atestam a experiência visual da interface. Nenhum outro finding de implementação identificado na revisão está aberto.
 
-Revisão de código das mudanças e artefatos finais: sem novo finding de implementação; GEN-01 confirmado como pendência funcional, não como aprovação do smoke principal.
+Verificação do código das mudanças e artefatos finais: sem novo finding de implementação; GEN-01 confirmado como pendência funcional, não como aprovação do smoke principal.
 
-## Casos para revisão
+## Cenários de verificação funcional
 
-Interface: **http://localhost:8501**. Use nova conversa para os casos independentes. Os itens abaixo não têm aprovação registrada.
+Interface: **http://localhost:8501**. Use nova conversa para os casos independentes. A lista abaixo delimita cenários funcionais; não constitui evidência de sua aprovação.
 
-- [ ] quem é você?
-- [ ] pergunta fora do escopo
-- [ ] Resolução 658/2024 / pós-graduação
-- [ ] TEMP-GRAD-001
-- [ ] TEMP-GRAD-002
-- [ ] pending + nova pergunta
-- [ ] abrir/fechar referências
-- [ ] mostrar trecho completo
-- [ ] scroll
-- [ ] progressive rendering
+- quem é você?
+- pergunta fora do escopo
+- Resolução 658/2024 / pós-graduação
+- TEMP-GRAD-001
+- TEMP-GRAD-002
+- pending + nova pergunta
+- abrir/fechar referências
+- mostrar trecho completo
+- scroll
+- progressive rendering

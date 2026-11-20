@@ -1,5 +1,7 @@
 # Piloto 001 — RAG com graduação e pós-graduação
 
+> **Registro histórico.** Configuração, resultados, contagens de testes e estados descritos referem-se à execução documentada, anterior à v3.4. Para a versão atual, consulte o [guia de evidências e reprodução](../../README.md).
+
 ## Resultado e alcance
 
 Foram concluídos 40 pares (80 respostas), sem erro de API, com os dois regulamentos no índice conjunto. O Recall@5 médio caiu de **0,875 para 0,850**: diferença conjunto menos isolado de **−2,5 pontos percentuais**, com intervalo bootstrap percentil 95% **[−7,5; 0,0] p.p.**. O intervalo inclui zero. Há uma perda localizada de cobertura de evidência anotada; este piloto **não demonstra insuficiência geral de RAG**, nem superioridade de uma abordagem agêntica. Não foi calculada acurácia normativa das respostas.
@@ -41,13 +43,13 @@ O suplemento [per_norm_summary.json](per_norm_summary.json) foi calculado depois
 
 ## Registro dos casos
 
-As respostas e os contextos integrais permanecem em `rows.jsonl`. Não há revisão de conteúdo independente registrada.
+As respostas e os contextos integrais permanecem em `rows.jsonl`. As métricas de recuperação não estabelecem correção normativa das respostas.
 
 ## Limitações descobertas na inspeção
 
 **Identificação de fonte não uniforme no contexto do LLM.** A graduação chega como `Regulamento Geral da Graduação da UFPI`, sem o número 177/2012 no campo fonte; a pós chega como `Resolução CEPEX/UFPI nº 956/2025`. Os IDs e os embeddings identificam ambas, mas o formatador de contexto não mostra esses IDs. Na GRAD-004, por exemplo, o modelo alega não haver a resolução pedida, mesmo vendo artigos do corpus atribuído a ela. Isso afeta interpretação de geração e é uma limitação da apresentação das fontes; não deve ser atribuída ao mecanismo RAG em geral. Corrigir de modo uniforme requer novo protocolo/execução, preservando este piloto.
 
-**Gold ainda candidato.** Perguntas/referências foram auditadas contra texto extraído, não validadas independentemente contra PDFs por especialistas. Qrels são parciais; faltam julgamentos de artigos alternativos. O snapshot da pós não contém o art. 30. O corpus de graduação inclui referências a alterações posteriores; este trabalho não certifica vigência jurídica nem equivalência ao texto original de 2012.
+**Gold ainda candidato.** Perguntas/referências foram auditadas contra texto extraído; essa auditoria não certifica equivalência aos PDFs nem correção normativa. Qrels são parciais; faltam julgamentos de artigos alternativos. O snapshot da pós não contém o art. 30. O corpus de graduação inclui referências a alterações posteriores; este trabalho não certifica vigência jurídica nem equivalência ao texto original de 2012.
 
 **Generalização limitada.** Conjuntos de desenvolvimento intencionais, 20 por nível, tamanhos de corpus/dificuldades/cardinalidades de evidência distintos, uma geração por condição e busca aproximada. Não comparar 90% da pós com 85% da graduação como medida direta de dificuldade equivalente. O contraste pareado dentro de cada nível é mais defensável. Não se mediu roteamento aprendido, detecção de escopo, perguntas irrespondíveis, suficiência para uso real ou qualquer sistema agêntico.
 

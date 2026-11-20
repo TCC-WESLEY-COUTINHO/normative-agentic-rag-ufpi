@@ -90,10 +90,18 @@ class QueryResult(BaseModel):
     generation_attempts: int = Field(default=1, exclude=True)
     normative_output: NormativeOutput | None = None
     output_audit: GenerationAudit | None = Field(default=None, exclude=True)
+    citation_audit: dict | None = None
+    effective_generation_mode: Literal["free_text_v2", "cited_v3"] | None = None
+    generation_fallback_reason: str | None = None
 
     @model_serializer(mode="wrap")
     def serialize_result(self, handler):
         result = handler(self)
+        for key in ("effective_generation_mode", "generation_fallback_reason"):
+            if getattr(self, key) is None:
+                result.pop(key, None)
+        if self.citation_audit is None:
+            result.pop("citation_audit", None)
         if self.normative_output is None:
             result.pop("normative_output", None)
         if self.routing is None:

@@ -1,12 +1,12 @@
 # Correção pré-freeze de domínio explícito e fallback temporal
 
+> **Registro histórico.** Configuração, resultados, contagens de testes e estados descritos referem-se à execução documentada, anterior à v3.4. Para a versão atual, consulte o [guia de evidências e reprodução](../../README.md).
+
 Correções técnicas dos casos A e B concluídas, com revisão independente e regressões verdes. O probe normal final respondeu A/accepted e B/regenerated, sem clarification de setor nem fallback. Focused: **733 passed**. Full suite: **1227 passed, 12 skipped, 6 warnings, exit 0**. Índice: **507/507 idêntico**.
 
-Esta entrega é uma regressão técnica pré-freeze. Não constitui validação jurídica ou avaliação científica final. A revisão técnica registrada em `review_findings.json` não constitui validação jurídica ou científica das respostas e deste relatório.
 
 ## Git
 
-Estado inicial observado: branch `fix/pre-freeze-conversation-policy-compact-references`, HEAD **`0e5107cd60973d929032f173986a51513487889c`**, árvore limpa. Status, branch, HEAD, log de 15 commits, diff e diff staged foram conferidos antes das mudanças produtivas. `preservation.json.initial_git_commands` registra esses comandos; sua entrada não rastreada é o runner de auditoria recém-criado, posterior à observação inicial limpa.
 
 Branch final: **`fix/pre-freeze-explicit-sector-temporal-fallback`**. Trabalho anterior preservado.
 
@@ -79,7 +79,6 @@ A omissão de citações é uma instrução ao modelo, não uma garantia. No pro
 
 ## RED
 
-Comandos completos, cwd, exit, duração e falhas constam em `test_results.json` e na ordem de `execution_log.jsonl`. Python 3.11.15 com dependências locais existentes; testes executados de `code/`.
 
 | Etapa | Comando resumido (`python -m`) | Resultado anterior ao respectivo fix |
 |---|---|---|
@@ -106,7 +105,7 @@ O focused inclui Scope, policy/pending, Router V1, normalization/fast path, inte
 
 A primeira full suite apontou expectativas antigas de chamadas ao Router. Foram migradas para o setor explícito mantendo as verificações de retrieval, grounding, correlação e memória; cenários que precisam exercitar o Router usam pergunta sem nível declarado. Todas as falhas intermediárias permanecem registradas. Os antigos resultados 730/1224 foram superados pelas execuções completas após o fix B, não reutilizados como verificação do código final.
 
-Revisão técnica independente: dois problemas de comparação abreviada/Unicode resolvidos com RED/GREEN; busca do envelope privado corrigida; revisão do reparo B e dos probes finais sem finding de implementação restante. O revisor registrou recortes de 329, 171 e 157 testes; não são somados à full suite como casos independentes.
+Verificação técnica: dois problemas de comparação abreviada/Unicode resolvidos com RED/GREEN; busca do envelope privado corrigida; revisão do reparo B e dos probes finais sem finding de implementação restante. A verificação registrou recortes de 329, 171 e 157 testes; não são somados à full suite como casos independentes.
 
 ## Probe Metrics
 
@@ -136,7 +135,6 @@ Registry canônico: **`fbd017d0f080481bb0f89e6809b48a87317d8fc97909e7ec2d40f8240
 
 Router V2 `adaptive_router.py`: **`41b3e56fcc83b33998b614ab13fe37f2e71c42e90a5010d3827aea9a62aff186`**, antes=depois.
 
-`preservation.json` contém hashes individuais: **108 arquivos protegidos idênticos**, incluindo Scope Gate/prompt, Router V1/V2, VersionFilter, guard/locators, grounding, retrieval/config, registry, corpus/data e UI. Sete funções protegidas de `agentic.py` têm AST idêntica: classificação temporal, detecção histórica, route_query, reroute, retrieve, filter_context e generate.
 
 Modelos, temperature, embedding, top_k, collection, chunks, metadata e estratégias permanecem iguais. O único ajuste de instrução normativa é o reparo condicional do retry em `service.py`. O mapa de hashes de fontes/testes ao final da suite permite conferir preservação até o commit.
 
@@ -154,7 +152,7 @@ Warnings: dois serializers Pydantic em fixtures deliberadamente inválidas; um A
 
 ## Limitations
 
-TEMP-GRAD-001–005 permanecem candidatos, sem validação independente registrada, usados como DEVELOPMENT/REGRESSION CANDIDATES. Nenhum dataset ou referência candidata foi modificado ou promovido a gold científico. As 40 perguntas históricas continuam expostas ao desenvolvimento, inelegíveis como futuro TEST independente não visto.
+TEMP-GRAD-001–005 permanecem candidatos de desenvolvimento e regressão, usados como DEVELOPMENT/REGRESSION CANDIDATES. Nenhum dataset ou referência candidata foi modificado ou promovido a gold científico. As 40 perguntas históricas continuam expostas ao desenvolvimento, inelegíveis como futuro TEST independente não visto.
 
 TEMP-GRAD-002 tem uma limitação anterior: o ano em “atualizado em 2023” é interpretado como requested_year e termina chronology_unresolved no cenário de teste. Esse comportamento foi caracterizado e preservado; não foi corrigido sem diagnóstico próprio. Os outros candidatos verificam a relação e os contratos, não correção jurídica universal.
 
@@ -164,6 +162,6 @@ O checkpoint manual não contém todos os contadores históricos ou objetos brut
 
 ## Findings Remaining
 
-Nenhum finding técnico de implementação aberto para os fixes A/B após revisão de código. Permanecem **TEMP-GRAD-002/chronology_unresolved, preexistente e fora deste fix**, limites de geração/guard e a ausência de validação jurídica ou científica registrada do relatório e do conteúdo. O ambiente do navegador ainda usa a imagem anterior, pois deploy foi expressamente excluído desta etapa.
+Nenhum finding técnico de implementação aberto para os fixes A/B após verificação do código. Permanecem **TEMP-GRAD-002/chronology_unresolved, preexistente e fora deste fix**, limites de geração/guard; as verificações técnicas não constituem validação jurídica ou científica do relatório e do conteúdo. O ambiente do navegador ainda usa a imagem anterior, pois deploy foi expressamente excluído desta etapa.
 
 Não inicia redesign ou freeze.

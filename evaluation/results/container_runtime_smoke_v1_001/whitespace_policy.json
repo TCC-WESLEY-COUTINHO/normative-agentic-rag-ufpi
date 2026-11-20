@@ -1,7 +1,0 @@
-{
-    "initial_staged_diff_check_exit_code":  2,
-    "cause":  "Captured raw logs contain terminal padding, raw SSE ends with a required blank frame delimiter, and some metadata JSON uses CRLF.",
-    "resolution":  "Evidence-local gitattributes preserves all bytes and recognizes CR-at-eol; only raw .log/.sse captures exclude data whitespace warnings. No source/corpus/index/global normalization.",
-    "applies_only_to":  "evaluation/results/container_runtime_smoke_v1_001",
-    "frozen_probe_bytes_changed":  false
-}

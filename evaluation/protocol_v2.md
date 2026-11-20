@@ -1,12 +1,14 @@
 # Protocolo V2 — perguntas naturais, setor e ambiguidade
 
+> **Protocolo histórico.** As condições e comandos abaixo registram o experimento anterior à v3.4. Não descrevem a configuração atual; novas execuções exigem diretório de saída novo e os insumos da condição histórica. Veja [reprodução e limites](../docs/REPRODUCAO.md).
+
 ## Decisões aprovadas antes da execução
 
 Pós: 20 perguntas cotidianas, sem prefixo de resolução: 8 diretas, 8 abertas, 4 ambíguas. A divisão é uma escolha operacional deste piloto, não estimativa de distribuição real nem cálculo de poder. Diretas pedem fatos delimitados em um artigo; abertas exigem explicação de procedimento ou combinação de condições (em um ou mais artigos). Ambíguas têm prioridade de classificação quando falta o nível do curso e há interpretações normativas diferentes.
 
-Graduação: manter literalmente as 20 perguntas originais, sem impor retrospectivamente 8/8/4. No universo destes dois regulamentos, IRA, Exame Final e Láurea são pistas de graduação; 5 perguntas têm essas pistas. A pergunta de frequência também é respondível sem escolher setor, porque a regra de 75% é comum. As outras 14 são anotadas como dependentes de esclarecimento do nível para aplicar a resposta condicionada. Essa classificação é provisória, requer revisão e não estima a frequência de ambiguidade em produção. Não comparar os níveis como amostras de dificuldade equivalente.
+Graduação: manter literalmente as 20 perguntas originais, sem impor retrospectivamente 8/8/4. No universo destes dois regulamentos, IRA, Exame Final e Láurea são pistas de graduação; 5 perguntas têm essas pistas. A pergunta de frequência também é respondível sem escolher setor, porque a regra de 75% é comum. As outras 14 são anotadas como dependentes de esclarecimento do nível para aplicar a resposta condicionada. Essa classificação é uma anotação de desenvolvimento e não estima a frequência de ambiguidade em produção. Não comparar os níveis como amostras de dificuldade equivalente.
 
-Os 40 itens continuam candidatos a gold. A V1 e pilot_001 são preservados. A V2 é conjunto de desenvolvimento, influenciado pela inspeção da V1, não teste confirmatório independente. Não há revisão independente por dois especialistas registrada para as evidências da pós. As perguntas, fatos e referências devem ser revisados antes de uso confirmatório.
+Os 40 itens continuam candidatos a gold. A V1 e pilot_001 são preservados. A V2 é conjunto de desenvolvimento, influenciado pela inspeção da V1, não teste confirmatório independente. As evidências da pós são anotações de desenvolvimento, sem caráter de gold jurídico independente. As perguntas, fatos e referências devem ser revisados antes de uso confirmatório.
 
 ## Três condições, duas fases
 
@@ -26,7 +28,7 @@ Uma pergunta ambígua continua ambígua mesmo no índice isolado: corpus dispon�
 
 Ordem fixa isolados → conjunto é exigência do fluxo aprovado e pode introduzir confundimento temporal do provedor; uma repetição não mede variabilidade. Não comparar V1 versus V2 como efeito isolado de setor: perguntas, prompt e apresentação de fonte também mudaram.
 
-## Avaliação 0/1/2 aprovada pelo usuário
+## Avaliação 0/1/2 definida pelo pesquisador
 
 | Nota | Pergunta respondível |
 |---|---|
@@ -40,7 +42,7 @@ Ambíguas: 2 quando pede o nível necessário sem antecipar conclusão normativa
 
 Recuperação automática: Recall@1/3/5, Hit@k, MRR@5, nDCG@5, cobertura completa@5 e fração de outra norma, usando par `(norma, artigo)`. **Excluir ambíguas dessas métricas normativas**, mostrando o denominador: pós 16, graduação 6. Registrar resultados por categoria e por nível. Nos pares respondíveis calcular diferença conjunto − isolado e bootstrap percentil 95%, 5.000 reamostragens/semente 956 por nível, com limites de dependência/amostra intencional já descritos na V1. Não chamar recall de acurácia.
 
-Notas 0/1/2 exigem julgamento de conteúdo; campos de avaliação ficam nulos até anotação independente. Registros internos de desenvolvimento são mantidos fora dos artefatos técnicos. Não inferir nota 2 apenas porque Recall@5=1. Para avaliação acadêmica independente, dois anotadores revisam respostas e PDFs sem acesso à condição; adjudicam divergências; reportar acordo/kappa conforme protocolo V1.
+Notas 0/1/2 exigem julgamento de conteúdo; campos de avaliação ficam nulos até anotação independente.  Não inferir nota 2 apenas porque Recall@5=1. Para avaliação acadêmica independente, dois anotadores revisam respostas e PDFs sem acesso à condição; adjudicam divergências; reportar acordo/kappa conforme protocolo V1.
 
 ## Metadados e buscas
 

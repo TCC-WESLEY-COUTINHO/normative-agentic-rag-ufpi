@@ -1,7 +1,9 @@
 # Endurecimento temporal do pipeline normativo — v1
 
+> **Registro histórico.** Configuração, resultados, contagens de testes e estados descritos referem-se à execução documentada, anterior à v3.4. Para a versão atual, consulte o [guia de evidências e reprodução](../../README.md).
+
 Data de referência da auditoria: 29/10/2026. Dataset técnico de regressão, sem
-validação jurídica humana. As conclusões são restritas às relações documentais
+revisão jurídica especializada. As conclusões são restritas às relações documentais
 explicitamente modeladas no registry e aos casos avaliados.
 
 ## 1. Objetivo e resultado
@@ -27,11 +29,10 @@ temporalmente correto. A branch não promove Router V2 nem corrige F1/F2/F4.
 - Executados antes de alterações: `git status --short`, `git branch --show-current`,
   `git rev-parse HEAD`, `git log -10 --oneline --decorate`, `git diff`,
   `git diff --cached` e `git diff --stat`.
-- O checkout foi mantido no diretório indicado pelo usuário. Nenhum pull, push,
   merge, rebase, reset ou clean foi executado.
 
 O launcher original do `.venv` aponta para um Python 3.11 ausente. Foi utilizado
-Python 3.11.15 compatível em `D:/faculdade/TCC/RAG/.uv-python`, com os pacotes cp311
+Python 3.11.15 compatível em `<repo>`, com os pacotes cp311
 já existentes. Dependências e arquivos de configuração do projeto não mudaram.
 Nenhum cache, runtime ou arquivo temporário faz parte dos commits.
 
@@ -294,7 +295,7 @@ arquitetural. Não houve nova estratégia de routing ou recuperação.
 
 Foram inspecionadas **11 respostas geradas**; **3 casos** têm achados técnicos de
 geração explícitos. Esse registro é inspeção técnica, não avaliação jurídica
-humana nem estimativa de acurácia geral. Não houve falha de provedor observada.
+especializada nem estimativa de acurácia geral. Não houve falha de provedor observada.
 
 ## 17. Limitações e F1–F4
 
@@ -323,12 +324,10 @@ Resultados em `verification_after_review.json`:
 Warnings: duas depreciações LangChain/Pydantic em rag_baseline; a suíte completa
 também avisa sobre AsyncMock e timeout no TestClient. Não foram ocultados nem
 tratados como bugs temporais. As contagens de etapas anteriores são preservadas
-em `verification.json` e `verification_final.json`;
 `verification_after_review.json` é a referência definitiva.
 
 ## 19. Preservação
 
-`preservation_before.json` e `preservation.json` confirmam:
 
 - **507 registros** com mesmos IDs, textos, metadados canônicos e vetores float32.
 - SHA-256 do snapshot: `ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a`.
@@ -370,17 +369,5 @@ python -m rag_baseline.temporal_evaluation --live --manual-smoke --output ../eva
 python -m rag_baseline.temporal_evaluation --reanalyze ../evaluation/results/agentic_temporal_hardening_v1_001/smoke_001 --output ../evaluation/results/nova_reanalise_offline
 ```
 
-Para usar o runtime compatível desta máquina, acrescentar `src` e
-`.venv/Lib/site-packages` a `PYTHONPATH` e invocar o Python 3.11.15 local mencionado
-na seção 2. Os comandos e executáveis efetivamente usados estão em
-`verification_after_review.json`. Novas chamadas reais podem produzir outras saídas.
-
-## 21. Commits locais e encerramento
-
-1. `06f75f4` — `test: formalize temporal compliance invariants`.
-2. `7f55bcd` — `fix: harden normative temporal filtering`.
-3. `experiment: validate agentic temporal pipeline` — commit de evidências que
-   contém este relatório.
-
-O estado Git foi revisado antes dos commits. A branch será mantida localmente;
-não há operação de publicação ou integração autorizada nesta entrega.
+Para executar com Python 3.11.15, acrescentar `src` ao `PYTHONPATH` e usar
+o ambiente com as dependências do projeto. Novas chamadas reais podem produzir outras saídas.

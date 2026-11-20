@@ -1,8 +1,8 @@
-"""Demo launcher of the A''-J v2 prototype. Lives outside the frozen code/src tree.
+"""Demo launcher of v3.4 with the A''-J v2 conversational architecture.
 
 It changes no decision of the pipeline. It only:
-1. resolves the interpreter configuration with the frozen loader (interpreter_config) and refuses
-   to start unless it is Jev with transition policy v2, the evaluated configuration. Setting
+1. checks Jev with transition v2, cited generation, corpus v4 and the model/retrieval
+   settings against the selected v3.4 configuration. Setting
    PROTOTYPE_ALLOW_UNEVALUATED_CONFIG=true accepts other configurations (for example a local
    OpenAI-compatible model without Jev); the identity then reports evaluated_configuration=false;
 2. logs a non-sensitive identity of the running version (no keys, no URLs with credentials);
@@ -20,9 +20,10 @@ import uvicorn
 
 logger = logging.getLogger("prototype")
 
-ARCHITECTURE = "A''-J v2"
+ARCHITECTURE = "A''-J v2 + geração ancorada em citação v3.4"
 
-# Configuration evaluated in the TCC II (stages 7, 8, 12 and 14). Any difference makes the running
+# Selected v3.4 configuration; the earlier conversational studies used generation v2.
+# Any difference makes the running
 # configuration "unevaluated", which the launcher only accepts when explicitly allowed.
 EVALUATED = {
     "interpreter_mode": "jev",
@@ -35,6 +36,9 @@ EVALUATED = {
     "llm_temperature": 0.0,
     "llm_max_tokens": 800,
     "llm_endpoint_host": "openrouter.ai",
+    "generation_mode": "cited_v3",
+    "corpus_profile": "duas-regulacoes-v4",
+    "chroma_collection": "ufpi_duas_regulacoes_setor_v4",
 }
 
 
@@ -45,11 +49,16 @@ def resolve_identity() -> dict:
         IntegratedRuntimeSettings,
         interpreter_config,
     )
+    from rag_baseline.profiles import apply_profile
 
     settings = IntegratedRuntimeSettings()
     config = interpreter_config(settings)
     endpoint = urlsplit(settings.OPENROUTER_BASE_URL)
+    collection = apply_profile(settings, settings.CORPUS_PROFILE).CHROMA_COLLECTION
     running = {
+        "generation_mode": settings.GENERATION_MODE,
+        "corpus_profile": settings.CORPUS_PROFILE,
+        "chroma_collection": collection,
         "interpreter_mode": config.mode,
         "transition_policy": config.transition_policy,
         "routing_mode": settings.ROUTING_MODE,
@@ -65,6 +74,9 @@ def resolve_identity() -> dict:
     return {
         "architecture": ARCHITECTURE,
         "agent_id": AGENT_ID,
+        "generation_mode": settings.GENERATION_MODE,
+        "corpus_profile": settings.CORPUS_PROFILE,
+        "chroma_collection": collection,
         "interpreter_mode": config.mode,
         "transition_policy": config.transition_policy,
         "policy_version": POLICY_VERSION if config.transition_policy == "v2" else None,
@@ -80,10 +92,10 @@ def resolve_identity() -> dict:
         "embedding_model": settings.EMBEDDING_MODEL,
         "llm_temperature": float(settings.LLM_TEMPERATURE),
         "llm_max_tokens": settings.LLM_MAX_TOKENS,
+        # Presentation layer ahead of the Scope Gate; not part of the evaluated pipeline.
+        "assistant_identity": settings.ASSISTANT_IDENTITY,
         "git_tag": os.getenv("PROTOTYPE_GIT_TAG") or None,
         "git_commit": os.getenv("PROTOTYPE_GIT_COMMIT") or None,
-        "frozen_backend_manifest": os.getenv("PROTOTYPE_BACKEND_MANIFEST_SHA256")
-        or None,
         "llm_endpoint_host": endpoint.hostname,
         "evaluated_configuration": not differences,
         "differences_from_evaluated": differences,
@@ -93,9 +105,7 @@ def resolve_identity() -> dict:
 
 
 def main() -> int:
-    logging.basicConfig(
-        level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s %(message)s"
-    )
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s %(message)s")
     identity = resolve_identity()
     allow_other = os.getenv("PROTOTYPE_ALLOW_UNEVALUATED_CONFIG", "").lower() == "true"
     if not identity["evaluated_configuration"] and allow_other:

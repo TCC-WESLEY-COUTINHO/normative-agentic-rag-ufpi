@@ -1,3 +1,9 @@
+"""Build an index from an explicit corpus profile.
+
+For v3.4, pass --profile duas-regulacoes-v4. Without --profile, this entry point
+uses the historical corpus/collection fields of BaselineSettings.
+"""
+
 import argparse
 import asyncio
 import sys

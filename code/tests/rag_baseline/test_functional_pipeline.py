@@ -320,7 +320,7 @@ def test_abstention_cannot_carry_normative_output():
         )
 
 
-# ---- Defects found by the independent review of this round.
+# ---- Regressions for defects found in this round.
 
 
 @pytest.mark.asyncio

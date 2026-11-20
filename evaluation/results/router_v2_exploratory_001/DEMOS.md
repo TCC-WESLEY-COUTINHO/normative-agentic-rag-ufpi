@@ -1,5 +1,7 @@
 # Demos reais de roteamento V2
 
+> **Registro histórico.** Configuração, resultados, contagens de testes e estados descritos referem-se à execução documentada, anterior à v3.4. Para a versão atual, consulte o [guia de evidências e reprodução](../../README.md).
+
 Traces da primeira rodada de `stability_001`, selecionados pela regra do protocolo. Nenhuma pergunta foi reformulada. O experimento mede somente roteamento; nenhum probe alimentou respostas ou referencias finais.
 
 Comando real, a partir de `code/`:

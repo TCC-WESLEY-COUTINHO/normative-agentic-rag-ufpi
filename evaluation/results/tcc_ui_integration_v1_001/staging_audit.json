@@ -1,9 +1,0 @@
-{
-  "timestamp": "2026-11-01T18:53:34.398894+00:00",
-  "scope": "evaluation/results/tcc_ui_integration_v1_001/",
-  "files": 73,
-  "forbidden_files": 0,
-  "all_working_bytes_match_staged": true,
-  "git_diff_check": true,
-  "execution_events": 48
-}

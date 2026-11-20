@@ -59,6 +59,8 @@ def runtime(tmp_path, monkeypatch):
     )
     settings = BaselineSettings(
         _env_file=None,
+        GENERATION_MODE="free_text_v2",
+        CORPUS_PROFILE="duas-regulacoes",
         CHROMA_PERSIST_DIR=tmp_path,
         CHROMA_COLLECTION="explicit_scope",
         OPENROUTER_API_KEY="test",

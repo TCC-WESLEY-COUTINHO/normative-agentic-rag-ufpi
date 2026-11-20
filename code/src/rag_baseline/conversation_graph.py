@@ -1,4 +1,7 @@
-"""Checkpointed conversation adapter around the unchanged normative capability."""
+"""Checkpointed conversation graph with interpretation and optional assistant identity.
+
+The normative facade supplies retrieval, cited generation and verification in v3.4.
+"""
 
 from dataclasses import dataclass, replace
 from uuid import uuid4
@@ -16,6 +19,8 @@ from rag_baseline.agent_graph import (
 )
 from rag_baseline.agent_policy import AgentAction, AgentActionPolicy
 from rag_baseline.agent_tool import build_normative_tool, safe_tool_error, validated_result
+from rag_baseline.assistant_identity import ROUTE as IDENTITY_ROUTE
+from rag_baseline.assistant_identity import assistant_identity_reply
 from rag_baseline.calculator import build_calculator_tool
 from rag_baseline.calculator_contracts import CalculatorRequest, CalculatorToolResult
 from rag_baseline.conversation_contracts import (
@@ -142,6 +147,7 @@ def build_conversation_graph(
     scope_gate=None,
     interpreter=None,
     transition_policy=None,
+    assistant_identity=False,
 ):
     """`interpreter` (A'' only) is a ConversationInterpreter; None keeps A' unchanged."""
     if checkpointer is None:
@@ -171,6 +177,7 @@ def build_conversation_graph(
 
         human = next((m for m in reversed(state["messages"]) if isinstance(m, HumanMessage)), None)
         text = _question_content(human)
+        identity_reply = assistant_identity_reply(text) if assistant_identity else None
         decision = policy.decide(
             text,
             pending=status == "VALID" and memory.pending_clarification is not None,
@@ -202,6 +209,16 @@ def build_conversation_graph(
             "action": AgentAction.DIRECT,
             "action_decision": None,
             "interpretation_decision": None,
+            # Optional prototype layer, ahead of every other decision; when disabled
+            # (or the message is not a whole identity question) the turn is unchanged.
+            **({
+                "followup_action": FollowUpAction.ASSISTANT_IDENTITY,
+                "turn_audit": replace(
+                    audit,
+                    conversation_action=FollowUpAction.ASSISTANT_IDENTITY.value,
+                    action_reason_code=f"{IDENTITY_ROUTE}_{identity_reply.intent}",
+                ),
+            } if identity_reply is not None else {}),
         }
 
     async def interpret(state: ConversationState, config: RunnableConfig):
@@ -347,6 +364,12 @@ def build_conversation_graph(
         valid = audit.memory_status == "VALID"
         interpreted = state.get("interpretation_decision")
         level_written = False
+        if action == FollowUpAction.ASSISTANT_IDENTITY:
+            output = direct(state, assistant_identity_reply(text).content, memory)
+            output["turn_audit"] = replace(
+                output["turn_audit"], memory_preserved=True, pending_preserved=True
+            )
+            return output
         if action == FollowUpAction.CLARIFY_INTENT:
             output = direct(state, interpreted.direct_message, memory)
             output["turn_audit"] = replace(

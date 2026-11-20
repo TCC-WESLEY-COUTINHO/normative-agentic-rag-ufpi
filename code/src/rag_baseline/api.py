@@ -1,3 +1,8 @@
+"""Single-query API for the terminal; no Jev interpreter or conversation memory.
+
+The web prototype uses service.service through deploy/backend/prototype_launcher.py.
+"""
+
 from typing import Any, Literal
 
 from fastapi import FastAPI, HTTPException
@@ -72,6 +77,7 @@ class _Runtime:
                 embedding_model=self.settings.EMBEDDING_MODEL,
                 llm_model=self.settings.LLM_MODEL,
                 system_prompt=V2_SYSTEM_PROMPT,
+                generation_mode=self.settings.GENERATION_MODE,
             )
         return self._service
 
@@ -93,6 +99,11 @@ class _Runtime:
         return self._agentic
 
 
+def resolve_settings(settings: BaselineSettings) -> BaselineSettings:
+    """Apply the configured corpus profile; the default is the evaluated corpus."""
+    return apply_profile(settings, settings.CORPUS_PROFILE)
+
+
 def _openrouter_status(error: OpenRouterError) -> int:
     message = str(error)
     temporary_markers = ("OPENROUTER_API_KEY", "429", "tempo limite", "conectar")
@@ -106,7 +117,7 @@ def create_app(
     vector_store: Any | None = None,
     agentic_service: Any | None = None,
 ) -> FastAPI:
-    current_settings = settings or apply_profile(BaselineSettings(), "duas-regulacoes")
+    current_settings = settings or resolve_settings(BaselineSettings())
     runtime = _Runtime(current_settings)
     app = FastAPI(title="Baseline RAG — Graduação e Pós-graduação UFPI")
 

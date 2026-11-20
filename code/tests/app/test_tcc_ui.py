@@ -3,6 +3,7 @@
 from dataclasses import dataclass, field
 from html.parser import HTMLParser
 from pathlib import Path
+from time import monotonic, sleep
 from unittest.mock import Mock
 from uuid import UUID, uuid4
 
@@ -150,6 +151,17 @@ def start(controlled):
 def send(at, text="Pergunta"):
     at.chat_input[0].set_value(text).run(timeout=15)
     assert not at.exception
+    settle(at)
+
+
+def settle(at):
+    """AppTest has no browser timer: explicitly poll the background response."""
+    deadline = monotonic() + 5
+    while "response_wait" in at.session_state:
+        assert monotonic() < deadline, "Response did not settle; use a bounded test double"
+        sleep(0.01)
+        at.run(timeout=15)
+        assert not at.exception
 
 
 @dataclass
@@ -206,7 +218,7 @@ class SourcesView(HTMLParser):
             self._target = "missing"
 
     def handle_endtag(self, tag):
-        if tag in ("p", "div", "span"):
+        if tag in ("p", "div", "span", "h2", "h3"):
             self._target = None
 
     def handle_data(self, data):

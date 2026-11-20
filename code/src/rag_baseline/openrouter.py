@@ -124,7 +124,14 @@ class OpenRouterClient:
         return content
 
     async def structured_chat(
-        self, *, system_prompt: str, user_prompt: str, schema: dict, model: str
+        self,
+        *,
+        system_prompt: str,
+        user_prompt: str,
+        schema: dict,
+        model: str,
+        schema_name: str = "RouterDecision",
+        max_tokens: int | None = None,
     ) -> str:
         response = await self._post(
             "/chat/completions",
@@ -135,11 +142,11 @@ class OpenRouterClient:
                     {"role": "user", "content": user_prompt},
                 ],
                 "temperature": float(self.llm_temperature),
-                "max_tokens": self.llm_max_tokens,
+                "max_tokens": max_tokens or self.llm_max_tokens,
                 "response_format": {
                     "type": "json_schema",
                     "json_schema": {
-                        "name": "RouterDecision",
+                        "name": schema_name,
                         "strict": True,
                         "schema": schema,
                     },

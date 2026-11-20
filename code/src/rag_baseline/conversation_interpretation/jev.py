@@ -147,7 +147,7 @@ class JevDecisionInterpreter(ConversationInterpreter):
                 model=data.get("model") or self.settings.model,
                 input_tokens=int(usage.get("input_tokens") or 0),
                 output_tokens=int(usage.get("output_tokens") or 0),
-                # Billing metadata never invalidates a decision (independent review A6).
+                # Billing metadata never invalidates a decision.
                 cost_usd=float(cost) if isinstance(cost, int | float) else None,
             )
             candidate, probabilities, adjustments = self.map_answers(context, data.get("answers"))

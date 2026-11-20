@@ -100,7 +100,7 @@ class TransitionPolicyV2:
         # R2 (P3): the closed grammar matched the whole message as the answer to this
         # thread's pending request; A' decides. A grammar *declaration* without a pending
         # request defers only when the reading reports nothing else: the grammar also
-        # accepts elliptic level questions such as "e na pós" (independent review A3).
+        # accepts elliptic level questions such as "e na pós".
         if base == FollowUpAction.CONTINUE_CLARIFICATION:
             return TransitionDecisionV2(base, "grammar_precedence", base, defer_to_base=True)
         if base == FollowUpAction.DECLARE_LEVEL and not (
@@ -165,7 +165,7 @@ class TransitionPolicyV2:
             and not i.has_new_question
             and not has_independent_content(context.message)
         ):
-            # A cancellation with nothing else to answer: A' CLEAR_PENDING (review A4).
+            # A cancellation with nothing else to answer: A' CLEAR_PENDING.
             # With content of its own (re-verification N2) the message runs below.
             return TransitionDecisionV2(
                 FollowUpAction.CLEAR_PENDING, "cancel_without_question", base

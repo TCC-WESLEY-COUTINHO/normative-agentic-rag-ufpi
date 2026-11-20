@@ -1,5 +1,6 @@
 """Container healthcheck: the service answers, the integrated agent is ready (index loaded) and
-the running configuration is Jev with transition policy v2, unless an unevaluated configuration
+the launcher reports the selected v3.4 configuration (including Jev with transition v2),
+unless an unevaluated configuration
 was explicitly allowed (PROTOTYPE_ALLOW_UNEVALUATED_CONFIG=true). Prints only status codes."""
 
 import json

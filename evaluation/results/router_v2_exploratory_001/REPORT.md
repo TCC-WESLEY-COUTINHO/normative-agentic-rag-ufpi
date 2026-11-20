@@ -1,10 +1,12 @@
 # Router V1 × V2-D × V2-L — experimento exploratório
 
+> **Registro histórico.** Configuração, resultados, contagens de testes e estados descritos referem-se à execução documentada, anterior à v3.4. Para a versão atual, consulte o [guia de evidências e reprodução](../../README.md).
+
 28/10/2026. As duas cascatas recuperaram rotas nos casos F1 conhecidos, mas
 **nenhuma melhorou o resultado geral do TEST candidato**. V1 acertou 16/23;
 V2-D, 12/23; V2-L, 13/23. A redução de esclarecimentos indevidos veio acompanhada
 de roteamento indevido de perguntas ambíguas. V1 continua sendo o padrão.
-Não houve avaliação jurídica, validação dos rótulos ou inferência confirmatória.
+Os resultados não constituem avaliação jurídica, validação dos rótulos ou inferência confirmatória.
 
 ## Estado inicial, commits e congelamento
 
@@ -120,7 +122,7 @@ Paráfrases estão marcadas. Duplicatas são agrupadas antes do split.
 
 TEST ficou fora da calibração, mas há exposição anterior dos conjuntos legados e
 famílias de paráfrases compartilhadas entre splits. Não há independência estatística
-demonstrada nem gold humano. Nenhum rótulo foi alterado em função de resultados.
+demonstrada nem gold independente. Nenhum rótulo foi alterado em função de resultados.
 
 ## Calibração somente DEV
 
@@ -308,7 +310,7 @@ judge válido/inválido, ausência de gold, mesmo probe, métricas, calibração
 split, reutilização de vetor e separação do contexto final. São versionados por
 exceções seletivas; testes comuns usam mocks, sem API externa.
 
-[Verificação final](verification_final.json): 39 focados aprovados; RAG **237
+Verificação final: 39 focados aprovados; RAG **237
 aprovados, 9 skips**, em 22,04 s; projeto **300 aprovados, 11 skips**, em 25,26 s.
 Persistem os quatro avisos conhecidos de Pydantic, Starlette e AsyncMock. Nove
 skips são capturas F1 opt-in; os outros dois já existiam. A evidência F3 congelada
@@ -316,15 +318,14 @@ foi selecionada explicitamente. Suíte verde não demonstra que F1 foi resolvida
 Ruff em `src/rag_baseline tests/rag_baseline` e formatação dos arquivos alterados
 aprovados. `git diff --check` também foi conferido na entrega.
 
-Revisão independente encontrou e motivou correções antes dos experimentos:
+A verificação técnica encontrou e motivou correções antes dos experimentos:
 guarda conservadora rejeitando pedidos legítimos de ambos os níveis, e lacuna
 na comparação da configuração efetiva entre DEV/TEST. Também conferiu a errata
 Windows e a integridade do threshold. Não houve ajuste de política após DEV.
 A revisão final recomputou tabelas, pares, estabilidade, custos, demos e hashes,
-sem encontrar pendências de código ou evidência. Isso não valida os rótulos
-humanamente nem certifica correção jurídica ou generalização.
+sem encontrar pendências de código ou evidência. Isso não estabelece validação independente dos rótulos
+nem certifica correção jurídica ou generalização.
 
-[Antes](preservation_before.json) e [depois](preservation_after.json): os **507
 registros** permanecem iguais por ID, texto, metadados canônicos e embedding
 float32. Hash completo:
 `ab253a24b756d9f3d3e05aeb49220798b08d947704112327fd894a577bb2b38a`.

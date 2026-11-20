@@ -1,5 +1,7 @@
 # Verificação técnica — escopo explícito no terminal original
 
+> **Registro histórico.** Configuração, resultados, contagens de testes e estados descritos referem-se à execução documentada, anterior à v3.4. Para a versão atual, consulte o [guia de evidências e reprodução](../../README.md).
+
 Código executado: `5f281a15eab549d15cea429498bd1a4322c15a3f`. Data de referência: 2026-10-20, America/Sao_Paulo.
 
 | Comando/verificação | Resultado observado |

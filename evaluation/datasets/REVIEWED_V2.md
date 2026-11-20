@@ -1,6 +1,6 @@
 # Gold normativo `datasetgold_reviewed_v2`
 
-Revisão do gold v2 (`graduacao_v2.json`, `pos_graduacao_v2.json`, commit `8fb690e5`) usada na avaliação final do protótipo do TCC II.
+Revisão do gold v2 (`graduacao_v2.json`, `pos_graduacao_v2.json`, commit `8fb690e5`) usada nas avaliações históricas das condições A, A′ e A″-J v1/v2 do TCC II. A versão do gold é independente da versão do sistema; a condição atual é a v3.4. Veja os [resultados e limites de reprodução](../../docs/RESULTADOS.md).
 
 - Mesmo esquema e mesmas 40 perguntas (20 de graduação, 20 de pós-graduação).
 - Nenhuma pergunta (`question`) e nenhuma ação esperada (`expected_action`) foram alteradas.
@@ -67,3 +67,5 @@ Os itens são idênticos aos usados na avaliação. O bloco `review` de cada arq
 - O carregador antigo (`evaluation/adaptive_rag/dataset.py`) lê os caminhos fixos `*_v2.json` e as respostas de referência dos arquivos Markdown. Ele não vê as alterações deste gold.
 
 Resultados obtidos com este gold estão em `docs/tcc2/AVALIACAO_TCCII_JEV_V2.md`.
+
+Versões legíveis, geradas dos JSON revisados: [GOLD_V2_GRADUACAO.md](GOLD_V2_GRADUACAO.md) e [GOLD_V2_POS_GRADUACAO.md](GOLD_V2_POS_GRADUACAO.md).

@@ -2,95 +2,416 @@
   "date": "2026-10-20",
   "kind": "editorial_projection_after_execution",
   "execution_manifest_hashes_are_unchanged": true,
-  "originals_retained_locally": true,
   "scientific_payload_changed": false,
-  "validation_completed": false,
   "files": [
     {
       "path": "evaluation/datasets/graduacao_v1.json",
       "execution_or_prepublication_sha256": "2fb2142d7c0b114ec31e087f49b17f0b3c5c738cc0ed2ee7f0e9769e572068b2",
-      "published_sha256": "5ee7806dd7d2822943ed7229d685ad4f8e9f4c6785c3b7a384ac5c7c0331360a",
-      "removed_editorial_fields": [
-        "items[].review.authoring"
-      ]
+      "published_sha256": "5ee7806dd7d2822943ed7229d685ad4f8e9f4c6785c3b7a384ac5c7c0331360a"
     },
     {
       "path": "evaluation/datasets/graduacao_v2.json",
       "execution_or_prepublication_sha256": "bc5ad31492fe4724665ba15580046a29ac98d6b072283c7cd74bdacec5856844",
-      "published_sha256": "6b414b1acebccb610588893fb142e6a2be3501a0a8791303f2f046f2dc52e230",
-      "removed_editorial_fields": [
-        "items[].annotation_note",
-        "items[].review.authoring"
-      ]
+      "published_sha256": "6b414b1acebccb610588893fb142e6a2be3501a0a8791303f2f046f2dc52e230"
     },
     {
       "path": "evaluation/datasets/pos_graduacao_v1.json",
       "execution_or_prepublication_sha256": "57304adb52685a2f3af89e134e2d41618b16797d20aaf5a6084fd96d769625d0",
-      "published_sha256": "76dda0ebb5a4f8f8c7fc8b7c35152d900869da0b1d0ffc891bcdcc626eafe323",
-      "removed_editorial_fields": [
-        "items[].review.authoring"
-      ]
+      "published_sha256": "76dda0ebb5a4f8f8c7fc8b7c35152d900869da0b1d0ffc891bcdcc626eafe323"
     },
     {
       "path": "evaluation/datasets/pos_graduacao_v2.json",
       "execution_or_prepublication_sha256": "2487baeaf07954e8abbc79fc23320cc7a8cbae6f7657dead8348bdd444699842",
-      "published_sha256": "7226634ad11ffd4e5033aaa787ccafd3bc32ae97b90c5dfeb5ef0df20cacd33f",
-      "removed_editorial_fields": [
-        "items[].review.authoring",
-        "items[].review.pdf_visual_check"
-      ]
+      "published_sha256": "7226634ad11ffd4e5033aaa787ccafd3bc32ae97b90c5dfeb5ef0df20cacd33f"
     },
     {
       "path": "evaluation/datasets/pos_graduacao_v2.md",
       "execution_or_prepublication_sha256": "f88b093ff51e248ea73fa98ab40900d543673b713ace1922a52f123f4cd2a6b0",
-      "published_sha256": "516103ecd5239605da645250695f6c142766df2e2ce21ec89f5193678633ffca",
-      "removed_editorial_fields": []
+      "published_sha256": "516103ecd5239605da645250695f6c142766df2e2ce21ec89f5193678633ffca"
     },
     {
       "path": "evaluation/decisions.md",
       "execution_or_prepublication_sha256": "ddc41e3c985c81655b04ea8849e364d73df6b7ce127604905781e24a6ea16424",
-      "published_sha256": "ad47f204b040bf939f52414f732107a91170621db08078fae7c7e83d978d2ffa",
-      "removed_editorial_fields": []
+      "published_sha256": "ad47f204b040bf939f52414f732107a91170621db08078fae7c7e83d978d2ffa"
     },
     {
       "path": "evaluation/protocol.md",
       "execution_or_prepublication_sha256": "34f853107e2274cd2671c0d0216ac835f58625554f47fad8e7572e3d63428113",
-      "published_sha256": "37fbb2e2612aa32f4ea359b2faf641636c9654e79811b897392d631ff8930af1",
-      "removed_editorial_fields": []
+      "published_sha256": "37fbb2e2612aa32f4ea359b2faf641636c9654e79811b897392d631ff8930af1"
     },
     {
       "path": "evaluation/protocol_v2.md",
       "execution_or_prepublication_sha256": "2740cfcb7aa3fb18f84e08f43c28814bcfd951c925458a8ff7861e8e89cb1043",
-      "published_sha256": "772e2544cada60ea6d2447a58a908226aa191eb11af47653900201886d967b1a",
-      "removed_editorial_fields": []
+      "published_sha256": "772e2544cada60ea6d2447a58a908226aa191eb11af47653900201886d967b1a"
     },
     {
       "path": "evaluation/README.md",
       "execution_or_prepublication_sha256": "7bd34958bcd9c8c3cf38e08821b422cb157ee291617dde1fd7554bc2ecd45f0e",
-      "published_sha256": "9c8dd703dde4e42565e73f72fe2bf2e7b597c96b8ae30d067857ab251e63ae6c",
-      "removed_editorial_fields": []
+      "published_sha256": "9c8dd703dde4e42565e73f72fe2bf2e7b597c96b8ae30d067857ab251e63ae6c"
     },
     {
       "path": "evaluation/results/pilot_001/REPORT.md",
       "execution_or_prepublication_sha256": "6ffaa72be3cccb0e814a62701068cc2fa1ec76bd75a369ceabfb72d5127fad10",
-      "published_sha256": "87885eb6acbbd3acad43ee03e96e30227adb4a39a9fd4e162d8f861d08404571",
-      "removed_editorial_fields": []
+      "published_sha256": "87885eb6acbbd3acad43ee03e96e30227adb4a39a9fd4e162d8f861d08404571"
     },
     {
       "path": "evaluation/results/pilot_003/rows.jsonl",
       "execution_or_prepublication_sha256": "157803596dc1477b20da2378474f94b270102fbf1a3aacea4731acb24a48dbb4",
-      "published_sha256": "842ac69fa0542bdf628f75797c002a76249c65f5f4b16fabbbe7bf3dbd276ecc",
-      "removed_editorial_fields": [
-        "annotation_note",
-        "review.authoring",
-        "review.pdf_visual_check"
-      ]
+      "published_sha256": "842ac69fa0542bdf628f75797c002a76249c65f5f4b16fabbbe7bf3dbd276ecc"
     },
     {
       "path": "evaluation/datasets/VALIDATION_V2.md",
       "execution_or_prepublication_sha256": "46d1ee92e04407a31c48f44b2358aa84cb80ef51706eba5c24539ab7ca01033d",
-      "published_sha256": "027b90f244774853c71e1b78f589e95eb9f8979093a3c08d2a808a5352ab6d8f",
-      "removed_editorial_fields": []
+      "published_sha256": "027b90f244774853c71e1b78f589e95eb9f8979093a3c08d2a808a5352ab6d8f"
     }
-  ]
+  ],
+  "independent_validation_completed": false,
+  "publication_revision": {
+    "date": "2026-11-19",
+    "kind": "editorial_projection_after_execution",
+    "scientific_payload_changed": false,
+    "annotation_provenance": "automated_preliminary",
+    "projected_manifests": [
+      {
+        "path": "evaluation/results/structured_normative_output_v1_001/manifest.json",
+        "preprojection_sha256": "2d45871409bf0a02f14b1680092287a6f18cd985cea2f092b9dff89d95c2bfb8",
+        "published_sha256": "b408a66b61e408a5d1a8b9d64ef64461bf9dc2b03982541a67479f2eb3f524f2"
+      }
+    ],
+    "snapshot_cleanup": {
+      "date": "2026-11-19",
+      "kind": "editorial_projection_after_execution",
+      "scientific_payload_changed": false,
+      "omitted_result_runs": [
+        "container_runtime_smoke_v1_001",
+        "pre_freeze_conversation_policy_compact_references_v1_001",
+        "pre_freeze_defect_correction_v1_001",
+        "pre_freeze_ux_answer_reliability_v2_001",
+        "runtime_registration_packaging_v1_001",
+        "structured_normative_output_v2_001",
+        "tcc_ui_integration_v1_001"
+      ],
+      "editorial_files": [
+        {
+          "path": "code/README.md",
+          "precleanup_sha256": "1c4a88ccbba5fac7b9560ad14b95a0e58dca5c4516b52c4fdf7ba143b429e8a8",
+          "published_sha256": "956c65561d6abf93dc9cdd3a94b8eb335d0a0003109b2c591b5335e487b04ce1",
+          "eol_representation": "lf_normalized"
+        },
+        {
+          "path": "docs/DEPLOY_LINUX.md",
+          "precleanup_sha256": "057fe4b768ff7889c26cc5f5350102414af1989d56500b809f96af7d0c4374fa",
+          "published_sha256": "b2584241ed11356d3a2d929397aa1c47f6d8e639139f9354a1406109dfe8cbbe",
+          "eol_representation": "lf_normalized"
+        },
+        {
+          "path": "docs/INSTALACAO.md",
+          "precleanup_sha256": "42b19e32c5e597d2d90c6b8bb25be01e5f745fc3d0a511ccbcb14b343f395d29",
+          "published_sha256": "40aedd4494c8a4af086ca11b40221d3dc6d7a9b500c25b30c62dc636c69164ab",
+          "eol_representation": "lf_normalized"
+        },
+        {
+          "path": "docs/PROVENIENCIA.md",
+          "precleanup_sha256": "aaff00ae3303e8ae70bb9cf430d4e283701caaf0476e51ddc4b2b2fee2fd8aad",
+          "published_sha256": "7b3f599cc56b07433b251e9c0aa0fa5c1ec3fab8e12d05034f5990717f93d179",
+          "eol_representation": "lf_normalized"
+        },
+        {
+          "path": "docs/REPRODUCAO.md",
+          "precleanup_sha256": "f19bf03e0de3b957d11814676d32e9f889a92ea2896bf4085473788112f24493",
+          "published_sha256": "bf084d28dc18966e36ab459ffdc8a313d3a2ae38c2aa6efca581d700cc5ef8ac",
+          "eol_representation": "lf_normalized"
+        },
+        {
+          "path": "evaluation/ARTIFACT_LAYOUT.md",
+          "precleanup_sha256": "5c5f860e0e769d7f12827ff64f55a16557281c26b573f63867072cb4db38d601",
+          "published_sha256": "128b438649499ea402645886fc7b6b5900f7c4d7febc579629e197025eb495b9",
+          "eol_representation": "lf_normalized"
+        },
+        {
+          "path": "evaluation/README.md",
+          "precleanup_sha256": "6a9aeae85f63a9319fa7abc83ce8a696cb2436d1e77dcff9cfb3f2f39d943c2f",
+          "published_sha256": "db5e247a08a20725383192d49744f7ef5f3aabe2dd8edc7b571f43be7c038813",
+          "eol_representation": "lf_normalized"
+        },
+        {
+          "path": "evaluation/decisions.md",
+          "precleanup_sha256": "fcb6070ef066a5fdc9ab9c26f46403ef8b0c7687f75798c9f0852edbafb1f5f3",
+          "published_sha256": "0ac7ace78f6f4e072de9ee4a837400b4a09f9f4e2029a25a2cfb99dbebd65955",
+          "eol_representation": "lf_normalized"
+        },
+        {
+          "path": "evaluation/protocol.md",
+          "precleanup_sha256": "711c2cff1c6480ad492cb7549589798b1982154a18d9cd67f04b8d405cb1692d",
+          "published_sha256": "48ca45b9371dd8b353a7ffc9122064fab975efdf57e6c2bd8624add7e6d9f377",
+          "eol_representation": "lf_normalized"
+        },
+        {
+          "path": "evaluation/protocol_agentic_v1.md",
+          "precleanup_sha256": "b9d9eba6b0e7bee1e1e2fc57b62aa381bc2cda38bdd6dbef499a359123761550",
+          "published_sha256": "ac5503d4b334ef435aae53a63a32436034981f01d672aae024b7e225b94c6ef2",
+          "eol_representation": "lf_normalized"
+        },
+        {
+          "path": "evaluation/protocol_temporal_v1.md",
+          "precleanup_sha256": "5ca4c6f369bd223a355e8c09a0959c5e3da81b92e5fb2f025473657b15d8f5d4",
+          "published_sha256": "2c9cba5f0ece025f883333d5a52f41526c5b7527f521ac04e5891c2bc104ebbb",
+          "eol_representation": "lf_normalized"
+        },
+        {
+          "path": "evaluation/protocol_v2.md",
+          "precleanup_sha256": "400f38e8f9d0c29cb23a1e59945aed8f99cf5d0769213760a16cddb1edca60ed",
+          "published_sha256": "626a954acd109f4956903963570ce4407bfa98a2cd2029fdd181c26d6ccc97a3",
+          "eol_representation": "lf_normalized"
+        },
+        {
+          "path": "evaluation/results/agentic_temporal_hardening_v1_001/REPORT.md",
+          "precleanup_sha256": "a91b65601f69d63c53bc298329fcc213e39a0de6fe0adb5f105fa242f619e39b",
+          "published_sha256": "0423dc9772433ee236dccdbce5a9c92209bca3a95ce585b7042d008b8039165f",
+          "eol_representation": "lf_normalized"
+        },
+        {
+          "path": "evaluation/results/failure_analysis_v1/REPORT.md",
+          "precleanup_sha256": "c08712f1dc10ada7c23e6f4feb869ff25dc7945cdb054aa19f990431ce63872f",
+          "published_sha256": "d4ffee080194fda17dc7edb6c549db61504a04577396a7a0124f23c884a8059d",
+          "eol_representation": "lf_normalized"
+        },
+        {
+          "path": "evaluation/results/pilot_001/REPORT.md",
+          "precleanup_sha256": "a20d64694772249547f22642aa406ff65d907712b2c3aeda62423c962aa8f855",
+          "published_sha256": "dde73909dcc21157db2c8091315f0e4abd1c25fd4cd60ab7b9de2fb4a2d39bc2",
+          "eol_representation": "lf_normalized"
+        },
+        {
+          "path": "evaluation/results/pilot_003/PRIMARY_ANALYSIS.md",
+          "precleanup_sha256": "727160cb3720b93a422cd9a2bf2c34440916759c048a69bb07107e99dc96fa16",
+          "published_sha256": "1cb931a2334073a7365e3855a6e22aace5c87259a5353db7e67fb1699110799e",
+          "eol_representation": "lf_normalized"
+        },
+        {
+          "path": "evaluation/results/pilot_003/REPORT.md",
+          "precleanup_sha256": "8d14ca3db28030ced790c01c57a0c50376181d239c151c1943da8bcfc9257c2a",
+          "published_sha256": "e6f068e2297aa6ef704b79ec5ab6c4c79ecdfbd564921eaad6acc6a9d87c9183",
+          "eol_representation": "lf_normalized"
+        },
+        {
+          "path": "evaluation/results/pre_freeze_explicit_sector_temporal_fallback_v1_001/REPORT.md",
+          "precleanup_sha256": "178a163165163b3efa180f6447729fac4718da4e3c88314cc9c1bf42657413b9",
+          "published_sha256": "bd58ced6b203c002421c477680359d2943746c77ed897e06ee8782417933bed5",
+          "eol_representation": "lf_normalized"
+        },
+        {
+          "path": "evaluation/results/pre_freeze_historical_snapshot_local_runtime_v1_001/REPORT.md",
+          "precleanup_sha256": "f60a50f23f28ceb259529a4ac00dbb89a17c23ed61b3195bbf67143a5cd303fc",
+          "published_sha256": "d6b2819753f6f5b61469698b0967bbd3f8f2745a9e3915333459fd82cdc155e4",
+          "eol_representation": "lf_normalized"
+        },
+        {
+          "path": "evaluation/results/pre_freeze_ux_dataset_diagnostic_v2_001/REPORT.md",
+          "precleanup_sha256": "6ef8087db1f70da645711d1650760f7b9398e95dee2ad23d7ee7cb921ac0d397",
+          "published_sha256": "07efaf3471917e5d167cfd0591c809ac4fe2e6bce027a09c2670f706ba4c21a0",
+          "eol_representation": "lf_normalized"
+        },
+        {
+          "path": "evaluation/results/router_v2_exploratory_001/REPORT.md",
+          "precleanup_sha256": "a03e94d5bd29e65cce1b5c36352a662d3225384cc83c267b156d331ab4fe41c3",
+          "published_sha256": "938e53ea49f64d7ec726abe5ef8436a607ddd5bac715eae9548d8113efffa688",
+          "eol_representation": "lf_normalized"
+        }
+      ]
+    }
+  },
+  "documentation_revision": {
+    "date": "2026-11-20",
+    "kind": "editorial_documentation_update",
+    "scientific_payload_changed": false,
+    "files": [
+      {
+        "path": "code/docs/integrated-runtime.md",
+        "predocumentation_sha256": "cd38f38b35e350149f45e194ae5fc9a0d3d8065d5e962715a390893e5df16a8c",
+        "published_sha256": "dd2ba131703326f243f76c9f3a41d0fe3847af03174d0adb3f6d230dafd951e5",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "docs/API.md",
+        "predocumentation_sha256": "3324970f15d3c392220712523bbf19e1c5465a7584d4da6745604c64e828253d",
+        "published_sha256": "9d5194bedb05dc6f6ca03dc782d283f7e2036c92682763a2d3cd47f664755d94",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "docs/DEPLOY_LINUX.md",
+        "predocumentation_sha256": "b2584241ed11356d3a2d929397aa1c47f6d8e639139f9354a1406109dfe8cbbe",
+        "published_sha256": "40899cc8329f288f7ca0eb14de49dd7283755a9427b6eefe28f6669568dfa16c",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "docs/PROVENIENCIA.md",
+        "predocumentation_sha256": "7b3f599cc56b07433b251e9c0aa0fa5c1ec3fab8e12d05034f5990717f93d179",
+        "published_sha256": "4eb086fc0f4b46b69728e1a07674dffb0f0a61025dec214fa35bc8d7ec95b59d",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "docs/tcc2/ARQUITETURA_A2J_V2.md",
+        "predocumentation_sha256": "8633e9e4181c2e69c3cf981f90fb08a6f656e7d4bd3e210c5c51636b8c9adbcd",
+        "published_sha256": "c2e51364d5660798eccb1d0c1b6ba7e0d43b12d728ecf8f2cd206ff7fba609c4",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "docs/tcc2/AVALIACAO_TCCII_JEV_V2.md",
+        "predocumentation_sha256": "540d721df64e9a62b60f96b918c6b312319a28d649a1c7094240748ac67deab9",
+        "published_sha256": "d658af400cc698a4c1467a862540a311d159543d62b17b47c6deef7abed74b69",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "docs/tcc2/IMPLANTACAO_AWS.md",
+        "predocumentation_sha256": "8b6a5b021a26e501f3b44dbc4f6b26ff85c3f14f9c519a33452841a0898eb6cf",
+        "published_sha256": "0fa6e3930cdfd1f62bf6eda1e482ba269f08018de8a667e84d60928b4390ab5c",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "evaluation/CLI_VALIDATION.md",
+        "predocumentation_sha256": "a4d59d6c365c1e3362cda5a70cc57cfa03c7cb427dbbac9ccfb08ad99d7742ec",
+        "published_sha256": "fe3eafcef5c7aa4ea87ccc2fce51afc02b5c36d77676939dd7cf36d4aa96c955",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "evaluation/README.md",
+        "predocumentation_sha256": "db5e247a08a20725383192d49744f7ef5f3aabe2dd8edc7b571f43be7c038813",
+        "published_sha256": "a919ac0b928f906eb88fd832d0b630253cf9d37135478ddf077c2a3a9f5da97a",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "evaluation/datasets/REVIEWED_V2.md",
+        "predocumentation_sha256": "8e78f353373d527bac4a68557e54c19041e161f9774d8c6f97108d22b371262e",
+        "published_sha256": "50627b0c08e36f5ea28d0e4fbb5f8c4512e6eba3734731e62d5186ac328d21bf",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "evaluation/datasets/VALIDATION_V2.md",
+        "predocumentation_sha256": "af7375845495fa54607a9ae5f911845fb91d72ee4d3a8fbba43bd6e0d4bd2f1a",
+        "published_sha256": "28dcec8c1a09a103f0f0ebcbc49ef421e2f5460669b1fd4b998bedbd7ccbbfbf",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "evaluation/protocol.md",
+        "predocumentation_sha256": "48ca45b9371dd8b353a7ffc9122064fab975efdf57e6c2bd8624add7e6d9f377",
+        "published_sha256": "215cfd0d74987a754d1243370e801924be8d56e6582dc54f335dca538c00c824",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "evaluation/protocol_agentic_v1.md",
+        "predocumentation_sha256": "ac5503d4b334ef435aae53a63a32436034981f01d672aae024b7e225b94c6ef2",
+        "published_sha256": "fa249cc76ea77e49fc4b016d831f38c91b03b63ab241211fe354f20a95512e72",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "evaluation/protocol_router_v2_v1.md",
+        "predocumentation_sha256": "0ec3b210c83e7d492da0fea1b06c3696ba319c1192e01f9cd1e6b2fca1c44519",
+        "published_sha256": "c42aaa069d5f62fedd7284340cc7ea35b3779234d3c510e3db33182259b82312",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "evaluation/protocol_temporal_v1.md",
+        "predocumentation_sha256": "2c9cba5f0ece025f883333d5a52f41526c5b7527f521ac04e5891c2bc104ebbb",
+        "published_sha256": "01ad42b78c0731d940b8735e30c64175a88c47177e9e17bbb2aa9e37ab98a7b4",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "evaluation/protocol_v2.md",
+        "predocumentation_sha256": "626a954acd109f4956903963570ce4407bfa98a2cd2029fdd181c26d6ccc97a3",
+        "published_sha256": "1a29ca7dd04dad9f761984d1111c3bcd8a7edaee1367ca6b7a33a67492b3dd55",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "evaluation/results/agentic_temporal_hardening_v1_001/REPORT.md",
+        "predocumentation_sha256": "0423dc9772433ee236dccdbce5a9c92209bca3a95ce585b7042d008b8039165f",
+        "published_sha256": "2ffd72422381a9c36282639cb5f33f284d441294ebf941dc6985d818a841ca44",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "evaluation/results/cli_001/REPORT.md",
+        "predocumentation_sha256": "0dbbcef759af2174a47c171c824d6edfc9a96a1b68437eb2bf659ac09f7866a5",
+        "published_sha256": "0e70db5ef686ededcd0a4857a399ea96445b16d79c3b57918d58d50aa714ec5b",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "evaluation/results/failure_analysis_v1/REPORT.md",
+        "predocumentation_sha256": "d4ffee080194fda17dc7edb6c549db61504a04577396a7a0124f23c884a8059d",
+        "published_sha256": "1289f644aeb578bfcce528e5e025b0bb71f6845631c6d487be2bbb5f0c1dc996",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "evaluation/results/pilot_001/REPORT.md",
+        "predocumentation_sha256": "dde73909dcc21157db2c8091315f0e4abd1c25fd4cd60ab7b9de2fb4a2d39bc2",
+        "published_sha256": "0a06407570df3f72844318c0345d8218dc3e86bae8dbacaf1a1911dfcddc1bb0",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "evaluation/results/pilot_003/PRIMARY_ANALYSIS.md",
+        "predocumentation_sha256": "1cb931a2334073a7365e3855a6e22aace5c87259a5353db7e67fb1699110799e",
+        "published_sha256": "5a61f9994da62a6e403d643865169c10d6bb2022b3e5e7d5bfc524078f884ac0",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "evaluation/results/pilot_003/REPORT.md",
+        "predocumentation_sha256": "e6f068e2297aa6ef704b79ec5ab6c4c79ecdfbd564921eaad6acc6a9d87c9183",
+        "published_sha256": "6806afef081207b721dda4c74dce877f70512a67d838ee9689c3613581a94b6f",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "evaluation/results/pilot_003/execution_snapshot/evaluation/protocol_v2.md",
+        "predocumentation_sha256": "6bad8e015ef6f9a8236e32511728c114735b28c0363f551bd0e5ad15b14bbb9d",
+        "published_sha256": "a9493fadc2a53e7dbd49396a1cae9ebb37f54fbbdd9f673068dba751cc05f96a",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "evaluation/results/pre_freeze_explicit_sector_temporal_fallback_v1_001/REPORT.md",
+        "predocumentation_sha256": "bd58ced6b203c002421c477680359d2943746c77ed897e06ee8782417933bed5",
+        "published_sha256": "895d6739d5b6a115264de17a37f98a55c35a6142330908cb3f4cbcbab4825502",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "evaluation/results/pre_freeze_historical_snapshot_local_runtime_v1_001/REPORT.md",
+        "predocumentation_sha256": "d6b2819753f6f5b61469698b0967bbd3f8f2745a9e3915333459fd82cdc155e4",
+        "published_sha256": "7fb5cb8fab70559e3b9ebabae2a992c373594b9c00dd7576a5d14182decf9e03",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "evaluation/results/pre_freeze_ux_dataset_diagnostic_v2_001/REPORT.md",
+        "predocumentation_sha256": "07efaf3471917e5d167cfd0591c809ac4fe2e6bce027a09c2670f706ba4c21a0",
+        "published_sha256": "255c0c10ca6ab9019e580a9d0de3b590aaf833e5e877101f329e574024b3b159",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "evaluation/results/router_v2_exploratory_001/DEMOS.md",
+        "predocumentation_sha256": "3264541b23f66a50da12f6f74d0a647f3d75425c392b70262cbe8de82f8c94d6",
+        "published_sha256": "e57aa37784fd050a76277bc2ad2daa81b1f47c39cb6ecc79c96ee3fa3d11d95b",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "evaluation/results/router_v2_exploratory_001/REPORT.md",
+        "predocumentation_sha256": "938e53ea49f64d7ec726abe5ef8436a607ddd5bac715eae9548d8113efffa688",
+        "published_sha256": "fa0b643dbea42d974daf495a6553eb5b5b00fac39dae9b0606bc276c42a36171",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "evaluation/results/terminal_ui_001/PRIMARY_ANALYSIS.md",
+        "predocumentation_sha256": "7d4cadb90d911c28f399bb5da41250ef625107b4e77d94cb4ef9c9f82ae74156",
+        "published_sha256": "ff1058e067b121d0d34c32a5c4fe2d42c9e885a2770957139cc3c7a73b977ae4",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "evaluation/results/terminal_ui_001/REPORT.md",
+        "predocumentation_sha256": "9041b3338c7e82d2607c6b24d40d50006ed183342a5e35702c983dc797b8a1e0",
+        "published_sha256": "cddc6827c3a300caf6c42b3e72adeba77a57c05b1b1adc4c301aaa3c4c52aa4c",
+        "eol_representation": "lf_normalized"
+      },
+      {
+        "path": "evaluation/results/terminal_ui_001/VERIFICATION.md",
+        "predocumentation_sha256": "237a62628f30a5054d85c4b608d824d5ef6003bc5fd127bfa441f0d558ed7f0f",
+        "published_sha256": "a0945894dca26fba72f1908a2040f75ffa4dbfd18aad97c046818396cf2d9b4c",
+        "eol_representation": "lf_normalized"
+      }
+    ]
+  }
 }

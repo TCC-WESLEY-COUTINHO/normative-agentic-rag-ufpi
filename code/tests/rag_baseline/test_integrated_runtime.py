@@ -132,6 +132,7 @@ async def test_factory_builds_real_core_once_and_borrows_saver(assembly, runtime
             assert built.service.openrouter is provider
             assert built.router.model == built.service.llm_model
             assert built.service.top_k == 5
+            assert built.service.generation_mode == "cited_v3"
             assert built.graph.name == AGENT
             assert provider.routes == provider.embeddings == provider.prompts == []
             assert len(calls) == 1
@@ -238,7 +239,12 @@ def registered(assembly, runtime, tmp_path, monkeypatch):
         "agent_runtime_options",
         {
             AGENT: {
-                "settings": options(runtime, tmp_path),
+                "settings": options(
+                    runtime,
+                    tmp_path,
+                    GENERATION_MODE="free_text_v2",
+                    CORPUS_PROFILE="duas-regulacoes",
+                ),
                 "provider_factory": lambda _: provider,
             }
         },

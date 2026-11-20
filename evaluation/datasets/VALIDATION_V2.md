@@ -1,5 +1,7 @@
 # Integridade técnica e limitações dos candidatos V2
 
+> Esta página registra os candidatos originais do piloto V2, anterior à v3.4. A revisão posterior foi publicada separadamente em [REVIEWED_V2.md](REVIEWED_V2.md); ela não altera os estados e verificações históricos abaixo.
+
 Os dois conjuntos permanecem candidatos a gold, sem revisão independente registrada. Esta página reúne verificações estruturais e limites verificáveis.
 
 - Pós: 20 perguntas, 8 diretas, 8 abertas e 4 ambíguas; graduação: 20 perguntas originais preservadas, com 6 respondíveis e 14 classificadas provisoriamente para esclarecimento.

@@ -1,5 +1,7 @@
 # Avaliação da A″-J v2 em relação às questões de pesquisa do TCC II
 
+> **Avaliação histórica das condições A, A′, A″-J v1 e v2.** As versões, contagens e estados de defeitos abaixo descrevem aquelas execuções; não representam uma avaliação da geração citada da v3.4. Consulte os [resultados da v3.4](../RESULTADOS.md) e a [proveniência das condições](../PROVENIENCIA.md).
+
 Este documento relaciona as evidências existentes às questões QP1–QP5 do TCC II. A pergunta de pesquisa não foi alterada:
 
 > Como se comporta, e com quais limitações, um assistente para normas universitárias quando as decisões de escopo, nível de ensino e versão são separadas da geração da resposta, e esta é verificada antes da entrega?
@@ -50,7 +52,7 @@ Este documento relaciona as evidências existentes às questões QP1–QP5 do TC
 
 É a dimensão diretamente afetada pela nova camada.
 
-**C1:** 60 cenários de desenvolvimento, sintéticos (autoria por modelo de linguagem), × 3 repetições, A × v2. O checkpoint decisivo foi rotulado pelo pesquisador às cegas em relação às saídas. Unidade: cenário, maioria de 3 repetições. IC 95 % por bootstrap agrupado.
+**C1:** 60 cenários sintéticos de desenvolvimento, construídos por geração automatizada, × 3 repetições, A × v2. O checkpoint decisivo foi rotulado pelo pesquisador às cegas em relação às saídas. Unidade: cenário, maioria de 3 repetições. IC 95 % por bootstrap agrupado.
 
 | Métrica | Origem | A | v2 | Δ [IC 95 %] |
 |---|---|---:|---:|---|
@@ -59,11 +61,11 @@ Este documento relaciona as evidências existentes às questões QP1–QP5 do TC
 | Pergunta pretendida encaminhada à recuperação | [v2] | 0,333 | 0,550 | +0,217 [+0,100; +0,333] |
 | Esclarecimento desnecessário | [v2] | 0,200 | 0,150 | −0,050 [−0,150; +0,067] (inconclusivo) |
 | Pergunta descartada | [v2] | 0 | 0 | 0 |
-| Falso consumo de pergunta nova (417 checkpoints, rótulos de modelo) | [v2] | 0 | 0 | 0 |
+| Falso consumo de pergunta nova (417 checkpoints, rótulos preliminares automatizados) | [v2] | 0 | 0 | 0 |
 | Consistência 3/3 | [v2] | 1,00 | 0,90 (rótulos do pesquisador); 0,92 nos originais, 0,945 excluindo erros técnicos | — |
 | Respostas aceitas sobre outra pergunta (180 execuções decisivas) | [v2] | 34 | 15 | — |
 
-**Concordância** entre o pesquisador e os rótulos originais (de autoria de modelo):
+**Concordância** entre os rótulos do pesquisador e os rótulos preliminares automatizados do conjunto (não atribuídos ao pesquisador):
 
 - decisão preferida: κ 0,71;
 - nível do usuário depois do turno: κ 0,13.

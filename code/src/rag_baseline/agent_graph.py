@@ -1,7 +1,7 @@
-"""Internal, stateless integration graph; intentionally absent from service registry.
+"""Integrated graph assembly for the normative facade and service transport.
 
-Build with a trusted facade dependency. Do not project this graph through the
-legacy message-only service: typed transport and memory belong to later work.
+With a checkpointer, build_integrated_graph selects the conversation graph used
+by the registered runtime. Without one, it builds the stateless action/tool graph.
 """
 
 from dataclasses import dataclass, replace
@@ -95,6 +95,7 @@ def build_integrated_graph(
     scope_gate=None,
     interpreter=None,
     transition_policy=None,
+    assistant_identity=False,
 ) -> CompiledStateGraph:
     if memory_stamp is not None:
         from rag_baseline.conversation_graph import build_conversation_graph
@@ -107,6 +108,7 @@ def build_integrated_graph(
             scope_gate=scope_gate,
             interpreter=interpreter,
             transition_policy=transition_policy,
+            assistant_identity=assistant_identity,
         )
     if interpreter is not None:
         raise ValueError("A conversation interpreter requires persistent conversation state.")

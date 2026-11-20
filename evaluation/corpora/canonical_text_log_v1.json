@@ -1,0 +1,6597 @@
+{
+  "scope": "Conversion syntax only (markdown, LaTeX fractions, HTML entities, spacing); every word and every provision line is kept.",
+  "sources": {
+    "graduacao_setor_v2.json": "graduacao_setor_v3.json",
+    "pos_graduacao_setor_v3.json": "pos_graduacao_setor_v4.json",
+    "658_2024_temporal_v2.json": "658_2024_temporal_v3.json",
+    "1056_2026_temporal_v2.json": "1056_2026_temporal_v3.json"
+  },
+  "counts": {
+    "1056_2026_temporal_v3.json:emphasis": 0,
+    "1056_2026_temporal_v3.json:italic": 0,
+    "1056_2026_temporal_v3.json:latex_fraction": 0,
+    "1056_2026_temporal_v3.json:spaces": 0,
+    "1056_2026_temporal_v3.json:stray_asterisk": 0,
+    "658_2024_temporal_v3.json:bullet": 263,
+    "658_2024_temporal_v3.json:emphasis": 0,
+    "658_2024_temporal_v3.json:heading": 2,
+    "658_2024_temporal_v3.json:html_entity": 1,
+    "658_2024_temporal_v3.json:inciso_separator": 140,
+    "658_2024_temporal_v3.json:italic": 0,
+    "658_2024_temporal_v3.json:latex_fraction": 0,
+    "658_2024_temporal_v3.json:spaces": 0,
+    "658_2024_temporal_v3.json:stray_asterisk": 0,
+    "graduacao_setor_v3.json:auto_number": 234,
+    "graduacao_setor_v3.json:block_quote": 451,
+    "graduacao_setor_v3.json:bullet": 179,
+    "graduacao_setor_v3.json:emphasis": 753,
+    "graduacao_setor_v3.json:italic": 60,
+    "graduacao_setor_v3.json:latex_fraction": 4,
+    "graduacao_setor_v3.json:spaces": 0,
+    "graduacao_setor_v3.json:stray_asterisk": 1,
+    "pos_graduacao_setor_v4.json:auto_number": 30,
+    "pos_graduacao_setor_v4.json:bullet": 227,
+    "pos_graduacao_setor_v4.json:emphasis": 0,
+    "pos_graduacao_setor_v4.json:inciso_separator": 136,
+    "pos_graduacao_setor_v4.json:italic": 0,
+    "pos_graduacao_setor_v4.json:latex_fraction": 0,
+    "pos_graduacao_setor_v4.json:spaces": 0,
+    "pos_graduacao_setor_v4.json:stray_asterisk": 0
+  },
+  "entries": [
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 0,
+      "id": null,
+      "rules": {
+        "block_quote": 3,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 1,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 2,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 3,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 4,
+      "id": null,
+      "rules": {
+        "block_quote": 3,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 5,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "bullet": 6,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 6,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 7,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 8,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 9,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 10,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 11,
+      "id": null,
+      "rules": {
+        "emphasis": 1,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 1
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 12,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 13,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 14,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 15,
+      "id": null,
+      "rules": {
+        "auto_number": 3,
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 16,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 17,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 18,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 19,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 20,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 21,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 22,
+      "id": null,
+      "rules": {
+        "block_quote": 5,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 23,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 24,
+      "id": null,
+      "rules": {
+        "auto_number": 2,
+        "block_quote": 3,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 25,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 26,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 27,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 28,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 29,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 30,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 31,
+      "id": null,
+      "rules": {
+        "block_quote": 4,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 32,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 33,
+      "id": null,
+      "rules": {
+        "auto_number": 4,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 34,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 35,
+      "id": null,
+      "rules": {
+        "block_quote": 9,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 36,
+      "id": null,
+      "rules": {
+        "auto_number": 2,
+        "block_quote": 3,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 37,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 38,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 39,
+      "id": null,
+      "rules": {
+        "auto_number": 4,
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 40,
+      "id": null,
+      "rules": {
+        "auto_number": 10,
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 41,
+      "id": null,
+      "rules": {
+        "block_quote": 3,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 42,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 43,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 44,
+      "id": null,
+      "rules": {
+        "block_quote": 4,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 45,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 46,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "bullet": 4,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 47,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 48,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 49,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 50,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 51,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 52,
+      "id": null,
+      "rules": {
+        "block_quote": 4,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 53,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 54,
+      "id": null,
+      "rules": {
+        "auto_number": 1,
+        "bullet": 4,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 55,
+      "id": null,
+      "rules": {
+        "auto_number": 1,
+        "bullet": 4,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 56,
+      "id": null,
+      "rules": {
+        "block_quote": 3,
+        "emphasis": 2,
+        "italic": 1,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 57,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 1,
+        "latex_fraction": 1,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 58,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 59,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 60,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 61,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 62,
+      "id": null,
+      "rules": {
+        "bullet": 4,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 63,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 64,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 65,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "bullet": 4,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 66,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 67,
+      "id": null,
+      "rules": {
+        "auto_number": 4,
+        "block_quote": 21,
+        "bullet": 17,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 68,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 69,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 70,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 71,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 72,
+      "id": null,
+      "rules": {
+        "auto_number": 3,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 73,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "bullet": 4,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 74,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 75,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 76,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 77,
+      "id": null,
+      "rules": {
+        "auto_number": 3,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 78,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 79,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 80,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 81,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 82,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 83,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 84,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 85,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 86,
+      "id": null,
+      "rules": {
+        "block_quote": 8,
+        "bullet": 4,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 87,
+      "id": null,
+      "rules": {
+        "auto_number": 2,
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 88,
+      "id": null,
+      "rules": {
+        "block_quote": 6,
+        "bullet": 5,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 89,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 90,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 1,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 91,
+      "id": null,
+      "rules": {
+        "block_quote": 12,
+        "bullet": 11,
+        "emphasis": 2,
+        "italic": 1,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 92,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 93,
+      "id": null,
+      "rules": {
+        "auto_number": 12,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 94,
+      "id": null,
+      "rules": {
+        "auto_number": 8,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 95,
+      "id": null,
+      "rules": {
+        "block_quote": 5,
+        "bullet": 6,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 96,
+      "id": null,
+      "rules": {
+        "auto_number": 4,
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 97,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 98,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 99,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 100,
+      "id": null,
+      "rules": {
+        "bullet": 6,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 101,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 102,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 103,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 104,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 1,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 105,
+      "id": null,
+      "rules": {
+        "block_quote": 6,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 106,
+      "id": null,
+      "rules": {
+        "block_quote": 6,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 107,
+      "id": null,
+      "rules": {
+        "block_quote": 12,
+        "bullet": 6,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 108,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 109,
+      "id": null,
+      "rules": {
+        "auto_number": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 110,
+      "id": null,
+      "rules": {
+        "auto_number": 3,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 111,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 112,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 113,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 114,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 115,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 116,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 117,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 118,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 119,
+      "id": null,
+      "rules": {
+        "auto_number": 5,
+        "block_quote": 1,
+        "bullet": 4,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 120,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 121,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 122,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 123,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 124,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 125,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 126,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 127,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 128,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 129,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 130,
+      "id": null,
+      "rules": {
+        "auto_number": 6,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 131,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 132,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 133,
+      "id": null,
+      "rules": {
+        "auto_number": 5,
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 134,
+      "id": null,
+      "rules": {
+        "auto_number": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 135,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 136,
+      "id": null,
+      "rules": {
+        "auto_number": 8,
+        "emphasis": 2,
+        "italic": 1,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 137,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 138,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 2,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 139,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 2,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 140,
+      "id": null,
+      "rules": {
+        "auto_number": 3,
+        "emphasis": 2,
+        "italic": 2,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 141,
+      "id": null,
+      "rules": {
+        "auto_number": 5,
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 5,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 142,
+      "id": null,
+      "rules": {
+        "auto_number": 3,
+        "block_quote": 4,
+        "emphasis": 2,
+        "italic": 2,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 143,
+      "id": null,
+      "rules": {
+        "block_quote": 9,
+        "bullet": 8,
+        "emphasis": 2,
+        "italic": 3,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 144,
+      "id": null,
+      "rules": {
+        "block_quote": 6,
+        "bullet": 5,
+        "emphasis": 2,
+        "italic": 1,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 145,
+      "id": null,
+      "rules": {
+        "block_quote": 4,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 146,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 147,
+      "id": null,
+      "rules": {
+        "auto_number": 3,
+        "block_quote": 9,
+        "bullet": 8,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 148,
+      "id": null,
+      "rules": {
+        "block_quote": 3,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 149,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 150,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 151,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 152,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 153,
+      "id": null,
+      "rules": {
+        "auto_number": 4,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 154,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 155,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 156,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 157,
+      "id": null,
+      "rules": {
+        "auto_number": 5,
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 158,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 159,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 160,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 161,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 162,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 163,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 164,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 165,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 166,
+      "id": null,
+      "rules": {
+        "block_quote": 4,
+        "bullet": 3,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 167,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 168,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 169,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 170,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 171,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 172,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 173,
+      "id": null,
+      "rules": {
+        "auto_number": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 174,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 175,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 176,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 177,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 178,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 179,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 180,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 181,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 182,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 183,
+      "id": null,
+      "rules": {
+        "auto_number": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 184,
+      "id": null,
+      "rules": {
+        "auto_number": 2,
+        "block_quote": 4,
+        "bullet": 3,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 185,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 186,
+      "id": null,
+      "rules": {
+        "auto_number": 2,
+        "bullet": 10,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 187,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 188,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 189,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 190,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 191,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 192,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 193,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 194,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 195,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 196,
+      "id": null,
+      "rules": {
+        "auto_number": 5,
+        "block_quote": 5,
+        "bullet": 4,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 197,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 198,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 199,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 200,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 201,
+      "id": null,
+      "rules": {
+        "block_quote": 4,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 202,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 203,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 204,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 205,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 1,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 206,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 207,
+      "id": null,
+      "rules": {
+        "block_quote": 3,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 208,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 209,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 210,
+      "id": null,
+      "rules": {
+        "block_quote": 5,
+        "emphasis": 2,
+        "italic": 1,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 211,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 212,
+      "id": null,
+      "rules": {
+        "auto_number": 3,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 213,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 214,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 215,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 216,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 2,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 217,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 218,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 219,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 220,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 221,
+      "id": null,
+      "rules": {
+        "auto_number": 5,
+        "block_quote": 4,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 222,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 223,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 224,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 225,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 226,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 227,
+      "id": null,
+      "rules": {
+        "block_quote": 3,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 228,
+      "id": null,
+      "rules": {
+        "block_quote": 3,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 229,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 230,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 231,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 1,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 232,
+      "id": null,
+      "rules": {
+        "block_quote": 4,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 233,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 234,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 235,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 236,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 237,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 238,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 239,
+      "id": null,
+      "rules": {
+        "block_quote": 8,
+        "bullet": 6,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 240,
+      "id": null,
+      "rules": {
+        "auto_number": 5,
+        "block_quote": 1,
+        "bullet": 5,
+        "emphasis": 2,
+        "italic": 1,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 241,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 242,
+      "id": null,
+      "rules": {
+        "block_quote": 5,
+        "emphasis": 2,
+        "italic": 1,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 243,
+      "id": null,
+      "rules": {
+        "block_quote": 11,
+        "bullet": 5,
+        "emphasis": 2,
+        "italic": 1,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 244,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 1,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 245,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 246,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 247,
+      "id": null,
+      "rules": {
+        "auto_number": 9,
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 248,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 249,
+      "id": null,
+      "rules": {
+        "auto_number": 4,
+        "block_quote": 3,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 250,
+      "id": null,
+      "rules": {
+        "block_quote": 8,
+        "bullet": 3,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 251,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 252,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 253,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 254,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 255,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 256,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 257,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 258,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 259,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 260,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 261,
+      "id": null,
+      "rules": {
+        "block_quote": 9,
+        "emphasis": 2,
+        "italic": 1,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 262,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 263,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 264,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 265,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 266,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 267,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 268,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 269,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 270,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 271,
+      "id": null,
+      "rules": {
+        "auto_number": 4,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 272,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 273,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 274,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 275,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 276,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 277,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 278,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 279,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 280,
+      "id": null,
+      "rules": {
+        "auto_number": 5,
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 281,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 282,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 283,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 284,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 285,
+      "id": null,
+      "rules": {
+        "block_quote": 4,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 1,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 286,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 1,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 287,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 288,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 289,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 290,
+      "id": null,
+      "rules": {
+        "block_quote": 9,
+        "bullet": 4,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 1,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 291,
+      "id": null,
+      "rules": {
+        "block_quote": 11,
+        "bullet": 8,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 292,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 293,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 1,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 294,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 295,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 296,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 297,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 298,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 299,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 300,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 301,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 302,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 303,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 304,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 305,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 306,
+      "id": null,
+      "rules": {
+        "block_quote": 9,
+        "bullet": 3,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 307,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 308,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 309,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 310,
+      "id": null,
+      "rules": {
+        "auto_number": 6,
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 311,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 312,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 313,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 314,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 2,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 315,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 316,
+      "id": null,
+      "rules": {
+        "auto_number": 3,
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 3,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 317,
+      "id": null,
+      "rules": {
+        "auto_number": 3,
+        "emphasis": 2,
+        "italic": 1,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 318,
+      "id": null,
+      "rules": {
+        "auto_number": 5,
+        "bullet": 2,
+        "emphasis": 2,
+        "italic": 1,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 319,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 2,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 320,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 3,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 321,
+      "id": null,
+      "rules": {
+        "block_quote": 7,
+        "bullet": 4,
+        "emphasis": 2,
+        "italic": 4,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 322,
+      "id": null,
+      "rules": {
+        "auto_number": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 323,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 324,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 325,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 326,
+      "id": null,
+      "rules": {
+        "auto_number": 2,
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 327,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 328,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 329,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 330,
+      "id": null,
+      "rules": {
+        "block_quote": 3,
+        "emphasis": 2,
+        "italic": 4,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 331,
+      "id": null,
+      "rules": {
+        "block_quote": 3,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 332,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 333,
+      "id": null,
+      "rules": {
+        "block_quote": 4,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 334,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 335,
+      "id": null,
+      "rules": {
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 1,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 336,
+      "id": null,
+      "rules": {
+        "auto_number": 8,
+        "bullet": 9,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 337,
+      "id": null,
+      "rules": {
+        "block_quote": 3,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 338,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 339,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 340,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 341,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 342,
+      "id": null,
+      "rules": {
+        "auto_number": 10,
+        "block_quote": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 343,
+      "id": null,
+      "rules": {
+        "block_quote": 3,
+        "emphasis": 2,
+        "italic": 1,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 344,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 345,
+      "id": null,
+      "rules": {
+        "auto_number": 5,
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 346,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 347,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 348,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 349,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 350,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 351,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 352,
+      "id": null,
+      "rules": {
+        "auto_number": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 353,
+      "id": null,
+      "rules": {
+        "auto_number": 6,
+        "block_quote": 4,
+        "emphasis": 2,
+        "italic": 2,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 354,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 355,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 356,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 357,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 358,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 359,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 360,
+      "id": null,
+      "rules": {
+        "auto_number": 2,
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 1,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 361,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 362,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 363,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 364,
+      "id": null,
+      "rules": {
+        "emphasis": 4,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 365,
+      "id": null,
+      "rules": {
+        "auto_number": 3,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 366,
+      "id": null,
+      "rules": {
+        "auto_number": 8,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 367,
+      "id": null,
+      "rules": {
+        "auto_number": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 368,
+      "id": null,
+      "rules": {
+        "auto_number": 2,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 369,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 1,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 370,
+      "id": null,
+      "rules": {
+        "block_quote": 1,
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 371,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 372,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 373,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 374,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "graduacao_setor_v2.json",
+      "target": "graduacao_setor_v3.json",
+      "index": 375,
+      "id": null,
+      "rules": {
+        "emphasis": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 1,
+      "id": null,
+      "rules": {
+        "bullet": 5,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 2,
+      "id": null,
+      "rules": {
+        "bullet": 11,
+        "emphasis": 0,
+        "inciso_separator": 6,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 3,
+      "id": null,
+      "rules": {
+        "bullet": 12,
+        "emphasis": 0,
+        "inciso_separator": 6,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 4,
+      "id": null,
+      "rules": {
+        "bullet": 6,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 5,
+      "id": null,
+      "rules": {
+        "bullet": 5,
+        "emphasis": 0,
+        "inciso_separator": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 6,
+      "id": null,
+      "rules": {
+        "bullet": 6,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 7,
+      "id": null,
+      "rules": {
+        "bullet": 18,
+        "emphasis": 0,
+        "inciso_separator": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 8,
+      "id": null,
+      "rules": {
+        "bullet": 2,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 10,
+      "id": null,
+      "rules": {
+        "bullet": 2,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 11,
+      "id": null,
+      "rules": {
+        "bullet": 12,
+        "emphasis": 0,
+        "inciso_separator": 11,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 13,
+      "id": null,
+      "rules": {
+        "bullet": 4,
+        "emphasis": 0,
+        "inciso_separator": 3,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 14,
+      "id": null,
+      "rules": {
+        "bullet": 2,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 15,
+      "id": null,
+      "rules": {
+        "bullet": 4,
+        "emphasis": 0,
+        "inciso_separator": 4,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 16,
+      "id": null,
+      "rules": {
+        "bullet": 10,
+        "emphasis": 0,
+        "inciso_separator": 8,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 17,
+      "id": null,
+      "rules": {
+        "bullet": 1,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 18,
+      "id": null,
+      "rules": {
+        "bullet": 2,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 19,
+      "id": null,
+      "rules": {
+        "bullet": 8,
+        "emphasis": 0,
+        "inciso_separator": 3,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 20,
+      "id": null,
+      "rules": {
+        "bullet": 5,
+        "emphasis": 0,
+        "inciso_separator": 5,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 21,
+      "id": null,
+      "rules": {
+        "bullet": 7,
+        "emphasis": 0,
+        "inciso_separator": 4,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 24,
+      "id": null,
+      "rules": {
+        "bullet": 9,
+        "emphasis": 0,
+        "inciso_separator": 9,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 25,
+      "id": null,
+      "rules": {
+        "bullet": 8,
+        "emphasis": 0,
+        "inciso_separator": 4,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 26,
+      "id": null,
+      "rules": {
+        "auto_number": 1,
+        "bullet": 8,
+        "emphasis": 0,
+        "inciso_separator": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 27,
+      "id": null,
+      "rules": {
+        "auto_number": 5,
+        "emphasis": 0,
+        "inciso_separator": 4,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 28,
+      "id": null,
+      "rules": {
+        "auto_number": 2,
+        "emphasis": 0,
+        "inciso_separator": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 29,
+      "id": null,
+      "rules": {
+        "bullet": 4,
+        "emphasis": 0,
+        "inciso_separator": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 30,
+      "id": null,
+      "rules": {
+        "bullet": 3,
+        "emphasis": 0,
+        "inciso_separator": 3,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 31,
+      "id": null,
+      "rules": {
+        "auto_number": 18,
+        "bullet": 2,
+        "emphasis": 0,
+        "inciso_separator": 17,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 32,
+      "id": null,
+      "rules": {
+        "auto_number": 4,
+        "bullet": 6,
+        "emphasis": 0,
+        "inciso_separator": 3,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 34,
+      "id": null,
+      "rules": {
+        "bullet": 5,
+        "emphasis": 0,
+        "inciso_separator": 3,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 35,
+      "id": null,
+      "rules": {
+        "bullet": 1,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 36,
+      "id": null,
+      "rules": {
+        "bullet": 1,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 37,
+      "id": null,
+      "rules": {
+        "bullet": 4,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 38,
+      "id": null,
+      "rules": {
+        "bullet": 3,
+        "emphasis": 0,
+        "inciso_separator": 3,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 39,
+      "id": null,
+      "rules": {
+        "bullet": 1,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 40,
+      "id": null,
+      "rules": {
+        "bullet": 2,
+        "emphasis": 0,
+        "inciso_separator": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 42,
+      "id": null,
+      "rules": {
+        "bullet": 2,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 43,
+      "id": null,
+      "rules": {
+        "bullet": 2,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 44,
+      "id": null,
+      "rules": {
+        "bullet": 8,
+        "emphasis": 0,
+        "inciso_separator": 7,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 45,
+      "id": null,
+      "rules": {
+        "bullet": 1,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 46,
+      "id": null,
+      "rules": {
+        "bullet": 7,
+        "emphasis": 0,
+        "inciso_separator": 4,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 47,
+      "id": null,
+      "rules": {
+        "bullet": 4,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 48,
+      "id": null,
+      "rules": {
+        "bullet": 4,
+        "emphasis": 0,
+        "inciso_separator": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 49,
+      "id": null,
+      "rules": {
+        "bullet": 8,
+        "emphasis": 0,
+        "inciso_separator": 4,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 51,
+      "id": null,
+      "rules": {
+        "bullet": 2,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 52,
+      "id": null,
+      "rules": {
+        "bullet": 3,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 54,
+      "id": null,
+      "rules": {
+        "bullet": 4,
+        "emphasis": 0,
+        "inciso_separator": 4,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 55,
+      "id": null,
+      "rules": {
+        "bullet": 2,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 56,
+      "id": null,
+      "rules": {
+        "bullet": 1,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "pos_graduacao_setor_v3.json",
+      "target": "pos_graduacao_setor_v4.json",
+      "index": 60,
+      "id": null,
+      "rules": {
+        "emphasis": 0,
+        "inciso_separator": 7,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 0,
+      "id": "ufpi-658-2024-art-1-idx-000000",
+      "rules": {
+        "bullet": 4,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 1,
+      "id": "ufpi-658-2024-art-2-idx-000001",
+      "rules": {
+        "bullet": 8,
+        "emphasis": 0,
+        "inciso_separator": 5,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 2,
+      "id": "ufpi-658-2024-art-3-idx-000002",
+      "rules": {
+        "bullet": 10,
+        "emphasis": 0,
+        "inciso_separator": 5,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 3,
+      "id": "ufpi-658-2024-art-4-idx-000003",
+      "rules": {
+        "bullet": 6,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 5,
+      "id": "ufpi-658-2024-art-6-idx-000005",
+      "rules": {
+        "bullet": 4,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 6,
+      "id": "ufpi-658-2024-art-7-idx-000006",
+      "rules": {
+        "bullet": 13,
+        "emphasis": 0,
+        "inciso_separator": 13,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 8,
+      "id": "ufpi-658-2024-art-9-idx-000008",
+      "rules": {
+        "bullet": 2,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 9,
+      "id": "ufpi-658-2024-art-10-idx-000009",
+      "rules": {
+        "bullet": 2,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 10,
+      "id": "ufpi-658-2024-art-11-idx-000010",
+      "rules": {
+        "bullet": 17,
+        "emphasis": 0,
+        "inciso_separator": 18,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 11,
+      "id": "ufpi-658-2024-art-12-idx-000011",
+      "rules": {
+        "bullet": 3,
+        "emphasis": 0,
+        "inciso_separator": 3,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 12,
+      "id": "ufpi-658-2024-art-13-idx-000012",
+      "rules": {
+        "bullet": 3,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 13,
+      "id": "ufpi-658-2024-art-14-idx-000013",
+      "rules": {
+        "bullet": 4,
+        "emphasis": 0,
+        "inciso_separator": 4,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 14,
+      "id": "ufpi-658-2024-art-15-idx-000014",
+      "rules": {
+        "bullet": 10,
+        "emphasis": 0,
+        "inciso_separator": 8,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 16,
+      "id": "ufpi-658-2024-art-17-idx-000016",
+      "rules": {
+        "bullet": 2,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 17,
+      "id": "ufpi-658-2024-art-18-idx-000017",
+      "rules": {
+        "bullet": 8,
+        "emphasis": 0,
+        "inciso_separator": 1,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 18,
+      "id": "ufpi-658-2024-art-19-idx-000018",
+      "rules": {
+        "bullet": 5,
+        "emphasis": 0,
+        "inciso_separator": 5,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 19,
+      "id": "ufpi-658-2024-art-20-idx-000019",
+      "rules": {
+        "bullet": 4,
+        "emphasis": 0,
+        "inciso_separator": 4,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 20,
+      "id": "ufpi-658-2024-art-21-idx-000020",
+      "rules": {
+        "bullet": 7,
+        "emphasis": 0,
+        "inciso_separator": 4,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 24,
+      "id": "ufpi-658-2024-art-25-idx-000024",
+      "rules": {
+        "bullet": 10,
+        "emphasis": 0,
+        "inciso_separator": 10,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 25,
+      "id": "ufpi-658-2024-art-26-idx-000025",
+      "rules": {
+        "bullet": 8,
+        "emphasis": 0,
+        "inciso_separator": 4,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 26,
+      "id": "ufpi-658-2024-art-27-idx-000026",
+      "rules": {
+        "bullet": 7,
+        "emphasis": 0,
+        "inciso_separator": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 27,
+      "id": "ufpi-658-2024-art-28-idx-000027",
+      "rules": {
+        "bullet": 6,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 28,
+      "id": "ufpi-658-2024-art-29-idx-000028",
+      "rules": {
+        "bullet": 2,
+        "emphasis": 0,
+        "inciso_separator": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 29,
+      "id": "ufpi-658-2024-art-30-idx-000029",
+      "rules": {
+        "bullet": 3,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 30,
+      "id": "ufpi-658-2024-art-31-idx-000030",
+      "rules": {
+        "bullet": 3,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 31,
+      "id": "ufpi-658-2024-art-32-idx-000031",
+      "rules": {
+        "bullet": 3,
+        "emphasis": 0,
+        "inciso_separator": 3,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 32,
+      "id": "ufpi-658-2024-art-33-idx-000032",
+      "rules": {
+        "bullet": 8,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 33,
+      "id": "ufpi-658-2024-art-34-idx-000033",
+      "rules": {
+        "bullet": 5,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 34,
+      "id": "ufpi-658-2024-art-35-idx-000034",
+      "rules": {
+        "bullet": 2,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 35,
+      "id": "ufpi-658-2024-art-36-idx-000035",
+      "rules": {
+        "bullet": 6,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 38,
+      "id": "ufpi-658-2024-art-39-idx-000038",
+      "rules": {
+        "bullet": 3,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 39,
+      "id": "ufpi-658-2024-art-40-idx-000039",
+      "rules": {
+        "bullet": 4,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 41,
+      "id": "ufpi-658-2024-art-42-idx-000041",
+      "rules": {
+        "bullet": 6,
+        "emphasis": 0,
+        "html_entity": 1,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 42,
+      "id": "ufpi-658-2024-art-43-idx-000042",
+      "rules": {
+        "bullet": 2,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 43,
+      "id": "ufpi-658-2024-art-44-idx-000043",
+      "rules": {
+        "bullet": 4,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 45,
+      "id": "ufpi-658-2024-art-46-idx-000045",
+      "rules": {
+        "bullet": 12,
+        "emphasis": 0,
+        "inciso_separator": 11,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 46,
+      "id": "ufpi-658-2024-art-47-idx-000046",
+      "rules": {
+        "bullet": 11,
+        "emphasis": 0,
+        "inciso_separator": 11,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 47,
+      "id": "ufpi-658-2024-art-48-idx-000047",
+      "rules": {
+        "bullet": 2,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 49,
+      "id": "ufpi-658-2024-art-50-idx-000049",
+      "rules": {
+        "bullet": 3,
+        "emphasis": 0,
+        "inciso_separator": 3,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 50,
+      "id": "ufpi-658-2024-art-51-idx-000050",
+      "rules": {
+        "bullet": 1,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 52,
+      "id": "ufpi-658-2024-art-53-idx-000052",
+      "rules": {
+        "bullet": 7,
+        "emphasis": 0,
+        "inciso_separator": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 54,
+      "id": "ufpi-658-2024-art-55-idx-000054",
+      "rules": {
+        "bullet": 2,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 55,
+      "id": "ufpi-658-2024-art-56-idx-000055",
+      "rules": {
+        "bullet": 3,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 57,
+      "id": "ufpi-658-2024-art-58-idx-000057",
+      "rules": {
+        "bullet": 11,
+        "emphasis": 0,
+        "inciso_separator": 9,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 59,
+      "id": "ufpi-658-2024-art-60-idx-000059",
+      "rules": {
+        "bullet": 1,
+        "emphasis": 0,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 60,
+      "id": "ufpi-658-2024-art-61-idx-000060",
+      "rules": {
+        "bullet": 11,
+        "emphasis": 0,
+        "inciso_separator": 8,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 65,
+      "id": "ufpi-658-2024-art-66-idx-000065",
+      "rules": {
+        "bullet": 5,
+        "emphasis": 0,
+        "inciso_separator": 5,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    },
+    {
+      "source": "658_2024_temporal_v2.json",
+      "target": "658_2024_temporal_v3.json",
+      "index": 66,
+      "id": "ufpi-658-2024-art-67-idx-000066",
+      "rules": {
+        "emphasis": 0,
+        "heading": 2,
+        "italic": 0,
+        "latex_fraction": 0,
+        "spaces": 0,
+        "stray_asterisk": 0
+      }
+    }
+  ]
+}

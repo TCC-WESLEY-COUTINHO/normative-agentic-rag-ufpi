@@ -7,6 +7,7 @@ from langchain_core.messages import AIMessage
 from langgraph.graph import END, MessagesState, StateGraph
 from langgraph.types import interrupt
 
+from rag_baseline.citation_verifier import mentioned_levels
 from rag_baseline.grounding import TemporalGroundingContext, build_temporal_grounding
 from rag_baseline.models import QueryResult, RetrievedChunk
 from rag_baseline.openrouter import OpenRouterError
@@ -177,7 +178,8 @@ def build_graph(
             from rag_baseline.config import BaselineSettings
             from rag_baseline.profiles import apply_profile
 
-            runtime = _Runtime(apply_profile(BaselineSettings(), "duas-regulacoes"))
+            settings = BaselineSettings()
+            runtime = _Runtime(apply_profile(settings, settings.CORPUS_PROFILE))
             configured = runtime.agentic()
             service, router, version_filter = (
                 configured.service,
@@ -482,6 +484,14 @@ def build_graph(
                     **(
                         {"temporal_grounding": state["temporal_grounding"]}
                         if state.get("temporal_grounding") is not None
+                        else {}
+                    ),
+                    # Scope "ambas" is also the default; require both levels in the user's text.
+                    **(
+                        {"expected_sides": ["graduacao", "pos_graduacao"]}
+                        if state["decision"].scope == "ambas"
+                        and getattr(service, "generation_mode", "free_text_v2") == "cited_v3"
+                        and mentioned_levels(question) == {"graduacao", "pos_graduacao"}
                         else {}
                     ),
                 )

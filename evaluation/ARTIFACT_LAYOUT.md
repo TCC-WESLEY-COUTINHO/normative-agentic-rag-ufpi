@@ -1,10 +1,14 @@
 # Artefatos técnicos e snapshots de execução
 
-`evaluation/` contém datasets candidatos, corpora, protocolos, parâmetros, respostas integrais do modelo, contextos ordenados, métricas automáticas, erros, recibos e auditoria. Anotações internas de desenvolvimento, autoria editorial e registros de revisão preliminar não fazem parte dos artefatos técnicos.
+`evaluation/` contém datasets candidatos, corpora, protocolos, parâmetros, respostas integrais do modelo, contextos ordenados, métricas automáticas, erros, recibos e auditoria.
 
 ## Evidência histórica
 
-Manifestos, resumos, `audit.json`, relatórios e verificações de cada execução permanecem congelados e documentam o que ocorreu na época. Os hashes originais dos manifestos continuam identificando os insumos efetivamente usados, e relatórios antigos podem citar o local anterior desses arquivos. `publication_projection.json` registra os hashes anteriores e publicados dos arquivos cuja representação editorial mudou. Não interpretar a mudança de hash de um dataset como nova execução experimental.
+Resumos, respostas e métricas documentam as execuções históricas. A publicação retém os recibos necessários às verificações científicas e exclui registros operacionais. `publication_projection.json` registra a projeção editorial e `published_artifacts.json` identifica os arquivos publicados, com hashes normalizados para LF. Uma mudança editorial de hash não constitui nova execução experimental.
+
+Nas pastas `structured_normative_output_v1_001` e `temporal_generation_grounding_v1_001`, foram mantidos os contextos, entradas, respostas, anotações, protocolos, métricas e manifestos necessários aos testes e à comparação das gerações. As anotações preliminares automatizadas usam `automated_preliminary` quando o campo registra essa proveniência; não constituem gold jurídico independente nem certificam correção normativa. Relatórios de desenvolvimento e registros operacionais dessas pastas foram retirados. Os valores das métricas e dos julgamentos foram preservados.
+
+O recibo `router_v2_exploratory_001/preservation_before.json` retém somente o hash do índice consumido pelo executor. Os três `execution_snapshot/preservation_manifest.json` permanecem porque `audit_projection` os lê; os hashes e tamanhos das projeções editoriais foram atualizados junto dos arquivos.
 
 Os bytes históricos de parte dos insumos não são publicados neste repositório; essa categoria é chamada `private_raw_only`. Eles só importam para a auditoria histórica, e nenhuma verificação da projeção depende deles.
 
@@ -38,9 +42,9 @@ uv run --no-sync python -B -m rag_baseline.audit_v2 ../evaluation/results/pilot_
 
 ## Executores de execução única
 
-`structured_evaluation_v2` guarda em `frozen_hashes` os bytes de código, testes e entradas do commit da execução, com as quebras de linha do checkout de origem. Por isso, `verify_hashes` falha em commits posteriores: é o comportamento esperado para um registro congelado, não um defeito nem uma perda de dados.
+`structured_evaluation_v2` guarda em `frozen_hashes` os bytes de código, testes e entradas. Nesta projeção, os hashes dos arquivos editados foram atualizados e as entradas dos registros retirados foram excluídas; os manifestos anteriores são identificados em `publication_projection.json`. Os demais hashes continuam históricos, com as quebras de linha do checkout de origem, e podem divergir do código atual. A projeção não atesta os bytes do commit experimental.
 
-A verificação histórica usa os bytes da execução: o commit `experimental_head` do manifesto, na representação de quebra de linha que corresponde a cada hash, junto dos arquivos de saída da execução. Com esses bytes, os 69 caminhos conferem sem alterar nenhum hash. A verificação não faz chamadas de API. O `--stage run` da própria execução recusa uma nova execução, porque o manifesto está `complete`.
+A verificação histórica exige o manifesto e os bytes originais do commit `experimental_head`, na representação de quebra de linha correspondente, junto dos arquivos de saída. A rodada `structured_normative_output_v2_001` não integra este snapshot; o executor permanece para estudos históricos e usa esse nome como saída padrão. Sempre informe `--output <diretório novo>`: a saída padrão ausente não tem manifesto `complete` para bloquear sua reutilização. Nos diretórios que contêm um manifesto `complete`, o `--stage run` recusa uma nova execução.
 
 Uma execução nova usa `--stage prepare --output <diretório novo>`. Antes dele:
 

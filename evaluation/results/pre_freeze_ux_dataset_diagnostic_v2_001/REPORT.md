@@ -1,8 +1,10 @@
 **Pre-freeze UX & Dataset Diagnostic V2 — execução diagnóstica concluída**
 
+> **Registro histórico.** Configuração, resultados, contagens de testes e estados descritos referem-se à execução documentada, anterior à v3.4. Para a versão atual, consulte o [guia de evidências e reprodução](../../README.md).
+
 Esta entrega implementa as correções de apresentação autorizadas e registra uma execução única das 40 perguntas atuais de `data/` no `chatbot_ufpi_integrated_v1`. Não é avaliação científica final nem comprovação de correção jurídica. Os resultados incluem 24 clarificações, 15 terminais ANSWER (8 accepted, 3 regenerated, 4 fallback) e 1 ERROR. As falhas foram preservadas, sem tuning depois do lote.
 
-O sistema local permanece disponível em http://localhost: 8501; API em http://127.0.0.1:8080. Ambos os containers foram reconstruídos somente para o ambiente local e estão healthy, com readiness verdadeira e 507 registros. Isso não constitui deploy externo. O teste operacional usa AppTest real e cliente HTTP/SSE; não há verificação visual no navegador registrada.
+O sistema local permanece disponível em http://localhost: 8501; API em http://127.0.0.1:8080. Ambos os containers foram reconstruídos somente para o ambiente local e estão healthy, com readiness verdadeira e 507 registros. Isso não constitui deploy externo. O teste operacional usa AppTest real e cliente HTTP/SSE; essa verificação não atesta a experiência visual em navegador.
 
 **Git e escopo**
 
@@ -35,7 +37,7 @@ Parâmetros centralizados em `ui_presentation.py`: `REFERENCE_PREVIEW_CHARACTERS
 
 O backend continua geração → guard → regeneração/fallback → ChatMessage final → SSE. Somente o texto final validado é revelado. Nos 9 requests operacionais, o cliente recebeu apenas `message`, `DONE`; exposição de raw drafts observada: 0/9. Os testes de transporte e guard da full suite também foram preservados. Os 40 casos do lote passam pela projeção tipada do grafo, sem streaming privado.
 
-Auto-scroll continua limitado a nova mensagem, início e fim da resposta, usando marcador próprio e nonce. Os 9 requests emitiram 3 chamadas cada; rerun de histórico e toggle de trecho completo emitiram 0 scrolls e 0 novas animações. Isso verifica o helper e a árvore AppTest, não prova posição/rolagem efetiva no DOM do navegador; não há validação visual registrada.
+Auto-scroll continua limitado a nova mensagem, início e fim da resposta, usando marcador próprio e nonce. Os 9 requests emitiram 3 chamadas cada; rerun de histórico e toggle de trecho completo emitiram 0 scrolls e 0 novas animações. Isso verifica o helper e a árvore AppTest, não prova posição/rolagem efetiva no DOM do navegador; essa verificação não atesta a experiência visual em navegador.
 
 **Política temporal**
 
@@ -43,9 +45,9 @@ A mensagem antiga vinha de `render_temporal_statements` aplicado a fatos `STATUS
 
 Perguntas normativas comuns, com intent current/indeterminate, usam “Com base nas normas indexadas no sistema:”, preservando relações documentadas de alteração/revogação quando existirem. Perguntas explícitas de validade, históricas e comparativas continuam com a composição temporal completa. O sistema afirma a base documental indexada; não converte status desconhecido em vigente, não certifica validade universal hoje e não altera os fatos estruturados ou o VersionFilter.
 
-RED provou que “Essa regra ainda vale hoje?” não era validity. A revisão de código encontrou também “Essa norma está vigente?” e “Essa resolução está em vigor?”. Foi ampliada somente a classificação existente no backend; não há keyword hack de UI. GREEN inclui perguntas comuns negativas, preservação histórica/comparativa e guard que continua rejeitando validade atual sem suporte. `NormativeOutputGuard`, facts, renderer antigo, instruções de geração, grafo e VersionFilter foram comparados por AST/hash e permanecem idênticos ao início desta fase.
+RED provou que “Essa regra ainda vale hoje?” não era validity. A verificação do código encontrou também “Essa norma está vigente?” e “Essa resolução está em vigor?”. Foi ampliada somente a classificação existente no backend; não há keyword hack de UI. GREEN inclui perguntas comuns negativas, preservação histórica/comparativa e guard que continua rejeitando validade atual sem suporte. `NormativeOutputGuard`, facts, renderer antigo, instruções de geração, grafo e VersionFilter foram comparados por AST/hash e permanecem idênticos ao início desta fase.
 
-Smoke: “como funciona o ajuste de turmas?” pediu nível; após “graduação”, recebeu o prefixo neutro, mas terminou fallback. Assim, o framing está verificado e a resposta substantiva desse smoke continua uma falha aberta. “Essa Resolução 177/2012 ainda está vigente?” também pediu nível; após “graduação”, o estado foi validity e a resposta manteve explicitamente a impossibilidade de certificar vigência atual. A redundância do aviso dentro desse corpo gerado e afirmações substantivas continuam sujeitas a revisão.
+Smoke: “como funciona o ajuste de turmas?” pediu nível; após “graduação”, recebeu o prefixo neutro, mas terminou fallback. Assim, o framing está verificado e a resposta substantiva desse smoke continua uma falha aberta. “Essa Resolução 177/2012 ainda está vigente?” também pediu nível; após “graduação”, o estado foi validity e a resposta manteve explicitamente a impossibilidade de certificar vigência atual. Esse smoke não estabelece a adequação da redundância do aviso nem a correção normativa das afirmações substantivas.
 
 **Frequência 75%: trace, causa e resultado**
 
@@ -61,7 +63,7 @@ Nesta execução congelada, DATA-GRAD-002 recebeu CLARIFICATION sem retrieval; e
 
 A correção herdada normaliza a abreviação nominal inequívoca “a pós” para pós-graduação. Foram preservados positivos “como trancar a pós”, “posso trancar a pós?”, “quero fazer a pós”, “como funciona a pós?” e negativos pós-alteração, pós-2025, período pós defesa, efeito pós recurso. O comportamento anterior de pedir graduação/pós/ambas nesse cue é coberto pela regressão RED→GREEN da fase anterior.
 
-Smoke real atual: “como trancar a pós” → ANSWER/pos_graduacao/regenerated; na mesma conversa, “precisa de ira pra passar na pós” → nova ANSWER/pos_graduacao/regenerated sobre IRA, sem pending de trancamento. Não se toma a ausência de exigência localizada como comprovação jurídica de inexistência: a afirmação categórica sobre IRA e procedimentos gerados precisa de revisão.
+Smoke real atual: “como trancar a pós” → ANSWER/pos_graduacao/regenerated; na mesma conversa, “precisa de ira pra passar na pós” → nova ANSWER/pos_graduacao/regenerated sobre IRA, sem pending de trancamento. Não se toma a ausência de exigência localizada como comprovação jurídica de inexistência: a afirmação categórica sobre IRA e procedimentos gerados não tem suporte jurídico estabelecido por esse smoke.
 
 **Inventário read-only de data/**
 
@@ -77,7 +79,7 @@ Smoke real atual: “como trancar a pós” → ANSWER/pos_graduacao/regenerated
 
 O inventário contém os 7 arquivos, extensões, bytes, SHA256, esquema/chaves, contagem/unidade de registros, propósito, referências no código/testes e histórico. PDF: 93 páginas; texto RGG: 376 marcadores de artigo (não equivalem a registros de dataset). JSON registry: 4 normas. `backend_doc.md` é documentação de API, categorizada UNKNOWN porque não há classe específica de documentação entre as autorizadas; `prompt_v2.md` é documento histórico, não dataset nem prompt exportado pelo diagnóstico.
 
-As duas bancadas têm 20 perguntas cada, campos extraíveis item_number, question e resposta de referência em prosa. Não possuem expected_domain/norm/article/facts estruturados nem revisão independente comprovada. Esses campos de origem permanecem null no lote. Não há GOLD_DATASET validado em data/. As referências candidatas da graduação contêm citações inconsistentes, por exemplo a frequência citada como 137 na prosa versus 111/112 no corpus; números da prosa não foram promovidos automaticamente a gold.
+As duas bancadas têm 20 perguntas cada, campos extraíveis item_number, question e resposta de referência em prosa. Não possuem expected_domain/norm/article/facts estruturados nem estrutura de gabarito normativo independente. Esses campos de origem permanecem null no lote. Não há GOLD_DATASET validado em data/. As referências candidatas da graduação contêm citações inconsistentes, por exemplo a frequência citada como 137 na prosa versus 111/112 no corpus; números da prosa não foram promovidos automaticamente a gold.
 
 Gold estruturado **candidato** foi localizado fora de data/: `evaluation/datasets/graduacao_v1.json`, `graduacao_v2.json`, `pos_graduacao_v1.json`, `pos_graduacao_v2.json` (20 cada), `router_labels_v1.json` (40) e `routing_v2_candidates_v1.json` (66, splits históricos DEV/TEST sem independência futura). `evaluation/README.md`, `protocol.md`, `protocol_v2.md` e `decisions.md` registram desenvolvimento e a revisão pos_escopo_conhecido_r1.
 
@@ -161,15 +163,15 @@ Seis perguntas principais e 3 respostas de domínio planejadas quando o runtime 
 | explicit_validity_scope_clarification | ANSWER/regenerated | 5 | 94 | 2.375 s |
 | multiple_articles | ANSWER/regenerated | 5 | 87 | 2.219 s |
 
-Todas as 30 referências renderizadas vieram dos contratos tipados, iniciaram fechadas e seus previews coincidiram com os textos tipados. Textos longos expuseram o controle completo; rerun/toggle não reanimaram nem emitiram scroll. Histórico não reanima. Não houve erro de UI nesses requests. Os 9 traces e os resultados de rerun/toggle estão em `regression_cases.json`. A prova é operacional AppTest/HTTP/SSE, sem revisão final de UX/DOM e conteúdo registrada.
+Todas as 30 referências renderizadas vieram dos contratos tipados, iniciaram fechadas e seus previews coincidiram com os textos tipados. Textos longos expuseram o controle completo; rerun/toggle não reanimaram nem emitiram scroll. Histórico não reanima. Não houve erro de UI nesses requests. Os 9 traces e os resultados de rerun/toggle estão em `regression_cases.json`. A prova é operacional AppTest/HTTP/SSE e não atesta UX/DOM em navegador nem correção normativa do conteúdo.
 
 **TDD, revisão e verificações**
 
-RED de apresentação: 8 failed / 6 passed, por velocidade, preview e classificação/framing temporal. GREEN focused: 84 passed. A primeira full suite identificou uma expectativa antiga que exigia aviso de vigência em intent indeterminate; foi atualizada para prefixo neutro preservando STATUS_UNKNOWN. A revisão de código encontrou os 2 casos diretos de validade mencionados: RED 2 failed / 12 passed; GREEN temporal 24 passed. Os resultados negativos foram mantidos em `execution_summary.json`.
+RED de apresentação: 8 failed / 6 passed, por velocidade, preview e classificação/framing temporal. GREEN focused: 84 passed. A primeira full suite identificou uma expectativa antiga que exigia aviso de vigência em intent indeterminate; foi atualizada para prefixo neutro preservando STATUS_UNKNOWN. A verificação do código encontrou os 2 casos diretos de validade mencionados: RED 2 failed / 12 passed; GREEN temporal 24 passed. Os resultados negativos foram mantidos em `execution_summary.json`.
 
 Full suite final antes do lote: **1099 passed, 12 skipped, 6 warnings em 76,00 s, exit 0**. Ela abrange UI/AppTest, router/normalização, structured output, temporal, transport, conversation, agent, retrieval, calculator, runtime, service/client e rag_baseline. Os skips e warnings permanecem limitações registradas; não são contados como pass. Nenhum arquivo produtivo/teste mudou desde essa suite. A verificação final dos hashes comprovou essa preservação, e os smokes reais verificaram os componentes instalados.
 
-Ruff check final: exit 0, All checks passed. Ruff format --check: exit 0, 10 files already formatted. git diff --check: exit 0. A integridade final verifica 40 IDs/perguntas na ordem, 40 casos de revisão, 35/14/22 denominadores, preservação de fontes e ausência de mudanças após lote. Revisão de código: 1 Important de classificação temporal resolvido com RED/GREEN antes do lote; sem outro finding de implementação aberto nas mudanças revisadas. Isso não encerra os defeitos diagnósticos listados nem certifica a correção jurídica das respostas.
+Ruff check final: exit 0, All checks passed. Ruff format --check: exit 0, 10 files already formatted. git diff --check: exit 0. A integridade final verifica 40 IDs/perguntas na ordem, 40 casos de revisão, 35/14/22 denominadores, preservação de fontes e ausência de mudanças após lote. Verificação do código: 1 Important de classificação temporal resolvido com RED/GREEN antes do lote; sem outro finding de implementação aberto nas mudanças revisadas. Isso não encerra os defeitos diagnósticos listados nem certifica a correção jurídica das respostas.
 
 **Preservação e limites finais**
 
@@ -177,6 +179,4 @@ Snapshot lógico do índice antes/depois: **507/507 idênticos**, SHA256 `ab253a
 
 Não houve freeze científico, Router bypass, tuning Router V2, reindexação, update de metadata, re-embedding, hardcode de resposta, streaming de raw draft, parsing textual de referências na UI, deploy externo, push, pull, merge, rebase, reset ou clean. Não houve mudança de modelo, temperature, embedding, top_k ou prompts durante/depois do lote. A pequena expansão de intent temporal foi justificada por RED e concluída antes dele. A reconstrução dos containers foi local, para disponibilizar a interface atual.
 
-Limitações: bancada pequena e já exposta, gold candidato sem validação independente/PDF, decisão inválida do Router, 5/14 clarificações explícitas desnecessárias, clarificação de frequência compartilhada, 4/40 fallbacks no lote e fallback adicional de ajuste de turmas no smoke, possíveis extrapolações factuais do gerador apesar de locators válidos, e auto-scroll/timing visual no navegador. Nenhuma dessas falhas foi ocultada ou usada para tuning seletivo.
-
-Artefatos publicados: este relatório e 9 arquivos JSON/JSONL. `decision_log.jsonl` registra decisões de protocolo e escopo; `execution_summary.json`, preservação e suítes; `review_findings.json`, achados e limitações.
+Limitações: bancada pequena e já exposta, gold candidato derivado do texto extraído, sem caráter de gabarito jurídico independente, decisão inválida do Router, 5/14 clarificações explícitas desnecessárias, clarificação de frequência compartilhada, 4/40 fallbacks no lote e fallback adicional de ajuste de turmas no smoke, possíveis extrapolações factuais do gerador apesar de locators válidos, e auto-scroll/timing visual no navegador. Nenhuma dessas falhas foi ocultada ou usada para tuning seletivo.

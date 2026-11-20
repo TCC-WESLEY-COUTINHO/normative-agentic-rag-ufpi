@@ -1,10 +1,14 @@
-"""Explicit operational assembly; imports acquire no runtime resources."""
+"""Assembly of the registered v3.4 runtime; imports acquire no resources.
+
+The demo selects Jev with transition v2. BaselineSettings selects cited generation
+and corpus v4; ASSISTANT_IDENTITY controls fixed replies about the assistant.
+"""
 
 import inspect
 from contextlib import AsyncExitStack, asynccontextmanager
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any
+from typing import Any, Literal
 
 from rag_baseline.config import BaselineSettings
 
@@ -13,8 +17,11 @@ AGENT_ID = "chatbot_ufpi_integrated_v1"
 
 
 class IntegratedRuntimeSettings(BaselineSettings):
+    # Prototype presentation layer (assistant_identity.py). "off" reproduces the frozen
+    # v3.4 conversation graph; reproducible evaluations run with "off".
+    ASSISTANT_IDENTITY: Literal["on", "off"] = "on"
     NORMATIVE_REGISTRY_PATH: Path = CODE_DIR.parent / "data/normative_registry.json"
-    # Experimental A'' condition; "none" keeps A' exactly.
+    # Conversation layer: "none" selects A'; the demo sets Jev with transition v2.
     CONVERSATION_INTERPRETER: str = "none"
     CONVERSATION_INTERPRETER_CONFIG: str | None = None  # JSON InterpreterConfig overrides
 
@@ -198,9 +205,9 @@ async def build_integrated_agent_runtime(
     from rag_baseline.tool_facade import NormativeRagFacade
     from rag_baseline.versioning import NormativeRegistry, VersionFilter
 
-    settings = settings or apply_profile(
-        IntegratedRuntimeSettings(_env_file=CODE_DIR / ".env"), "duas-regulacoes"
-    )
+    if settings is None:
+        base = IntegratedRuntimeSettings(_env_file=CODE_DIR / ".env")
+        settings = apply_profile(base, base.CORPUS_PROFILE)
     checks = dict(
         ready=False,
         reason_code=None,
@@ -265,6 +272,7 @@ async def build_integrated_agent_runtime(
             embedding_model=settings.EMBEDDING_MODEL,
             llm_model=settings.LLM_MODEL,
             system_prompt=V2_SYSTEM_PROMPT,
+            generation_mode=getattr(settings, "GENERATION_MODE", "cited_v3"),
         )
         router = NormativeRouter(provider, model=settings.ROUTER_MODEL)
         facade = NormativeRagFacade(service, router, VersionFilter(registry))
@@ -287,6 +295,7 @@ async def build_integrated_agent_runtime(
             scope_gate=NormativeScopeGate(provider, model=settings.ROUTER_MODEL),
             interpreter=interpreter,
             transition_policy=transition_policy,
+            assistant_identity=getattr(settings, "ASSISTANT_IDENTITY", "on") == "on",
         )
         checks.update(
             memory_stamp_created=True, calculator_available=True, facade_ready=True, ready=True

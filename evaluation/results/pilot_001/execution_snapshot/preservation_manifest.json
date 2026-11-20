@@ -24,8 +24,8 @@
     },
     {
       "relative_path": "evaluation/protocol.md",
-      "sha256": "45ff3b3a98a10c83efac4cf6d61d42434b28324ddb734ad5905ba0eff6efb3bb",
-      "byte_size": 10683,
+      "sha256": "1a1e94fab178ae69f71d91b2c5153c668b81ab61c952b1624c039e999284c3c7",
+      "byte_size": 10719,
       "role": "evaluation protocol",
       "preservation_kind": "scientific_projection",
       "source_run": "pilot_001",
