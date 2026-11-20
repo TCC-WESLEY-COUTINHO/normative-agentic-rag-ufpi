@@ -2,7 +2,7 @@
 
 Enunciados das 20 questões do [protocolo do teste de campo](PROTOCOLO.md), na ordem de apresentação e com a redação exibida aos participantes. Cada participante responde às 10 questões do seu grupo nas duas condições (consulta manual aos PDFs e consulta com a ferramenta).
 
-O gabarito (respostas, dispositivos, trechos literais e critérios de acerto) é de uso interno da pesquisa e não é publicado (decisão D10 do protocolo).
+O gabarito (respostas, dispositivos, trechos literais e critérios de acerto) é de uso interno da pesquisa e não é publicado.
 
 ## Graduação
 
