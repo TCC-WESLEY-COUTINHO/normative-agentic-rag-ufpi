@@ -55,7 +55,7 @@ Mensagem com `type: "ai"`, `content` (texto exibido) e, nos turnos normativos, `
 | Campo | Significado |
 |---|---|
 | `status` | `ANSWER`, `CLARIFICATION` ou `ERROR` |
-| `core_status` | `accepted` (aceita na primeira geração), `regenerated` (aceita após a nova tentativa), `fallback` (resposta de contingência do validador) ou `abstained` |
+| `core_status` | `regenerated` (a geração passou por reparo ou foi entregue parcialmente, com afirmações omitidas e ressalvas), `fallback` (resposta de contingência: nenhuma conclusão pôde ser verificada), `abstained` (sem contexto elegível, antes da geração) ou `accepted` (todo o resto, inclusive as respostas de insuficiência e de pedido de dado ao usuário) |
 | `answer` | Texto da resposta normativa |
 | `references` | Lista de `NormativeReference`: `norm_id`, `source`, `article`, `validated_subdivision`, `display_text`, `temporal_role` (`eligible`, `historical` ou `posterior`) e `evidence_text` |
 | `domain` | `graduacao`, `pos_graduacao` ou `ambas` |
@@ -66,6 +66,8 @@ Mensagem com `type: "ai"`, `content` (texto exibido) e, nos turnos normativos, `
 | `correlation_id` | Identificador do turno |
 
 **As referências vêm de objetos estruturados, não do texto gerado.** Uma resposta `fallback` traz as referências consultadas, mas não uma conclusão.
+
+**Limitação conhecida de `core_status`.** O campo resume apenas se a geração foi reparada ou caiu em contingência. A resposta de insuficiência ("Os trechos normativos recuperados não permitem responder com segurança.") e o pedido de dado ao usuário (`needs_user_fact`) não têm valor próprio: aparecem com `core_status=accepted`. Quem precisar distinguir uma resposta substantiva de uma insuficiente não pode usar esse campo.
 
 ## Stream
 

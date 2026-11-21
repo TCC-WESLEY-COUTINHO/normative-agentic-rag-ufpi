@@ -51,7 +51,7 @@ A fidelidade por frase foi anotada com um procedimento de rotulagem preliminar a
 
 - **Verificação de forma:** o verificador confere literalidade da citação, números e prazos, dispositivo, nível, norma da evidência e negações acrescentadas. Não confere implicação semântica; erros de sentido podem passar.
 - **Tempo e comparação:** distinguir redações, alterações e níveis de ensino continua sendo um ponto fraco.
-- **Conteúdo omitido:** afirmações reprovadas são omitidas e viram ressalvas; sem conclusão verificada, o sistema se abstém. Isso pode reduzir a completude.
+- **Conteúdo omitido:** afirmações reprovadas são omitidas e viram ressalvas; sem conclusão verificada, a resposta é de contingência (`core_status=fallback`), e não uma abstenção. Isso pode reduzir a completude.
 - **Validade externa:** conjuntos pequenos, de desenvolvimento; parte das rodadas tem uma repetição. O conjunto sintético foi usado para orientar a implementação.
 - **Dependências externas:** a Decisions API é alpha, e os modelos e a API do provedor podem mudar. A demonstração não fixa a rota de provedor da geração, enquanto os experimentos fixaram um provedor; uma nova execução pode variar.
 - **Acervo:** restrito às quatro resoluções; parte dos textos provém de OCR. Quando a publicação não foi comprovada, o estado de vigência é declarado como desconhecido.

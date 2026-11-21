@@ -1,6 +1,6 @@
-# Implantação controlada em AWS (EC2 + Docker Compose): roteiro preparado, não executado
+# Implantação controlada em AWS (EC2 + Docker Compose)
 
-**Nenhum recurso AWS foi criado.**
+**Houve uma implantação controlada na AWS**, com uma instância EC2 executando o Docker Compose da demonstração, Caddy com HTTPS e oauth2-proxy com login Google restrito a contas institucionais, além de um acesso de convidado protegido. A primeira execução ocorreu em 2026-11-12, com a versão v2. A instância foi atualizada em 2026-11-20 para a v3.4, publicada como o commit `bf7d940` (ver [Versão avaliada e versão publicada](../PROVENIENCIA.md#versão-avaliada-e-versão-publicada)). O acesso não é público: exige autenticação. As seções abaixo descrevem a arquitetura e as práticas do roteiro; identificadores da conta e da instância não constam desta documentação.
 
 O roteiro acompanha a configuração local v3.4: geração ancorada em citação, verificador determinístico, corpus canônico v4 e Jev com transição v2. Os detalhes e pré-requisitos estão em [Instalação](../INSTALACAO.md).
 
@@ -11,7 +11,7 @@ O roteiro acompanha a configuração local v3.4: geração ancorada em citação
 ## 1. Arquitetura
 
 - Uma instância EC2 em sub-rede pública, com os mesmos três containers testados localmente (`compose.demo.yaml`: `postgres`, `backend` e `interface`).
-- Um proxy reverso com HTTPS e autenticação à frente da interface. É o único componente novo, e fica fora das imagens do protótipo.
+- Um proxy reverso (Caddy) com HTTPS e autenticação (oauth2-proxy) à frente da interface. É o único componente novo, e fica fora das imagens do protótipo.
 - O backend e o PostgreSQL não publicam porta. A interface publica apenas `127.0.0.1:8501`, que só o proxy acessa.
 
 ```
@@ -24,21 +24,21 @@ O navegador só fala com o proxy e com a interface. Quem chama o backend é o pr
 
 | Item | Recomendação |
 |---|---|
-| Tipo | `t3.medium` (4 GB de RAM: o backend usa Chroma em processo, e o PostgreSQL roda na mesma instância) |
+| Tipo | `t3.small` (2 GB de RAM), o tipo usado na implantação executada. O backend usa Chroma em processo, e o PostgreSQL roda na mesma instância; um tipo com mais memória, como `t3.medium` (4 GB), é alternativa se houver pressão de memória |
 | Disco | EBS gp3, 20 GB, criptografado |
 | Sistema | Ubuntu Server LTS ou Amazon Linux 2023, com Docker Engine e o plugin Compose |
 | Imagens | Construídas na instância a partir de uma tag Git, ou publicadas em um registro privado (ECR) com tag imutável `tcc2-prototype-backend:<commit>` |
 
 ## 3. Rede restrita
 
-- **Security group:** entrada só na porta 443, limitada aos IPs autorizados (CIDR da instituição ou dos avaliadores). Porta 22 fechada; acesso administrativo pelo SSM Session Manager.
+- **Security group:** entrada só na porta 443. A restrição por CIDR da instituição ou dos avaliadores é uma camada opcional, somada à autenticação. Porta 22 fechada; acesso administrativo pelo SSM Session Manager.
 - **Saída:** HTTPS para `openrouter.ai` (geração, embeddings e Jev).
 - **Sem IP público de administração e sem porta 8080 exposta.**
 
 ## 4. HTTPS e autenticação
 
-- **Proxy:** Caddy ou Nginx, com certificado TLS (Let's Encrypt em domínio próprio, ou ACM com ALB, se houver balanceador).
-- **Autenticação:** HTTP Basic com usuários individuais e senhas fortes, ou OAuth (por exemplo, oauth2-proxy). A interface Streamlit não tem login próprio.
+- **Proxy:** Caddy, com certificado TLS emitido automaticamente para um domínio próprio. Nginx, ou ACM com ALB, são alternativas.
+- **Autenticação:** oauth2-proxy com login Google restrito a contas institucionais, mais um acesso de convidado protegido para avaliadores sem conta institucional. A interface Streamlit não tem login próprio.
 - **API:** `AUTH_SECRET` no backend protege suas rotas. O `compose.demo.yaml` já repassa a mesma variável à interface.
 
 ## 5. Segredos

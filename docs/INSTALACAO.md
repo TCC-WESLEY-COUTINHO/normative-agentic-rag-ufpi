@@ -119,4 +119,4 @@ Sem `CONVERSATION_INTERPRETER`, a camada é a de A′. Com `jev`, mas sem `trans
 
 O guia [Linux e operação](DEPLOY_LINUX.md) concentra os comandos de API isolada (`deploy/compose.api.yaml`), PostgreSQL externo (`deploy/compose.external-postgres.yaml`), provedor compatível (`deploy/compose.openai-compatible.yaml`), backup, logs e diagnóstico. O modo de provedor alternativo usa índice próprio, troca a camada conversacional e informa `evaluated_configuration: false`; seus resultados não foram medidos nesta versão.
 
-Consulte a [API](API.md) para integração e o [roteiro de implantação controlada](tcc2/IMPLANTACAO_AWS.md) para servidor. Esse roteiro foi preparado, sem implantação AWS executada.
+Consulte a [API](API.md) para integração e o [roteiro de implantação controlada](tcc2/IMPLANTACAO_AWS.md) para servidor. O roteiro foi executado em uma implantação controlada na AWS (uma instância EC2 com Docker Compose, Caddy com HTTPS e oauth2-proxy com login Google restrito a contas institucionais, além de um acesso de convidado protegido), com a versão v2 em 2026-11-12, atualizada para a v3.4 em 2026-11-20. O acesso não é público.
